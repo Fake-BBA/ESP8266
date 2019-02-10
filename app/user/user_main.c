@@ -138,7 +138,7 @@ void ICACHE_FLASH_ATTR scan_done(void *arg, STATUS status)
 			bss_link = bss_link->next.stqe_next;
 		}
 		//struct station_config stationConf;
-		os_memcpy(&stationConf.ssid, "BBA", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
+		os_memcpy(&stationConf.ssid, "BBA-SUMDAY", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
 		os_memcpy(&stationConf.password, "123123123", 64);
 		wifi_station_set_config_current(&stationConf);
 		if(wifi_station_connect())	//如果wifi连接成功

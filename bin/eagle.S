@@ -859,8 +859,8 @@ Disassembly of section .irom0.text:
 402108c8:	241810        	extui	a1, a1, 8, 3
 402108cb:	e26840        	excw
 402108ce:	124000        	excw
-402108d1:	c9f0c1        	l32r	a12, 40203094 <_lit4_end+0xfc898>
-402108d4:	fbc121        	l32r	a2, 4020f7d8 <_lit4_end+0x108fdc>
+402108d1:	c9f0c1        	l32r	a12, 40203094 <_lit4_end+0xfc900>
+402108d4:	fbc121        	l32r	a2, 4020f7d8 <_lit4_end+0x109044>
 402108d7:	ff          	.byte 0xff
 402108d8:	11d9      	s32i.n	a13, a1, 4
 402108da:	036102        	s32i	a0, a1, 12
@@ -895,23 +895,23 @@ Disassembly of section .irom0.text:
 40210926:	10c112        	addi	a1, a1, 16
 40210929:	f00d      	ret.n
 4021092b:	11f000        	slli	a15, a0, 16
-4021092e:	d46000        	extui	a6, a0, 0, 14
+4021092e:	c46000        	extui	a6, a0, 0, 13
 40210931:	ee          	.byte 0xee
 40210932:	fe          	.byte 0xfe
 40210933:	3f          	.byte 0x3f
-40210934:	feeee0        	excw
+40210934:	feeed0        	excw
 40210937:	3f          	.byte 0x3f
-40210938:	eee8      	l32i.n	a14, a14, 56
+40210938:	eed8      	l32i.n	a13, a14, 56
 4021093a:	fe          	.byte 0xfe
 4021093b:	3f          	.byte 0x3f
-4021093c:	89ec      	bnez.n	a9, 40210968 <rijndaelKeySetupEnc+0x3a8>
-4021093e:	fe          	.byte 0xfe
+4021093c:	fe89d4        	excw
 4021093f:	3f          	.byte 0x3f
-40210940:	feeee4        	excw
+40210940:	feeed4        	excw
 40210943:	3f          	.byte 0x3f
-40210944:	fe88d0        	excw
+40210944:	88d8      	l32i.n	a13, a8, 32
+40210946:	fe          	.byte 0xfe
 40210947:	3f          	.byte 0x3f
-40210948:	eedc      	bnez.n	a14, 4021096a <rijndaelKeySetupEnc+0x3aa>
+40210948:	eecc      	bnez.n	a14, 4021095a <rijndaelKeySetupEnc+0x39a>
 4021094a:	fe          	.byte 0xfe
 4021094b:	3f          	.byte 0x3f
 4021094c:	f0c112        	addi	a1, a1, -16
@@ -1024,7 +1024,7 @@ Disassembly of section .irom0.text:
 40210a67:	3200e2        	l8ui	a14, a0, 50
 40210a6a:	3909a0        	excw
 40210a6d:	864c      	movi.n	a6, 72
-40210a6f:	000001        	l32r	a0, 401d0a70 <_lit4_end+0xca274>
+40210a6f:	000001        	l32r	a0, 401d0a70 <_lit4_end+0xca2dc>
 40210a72:	00a022        	movi	a2, 0
 40210a75:	20c220        	or	a12, a2, a2
 40210a78:	008256        	bnez	a2, 40210a84 <rijndaelKeySetupEnc+0x4c4>
@@ -1051,9 +1051,9 @@ Disassembly of section .irom0.text:
 40210aaf:	f00d      	ret.n
 40210ab1:	000000        	ill
 40210ab4:	0ab8      	l32i.n	a11, a10, 0
-40210ab6:	124021        	l32r	a2, 401d53b8 <_lit4_end+0xcebbc>
-40210ab9:	02f0c1        	l32r	a12, 401d167c <_lit4_end+0xcae80>
-40210abc:	050361        	l32r	a6, 401d1ec8 <_lit4_end+0xcb6cc>
+40210ab6:	124021        	l32r	a2, 401d53b8 <_lit4_end+0xcec24>
+40210ab9:	02f0c1        	l32r	a12, 401d167c <_lit4_end+0xcaee8>
+40210abc:	050361        	l32r	a6, 401d1ec8 <_lit4_end+0xcb734>
 40210abf:	29cd      	excw
 40210ac1:	fffc31        	l32r	a3, 40210ab4 <rijndaelKeySetupEnc+0x4f4>
 40210ac4:	64a022        	movi	a2, 100
@@ -1064,9 +1064,9 @@ Disassembly of section .irom0.text:
 40210ad3:	f00d      	ret.n
 40210ad5:	000000        	ill
 40210ad8:	0adc      	bnez.n	a10, 40210aec <rijndaelKeySetupEnc+0x52c>
-40210ada:	124021        	l32r	a2, 401d53dc <_lit4_end+0xcebe0>
-40210add:	02f0c1        	l32r	a12, 401d16a0 <_lit4_end+0xcaea4>
-40210ae0:	450361        	l32r	a6, 401e1eec <_lit4_end+0xdb6f0>
+40210ada:	124021        	l32r	a2, 401d53dc <_lit4_end+0xcec48>
+40210add:	02f0c1        	l32r	a12, 401d16a0 <_lit4_end+0xcaf0c>
+40210ae0:	450361        	l32r	a6, 401e1eec <_lit4_end+0xdb758>
 40210ae3:	312506        	j	4021cf7b <wpa_remove_ptk+0x8bb>
 40210ae6:	fffc      	bnez.n	a15, 40210b29 <rijndaelKeySetupEnc+0x569>
 40210ae8:	f4a122        	movi	a2, 0x1f4
@@ -1078,9 +1078,9 @@ Disassembly of section .irom0.text:
 40210af9:	000000        	ill
 40210afc:	00ea60        	excw
 40210aff:	0b0400        	excw
-40210b02:	124021        	l32r	a2, 401d5404 <_lit4_end+0xcec08>
-40210b05:	02f0c1        	l32r	a12, 401d16c8 <_lit4_end+0xcaecc>
-40210b08:	450361        	l32r	a6, 401e1f14 <_lit4_end+0xdb718>
+40210b02:	124021        	l32r	a2, 401d5404 <_lit4_end+0xcec70>
+40210b05:	02f0c1        	l32r	a12, 401d16c8 <_lit4_end+0xcaf34>
+40210b08:	450361        	l32r	a6, 401e1f14 <_lit4_end+0xdb780>
 40210b0b:	ee          	.byte 0xee
 40210b0c:	7e8524        	excw
 40210b0f:	fb2125        	excw
@@ -1147,7 +1147,7 @@ Disassembly of section .irom0.text:
 40210bac:	0108      	l32i.n	a0, a1, 0
 40210bae:	20c112        	addi	a1, a1, 32
 40210bb1:	f00d      	ret.n
-40210bb3:	d84000        	excw
+40210bb3:	d82000        	excw
 40210bb6:	fe          	.byte 0xfe
 40210bb7:	3f          	.byte 0x3f
 
@@ -1159,7 +1159,7 @@ Disassembly of section .irom0.text:
 40210bc2:	824342        	s8i	a4, a3, 130
 40210bc5:	7d4322        	s8i	a2, a3, 125
 40210bc8:	f00d      	ret.n
-40210bca:	3c0000        	excw
+40210bca:	1c0000        	excw
 40210bcd:	fed8      	l32i.n	a13, a14, 60
 40210bcf:	3f          	.byte 0x3f
 
@@ -1199,7 +1199,7 @@ Disassembly of section .irom0.text:
 40210c1d:	0108      	l32i.n	a0, a1, 0
 40210c1f:	10c112        	addi	a1, a1, 16
 40210c22:	f00d      	ret.n
-40210c24:	fed6c4        	excw
+40210c24:	fed6a4        	excw
 40210c27:	3f          	.byte 0x3f
 
 40210c28 <ieee80211_user_ie_init>:
@@ -1315,11 +1315,11 @@ Disassembly of section .irom0.text:
 40210d36:	804024        	excw
 40210d39:	240d      	excw
 40210d3b:	0da840        	excw
-40210d3e:	e44024        	excw
+40210d3e:	c44024        	excw
 40210d41:	fe8b      	addi.n	a15, a14, 8
 40210d43:	3f          	.byte 0x3f
 40210d44:	240db0        	extui	a0, a11, 13, 3
-40210d47:	89e440        	excw
+40210d47:	89cc40        	excw
 40210d4a:	fe          	.byte 0xfe
 40210d4b:	3f          	.byte 0x3f
 40210d4c:	240da0        	extui	a0, a10, 13, 3
@@ -1627,40 +1627,39 @@ Disassembly of section .irom0.text:
 40211049:	21c8      	l32i.n	a12, a1, 8
 4021104b:	10c112        	addi	a1, a1, 16
 4021104e:	f00d      	ret.n
-40211050:	dd6c      	movi.n	a13, -19
+40211050:	dd4c      	movi.n	a13, 77
 40211052:	fe          	.byte 0xfe
 40211053:	3f          	.byte 0x3f
-40211054:	fed844        	excw
+40211054:	fed824        	excw
 40211057:	3f          	.byte 0x3f
-40211058:	fed944        	excw
+40211058:	fed924        	excw
 4021105b:	3f          	.byte 0x3f
-4021105c:	fed7c4        	excw
+4021105c:	fed7a4        	excw
 4021105f:	3f          	.byte 0x3f
-40211060:	fed8c4        	excw
+40211060:	fed8a4        	excw
 40211063:	3f          	.byte 0x3f
-40211064:	fed8a0        	excw
+40211064:	fed880        	excw
 40211067:	3f          	.byte 0x3f
-40211068:	940d      	excw
+40211068:	93ed      	excw
 4021106a:	fe          	.byte 0xfe
 4021106b:	3f          	.byte 0x3f
-4021106c:	fedbc4        	excw
+4021106c:	fedba4        	excw
 4021106f:	3f          	.byte 0x3f
-40211070:	8978      	l32i.n	a7, a9, 32
-40211072:	fe          	.byte 0xfe
+40211070:	fe8960        	excw
 40211073:	3f          	.byte 0x3f
 40211074:	04b000        	extui	a11, a0, 0, 1
-40211077:	d9c400        	excw
+40211077:	d9a400        	excw
 4021107a:	fe          	.byte 0xfe
 4021107b:	3f          	.byte 0x3f
 4021107c:	f20a00        	excw
 4021107f:	3f          	.byte 0x3f
-40211080:	fede76        	excw
+40211080:	fede56        	bnez	a14, 40211071 <ieee80211_getmgtframe+0x69>
 40211083:	3f          	.byte 0x3f
 40211084:	8558      	l32i.n	a5, a5, 32
 40211086:	fe          	.byte 0xfe
 40211087:	3f          	.byte 0x3f
 40211088:	019000        	slli	a9, a0, 32
-4021108b:	dd7c00        	excw
+4021108b:	dd5c00        	excw
 4021108e:	fe          	.byte 0xfe
 4021108f:	3f          	.byte 0x3f
 40211090:	f448      	l32i.n	a4, a4, 60
@@ -1952,7 +1951,7 @@ Disassembly of section .irom0.text:
 402113a0:	8338      	l32i.n	a3, a3, 32
 402113a2:	fe          	.byte 0xfe
 402113a3:	3f          	.byte 0x3f
-402113a4:	feddb0        	excw
+402113a4:	fedd90        	excw
 402113a7:	3f          	.byte 0x3f
 402113a8:	0927c0        	excw
 402113ab:	a04200        	addx4	a4, a2, a0
@@ -2046,12 +2045,12 @@ Disassembly of section .irom0.text:
 402114a0:	f00d      	ret.n
 402114a2:	100000        	and	a0, a0, a0
 402114a5:	0e          	.byte 0xe
-402114a6:	884024        	excw
+402114a6:	684024        	excw
 402114a9:	fed9      	s32i.n	a13, a14, 60
 402114ab:	3f          	.byte 0x3f
-402114ac:	fed984        	excw
+402114ac:	fed964        	excw
 402114af:	3f          	.byte 0x3f
-402114b0:	fed9a4        	excw
+402114b0:	fed984        	excw
 402114b3:	3f          	.byte 0x3f
 402114b4:	2ac8      	l32i.n	a12, a10, 8
 402114b6:	1c4000        	excw
@@ -2192,7 +2191,7 @@ Disassembly of section .irom0.text:
 4021160f:	2108      	l32i.n	a0, a1, 8
 40211611:	20c112        	addi	a1, a1, 32
 40211614:	f00d      	ret.n
-40211616:	e40000        	extui	a0, a0, 0, 15
+40211616:	c40000        	extui	a0, a0, 0, 13
 40211619:	3ffee2        	excw
 4021161c:	f56c      	movi.n	a5, -17
 4021161e:	f0c112        	addi	a1, a1, -16
@@ -2279,7 +2278,7 @@ Disassembly of section .irom0.text:
 402116ea:	10c112        	addi	a1, a1, 16
 402116ed:	f00d      	ret.n
 402116ef:	13ac00        	excw
-402116f2:	a84021        	l32r	a2, 401fb7f4 <_lit4_end+0xf4ff8>
+402116f2:	a84021        	l32r	a2, 401fb7f4 <_lit4_end+0xf5060>
 402116f5:	402110        	excw
 402116f8:	1008e4        	excw
 402116fb:	c11240        	mul16u	a1, a2, a4
@@ -2359,7 +2358,7 @@ Disassembly of section .irom0.text:
 402117b8:	000e24        	excw
 402117bb:	c11240        	mul16u	a1, a2, a4
 402117be:	61c2f0        	xsr.eps2	a15
-402117c1:	610201        	l32r	a0, 401e9bcc <_lit4_end+0xe33d0>
+402117c1:	610201        	l32r	a0, 401e9bcc <_lit4_end+0xe3438>
 402117c4:	c33000        	excw
 402117c7:	e39c20        	excw
 402117ca:	320c      	movi.n	a2, 3
@@ -2459,7 +2458,7 @@ Disassembly of section .irom0.text:
 402118ba:	fcff01        	l32r	a0, 40210cb8 <ieee80211_ifattach+0x74>
 402118bd:	0000c0        	callx0	a0
 402118c0:	ffe646        	j	4021185d <hostap_handle_timer+0x55>
-402118c3:	896400        	excw
+402118c3:	894c00        	excw
 402118c6:	fe          	.byte 0xfe
 402118c7:	3f          	.byte 0x3f
 402118c8:	8e88      	l32i.n	a8, a14, 32
@@ -2914,7 +2913,7 @@ Disassembly of section .irom0.text:
 40211d7e:	fef586        	j	40211958 <hostap_input+0x88>
 40211d81:	000000        	ill
 40211d84:	1808      	l32i.n	a0, a8, 4
-40211d86:	004021        	l32r	a2, 401d1e88 <_lit4_end+0xcb68c>
+40211d86:	004021        	l32r	a2, 401d1e88 <_lit4_end+0xcb6f4>
 40211d89:	000200        	excw
 40211d8c:	e0c112        	addi	a1, a1, -32
 40211d8f:	51c9      	s32i.n	a12, a1, 20
@@ -3022,7 +3021,7 @@ Disassembly of section .irom0.text:
 40211e8e:	00dd34        	excw
 40211e91:	01f250        	slli	a15, a2, 27
 40211e94:	f25000        	excw
-40211e97:	8de402        	excw
+40211e97:	8dc402        	addi	a0, a4, -115
 40211e9a:	fe          	.byte 0xfe
 40211e9b:	3f          	.byte 0x3f
 40211e9c:	09f9      	s32i.n	a15, a9, 0
@@ -3031,13 +3030,13 @@ Disassembly of section .irom0.text:
 40211ea3:	60b100        	abs	a11, a0
 40211ea6:	72fb      	addi.n	a7, a2, 15
 40211ea8:	70a0a0        	excw
-40211eab:	52c011        	l32r	a1, 401e69ac <_lit4_end+0xe01b0>
-40211eae:	c21a61        	l32r	a6, 40202718 <_lit4_end+0xfbf1c>
-40211eb1:	d22261        	l32r	a6, 4020673c <_lit4_end+0xfff40>
-40211eb4:	f22361        	l32r	a6, 4020e740 <_lit4_end+0x107f44>
-40211eb7:	e22561        	l32r	a6, 4020a74c <_lit4_end+0x103f50>
-40211eba:	022461        	l32r	a6, 401d274c <_lit4_end+0xcbf50>
-40211ebd:	ed2161        	l32r	a6, 4020d344 <_lit4_end+0x106b48>
+40211eab:	52c011        	l32r	a1, 401e69ac <_lit4_end+0xe0218>
+40211eae:	c21a61        	l32r	a6, 40202718 <_lit4_end+0xfbf84>
+40211eb1:	d22261        	l32r	a6, 4020673c <_lit4_end+0xfffa8>
+40211eb4:	f22361        	l32r	a6, 4020e740 <_lit4_end+0x107fac>
+40211eb7:	e22561        	l32r	a6, 4020a74c <_lit4_end+0x103fb8>
+40211eba:	022461        	l32r	a6, 401d274c <_lit4_end+0xcbfb8>
+40211ebd:	ed2161        	l32r	a6, 4020d344 <_lit4_end+0x106bb0>
 40211ec0:	130204        	excw
 40211ec3:	f80b      	addi.n	a15, a8, -1
 40211ec5:	02dd13        	excw
@@ -3591,7 +3590,7 @@ Disassembly of section .irom0.text:
 402124b3:	c11200        	mul16u	a1, a2, a0
 402124b6:	61d2f0        	xsr.excsave2	a15
 402124b9:	61c202        	addi	a0, a2, 97
-402124bc:	010901        	l32r	a0, 401d28e0 <_lit4_end+0xcc0e4>
+402124bc:	010901        	l32r	a0, 401d28e0 <_lit4_end+0xcc14c>
 402124bf:	03cd      	mov.n	a12, a3
 402124c1:	1308      	l32i.n	a0, a3, 4
 402124c3:	242232        	l32i	a3, a2, 144
@@ -3676,44 +3675,44 @@ Disassembly of section .irom0.text:
 4021258d:	ef          	.byte 0xef
 4021258e:	ff          	.byte 0xff
 4021258f:	ff          	.byte 0xff
-40212590:	dd98      	l32i.n	a9, a13, 52
+40212590:	dd78      	l32i.n	a7, a13, 52
 40212592:	fe          	.byte 0xfe
 40212593:	3f          	.byte 0x3f
 40212594:	f1fe00        	excw
 40212597:	3f          	.byte 0x3f
-40212598:	de78      	l32i.n	a7, a14, 52
+40212598:	de58      	l32i.n	a5, a14, 52
 4021259a:	fe          	.byte 0xfe
 4021259b:	3f          	.byte 0x3f
-4021259c:	fe9424        	excw
+4021259c:	fe9404        	excw
 4021259f:	3f          	.byte 0x3f
-402125a0:	9428      	l32i.n	a2, a4, 36
+402125a0:	9408      	l32i.n	a0, a4, 36
 402125a2:	fe          	.byte 0xfe
 402125a3:	3f          	.byte 0x3f
 402125a4:	8099      	s32i.n	a9, a0, 32
 402125a6:	fe          	.byte 0xfe
 402125a7:	3f          	.byte 0x3f
-402125a8:	fe9426        	beqi	a4, 10, 402125aa <freqcal_scan_done+0x32>
+402125a8:	fe9406        	j	40211ffc <hostap_input+0x72c>
 402125ab:	3f          	.byte 0x3f
-402125ac:	fe9430        	excw
+402125ac:	fe9410        	excw
 402125af:	3f          	.byte 0x3f
 402125b0:	fe84c0        	excw
 402125b3:	3f          	.byte 0x3f
 402125b4:	240e50        	extui	a0, a5, 14, 3
 402125b7:	0e0040        	excw
-402125ba:	b46000        	extui	a6, a0, 0, 12
+402125ba:	946000        	extui	a6, a0, 0, 10
 402125bd:	fedd      	excw
 402125bf:	3f          	.byte 0x3f
-402125c0:	942c      	movi.n	a4, 41
+402125c0:	940c      	movi.n	a4, 9
 402125c2:	fe          	.byte 0xfe
 402125c3:	3f          	.byte 0x3f
 402125c4:	001000        	excw
 402125c7:	0e3000        	excw
 402125ca:	784024        	excw
 402125cd:	402125        	excw
-402125d0:	65dc      	bnez.n	a5, 402125ea <freqcal_scan_done+0x72>
-402125d2:	124010        	excw
-402125d5:	c9e0c1        	l32r	a12, 40204d58 <_lit4_end+0xfe55c>
-402125d8:	41d931        	l32r	a3, 401e2d3c <_lit4_end+0xdc540>
+402125d0:	106574        	excw
+402125d3:	c11240        	mul16u	a1, a2, a4
+402125d6:	31c9e0        	srai	a12, a14, 25
+402125d9:	41d9      	s32i.n	a13, a1, 16
 402125db:	51e9      	s32i.n	a14, a1, 20
 402125dd:	61f9      	s32i.n	a15, a1, 24
 402125df:	2109      	s32i.n	a0, a1, 8
@@ -4064,11 +4063,11 @@ Disassembly of section .irom0.text:
 402129be:	d40000        	extui	a0, a0, 0, 14
 402129c1:	402125        	excw
 402129c4:	000000        	ill
-402129c7:	8bfc01        	l32r	a0, 401f59b8 <_lit4_end+0xef1bc>
+402129c7:	8bdc01        	l32r	a0, 401f5938 <_lit4_end+0xef1a4>
 402129ca:	fe          	.byte 0xfe
 402129cb:	3f          	.byte 0x3f
 402129cc:	3a98      	l32i.n	a9, a10, 12
-402129ce:	840000        	extui	a0, a0, 0, 9
+402129ce:	1c0000        	excw
 402129d1:	401060        	excw
 402129d4:	2ecc      	bnez.n	a14, 402129da <wifi_softap_start+0x2>
 402129d6:	124000        	excw
@@ -4384,7 +4383,7 @@ Disassembly of section .irom0.text:
 40212cfe:	e40000        	extui	a0, a0, 0, 15
 40212d01:	402135        	excw
 40212d04:	366c      	movi.n	a6, -29
-40212d06:	324021        	l32r	a2, 401df608 <_lit4_end+0xd8e0c>
+40212d06:	324021        	l32r	a2, 401df608 <_lit4_end+0xd8e74>
 
 40212d08 <ieee80211_ht_attach>:
 40212d08:	00a032        	movi	a3, 0
@@ -4456,11 +4455,11 @@ Disassembly of section .irom0.text:
 40212db4:	002102        	l32i	a0, a1, 0
 40212db7:	10c112        	addi	a1, a1, 16
 40212dba:	f00d      	ret.n
-40212dbc:	feddc4        	excw
+40212dbc:	fedda4        	excw
 40212dbf:	3f          	.byte 0x3f
 40212dc0:	fe8560        	excw
 40212dc3:	3f          	.byte 0x3f
-40212dc4:	ddb8      	l32i.n	a11, a13, 52
+40212dc4:	dd98      	l32i.n	a9, a13, 52
 40212dc6:	fe          	.byte 0xfe
 40212dc7:	3f          	.byte 0x3f
 40212dc8:	df48      	l32i.n	a4, a15, 52
@@ -4584,7 +4583,7 @@ Disassembly of section .irom0.text:
 40212ef9:	11c8      	l32i.n	a12, a1, 4
 40212efb:	10c112        	addi	a1, a1, 16
 40212efe:	f00d      	ret.n
-40212f00:	db0c      	movi.n	a11, 13
+40212f00:	daec      	bnez.n	a10, 40212f31 <ieee80211_ht_updateparams+0x11>
 40212f02:	fe          	.byte 0xfe
 40212f03:	3f          	.byte 0x3f
 40212f04:	ff          	.byte 0xff
@@ -4701,11 +4700,11 @@ Disassembly of section .irom0.text:
 4021302b:	200040        	or	a0, a0, a4
 4021302e:	100030        	and	a0, a0, a3
 40213031:	ffce86        	j	40212f6f <ieee80211_ht_updateparams+0x4f>
-40213034:	d81c      	movi.n	a8, 29
+40213034:	d7fc      	bnez.n	a7, 40213075 <ieee80211_setup_htrates+0x39>
 40213036:	fe          	.byte 0xfe
 40213037:	3f          	.byte 0x3f
-40213038:	6798      	l32i.n	a9, a7, 24
-4021303a:	124010        	excw
+40213038:	106730        	and	a6, a7, a3
+4021303b:	c11240        	mul16u	a1, a2, a4
 
 4021303c <ieee80211_setup_htrates>:
 4021303c:	d0c112        	addi	a1, a1, -48
@@ -4979,8 +4978,8 @@ Disassembly of section .irom0.text:
 402132e6:	bf0000        	excw
 402132e9:	ff          	.byte 0xff
 402132ea:	120000        	excw
-402132ed:	09d0c1        	l32r	a12, 401d5a30 <_lit4_end+0xcf234>
-402132f0:	71e941        	l32r	a4, 401efa94 <_lit4_end+0xe9298>
+402132ed:	09d0c1        	l32r	a12, 401d5a30 <_lit4_end+0xcf29c>
+402132f0:	71e941        	l32r	a4, 401efa94 <_lit4_end+0xe9300>
 402132f3:	51c9      	s32i.n	a12, a1, 20
 402132f5:	61d9      	s32i.n	a13, a1, 24
 402132f7:	f64bc1        	l32r	a12, 40210c24 <ieee80211_freedom_init+0x24>
@@ -5182,8 +5181,8 @@ Disassembly of section .irom0.text:
 402134f7:	1108      	l32i.n	a0, a1, 4
 402134f9:	20c112        	addi	a1, a1, 32
 402134fc:	f00d      	ret.n
-402134fe:	000000        	ill
-40213501:	fed9      	s32i.n	a13, a14, 60
+402134fe:	e00000        	subx4	a0, a0, a0
+40213501:	fed8      	l32i.n	a13, a14, 60
 40213503:	3f          	.byte 0x3f
 40213504:	16a042        	movi	a4, 22
 40213507:	f0c112        	addi	a1, a1, -16
@@ -5677,7 +5676,7 @@ Disassembly of section .irom0.text:
 402139d4:	220c      	movi.n	a2, 2
 402139d6:	fff3c6        	j	402139a9 <ieee80211_setup_phy_mode+0x11>
 402139d9:	000000        	ill
-402139dc:	ddbc      	beqz.n	a13, 40213a1d <set_rate_limit+0x5>
+402139dc:	dd9c      	beqz.n	a13, 402139fd <check_max_11bg_rate+0x1d>
 402139de:	fe          	.byte 0xfe
 402139df:	3f          	.byte 0x3f
 
@@ -5916,10 +5915,10 @@ Disassembly of section .irom0.text:
 40213c1a:	932320        	movnez	a2, a3, a2
 40213c1d:	10c112        	addi	a1, a1, 16
 40213c20:	f00d      	ret.n
-40213c22:	080000        	excw
-40213c25:	feda      	add.n	a15, a14, a13
+40213c22:	e80000        	excw
+40213c25:	fed9      	s32i.n	a13, a14, 60
 40213c27:	3f          	.byte 0x3f
-40213c28:	fed8d0        	excw
+40213c28:	fed8b0        	excw
 40213c2b:	3f          	.byte 0x3f
 40213c2c:	f25000        	excw
 40213c2f:	fe1804        	excw
@@ -6454,8 +6453,8 @@ Disassembly of section .irom0.text:
 402141c4:	502055        	excw
 402141c7:	372024        	excw
 402141ca:	610b12        	l8ui	a1, a11, 97
-402141cd:	71f731        	l32r	a3, 401f09ac <_lit4_end+0xea1b0>
-402141d0:	67f731        	l32r	a3, 401ee1ac <_lit4_end+0xe79b0>
+402141cd:	71f731        	l32r	a3, 401f09ac <_lit4_end+0xea218>
+402141d0:	67f731        	l32r	a3, 401ee1ac <_lit4_end+0xe7a18>
 402141d3:	770a12        	l8ui	a1, a10, 119
 402141d6:	0c0312        	l8ui	a1, a3, 12
 402141d9:	f00d02        	l8ui	a0, a13, 240
@@ -6535,7 +6534,7 @@ Disassembly of section .irom0.text:
 4021429e:	f00d      	ret.n
 402142a0:	120c      	movi.n	a2, 1
 402142a2:	f00d      	ret.n
-402142a4:	fed880        	excw
+402142a4:	fed860        	excw
 402142a7:	3f          	.byte 0x3f
 
 402142a8 <ieee80211_parse_wpa>:
@@ -6812,7 +6811,7 @@ Disassembly of section .irom0.text:
 40214565:	83b6c7        	bgeu	a6, a12, 402144ec <ieee80211_parse_action+0x1c>
 40214568:	fff386        	j	4021453a <ieee80211_parse_action+0x6a>
 4021456b:	459600        	extui	a9, a0, 22, 5
-4021456e:	124021        	l32r	a2, 401d8e70 <_lit4_end+0xd2674>
+4021456e:	124021        	l32r	a2, 401d8e70 <_lit4_end+0xd26dc>
 
 40214570 <ieee80211_mesh_quick_get>:
 40214570:	f0c112        	addi	a1, a1, -16
@@ -7924,8 +7923,8 @@ Disassembly of section .irom0.text:
 40215059:	10c112        	addi	a1, a1, 16
 4021505c:	f00d      	ret.n
 4021505e:	120000        	excw
-40215061:	09f0c1        	l32r	a12, 401d7824 <_lit4_end+0xd1028>
-40215064:	11c901        	l32r	a0, 401d9788 <_lit4_end+0xd2f8c>
+40215061:	09f0c1        	l32r	a12, 401d7824 <_lit4_end+0xd1090>
+40215064:	11c901        	l32r	a0, 401d9788 <_lit4_end+0xd2ff4>
 40215067:	21d9      	s32i.n	a13, a1, 8
 40215069:	03cd      	mov.n	a12, a3
 4021506b:	02dd      	mov.n	a13, a2
@@ -7971,7 +7970,7 @@ Disassembly of section .irom0.text:
 402150cc:	f00d      	ret.n
 402150ce:	c00000        	sub	a0, a0, a0
 402150d1:	0e          	.byte 0xe
-402150d2:	f04024        	excw
+402150d2:	d04024        	excw
 402150d5:	3ffed6        	bgez	a14, 402154d8 <ieee80211_send_mgmt+0x138>
 
 402150d8 <ieee80211_send_probereq>:
@@ -8252,10 +8251,10 @@ Disassembly of section .irom0.text:
 4021538b:	f44040        	extui	a4, a4, 0, 16
 4021538e:	042d      	mov.n	a2, a4
 40215390:	f00d      	ret.n
-40215392:	840000        	extui	a0, a0, 0, 9
+40215392:	640000        	extui	a0, a0, 0, 7
 40215395:	fed8      	l32i.n	a13, a14, 60
 40215397:	3f          	.byte 0x3f
-40215398:	fed8e0        	excw
+40215398:	fed8c0        	excw
 4021539b:	3f          	.byte 0x3f
 4021539c:	008010        	excw
 	...
@@ -8816,9 +8815,9 @@ Disassembly of section .irom0.text:
 4021592c:	3028      	l32i.n	a2, a0, 12
 4021592e:	102240        	and	a2, a2, a4
 40215931:	ffd906        	j	40215899 <ieee80211_send_mgmt+0x4f9>
-40215934:	fed934        	excw
+40215934:	fed914        	excw
 40215937:	3f          	.byte 0x3f
-40215938:	fedb40        	excw
+40215938:	fedb20        	excw
 4021593b:	3f          	.byte 0x3f
 4021593c:	000880        	ret
 	...
@@ -9552,10 +9551,10 @@ Disassembly of section .irom0.text:
 40216050:	1ba345        	call0	40231a88 <ppTxPkt>
 40216053:	ff9d06        	j	40215ecb <ieee80211_freedom_output+0x5b>
 40216056:	120000        	excw
-40216059:	02c0c1        	l32r	a12, 401d6b5c <_lit4_end+0xd0360>
-4021605c:	c20861        	l32r	a6, 4020687c <_lit4_end+0x100080>
-4021605f:	d90961        	l32r	a6, 4020c484 <_lit4_end+0x105c88>
-40216062:	6129a1        	l32r	a10, 401ee508 <_lit4_end+0xe7d0c>
+40216059:	02c0c1        	l32r	a12, 401d6b5c <_lit4_end+0xd03c8>
+4021605c:	c20861        	l32r	a6, 4020687c <_lit4_end+0x1000e8>
+4021605f:	d90961        	l32r	a6, 4020c484 <_lit4_end+0x105cf0>
+40216062:	6129a1        	l32r	a10, 401ee508 <_lit4_end+0xe7d74>
 40216065:	b1e9      	s32i.n	a14, a1, 44
 40216067:	c1f9      	s32i.n	a15, a1, 48
 40216069:	05ed      	mov.n	a14, a5
@@ -10075,7 +10074,7 @@ Disassembly of section .irom0.text:
 40216571:	0108      	l32i.n	a0, a1, 0
 40216573:	10c112        	addi	a1, a1, 16
 40216576:	f00d      	ret.n
-40216578:	fed820        	excw
+40216578:	fed800        	excw
 4021657b:	3f          	.byte 0x3f
 
 4021657c <ieee80211_set_tim>:
@@ -10260,7 +10259,7 @@ Disassembly of section .irom0.text:
 40216732:	10c112        	addi	a1, a1, 16
 40216735:	f00d      	ret.n
 40216737:	93f400        	movnez	a15, a4, a0
-4021673a:	204021        	l32r	a2, 401de83c <_lit4_end+0xd8040>
+4021673a:	204021        	l32r	a2, 401de83c <_lit4_end+0xd80a8>
 
 4021673c <ieee80211_mlme_connect_bss>:
 4021673c:	203220        	or	a3, a2, a2
@@ -10323,7 +10322,7 @@ Disassembly of section .irom0.text:
 402167d0:	10c112        	addi	a1, a1, 16
 402167d3:	f00d      	ret.n
 402167d5:	000000        	ill
-402167d8:	fed744        	excw
+402167d8:	fed724        	excw
 402167db:	3f          	.byte 0x3f
 
 402167dc <ieee80211_regdomain_update>:
@@ -10404,7 +10403,7 @@ Disassembly of section .irom0.text:
 40216897:	0000c0        	callx0	a0
 4021689a:	120c      	movi.n	a2, 1
 4021689c:	fff5c6        	j	40216877 <ieee80211_regdomain_update+0x9b>
-4021689f:	d7f400        	excw
+4021689f:	d7d400        	excw
 402168a2:	fe          	.byte 0xfe
 402168a3:	3f          	.byte 0x3f
 
@@ -10613,11 +10612,11 @@ Disassembly of section .irom0.text:
 40216a73:	020c      	movi.n	a2, 0
 40216a75:	7c6322        	s32i	a2, a3, 0x1f0
 40216a78:	f00d      	ret.n
-40216a7a:	c80000        	excw
+40216a7a:	a80000        	excw
 40216a7d:	fedd      	excw
 40216a7f:	3f          	.byte 0x3f
 40216a80:	2172f4        	excw
-40216a83:	dde040        	excw
+40216a83:	ddc040        	excw
 40216a86:	fe          	.byte 0xfe
 40216a87:	3f          	.byte 0x3f
 40216a88:	2172e0        	srai	a7, a14, 2
@@ -10658,17 +10657,17 @@ Disassembly of section .irom0.text:
 40216adc:	f00d      	ret.n
 40216ade:	510000        	excw
 40216ae1:	12ffe7        	bbsi	a15, 30, 40216af7 <ieee80211_scan_attach+0x6b>
-40216ae4:	02f0c1        	l32r	a12, 401d76a4 <_lit4_end+0xd0ea8>
-40216ae7:	220061        	l32r	a6, 401df2e8 <_lit4_end+0xd8aec>
+40216ae4:	02f0c1        	l32r	a12, 401d76a4 <_lit4_end+0xd0f10>
+40216ae7:	220061        	l32r	a6, 401df2e8 <_lit4_end+0xd8b54>
 40216aea:	322725        	excw
 40216aed:	42a005        	call0	402594f0 <_irom0_text_end+0x17950>
 40216af0:	522925        	excw
 40216af3:	c52a25        	excw
 40216af6:	020014        	excw
-40216af9:	120021        	l32r	a2, 401db2fc <_lit4_end+0xd4b00>
-40216afc:	8010c1        	l32r	a12, 401f6b3c <_lit4_end+0xf0340>
+40216af9:	120021        	l32r	a2, 401db2fc <_lit4_end+0xd4b68>
+40216afc:	8010c1        	l32r	a12, 401f6b3c <_lit4_end+0xf03a8>
 40216aff:	000000        	ill
-40216b02:	960000        	excw
+40216b02:	760000        	excw
 40216b05:	fedd      	excw
 40216b07:	3f          	.byte 0x3f
 40216b08:	2410c0        	extui	a1, a12, 0, 3
@@ -10780,13 +10779,13 @@ Disassembly of section .irom0.text:
 40216c2b:	e84d01        	l32r	a0, 40210d60 <ieee80211_chan2ieee+0x44>
 40216c2e:	0000c0        	callx0	a0
 40216c31:	ffe606        	j	40216bcd <freq_changle_scan_start+0xb9>
-40216c34:	fede80        	excw
+40216c34:	fede60        	excw
 40216c37:	3f          	.byte 0x3f
 40216c38:	216ae0        	srai	a6, a14, 10
 40216c3b:	937440        	movnez	a7, a4, a4
-40216c3e:	3c4021        	l32r	a2, 401e5d40 <_lit4_end+0xdf544>
+40216c3e:	3c4021        	l32r	a2, 401e5d40 <_lit4_end+0xdf5ac>
 40216c41:	6f          	.byte 0x6f
-40216c42:	124021        	l32r	a2, 401db544 <_lit4_end+0xd4d48>
+40216c42:	124021        	l32r	a2, 401db544 <_lit4_end+0xd4db0>
 
 40216c44 <scan_start>:
 40216c44:	e0c112        	addi	a1, a1, -32
@@ -10901,8 +10900,8 @@ Disassembly of section .irom0.text:
 40216d61:	20c112        	addi	a1, a1, 32
 40216d64:	f00d      	ret.n
 40216d66:	120000        	excw
-40216d69:	02f0c1        	l32r	a12, 401d792c <_lit4_end+0xd1130>
-40216d6c:	450061        	l32r	a6, 401e816c <_lit4_end+0xe1970>
+40216d69:	02f0c1        	l32r	a12, 401d792c <_lit4_end+0xd1198>
+40216d6c:	450061        	l32r	a6, 401e816c <_lit4_end+0xe19d8>
 40216d6f:	004c      	movi.n	a0, 64
 40216d71:	005216        	beqz	a2, 40216d7a <scan_start+0x136>
 40216d74:	000185        	call0	40216d90 <scan_start+0x14c>
@@ -10914,12 +10913,12 @@ Disassembly of section .irom0.text:
 40216d83:	10c112        	addi	a1, a1, 16
 40216d86:	f00d      	ret.n
 40216d88:	6de8      	l32i.n	a14, a13, 24
-40216d8a:	344021        	l32r	a2, 401e3e8c <_lit4_end+0xdd690>
+40216d8a:	344021        	l32r	a2, 401e3e8c <_lit4_end+0xdd6f8>
 40216d8d:	6e          	.byte 0x6e
-40216d8e:	124021        	l32r	a2, 401db690 <_lit4_end+0xd4e94>
-40216d91:	c2f0c1        	l32r	a12, 40207954 <_lit4_end+0x101158>
-40216d94:	d20161        	l32r	a6, 4020b598 <_lit4_end+0x104d9c>
-40216d97:	d10261        	l32r	a6, 4020b1a0 <_lit4_end+0x1049a4>
+40216d8e:	124021        	l32r	a2, 401db690 <_lit4_end+0xd4efc>
+40216d91:	c2f0c1        	l32r	a12, 40207954 <_lit4_end+0x1011c0>
+40216d94:	d20161        	l32r	a6, 4020b598 <_lit4_end+0x104e04>
+40216d97:	d10261        	l32r	a6, 4020b1a0 <_lit4_end+0x104a0c>
 40216d9a:	ff38      	l32i.n	a3, a15, 60
 40216d9c:	006102        	s32i	a0, a1, 0
 40216d9f:	0d08      	l32i.n	a0, a13, 0
@@ -10951,20 +10950,20 @@ Disassembly of section .irom0.text:
 40216de1:	043d      	mov.n	a3, a4
 40216de3:	fff486        	j	40216db9 <scan_start+0x175>
 40216de6:	120000        	excw
-40216de9:	52f0c1        	l32r	a12, 401eb9ac <_lit4_end+0xe51b0>
+40216de9:	52f0c1        	l32r	a12, 401eb9ac <_lit4_end+0xe5218>
 40216dec:	0202a0        	excw
-40216def:	010061        	l32r	a6, 401d71f0 <_lit4_end+0xd09f4>
+40216def:	010061        	l32r	a6, 401d71f0 <_lit4_end+0xd0a5c>
 40216df2:	62ff22        	excw
 40216df5:	42f7a0        	excw
 40216df8:	384600        	excw
 40216dfb:	446000        	extui	a6, a0, 0, 5
 40216dfe:	445010        	extui	a5, a1, 0, 5
 40216e01:	404220        	excw
-40216e04:	e3e746        	j	4020fda5 <_lit4_end+0x1095a9>
+40216e04:	e3e746        	j	4020fda5 <_lit4_end+0x109611>
 40216e07:	781a      	add.n	a7, a8, a1
 40216e09:	e79702        	l16si	a0, a7, 0x1ce
 40216e0c:	022215        	excw
-40216e0f:	b64506        	j	40204727 <_lit4_end+0xfdf2b>
+40216e0f:	b64506        	j	40204727 <_lit4_end+0xfdf93>
 40216e12:	ff          	.byte 0xff
 40216e13:	c28c      	beqz.n	a2, 40216e23 <scan_start+0x1df>
 40216e15:	ff1991        	l32r	a9, 40216a7c <unregister_ieee80211_rfid_locp_recv_cb+0xc>
@@ -10975,10 +10974,10 @@ Disassembly of section .irom0.text:
 40216e23:	0108      	l32i.n	a0, a1, 0
 40216e25:	10c112        	addi	a1, a1, 16
 40216e28:	f00d      	ret.n
-40216e2a:	cc0000        	excw
+40216e2a:	ac0000        	excw
 40216e2d:	fedd      	excw
 40216e2f:	3f          	.byte 0x3f
-40216e30:	fed890        	excw
+40216e30:	fed870        	excw
 40216e33:	3f          	.byte 0x3f
 40216e34:	f0c112        	addi	a1, a1, -16
 40216e37:	21c9      	s32i.n	a12, a1, 8
@@ -11233,7 +11232,7 @@ Disassembly of section .irom0.text:
 402170df:	000ec0        	callx0	a14
 402170e2:	ffcb06        	j	40217012 <scan_cancel+0x10e>
 402170e5:	000000        	ill
-402170e8:	de5c      	movi.n	a14, 93
+402170e8:	de3c      	movi.n	a14, 61
 402170ea:	fe          	.byte 0xfe
 402170eb:	3f          	.byte 0x3f
 
@@ -11451,9 +11450,9 @@ Disassembly of section .irom0.text:
 402172ec:	10c112        	addi	a1, a1, 16
 402172ef:	000080        	ret
 402172f2:	120000        	excw
-402172f5:	51f0c1        	l32r	a12, 401ebab8 <_lit4_end+0xe52bc>
-402172f8:	09fde1        	l32r	a14, 401d9aec <_lit4_end+0xd32f0>
-402172fb:	050201        	l32r	a0, 401d8704 <_lit4_end+0xd1f08>
+402172f5:	51f0c1        	l32r	a12, 401ebab8 <_lit4_end+0xe5324>
+402172f8:	09fde1        	l32r	a14, 401d9aec <_lit4_end+0xd3358>
+402172fb:	050201        	l32r	a0, 401d8704 <_lit4_end+0xd1f70>
 402172fe:	254b46        	j	4022082f <flash_data_check+0x2cf>
 40217301:	276007        	bbci	a0, 0, 4021732c <scan_remove_probe_ssid+0x1a0>
 40217304:	a30c      	movi.n	a3, 10
@@ -11520,19 +11519,19 @@ Disassembly of section .irom0.text:
 4021738c:	10c112        	addi	a1, a1, 16
 4021738f:	f00d      	ret.n
 40217391:	000000        	ill
-40217394:	d8fc      	bnez.n	a8, 402173d5 <scan_profile_check+0x25>
+40217394:	d8dc      	bnez.n	a8, 402173b5 <scan_profile_check+0x5>
 40217396:	fe          	.byte 0xfe
 40217397:	3f          	.byte 0x3f
-40217398:	d97a      	add.n	a13, a9, a7
+40217398:	d95a      	add.n	a13, a9, a5
 4021739a:	fe          	.byte 0xfe
 4021739b:	3f          	.byte 0x3f
-4021739c:	dcec      	bnez.n	a12, 402173cd <scan_profile_check+0x1d>
+4021739c:	dccc      	bnez.n	a12, 402173ad <scan_connect_state+0x61>
 4021739e:	fe          	.byte 0xfe
 4021739f:	3f          	.byte 0x3f
-402173a0:	fed907        	bbs	a9, a0, 402173a2 <scan_connect_state+0x56>
+402173a0:	fed8e7        	bbs	a8, a14, 402173a2 <scan_connect_state+0x56>
 402173a3:	3f          	.byte 0x3f
 402173a4:	241100        	extui	a1, a0, 1, 3
-402173a7:	d96940        	excw
+402173a7:	d94940        	excw
 402173aa:	fe          	.byte 0xfe
 402173ab:	3f          	.byte 0x3f
 402173ac:	2410a0        	extui	a1, a10, 0, 3
@@ -11740,8 +11739,8 @@ Disassembly of section .irom0.text:
 402175bd:	20c112        	addi	a1, a1, 32
 402175c0:	f00d      	ret.n
 402175c2:	120000        	excw
-402175c5:	09f0c1        	l32r	a12, 401d9d88 <_lit4_end+0xd358c>
-402175c8:	21d901        	l32r	a0, 401dfd2c <_lit4_end+0xd9530>
+402175c5:	09f0c1        	l32r	a12, 401d9d88 <_lit4_end+0xd35f4>
+402175c8:	21d901        	l32r	a0, 401dfd2c <_lit4_end+0xd9598>
 402175cb:	e596d1        	l32r	a13, 40210c24 <ieee80211_freedom_init+0x24>
 402175ce:	11c9      	s32i.n	a12, a1, 4
 402175d0:	5f2dd2        	l32i	a13, a13, 0x17c
@@ -11940,9 +11939,8 @@ Disassembly of section .irom0.text:
 402177d0:	000c      	movi.n	a0, 0
 402177d2:	ffd7c6        	j	40217735 <scan_profile_check+0x385>
 402177d5:	000000        	ill
-402177d8:	0e          	.byte 0xe
-402177d9:	8e          	.byte 0x8e
-402177da:	fe          	.byte 0xfe
+402177d8:	ee          	.byte 0xee
+402177d9:	fe8d      	excw
 402177db:	3f          	.byte 0x3f
 402177dc:	241120        	extui	a1, a2, 1, 3
 402177df:	2ab840        	excw
@@ -12254,7 +12252,7 @@ Disassembly of section .irom0.text:
 40217b10:	56ffc7        	bbsi	a15, 28, 40217b6a <scan_parse_beacon+0x386>
 40217b13:	21db57        	bbs	a11, a5, 40217b38 <scan_parse_beacon+0x354>
 40217b16:	32fd74        	excw
-40217b19:	420d21        	l32r	a2, 401e8350 <_lit4_end+0xe1b54>
+40217b19:	420d21        	l32r	a2, 401e8350 <_lit4_end+0xe1bbc>
 40217b1c:	0106a0        	slli	a0, a6, 22
 40217b1f:	e76b      	addi.n	a14, a7, 6
 40217b21:	0000c0        	callx0	a0
@@ -12291,7 +12289,7 @@ Disassembly of section .irom0.text:
 40217b7b:	314840        	srai	a4, a4, 24
 40217b7e:	ffa805        	call0	40217600 <scan_profile_check+0x250>
 40217b81:	ff58c6        	j	402178e8 <scan_parse_beacon+0x104>
-40217b84:	de98      	l32i.n	a9, a14, 52
+40217b84:	de78      	l32i.n	a7, a14, 52
 40217b86:	fe          	.byte 0xfe
 40217b87:	3f          	.byte 0x3f
 40217b88:	ffff41        	l32r	a4, 40217b84 <scan_parse_beacon+0x3a0>
@@ -12303,7 +12301,7 @@ Disassembly of section .irom0.text:
 40217b98:	043030        	extui	a3, a3, 0, 1
 40217b9b:	004432        	s8i	a3, a4, 0
 40217b9e:	f00d      	ret.n
-40217ba0:	deb8      	l32i.n	a11, a14, 52
+40217ba0:	de98      	l32i.n	a9, a14, 52
 40217ba2:	fe          	.byte 0xfe
 40217ba3:	3f          	.byte 0x3f
 40217ba4:	ffff51        	l32r	a5, 40217ba0 <scan_parse_beacon+0x3bc>
@@ -12367,11 +12365,11 @@ Disassembly of section .irom0.text:
 40217c3a:	f00d      	ret.n
 40217c3c:	241140        	extui	a1, a4, 1, 3
 40217c3f:	113040        	slli	a3, a0, 12
-40217c42:	754024        	excw
+40217c42:	554024        	excw
 40217c45:	de          	.byte 0xde
 40217c46:	fe          	.byte 0xfe
 40217c47:	3f          	.byte 0x3f
-40217c48:	e2ac      	beqz.n	a2, 40217c7a <ieee80211_sta_new_state+0x2e>
+40217c48:	e28c      	beqz.n	a2, 40217c5a <ieee80211_sta_new_state+0xe>
 40217c4a:	fe          	.byte 0xfe
 40217c4b:	3f          	.byte 0x3f
 
@@ -12708,7 +12706,7 @@ Disassembly of section .irom0.text:
 40217fc9:	fd3d45        	call0	402153a0 <ieee80211_send_mgmt>
 40217fcc:	116cd2        	s32i	a13, a12, 68
 40217fcf:	ff4846        	j	40217cf4 <ieee80211_sta_new_state+0xa8>
-40217fd2:	640000        	extui	a0, a0, 0, 7
+40217fd2:	4c0000        	excw
 40217fd5:	fe89      	s32i.n	a8, a14, 60
 40217fd7:	3f          	.byte 0x3f
 
@@ -13051,9 +13049,9 @@ Disassembly of section .irom0.text:
 40218360:	219414        	excw
 40218363:	c11240        	mul16u	a1, a2, a4
 40218366:	61c2f0        	xsr.eps2	a15
-40218369:	610201        	l32r	a0, 401f0774 <_lit4_end+0xe9f78>
+40218369:	610201        	l32r	a0, 401f0774 <_lit4_end+0xe9fe0>
 4021836c:	220200        	excw
-4021836f:	02cd11        	l32r	a1, 401d8ea4 <_lit4_end+0xd26a8>
+4021836f:	02cd11        	l32r	a1, 401d8ea4 <_lit4_end+0xd2710>
 40218372:	382066        	bnei	a0, 2, 402183ae <sta_input+0x3d6>
 40218375:	e22b21        	l32r	a2, 40210c24 <ieee80211_freedom_init+0x24>
 40218378:	3b2626        	beqi	a6, 2, 402183b7 <sta_input+0x3df>
@@ -13225,17 +13223,17 @@ Disassembly of section .irom0.text:
 40218537:	ff7145        	call0	40217c4c <ieee80211_sta_new_state>
 4021853a:	ffe146        	j	402184c3 <sta_input+0x4eb>
 4021853d:	000000        	ill
-40218540:	fed850        	excw
+40218540:	fed830        	excw
 40218543:	3f          	.byte 0x3f
-40218544:	de9c      	beqz.n	a14, 40218565 <sta_input+0x58d>
+40218544:	de7c      	movi.n	a14, -3
 40218546:	fe          	.byte 0xfe
 40218547:	3f          	.byte 0x3f
 40218548:	219610        	srai	a9, a1, 6
 4021854b:	b62140        	excw
-4021854e:	c112e1        	l32r	a14, 40208998 <_lit4_end+0x10219c>
+4021854e:	c112e1        	l32r	a14, 40208998 <_lit4_end+0x102204>
 40218551:	61c2f0        	xsr.eps2	a15
 40218554:	610202        	l8ui	a0, a2, 97
-40218557:	61d201        	l32r	a0, 401f0ca0 <_lit4_end+0xea4a4>
+40218557:	61d201        	l32r	a0, 401f0ca0 <_lit4_end+0xea50c>
 4021855a:	422803        	excw
 4021855d:	0129      	s32i.n	a2, a1, 0
 4021855f:	242222        	l32i	a2, a2, 144
@@ -13828,8 +13826,8 @@ Disassembly of section .irom0.text:
 40218b86:	7d08      	l32i.n	a0, a13, 28
 40218b88:	100020        	and	a0, a0, a2
 40218b8b:	ff6386        	j	4021891d <sta_input+0x945>
-40218b8e:	020000        	excw
-40218b91:	fe8c      	beqz.n	a14, 40218ba4 <wifi_station_start+0x10>
+40218b8e:	e20000        	excw
+40218b91:	fe8b      	addi.n	a15, a14, 8
 40218b93:	3f          	.byte 0x3f
 
 40218b94 <wifi_station_start>:
@@ -13908,12 +13906,12 @@ Disassembly of section .irom0.text:
 40218c43:	1b0045        	call0	40233c48 <wDev_DisableUcRx>
 40218c46:	fff546        	j	40218c1f <wifi_station_stop+0x17>
 40218c49:	000000        	ill
-40218c4c:	fedec0        	excw
+40218c4c:	fedea0        	excw
 40218c4f:	3f          	.byte 0x3f
-40218c50:	fedee4        	excw
+40218c50:	fedec4        	excw
 40218c53:	3f          	.byte 0x3f
 40218c54:	218e44        	excw
-40218c57:	def840        	excw
+40218c57:	ded840        	excw
 40218c5a:	fe          	.byte 0xfe
 40218c5b:	3f          	.byte 0x3f
 
@@ -14035,7 +14033,7 @@ Disassembly of section .irom0.text:
 40218d72:	d76917        	bbci	a9, 1, 40218d4d <chm_start_op+0x11>
 40218d75:	000085        	call0	40218d80 <chm_start_op+0x44>
 40218d78:	fff506        	j	40218d50 <chm_start_op+0x14>
-40218d7b:	dec400        	excw
+40218d7b:	dea400        	excw
 40218d7e:	fe          	.byte 0xfe
 40218d7f:	3f          	.byte 0x3f
 40218d80:	f0c112        	addi	a1, a1, -16
@@ -14172,8 +14170,8 @@ Disassembly of section .irom0.text:
 40218ec0:	10c112        	addi	a1, a1, 16
 40218ec3:	f00d      	ret.n
 40218ec5:	000000        	ill
-40218ec8:	233c      	movi.n	a3, 50
-40218eca:	0c4010        	excw
+40218ec8:	1022d4        	excw
+40218ecb:	130c40        	excw
 
 40218ecc <chm_set_current_channel>:
 40218ecc:	130c      	movi.n	a3, 1
@@ -14215,14 +14213,14 @@ Disassembly of section .irom0.text:
 40218f27:	120c      	movi.n	a2, 1
 40218f29:	932340        	movnez	a2, a3, a4
 40218f2c:	f00d      	ret.n
-40218f2e:	180000        	excw
-40218f31:	df          	.byte 0xdf
+40218f2e:	f80000        	excw
+40218f31:	de          	.byte 0xde
 40218f32:	fe          	.byte 0xfe
 40218f33:	3f          	.byte 0x3f
-40218f34:	fee1f4        	excw
+40218f34:	fee1d4        	excw
 40218f37:	3f          	.byte 0x3f
 40218f38:	92e8      	l32i.n	a14, a2, 36
-40218f3a:	324021        	l32r	a2, 401e583c <_lit4_end+0xdf040>
+40218f3a:	324021        	l32r	a2, 401e583c <_lit4_end+0xdf0a8>
 
 40218f3c <cnx_attach>:
 40218f3c:	78a332        	movi	a3, 0x378
@@ -14279,10 +14277,10 @@ Disassembly of section .irom0.text:
 40218fc0:	174762        	s8i	a6, a7, 23
 40218fc3:	f00d      	ret.n
 40218fc5:	000000        	ill
-40218fc8:	fee290        	excw
+40218fc8:	fee270        	excw
 40218fcb:	3f          	.byte 0x3f
 40218fcc:	8f7c      	movi.n	a15, -8
-40218fce:	004021        	l32r	a2, 401d90d0 <_lit4_end+0xd28d4>
+40218fce:	004021        	l32r	a2, 401d90d0 <_lit4_end+0xd293c>
 40218fd1:	0000c0        	callx0	a0
 
 40218fd4 <cnx_sta_connect_cmd>:
@@ -14476,7 +14474,7 @@ Disassembly of section .irom0.text:
 402191c1:	78a032        	movi	a3, 120
 402191c4:	fdf5c5        	call0	40217124 <scan_set_act_duration>
 402191c7:	ffefc6        	j	4021918a <cnx_sta_scan_cmd+0xf6>
-402191ca:	240000        	extui	a0, a0, 0, 3
+402191ca:	040000        	extui	a0, a0, 0, 1
 402191cd:	3ffee2        	excw
 402191d0:	219474        	excw
 402191d3:	fe5140        	excw
@@ -14523,7 +14521,7 @@ Disassembly of section .irom0.text:
 4021923a:	10c112        	addi	a1, a1, 16
 4021923d:	f00d      	ret.n
 4021923f:	933800        	movnez	a3, a8, a0
-40219242:	314021        	l32r	a2, 401e5744 <_lit4_end+0xdef48>
+40219242:	314021        	l32r	a2, 401e5744 <_lit4_end+0xdefb0>
 40219245:	ff          	.byte 0xff
 40219246:	ff          	.byte 0xff
 40219247:	00a042        	movi	a4, 0
@@ -14588,7 +14586,7 @@ Disassembly of section .irom0.text:
 402192e5:	f00d      	ret.n
 402192e7:	c11200        	mul16u	a1, a2, a0
 402192ea:	61c2f0        	xsr.eps2	a15
-402192ed:	c22001        	l32r	a0, 40209b70 <_lit4_end+0x103374>
+402192ed:	c22001        	l32r	a0, 40209b70 <_lit4_end+0x1033dc>
 402192f0:	422820        	excw
 402192f3:	0109      	s32i.n	a0, a1, 0
 402192f5:	10c222        	addi	a2, a2, 16
@@ -14616,7 +14614,7 @@ Disassembly of section .irom0.text:
 4021932d:	0108      	l32i.n	a0, a1, 0
 4021932f:	10c112        	addi	a1, a1, 16
 40219332:	f00d      	ret.n
-40219334:	e1f8      	l32i.n	a15, a1, 56
+40219334:	e1d8      	l32i.n	a13, a1, 56
 40219336:	fe          	.byte 0xfe
 40219337:	3f          	.byte 0x3f
 40219338:	f0c112        	addi	a1, a1, -16
@@ -14639,7 +14637,7 @@ Disassembly of section .irom0.text:
 40219363:	10c112        	addi	a1, a1, 16
 40219366:	f00d      	ret.n
 40219368:	241190        	extui	a1, a9, 1, 3
-4021936b:	e22c40        	excw
+4021936b:	e20c40        	excw
 4021936e:	fe          	.byte 0xfe
 4021936f:	3f          	.byte 0x3f
 40219370:	ff0000        	excw
@@ -14758,7 +14756,7 @@ Disassembly of section .irom0.text:
 40219480:	10c112        	addi	a1, a1, 16
 40219483:	f00d      	ret.n
 40219485:	000000        	ill
-40219488:	fee230        	excw
+40219488:	fee210        	excw
 4021948b:	3f          	.byte 0x3f
 4021948c:	241160        	extui	a1, a6, 1, 3
 4021948f:	11a040        	slli	a10, a0, 12
@@ -14766,9 +14764,9 @@ Disassembly of section .irom0.text:
 40219495:	4110a0        	srli	a1, a10, 0
 40219498:	21dde3        	excw
 4021949b:	12fea5        	excw
-4021949e:	0280c1        	l32r	a12, 401d9ea0 <_lit4_end+0xd36a4>
-402194a1:	c21e61        	l32r	a6, 40209d1c <_lit4_end+0x103520>
-402194a4:	081f61        	l32r	a6, 401db520 <_lit4_end+0xd4d24>
+4021949e:	0280c1        	l32r	a12, 401d9ea0 <_lit4_end+0xd370c>
+402194a1:	c21e61        	l32r	a6, 40209d1c <_lit4_end+0x103588>
+402194a4:	081f61        	l32r	a6, 401db520 <_lit4_end+0xd4d8c>
 402194a7:	444802        	s8i	a0, a8, 68
 402194aa:	1d6142        	s32i	a4, a1, 116
 402194ad:	200030        	or	a0, a0, a3
@@ -14960,9 +14958,9 @@ Disassembly of section .irom0.text:
 402196a8:	120c      	movi.n	a2, 1
 402196aa:	fff7c6        	j	4021968d <cnx_csa_fn+0x7d>
 402196ad:	000000        	ill
-402196b0:	fee254        	excw
+402196b0:	fee234        	excw
 402196b3:	3f          	.byte 0x3f
-402196b4:	fee2b0        	excw
+402196b4:	fee290        	excw
 402196b7:	3f          	.byte 0x3f
 402196b8:	219814        	excw
 402196bb:	c11240        	mul16u	a1, a2, a4
@@ -15088,7 +15086,7 @@ Disassembly of section .irom0.text:
 40219808:	065d      	mov.n	a5, a6
 4021980a:	ff5305        	call0	40218d3c <chm_start_op>
 4021980d:	fff806        	j	402197f1 <cnx_csa_fn+0x1e1>
-40219810:	fee204        	excw
+40219810:	fee1e4        	excw
 40219813:	3f          	.byte 0x3f
 40219814:	d0c112        	addi	a1, a1, -48
 40219817:	086102        	s32i	a0, a1, 32
@@ -15302,7 +15300,7 @@ Disassembly of section .irom0.text:
 40219a2b:	934890        	movnez	a4, a8, a9
 40219a2e:	042d      	mov.n	a2, a4
 40219a30:	f00d      	ret.n
-40219a32:	440000        	extui	a0, a0, 0, 5
+40219a32:	240000        	extui	a0, a0, 0, 3
 40219a35:	fedd      	excw
 40219a37:	3f          	.byte 0x3f
 
@@ -15560,8 +15558,8 @@ Disassembly of section .irom0.text:
 40219ca1:	740000        	extui	a0, a0, 0, 8
 40219ca4:	7d4e02        	s8i	a0, a14, 125
 40219ca7:	ffef46        	j	40219c68 <cnx_remove_rc+0x30>
-40219caa:	f00000        	subx8	a0, a0, a0
-40219cad:	3ffee1        	l32r	a14, 401e9ca8 <_lit4_end+0xe34ac>
+40219caa:	d00000        	subx2	a0, a0, a0
+40219cad:	3ffee1        	l32r	a14, 401e9ca8 <_lit4_end+0xe3514>
 40219cb0:	e0c112        	addi	a1, a1, -32
 40219cb3:	31e9      	s32i.n	a14, a1, 12
 40219cb5:	11c9      	s32i.n	a12, a1, 4
@@ -15732,7 +15730,7 @@ Disassembly of section .irom0.text:
 40219e55:	1108      	l32i.n	a0, a1, 4
 40219e57:	10c112        	addi	a1, a1, 16
 40219e5a:	f00d      	ret.n
-40219e5c:	de7b      	addi.n	a13, a14, 7
+40219e5c:	de5b      	addi.n	a13, a14, 5
 40219e5e:	fe          	.byte 0xfe
 40219e5f:	3f          	.byte 0x3f
 
@@ -16107,7 +16105,7 @@ Disassembly of section .irom0.text:
 4021a226:	10c112        	addi	a1, a1, 16
 4021a229:	f00d      	ret.n
 4021a22b:	a1f800        	sll	a15, a8
-4021a22e:	104021        	l32r	a2, 401de330 <_lit4_end+0xd7b34>
+4021a22e:	104021        	l32r	a2, 401de330 <_lit4_end+0xd7b9c>
 4021a231:	402412        	l32i	a1, a4, 0x100
 4021a234:	f0c112        	addi	a1, a1, -16
 4021a237:	11c9      	s32i.n	a12, a1, 4
@@ -16181,7 +16179,7 @@ Disassembly of section .irom0.text:
 4021a2ee:	fece45        	call0	40218fd4 <cnx_sta_connect_cmd>
 4021a2f1:	fff586        	j	4021a2cb <cnx_sta_leave+0x267>
 4021a2f4:	219434        	excw
-4021a2f7:	da4440        	excw
+4021a2f7:	da2440        	excw
 4021a2fa:	fe          	.byte 0xfe
 4021a2fb:	3f          	.byte 0x3f
 4021a2fc:	009c40        	excw
@@ -16917,7 +16915,7 @@ Disassembly of section .irom0.text:
 4021aa27:	6778      	l32i.n	a7, a7, 24
 4021aa29:	fff6c6        	j	4021aa08 <ieee80211_recv_action+0x3c>
 4021aa2c:	fff606        	j	4021aa08 <ieee80211_recv_action+0x3c>
-4021aa2f:	e2d000        	excw
+4021aa2f:	e2b000        	excw
 4021aa32:	fe          	.byte 0xfe
 4021aa33:	3f          	.byte 0x3f
 
@@ -16938,11 +16936,11 @@ Disassembly of section .irom0.text:
 4021aa55:	000000        	ill
 4021aa58:	241330        	extui	a1, a3, 3, 3
 4021aa5b:	136040        	wsr.ibreakenable	a4
-4021aa5e:	cc4024        	excw
+4021aa5e:	ac4024        	excw
 4021aa61:	3ffee2        	excw
 4021aa64:	241390        	extui	a1, a9, 3, 3
 4021aa67:	13b040        	wsr.176	a4
-4021aa6a:	d84024        	excw
+4021aa6a:	b84024        	excw
 4021aa6d:	3ffee2        	excw
 
 4021aa70 <ieee80211_recv_action_vendor_spec>:
@@ -17239,7 +17237,8 @@ Disassembly of section .irom0.text:
 4021ad63:	347070        	extui	a7, a7, 0, 4
 4021ad66:	ffd706        	j	4021acc6 <ieee80211_action_vendor_spec_attach+0xf6>
 4021ad69:	000000        	ill
-4021ad6c:	fe8964        	excw
+4021ad6c:	894c      	movi.n	a9, 72
+4021ad6e:	fe          	.byte 0xfe
 4021ad6f:	3f          	.byte 0x3f
 
 4021ad70 <ieee80211_add_ie_vendor_esp_head>:
@@ -17455,7 +17454,7 @@ Disassembly of section .irom0.text:
 4021af63:	246242        	s32i	a4, a2, 144
 4021af66:	120c      	movi.n	a2, 1
 4021af68:	f00d      	ret.n
-4021af6a:	c00000        	sub	a0, a0, a0
+4021af6a:	a00000        	addx4	a0, a0, a0
 4021af6d:	3ffee5        	excw
 4021af70:	f0c112        	addi	a1, a1, -16
 4021af73:	1378      	l32i.n	a7, a3, 4
@@ -17875,7 +17874,7 @@ Disassembly of section .irom0.text:
 4021b364:	120c      	movi.n	a2, 1
 4021b366:	f00d      	ret.n
 4021b368:	241840        	extui	a1, a4, 8, 3
-4021b36b:	d9e540        	excw
+4021b36b:	d9c540        	excw
 4021b36e:	fe          	.byte 0xfe
 4021b36f:	3f          	.byte 0x3f
 4021b370:	fffe31        	l32r	a3, 4021b368 <ieee80211_parse_wmeparams+0x94>
@@ -18254,7 +18253,7 @@ Disassembly of section .irom0.text:
 4021b6e4:	0108      	l32i.n	a0, a1, 0
 4021b6e6:	20c112        	addi	a1, a1, 32
 4021b6e9:	f00d      	ret.n
-4021b6eb:	e2e000        	excw
+4021b6eb:	e2c000        	excw
 4021b6ee:	fe          	.byte 0xfe
 4021b6ef:	3f          	.byte 0x3f
 4021b6f0:	17b2f6        	bgeui	a2, 16, 4021b70b <os_get_random+0x7f>
@@ -18269,7 +18268,7 @@ Disassembly of section .irom0.text:
 4021b709:	f00d      	ret.n
 4021b70b:	020c      	movi.n	a2, 0
 4021b70d:	f00d      	ret.n
-4021b70f:	e30000        	excw
+4021b70f:	e2e000        	excw
 4021b712:	fe          	.byte 0xfe
 4021b713:	3f          	.byte 0x3f
 4021b714:	12bc      	beqz.n	a2, 4021b749 <os_get_random+0xbd>
@@ -18314,12 +18313,12 @@ Disassembly of section .irom0.text:
 4021b77a:	124024        	excw
 4021b77d:	e2b0c1        	l32r	a12, 40214240 <ieee80211_parse_beacon+0x5fc>
 4021b780:	f21161        	l32r	a6, 40217fc4 <ieee80211_sta_new_state+0x378>
-4021b783:	621261        	l32r	a6, 401f3fcc <_lit4_end+0xed7d0>
-4021b786:	720d61        	l32r	a6, 401f7fbc <_lit4_end+0xf17c0>
-4021b789:	d20c61        	l32r	a6, 4020ffbc <_lit4_end+0x1097c0>
-4021b78c:	c21061        	l32r	a6, 4020bfcc <_lit4_end+0x1057d0>
-4021b78f:	090f61        	l32r	a6, 401ddbcc <_lit4_end+0xd73d0>
-4021b792:	04cde1        	l32r	a14, 401dcac8 <_lit4_end+0xd62cc>
+4021b783:	621261        	l32r	a6, 401f3fcc <_lit4_end+0xed838>
+4021b786:	720d61        	l32r	a6, 401f7fbc <_lit4_end+0xf1828>
+4021b789:	d20c61        	l32r	a6, 4020ffbc <_lit4_end+0x109828>
+4021b78c:	c21061        	l32r	a6, 4020bfcc <_lit4_end+0x105838>
+4021b78f:	090f61        	l32r	a6, 401ddbcc <_lit4_end+0xd7438>
+4021b792:	04cde1        	l32r	a14, 401dcac8 <_lit4_end+0xd6334>
 4021b795:	000502        	l8ui	a0, a5, 0
 4021b798:	05dd      	mov.n	a13, a5
 4021b79a:	146007        	bbci	a0, 0, 4021b7b2 <os_get_random+0x126>
@@ -18429,9 +18428,9 @@ Disassembly of section .irom0.text:
 4021b8b5:	fdeb01        	l32r	a0, 4021b064 <ieee80211_add_ie_vendor_esp_manufacturer+0x1dc>
 4021b8b8:	fffcc6        	j	4021b8af <os_get_random+0x223>
 4021b8bb:	b8c000        	excw
-4021b8be:	124021        	l32r	a2, 401e01c0 <_lit4_end+0xd99c4>
+4021b8be:	124021        	l32r	a2, 401e01c0 <_lit4_end+0xd9a2c>
 4021b8c1:	e9e0c1        	l32r	a12, 40216044 <ieee80211_freedom_output+0x1d4>
-4021b8c4:	41f931        	l32r	a3, 401ec0a8 <_lit4_end+0xe58ac>
+4021b8c4:	41f931        	l32r	a3, 401ec0a8 <_lit4_end+0xe5914>
 4021b8c7:	0109      	s32i.n	a0, a1, 0
 4021b8c9:	21d9      	s32i.n	a13, a1, 8
 4021b8cb:	11c9      	s32i.n	a12, a1, 4
@@ -18466,7 +18465,7 @@ Disassembly of section .irom0.text:
 4021b913:	233000        	excw
 4021b916:	c11220        	mul16u	a1, a2, a2
 4021b919:	61c2f0        	xsr.eps2	a15
-4021b91c:	010901        	l32r	a0, 401dbd40 <_lit4_end+0xd5544>
+4021b91c:	010901        	l32r	a0, 401dbd40 <_lit4_end+0xd55ac>
 4021b91f:	03cd      	mov.n	a12, a3
 4021b921:	042b45        	call0	4021fbd8 <wpa_auth_for_each_sta+0xc>
 4021b924:	0c2d      	mov.n	a2, a12
@@ -18482,9 +18481,9 @@ Disassembly of section .irom0.text:
 4021b93d:	c11203        	excw
 4021b940:	612280        	excw
 4021b943:	0218      	l32i.n	a1, a2, 0
-4021b945:	221961        	l32r	a6, 401e41ac <_lit4_end+0xdd9b0>
+4021b945:	221961        	l32r	a6, 401e41ac <_lit4_end+0xdda18>
 4021b948:	5248c3        	excw
-4021b94b:	2c1d61        	l32r	a6, 401e69c0 <_lit4_end+0xe01c4>
+4021b94b:	2c1d61        	l32r	a6, 401e69c0 <_lit4_end+0xe022c>
 4021b94e:	d3c503        	excw
 4021b951:	ff          	.byte 0xff
 4021b952:	066296        	bltz	a2, 4021b9bc <os_get_random+0x330>
@@ -18718,7 +18717,7 @@ Disassembly of section .irom0.text:
 4021bb90:	fffc46        	j	4021bb85 <wpa_auth_sta_associated+0x65>
 4021bb93:	c11200        	mul16u	a1, a2, a0
 4021bb96:	61c2f0        	xsr.eps2	a15
-4021bb99:	610201        	l32r	a0, 401f3fa4 <_lit4_end+0xed7a8>
+4021bb99:	610201        	l32r	a0, 401f3fa4 <_lit4_end+0xed810>
 4021bb9c:	c22000        	excw
 4021bb9f:	ba8520        	excw
 4021bba2:	ff          	.byte 0xff
@@ -18825,17 +18824,17 @@ Disassembly of section .irom0.text:
 4021bc90:	f00d      	ret.n
 4021bc92:	300000        	xor	a0, a0, a0
 4021bc95:	122023        	excw
-4021bc98:	02f0c1        	l32r	a12, 401dc858 <_lit4_end+0xd605c>
-4021bc9b:	850061        	l32r	a6, 401fd09c <_lit4_end+0xf68a0>
+4021bc98:	02f0c1        	l32r	a12, 401dc858 <_lit4_end+0xd60c4>
+4021bc9b:	850061        	l32r	a6, 401fd09c <_lit4_end+0xf6908>
 4021bc9e:	2203f3        	excw
 4021bca1:	0800a0        	excw
-4021bca4:	c11201        	l32r	a0, 4020c0ec <_lit4_end+0x1058f0>
+4021bca4:	c11201        	l32r	a0, 4020c0ec <_lit4_end+0x105958>
 4021bca7:	f00d10        	subx8	a0, a13, a1
 4021bcaa:	000000        	ill
 4021bcad:	0028      	l32i.n	a2, a0, 0
 4021bcaf:	080000        	excw
 4021bcb2:	100000        	and	a0, a0, a0
-4021bcb5:	4021c1        	l32r	a12, 401ebd3c <_lit4_end+0xe5540>
+4021bcb5:	4021c1        	l32r	a12, 401ebd3c <_lit4_end+0xe55a8>
 
 4021bcb8 <wpa_receive>:
 4021bcb8:	026d      	mov.n	a6, a2
@@ -19204,20 +19203,20 @@ Disassembly of section .irom0.text:
 4021c090:	d69307        	bne	a3, a0, 4021c06a <wpa_receive+0x3b2>
 4021c093:	ff2706        	j	4021bd33 <wpa_receive+0x7b>
 4021c096:	120000        	excw
-4021c099:	5290c1        	l32r	a12, 401f0adc <_lit4_end+0xea2e0>
-4021c09c:	621661        	l32r	a6, 401f48f4 <_lit4_end+0xee0f8>
-4021c09f:	721761        	l32r	a6, 401f88fc <_lit4_end+0xf2100>
-4021c0a2:	021861        	l32r	a6, 401dc904 <_lit4_end+0xd6108>
-4021c0a5:	321a61        	l32r	a6, 401e8910 <_lit4_end+0xe2114>
-4021c0a8:	221561        	l32r	a6, 401e48fc <_lit4_end+0xde100>
-4021c0ab:	401461        	l32r	a6, 401ec0fc <_lit4_end+0xe5900>
+4021c099:	5290c1        	l32r	a12, 401f0adc <_lit4_end+0xea348>
+4021c09c:	621661        	l32r	a6, 401f48f4 <_lit4_end+0xee160>
+4021c09f:	721761        	l32r	a6, 401f88fc <_lit4_end+0xf2168>
+4021c0a2:	021861        	l32r	a6, 401dc904 <_lit4_end+0xd6170>
+4021c0a5:	321a61        	l32r	a6, 401e8910 <_lit4_end+0xe217c>
+4021c0a8:	221561        	l32r	a6, 401e48fc <_lit4_end+0xde168>
+4021c0ab:	401461        	l32r	a6, 401ec0fc <_lit4_end+0xe5968>
 4021c0ae:	222034        	excw
-4021c0b1:	4210c1        	l32r	a12, 401ec8f4 <_lit4_end+0xe60f8>
+4021c0b1:	4210c1        	l32r	a12, 401ec8f4 <_lit4_end+0xe6160>
 4021c0b4:	0106a0        	slli	a0, a6, 22
 4021c0b7:	c0cfd3        	excw
 4021c0ba:	320000        	excw
-4021c0bd:	221621        	l32r	a2, 401e4918 <_lit4_end+0xde11c>
-4021c0c0:	2c16c1        	l32r	a12, 401e7118 <_lit4_end+0xe091c>
+4021c0bd:	221621        	l32r	a2, 401e4918 <_lit4_end+0xde184>
+4021c0c0:	2c16c1        	l32r	a12, 401e7118 <_lit4_end+0xe0984>
 4021c0c3:	d00104        	excw
 4021c0c6:	cf          	.byte 0xcf
 4021c0c7:	0000c0        	callx0	a0
@@ -19796,7 +19795,7 @@ Disassembly of section .irom0.text:
 4021c6b6:	0d0c      	movi.n	a13, 0
 4021c6b8:	ffe686        	j	4021c656 <resend_eapol_handle+0x11e>
 4021c6bb:	b91400        	excw
-4021c6be:	424021        	l32r	a2, 401ecfc0 <_lit4_end+0xe67c4>
+4021c6be:	424021        	l32r	a2, 401ecfc0 <_lit4_end+0xe682c>
 
 4021c6c0 <wpa_remove_ptk>:
 4021c6c0:	40a042        	movi	a4, 64
@@ -19919,7 +19918,7 @@ Disassembly of section .irom0.text:
 4021c7e1:	f00d      	ret.n
 4021c7e3:	c11200        	mul16u	a1, a2, a0
 4021c7e6:	61c2f0        	xsr.eps2	a15
-4021c7e9:	21d901        	l32r	a0, 401e4f50 <_lit4_end+0xde754>
+4021c7e9:	21d901        	l32r	a0, 401e4f50 <_lit4_end+0xde7bc>
 4021c7ec:	0109      	s32i.n	a0, a1, 0
 4021c7ee:	02dd      	mov.n	a13, a2
 4021c7f0:	332302        	l32i	a0, a3, 204
@@ -19976,8 +19975,8 @@ Disassembly of section .irom0.text:
 4021c869:	10c112        	addi	a1, a1, 16
 4021c86c:	f00d      	ret.n
 4021c86e:	120000        	excw
-4021c871:	c9f0c1        	l32r	a12, 4020f034 <_lit4_end+0x108838>
-4021c874:	010911        	l32r	a1, 401dcc98 <_lit4_end+0xd649c>
+4021c871:	c9f0c1        	l32r	a12, 4020f034 <_lit4_end+0x1088a0>
+4021c874:	010911        	l32r	a1, 401dcc98 <_lit4_end+0xd6504>
 4021c877:	02cd      	mov.n	a12, a2
 4021c879:	338c      	beqz.n	a3, 4021c880 <wpa_remove_ptk+0x1c0>
 4021c87b:	4208      	l32i.n	a0, a2, 16
@@ -20125,10 +20124,10 @@ Disassembly of section .irom0.text:
 4021c9ea:	120000        	excw
 4021c9ed:	e2a0c1        	l32r	a12, 40215470 <ieee80211_send_mgmt+0xd0>
 4021c9f0:	f21361        	l32r	a6, 4021923c <cnx_sta_scan_cmd+0x1a8>
-4021c9f3:	c21461        	l32r	a6, 4020d244 <_lit4_end+0x106a48>
-4021c9f6:	021161        	l32r	a6, 401dd23c <_lit4_end+0xd6a40>
+4021c9f3:	c21461        	l32r	a6, 4020d244 <_lit4_end+0x106ab0>
+4021c9f6:	021161        	l32r	a6, 401dd23c <_lit4_end+0xd6aa8>
 4021c9f9:	d21061        	l32r	a6, 4021123c <ieee80211_getmgtframe+0x234>
-4021c9fc:	0c1261        	l32r	a6, 401dfa44 <_lit4_end+0xd9248>
+4021c9fc:	0c1261        	l32r	a6, 401dfa44 <_lit4_end+0xd92b0>
 4021c9ff:	0d0c10        	excw
 4021ca02:	02cd      	mov.n	a12, a2
 4021ca04:	fc8b      	addi.n	a15, a12, 8
@@ -20217,10 +20216,10 @@ Disassembly of section .irom0.text:
 4021cae1:	c112a5        	excw
 4021cae4:	61d280        	xsr.excsave2	a8
 4021cae7:	f219      	s32i.n	a1, a2, 60
-4021cae9:	021b61        	l32r	a6, 401dd358 <_lit4_end+0xd6b5c>
-4021caec:	c21761        	l32r	a6, 4020d348 <_lit4_end+0x106b4c>
+4021cae9:	021b61        	l32r	a6, 401dd358 <_lit4_end+0xd6bc4>
+4021caec:	c21761        	l32r	a6, 4020d348 <_lit4_end+0x106bb4>
 4021caef:	e21861        	l32r	a6, 40215350 <ieee80211_getcapinfo+0xc>
-4021caf2:	cd1a61        	l32r	a6, 4020ff5c <_lit4_end+0x109760>
+4021caf2:	cd1a61        	l32r	a6, 4020ff5c <_lit4_end+0x1097c8>
 4021caf5:	12e802        	excw
 4021caf8:	100c      	movi.n	a0, 1
 4021cafa:	338c      	beqz.n	a3, 4021cb01 <wpa_remove_ptk+0x441>
@@ -20438,7 +20437,7 @@ Disassembly of section .irom0.text:
 4021cd21:	21cd      	excw
 4021cd23:	c11240        	mul16u	a1, a2, a4
 4021cd26:	61c2f0        	xsr.eps2	a15
-4021cd29:	610201        	l32r	a0, 401f5134 <_lit4_end+0xee938>
+4021cd29:	610201        	l32r	a0, 401f5134 <_lit4_end+0xee9a0>
 4021cd2c:	220200        	excw
 4021cd2f:	02cd06        	j	4021d867 <wpa_parse_kde_ies+0x1b>
 4021cd32:	c08c      	beqz.n	a0, 4021cd42 <wpa_remove_ptk+0x682>
@@ -20732,7 +20731,7 @@ Disassembly of section .irom0.text:
 4021d041:	f00d      	ret.n
 4021d043:	c11200        	mul16u	a1, a2, a0
 4021d046:	61c2f0        	xsr.eps2	a15
-4021d049:	610201        	l32r	a0, 401f5454 <_lit4_end+0xeec58>
+4021d049:	610201        	l32r	a0, 401f5454 <_lit4_end+0xeecc0>
 4021d04c:	220200        	excw
 4021d04f:	02cd06        	j	4021db87 <wpa_parse_kde_ies+0x33b>
 4021d052:	d0dc      	bnez.n	a0, 4021d073 <wpa_remove_ptk+0x9b3>
@@ -20841,7 +20840,7 @@ Disassembly of section .irom0.text:
 4021d15b:	a04200        	addx4	a4, a2, a0
 4021d15e:	c11240        	mul16u	a1, a2, a4
 4021d161:	6102f0        	excw
-4021d164:	61c201        	l32r	a0, 401f586c <_lit4_end+0xef070>
+4021d164:	61c201        	l32r	a0, 401f586c <_lit4_end+0xef0d8>
 4021d167:	012902        	l32i	a0, a9, 4
 4021d16a:	03cd      	mov.n	a12, a3
 4021d16c:	68cc22        	addi	a2, a12, 104
@@ -20890,11 +20889,11 @@ Disassembly of section .irom0.text:
 4021d1d7:	10c112        	addi	a1, a1, 16
 4021d1da:	f00d      	ret.n
 4021d1dc:	d198      	l32i.n	a9, a1, 52
-4021d1de:	424021        	l32r	a2, 401edae0 <_lit4_end+0xe72e4>
+4021d1de:	424021        	l32r	a2, 401edae0 <_lit4_end+0xe734c>
 4021d1e1:	1201a0        	excw
-4021d1e4:	02f0c1        	l32r	a12, 401ddda4 <_lit4_end+0xd75a8>
+4021d1e4:	02f0c1        	l32r	a12, 401ddda4 <_lit4_end+0xd7610>
 4021d1e7:	d90061        	l32r	a6, 402135e8 <ieee80211_add_htinfo_vendor+0x3c>
-4021d1ea:	11c921        	l32r	a2, 401e1910 <_lit4_end+0xdb114>
+4021d1ea:	11c921        	l32r	a2, 401e1910 <_lit4_end+0xdb17c>
 4021d1ed:	326342        	s32i	a4, a3, 200
 4021d1f0:	116342        	s32i	a4, a3, 68
 4021d1f3:	03cd      	mov.n	a12, a3
@@ -20994,7 +20993,7 @@ Disassembly of section .irom0.text:
 4021d2e0:	ffeec6        	j	4021d29f <wpa_remove_ptk+0xbdf>
 4021d2e3:	c11200        	mul16u	a1, a2, a0
 4021d2e6:	61c2f0        	xsr.eps2	a15
-4021d2e9:	610201        	l32r	a0, 401f56f4 <_lit4_end+0xeeef8>
+4021d2e9:	610201        	l32r	a0, 401f56f4 <_lit4_end+0xeef60>
 4021d2ec:	02cd00        	excw
 4021d2ef:	072216        	beqz	a2, 4021d365 <wpa_remove_ptk+0xca5>
 4021d2f2:	5d2202        	l32i	a0, a2, 0x174
@@ -21046,8 +21045,8 @@ Disassembly of section .irom0.text:
 4021d370:	af          	.byte 0xaf
 4021d371:	12dd      	excw
 4021d373:	d2f0c1        	l32r	a12, 40211f34 <hostap_input+0x664>
-4021d376:	090261        	l32r	a6, 401df780 <_lit4_end+0xd8f84>
-4021d379:	11c901        	l32r	a0, 401e1aa0 <_lit4_end+0xdb2a4>
+4021d376:	090261        	l32r	a6, 401df780 <_lit4_end+0xd8fec>
+4021d379:	11c901        	l32r	a0, 401e1aa0 <_lit4_end+0xdb30c>
 4021d37c:	005c      	movi.n	a0, 80
 4021d37e:	03cd      	mov.n	a12, a3
 4021d380:	004352        	s8i	a5, a3, 0
@@ -21464,7 +21463,7 @@ Disassembly of section .irom0.text:
 4021d77b:	ac0300        	excw
 4021d77e:	0f          	.byte 0xf
 4021d77f:	027200        	excw
-4021d782:	025201        	l32r	a0, 401de0cc <_lit4_end+0xd78d0>
+4021d782:	025201        	l32r	a0, 401de0cc <_lit4_end+0xd7938>
 4021d785:	27cc05        	call0	40245448 <_irom0_text_end+0x38a8>
 4021d788:	120c      	movi.n	a2, 1
 4021d78a:	f00d      	ret.n
@@ -22199,14 +22198,14 @@ Disassembly of section .irom0.text:
 4021ded0:	dea8      	l32i.n	a10, a14, 52
 4021ded2:	424000        	excw
 4021ded5:	1220a0        	excw
-4021ded8:	0280c1        	l32r	a12, 401de8d8 <_lit4_end+0xd80dc>
+4021ded8:	0280c1        	l32r	a12, 401de8d8 <_lit4_end+0xd8144>
 4021dedb:	e21a61        	l32r	a6, 40216744 <ieee80211_mlme_connect_bss+0x8>
 4021dede:	d21d61        	l32r	a6, 40212754 <freqcal_scan_done+0x1dc>
-4021dee1:	c21c61        	l32r	a6, 4020e754 <_lit4_end+0x107f58>
-4021dee4:	201b61        	l32r	a6, 401e5f50 <_lit4_end+0xdf754>
+4021dee1:	c21c61        	l32r	a6, 4020e754 <_lit4_end+0x107fc0>
+4021dee4:	201b61        	l32r	a6, 401e5f50 <_lit4_end+0xdf7bc>
 4021dee7:	3020d2        	l32i	a13, a0, 192
 4021deea:	2220c3        	excw
-4021deed:	3110c1        	l32r	a12, 401ea330 <_lit4_end+0xe3b34>
+4021deed:	3110c1        	l32r	a12, 401ea330 <_lit4_end+0xe3b9c>
 4021def0:	e2fff7        	bbsi	a15, 31, 4021ded6 <wpa_parse_kde_ies+0x68a>
 4021def3:	10cc      	bnez.n	a0, 4021def8 <wpa_parse_kde_ies+0x6ac>
 4021def5:	d3b401        	l32r	a0, 40212dc8 <ieee80211_ht_node_init+0x70>
@@ -22359,14 +22358,14 @@ Disassembly of section .irom0.text:
 4021e07c:	f00d      	ret.n
 4021e07e:	320000        	excw
 4021e081:	1211a0        	excw
-4021e084:	02f0c1        	l32r	a12, 401dec44 <_lit4_end+0xd8448>
-4021e087:	850061        	l32r	a6, 401ff488 <_lit4_end+0xf8c8c>
+4021e084:	02f0c1        	l32r	a12, 401dec44 <_lit4_end+0xd84b0>
+4021e087:	850061        	l32r	a6, 401ff488 <_lit4_end+0xf8cf4>
 4021e08a:	0201f2        	l8ui	a15, a1, 2
-4021e08d:	120021        	l32r	a2, 401e2890 <_lit4_end+0xdc094>
-4021e090:	0d10c1        	l32r	a12, 401e14d0 <_lit4_end+0xdacd4>
+4021e08d:	120021        	l32r	a2, 401e2890 <_lit4_end+0xdc0fc>
+4021e090:	0d10c1        	l32r	a12, 401e14d0 <_lit4_end+0xdad3c>
 4021e093:	c112f0        	mul16u	a1, a2, a15
 4021e096:	61c2f0        	xsr.eps2	a15
-4021e099:	610201        	l32r	a0, 401f64a4 <_lit4_end+0xefca8>
+4021e099:	610201        	l32r	a0, 401f64a4 <_lit4_end+0xefd10>
 4021e09c:	61d200        	xsr.excsave2	a0
 4021e09f:	31e902        	excw
 4021e0a2:	04dd      	mov.n	a13, a4
@@ -22579,11 +22578,11 @@ Disassembly of section .irom0.text:
 4021e2ac:	f00d      	ret.n
 4021e2ae:	120000        	excw
 4021e2b1:	e2b0c1        	l32r	a12, 40216d74 <scan_start+0x130>
-4021e2b4:	421361        	l32r	a6, 401eeb00 <_lit4_end+0xe8304>
-4021e2b7:	020e61        	l32r	a6, 401deaf0 <_lit4_end+0xd82f4>
-4021e2ba:	c21061        	l32r	a6, 4020eafc <_lit4_end+0x108300>
+4021e2b4:	421361        	l32r	a6, 401eeb00 <_lit4_end+0xe836c>
+4021e2b7:	020e61        	l32r	a6, 401deaf0 <_lit4_end+0xd835c>
+4021e2ba:	c21061        	l32r	a6, 4020eafc <_lit4_end+0x108368>
 4021e2bd:	d21161        	l32r	a6, 40212b04 <wifi_softap_start+0x12c>
-4021e2c0:	201261        	l32r	a6, 401e6308 <_lit4_end+0xdfb0c>
+4021e2c0:	201261        	l32r	a6, 401e6308 <_lit4_end+0xdfb74>
 4021e2c3:	dd20c2        	l32i	a12, a0, 0x374
 4021e2c6:	720c03        	excw
 4021e2c9:	00b085        	call0	4021edd4 <wpa_sm_set_state>
@@ -23249,10 +23248,10 @@ Disassembly of section .irom0.text:
 4021e962:	0000c0        	callx0	a0
 4021e965:	f75256        	bnez	a2, 4021e8de <wpa_parse_kde_ies+0x1092>
 4021e968:	ffee86        	j	4021e926 <wpa_parse_kde_ies+0x10da>
-4021e96b:	e34000        	excw
+4021e96b:	e32000        	excw
 4021e96e:	fe          	.byte 0xfe
 4021e96f:	3f          	.byte 0x3f
-4021e970:	fee430        	excw
+4021e970:	fee410        	excw
 4021e973:	3f          	.byte 0x3f
 4021e974:	002080        	excw
 	...
@@ -23403,7 +23402,7 @@ Disassembly of section .irom0.text:
 4021eaef:	ff1785        	call0	4021dc68 <wpa_parse_kde_ies+0x41c>
 4021eaf2:	ffba86        	j	4021e9e0 <wpa_sm_rx_eapol+0x68>
 4021eaf5:	000000        	ill
-4021eaf8:	fee410        	excw
+4021eaf8:	fee3f0        	excw
 4021eafb:	3f          	.byte 0x3f
 
 4021eafc <wpa_register>:
@@ -23438,11 +23437,11 @@ Disassembly of section .irom0.text:
 4021eb44:	436732        	s32i	a3, a7, 0x10c
 4021eb47:	f00d      	ret.n
 4021eb49:	000000        	ill
-4021eb4c:	fee480        	excw
+4021eb4c:	fee460        	excw
 4021eb4f:	3f          	.byte 0x3f
-4021eb50:	fee486        	j	4021e6e6 <wpa_parse_kde_ies+0xe9a>
+4021eb50:	fee466        	bnei	a4, 128, 4021eb52 <wpa_set_profile+0x1e>
 4021eb53:	3f          	.byte 0x3f
-4021eb54:	fee590        	excw
+4021eb54:	fee570        	excw
 4021eb57:	3f          	.byte 0x3f
 
 4021eb58 <wpa_set_bss>:
@@ -23495,7 +23494,7 @@ Disassembly of section .irom0.text:
 4021ebd1:	4108      	l32i.n	a0, a1, 16
 4021ebd3:	20c112        	addi	a1, a1, 32
 4021ebd6:	f00d      	ret.n
-4021ebd8:	d948      	l32i.n	a4, a9, 52
+4021ebd8:	d928      	l32i.n	a2, a9, 52
 4021ebda:	fe          	.byte 0xfe
 4021ebdb:	3f          	.byte 0x3f
 4021ebdc:	00b840        	excw
@@ -23692,7 +23691,7 @@ Disassembly of section .irom0.text:
 4021edc8:	ffe786        	j	4021ed6a <eapol_txcb+0x2a>
 4021edcb:	030c      	movi.n	a3, 0
 4021edcd:	ffe646        	j	4021ed6a <eapol_txcb+0x2a>
-4021edd0:	e45c      	movi.n	a4, 94
+4021edd0:	e43c      	movi.n	a4, 62
 4021edd2:	fe          	.byte 0xfe
 4021edd3:	3f          	.byte 0x3f
 
@@ -23752,14 +23751,14 @@ Disassembly of section .irom0.text:
 4021ee5d:	f00d      	ret.n
 4021ee5f:	1e3100        	excw
 4021ee62:	0272f7        	bbci	a2, 31, 4021ee68 <wpa_sm_set_state+0x94>
-4021ee65:	026201        	l32r	a0, 401df7f0 <_lit4_end+0xd8ff4>
+4021ee65:	026201        	l32r	a0, 401df7f0 <_lit4_end+0xd905c>
 4021ee68:	025202        	s16i	a0, a2, 4
 4021ee6b:	668003        	excw
-4021ee6e:	556011        	l32r	a1, 401f43f0 <_lit4_end+0xedbf4>
+4021ee6e:	556011        	l32r	a1, 401f43f0 <_lit4_end+0xedc5c>
 4021ee71:	026220        	excw
 4021ee74:	770000        	excw
-4021ee77:	668011        	l32r	a1, 401f8878 <_lit4_end+0xf207c>
-4021ee7a:	667001        	l32r	a0, 401f883c <_lit4_end+0xf2040>
+4021ee77:	668011        	l32r	a1, 401f8878 <_lit4_end+0xf20e4>
+4021ee7a:	667001        	l32r	a0, 401f883c <_lit4_end+0xf20a8>
 4021ee7d:	556020        	extui	a6, a2, 16, 6
 4021ee80:	153720        	extui	a3, a2, 23, 2
 4021ee83:	0e          	.byte 0xe
@@ -24706,7 +24705,7 @@ Disassembly of section .irom0.text:
 4021f7d7:	a03200        	addx4	a3, a2, a0
 4021f7da:	c112c0        	mul16u	a1, a2, a12
 4021f7dd:	61c2f0        	xsr.eps2	a15
-4021f7e0:	610201        	l32r	a0, 401f7be8 <_lit4_end+0xf13ec>
+4021f7e0:	610201        	l32r	a0, 401f7be8 <_lit4_end+0xf1454>
 4021f7e3:	02cd00        	excw
 4021f7e6:	c50f21        	l32r	a2, 40210c24 <ieee80211_freedom_init+0x24>
 4021f7e9:	0c4d      	mov.n	a4, a12
@@ -24788,12 +24787,12 @@ Disassembly of section .irom0.text:
 4021f8a2:	400000        	ssr	a0
 4021f8a5:	2419      	s32i.n	a1, a4, 8
 4021f8a7:	f88440        	excw
-4021f8aa:	ad4021        	l32r	a2, 4020adac <_lit4_end+0x1045b0>
+4021f8aa:	8d4021        	l32r	a2, 40202dac <_lit4_end+0xfc618>
 4021f8ad:	3ffee2        	excw
 4021f8b0:	fe8016        	beqz	a0, 4021f89c <dhcp_bind_check+0x18>
 4021f8b3:	3f          	.byte 0x3f
 4021f8b4:	241960        	extui	a1, a6, 9, 3
-4021f8b7:	8bf040        	excw
+4021f8b7:	8bd040        	excw
 4021f8ba:	fe          	.byte 0xfe
 4021f8bb:	3f          	.byte 0x3f
 4021f8bc:	241980        	extui	a1, a8, 9, 3
@@ -24955,13 +24954,13 @@ Disassembly of section .irom0.text:
 4021fa52:	400000        	ssr	a0
 4021fa55:	21fa      	add.n	a2, a1, a15
 4021fa57:	f7bc40        	excw
-4021fa5a:	704021        	l32r	a2, 401fbb5c <_lit4_end+0xf5360>
+4021fa5a:	704021        	l32r	a2, 401fbb5c <_lit4_end+0xf53c8>
 4021fa5d:	21f8      	l32i.n	a15, a1, 8
 4021fa5f:	f64c40        	excw
-4021fa62:	904021        	l32r	a2, 40203b64 <_lit4_end+0xfd368>
+4021fa62:	904021        	l32r	a2, 40203b64 <_lit4_end+0xfd3d0>
 4021fa65:	4021f7        	blt	a1, a15, 4021faa9 <wpa_attach+0x39>
 4021fa68:	f7d8      	l32i.n	a13, a7, 60
-4021fa6a:	404021        	l32r	a2, 401efb6c <_lit4_end+0xe9370>
+4021fa6a:	404021        	l32r	a2, 401efb6c <_lit4_end+0xe93d8>
 4021fa6d:	21ed      	excw
 4021fa6f:	fc5140        	excw
 
@@ -25572,15 +25571,14 @@ Disassembly of section .irom0.text:
 4022000b:	872440        	excw
 4022000e:	fe          	.byte 0xfe
 4022000f:	3f          	.byte 0x3f
-40220010:	58c8      	l32i.n	a12, a8, 20
-40220012:	884010        	excw
-40220015:	0f          	.byte 0xf
+40220010:	105860        	and	a5, a8, a6
+40220013:	0f8840        	excw
 40220016:	a84000        	excw
 40220019:	0f          	.byte 0xf
 4022001a:	124000        	excw
 4022001d:	c2f0c1        	l32r	a12, 40210be0 <ieee80211_freedom_inside_cb+0x10>
-40220020:	020161        	l32r	a6, 401e0824 <_lit4_end+0xda028>
-40220023:	300061        	l32r	a6, 401ec024 <_lit4_end+0xe5828>
+40220020:	020161        	l32r	a6, 401e0824 <_lit4_end+0xda090>
+40220023:	300061        	l32r	a6, 401ec024 <_lit4_end+0xe5890>
 40220026:	c520c3        	excw
 40220029:	9c0af4        	excw
 4022002c:	f62102        	l32i	a0, a1, 0x3d8
@@ -25627,12 +25625,12 @@ Disassembly of section .irom0.text:
 4022009c:	10c112        	addi	a1, a1, 16
 4022009f:	f00d      	ret.n
 402200a1:	000000        	ill
-402200a4:	fedae0        	excw
+402200a4:	fedac0        	excw
 402200a7:	3f          	.byte 0x3f
-402200a8:	d8dc      	bnez.n	a8, 402200c9 <uart_div_modify+0x101>
+402200a8:	d8bc      	beqz.n	a8, 402200e9 <uart_div_modify+0x121>
 402200aa:	fe          	.byte 0xfe
 402200ab:	3f          	.byte 0x3f
-402200ac:	dce8      	l32i.n	a14, a12, 52
+402200ac:	dcc8      	l32i.n	a12, a12, 52
 402200ae:	fe          	.byte 0xfe
 402200af:	3f          	.byte 0x3f
 402200b0:	800c      	movi.n	a0, 8
@@ -26063,7 +26061,7 @@ Disassembly of section .irom0.text:
 
 40220544 <wifi_set_backup_mac>:
 40220544:	f00d      	ret.n
-40220546:	e00000        	subx4	a0, a0, a0
+40220546:	c00000        	sub	a0, a0, a0
 40220549:	fe8b      	addi.n	a15, a14, 8
 4022054b:	3f          	.byte 0x3f
 
@@ -26139,16 +26137,16 @@ Disassembly of section .irom0.text:
 402205f9:	f00d      	ret.n
 402205fb:	04ac00        	extui	a10, a0, 12, 1
 402205fe:	ac4010        	excw
-40220601:	401011        	l32r	a1, 401f0644 <_lit4_end+0xe9e48>
-40220604:	fedd62        	addmi	a6, a13, 0xfffffe00
+40220601:	401011        	l32r	a1, 401f0644 <_lit4_end+0xe9eb0>
+40220604:	fedd42        	addmi	a4, a13, 0xfffffe00
 40220607:	3f          	.byte 0x3f
 40220608:	04a8c0        	extui	a10, a12, 8, 1
 4022060b:	ec0801        	l32r	a0, 4021b62c <wpa_config_parse_string+0xd4>
-4022060e:	0c4023        	excw
-40220611:	fe8c      	beqz.n	a14, 40220624 <flash_data_check+0xc4>
+4022060e:	ec4023        	excw
+40220611:	fe8b      	addi.n	a15, a14, 8
 40220613:	3f          	.byte 0x3f
 40220614:	23f920        	excw
-40220617:	8df040        	excw
+40220617:	8dd040        	excw
 4022061a:	fe          	.byte 0xfe
 4022061b:	3f          	.byte 0x3f
 4022061c:	ffc714        	excw
@@ -26156,7 +26154,7 @@ Disassembly of section .irom0.text:
 40220620:	8728      	l32i.n	a2, a7, 32
 40220622:	fe          	.byte 0xfe
 40220623:	3f          	.byte 0x3f
-40220624:	fe9070        	excw
+40220624:	fe9050        	excw
 40220627:	3f          	.byte 0x3f
 40220628:	23fd30        	excw
 4022062b:	fd5040        	excw
@@ -26172,7 +26170,7 @@ Disassembly of section .irom0.text:
 40220646:	004023        	excw
 40220649:	3ffe85        	call0	40260634 <_irom0_text_end+0x1ea94>
 4022064c:	23fe00        	excw
-4022064f:	8dec40        	excw
+4022064f:	8dcc40        	excw
 40220652:	fe          	.byte 0xfe
 40220653:	3f          	.byte 0x3f
 40220654:	000454        	excw
@@ -26187,7 +26185,7 @@ Disassembly of section .irom0.text:
 4022066e:	224010        	excw
 40220671:	1209a0        	excw
 40220674:	d9d0c1        	l32r	a12, 40216db4 <scan_start+0x170>
-40220677:	41e931        	l32r	a3, 401f0e1c <_lit4_end+0xea620>
+40220677:	41e931        	l32r	a3, 401f0e1c <_lit4_end+0xea688>
 4022067a:	21c9      	s32i.n	a12, a1, 8
 4022067c:	51f9      	s32i.n	a15, a1, 20
 4022067e:	ffdfc1        	l32r	a12, 402205fc <flash_data_check+0x9c>
@@ -26728,11 +26726,10 @@ Disassembly of section .irom0.text:
 40220c40:	10c112        	addi	a1, a1, 16
 40220c43:	f00d      	ret.n
 40220c45:	000000        	ill
-40220c48:	eef8      	l32i.n	a15, a14, 56
+40220c48:	eee8      	l32i.n	a14, a14, 56
 40220c4a:	fe          	.byte 0xfe
 40220c4b:	3f          	.byte 0x3f
-40220c4c:	8a18      	l32i.n	a1, a10, 32
-40220c4e:	fe          	.byte 0xfe
+40220c4c:	fe8a00        	excw
 40220c4f:	3f          	.byte 0x3f
 40220c50:	fffe61        	l32r	a6, 40220c48 <flash_data_check+0x6e8>
 40220c53:	fffe41        	l32r	a4, 40220c4c <flash_data_check+0x6ec>
@@ -26768,7 +26765,7 @@ Disassembly of section .irom0.text:
 40220c98:	10c112        	addi	a1, a1, 16
 40220c9b:	f00d      	ret.n
 40220c9d:	000000        	ill
-40220ca0:	fe8c30        	excw
+40220ca0:	fe8c10        	excw
 40220ca3:	3f          	.byte 0x3f
 40220ca4:	090c      	movi.n	a9, 0
 40220ca6:	7c4010        	excw
@@ -26856,7 +26853,7 @@ Disassembly of section .irom0.text:
 40220d6c:	0a18      	l32i.n	a1, a10, 0
 40220d6e:	544010        	extui	a4, a1, 0, 6
 40220d71:	220d      	excw
-40220d73:	8c4040        	excw
+40220d73:	8c2040        	excw
 40220d76:	fe          	.byte 0xfe
 40220d77:	3f          	.byte 0x3f
 40220d78:	000dd0        	excw
@@ -26955,12 +26952,12 @@ Disassembly of section .irom0.text:
 40220e50:	004322        	s8i	a2, a3, 0
 40220e53:	f00d      	ret.n
 40220e55:	000000        	ill
-40220e58:	fe8cd4        	excw
+40220e58:	fe8cb4        	excw
 40220e5b:	3f          	.byte 0x3f
 40220e5c:	0f2c      	movi.n	a15, 32
 40220e5e:	604022        	s8i	a2, a0, 96
 40220e61:	402400        	ssa8l	a4
-40220e64:	8d9c      	beqz.n	a13, 40220e80 <system_set_os_print+0x38>
+40220e64:	8d7c      	movi.n	a13, -8
 40220e66:	fe          	.byte 0xfe
 40220e67:	3f          	.byte 0x3f
 40220e68:	f0c112        	addi	a1, a1, -16
@@ -27031,14 +27028,14 @@ Disassembly of section .irom0.text:
 40220f14:	0148      	l32i.n	a4, a1, 0
 40220f16:	794042        	s8i	a4, a0, 121
 40220f19:	ffe606        	j	40220eb5 <system_set_os_print+0x6d>
-40220f1c:	8ce8      	l32i.n	a14, a12, 32
+40220f1c:	8cc8      	l32i.n	a12, a12, 32
 40220f1e:	fe          	.byte 0xfe
 40220f1f:	3f          	.byte 0x3f
-40220f20:	fe8e20        	excw
+40220f20:	fe8e00        	excw
 40220f23:	3f          	.byte 0x3f
-40220f24:	fe8d64        	excw
+40220f24:	fe8d44        	excw
 40220f27:	3f          	.byte 0x3f
-40220f28:	8cec      	bnez.n	a12, 40220f54 <system_set_os_print+0x10c>
+40220f28:	8ccc      	bnez.n	a12, 40220f34 <system_set_os_print+0xec>
 40220f2a:	fe          	.byte 0xfe
 40220f2b:	3f          	.byte 0x3f
 40220f2c:	f0c112        	addi	a1, a1, -16
@@ -27159,8 +27156,8 @@ Disassembly of section .irom0.text:
 40221060:	10c112        	addi	a1, a1, 16
 40221063:	f00d      	ret.n
 40221065:	000000        	ill
-40221068:	102380        	and	a2, a3, a8
-4022106b:	c11240        	mul16u	a1, a2, a4
+40221068:	2318      	l32i.n	a1, a3, 8
+4022106a:	124010        	excw
 
 4022106c <system_adc_read_fast>:
 4022106c:	e0c112        	addi	a1, a1, -32
@@ -27232,9 +27229,9 @@ Disassembly of section .irom0.text:
 4022110b:	8aff60        	excw
 4022110e:	ff          	.byte 0xff
 4022110f:	ff          	.byte 0xff
-40221110:	102a64        	excw
-40221113:	13bc40        	excw
-40221116:	224010        	excw
+40221110:	29fc      	bnez.n	a9, 40221146 <system_restart_local+0x2e>
+40221112:	bc4010        	excw
+40221115:	401013        	excw
 
 40221118 <system_restart_local>:
 40221118:	04a022        	movi	a2, 4
@@ -27316,7 +27313,7 @@ Disassembly of section .irom0.text:
 402211e9:	30c112        	addi	a1, a1, 48
 402211ec:	f00d      	ret.n
 402211ee:	180000        	excw
-402211f1:	402211        	l32r	a1, 401f127c <_lit4_end+0xeaa80>
+402211f1:	402211        	l32r	a1, 401f127c <_lit4_end+0xeaae8>
 
 402211f4 <system_restart>:
 402211f4:	f0c112        	addi	a1, a1, -16
@@ -27413,7 +27410,7 @@ Disassembly of section .irom0.text:
 402212d5:	f00d      	ret.n
 402212d7:	009000        	excw
 402212da:	124024        	excw
-402212dd:	09f0c1        	l32r	a12, 401e3aa0 <_lit4_end+0xdd2a4>
+402212dd:	09f0c1        	l32r	a12, 401e3aa0 <_lit4_end+0xdd30c>
 402212e0:	fe8501        	l32r	a0, 40220cf4 <ets_timer_handler_isr+0x48>
 402212e3:	ff          	.byte 0xff
 402212e4:	0d32b6        	bltui	a2, 3, 402212f5 <system_get_boot_version+0x29>
@@ -27443,7 +27440,7 @@ Disassembly of section .irom0.text:
 4022131c:	0108      	l32i.n	a0, a1, 0
 4022131e:	10c112        	addi	a1, a1, 16
 40221321:	f00d      	ret.n
-40221323:	d85400        	excw
+40221323:	d83400        	excw
 40221326:	fe          	.byte 0xfe
 40221327:	3f          	.byte 0x3f
 
@@ -27521,7 +27518,7 @@ Disassembly of section .irom0.text:
 402213e4:	2400f0        	extui	a0, a15, 0, 3
 402213e7:	013040        	slli	a3, a0, 28
 402213ea:	104024        	excw
-402213ed:	402401        	l32r	a0, 401f1480 <_lit4_end+0xeac84>
+402213ed:	402401        	l32r	a0, 401f1480 <_lit4_end+0xeacec>
 402213f0:	2400d0        	extui	a0, a13, 0, 3
 402213f3:	a24240        	excw
 
@@ -27722,7 +27719,7 @@ Disassembly of section .irom0.text:
 402215f4:	e71566        	bnei	a5, 1, 402215df <system_upgrade_userbin_check+0x1f>
 402215f7:	120c      	movi.n	a2, 1
 402215f9:	fff906        	j	402215e1 <system_upgrade_userbin_check+0x21>
-402215fc:	fe8d54        	excw
+402215fc:	fe8d34        	excw
 402215ff:	3f          	.byte 0x3f
 
 40221600 <system_upgrade_flag_set>:
@@ -28302,7 +28299,7 @@ Disassembly of section .irom0.text:
 40221bca:	200020        	or	a0, a0, a2
 40221bcd:	ffd186        	j	40221b17 <system_upgrade_reboot+0x67>
 40221bd0:	240270        	extui	a0, a7, 2, 3
-40221bd3:	8d5840        	excw
+40221bd3:	8d3840        	excw
 40221bd6:	fe          	.byte 0xfe
 40221bd7:	3f          	.byte 0x3f
 40221bd8:	003333        	excw
@@ -28311,7 +28308,7 @@ Disassembly of section .irom0.text:
 40221be1:	ffff01        	l32r	a0, 40221be0 <system_upgrade_reboot+0x130>
 40221be4:	00fc00        	excw
 40221be7:	40c800        	excw
-40221bea:	980006        	j	40207bee <_lit4_end+0x1013f2>
+40221bea:	980006        	j	40207bee <_lit4_end+0x10145a>
 40221bed:	0f          	.byte 0xf
 40221bee:	004000        	break	0, 0
 40221bf1:	401014        	excw
@@ -28468,7 +28465,7 @@ Disassembly of section .irom0.text:
 40221da0:	10c112        	addi	a1, a1, 16
 40221da3:	f00d      	ret.n
 40221da5:	000000        	ill
-40221da8:	fe8cd0        	excw
+40221da8:	fe8cb0        	excw
 40221dab:	3f          	.byte 0x3f
 40221dac:	240290        	extui	a0, a9, 2, 3
 40221daf:	c11240        	mul16u	a1, a2, a4
@@ -28503,7 +28500,7 @@ Disassembly of section .irom0.text:
 40221df4:	2108      	l32i.n	a0, a1, 8
 40221df6:	10c112        	addi	a1, a1, 16
 40221df9:	f00d      	ret.n
-40221dfb:	8d6000        	excw
+40221dfb:	8d4000        	excw
 40221dfe:	fe          	.byte 0xfe
 40221dff:	3f          	.byte 0x3f
 40221e00:	2402b0        	extui	a0, a11, 2, 3
@@ -28731,7 +28728,7 @@ Disassembly of section .irom0.text:
 4022200d:	a329      	s32i.n	a2, a3, 40
 4022200f:	f00d      	ret.n
 40222011:	000000        	ill
-40222014:	9e38      	l32i.n	a3, a14, 36
+40222014:	9e18      	l32i.n	a1, a14, 36
 40222016:	fe          	.byte 0xfe
 40222017:	3f          	.byte 0x3f
 
@@ -28745,7 +28742,7 @@ Disassembly of section .irom0.text:
 40222028:	c02320        	sub	a2, a3, a2
 4022202b:	f00d      	ret.n
 4022202d:	000000        	ill
-40222030:	8d68      	l32i.n	a6, a13, 32
+40222030:	8d48      	l32i.n	a4, a13, 32
 40222032:	fe          	.byte 0xfe
 40222033:	3f          	.byte 0x3f
 40222034:	2402d0        	extui	a0, a13, 2, 3
@@ -28864,11 +28861,12 @@ Disassembly of section .irom0.text:
 4022214f:	850040        	extui	a0, a4, 16, 9
 40222152:	fe          	.byte 0xfe
 40222153:	3f          	.byte 0x3f
-40222154:	fe8a14        	excw
+40222154:	89fc      	bnez.n	a9, 40222190 <system_print_meminfo+0x24>
+40222156:	fe          	.byte 0xfe
 40222157:	3f          	.byte 0x3f
 40222158:	240330        	extui	a0, a3, 3, 3
 4022215b:	035040        	excw
-4022215e:	f84024        	excw
+4022215e:	e84024        	excw
 40222161:	ee          	.byte 0xee
 40222162:	fe          	.byte 0xfe
 40222163:	3f          	.byte 0x3f
@@ -28953,7 +28951,7 @@ Disassembly of section .irom0.text:
 40222226:	472222        	l32i	a2, a2, 0x11c
 40222229:	f00d      	ret.n
 4022222b:	bf8000        	excw
-4022222e:	5086b1        	l32r	a11, 401f6448 <_lit4_end+0xefc4c>
+4022222e:	5086b1        	l32r	a11, 401f6448 <_lit4_end+0xefcb4>
 40222231:	400006        	j	40232235 <freq_change_check_scan_done+0x45>
 
 40222234 <system_mktime>:
@@ -29415,10 +29413,10 @@ Disassembly of section .irom0.text:
 4022266d:	0108      	l32i.n	a0, a1, 0
 4022266f:	10c112        	addi	a1, a1, 16
 40222672:	f00d      	ret.n
-40222674:	8d8c      	beqz.n	a13, 40222680 <wifi_get_broadcast_if+0x4>
+40222674:	8d6c      	movi.n	a13, -24
 40222676:	fe          	.byte 0xfe
 40222677:	3f          	.byte 0x3f
-40222678:	feeed0        	excw
+40222678:	feeec0        	excw
 4022267b:	3f          	.byte 0x3f
 
 4022267c <wifi_get_broadcast_if>:
@@ -29491,10 +29489,10 @@ Disassembly of section .irom0.text:
 4022272b:	0028      	l32i.n	a2, a0, 0
 4022272d:	18b985        	call0	4023b2c8 <netif_set_default>
 40222730:	fff306        	j	40222700 <wifi_set_broadcast_if+0x48>
-40222733:	8d3800        	excw
+40222733:	8d1800        	excw
 40222736:	fe          	.byte 0xfe
 40222737:	3f          	.byte 0x3f
-40222738:	8c28      	l32i.n	a2, a12, 32
+40222738:	8c08      	l32i.n	a0, a12, 32
 4022273a:	fe          	.byte 0xfe
 4022273b:	3f          	.byte 0x3f
 4022273c:	e0c112        	addi	a1, a1, -32
@@ -29879,7 +29877,7 @@ Disassembly of section .irom0.text:
 40222acf:	088700        	excw
 40222ad2:	120000        	excw
 40222ad5:	c9e0c1        	l32r	a12, 40215258 <ieee80211_send_probereq+0x180>
-40222ad8:	110921        	l32r	a2, 401e6efc <_lit4_end+0xe0700>
+40222ad8:	110921        	l32r	a2, 401e6efc <_lit4_end+0xe0768>
 40222adb:	41e9      	s32i.n	a14, a1, 16
 40222add:	31d9      	s32i.n	a13, a1, 12
 40222adf:	03ed      	mov.n	a14, a3
@@ -29979,12 +29977,12 @@ Disassembly of section .irom0.text:
 40222bc8:	10c112        	addi	a1, a1, 16
 40222bcb:	f00d      	ret.n
 40222bcd:	000000        	ill
-40222bd0:	d98c      	beqz.n	a9, 40222be1 <wifi_station_get_ap_info+0x5>
+40222bd0:	d96c      	movi.n	a9, -19
 40222bd2:	fe          	.byte 0xfe
 40222bd3:	3f          	.byte 0x3f
-40222bd4:	fed994        	excw
+40222bd4:	fed974        	excw
 40222bd7:	3f          	.byte 0x3f
-40222bd8:	db98      	l32i.n	a9, a11, 52
+40222bd8:	db78      	l32i.n	a7, a11, 52
 40222bda:	fe          	.byte 0xfe
 40222bdb:	3f          	.byte 0x3f
 
@@ -30115,7 +30113,7 @@ Disassembly of section .irom0.text:
 40222d13:	fffbc6        	j	40222d06 <wifi_station_ap_number_set+0x6a>
 40222d16:	120000        	excw
 40222d19:	f9d0c1        	l32r	a12, 4022145c <system_restart_enhance+0x68>
-40222d1c:	115971        	l32r	a7, 401e7280 <_lit4_end+0xe0a84>
+40222d1c:	115971        	l32r	a7, 401e7280 <_lit4_end+0xe0aec>
 40222d1f:	3109      	s32i.n	a0, a1, 12
 40222d21:	41c9      	s32i.n	a12, a1, 16
 40222d23:	51d9      	s32i.n	a13, a1, 20
@@ -30337,7 +30335,7 @@ Disassembly of section .irom0.text:
 40222f5d:	2108      	l32i.n	a0, a1, 8
 40222f5f:	10c112        	addi	a1, a1, 16
 40222f62:	f00d      	ret.n
-40222f64:	fe8f30        	excw
+40222f64:	fe8f10        	excw
 40222f67:	3f          	.byte 0x3f
 40222f68:	d0c112        	addi	a1, a1, -48
 40222f6b:	2149      	s32i.n	a4, a1, 8
@@ -30471,8 +30469,8 @@ Disassembly of section .irom0.text:
 402230b1:	0009      	s32i.n	a0, a0, 0
 402230b3:	099e00        	excw
 402230b6:	120000        	excw
-402230b9:	09f0c1        	l32r	a12, 401e587c <_lit4_end+0xdf080>
-402230bc:	21c911        	l32r	a1, 401eb7e0 <_lit4_end+0xe4fe4>
+402230b9:	09f0c1        	l32r	a12, 401e587c <_lit4_end+0xdf0e8>
+402230bc:	21c911        	l32r	a1, 401eb7e0 <_lit4_end+0xe504c>
 402230bf:	31d9      	s32i.n	a13, a1, 12
 402230c1:	02cd      	mov.n	a12, a2
 402230c3:	03dd      	mov.n	a13, a3
@@ -30569,7 +30567,7 @@ Disassembly of section .irom0.text:
 4022319c:	0108      	l32i.n	a0, a1, 0
 4022319e:	10c112        	addi	a1, a1, 16
 402231a1:	f00d      	ret.n
-402231a3:	d99000        	excw
+402231a3:	d97000        	excw
 402231a6:	fe          	.byte 0xfe
 402231a7:	3f          	.byte 0x3f
 
@@ -30605,11 +30603,11 @@ Disassembly of section .irom0.text:
 402231eb:	120c      	movi.n	a2, 1
 402231ed:	f00d      	ret.n
 402231ef:	03d000        	rsr.208	a0
-402231f2:	844024        	excw
+402231f2:	644024        	excw
 402231f5:	3ffed7        	bbsi	a14, 29, 40223238 <wifi_station_ap_change+0x38>
-402231f8:	fedc34        	excw
+402231f8:	fedc14        	excw
 402231fb:	3f          	.byte 0x3f
-402231fc:	d888      	l32i.n	a8, a8, 52
+402231fc:	d868      	l32i.n	a6, a8, 52
 402231fe:	fe          	.byte 0xfe
 402231ff:	3f          	.byte 0x3f
 
@@ -30716,7 +30714,7 @@ Disassembly of section .irom0.text:
 4022330c:	1d0c      	movi.n	a13, 1
 4022330e:	ffef86        	j	402232d0 <wifi_station_ap_change+0xd0>
 40223311:	000000        	ill
-40223314:	de7c      	movi.n	a14, -3
+40223314:	de5c      	movi.n	a14, 93
 40223316:	fe          	.byte 0xfe
 40223317:	3f          	.byte 0x3f
 
@@ -30749,7 +30747,7 @@ Disassembly of section .irom0.text:
 40223358:	f00d      	ret.n
 4022335a:	020c      	movi.n	a2, 0
 4022335c:	fffcc6        	j	40223353 <wifi_station_scan+0x3b>
-4022335f:	db9000        	excw
+4022335f:	db7000        	excw
 40223362:	fe          	.byte 0xfe
 40223363:	3f          	.byte 0x3f
 
@@ -31034,7 +31032,7 @@ Disassembly of section .irom0.text:
 4022362b:	f00d      	ret.n
 4022362d:	f59a45        	call0	40218fd4 <cnx_sta_connect_cmd>
 40223630:	fffc06        	j	40223624 <wifi_station_connect+0x80>
-40223633:	8d7800        	excw
+40223633:	8d5800        	excw
 40223636:	fe          	.byte 0xfe
 40223637:	3f          	.byte 0x3f
 
@@ -31174,7 +31172,7 @@ Disassembly of section .irom0.text:
 4022377e:	fff586        	j	40223758 <wifi_station_get_rssi+0x10>
 40223781:	f21c      	movi.n	a2, 31
 40223783:	fff446        	j	40223758 <wifi_station_get_rssi+0x10>
-40223786:	380000        	excw
+40223786:	180000        	excw
 40223789:	8f          	.byte 0x8f
 4022378a:	fe          	.byte 0xfe
 4022378b:	3f          	.byte 0x3f
@@ -31353,7 +31351,7 @@ Disassembly of section .irom0.text:
 40223923:	f00d      	ret.n
 40223925:	020c      	movi.n	a2, 0
 40223927:	fffac6        	j	40223916 <wifi_softap_cacl_mac+0x4a>
-4022392a:	800000        	add	a0, a0, a0
+4022392a:	600000        	neg	a0, a0
 4022392d:	fed9      	s32i.n	a13, a14, 60
 4022392f:	3f          	.byte 0x3f
 
@@ -31767,14 +31765,14 @@ Disassembly of section .irom0.text:
 40223d6c:	81d9      	s32i.n	a13, a1, 32
 40223d6e:	ff7c86        	j	40223b64 <wifi_softap_get_config_default+0x48>
 40223d71:	000000        	ill
-40223d74:	8d5c      	movi.n	a13, 88
+40223d74:	8d3c      	movi.n	a13, 56
 40223d76:	fe          	.byte 0xfe
 40223d77:	3f          	.byte 0x3f
 40223d78:	000c90        	excw
 40223d7b:	0c9700        	excw
 40223d7e:	120000        	excw
-40223d81:	09f0c1        	l32r	a12, 401e6544 <_lit4_end+0xdfd48>
-40223d84:	21c911        	l32r	a1, 401ec4a8 <_lit4_end+0xe5cac>
+40223d81:	09f0c1        	l32r	a12, 401e6544 <_lit4_end+0xdfdb0>
+40223d84:	21c911        	l32r	a1, 401ec4a8 <_lit4_end+0xe5d14>
 40223d87:	31d9      	s32i.n	a13, a1, 12
 40223d89:	02cd      	mov.n	a12, a2
 40223d8b:	03dd      	mov.n	a13, a3
@@ -31943,7 +31941,7 @@ Disassembly of section .irom0.text:
 40223f14:	120c      	movi.n	a2, 1
 40223f16:	ffdf46        	j	40223e97 <wifi_softap_set_station_info+0x47>
 40223f19:	000000        	ill
-40223f1c:	d848      	l32i.n	a4, a8, 52
+40223f1c:	d828      	l32i.n	a2, a8, 52
 40223f1e:	fe          	.byte 0xfe
 40223f1f:	3f          	.byte 0x3f
 40223f20:	000ce0        	excw
@@ -32243,22 +32241,22 @@ Disassembly of section .irom0.text:
 402241e6:	a90000        	excw
 402241e9:	000d      	mov.n	a0, a0
 402241eb:	0daa00        	excw
-402241ee:	380000        	excw
+402241ee:	180000        	excw
 402241f1:	fed8      	l32i.n	a13, a14, 60
 402241f3:	3f          	.byte 0x3f
-402241f4:	d828      	l32i.n	a2, a8, 52
+402241f4:	d808      	l32i.n	a0, a8, 52
 402241f6:	fe          	.byte 0xfe
 402241f7:	3f          	.byte 0x3f
 402241f8:	0d9a      	add.n	a0, a13, a9
 402241fa:	9e0000        	excw
 402241fd:	000d      	mov.n	a0, a0
 402241ff:	0da000        	excw
-40224202:	2c0000        	excw
+40224202:	0c0000        	excw
 40224205:	fed8      	l32i.n	a13, a14, 60
 40224207:	3f          	.byte 0x3f
-40224208:	fed830        	excw
+40224208:	fed810        	excw
 4022420b:	3f          	.byte 0x3f
-4022420c:	fed834        	excw
+4022420c:	fed814        	excw
 4022420f:	3f          	.byte 0x3f
 
 40224210 <wifi_set_user_ie>:
@@ -32392,7 +32390,7 @@ Disassembly of section .irom0.text:
 4022434c:	f00d      	ret.n
 4022434e:	5c2422        	l32i	a2, a4, 0x170
 40224351:	f00d      	ret.n
-40224353:	d91000        	excw
+40224353:	d8f000        	excw
 40224356:	fe          	.byte 0xfe
 40224357:	3f          	.byte 0x3f
 
@@ -32400,7 +32398,7 @@ Disassembly of section .irom0.text:
 40224358:	ffff21        	l32r	a2, 40224354 <wifi_get_user_ie+0x30>
 4022435b:	c12222        	l32i	a2, a2, 0x304
 4022435e:	f00d      	ret.n
-40224360:	000de1        	l32r	a14, 401e4394 <_lit4_end+0xddb98>
+40224360:	000de1        	l32r	a14, 401e4394 <_lit4_end+0xddc00>
 40224363:	0e1300        	excw
 40224366:	e80000        	excw
 40224369:	000d      	mov.n	a0, a0
@@ -32501,7 +32499,7 @@ Disassembly of section .irom0.text:
 40224468:	020c      	movi.n	a2, 0
 4022446a:	fff846        	j	4022444f <wifi_set_phy_mode+0xe3>
 4022446d:	000000        	ill
-40224470:	fe8d90        	excw
+40224470:	fe8d70        	excw
 40224473:	3f          	.byte 0x3f
 
 40224474 <wifi_enable_signaling_measurement>:
@@ -32653,7 +32651,7 @@ Disassembly of section .irom0.text:
 402245c0:	10c112        	addi	a1, a1, 16
 402245c3:	f00d      	ret.n
 402245c5:	000000        	ill
-402245c8:	d748      	l32i.n	a4, a7, 52
+402245c8:	d728      	l32i.n	a2, a7, 52
 402245ca:	fe          	.byte 0xfe
 402245cb:	3f          	.byte 0x3f
 
@@ -33316,7 +33314,7 @@ Disassembly of section .irom0.text:
 40224bf5:	002102        	l32i	a0, a1, 0
 40224bf8:	10c112        	addi	a1, a1, 16
 40224bfb:	000080        	ret
-40224bfe:	5c0000        	excw
+40224bfe:	3c0000        	excw
 40224c01:	fed8      	l32i.n	a13, a14, 60
 40224c03:	3f          	.byte 0x3f
 
@@ -33386,10 +33384,10 @@ Disassembly of section .irom0.text:
 40224c9c:	0108      	l32i.n	a0, a1, 0
 40224c9e:	10c112        	addi	a1, a1, 16
 40224ca1:	f00d      	ret.n
-40224ca3:	8f3100        	excw
+40224ca3:	8f1100        	excw
 40224ca6:	fe          	.byte 0xfe
 40224ca7:	3f          	.byte 0x3f
-40224ca8:	8dcc      	bnez.n	a13, 40224cb4 <wifi_set_event_handler_cb+0x4>
+40224ca8:	8dac      	beqz.n	a13, 40224cd4 <wifi_set_event_handler_cb+0x24>
 40224caa:	fe          	.byte 0xfe
 40224cab:	3f          	.byte 0x3f
 40224cac:	224c74        	excw
@@ -34632,8 +34630,8 @@ Disassembly of section .irom0.text:
 40225884:	f00d      	ret.n
 40225886:	0228      	l32i.n	a2, a2, 0
 40225888:	f00d      	ret.n
-4022588a:	780000        	excw
-4022588d:	401021        	l32r	a2, 401f58d0 <_lit4_end+0xef0d4>
+4022588a:	700000        	excw
+4022588d:	401021        	l32r	a2, 401f58d0 <_lit4_end+0xef13c>
 
 40225890 <udp_event_recv>:
 /*
@@ -34712,10 +34710,10 @@ void ICACHE_FLASH_ATTR system_init_done()
 402258dd:	3108      	l32i.n	a0, a1, 12
 402258df:	10c112        	addi	a1, a1, 16
 402258e2:	f00d      	ret.n
-402258e4:	ec5c      	movi.n	a12, 94
+402258e4:	ec4c      	movi.n	a12, 78
 402258e6:	fe          	.byte 0xfe
 402258e7:	3f          	.byte 0x3f
-402258e8:	e5c8      	l32i.n	a12, a5, 56
+402258e8:	e5a8      	l32i.n	a10, a5, 56
 402258ea:	fe          	.byte 0xfe
 402258eb:	3f          	.byte 0x3f
 402258ec:	878d      	excw
@@ -34807,7 +34805,7 @@ void ICACHE_FLASH_ATTR Wifi_conned(void *arg)
 4022594c:	11d8      	l32i.n	a13, a1, 4
 4022594e:	10c112        	addi	a1, a1, 16
 40225951:	f00d      	ret.n
-40225953:	887400        	excw
+40225953:	887c00        	excw
 40225956:	fe          	.byte 0xfe
 40225957:	3f          	.byte 0x3f
 40225958:	fe87b7        	bany	a7, a11, 4022595a <Wifi_conned+0x66>
@@ -34904,9 +34902,10 @@ void ICACHE_FLASH_ATTR gpio_init()
 402259b4:	10c112        	addi	a1, a1, 16
 402259b7:	f00d      	ret.n
 402259b9:	000000        	ill
-402259bc:	feec40        	excw
+402259bc:	feec30        	excw
 402259bf:	3f          	.byte 0x3f
-402259c0:	fe88d0        	excw
+402259c0:	88d8      	l32i.n	a13, a8, 32
+402259c2:	fe          	.byte 0xfe
 402259c3:	3f          	.byte 0x3f
 402259c4:	225890        	excw
 402259c7:	87ed40        	excw
@@ -34979,13 +34978,13 @@ void ICACHE_FLASH_ATTR udp_init()
 40225a1b:	3f          	.byte 0x3f
 40225a1c:	fe8847        	bany	a8, a4, 40225a1e <udp_init+0x4e>
 40225a1f:	3f          	.byte 0x3f
-40225a20:	884b      	addi.n	a8, a8, 4
-40225a22:	fe          	.byte 0xfe
+40225a20:	fe8852        	excw
 40225a23:	3f          	.byte 0x3f
-40225a24:	fe8855        	excw
+40225a24:	885c      	movi.n	a8, 88
+40225a26:	fe          	.byte 0xfe
 40225a27:	3f          	.byte 0x3f
 40225a28:	2258f4        	excw
-40225a2b:	886540        	excw
+40225a2b:	886c40        	excw
 40225a2e:	fe          	.byte 0xfe
 40225a2f:	3f          	.byte 0x3f
 
@@ -35113,7 +35112,7 @@ void ICACHE_FLASH_ATTR scan_done(void *arg, STATUS status)
 			bss_link = bss_link->next.stqe_next;
 		}
 		//struct station_config stationConf;
-		os_memcpy(&stationConf.ssid, "BBA", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
+		os_memcpy(&stationConf.ssid, "BBA-SUMDAY", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
 40225ac9:	ffd431        	l32r	a3, 40225a1c <udp_init+0x4c>
 40225acc:	042c      	movi.n	a4, 32
 40225ace:	20c122        	addi	a2, a1, 32
@@ -35509,7 +35508,7 @@ uart0_sendStr(const char *str)
 40225d23:	f00d      	ret.n
 40225d25:	000000        	ill
 40225d28:	225dd0        	excw
-40225d2b:	ece440        	excw
+40225d2b:	ecd440        	excw
 40225d2e:	fe          	.byte 0xfe
 40225d2f:	3f          	.byte 0x3f
 
@@ -36380,7 +36379,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40226197:	01e8      	l32i.n	a14, a1, 0
 40226199:	10c112        	addi	a1, a1, 16
 4022619c:	f00d      	ret.n
-4022619e:	440000        	extui	a0, a0, 0, 5
+4022619e:	240000        	extui	a0, a0, 0, 3
 402261a1:	8f          	.byte 0x8f
 402261a2:	fe          	.byte 0xfe
 402261a3:	3f          	.byte 0x3f
@@ -36503,7 +36502,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40226293:	0108      	l32i.n	a0, a1, 0
 40226295:	10c112        	addi	a1, a1, 16
 40226298:	f00d      	ret.n
-4022629a:	500000        	excw
+4022629a:	300000        	xor	a0, a0, a0
 4022629d:	8f          	.byte 0x8f
 4022629e:	fe          	.byte 0xfe
 4022629f:	3f          	.byte 0x3f
@@ -36889,7 +36888,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022664b:	0108      	l32i.n	a0, a1, 0
 4022664d:	20c112        	addi	a1, a1, 32
 40226650:	f00d      	ret.n
-40226652:	6e0000        	excw
+40226652:	4e0000        	excw
 40226655:	3ffe90        	excw
 
 40226658 <ram_chip_v6_rx_init>:
@@ -37158,12 +37157,12 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402268e6:	f42c20        	extui	a2, a2, 12, 16
 402268e9:	30c112        	addi	a1, a1, 48
 402268ec:	f00d      	ret.n
-402268ee:	f40000        	extui	a0, a0, 0, 16
+402268ee:	d40000        	extui	a0, a0, 0, 14
 402268f1:	8f          	.byte 0x8f
 402268f2:	fe          	.byte 0xfe
 402268f3:	3f          	.byte 0x3f
 402268f4:	000d33        	excw
-402268f7:	8f6000        	excw
+402268f7:	8f4000        	excw
 402268fa:	fe          	.byte 0xfe
 402268fb:	3f          	.byte 0x3f
 
@@ -37548,11 +37547,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40226c7f:	cd5c40        	excw
 40226c82:	dc4000        	excw
 40226c85:	4000c3        	excw
-40226c88:	667c      	movi.n	a6, -10
-40226c8a:	804010        	add	a4, a0, a1
-40226c8d:	4000c1        	l32r	a12, 401f6c90 <_lit4_end+0xf0494>
-40226c90:	00c4c4        	excw
-40226c93:	e2ac40        	excw
+40226c88:	106614        	excw
+40226c8b:	c18040        	mul16u	a8, a0, a4
+40226c8e:	c44000        	extui	a4, a0, 0, 13
+40226c91:	4000c4        	excw
+40226c94:	e2ac      	beqz.n	a2, 40226cc6 <ram_rfpll_set_freq+0x2a>
 40226c96:	684000        	excw
 40226c99:	4000c2        	l8ui	a12, a0, 64
 
@@ -37937,9 +37936,9 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40227083:	960000        	excw
 40227086:	776000        	excw
 40227089:	041d      	mov.n	a1, a4
-4022708b:	714e01        	l32r	a0, 402035c4 <_lit4_end+0xfcdc8>
+4022708b:	714e01        	l32r	a0, 402035c4 <_lit4_end+0xfce30>
 4022708e:	864022        	s8i	a2, a0, 134
-40227091:	000c61        	l32r	a6, 401e70c4 <_lit4_end+0xe08c8>
+40227091:	000c61        	l32r	a6, 401e70c4 <_lit4_end+0xe0930>
 40227094:	5208      	l32i.n	a0, a2, 20
 40227096:	000000        	ill
 40227099:	000060        	excw
@@ -38114,7 +38113,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40227257:	ffc806        	j	4022717b <chip_60_set_channel+0xdf>
 4022725a:	b4a2c2        	movi	a12, 0x2b4
 4022725d:	ffc686        	j	4022717b <chip_60_set_channel+0xdf>
-40227260:	9068      	l32i.n	a6, a0, 36
+40227260:	9048      	l32i.n	a4, a0, 36
 40227262:	fe          	.byte 0xfe
 40227263:	3f          	.byte 0x3f
 
@@ -38216,7 +38215,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40227368:	5108      	l32i.n	a0, a1, 20
 4022736a:	20c112        	addi	a1, a1, 32
 4022736d:	f00d      	ret.n
-4022736f:	8fbb00        	excw
+4022736f:	8f9b00        	excw
 40227372:	fe          	.byte 0xfe
 40227373:	3f          	.byte 0x3f
 
@@ -38257,7 +38256,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402273d0:	ff          	.byte 0xff
 402273d1:	ff          	.byte 0xff
 402273d2:	ff          	.byte 0xff
-402273d3:	9087f7        	bany	a7, a15, 40227367 <chip_v6_set_chan+0xa3>
+402273d3:	9067f7        	bbci	a7, 15, 40227367 <chip_v6_set_chan+0xa3>
 402273d6:	fe          	.byte 0xfe
 402273d7:	3f          	.byte 0x3f
 402273d8:	ff          	.byte 0xff
@@ -38542,7 +38541,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022769c:	fc9791        	l32r	a9, 402268f8 <readvdd33+0x1c8>
 4022769f:	5c4942        	s8i	a4, a9, 92
 402276a2:	f00d      	ret.n
-402276a4:	8f48      	l32i.n	a4, a15, 32
+402276a4:	8f28      	l32i.n	a2, a15, 32
 402276a6:	fe          	.byte 0xfe
 402276a7:	3f          	.byte 0x3f
 
@@ -38696,7 +38695,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022782f:	a13300        	sll	a3, a3
 40227832:	202230        	or	a2, a2, a3
 40227835:	f00d      	ret.n
-40227837:	8f6600        	excw
+40227837:	8f4600        	excw
 4022783a:	fe          	.byte 0xfe
 4022783b:	3f          	.byte 0x3f
 4022783c:	000ff4        	excw
@@ -39849,7 +39848,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022839b:	a108      	l32i.n	a0, a1, 40
 4022839d:	60c112        	addi	a1, a1, 96
 402283a0:	f00d      	ret.n
-402283a2:	e40000        	extui	a0, a0, 0, 15
+402283a2:	7c0000        	excw
 402283a5:	401067        	beq	a0, a6, 402283e9 <ram_get_corr_power+0x41>
 
 402283a8 <ram_get_corr_power>:
@@ -40090,7 +40089,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402285e7:	0108      	l32i.n	a0, a1, 0
 402285e9:	10c112        	addi	a1, a1, 16
 402285ec:	f00d      	ret.n
-402285ee:	800000        	add	a0, a0, a0
+402285ee:	600000        	neg	a0, a0
 402285f1:	8f          	.byte 0x8f
 402285f2:	fe          	.byte 0xfe
 402285f3:	3f          	.byte 0x3f
@@ -40325,10 +40324,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40228838:	004652        	s8i	a5, a6, 0
 4022883b:	ea6466        	bnei	a4, 6, 40228829 <target_power_add_backoff+0x9>
 4022883e:	f00d      	ret.n
-40228840:	8feb      	addi.n	a8, a15, 14
+40228840:	8fcb      	addi.n	a8, a15, 12
 40228842:	fe          	.byte 0xfe
 40228843:	3f          	.byte 0x3f
-40228844:	fe8f92        	excw
+40228844:	fe8f72        	excw
 40228847:	3f          	.byte 0x3f
 40228848:	000000        	ill
 4022884b:	a07220        	addx4	a7, a2, a2
@@ -40484,12 +40483,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402289da:	ffc4c6        	j	402288f1 <tx_pwctrl_init_cal+0xa5>
 402289dd:	0c0c      	movi.n	a12, 0
 402289df:	ffba46        	j	402288cc <tx_pwctrl_init_cal+0x80>
-402289e2:	830000        	moveqz	a0, a0, a0
+402289e2:	630000        	excw
 402289e5:	8f          	.byte 0x8f
 402289e6:	fe          	.byte 0xfe
 402289e7:	3f          	.byte 0x3f
-402289e8:	1e          	.byte 0x1e
-402289e9:	3ffe90        	excw
+402289e8:	fe          	.byte 0xfe
+402289e9:	8f          	.byte 0x8f
+402289ea:	fe          	.byte 0xfe
+402289eb:	3f          	.byte 0x3f
 
 402289ec <tx_atten_set_interp>:
 402289ec:	c0c112        	addi	a1, a1, -64
@@ -40715,7 +40716,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40228c3e:	80afd2        	movi	a13, -128
 40228c41:	050c      	movi.n	a5, 0
 40228c43:	ffa746        	j	40228ae4 <tx_atten_set_interp+0xf8>
-40228c46:	aa0000        	excw
+40228c46:	8a0000        	excw
 40228c49:	8f          	.byte 0x8f
 40228c4a:	fe          	.byte 0xfe
 40228c4b:	3f          	.byte 0x3f
@@ -41070,11 +41071,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40228fbe:	f00d      	ret.n
 40228fc0:	ff          	.byte 0xff
 40228fc1:	fffff1        	l32r	a15, 40228fc0 <read_hw_noisefloor+0x1c>
-40228fc4:	fe90a0        	excw
+40228fc4:	fe9080        	excw
 40228fc7:	3f          	.byte 0x3f
-40228fc8:	fe8fb4        	excw
+40228fc8:	fe8f94        	excw
 40228fcb:	3f          	.byte 0x3f
-40228fcc:	fe8f94        	excw
+40228fcc:	fe8f74        	excw
 40228fcf:	3f          	.byte 0x3f
 
 40228fd0 <noise_check_loop>:
@@ -41203,7 +41204,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022911a:	b32440        	movgez	a2, a4, a4
 4022911d:	212220        	srai	a2, a2, 2
 40229120:	ffdd46        	j	40229099 <noise_check_loop+0xc9>
-40229123:	909800        	addx2	a9, a8, a0
+40229123:	907800        	addx2	a7, a8, a0
 40229126:	fe          	.byte 0xfe
 40229127:	3f          	.byte 0x3f
 
@@ -41403,7 +41404,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022931c:	40c112        	addi	a1, a1, 64
 4022931f:	f00d      	ret.n
 40229321:	000000        	ill
-40229324:	fe8f82        	excw
+40229324:	fe8f62        	excw
 40229327:	3f          	.byte 0x3f
 
 40229328 <target_power_backoff>:
@@ -41638,7 +41639,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022957b:	9dce01        	l32r	a0, 40210cb4 <ieee80211_ifattach+0x70>
 4022957e:	0000c0        	callx0	a0
 40229581:	ffbc86        	j	40229477 <chip_v6_set_chan_rx_cmp+0x7b>
-40229584:	fe8fa7        	bany	a15, a10, 40229586 <chip_v6_set_chan_rx_cmp+0x18a>
+40229584:	fe8f87        	bany	a15, a8, 40229586 <chip_v6_set_chan_rx_cmp+0x18a>
 40229587:	3f          	.byte 0x3f
 
 40229588 <chip_v6_set_chan_misc>:
@@ -41690,8 +41691,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402295fe:	40e9      	s32i.n	a14, a0, 16
 40229600:	000000        	ill
 40229603:	e2a4c0        	excw
-40229606:	384000        	excw
-40229609:	401067        	beq	a0, a6, 4022964d <phy_dig_spur_set+0x35>
+40229606:	d04000        	subx2	a4, a0, a0
+40229609:	401066        	bnei	a0, 1, 4022964d <phy_dig_spur_set+0x35>
 4022960c:	00e2f0        	excw
 4022960f:	c8f040        	excw
 40229612:	b84000        	excw
@@ -42282,7 +42283,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40229c0f:	f00d      	ret.n
 40229c11:	000000        	ill
 40229c14:	001400        	excw
-40229c17:	8fac00        	excw
+40229c17:	8f8c00        	excw
 40229c1a:	fe          	.byte 0xfe
 40229c1b:	3f          	.byte 0x3f
 40229c1c:	ff          	.byte 0xff
@@ -42290,7 +42291,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40229c1e:	7f          	.byte 0x7f
 40229c1f:	bc8180        	excw
 40229c22:	980914        	excw
-40229c25:	5ac641        	l32r	a4, 40200740 <_lit4_end+0xf9f44>
+40229c25:	5ac641        	l32r	a4, 40200740 <_lit4_end+0xf9fac>
 40229c28:	ff          	.byte 0xff
 40229c29:	ff          	.byte 0xff
 40229c2a:	00fc00        	excw
@@ -42322,7 +42323,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40229c68:	000d80        	ret
 40229c6b:	000000        	ill
 40229c6e:	24fc00        	extui	a15, a0, 12, 3
-40229c71:	03fe01        	l32r	a0, 401eac6c <_lit4_end+0xe4470>
+40229c71:	03fe01        	l32r	a0, 401eac6c <_lit4_end+0xe44d8>
 40229c74:	000000        	ill
 40229c77:	0000b0        	excw
 40229c7a:	ff0400        	excw
@@ -42336,7 +42337,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40229c8d:	fffff7        	bbsi	a15, 31, 40229c90 <chip_v6_rxmax_ext+0x9c>
 40229c90:	fe8050        	excw
 40229c93:	3f          	.byte 0x3f
-40229c94:	fe8ff7        	bany	a15, a15, 40229c96 <chip_v6_rxmax_ext+0xa2>
+40229c94:	fe8fd7        	bany	a15, a13, 40229c96 <chip_v6_rxmax_ext+0xa2>
 40229c97:	3f          	.byte 0x3f
 
 40229c98 <phy_bb_rx_cfg>:
@@ -42799,7 +42800,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a18e:	000000        	ill
 4022a191:	010e00        	slli	a0, a14, 32
 4022a194:	0d0000        	excw
-4022a197:	000001        	l32r	a0, 401ea198 <_lit4_end+0xe399c>
+4022a197:	000001        	l32r	a0, 401ea198 <_lit4_end+0xe3a04>
 4022a19a:	de          	.byte 0xde
 4022a19b:	000003        	excw
 4022a19e:	03ed      	mov.n	a14, a3
@@ -42993,7 +42994,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a3a3:	0020c0        	memw
 4022a3a6:	4065b2        	s32i	a11, a5, 0x100
 4022a3a9:	ff9a86        	j	4022a217 <phy_gpio_cfg+0x77>
-4022a3ac:	8fec      	bnez.n	a15, 4022a3d8 <tx_cont_en+0x20>
+4022a3ac:	8fcc      	bnez.n	a15, 4022a3b8 <tx_cont_en>
 4022a3ae:	fe          	.byte 0xfe
 4022a3af:	3f          	.byte 0x3f
 4022a3b0:	e03f80        	subx4	a3, a15, a8
@@ -43063,7 +43064,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a454:	10c112        	addi	a1, a1, 16
 4022a457:	f00d      	ret.n
 4022a459:	000000        	ill
-4022a45c:	fe8ff0        	excw
+4022a45c:	fe8fd0        	excw
 4022a45f:	3f          	.byte 0x3f
 
 4022a460 <tx_cont_dis>:
@@ -43109,7 +43110,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a4c5:	0108      	l32i.n	a0, a1, 0
 4022a4c7:	10c112        	addi	a1, a1, 16
 4022a4ca:	f00d      	ret.n
-4022a4cc:	8fd9      	s32i.n	a13, a15, 32
+4022a4cc:	8fb9      	s32i.n	a11, a15, 32
 4022a4ce:	fe          	.byte 0xfe
 4022a4cf:	3f          	.byte 0x3f
 4022a4d0:	007800        	waiti	8
@@ -43248,7 +43249,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a62b:	ffe885        	call0	4022a4b4 <tx_cont_cfg>
 4022a62e:	fffac6        	j	4022a61d <chip_v6_initialize_bb+0x149>
 4022a631:	000000        	ill
-4022a634:	8fa8      	l32i.n	a10, a15, 32
+4022a634:	8f88      	l32i.n	a8, a15, 32
 4022a636:	fe          	.byte 0xfe
 4022a637:	3f          	.byte 0x3f
 
@@ -43336,7 +43337,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a70d:	2108      	l32i.n	a0, a1, 8
 4022a70f:	10c112        	addi	a1, a1, 16
 4022a712:	f00d      	ret.n
-4022a714:	ef          	.byte 0xef
+4022a714:	cf          	.byte 0xcf
 4022a715:	8f          	.byte 0x8f
 4022a716:	fe          	.byte 0xfe
 4022a717:	3f          	.byte 0x3f
@@ -43374,13 +43375,13 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022a768:	10c112        	addi	a1, a1, 16
 4022a76b:	f00d      	ret.n
 4022a76d:	000000        	ill
-4022a770:	8ff8      	l32i.n	a15, a15, 32
+4022a770:	8fd8      	l32i.n	a13, a15, 32
 4022a772:	fe          	.byte 0xfe
 4022a773:	3f          	.byte 0x3f
-4022a774:	8ffa      	add.n	a8, a15, a15
+4022a774:	8fda      	add.n	a8, a15, a13
 4022a776:	fe          	.byte 0xfe
 4022a777:	3f          	.byte 0x3f
-4022a778:	8ffc      	bnez.n	a15, 4022a7b4 <register_chipv6_phy_init_param+0x38>
+4022a778:	8fdc      	bnez.n	a15, 4022a794 <register_chipv6_phy_init_param+0x18>
 4022a77a:	fe          	.byte 0xfe
 4022a77b:	3f          	.byte 0x3f
 
@@ -43621,7 +43622,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022aa14:	f00d      	ret.n
 4022aa16:	700000        	excw
 4022aa19:	008000        	excw
-4022aa1c:	8fad      	excw
+4022aa1c:	8f8d      	excw
 4022aa1e:	fe          	.byte 0xfe
 4022aa1f:	3f          	.byte 0x3f
 4022aa20:	0d0000        	excw
@@ -43864,14 +43865,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ac79:	10c112        	addi	a1, a1, 16
 4022ac7c:	f00d      	ret.n
 4022ac7e:	010000        	slli	a0, a0, 32
-4022ac81:	010101        	l32r	a0, 401eb088 <_lit4_end+0xe488c>
+4022ac81:	010101        	l32r	a0, 401eb088 <_lit4_end+0xe48f4>
 4022ac84:	040404        	excw
 4022ac87:	010404        	excw
-4022ac8a:	010401        	l32r	a0, 401eb09c <_lit4_end+0xe48a0>
+4022ac8a:	010401        	l32r	a0, 401eb09c <_lit4_end+0xe4908>
 4022ac8d:	010404        	excw
 4022ac90:	ff          	.byte 0xff
 4022ac91:	ffffc3        	excw
-4022ac94:	010101        	l32r	a0, 401eb098 <_lit4_end+0xe489c>
+4022ac94:	010101        	l32r	a0, 401eb098 <_lit4_end+0xe4904>
 4022ac97:	040404        	excw
 4022ac9a:	710104        	excw
 
@@ -43932,13 +43933,13 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ad38:	fe8024        	excw
 4022ad3b:	3f          	.byte 0x3f
 4022ad3c:	000000        	ill
-4022ad3f:	8fe0d6        	bgez	a0, 4022a641 <periodic_cal+0x9>
+4022ad3f:	8fc0d6        	bgez	a0, 4022a63f <periodic_cal+0x7>
 4022ad42:	fe          	.byte 0xfe
 4022ad43:	3f          	.byte 0x3f
 4022ad44:	ff          	.byte 0xff
 4022ad45:	ff          	.byte 0xff
-4022ad46:	34fc70        	extui	a15, a7, 12, 4
-4022ad49:	401023        	excw
+4022ad46:	ccfc70        	excw
+4022ad49:	401022        	l16ui	a2, a0, 128
 
 4022ad4c <reduce_current_init>:
 4022ad4c:	fffb21        	l32r	a2, 4022ad38 <ant_switch_init+0x9c>
@@ -44128,7 +44129,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022af1c:	034762        	s8i	a6, a7, 3
 4022af1f:	d6c466        	bnei	a4, 32, 4022aef9 <get_data_from_rtc+0x5>
 4022af22:	f00d      	ret.n
-4022af24:	8f8c      	beqz.n	a15, 4022af30 <get_data_from_rtc+0x3c>
+4022af24:	8f6c      	movi.n	a15, -24
 4022af26:	fe          	.byte 0xfe
 4022af27:	3f          	.byte 0x3f
 4022af28:	6a38      	l32i.n	a3, a10, 24
@@ -44149,23 +44150,23 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022af4f:	6b9840        	excw
 4022af52:	284022        	s8i	a2, a0, 40
 4022af55:	227a      	add.n	a2, a2, a7
-4022af57:	90a240        	addx2	a10, a2, a4
+4022af57:	908240        	addx2	a8, a2, a4
 4022af5a:	fe          	.byte 0xfe
 4022af5b:	3f          	.byte 0x3f
 4022af5c:	7a2c      	movi.n	a10, 39
-4022af5e:	bd4022        	s8i	a2, a0, 189
+4022af5e:	9d4022        	s8i	a2, a0, 157
 4022af61:	8f          	.byte 0x8f
 4022af62:	fe          	.byte 0xfe
 4022af63:	3f          	.byte 0x3f
-4022af64:	fe8fb3        	excw
+4022af64:	fe8f93        	excw
 4022af67:	3f          	.byte 0x3f
 4022af68:	700000        	excw
 4022af6b:	ffff04        	excw
 4022af6e:	af          	.byte 0xaf
 4022af6f:	ff          	.byte 0xff
 4022af70:	6b08      	l32i.n	a0, a11, 24
-4022af72:	144000        	extui	a4, a0, 0, 2
-4022af75:	401023        	excw
+4022af72:	ac4000        	excw
+4022af75:	401022        	l16ui	a2, a0, 128
 
 4022af78 <register_chipv6_phy>:
 4022af78:	c0c112        	addi	a1, a1, -64
@@ -44829,7 +44830,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022b62c:	075d      	mov.n	a5, a7
 4022b62e:	ffe346        	j	4022b5bf <set_most_pwr_reg+0x5b>
 4022b631:	000000        	ill
-4022b634:	8f8b      	addi.n	a8, a15, 8
+4022b634:	8f6b      	addi.n	a8, a15, 6
 4022b636:	fe          	.byte 0xfe
 4022b637:	3f          	.byte 0x3f
 
@@ -44844,8 +44845,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022b64b:	2108      	l32i.n	a0, a1, 8
 4022b64d:	10c112        	addi	a1, a1, 16
 4022b650:	f00d      	ret.n
-4022b652:	0c0000        	excw
-4022b655:	3ffe90        	excw
+4022b652:	ec0000        	excw
+4022b655:	8f          	.byte 0x8f
+4022b656:	fe          	.byte 0xfe
+4022b657:	3f          	.byte 0x3f
 
 4022b658 <phy_vdd33_set_tpw>:
 4022b658:	f0c112        	addi	a1, a1, -16
@@ -44888,7 +44891,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022b6b0:	112222        	l32i	a2, a2, 68
 4022b6b3:	302230        	xor	a2, a2, a3
 4022b6b6:	f00d      	ret.n
-4022b6b8:	8fea      	add.n	a8, a15, a14
+4022b6b8:	8fca      	add.n	a8, a15, a12
 4022b6ba:	fe          	.byte 0xfe
 4022b6bb:	3f          	.byte 0x3f
 
@@ -45002,7 +45005,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022b7bb:	0020c0        	memw
 4022b7be:	4f6322        	s32i	a2, a3, 0x13c
 4022b7c1:	f00d      	ret.n
-4022b7c3:	90a600        	addx2	a10, a6, a0
+4022b7c3:	908600        	addx2	a8, a6, a0
 4022b7c6:	fe          	.byte 0xfe
 4022b7c7:	3f          	.byte 0x3f
 
@@ -45039,7 +45042,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022b814:	eaa221        	l32r	a2, 4022629c <phy_set_sense+0x18>
 4022b817:	1f9222        	l16si	a2, a2, 62
 4022b81a:	f00d      	ret.n
-4022b81c:	90aa      	add.n	a9, a0, a10
+4022b81c:	908a      	add.n	a9, a0, a8
 4022b81e:	fe          	.byte 0xfe
 4022b81f:	3f          	.byte 0x3f
 
@@ -45913,7 +45916,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022c0a4:	005922        	s16i	a2, a9, 0
 4022c0a7:	10c112        	addi	a1, a1, 16
 4022c0aa:	f00d      	ret.n
-4022c0ac:	8f5c      	movi.n	a15, 88
+4022c0ac:	8f3c      	movi.n	a15, 56
 4022c0ae:	fe          	.byte 0xfe
 4022c0af:	3f          	.byte 0x3f
 4022c0b0:	2407d0        	extui	a0, a13, 7, 3
@@ -46561,7 +46564,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022c6eb:	ffef06        	j	4022c6ab <rc_cal+0x173>
 4022c6ee:	240000        	extui	a0, a0, 0, 3
 4022c6f1:	4022c7        	blt	a2, a12, 4022c735 <get_target_power_offset+0x3d>
-4022c6f4:	8e          	.byte 0x8e
+4022c6f4:	6e          	.byte 0x6e
 4022c6f5:	3ffe90        	excw
 
 4022c6f8 <get_target_power_offset>:
@@ -46687,7 +46690,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022c83f:	012580        	slli	a2, a5, 24
 4022c842:	312820        	srai	a2, a2, 24
 4022c845:	fff946        	j	4022c82e <get_pwctrl_correct+0x2e>
-4022c848:	fe90a4        	excw
+4022c848:	fe9084        	excw
 4022c84b:	3f          	.byte 0x3f
 4022c84c:	240800        	extui	a0, a0, 8, 3
 4022c84f:	0ff340        	excw
@@ -47009,13 +47012,13 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022cbb7:	0020c0        	memw
 4022cbba:	d86322        	s32i	a2, a3, 0x360
 4022cbbd:	f00d      	ret.n
-4022cbbf:	908d00        	addx2	a8, a13, a0
+4022cbbf:	906d00        	addx2	a6, a13, a0
 4022cbc2:	fe          	.byte 0xfe
 4022cbc3:	3f          	.byte 0x3f
-4022cbc4:	908c      	beqz.n	a0, 4022cbd1 <tx_pwctrl_background+0x5>
+4022cbc4:	906c      	movi.n	a0, -23
 4022cbc6:	fe          	.byte 0xfe
 4022cbc7:	3f          	.byte 0x3f
-4022cbc8:	fe8fb0        	excw
+4022cbc8:	fe8f90        	excw
 4022cbcb:	3f          	.byte 0x3f
 
 4022cbcc <tx_pwctrl_background>:
@@ -47182,8 +47185,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022cd74:	20c112        	addi	a1, a1, 32
 4022cd77:	f00d      	ret.n
 4022cd79:	000000        	ill
-4022cd7c:	113cf1        	l32r	a15, 401f126c <_lit4_end+0xeaa70>
-4022cd7f:	3cf301        	l32r	a0, 401fc14c <_lit4_end+0xf5950>
+4022cd7c:	113cf1        	l32r	a15, 401f126c <_lit4_end+0xeaad8>
+4022cd7f:	3cf301        	l32r	a0, 401fc14c <_lit4_end+0xf59b8>
 4022cd82:	f00111        	l32r	a1, 40228d88 <check_tx_pwr_cal+0x13c>
 4022cd85:	113c      	movi.n	a1, 49
 4022cd87:	ffff01        	l32r	a0, 4022cd84 <ram_get_fm_sar_dout+0x9c>
@@ -48517,7 +48520,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022da58:	822230        	mull	a2, a2, a3
 4022da5b:	412c20        	srli	a2, a2, 12
 4022da5e:	f00d      	ret.n
-4022da60:	fe90b0        	excw
+4022da60:	fe9090        	excw
 4022da63:	3f          	.byte 0x3f
 
 4022da64 <pm_set_sleep_cycles>:
@@ -49226,7 +49229,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e15a:	8bd001        	l32r	a0, 4021109c <ieee80211_getmgtframe+0x94>
 4022e15d:	0000c0        	callx0	a0
 4022e160:	ffc186        	j	4022e06a <pm_set_wakeup_btco+0x1a>
-4022e163:	8f4900        	excw
+4022e163:	8f2900        	excw
 4022e166:	fe          	.byte 0xfe
 4022e167:	3f          	.byte 0x3f
 
@@ -49368,11 +49371,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e2dd:	000000        	ill
 4022e2e0:	8f0000        	excw
 4022e2e3:	0fff03        	excw
-4022e2e6:	908000        	addx2	a8, a0, a0
+4022e2e6:	708000        	excw
 4022e2e9:	3ffe90        	excw
-4022e2ec:	fe9084        	excw
+4022e2ec:	fe9064        	excw
 4022e2ef:	3f          	.byte 0x3f
-4022e2f0:	906a      	add.n	a9, a0, a6
+4022e2f0:	904a      	add.n	a9, a0, a4
 4022e2f2:	fe          	.byte 0xfe
 4022e2f3:	3f          	.byte 0x3f
 
@@ -49728,8 +49731,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e6a5:	10c112        	addi	a1, a1, 16
 4022e6a8:	f00d      	ret.n
 4022e6aa:	120000        	excw
-4022e6ad:	02f0c1        	l32r	a12, 401ef270 <_lit4_end+0xe8a74>
-4022e6b0:	050061        	l32r	a6, 401efab0 <_lit4_end+0xe92b4>
+4022e6ad:	02f0c1        	l32r	a12, 401ef270 <_lit4_end+0xe8adc>
+4022e6b0:	050061        	l32r	a6, 401efab0 <_lit4_end+0xe931c>
 4022e6b3:	04fd      	mov.n	a15, a4
 4022e6b5:	005296        	bltz	a2, 4022e6be <sleep_reset_analog_rtcreg_8266+0x116>
 4022e6b8:	0222e6        	bgei	a2, 2, 4022e6be <sleep_reset_analog_rtcreg_8266+0x116>
@@ -49737,7 +49740,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e6be:	002102        	l32i	a0, a1, 0
 4022e6c1:	10c112        	addi	a1, a1, 16
 4022e6c4:	f00d      	ret.n
-4022e6c6:	e00000        	subx4	a0, a0, a0
+4022e6c6:	c00000        	sub	a0, a0, a0
 4022e6c9:	3ffe90        	excw
 
 4022e6cc <ic_get_addr>:
@@ -49754,7 +49757,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e6e0:	2539      	s32i.n	a3, a5, 8
 4022e6e2:	0c4542        	s8i	a4, a5, 12
 4022e6e5:	f00d      	ret.n
-4022e6e7:	90c000        	addx2	a12, a0, a0
+4022e6e7:	90a000        	addx2	a10, a0, a0
 4022e6ea:	fe          	.byte 0xfe
 4022e6eb:	3f          	.byte 0x3f
 
@@ -49904,7 +49907,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e841:	2409      	s32i.n	a0, a4, 8
 4022e843:	c11240        	mul16u	a1, a2, a4
 4022e846:	61c2f0        	xsr.eps2	a15
-4022e849:	610201        	l32r	a0, 40206c54 <_lit4_end+0x100458>
+4022e849:	610201        	l32r	a0, 40206c54 <_lit4_end+0x1004c0>
 4022e84c:	02cd00        	excw
 4022e84f:	fffc21        	l32r	a2, 4022e840 <ic_interface_is_p2p+0x4c>
 4022e852:	0c3d      	mov.n	a3, a12
@@ -49926,7 +49929,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022e87a:	f00d      	ret.n
 4022e87c:	2409e0        	extui	a0, a14, 9, 3
 4022e87f:	09f040        	excw
-4022e882:	c44024        	excw
+4022e882:	a44024        	excw
 4022e885:	3ffe90        	excw
 4022e888:	e6ac      	beqz.n	a6, 4022e8ba <ic_set_vif+0x2e>
 4022e88a:	124022        	s8i	a2, a0, 18
@@ -50179,8 +50182,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022eaf9:	7108      	l32i.n	a0, a1, 28
 4022eafb:	30c112        	addi	a1, a1, 48
 4022eafe:	f00d      	ret.n
-4022eb00:	105fe0        	and	a5, a15, a14
-4022eb03:	029d40        	excw
+4022eb00:	5f78      	l32i.n	a7, a15, 20
+4022eb02:	9d4010        	excw
 
 4022eb04 <ic_get_key>:
 4022eb04:	029d      	mov.n	a9, a2
@@ -50221,7 +50224,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022eb58:	10c112        	addi	a1, a1, 16
 4022eb5b:	f00d      	ret.n
 4022eb5d:	000000        	ill
-4022eb60:	fe9130        	excw
+4022eb60:	fe9110        	excw
 4022eb63:	3f          	.byte 0x3f
 
 4022eb64 <lmacInitAc>:
@@ -50242,7 +50245,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022eb8c:	8879      	s32i.n	a7, a8, 32
 4022eb8e:	f00d      	ret.n
 4022eb90:	000bc0        	callx0	a11
-4022eb93:	910000        	srl	a0, a0
+4022eb93:	90e000        	addx2	a14, a0, a0
 4022eb96:	fe          	.byte 0xfe
 4022eb97:	3f          	.byte 0x3f
 
@@ -50330,7 +50333,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ec58:	0d4642        	s8i	a4, a6, 13
 4022ec5b:	0c4642        	s8i	a4, a6, 12
 4022ec5e:	f00d      	ret.n
-4022ec60:	fe9250        	excw
+4022ec60:	fe9230        	excw
 4022ec63:	3f          	.byte 0x3f
 
 4022ec64 <pm_set_gpio_wakeup_pin>:
@@ -50370,8 +50373,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ecb4:	932520        	movnez	a2, a5, a2
 4022ecb7:	f00d      	ret.n
 4022ecb9:	000000        	ill
-4022ecbc:	102840        	and	a2, a8, a4
-4022ecbf:	a02240        	addx4	a2, a2, a4
+4022ecbc:	27d8      	l32i.n	a13, a7, 8
+4022ecbe:	224010        	excw
 
 4022ecc0 <pm_rtc_clock_cali_proc>:
 4022ecc0:	6aa022        	movi	a2, 106
@@ -50394,7 +50397,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ecec:	10c112        	addi	a1, a1, 16
 4022ecef:	1228      	l32i.n	a2, a2, 4
 4022ecf1:	f00d      	ret.n
-4022ecf3:	938400        	movnez	a8, a4, a0
+4022ecf3:	936400        	movnez	a6, a4, a0
 4022ecf6:	fe          	.byte 0xfe
 4022ecf7:	3f          	.byte 0x3f
 
@@ -50451,15 +50454,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ed77:	873800        	excw
 4022ed7a:	fe          	.byte 0xfe
 4022ed7b:	3f          	.byte 0x3f
-4022ed7c:	8958      	l32i.n	a5, a9, 32
-4022ed7e:	fe          	.byte 0xfe
+4022ed7c:	fe8940        	excw
 4022ed7f:	3f          	.byte 0x3f
 4022ed80:	807c      	movi.n	a0, -8
 4022ed82:	fe          	.byte 0xfe
 4022ed83:	3f          	.byte 0x3f
-4022ed84:	fe93f0        	excw
+4022ed84:	fe93d0        	excw
 4022ed87:	3f          	.byte 0x3f
-4022ed88:	93e8      	l32i.n	a14, a3, 36
+4022ed88:	93c8      	l32i.n	a12, a3, 36
 4022ed8a:	fe          	.byte 0xfe
 4022ed8b:	3f          	.byte 0x3f
 4022ed8c:	f0c112        	addi	a1, a1, -16
@@ -50558,11 +50560,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022ee8c:	f00d      	ret.n
 4022ee8e:	020c      	movi.n	a2, 0
 4022ee90:	f00d      	ret.n
-4022ee92:	140000        	extui	a0, a0, 0, 2
-4022ee95:	1029      	s32i.n	a2, a0, 4
+4022ee92:	ac0000        	excw
+4022ee95:	1028      	l32i.n	a2, a0, 4
 4022ee97:	c11240        	mul16u	a1, a2, a4
 4022ee9a:	61c2e0        	xsr.eps2	a14
-4022ee9d:	61e201        	l32r	a0, 40207628 <_lit4_end+0x100e2c>
+4022ee9d:	61e201        	l32r	a0, 40207628 <_lit4_end+0x100e94>
 4022eea0:	61f203        	excw
 4022eea3:	21d904        	excw
 4022eea6:	0109      	s32i.n	a0, a1, 0
@@ -50693,11 +50695,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022eff4:	fdc442        	addi	a4, a4, -3
 4022eff7:	832340        	moveqz	a2, a3, a4
 4022effa:	f00d      	ret.n
-4022effc:	8c0a      	add.n	a8, a12, a0
+4022effc:	8bea      	add.n	a8, a11, a14
 4022effe:	fe          	.byte 0xfe
 4022efff:	3f          	.byte 0x3f
 4022f000:	240a60        	extui	a0, a6, 10, 3
-4022f003:	940840        	extui	a0, a4, 8, 10
+4022f003:	93e840        	movnez	a14, a8, a4
 4022f006:	fe          	.byte 0xfe
 4022f007:	3f          	.byte 0x3f
 4022f008:	240a70        	extui	a0, a7, 10, 3
@@ -50826,7 +50828,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f134:	fecb21        	l32r	a2, 4022ec60 <lmacSetRetryLimit+0x1c>
 4022f137:	400222        	l8ui	a2, a2, 64
 4022f13a:	f00d      	ret.n
-4022f13c:	931c      	movi.n	a3, 25
+4022f13c:	92fc      	bnez.n	a2, 4022f179 <pm_get_listen_interval+0x45>
 4022f13e:	fe          	.byte 0xfe
 4022f13f:	3f          	.byte 0x3f
 4022f140:	f0c112        	addi	a1, a1, -16
@@ -50973,7 +50975,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f2bd:	020d      	mov.n	a0, a2
 4022f2bf:	fffa86        	j	4022f2ad <pm_get_listen_interval+0x179>
 4022f2c2:	120000        	excw
-4022f2c5:	09f0c1        	l32r	a12, 401f1a88 <_lit4_end+0xeb28c>
+4022f2c5:	09f0c1        	l32r	a12, 401f1a88 <_lit4_end+0xeb2f4>
 4022f2c8:	ad0101        	l32r	a0, 4021a6cc <cnx_node_join+0x30>
 4022f2cb:	fe          	.byte 0xfe
 4022f2cc:	000002        	l8ui	a0, a0, 0
@@ -51011,7 +51013,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f314:	0108      	l32i.n	a0, a1, 0
 4022f316:	10c112        	addi	a1, a1, 16
 4022f319:	f00d      	ret.n
-4022f31b:	92b800        	excw
+4022f31b:	929800        	excw
 4022f31e:	fe          	.byte 0xfe
 4022f31f:	3f          	.byte 0x3f
 4022f320:	ffff81        	l32r	a8, 4022f31c <pm_suspend+0x38>
@@ -51153,7 +51155,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f485:	3200a0        	excw
 4022f488:	1200a0        	excw
 4022f48b:	c2f0c1        	l32r	a12, 4022004c <uart_div_modify+0x84>
-4022f48e:	090161        	l32r	a6, 401f1894 <_lit4_end+0xeb098>
+4022f48e:	090161        	l32r	a6, 401f1894 <_lit4_end+0xeb100>
 4022f491:	960101        	l32r	a0, 40214c98 <ieee80211_send_nulldata+0x174>
 4022f494:	ff          	.byte 0xff
 4022f495:	0000c0        	callx0	a0
@@ -51281,7 +51283,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f5d7:	0108      	l32i.n	a0, a1, 0
 4022f5d9:	10c112        	addi	a1, a1, 16
 4022f5dc:	f00d      	ret.n
-4022f5de:	f40000        	extui	a0, a0, 0, 16
+4022f5de:	d40000        	extui	a0, a0, 0, 14
 4022f5e1:	3ffe92        	excw
 
 4022f5e4 <pm_reset_idle_sleep>:
@@ -51314,12 +51316,12 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f624:	f00d      	ret.n
 4022f626:	100000        	and	a0, a0, a0
 4022f629:	240b      	addi.n	a2, a4, -1
-4022f62b:	8c2440        	excw
+4022f62b:	8c0440        	excw
 4022f62e:	fe          	.byte 0xfe
 4022f62f:	3f          	.byte 0x3f
 4022f630:	240b30        	extui	a0, a3, 11, 3
 4022f633:	0b5040        	excw
-4022f636:	944024        	excw
+4022f636:	744024        	excw
 4022f639:	3ffe92        	excw
 
 4022f63c <pm_open>:
@@ -51428,18 +51430,18 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022f753:	c3c401        	l32r	a0, 40220664 <flash_data_check+0x104>
 4022f756:	0000c0        	callx0	a0
 4022f759:	ffff06        	j	4022f759 <pm_open+0x11d>
-4022f75c:	925c      	movi.n	a2, 89
+4022f75c:	923c      	movi.n	a2, 57
 4022f75e:	fe          	.byte 0xfe
 4022f75f:	3f          	.byte 0x3f
 4022f760:	240b70        	extui	a0, a7, 11, 3
-4022f763:	92a440        	excw
+4022f763:	928440        	excw
 4022f766:	fe          	.byte 0xfe
 4022f767:	3f          	.byte 0x3f
-4022f768:	fe9385        	call0	4022e0a4 <pm_set_wakeup_btco+0x54>
+4022f768:	fe9365        	excw
 4022f76b:	3f          	.byte 0x3f
 4022f76c:	fe8090        	excw
 4022f76f:	3f          	.byte 0x3f
-4022f770:	fe9386        	j	4022f1c2 <pm_get_listen_interval+0x8e>
+4022f770:	fe9366        	bnei	a3, 10, 4022f772 <pm_open+0x136>
 4022f773:	3f          	.byte 0x3f
 4022f774:	00d770        	excw
 4022f777:	c11240        	mul16u	a1, a2, a4
@@ -51837,14 +51839,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022fb7f:	436322        	s32i	a2, a3, 0x10c
 4022fb82:	f00d      	ret.n
 4022fb84:	0f4240        	excw
-4022fb87:	8c3400        	excw
+4022fb87:	8c1400        	excw
 4022fb8a:	fe          	.byte 0xfe
 4022fb8b:	3f          	.byte 0x3f
 4022fb8c:	240b80        	extui	a0, a8, 11, 3
 4022fb8f:	4cf040        	excw
 4022fb92:	124000        	excw
 4022fb95:	c9e0c1        	l32r	a12, 40222318 <system_get_data_of_array_8+0x4>
-4022fb98:	31d921        	l32r	a2, 401fc2fc <_lit4_end+0xf5b00>
+4022fb98:	31d921        	l32r	a2, 401fc2fc <_lit4_end+0xf5b68>
 4022fb9b:	41e9      	s32i.n	a14, a1, 16
 4022fb9d:	51f9      	s32i.n	a15, a1, 20
 4022fb9f:	1109      	s32i.n	a0, a1, 4
@@ -52082,9 +52084,9 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022fe23:	0108      	l32i.n	a0, a1, 0
 4022fe25:	10c112        	addi	a1, a1, 16
 4022fe28:	f00d      	ret.n
-4022fe2a:	cc0000        	excw
+4022fe2a:	ac0000        	excw
 4022fe2d:	3ffe92        	excw
-4022fe30:	9388      	l32i.n	a8, a3, 36
+4022fe30:	9368      	l32i.n	a6, a3, 36
 4022fe32:	fe          	.byte 0xfe
 4022fe33:	3f          	.byte 0x3f
 4022fe34:	af          	.byte 0xaf
@@ -52161,7 +52163,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4022feef:	004052        	s8i	a5, a0, 0
 4022fef2:	0047c5        	call0	40230370 <pm_send_nullfunc>
 4022fef5:	ffe6c6        	j	4022fe94 <LightSleepWakedCbSetFunc+0x318>
-4022fef8:	9389      	s32i.n	a8, a3, 36
+4022fef8:	9369      	s32i.n	a6, a3, 36
 4022fefa:	fe          	.byte 0xfe
 4022fefb:	3f          	.byte 0x3f
 4022fefc:	024d      	mov.n	a4, a2
@@ -52324,7 +52326,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402300a6:	318b      	addi.n	a3, a1, 8
 402300a8:	ee          	.byte 0xee
 402300a9:	12fa      	add.n	a1, a2, a15
-402300ab:	09f0c1        	l32r	a12, 401f286c <_lit4_end+0xec070>
+402300ab:	09f0c1        	l32r	a12, 401f286c <_lit4_end+0xec0d8>
 402300ae:	c32801        	l32r	a0, 40220d50 <ets_timer_handler_isr+0xa4>
 402300b1:	fb3301        	l32r	a0, 4022ed80 <pm_set_sleep_time+0x64>
 402300b4:	102240        	and	a2, a2, a4
@@ -52392,7 +52394,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40230155:	933220        	movnez	a3, a2, a2
 40230158:	f439      	s32i.n	a3, a4, 60
 4023015a:	f00d      	ret.n
-4023015c:	9308      	l32i.n	a0, a3, 36
+4023015c:	92e8      	l32i.n	a14, a2, 36
 4023015e:	fe          	.byte 0xfe
 4023015f:	3f          	.byte 0x3f
 
@@ -52447,7 +52449,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402301c9:	10c112        	addi	a1, a1, 16
 402301cc:	f00d      	ret.n
 402301ce:	120000        	excw
-402301d1:	09f0c1        	l32r	a12, 401f2994 <_lit4_end+0xec198>
+402301d1:	09f0c1        	l32r	a12, 401f2994 <_lit4_end+0xec200>
 402301d4:	a20101        	l32r	a0, 402189d8 <sta_input+0xa00>
 402301d7:	02fa      	add.n	a0, a2, a15
 402301d9:	663a00        	excw
@@ -52505,7 +52507,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40230259:	4022f6        	bgeui	a2, 2, 4023029d <pm_attach+0x35>
 4023025c:	2301d0        	excw
 4023025f:	072440        	excw
-40230262:	604023        	excw
+40230262:	404023        	excw
 40230265:	3ffe93        	excw
 
 40230268 <pm_attach>:
@@ -52965,7 +52967,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402306cc:	0108      	l32i.n	a0, a1, 0
 402306ce:	10c112        	addi	a1, a1, 16
 402306d1:	f00d      	ret.n
-402306d3:	938000        	movnez	a8, a0, a0
+402306d3:	936000        	movnez	a6, a0, a0
 402306d6:	fe          	.byte 0xfe
 402306d7:	3f          	.byte 0x3f
 
@@ -53092,7 +53094,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40230813:	f0a022        	movi	a2, 240
 40230816:	fffc86        	j	4023080c <pm_get_idle_wait_time+0x34>
 40230819:	000000        	ill
-4023081c:	938c      	beqz.n	a3, 40230829 <pm_get_idle_wait_time+0x51>
+4023081c:	936c      	movi.n	a3, -23
 4023081e:	fe          	.byte 0xfe
 4023081f:	3f          	.byte 0x3f
 40230820:	240bc0        	extui	a0, a12, 11, 3
@@ -53207,7 +53209,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023092b:	808000        	add	a8, a0, a0
 4023092e:	fe          	.byte 0xfe
 4023092f:	3f          	.byte 0x3f
-40230930:	fe93a4        	excw
+40230930:	fe9384        	excw
 40230933:	3f          	.byte 0x3f
 40230934:	240c20        	extui	a0, a2, 12, 3
 40230937:	0ba040        	excw
@@ -53359,10 +53361,9 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40230aa4:	f00d      	ret.n
 40230aa6:	380000        	excw
 40230aa9:	3ffe87        	bbsi	a14, 24, 40230aec <fpm_attach+0x9c>
-40230aac:	895c      	movi.n	a9, 88
-40230aae:	fe          	.byte 0xfe
+40230aac:	fe8944        	excw
 40230aaf:	3f          	.byte 0x3f
-40230ab0:	fe9094        	excw
+40230ab0:	fe9074        	excw
 40230ab3:	3f          	.byte 0x3f
 40230ab4:	f0c112        	addi	a1, a1, -16
 40230ab7:	11c9      	s32i.n	a12, a1, 4
@@ -53693,7 +53694,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40230e32:	120000        	excw
 40230e35:	d2e0c1        	l32r	a12, 402259b8 <gpio_init+0x2c>
 40230e38:	e90361        	l32r	a6, 4022b244 <register_chipv6_phy+0x2cc>
-40230e3b:	21c941        	l32r	a4, 401f9560 <_lit4_end+0xf2d64>
+40230e3b:	21c941        	l32r	a4, 401f9560 <_lit4_end+0xf2dcc>
 40230e3e:	1109      	s32i.n	a0, a1, 4
 40230e40:	02cd      	mov.n	a12, a2
 40230e42:	fdeb45        	call0	4022ecf8 <pm_get_ck170_period>
@@ -53884,7 +53885,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023102b:	0c7000        	excw
 4023102e:	124024        	excw
 40231031:	c9f0c1        	l32r	a12, 402237f4 <wifi_station_set_default_hostname+0x5c>
-40231034:	110921        	l32r	a2, 401f5458 <_lit4_end+0xeec5c>
+40231034:	110921        	l32r	a2, 401f5458 <_lit4_end+0xeecc4>
 40231037:	801801        	l32r	a0, 40211098 <ieee80211_getmgtframe+0x90>
 4023103a:	0000c0        	callx0	a0
 4023103d:	fdf7c1        	l32r	a12, 4023081c <pm_get_idle_wait_time+0x44>
@@ -54187,10 +54188,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023135a:	f00d      	ret.n
 4023135c:	fe8084        	excw
 4023135f:	3f          	.byte 0x3f
-40231360:	fe93d0        	excw
+40231360:	fe93b0        	excw
 40231363:	3f          	.byte 0x3f
-40231364:	105834        	excw
-40231367:	c11240        	mul16u	a1, a2, a4
+40231364:	57cc      	bnez.n	a7, 4023136d <PPWdtReset+0x5>
+40231366:	124010        	excw
 
 40231368 <PPWdtReset>:
 40231368:	f0c112        	addi	a1, a1, -16
@@ -54209,10 +54210,9 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023138c:	0108      	l32i.n	a0, a1, 0
 4023138e:	10c112        	addi	a1, a1, 16
 40231391:	f00d      	ret.n
-40231393:	40e000        	nsa	a0, a0
-40231396:	144010        	extui	a4, a1, 0, 2
-40231399:	1058      	l32i.n	a5, a0, 4
-4023139b:	fe2140        	excw
+40231393:	407800        	wer
+40231396:	ac4010        	excw
+40231399:	401057        	beq	a0, a5, 402313dd <pp_soft_wdt_stop+0x5>
 
 4023139c <pp_soft_wdt_init>:
 4023139c:	fffe21        	l32r	a2, 40231394 <PPWdtReset+0x2c>
@@ -54279,7 +54279,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231431:	0108      	l32i.n	a0, a1, 0
 40231433:	10c112        	addi	a1, a1, 16
 40231436:	f00d      	ret.n
-40231438:	fe9c90        	excw
+40231438:	fe9c70        	excw
 4023143b:	3f          	.byte 0x3f
 
 4023143c <RxNodeNum>:
@@ -54307,7 +54307,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023146b:	742020        	extui	a2, a2, 0, 8
 4023146e:	ff5456        	bnez	a4, 40231467 <TxNodeNum+0x13>
 40231471:	f00d      	ret.n
-40231473:	93d400        	movnez	a13, a4, a0
+40231473:	93b400        	movnez	a11, a4, a0
 40231476:	fe          	.byte 0xfe
 40231477:	3f          	.byte 0x3f
 
@@ -54459,7 +54459,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402315e4:	1108      	l32i.n	a0, a1, 4
 402315e6:	10c112        	addi	a1, a1, 16
 402315e9:	f00d      	ret.n
-402315eb:	93f400        	movnez	a15, a4, a0
+402315eb:	93d400        	movnez	a13, a4, a0
 402315ee:	fe          	.byte 0xfe
 402315ef:	3f          	.byte 0x3f
 
@@ -54516,7 +54516,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231668:	0108      	l32i.n	a0, a1, 0
 4023166a:	10c112        	addi	a1, a1, 16
 4023166d:	f00d      	ret.n
-4023166f:	8e1000        	excw
+4023166f:	8df000        	excw
 40231672:	fe          	.byte 0xfe
 40231673:	3f          	.byte 0x3f
 40231674:	240cc0        	extui	a0, a12, 12, 3
@@ -54565,14 +54565,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402316e1:	f00d      	ret.n
 402316e3:	c30c      	movi.n	a3, 12
 402316e5:	fff4c6        	j	402316bc <ppPeocessRxPktHdr+0x44>
-402316e8:	fe95c0        	excw
+402316e8:	fe95a0        	excw
 402316eb:	3f          	.byte 0x3f
 402316ec:	231757        	beq	a7, a5, 40231713 <ppPeocessRxPktHdr+0x9b>
-402316ef:	417440        	srli	a7, a4, 4
-402316f2:	504010        	excw
-402316f5:	1038      	l32i.n	a3, a0, 4
-402316f7:	c11240        	mul16u	a1, a2, a4
-402316fa:	1109f0        	slli	a0, a9, 1
+402316ef:	410c40        	srli	a0, a4, 12
+402316f2:	e84010        	excw
+402316f5:	401037        	beq	a0, a3, 40231739 <ppPeocessRxPktHdr+0xc1>
+402316f8:	f0c112        	addi	a1, a1, -16
+402316fb:	1109      	s32i.n	a0, a1, 4
 402316fd:	ff1801        	l32r	a0, 40231360 <get_fpm_auto_sleep_flag+0xc>
 40231700:	390002        	l8ui	a0, a0, 57
 40231703:	0129      	s32i.n	a2, a1, 0
@@ -54820,12 +54820,12 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023199c:	205570        	or	a5, a5, a7
 4023199f:	0659      	s32i.n	a5, a6, 0
 402319a1:	fff7c6        	j	40231984 <ppPeocessRxPktHdr+0x30c>
-402319a4:	fe95d0        	excw
+402319a4:	fe95b0        	excw
 402319a7:	3f          	.byte 0x3f
 402319a8:	fe8550        	excw
 402319ab:	3f          	.byte 0x3f
-402319ac:	47c8      	l32i.n	a12, a7, 16
-402319ae:	124010        	excw
+402319ac:	104760        	and	a4, a7, a6
+402319af:	c11240        	mul16u	a1, a2, a4
 
 402319b0 <HdlAllBuffedEb>:
 402319b0:	f0c112        	addi	a1, a1, -16
@@ -54902,13 +54902,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231a6f:	873800        	excw
 40231a72:	fe          	.byte 0xfe
 40231a73:	3f          	.byte 0x3f
-40231a74:	fe8960        	excw
+40231a74:	8948      	l32i.n	a4, a9, 32
+40231a76:	fe          	.byte 0xfe
 40231a77:	3f          	.byte 0x3f
 40231a78:	240cf0        	extui	a0, a15, 12, 3
-40231a7b:	4d6840        	excw
-40231a7e:	204010        	or	a4, a0, a1
-40231a81:	1049      	s32i.n	a4, a0, 4
-40231a83:	47ec40        	excw
+40231a7b:	4d0040        	excw
+40231a7e:	b84010        	excw
+40231a81:	1048      	l32i.n	a4, a0, 4
+40231a83:	478440        	excw
 40231a86:	124010        	excw
 
 40231a88 <ppTxPkt>:
@@ -55101,9 +55102,9 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231c5c:	4e6792        	s32i	a9, a7, 0x138
 40231c5f:	4f6822        	s32i	a2, a8, 0x13c
 40231c62:	f00d      	ret.n
-40231c64:	105dc0        	and	a5, a13, a12
-40231c67:	505040        	pitlb	a4, a0
-40231c6a:	124000        	excw
+40231c64:	5d58      	l32i.n	a5, a13, 20
+40231c66:	504010        	excw
+40231c69:	400050        	excw
 
 40231c6c <ppRecycleRxPkt>:
 40231c6c:	f0c112        	addi	a1, a1, -16
@@ -55142,7 +55143,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231cc0:	0108      	l32i.n	a0, a1, 0
 40231cc2:	10c112        	addi	a1, a1, 16
 40231cc5:	f00d      	ret.n
-40231cc7:	2aa800        	excw
+40231cc7:	2a4000        	excw
 40231cca:	124010        	excw
 
 40231ccc <ppCheckTxIdle>:
@@ -55228,10 +55229,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40231d97:	0000c0        	callx0	a0
 40231d9a:	020c      	movi.n	a2, 0
 40231d9c:	fff446        	j	40231d71 <ppCheckTxIdle+0xa5>
-40231d9f:	971000        	excw
+40231d9f:	96f000        	excw
 40231da2:	fe          	.byte 0xfe
 40231da3:	3f          	.byte 0x3f
-40231da4:	fedd94        	excw
+40231da4:	fedd74        	excw
 40231da7:	3f          	.byte 0x3f
 40231da8:	090c      	movi.n	a9, 0
 40231daa:	0a0c      	movi.n	a10, 0
@@ -55480,7 +55481,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232025:	314840        	srai	a4, a4, 24
 40232028:	e5fac5        	call0	40217fd8 <sta_input>
 4023202b:	ffdb06        	j	40231f9b <pp_tx_idle_timeout+0x3b>
-4023202e:	640000        	extui	a0, a0, 0, 7
+4023202e:	4c0000        	excw
 40232031:	fe89      	s32i.n	a8, a14, 60
 40232033:	3f          	.byte 0x3f
 40232034:	e0c112        	addi	a1, a1, -32
@@ -55840,7 +55841,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402323d8:	f00d      	ret.n
 402323da:	200000        	or	a0, a0, a0
 402323dd:	240d      	excw
-402323df:	943c40        	extui	a3, a4, 12, 10
+402323df:	941c40        	extui	a1, a4, 12, 10
 402323e2:	fe          	.byte 0xfe
 402323e3:	3f          	.byte 0x3f
 402323e4:	2323d0        	excw
@@ -56056,15 +56057,16 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232627:	d8c002        	addi	a0, a0, -40
 4023262a:	ffb5c6        	j	40232505 <DefFreqCalTimerCB+0x135>
 4023262d:	000000        	ill
-40232630:	104cf0        	and	a4, a12, a15
-40232633:	40ac40        	excw
-40232636:	424010        	excw
-40232639:	12f0a0        	excw
-4023263c:	c2d0c1        	l32r	a12, 4022317c <wifi_station_set_config_current+0x4>
-4023263f:	220461        	l32r	a6, 401fae50 <_lit4_end+0xf4654>
-40232642:	020961        	l32r	a6, 401f2e68 <_lit4_end+0xec66c>
-40232645:	e90361        	l32r	a6, 4022ca54 <tx_pwctrl_cal+0x1fc>
-40232648:	71f961        	l32r	a6, 4020ee2c <_lit4_end+0x108630>
+40232630:	4c88      	l32i.n	a8, a12, 16
+40232632:	444010        	extui	a4, a1, 0, 5
+40232635:	401040        	excw
+40232638:	f0a042        	movi	a4, 240
+4023263b:	d0c112        	addi	a1, a1, -48
+4023263e:	0461c2        	s32i	a12, a1, 16
+40232641:	096122        	s32i	a2, a1, 36
+40232644:	036102        	s32i	a0, a1, 12
+40232647:	61e9      	s32i.n	a14, a1, 24
+40232649:	71f9      	s32i.n	a15, a1, 28
 4023264b:	51d9      	s32i.n	a13, a1, 20
 4023264d:	cf0c      	movi.n	a15, 12
 4023264f:	03dd      	mov.n	a13, a3
@@ -56338,8 +56340,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232902:	f00d      	ret.n
 40232904:	000a02        	l8ui	a0, a10, 0
 40232907:	16f800        	excw
-4023290a:	004023        	excw
-4023290d:	3ffe96        	bltz	a14, 40232d10 <pp_attach+0x3f8>
+4023290a:	e04023        	excw
+4023290d:	3ffe95        	excw
 40232910:	231f60        	excw
 40232913:	15a840        	extui	a10, a4, 24, 2
 40232916:	0c4023        	excw
@@ -56434,14 +56436,14 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232a01:	0108      	l32i.n	a0, a1, 0
 40232a03:	10c112        	addi	a1, a1, 16
 40232a06:	f00d      	ret.n
-40232a08:	fe9711        	l32r	a1, 40232464 <DefFreqCalTimerCB+0x94>
+40232a08:	fe96f1        	l32r	a15, 40232460 <DefFreqCalTimerCB+0x90>
 40232a0b:	3f          	.byte 0x3f
-40232a0c:	46ac      	beqz.n	a6, 40232a34 <pp_attach+0x11c>
-40232a0e:	124010        	excw
-40232a11:	02e0c1        	l32r	a12, 401f3594 <_lit4_end+0xecd98>
-40232a14:	c20061        	l32r	a6, 40223214 <wifi_station_ap_change+0x14>
-40232a17:	e90161        	l32r	a6, 4022ce1c <ram_cal_tos_v60+0x90>
-40232a1a:	21d931        	l32r	a3, 401fb180 <_lit4_end+0xf4984>
+40232a0c:	104644        	excw
+40232a0f:	c11240        	mul16u	a1, a2, a4
+40232a12:	6102e0        	excw
+40232a15:	61c200        	xsr.eps2	a0
+40232a18:	31e901        	l32r	a0, 401ff1bc <_lit4_end+0xf8a28>
+40232a1b:	21d9      	s32i.n	a13, a1, 8
 40232a1d:	41f9      	s32i.n	a15, a1, 16
 40232a1f:	fd7c      	movi.n	a13, -1
 40232a21:	fff9f1        	l32r	a15, 40232a08 <pp_attach+0xf0>
@@ -56476,15 +56478,15 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232a6f:	0108      	l32i.n	a0, a1, 0
 40232a71:	20c112        	addi	a1, a1, 32
 40232a74:	f00d      	ret.n
-40232a76:	7a0000        	excw
+40232a76:	5a0000        	excw
 40232a79:	fedd      	excw
 40232a7b:	3f          	.byte 0x3f
-40232a7c:	104544        	excw
-40232a7f:	c11240        	mul16u	a1, a2, a4
-40232a82:	61c2e0        	xsr.eps2	a14
-40232a85:	610205        	call0	40293aa8 <_irom0_text_end+0x51f08>
-40232a88:	02cd04        	excw
-40232a8b:	4208      	l32i.n	a0, a2, 16
+40232a7c:	44dc      	bnez.n	a4, 40232a94 <pp_attach+0x17c>
+40232a7e:	124010        	excw
+40232a81:	c2e0c1        	l32r	a12, 40223604 <wifi_station_connect+0x60>
+40232a84:	020561        	l32r	a6, 401f3298 <_lit4_end+0xecb04>
+40232a87:	cd0461        	l32r	a6, 40225e98 <UART_SetLineInverse+0x18>
+40232a8a:	420802        	l8ui	a0, a8, 66
 40232a8d:	3109      	s32i.n	a0, a1, 12
 40232a8f:	fff805        	call0	40232a10 <pp_attach+0xf8>
 40232a92:	3128      	l32i.n	a2, a1, 12
@@ -56737,7 +56739,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232d16:	103340        	and	a3, a3, a4
 40232d19:	0639      	s32i.n	a3, a6, 0
 40232d1b:	ffdd06        	j	40232c93 <pp_attach+0x37b>
-40232d1e:	200000        	or	a0, a0, a0
+40232d1e:	000000        	ill
 40232d21:	3ffe97        	bbsi	a14, 25, 40232d64 <pp_attach+0x44c>
 40232d24:	2e          	.byte 0x2e
 40232d25:	00ba      	add.n	a0, a0, a11
@@ -56765,7 +56767,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40232d5f:	1a4100        	excw
 40232d62:	b10000        	sra	a0, a0
 40232d65:	000013        	excw
-40232d68:	001181        	l32r	a8, 401f2dac <_lit4_end+0xec5b0>
+40232d68:	001181        	l32r	a8, 401f2dac <_lit4_end+0xec618>
 40232d6b:	8dc800        	excw
 40232d6e:	e40000        	extui	a0, a0, 0, 15
 40232d71:	000046        	j	40232d76 <pp_attach+0x45e>
@@ -57085,22 +57087,23 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402330cb:	746060        	extui	a6, a6, 0, 8
 402330ce:	f29367        	bne	a3, a6, 402330c4 <rc_set_rate_limit_id+0xf0>
 402330d1:	f00d      	ret.n
-402330d3:	4b0c00        	excw
+402330d3:	4aa400        	excw
 402330d6:	244010        	extui	a4, a1, 0, 3
 402330d9:	3ffe83        	excw
 402330dc:	fe8264        	excw
 402330df:	3f          	.byte 0x3f
 402330e0:	fe8270        	excw
 402330e3:	3f          	.byte 0x3f
-402330e4:	4a9c      	beqz.n	a10, 402330fc <rcUpdatePhyMode+0x4>
-402330e6:	804010        	add	a4, a0, a1
-402330e9:	3ffe81        	l32r	a8, 402030e4 <_lit4_end+0xfc8e8>
+402330e4:	104a34        	excw
+402330e7:	818040        	src	a8, a0, a4
+402330ea:	fe          	.byte 0xfe
+402330eb:	3f          	.byte 0x3f
 402330ec:	fe82c4        	excw
 402330ef:	3f          	.byte 0x3f
 402330f0:	fe8300        	excw
 402330f3:	3f          	.byte 0x3f
-402330f4:	4b3c      	movi.n	a11, 52
-402330f6:	124010        	excw
+402330f4:	104ad4        	excw
+402330f7:	c11240        	mul16u	a1, a2, a4
 
 402330f8 <rcUpdatePhyMode>:
 402330f8:	e0c112        	addi	a1, a1, -32
@@ -57363,7 +57366,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402333b8:	ff9dc6        	j	40233233 <rcUpdatePhyMode+0x13b>
 402333bb:	00dd      	mov.n	a13, a0
 402333bd:	ff9c86        	j	40233233 <rcUpdatePhyMode+0x13b>
-402333c0:	fe9820        	excw
+402333c0:	fe9800        	excw
 402333c3:	3f          	.byte 0x3f
 402333c4:	fe8110        	excw
 402333c7:	3f          	.byte 0x3f
@@ -57399,7 +57402,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023340d:	0108      	l32i.n	a0, a1, 0
 4023340f:	10c112        	addi	a1, a1, 16
 40233412:	f00d      	ret.n
-40233414:	fe9830        	excw
+40233414:	fe9810        	excw
 40233417:	3f          	.byte 0x3f
 
 40233418 <rcGetTrc>:
@@ -57526,7 +57529,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023352c:	ffa521        	l32r	a2, 402333c0 <rcUpdatePhyMode+0x2c8>
 4023352f:	040222        	l8ui	a2, a2, 4
 40233532:	f00d      	ret.n
-40233534:	fe9826        	beqi	a8, 10, 40233536 <rc_get_mask+0xa>
+40233534:	fe9806        	j	40232f98 <RC_SetBasicRate+0x2c>
 40233537:	3f          	.byte 0x3f
 40233538:	0d58      	l32i.n	a5, a13, 0
 4023353a:	604024        	excw
@@ -57852,19 +57855,19 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40233858:	f00d      	ret.n
 4023385a:	980000        	excw
 4023385d:	000025        	excw
-40233860:	fe9e40        	excw
+40233860:	fe9e20        	excw
 40233863:	3f          	.byte 0x3f
-40233864:	fec430        	excw
+40233864:	fec410        	excw
 40233867:	3f          	.byte 0x3f
-40233868:	fec4b0        	excw
+40233868:	fec490        	excw
 4023386b:	3f          	.byte 0x3f
-4023386c:	c428      	l32i.n	a2, a4, 48
+4023386c:	c408      	l32i.n	a0, a4, 48
 4023386e:	fe          	.byte 0xfe
 4023386f:	3f          	.byte 0x3f
-40233870:	fecc10        	excw
+40233870:	fecbf0        	excw
 40233873:	3f          	.byte 0x3f
 40233874:	004f40        	break	15, 4
-40233877:	60a840        	excw
+40233877:	604040        	neg	a4, a4
 4023387a:	4c4010        	excw
 4023387d:	f75183        	excw
 40233880:	ff          	.byte 0xff
@@ -58071,7 +58074,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40233a94:	f00d      	ret.n
 40233a96:	000000        	ill
 40233a99:	2c9f03        	excw
-40233a9c:	fe9db0        	excw
+40233a9c:	fe9d90        	excw
 40233a9f:	3f          	.byte 0x3f
 
 40233aa0 <wDev_Initialize>:
@@ -58888,11 +58891,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402342e4:	040c      	movi.n	a4, 0
 402342e6:	054342        	s8i	a4, a3, 5
 402342e9:	f00d      	ret.n
-402342eb:	cc2000        	excw
+402342eb:	cc0000        	excw
 402342ee:	fe          	.byte 0xfe
 402342ef:	3f          	.byte 0x3f
 402342f0:	240d70        	extui	a0, a7, 13, 3
-402342f3:	896c40        	excw
+402342f3:	895440        	excw
 402342f6:	fe          	.byte 0xfe
 402342f7:	3f          	.byte 0x3f
 
@@ -59361,13 +59364,13 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40234791:	724101        	l32r	a0, 40211098 <ieee80211_getmgtframe+0x90>
 40234794:	0000c0        	callx0	a0
 40234797:	fff406        	j	4023476b <esf_buf_recycle+0xff>
-4023479a:	f00000        	subx8	a0, a0, a0
+4023479a:	d00000        	subx2	a0, a0, a0
 4023479d:	3ffed3        	excw
-402347a0:	fecc40        	excw
+402347a0:	fecc20        	excw
 402347a3:	3f          	.byte 0x3f
-402347a4:	fed190        	excw
+402347a4:	fed170        	excw
 402347a7:	3f          	.byte 0x3f
-402347a8:	fed670        	excw
+402347a8:	fed650        	excw
 402347ab:	3f          	.byte 0x3f
 
 402347ac <esf_buf_setup>:
@@ -59546,10 +59549,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023495b:	0c1232        	l16ui	a3, a2, 24
 4023495e:	ebb437        	bgeu	a4, a3, 4023494d <esf_buf_setup+0x1a1>
 40234961:	f00d      	ret.n
-40234963:	e5d400        	extui	a13, a0, 20, 15
+40234963:	e5c400        	extui	a12, a0, 20, 15
 40234966:	fe          	.byte 0xfe
 40234967:	3f          	.byte 0x3f
-40234968:	fee5d0        	excw
+40234968:	fee5c0        	excw
 4023496b:	3f          	.byte 0x3f
 4023496c:	d0c112        	addi	a1, a1, -48
 4023496f:	71f9      	s32i.n	a15, a1, 28
@@ -60307,7 +60310,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235108:	0007c6        	j	4023512b <esf_buf_setup+0x97f>
 4023510b:	0c2200        	excw
 4023510e:	328024        	excw
-40235111:	639601        	l32r	a0, 4020df6c <_lit4_end+0x107770>
+40235111:	639601        	l32r	a0, 4020df6c <_lit4_end+0x1077d8>
 40235114:	a02200        	addx4	a2, a2, a0
 40235117:	ff          	.byte 0xff
 40235118:	0003c6        	j	4023512b <esf_buf_setup+0x97f>
@@ -60356,11 +60359,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235181:	91d8      	l32i.n	a13, a1, 36
 40235183:	30c112        	addi	a1, a1, 48
 40235186:	f00d      	ret.n
-40235188:	feed34        	excw
+40235188:	feed24        	excw
 4023518b:	3f          	.byte 0x3f
-4023518c:	feed40        	excw
+4023518c:	feed30        	excw
 4023518f:	3f          	.byte 0x3f
-40235190:	fee5d5        	excw
+40235190:	fee5c5        	call0	40233ff0 <wDev_Crypto_Conf+0x4>
 40235193:	3f          	.byte 0x3f
 40235194:	2417e4        	excw
 40235197:	c11240        	mul16u	a1, a2, a4
@@ -60880,7 +60883,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402356db:	11d8      	l32i.n	a13, a1, 4
 402356dd:	10c112        	addi	a1, a1, 16
 402356e0:	f00d      	ret.n
-402356e2:	d00000        	subx2	a0, a0, a0
+402356e2:	d80000        	excw
 402356e5:	fe88      	l32i.n	a8, a14, 60
 402356e7:	3f          	.byte 0x3f
 
@@ -61195,7 +61198,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402359e3:	31f8      	l32i.n	a15, a1, 12
 402359e5:	20c112        	addi	a1, a1, 32
 402359e8:	f00d      	ret.n
-402359ea:	cc0000        	excw
+402359ea:	bc0000        	excw
 402359ed:	ee          	.byte 0xee
 402359ee:	fe          	.byte 0xfe
 402359ef:	3f          	.byte 0x3f
@@ -61379,7 +61382,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235b9e:	230602        	l8ui	a0, a6, 35
 40235ba1:	023200        	excw
 40235ba4:	0c0c      	movi.n	a12, 0
-40235ba6:	c36205        	call0	401f91c8 <_lit4_end+0xf29cc>
+40235ba6:	c36205        	call0	401f91c8 <_lit4_end+0xf2a34>
 40235ba9:	60fa      	add.n	a6, a0, a15
 40235bab:	e28354        	excw
 40235bae:	500d52        	l8ui	a5, a13, 80
@@ -61462,7 +61465,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235c75:	10c112        	addi	a1, a1, 16
 40235c78:	f00d      	ret.n
 40235c7a:	980000        	excw
-40235c7d:	402351        	l32r	a5, 40205d0c <_lit4_end+0xff510>
+40235c7d:	402351        	l32r	a5, 40205d0c <_lit4_end+0xff578>
 
 40235c80 <dhcp_start>:
 40235c80:	f0c112        	addi	a1, a1, -16
@@ -61535,12 +61538,12 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235d28:	343083        	excw
 40235d2b:	4c3220        	excw
 40235d2e:	0839      	s32i.n	a3, a8, 0
-40235d30:	21c831        	l32r	a3, 401fe450 <_lit4_end+0xf7c54>
+40235d30:	21c831        	l32r	a3, 401fe450 <_lit4_end+0xf7cbc>
 40235d33:	11d8      	l32i.n	a13, a1, 4
 40235d35:	01e8      	l32i.n	a14, a1, 0
 40235d37:	10c112        	addi	a1, a1, 16
 40235d3a:	f00d      	ret.n
-40235d3c:	e5e8      	l32i.n	a14, a5, 56
+40235d3c:	e5d8      	l32i.n	a13, a5, 56
 40235d3e:	fe          	.byte 0xfe
 40235d3f:	3f          	.byte 0x3f
 40235d40:	538263        	excw
@@ -61611,7 +61614,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235deb:	61c8      	l32i.n	a12, a1, 24
 40235ded:	20c112        	addi	a1, a1, 32
 40235df0:	f00d      	ret.n
-40235df2:	ec0000        	excw
+40235df2:	dc0000        	excw
 40235df5:	3ffee5        	excw
 40235df8:	84ec      	bnez.n	a4, 40235e24 <dhcp_start+0x1a4>
 40235dfa:	fe          	.byte 0xfe
@@ -61783,13 +61786,13 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40235f98:	1448      	l32i.n	a4, a4, 4
 40235f9a:	fef456        	bnez	a4, 40235f8d <node_remove_from_list+0x11>
 40235f9d:	f00d      	ret.n
-40235f9f:	e5f400        	extui	a15, a0, 20, 15
+40235f9f:	e5e400        	extui	a14, a0, 20, 15
 40235fa2:	fe          	.byte 0xfe
 40235fa3:	3f          	.byte 0x3f
 40235fa4:	143c      	movi.n	a4, 49
-40235fa6:	f04024        	excw
+40235fa6:	e04024        	excw
 40235fa9:	3ffee5        	excw
-40235fac:	e5dc      	bnez.n	a5, 40235fce <dhcps_start+0x1a>
+40235fac:	e5cc      	bnez.n	a5, 40235fbe <dhcps_start+0xa>
 40235fae:	fe          	.byte 0xfe
 40235faf:	3f          	.byte 0x3f
 40235fb0:	67a8      	l32i.n	a10, a7, 24
@@ -61935,10 +61938,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023612c:	20c112        	addi	a1, a1, 32
 4023612f:	f00d      	ret.n
 40236131:	000000        	ill
-40236134:	e5d8      	l32i.n	a13, a5, 56
+40236134:	e5c8      	l32i.n	a12, a5, 56
 40236136:	fe          	.byte 0xfe
 40236137:	3f          	.byte 0x3f
-40236138:	fe88d0        	excw
+40236138:	88d8      	l32i.n	a13, a8, 32
+4023613a:	fe          	.byte 0xfe
 4023613b:	3f          	.byte 0x3f
 
 4023613c <dhcps_stop>:
@@ -62347,7 +62351,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236511:	b1f8      	l32i.n	a15, a1, 44
 40236513:	40c112        	addi	a1, a1, 64
 40236516:	f00d      	ret.n
-40236518:	fee5d6        	bgez	a5, 4023650a <wifi_softap_dhcps_client_leave+0xa6>
+40236518:	fee5c6        	j	402360b3 <dhcps_start+0xff>
 4023651b:	3f          	.byte 0x3f
 
 4023651c <wifi_softap_dhcps_client_update>:
@@ -62705,7 +62709,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236881:	970a      	add.n	a9, a7, a0
 40236883:	3c4212        	s8i	a1, a2, 60
 40236886:	924724        	excw
-40236889:	014631        	l32r	a3, 401f6da4 <_lit4_end+0xf05a8>
+40236889:	014631        	l32r	a3, 401f6da4 <_lit4_end+0xf0610>
 4023688c:	056200        	extui	a6, a0, 18, 1
 4023688f:	0a0602        	l8ui	a0, a6, 10
 40236892:	352b00        	extui	a2, a0, 27, 4
@@ -62891,7 +62895,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236a5b:	fff506        	j	40236a33 <wifi_softap_dhcps_client_update+0x517>
 40236a5e:	210000        	srai	a0, a0, 0
 40236a61:	41fd50        	srli	a15, a5, 13
-40236a64:	28fd51        	l32r	a5, 40200e58 <_lit4_end+0xfa65c>
+40236a64:	28fd51        	l32r	a5, 40200e58 <_lit4_end+0xfa6c4>
 40236a67:	0e3d02        	excw
 40236a6a:	454c      	movi.n	a5, 68
 40236a6c:	085e05        	call0	4023f050 <udp_sendto>
@@ -62927,19 +62931,20 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236abd:	231b      	addi.n	a2, a3, 1
 40236abf:	f00d      	ret.n
 40236ac1:	000000        	ill
-40236ac4:	fe88d0        	excw
+40236ac4:	88d8      	l32i.n	a13, a8, 32
+40236ac6:	fe          	.byte 0xfe
 40236ac7:	3f          	.byte 0x3f
-40236ac8:	e5fc      	bnez.n	a5, 40236b0a <wifi_softap_dhcps_client_update+0x5ee>
+40236ac8:	e5ec      	bnez.n	a5, 40236afa <wifi_softap_dhcps_client_update+0x5de>
 40236aca:	fe          	.byte 0xfe
 40236acb:	3f          	.byte 0x3f
-40236acc:	e5f8      	l32i.n	a15, a5, 56
+40236acc:	e5e8      	l32i.n	a14, a5, 56
 40236ace:	fe          	.byte 0xfe
 40236acf:	3f          	.byte 0x3f
-40236ad0:	e608      	l32i.n	a0, a6, 56
+40236ad0:	e5f8      	l32i.n	a15, a5, 56
 40236ad2:	fe          	.byte 0xfe
 40236ad3:	3f          	.byte 0x3f
 40236ad4:	000100        	excw
-40236ad7:	3a8001        	l32r	a0, 402054d8 <_lit4_end+0xfecdc>
+40236ad7:	3a8001        	l32r	a0, 402054d8 <_lit4_end+0xfed44>
 40236ada:	0009      	s32i.n	a0, a0, 0
 40236adc:	c0c112        	addi	a1, a1, -64
 40236adf:	b1f9      	s32i.n	a15, a1, 44
@@ -63094,8 +63099,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236c76:	82ac      	beqz.n	a2, 40236ca2 <wifi_softap_dhcps_client_update+0x786>
 40236c78:	000c06        	j	40236cac <wifi_softap_dhcps_client_update+0x790>
 40236c7b:	328000        	excw
-40236c7e:	282011        	l32r	a1, 40200d00 <_lit4_end+0xfa504>
-40236c81:	232041        	l32r	a4, 401ff904 <_lit4_end+0xf9108>
+40236c7e:	282011        	l32r	a1, 40200d00 <_lit4_end+0xfa56c>
+40236c81:	232041        	l32r	a4, 401ff904 <_lit4_end+0xf9170>
 40236c84:	202020        	or	a2, a0, a2
 40236c87:	22abf4        	excw
 40236c8a:	6f0b      	addi.n	a6, a15, -1
@@ -63135,10 +63140,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236ce4:	b1f8      	l32i.n	a15, a1, 44
 40236ce6:	40c112        	addi	a1, a1, 64
 40236ce9:	f00d      	ret.n
-40236ceb:	e60000        	excw
+40236ceb:	e5f000        	extui	a15, a0, 16, 15
 40236cee:	fe          	.byte 0xfe
 40236cef:	3f          	.byte 0x3f
-40236cf0:	ea6c      	movi.n	a10, -18
+40236cf0:	ea5c      	movi.n	a10, 94
 40236cf2:	fe          	.byte 0xfe
 40236cf3:	3f          	.byte 0x3f
 40236cf4:	c0c112        	addi	a1, a1, -64
@@ -63390,7 +63395,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40236f54:	10c112        	addi	a1, a1, 16
 40236f57:	f00d      	ret.n
 40236f59:	000000        	ill
-40236f5c:	ea68      	l32i.n	a6, a10, 56
+40236f5c:	ea58      	l32i.n	a5, a10, 56
 40236f5e:	fe          	.byte 0xfe
 40236f5f:	3f          	.byte 0x3f
 
@@ -63646,10 +63651,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237198:	ff1456        	bnez	a4, 4023718d <espconn_pbuf_delete+0xd>
 4023719b:	f00d      	ret.n
 4023719d:	000000        	ill
-402371a0:	ea78      	l32i.n	a7, a10, 56
+402371a0:	ea68      	l32i.n	a6, a10, 56
 402371a2:	fe          	.byte 0xfe
 402371a3:	3f          	.byte 0x3f
-402371a4:	feea74        	excw
+402371a4:	feea64        	excw
 402371a7:	3f          	.byte 0x3f
 
 402371a8 <espconn_find_connection>:
@@ -63712,7 +63717,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237241:	2df8      	l32i.n	a15, a13, 8
 40237243:	f00d05        	call0	40227314 <chip_v6_set_chan+0x50>
 40237246:	fc0000        	excw
-40237249:	600011        	l32r	a1, 4020f24c <_lit4_end+0x108a50>
+40237249:	600011        	l32r	a1, 4020f24c <_lit4_end+0x108ab8>
 
 4023724c <espconn_connect>:
 4023724c:	d0c112        	addi	a1, a1, -48
@@ -63846,7 +63851,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023739b:	3108      	l32i.n	a0, a1, 12
 4023739d:	10c112        	addi	a1, a1, 16
 402373a0:	f00d      	ret.n
-402373a2:	d00000        	subx2	a0, a0, a0
+402373a2:	d80000        	excw
 402373a5:	fe88      	l32i.n	a8, a14, 60
 402373a7:	3f          	.byte 0x3f
 
@@ -63936,7 +63941,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237483:	000106        	j	4023748b <espconn_send+0xe3>
 40237486:	220000        	excw
 40237489:	08ffa0        	excw
-4023748c:	61c871        	l32r	a7, 4020fbac <_lit4_end+0x1093b0>
+4023748c:	61c871        	l32r	a7, 4020fbac <_lit4_end+0x109418>
 4023748f:	51d8      	l32i.n	a13, a1, 20
 40237491:	41e8      	l32i.n	a14, a1, 16
 40237493:	20c112        	addi	a1, a1, 32
@@ -64136,7 +64141,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237649:	f4a022        	movi	a2, 244
 4023764c:	f00d      	ret.n
 4023764e:	e80000        	excw
-40237651:	600011        	l32r	a1, 4020f654 <_lit4_end+0x108e58>
+40237651:	600011        	l32r	a1, 4020f654 <_lit4_end+0x108ec0>
 
 40237654 <espconn_tcp_get_max_retran>:
 40237654:	ffff21        	l32r	a2, 40237650 <espconn_tcp_set_max_con+0x20>
@@ -64160,7 +64165,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023767d:	f4a022        	movi	a2, 244
 40237680:	f00d      	ret.n
 40237682:	e40000        	extui	a0, a0, 0, 15
-40237685:	600011        	l32r	a1, 4020f688 <_lit4_end+0x108e8c>
+40237685:	600011        	l32r	a1, 4020f688 <_lit4_end+0x108ef4>
 
 40237688 <espconn_tcp_get_max_syn>:
 40237688:	ffff21        	l32r	a2, 40237684 <espconn_tcp_set_max_retran+0x20>
@@ -64307,7 +64312,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402377ae:	220000        	excw
 402377b1:	0df4a0        	excw
 402377b4:	0000f0        	excw
-402377b7:	ed6800        	excw
+402377b7:	ed5800        	excw
 402377ba:	fe          	.byte 0xfe
 402377bb:	3f          	.byte 0x3f
 
@@ -64527,11 +64532,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402379c7:	51d8      	l32i.n	a13, a1, 20
 402379c9:	20c112        	addi	a1, a1, 32
 402379cc:	f00d      	ret.n
-402379ce:	1c0000        	excw
+402379ce:	0c0000        	excw
 402379d1:	ee          	.byte 0xee
 402379d2:	fe          	.byte 0xfe
 402379d3:	3f          	.byte 0x3f
-402379d4:	feee30        	excw
+402379d4:	feee20        	excw
 402379d7:	3f          	.byte 0x3f
 
 402379d8 <espconn_get_packet_info>:
@@ -64838,7 +64843,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237cc2:	20c112        	addi	a1, a1, 32
 40237cc5:	f00d      	ret.n
 40237cc7:	c35000        	excw
-40237cca:	700000        	excw
+40237cca:	600000        	neg	a0, a0
 40237ccd:	feea      	add.n	a15, a14, a14
 40237ccf:	3f          	.byte 0x3f
 
@@ -64917,7 +64922,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237d7a:	000080        	ret
 40237d7d:	000000        	ill
 40237d80:	1488      	l32i.n	a8, a4, 4
-40237d82:	a44024        	excw
+40237d82:	8c4024        	excw
 40237d85:	fe89      	s32i.n	a8, a14, 60
 40237d87:	3f          	.byte 0x3f
 40237d88:	f0c112        	addi	a1, a1, -16
@@ -64946,7 +64951,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237dc4:	10c112        	addi	a1, a1, 16
 40237dc7:	f00d      	ret.n
 40237dc9:	000000        	ill
-40237dcc:	fe88d0        	excw
+40237dcc:	88d8      	l32i.n	a13, a8, 32
+40237dce:	fe          	.byte 0xfe
 40237dcf:	3f          	.byte 0x3f
 
 40237dd0 <ringbuf_new>:
@@ -65003,7 +65009,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237e38:	1239      	s32i.n	a3, a2, 4
 40237e3a:	f00d      	ret.n
 40237e3c:	14a8      	l32i.n	a10, a4, 4
-40237e3e:	d14024        	excw
+40237e3e:	b94024        	excw
 40237e41:	fe89      	s32i.n	a8, a14, 60
 40237e43:	3f          	.byte 0x3f
 
@@ -65114,11 +65120,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237f10:	1228      	l32i.n	a2, a2, 4
 40237f12:	f00d      	ret.n
 40237f14:	2414a0        	extui	a1, a10, 4, 3
-40237f17:	89c140        	excw
+40237f17:	89a940        	excw
 40237f1a:	fe          	.byte 0xfe
 40237f1b:	3f          	.byte 0x3f
-40237f1c:	106780        	and	a6, a7, a8
-40237f1f:	c11240        	mul16u	a1, a2, a4
+40237f1c:	6718      	l32i.n	a1, a7, 24
+40237f1e:	124010        	excw
 
 40237f20 <ringbuf_findchr>:
 40237f20:	c0c112        	addi	a1, a1, -64
@@ -65184,7 +65190,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40237faf:	40c112        	addi	a1, a1, 64
 40237fb2:	f00d      	ret.n
 40237fb4:	1498      	l32i.n	a9, a4, 4
-40237fb6:	b24024        	excw
+40237fb6:	9a4024        	excw
 40237fb9:	fe89      	s32i.n	a8, a14, 60
 40237fbb:	3f          	.byte 0x3f
 40237fbc:	241490        	extui	a1, a9, 4, 3
@@ -65222,7 +65228,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238002:	d0c036        	excw
 40238005:	ef          	.byte 0xef
 40238006:	b3e7c0        	movgez	a14, a7, a12
-40238009:	03ed01        	l32r	a0, 401f8fc0 <_lit4_end+0xf27c4>
+40238009:	03ed01        	l32r	a0, 401f8fc0 <_lit4_end+0xf282c>
 4023800c:	0138      	l32i.n	a3, a1, 0
 4023800e:	0e4d      	mov.n	a4, a14
 40238010:	2169      	s32i.n	a6, a1, 8
@@ -65264,7 +65270,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238067:	f00d      	ret.n
 40238069:	000000        	ill
 4023806c:	241480        	extui	a1, a8, 4, 3
-4023806f:	899040        	excw
+4023806f:	897840        	excw
 40238072:	fe          	.byte 0xfe
 40238073:	3f          	.byte 0x3f
 40238074:	1478      	l32i.n	a7, a4, 4
@@ -65340,7 +65346,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238117:	30c112        	addi	a1, a1, 48
 4023811a:	f00d      	ret.n
 4023811c:	241470        	extui	a1, a7, 4, 3
-4023811f:	897c40        	excw
+4023811f:	896440        	excw
 40238122:	fe          	.byte 0xfe
 40238123:	3f          	.byte 0x3f
 40238124:	1468      	l32i.n	a6, a4, 4
@@ -65527,7 +65533,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402382e1:	c2f0c1        	l32r	a12, 40228ea4 <tx_pwctrl_init+0x114>
 402382e4:	d20261        	l32r	a6, 4022caec <tx_pwctrl_cal+0x294>
 402382e7:	e90161        	l32r	a6, 402326ec <DefFreqCalTimerCB+0x31c>
-402382ea:	310901        	l32r	a0, 40204710 <_lit4_end+0xfdf14>
+402382ea:	310901        	l32r	a0, 40204710 <_lit4_end+0xfdf7c>
 402382ed:	02ed      	mov.n	a14, a2
 402382ef:	03cd      	mov.n	a12, a3
 402382f1:	032d      	mov.n	a2, a3
@@ -65588,7 +65594,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238377:	c11240        	mul16u	a1, a2, a4
 4023837a:	61c2f0        	xsr.eps2	a15
 4023837d:	61d202        	addmi	a0, a2, 0x6100
-40238380:	01e901        	l32r	a0, 401f8b24 <_lit4_end+0xf2328>
+40238380:	01e901        	l32r	a0, 401f8b24 <_lit4_end+0xf2390>
 40238383:	3109      	s32i.n	a0, a1, 12
 40238385:	02dd      	mov.n	a13, a2
 40238387:	03cd      	mov.n	a12, a3
@@ -65639,7 +65645,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402383f7:	10c112        	addi	a1, a1, 16
 402383fa:	f00d      	ret.n
 402383fc:	8258      	l32i.n	a5, a2, 32
-402383fe:	d04023        	excw
+402383fe:	d84023        	excw
 40238401:	fe88      	l32i.n	a8, a14, 60
 40238403:	3f          	.byte 0x3f
 40238404:	915c      	movi.n	a1, 89
@@ -65997,7 +66003,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023877c:	10c112        	addi	a1, a1, 16
 4023877f:	f00d      	ret.n
 40238781:	000000        	ill
-40238784:	eed8      	l32i.n	a13, a14, 56
+40238784:	eec8      	l32i.n	a12, a14, 56
 40238786:	fe          	.byte 0xfe
 40238787:	3f          	.byte 0x3f
 
@@ -66694,7 +66700,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238e48:	000106        	j	40238e50 <espconn_lock_recv+0x44>
 40238e4b:	220000        	excw
 40238e4e:	08f4a0        	excw
-40238e51:	21c831        	l32r	a3, 40201574 <_lit4_end+0xfad78>
+40238e51:	21c831        	l32r	a3, 40201574 <_lit4_end+0xfade0>
 40238e54:	10c112        	addi	a1, a1, 16
 40238e57:	f00d      	ret.n
 40238e59:	000000        	ill
@@ -66777,7 +66783,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238f13:	0000c0        	callx0	a0
 40238f16:	0005c6        	j	40238f31 <espconn_lock_recv+0x125>
 40238f19:	2f3200        	excw
-40238f1c:	1f4201        	l32r	a0, 40200c24 <_lit4_end+0xfa428>
+40238f1c:	1f4201        	l32r	a0, 40200c24 <_lit4_end+0xfa490>
 40238f1f:	2e2205        	call0	40267140 <_irom0_text_end+0x255a0>
 40238f22:	4519      	s32i.n	a1, a5, 16
 40238f24:	f0ff15        	excw
@@ -66875,7 +66881,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40238fff:	0000c0        	callx0	a0
 40239002:	0005c6        	j	4023901d <espconn_lock_recv+0x211>
 40239005:	2f3200        	excw
-40239008:	1f4201        	l32r	a0, 40200d10 <_lit4_end+0xfa514>
+40239008:	1f4201        	l32r	a0, 40200d10 <_lit4_end+0xfa57c>
 4023900b:	2e2205        	call0	4026722c <_irom0_text_end+0x2568c>
 4023900e:	8519      	s32i.n	a1, a5, 32
 40239010:	f0ff06        	j	40235410 <esf_buf_setup+0xc64>
@@ -67125,7 +67131,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239268:	000106        	j	40239270 <espconn_tcp_client+0xe0>
 4023926b:	f20000        	excw
 4023926e:	08ffa0        	excw
-40239271:	0f2db1        	l32r	a11, 401fcf28 <_lit4_end+0xf672c>
+40239271:	0f2db1        	l32r	a11, 401fcf28 <_lit4_end+0xf6794>
 40239274:	a1c8      	l32i.n	a12, a1, 40
 40239276:	91d8      	l32i.n	a13, a1, 36
 40239278:	81e8      	l32i.n	a14, a1, 32
@@ -67265,7 +67271,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402393c3:	20c112        	addi	a1, a1, 32
 402393c6:	f00d      	ret.n
 402393c8:	8a58      	l32i.n	a5, a10, 32
-402393ca:	444023        	excw
+402393ca:	344023        	excw
 402393cd:	ee          	.byte 0xee
 402393ce:	fe          	.byte 0xfe
 402393cf:	3f          	.byte 0x3f
@@ -67282,7 +67288,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402393e5:	3108      	l32i.n	a0, a1, 12
 402393e7:	10c112        	addi	a1, a1, 16
 402393ea:	f00d      	ret.n
-402393ec:	fe88d0        	excw
+402393ec:	88d8      	l32i.n	a13, a8, 32
+402393ee:	fe          	.byte 0xfe
 402393ef:	3f          	.byte 0x3f
 402393f0:	c0c112        	addi	a1, a1, -64
 402393f3:	e1c9      	s32i.n	a12, a1, 56
@@ -67372,7 +67379,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402394c4:	b1f8      	l32i.n	a15, a1, 44
 402394c6:	40c112        	addi	a1, a1, 64
 402394c9:	f00d      	ret.n
-402394cb:	8e0c00        	excw
+402394cb:	8dec00        	excw
 402394ce:	fe          	.byte 0xfe
 402394cf:	3f          	.byte 0x3f
 
@@ -67797,7 +67804,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402398e3:	000106        	j	402398eb <espconn_udp_server+0x67>
 402398e6:	220000        	excw
 402398e9:	08ffa0        	excw
-402398ec:	21c831        	l32r	a3, 4020200c <_lit4_end+0xfb810>
+402398ec:	21c831        	l32r	a3, 4020200c <_lit4_end+0xfb878>
 402398ef:	11d8      	l32i.n	a13, a1, 4
 402398f1:	01e8      	l32i.n	a14, a1, 0
 402398f3:	10c112        	addi	a1, a1, 16
@@ -67828,9 +67835,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239928:	742020        	extui	a2, a2, 0, 8
 4023992b:	10c112        	addi	a1, a1, 16
 4023992e:	f00d      	ret.n
-40239930:	feea80        	excw
+40239930:	feea70        	excw
 40239933:	3f          	.byte 0x3f
-40239934:	fe88d0        	excw
+40239934:	88d8      	l32i.n	a13, a8, 32
+40239936:	fe          	.byte 0xfe
 40239937:	3f          	.byte 0x3f
 40239938:	d0c112        	addi	a1, a1, -48
 4023993b:	81e9      	s32i.n	a14, a1, 32
@@ -67961,7 +67969,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239a70:	f00d      	ret.n
 40239a72:	120000        	excw
 40239a75:	c9e0c1        	l32r	a12, 4022c1f8 <txiq_cover+0x144>
-40239a78:	13c861        	l32r	a6, 401fe998 <_lit4_end+0xf819c>
+40239a78:	13c861        	l32r	a6, 401fe998 <_lit4_end+0xf8204>
 40239a7b:	51d9      	s32i.n	a13, a1, 20
 40239a7d:	41e9      	s32i.n	a14, a1, 16
 40239a7f:	31f9      	s32i.n	a15, a1, 12
@@ -68064,7 +68072,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239b68:	71f8      	l32i.n	a15, a1, 28
 40239b6a:	30c112        	addi	a1, a1, 48
 40239b6d:	f00d      	ret.n
-40239b6f:	ea9400        	excw
+40239b6f:	ea8400        	excw
 40239b72:	fe          	.byte 0xfe
 40239b73:	3f          	.byte 0x3f
 
@@ -68158,11 +68166,11 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239c3f:	000106        	j	40239c47 <etharp_find_addr+0x3f>
 40239c42:	220000        	excw
 40239c45:	08ffa0        	excw
-40239c48:	21c831        	l32r	a3, 40202368 <_lit4_end+0xfbb6c>
+40239c48:	21c831        	l32r	a3, 40202368 <_lit4_end+0xfbbd4>
 40239c4b:	11d8      	l32i.n	a13, a1, 4
 40239c4d:	10c112        	addi	a1, a1, 16
 40239c50:	f00d      	ret.n
-40239c52:	de0000        	excw
+40239c52:	c60000        	excw
 40239c55:	fe89      	s32i.n	a8, a14, 60
 40239c57:	3f          	.byte 0x3f
 
@@ -68296,7 +68304,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40239d89:	71f8      	l32i.n	a15, a1, 28
 40239d8b:	30c112        	addi	a1, a1, 48
 40239d8e:	f00d      	ret.n
-40239d90:	ea7c      	movi.n	a10, -2
+40239d90:	ea6c      	movi.n	a10, -18
 40239d92:	fe          	.byte 0xfe
 40239d93:	3f          	.byte 0x3f
 40239d94:	17e8      	l32i.n	a14, a7, 4
@@ -68748,7 +68756,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023a204:	f1f8      	l32i.n	a15, a1, 60
 4023a206:	50c112        	addi	a1, a1, 80
 4023a209:	f00d      	ret.n
-4023a20b:	eb7000        	excw
+4023a20b:	eb6000        	excw
 4023a20e:	fe          	.byte 0xfe
 4023a20f:	3f          	.byte 0x3f
 4023a210:	b0c112        	addi	a1, a1, -80
@@ -68839,10 +68847,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023a2f4:	f1f8      	l32i.n	a15, a1, 60
 4023a2f6:	50c112        	addi	a1, a1, 80
 4023a2f9:	f00d      	ret.n
-4023a2fb:	88d000        	excw
+4023a2fb:	88d800        	excw
 4023a2fe:	fe          	.byte 0xfe
 4023a2ff:	3f          	.byte 0x3f
-4023a300:	eb78      	l32i.n	a7, a11, 56
+4023a300:	eb68      	l32i.n	a6, a11, 56
 4023a302:	fe          	.byte 0xfe
 4023a303:	3f          	.byte 0x3f
 4023a304:	f0c112        	addi	a1, a1, -16
@@ -68905,10 +68913,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023a390:	10c112        	addi	a1, a1, 16
 4023a393:	f00d      	ret.n
 4023a395:	000000        	ill
-4023a398:	feeb74        	excw
+4023a398:	feeb64        	excw
 4023a39b:	3f          	.byte 0x3f
 4023a39c:	0000e0        	excw
-4023a39f:	00e001        	l32r	a0, 401fa720 <_lit4_end+0xf3f24>
+4023a39f:	00e001        	l32r	a0, 401fa720 <_lit4_end+0xf3f8c>
 4023a3a2:	310200        	srai	a0, a0, 18
 
 4023a3a4 <igmp_init>:
@@ -69469,16 +69477,16 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023a8dc:	10c112        	addi	a1, a1, 16
 4023a8df:	f00d      	ret.n
 4023a8e1:	000000        	ill
-4023a8e4:	feeec4        	excw
+4023a8e4:	feeeb4        	excw
 4023a8e7:	3f          	.byte 0x3f
-4023a8e8:	eebc      	beqz.n	a14, 4023a92a <ip_input+0x32>
+4023a8e8:	eeac      	beqz.n	a14, 4023a91a <ip_input+0x22>
 4023a8ea:	fe          	.byte 0xfe
 4023a8eb:	3f          	.byte 0x3f
 4023a8ec:	004400        	break	4, 0
-4023a8ef:	eec000        	excw
+4023a8ef:	eeb000        	excw
 4023a8f2:	fe          	.byte 0xfe
 4023a8f3:	3f          	.byte 0x3f
-4023a8f4:	eec8      	l32i.n	a12, a14, 56
+4023a8f4:	eeb8      	l32i.n	a11, a14, 56
 4023a8f6:	fe          	.byte 0xfe
 4023a8f7:	3f          	.byte 0x3f
 
@@ -69705,7 +69713,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ab51:	71f8      	l32i.n	a15, a1, 28
 4023ab53:	30c112        	addi	a1, a1, 48
 4023ab56:	f00d      	ret.n
-4023ab58:	eb7c      	movi.n	a11, -2
+4023ab58:	eb6c      	movi.n	a11, -18
 4023ab5a:	fe          	.byte 0xfe
 4023ab5b:	3f          	.byte 0x3f
 
@@ -70021,8 +70029,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ae71:	020c      	movi.n	a2, 0
 4023ae73:	f00d      	ret.n
 4023ae75:	000000        	ill
-4023ae78:	65ec      	bnez.n	a5, 4023aea2 <ipaddr_aton+0x26>
-4023ae7a:	124010        	excw
+4023ae78:	106584        	excw
+4023ae7b:	c11240        	mul16u	a1, a2, a4
 
 4023ae7c <ipaddr_aton>:
 4023ae7c:	b0c112        	addi	a1, a1, -80
@@ -70314,7 +70322,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023b150:	50c112        	addi	a1, a1, 80
 4023b153:	f00d      	ret.n
 4023b155:	000000        	ill
-4023b158:	7e          	.byte 0x7e
+4023b158:	6e          	.byte 0x6e
 4023b159:	feeb      	addi.n	a15, a14, 14
 4023b15b:	3f          	.byte 0x3f
 
@@ -70370,10 +70378,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023b1c5:	000446        	j	4023b1da <netif_set_ipaddr+0x32>
 4023b1c8:	224200        	excw
 4023b1cb:	2d3200        	excw
-4023b1ce:	22e201        	l32r	a0, 40203d58 <_lit4_end+0xfd55c>
+4023b1ce:	22e201        	l32r	a0, 40203d58 <_lit4_end+0xfd5c4>
 4023b1d1:	943703        	excw
 4023b1d4:	39c502        	addi	a0, a5, 57
-4023b1d7:	0e2d01        	l32r	a0, 401fea8c <_lit4_end+0xf8290>
+4023b1d7:	0e2d01        	l32r	a0, 401fea8c <_lit4_end+0xf82f8>
 4023b1da:	feb256        	bnez	a2, 4023b1c9 <netif_set_ipaddr+0x21>
 4023b1dd:	55da21        	l32r	a2, 40210948 <rijndaelKeySetupEnc+0x388>
 4023b1e0:	0238      	l32i.n	a3, a2, 0
@@ -70422,7 +70430,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023b23c:	10c112        	addi	a1, a1, 16
 4023b23f:	f00d      	ret.n
 4023b241:	000000        	ill
-4023b244:	8e          	.byte 0x8e
+4023b244:	7e          	.byte 0x7e
 4023b245:	feeb      	addi.n	a15, a14, 14
 4023b247:	3f          	.byte 0x3f
 
@@ -70706,7 +70714,8 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023b4d9:	045432        	s16i	a3, a4, 8
 4023b4dc:	020c      	movi.n	a2, 0
 4023b4de:	f00d      	ret.n
-4023b4e0:	fe88d0        	excw
+4023b4e0:	88d8      	l32i.n	a13, a8, 32
+4023b4e2:	fe          	.byte 0xfe
 4023b4e3:	3f          	.byte 0x3f
 
 4023b4e4 <pbuf_free>:
@@ -71309,7 +71318,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ba76:	e00000        	subx4	a0, a0, a0
 4023ba79:	57f4f0        	excw
 4023ba7c:	3f          	.byte 0x3f
-4023ba7d:	020cd1        	l32r	a13, 401fc2b0 <_lit4_end+0xf5ab4>
+4023ba7d:	020cd1        	l32r	a13, 401fc2b0 <_lit4_end+0xf5b1c>
 4023ba80:	0002c6        	j	4023ba8f <pbuf_memcmp+0x6b>
 4023ba83:	a52100        	extui	a2, a0, 17, 11
 4023ba86:	010654        	excw
@@ -71397,7 +71406,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023bb45:	51d8      	l32i.n	a13, a1, 20
 4023bb47:	20c112        	addi	a1, a1, 32
 4023bb4a:	f00d      	ret.n
-4023bb4c:	feeb90        	excw
+4023bb4c:	feeb80        	excw
 4023bb4f:	3f          	.byte 0x3f
 
 4023bb50 <raw_input>:
@@ -71558,7 +71567,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023bca4:	3108      	l32i.n	a0, a1, 12
 4023bca6:	10c112        	addi	a1, a1, 16
 4023bca9:	f00d      	ret.n
-4023bcab:	88d000        	excw
+4023bcab:	88d800        	excw
 4023bcae:	fe          	.byte 0xfe
 4023bcaf:	3f          	.byte 0x3f
 
@@ -72358,7 +72367,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023c43c:	20c112        	addi	a1, a1, 32
 4023c43f:	f00d      	ret.n
 4023c441:	000000        	ill
-4023c444:	feeb94        	excw
+4023c444:	feeb84        	excw
 4023c447:	3f          	.byte 0x3f
 
 4023c448 <tcp_tmr>:
@@ -72784,7 +72793,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023c84c:	20c112        	addi	a1, a1, 32
 4023c84f:	f00d      	ret.n
 4023c851:	000000        	ill
-4023c854:	eba8      	l32i.n	a10, a11, 56
+4023c854:	eb98      	l32i.n	a9, a11, 56
 4023c856:	fe          	.byte 0xfe
 4023c857:	3f          	.byte 0x3f
 4023c858:	e0c112        	addi	a1, a1, -32
@@ -72861,23 +72870,23 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023c919:	31f8      	l32i.n	a15, a1, 12
 4023c91b:	20c112        	addi	a1, a1, 32
 4023c91e:	f00d      	ret.n
-4023c920:	feeba0        	excw
+4023c920:	feeb90        	excw
 4023c923:	3f          	.byte 0x3f
-4023c924:	feeba4        	excw
+4023c924:	feeb94        	excw
 4023c927:	3f          	.byte 0x3f
-4023c928:	feebb0        	excw
+4023c928:	feeba0        	excw
 4023c92b:	3f          	.byte 0x3f
-4023c92c:	9e          	.byte 0x9e
+4023c92c:	8e          	.byte 0x8e
 4023c92d:	feeb      	addi.n	a15, a14, 14
 4023c92f:	3f          	.byte 0x3f
-4023c930:	feebb4        	excw
+4023c930:	feeba4        	excw
 4023c933:	3f          	.byte 0x3f
 4023c934:	ff          	.byte 0xff
 4023c935:	ffffc0        	excw
-4023c938:	eb98      	l32i.n	a9, a11, 56
+4023c938:	eb88      	l32i.n	a8, a11, 56
 4023c93a:	fe          	.byte 0xfe
 4023c93b:	3f          	.byte 0x3f
-4023c93c:	eb9c      	beqz.n	a11, 4023c95e <tcp_connect+0x212>
+4023c93c:	eb8c      	beqz.n	a11, 4023c94e <tcp_connect+0x202>
 4023c93e:	fe          	.byte 0xfe
 4023c93f:	3f          	.byte 0x3f
 4023c940:	d0c112        	addi	a1, a1, -48
@@ -73526,7 +73535,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023d032:	06b205        	call0	40243b54 <_irom0_text_end+0x1fb4>
 4023d035:	069204        	excw
 4023d038:	aa8006        	j	40227a3c <rtc_mem_backup+0xc>
-4023d03b:	066211        	l32r	a1, 401fe9c4 <_lit4_end+0xf81c8>
+4023d03b:	066211        	l32r	a1, 401fe9c4 <_lit4_end+0xf8230>
 4023d03e:	aab007        	bgeu	a0, a0, 4023cfec <tcp_connect+0x8a0>
 4023d041:	990020        	excw
 4023d044:	99a011        	l32r	a1, 402236c4 <wifi_station_disconnect+0x8c>
@@ -73725,16 +73734,17 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023d257:	f43030        	extui	a3, a3, 0, 16
 4023d25a:	ae3367        	bltu	a3, a6, 4023d20c <tcp_connect+0xac0>
 4023d25d:	f00d      	ret.n
-4023d25f:	ebac00        	excw
+4023d25f:	eb9c00        	excw
 4023d262:	fe          	.byte 0xfe
 4023d263:	3f          	.byte 0x3f
-4023d264:	eeec      	bnez.n	a14, 4023d296 <tcp_input+0x26>
+4023d264:	eedc      	bnez.n	a14, 4023d286 <tcp_input+0x16>
 4023d266:	fe          	.byte 0xfe
 4023d267:	3f          	.byte 0x3f
 4023d268:	85d8      	l32i.n	a13, a5, 32
 4023d26a:	fe          	.byte 0xfe
 4023d26b:	3f          	.byte 0x3f
-4023d26c:	fe88d0        	excw
+4023d26c:	88d8      	l32i.n	a13, a8, 32
+4023d26e:	fe          	.byte 0xfe
 4023d26f:	3f          	.byte 0x3f
 
 4023d270 <tcp_input>:
@@ -74619,7 +74629,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023dbbc:	b1f8      	l32i.n	a15, a1, 44
 4023dbbe:	40c112        	addi	a1, a1, 64
 4023dbc1:	f00d      	ret.n
-4023dbc3:	88d000        	excw
+4023dbc3:	88d800        	excw
 4023dbc6:	fe          	.byte 0xfe
 4023dbc7:	3f          	.byte 0x3f
 4023dbc8:	d0c112        	addi	a1, a1, -48
@@ -75023,7 +75033,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023dfd7:	210200        	srai	a0, a0, 2
 4023dfda:	21c213        	excw
 4023dfdd:	21d212        	addmi	a1, a2, 0x2100
-4023dfe0:	21e211        	l32r	a1, 40206768 <_lit4_end+0xfff6c>
+4023dfe0:	21e211        	l32r	a1, 40206768 <_lit4_end+0xfffd4>
 4023dfe3:	f1f810        	excw
 4023dfe6:	50c112        	addi	a1, a1, 80
 4023dfe9:	f00d      	ret.n
@@ -75840,7 +75850,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023e850:	2c5c32        	s16i	a3, a12, 88
 4023e853:	0001c6        	j	4023e85e <tcp_rexmit_fast+0x36>
 4023e856:	200000        	or	a0, a0, a0
-4023e859:	224121        	l32r	a2, 40207160 <_lit4_end+0x100964>
+4023e859:	224121        	l32r	a2, 40207160 <_lit4_end+0x1009cc>
 4023e85c:	2c5c      	movi.n	a12, 82
 4023e85e:	1e1c32        	l16ui	a3, a12, 60
 4023e861:	2c1c42        	l16ui	a4, a12, 88
@@ -76021,10 +76031,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ea14:	71f8      	l32i.n	a15, a1, 28
 4023ea16:	30c112        	addi	a1, a1, 48
 4023ea19:	f00d      	ret.n
-4023ea1b:	88d000        	excw
+4023ea1b:	88d800        	excw
 4023ea1e:	fe          	.byte 0xfe
 4023ea1f:	3f          	.byte 0x3f
-4023ea20:	feebd0        	excw
+4023ea20:	feebc0        	excw
 4023ea23:	3f          	.byte 0x3f
 
 4023ea24 <sys_timeout>:
@@ -76084,7 +76094,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023eaa3:	01e8      	l32i.n	a14, a1, 0
 4023eaa5:	10c112        	addi	a1, a1, 16
 4023eaa8:	f00d      	ret.n
-4023eaaa:	c80000        	excw
+4023eaaa:	b80000        	excw
 4023eaad:	feeb      	addi.n	a15, a14, 14
 4023eaaf:	3f          	.byte 0x3f
 4023eab0:	23eae4        	excw
@@ -76133,7 +76143,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023eb16:	f00d      	ret.n
 4023eb18:	23eb94        	excw
 4023eb1b:	062440        	excw
-4023eb1e:	cc6000        	excw
+4023eb1e:	bc6000        	excw
 4023eb21:	feeb      	addi.n	a15, a14, 14
 4023eb23:	3f          	.byte 0x3f
 
@@ -76179,7 +76189,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023eb8d:	10c112        	addi	a1, a1, 16
 4023eb90:	f00d      	ret.n
 4023eb92:	120000        	excw
-4023eb95:	09f0c1        	l32r	a12, 40201358 <_lit4_end+0xfab5c>
+4023eb95:	09f0c1        	l32r	a12, 40201358 <_lit4_end+0xfabc4>
 4023eb98:	fd8531        	l32r	a3, 4023e1ac <tcp_output+0x28>
 4023eb9b:	21fa      	add.n	a2, a1, a15
 4023eb9d:	4b18      	l32i.n	a1, a11, 16
@@ -76295,7 +76305,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ec9c:	ffa121        	l32r	a2, 4023eb20 <tcp_timer_needed+0x6c>
 4023ec9f:	0239      	s32i.n	a3, a2, 0
 4023eca1:	f00d      	ret.n
-4023eca3:	eef000        	excw
+4023eca3:	eee000        	excw
 4023eca6:	fe          	.byte 0xfe
 4023eca7:	3f          	.byte 0x3f
 
@@ -76367,7 +76377,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ed50:	0005c6        	j	4023ed6b <udp_input+0xc3>
 4023ed53:	935700        	movnez	a5, a7, a0
 4023ed56:	8819      	s32i.n	a1, a8, 32
-4023ed58:	182701        	l32r	a0, 40204df4 <_lit4_end+0xfe5f8>
+4023ed58:	182701        	l32r	a0, 40204df4 <_lit4_end+0xfe660>
 4023ed5b:	204602        	s8i	a0, a6, 32
 4023ed5e:	9e5800        	excw
 4023ed61:	07c516        	beqz	a5, 4023ede1 <udp_input+0x139>
@@ -76454,7 +76464,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ee31:	0008c0        	callx0	a8
 4023ee34:	0012c6        	j	4023ee83 <udp_input+0x1db>
 4023ee37:	218200        	srai	a8, a0, 2
-4023ee3a:	185601        	l32r	a0, 40204f94 <_lit4_end+0xfe798>
+4023ee3a:	185601        	l32r	a0, 40204f94 <_lit4_end+0xfe800>
 4023ee3d:	21ea      	add.n	a2, a1, a14
 4023ee3f:	eea9      	s32i.n	a10, a14, 56
 4023ee41:	f0a032        	movi	a3, 240
@@ -76476,7 +76486,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ee6c:	ff9c06        	j	4023ece0 <udp_input+0x38>
 4023ee6f:	15a200        	extui	a10, a0, 18, 2
 4023ee72:	880a      	add.n	a8, a8, a0
-4023ee74:	1a8701        	l32r	a0, 40205890 <_lit4_end+0xff094>
+4023ee74:	1a8701        	l32r	a0, 40205890 <_lit4_end+0xff0fc>
 4023ee77:	d70602        	l8ui	a0, a6, 215
 4023ee7a:	ff          	.byte 0xff
 4023ee7b:	ffcf06        	j	4023edbb <udp_input+0x113>
@@ -76772,7 +76782,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f130:	7239      	s32i.n	a3, a2, 28
 4023f132:	8249      	s32i.n	a4, a2, 32
 4023f134:	f00d      	ret.n
-4023f136:	d00000        	subx2	a0, a0, a0
+4023f136:	d80000        	excw
 4023f139:	fe88      	l32i.n	a8, a14, 60
 4023f13b:	3f          	.byte 0x3f
 
@@ -76858,7 +76868,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f1fb:	032200        	excw
 4023f1fe:	033206        	j	4023feca <system_partition_get_item+0x5ee>
 4023f201:	228007        	bany	a0, a0, 4023f227 <icmp_input+0x73>
-4023f204:	223011        	l32r	a1, 40207ac4 <_lit4_end+0x1012c8>
+4023f204:	223011        	l32r	a1, 40207ac4 <_lit4_end+0x101330>
 4023f207:	421620        	excw
 4023f20a:	414813        	excw
 4023f20d:	181432        	l16ui	a3, a4, 48
@@ -76949,7 +76959,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f2f7:	303033        	excw
 4023f2fa:	4232f4        	excw
 4023f2fd:	383002        	excw
-4023f300:	423241        	l32r	a4, 4020fbc8 <_lit4_end+0x1093cc>
+4023f300:	423241        	l32r	a4, 4020fbc8 <_lit4_end+0x109434>
 4023f303:	af2203        	excw
 4023f306:	4d2280        	excw
 4023f309:	0c08      	l32i.n	a0, a12, 0
@@ -77123,7 +77133,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f494:	20c112        	addi	a1, a1, 32
 4023f497:	f00d      	ret.n
 4023f499:	000000        	ill
-4023f49c:	e5ac      	beqz.n	a5, 4023f4ce <icmp_dest_unreach+0x17a>
+4023f49c:	e58c      	beqz.n	a5, 4023f4ae <icmp_dest_unreach+0x15a>
 4023f49e:	fe          	.byte 0xfe
 4023f49f:	3f          	.byte 0x3f
 4023f4a0:	081000        	excw
@@ -77195,7 +77205,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f54e:	204024        	excw
 4023f551:	241a      	add.n	a2, a4, a1
 4023f553:	300040        	xor	a0, a0, a4
-4023f556:	200000        	or	a0, a0, a0
+4023f556:	000000        	ill
 4023f559:	fe8c      	beqz.n	a14, 4023f56c <icmp_dest_unreach+0x218>
 4023f55b:	3f          	.byte 0x3f
 4023f55c:	241a30        	extui	a1, a3, 10, 3
@@ -77596,7 +77606,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f952:	4a4e52        	s8i	a5, a14, 74
 4023f955:	384044        	excw
 4023f958:	010000        	slli	a0, a0, 32
-4023f95b:	030201        	l32r	a0, 40200564 <_lit4_end+0xf9d68>
+4023f95b:	030201        	l32r	a0, 40200564 <_lit4_end+0xf9dd0>
 4023f95e:	010504        	excw
 4023f961:	000000        	ill
 4023f964:	020000        	excw
@@ -77619,7 +77629,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023f9c6:	534520        	excw
 4023f9c9:	323850        	excw
 4023f9cc:	213636        	excw
-4023f9cf:	0a2121        	l32r	a2, 40202254 <_lit4_end+0xfba58>
+4023f9cf:	0a2121        	l32r	a2, 40202254 <_lit4_end+0xfbac0>
 	...
 4023f9de:	650000        	extui	a0, a0, 16, 7
 4023f9e1:	706d      	excw
@@ -77931,7 +77941,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023fd33:	6c6163        	excw
 4023fd36:	305b      	addi.n	a3, a0, 5
 4023fd38:	205d      	excw
-4023fd3a:	303d21        	l32r	a2, 4020be30 <_lit4_end+0x105634>
+4023fd3a:	303d21        	l32r	a2, 4020be30 <_lit4_end+0x10569c>
 4023fd3d:	3078      	l32i.n	a7, a0, 12
 4023fd3f:	692c35        	excw
 4023fd42:	302073        	excw
@@ -77991,7 +78001,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023fdec:	203232        	excw
 4023fdef:	313032        	excw
 4023fdf2:	2038      	l32i.n	a3, a0, 8
-4023fdf4:	3a3331        	l32r	a3, 4020e6c0 <_lit4_end+0x107ec4>
+4023fdf4:	3a3331        	l32r	a3, 4020e6c0 <_lit4_end+0x107f2c>
 4023fdf7:	3a3035        	excw
 4023fdfa:	0a3530        	excw
 4023fdfd:	000000        	ill
@@ -78019,7 +78029,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023fe3d:	766173        	excw
 4023fe40:	206465        	excw
 4023fe43:	726170        	excw
-4023fe46:	216d61        	l32r	a6, 402083fc <_lit4_end+0x101c00>
+4023fe46:	216d61        	l32r	a6, 402083fc <_lit4_end+0x101c68>
 4023fe49:	000a      	add.n	a0, a0, a0
 4023fe4b:	000000        	ill
 4023fe4e:	6e0000        	excw
@@ -78126,7 +78136,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 4023ff6c:	000000        	ill
 4023ff6f:	697400        	excw
 4023ff72:	656d      	excw
-4023ff74:	253a31        	l32r	a3, 4020945c <_lit4_end+0x102c60>
+4023ff74:	253a31        	l32r	a3, 4020945c <_lit4_end+0x102cc8>
 4023ff77:	583830        	excw
 4023ff7a:	000a      	add.n	a0, a0, a0
 4023ff7c:	000000        	ill
@@ -78503,7 +78513,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40240b70:	6e          	.byte 0x6e
 40240b71:	6f          	.byte 0x6f
 40240b72:	4d4954        	excw
-40240b75:	0a2121        	l32r	a2, 402033fc <_lit4_end+0xfcc00>
+40240b75:	0a2121        	l32r	a2, 402033fc <_lit4_end+0xfcc68>
 	...
 40240b80:	696c      	movi.n	a9, -26
 40240b82:	5f7473        	excw
@@ -78627,7 +78637,7 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 40240ce9:	253a      	add.n	a2, a5, a3
 40240ceb:	000a64        	excw
 40240cee:	6d0000        	excw
-40240cf1:	207061        	l32r	a6, 40208eb4 <_lit4_end+0x1026b8>
+40240cf1:	207061        	l32r	a6, 40208eb4 <_lit4_end+0x102720>
 40240cf4:	696166        	bnei	a1, 6, 40240d61 <chip_v6_unset_chanfreq+0x395>
 40240cf7:	0a6c      	movi.n	a10, -32
 40240cf9:	000000        	ill
@@ -79054,10 +79064,10 @@ uart_init_2(UartBautRate uart0_br, UartBautRate uart1_br)
 402417e8 <memp_sizes>:
 402417e8:	00001c 002400 b00000 000000 000024 001400     ....$.......$...
 402417f8:	000014 000800 140000 000000 000010 001400     ................
-40241808:	000014 060000 dc0000                          ........
+40241808:	000014 060000 cc0000                          ........
 
 40241810 <tcp_pcb_lists>:
-40241810:	feeedc eee43f d43ffe 3ffeee feeee8 06033f     ...?...?...?...?
+40241810:	feeecc eed43f c43ffe 3ffeee feeed8 06033f     ...?...?...?...?
 
 40241820 <tcp_persist_backoff>:
 40241820:	0c0603 603018 020178                          ....0`x
@@ -79162,7 +79172,7 @@ Disassembly of section .text:
 40100070:	004140        	break	1, 4
 40100073:	fffe46        	j	40100070 <_DoubleExceptionVector>
 	...
-4010008e:	a00000        	addx4	a0, a0, a0
+4010008e:	800000        	add	a0, a0, a0
 40100091:	fe8a      	add.n	a15, a14, a8
 40100093:	3f          	.byte 0x3f
 40100094:	fe8000        	excw
@@ -79315,7 +79325,7 @@ Disassembly of section .text:
 401001f2:	f00d      	ret.n
 401001f4:	effe00        	excw
 401001f7:	3f          	.byte 0x3f
-401001f8:	fe8be0        	excw
+401001f8:	fe8bc0        	excw
 401001fb:	3f          	.byte 0x3f
 
 401001fc <NmiTimSetFunc>:
@@ -79354,7 +79364,7 @@ Disassembly of section .text:
 4010024c:	138c      	beqz.n	a3, 40100251 <NMI_Handler+0x31>
 4010024e:	0003c0        	callx0	a3
 40100251:	08a022        	movi	a2, 8
-40100254:	065205        	call0	40106778 <xthal_set_intclear>
+40100254:	064b85        	call0	40106710 <xthal_set_intclear>
 40100257:	feaf62        	movi	a6, -2
 4010025a:	fff051        	l32r	a5, 4010021c <NmiTimSetFunc+0x20>
 4010025d:	0020c0        	memw
@@ -79668,7 +79678,7 @@ Disassembly of section .text:
 40100576:	020c      	movi.n	a2, 0
 40100578:	f00d      	ret.n
 4010057a:	400000        	ssr	a0
-4010057d:	401005        	call0	40140680 <_etext+0x39e84>
+4010057d:	401005        	call0	40140680 <_etext+0x39eec>
 40100580:	080000        	excw
 40100583:	000000        	ill
 40100586:	000020        	excw
@@ -79679,7 +79689,7 @@ Disassembly of section .text:
 40100590:	55aa      	add.n	a5, a5, a10
 40100592:	55aa      	add.n	a5, a5, a10
 40100594:	55aa55        	excw
-40100597:	d0aa      	add.n	a13, a0, a10
+40100597:	b0aa      	add.n	a11, a0, a10
 40100599:	fed8      	l32i.n	a13, a14, 60
 4010059b:	3f          	.byte 0x3f
 4010059c:	23fe50        	excw
@@ -79711,7 +79721,7 @@ Disassembly of section .text:
 401005e4:	0020c0        	memw
 401005e7:	462dc2        	l32i	a12, a13, 0x118
 401005ea:	25c0c0        	extui	a12, a12, 16, 3
-401005ed:	021e85        	call0	401027d8 <phy_get_bb_evm>
+401005ed:	021805        	call0	40102770 <phy_get_bb_evm>
 401005f0:	ffe321        	l32r	a2, 4010057c <wdt_feed+0x144>
 401005f3:	ffef01        	l32r	a0, 401005b0 <wdt_feed+0x178>
 401005f6:	0000c0        	callx0	a0
@@ -79908,7 +79918,7 @@ Disassembly of section .text:
 40100807:	0000c0        	callx0	a0
 4010080a:	ffd8c6        	j	40100771 <wdt_feed+0x339>
 4010080d:	000000        	ill
-40100810:	fe8c30        	excw
+40100810:	fe8c10        	excw
 40100813:	3f          	.byte 0x3f
 40100814:	23fe60        	excw
 40100817:	fe7040        	excw
@@ -80287,7 +80297,7 @@ Disassembly of section .text:
 40100bd4:	ffd486        	j	40100b2a <ets_timer_arm_new+0xba>
 40100bd7:	0c0c      	movi.n	a12, 0
 40100bd9:	ffd346        	j	40100b2a <ets_timer_arm_new+0xba>
-40100bdc:	fe8c60        	excw
+40100bdc:	fe8c40        	excw
 40100bdf:	3f          	.byte 0x3f
 
 40100be0 <prvInsertBlockIntoUsedList>:
@@ -80389,21 +80399,21 @@ Disassembly of section .text:
 
 40100cc0 <xPortWantedSizeAlign>:
 40100cc0:	f00d      	ret.n
-40100cc2:	c00000        	sub	a0, a0, a0
+40100cc2:	a00000        	addx4	a0, a0, a0
 40100cc5:	fe8c      	beqz.n	a14, 40100cd8 <xPortWantedSizeAlign+0x18>
 40100cc7:	3f          	.byte 0x3f
-40100cc8:	eef8      	l32i.n	a15, a14, 56
+40100cc8:	eee8      	l32i.n	a14, a14, 56
 40100cca:	fe          	.byte 0xfe
 40100ccb:	3f          	.byte 0x3f
 40100ccc:	000000        	ill
 40100ccf:	c00040        	sub	a0, a0, a4
-40100cd2:	fc4010        	excw
+40100cd2:	944010        	extui	a4, a1, 0, 10
 40100cd5:	401067        	beq	a0, a6, 40100d19 <pvPortMalloc+0x31>
 40100cd8:	fe8744        	excw
 40100cdb:	3f          	.byte 0x3f
 40100cdc:	fe8510        	excw
 40100cdf:	3f          	.byte 0x3f
-40100ce0:	fe8c80        	excw
+40100ce0:	fe8c60        	excw
 40100ce3:	3f          	.byte 0x3f
 40100ce4:	fe8760        	excw
 40100ce7:	3f          	.byte 0x3f
@@ -80943,7 +80953,7 @@ Disassembly of section .text:
 401011a1:	ff          	.byte 0xff
 401011a2:	000000        	ill
 401011a5:	ffff00        	excw
-401011a8:	fe8cc4        	excw
+401011a8:	fe8ca4        	excw
 401011ab:	3f          	.byte 0x3f
 
 401011ac <load_non_32_wide_handler>:
@@ -81240,7 +81250,7 @@ Disassembly of section .text:
 401014a3:	7108      	l32i.n	a0, a1, 28
 401014a5:	30c112        	addi	a1, a1, 48
 401014a8:	f00d      	ret.n
-401014aa:	380000        	excw
+401014aa:	180000        	excw
 401014ad:	9e          	.byte 0x9e
 401014ae:	fe          	.byte 0xfe
 401014af:	3f          	.byte 0x3f
@@ -81893,7 +81903,7 @@ Disassembly of section .text:
 40101b01:	103030        	and	a3, a0, a3
 40101b04:	ffdd85        	call0	401018e0 <flash_gd25q32c_write_status>
 40101b07:	fff646        	j	40101ae4 <spi_flash_check_wr_protect+0x6c>
-40101b0a:	d20000        	excw
+40101b0a:	b20000        	excw
 40101b0d:	fe8d      	excw
 40101b0f:	3f          	.byte 0x3f
 40101b10:	1658      	l32i.n	a5, a6, 4
@@ -81987,7 +81997,7 @@ Disassembly of section .text:
 40101bdf:	1108      	l32i.n	a0, a1, 4
 40101be1:	10c112        	addi	a1, a1, 16
 40101be4:	f00d      	ret.n
-40101be6:	340000        	extui	a0, a0, 0, 4
+40101be6:	140000        	extui	a0, a0, 0, 2
 40101be9:	8f          	.byte 0x8f
 40101bea:	fe          	.byte 0xfe
 40101beb:	3f          	.byte 0x3f
@@ -82193,7 +82203,7 @@ Disassembly of section .text:
 40101de8:	240520        	extui	a0, a2, 5, 3
 40101deb:	057040        	extui	a7, a4, 16, 1
 40101dee:	404024        	excw
-40101df1:	402405        	call0	40142034 <_etext+0x3b838>
+40101df1:	402405        	call0	40142034 <_etext+0x3b8a0>
 40101df4:	240550        	extui	a0, a5, 5, 3
 40101df7:	a02240        	addx4	a2, a2, a4
 
@@ -82481,11 +82491,11 @@ void uart_rx_intr_disable(uint8 uart_no)
 4010203b:	0239      	s32i.n	a3, a2, 0
 4010203d:	f00d      	ret.n
 4010203f:	000800        	excw
-40102042:	bc6000        	excw
+40102042:	c46000        	extui	a6, a0, 0, 13
 40102045:	fe88      	l32i.n	a8, a14, 60
 40102047:	3f          	.byte 0x3f
 40102048:	000010        	excw
-4010204b:	88c660        	excw
+4010204b:	88ce60        	excw
 4010204e:	fe          	.byte 0xfe
 4010204f:	3f          	.byte 0x3f
 
@@ -82670,7267 +82680,7147 @@ void uart_rx_intr_enable(uint8 uart_no)
 40102134:	0020c0        	memw
 40102137:	0239      	s32i.n	a3, a2, 0
 40102139:	f00d      	ret.n
-4010213b:	ec4000        	excw
+4010213b:	e5aa00        	extui	a10, a0, 26, 15
 4010213e:	fe          	.byte 0xfe
 4010213f:	3f          	.byte 0x3f
-40102140:	fe88d1        	l32r	a13, 40101b60 <spi_flash_enable_qmode>
+40102140:	88d9      	s32i.n	a13, a8, 32
+40102142:	fe          	.byte 0xfe
 40102143:	3f          	.byte 0x3f
-40102144:	88eb      	addi.n	a8, a8, 14
-40102146:	fe          	.byte 0xfe
+40102144:	fe88e6        	bgei	a8, 8, 40102146 <uart_rx_intr_enable+0x2e>
 40102147:	3f          	.byte 0x3f
-40102148:	88fc      	bnez.n	a8, 40102184 <DealWithMessagePacketState+0xc>
+40102148:	84e8      	l32i.n	a14, a4, 32
 4010214a:	fe          	.byte 0xfe
 4010214b:	3f          	.byte 0x3f
-4010214c:	8909      	s32i.n	a0, a9, 32
-4010214e:	fe          	.byte 0xfe
+4010214c:	feec30        	excw
 4010214f:	3f          	.byte 0x3f
-40102150:	84e8      	l32i.n	a14, a4, 32
-40102152:	fe          	.byte 0xfe
+40102150:	fe88f3        	excw
 40102153:	3f          	.byte 0x3f
-40102154:	fe8916        	beqz	a9, 40102140 <uart_rx_intr_enable+0x28>
+40102154:	890d      	excw
+40102156:	fe          	.byte 0xfe
 40102157:	3f          	.byte 0x3f
-40102158:	e5cc      	bnez.n	a5, 4010216a <uart_rx_intr_enable+0x52>
-4010215a:	fe          	.byte 0xfe
-4010215b:	3f          	.byte 0x3f
-4010215c:	fe8927        	bany	a9, a2, 4010215e <uart_rx_intr_enable+0x46>
+40102158:	0838      	l32i.n	a3, a8, 0
+4010215a:	1a6000        	excw
+4010215d:	fe89      	s32i.n	a8, a14, 60
 4010215f:	3f          	.byte 0x3f
-40102160:	0838      	l32i.n	a3, a8, 0
-40102162:	346000        	extui	a6, a0, 0, 4
-40102165:	fe89      	s32i.n	a8, a14, 60
+40102160:	fe8925        	excw
+40102163:	3f          	.byte 0x3f
+40102164:	fe8930        	excw
 40102167:	3f          	.byte 0x3f
-40102168:	3f          	.byte 0x3f
-40102169:	fe89      	s32i.n	a8, a14, 60
-4010216b:	3f          	.byte 0x3f
-4010216c:	894a      	add.n	a8, a9, a4
-4010216e:	fe          	.byte 0xfe
-4010216f:	3f          	.byte 0x3f
-40102170:	77bc      	beqz.n	a7, 401021ab <DealWithMessagePacketState+0x33>
-40102172:	a84023        	excw
-40102175:	402373        	excw
+40102168:	77bc      	beqz.n	a7, 401021a3 <DealWithMessagePacketState+0x33>
+4010216a:	a84023        	excw
+4010216d:	402373        	excw
 
-40102178 <DealWithMessagePacketState>:
+40102170 <DealWithMessagePacketState>:
 
 
 uint16 deviceNumber=15;
 
 bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
 {
-40102178:	c0c112        	addi	a1, a1, -64
-4010217b:	0d61d2        	s32i	a13, a1, 52
-	uint16 receiver;	//接收者ID
+40102170:	e0c112        	addi	a1, a1, -32
+40102173:	0661c2        	s32i	a12, a1, 24
+	enum MessageCtrFunction messageCtrFunction;
+	static union MessagePacketUnion messagePacketUnion;
+	os_memcpy(messagePacketUnion.p_buff, p_buffer, 20);
+40102176:	fff1c1        	l32r	a12, 4010213c <uart_rx_intr_enable+0x24>
+40102179:	441c      	movi.n	a4, 20
+4010217b:	0c2d      	mov.n	a2, a12
 
-	//将发送者的IP地址和端口变为UDP接收IP地址和地址
+
+uint16 deviceNumber=15;
+
+bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
+{
+4010217d:	7109      	s32i.n	a0, a1, 28
+4010217f:	51d9      	s32i.n	a13, a1, 20
+40102181:	0461e2        	s32i	a14, a1, 16
+	enum MessageCtrFunction messageCtrFunction;
+	static union MessagePacketUnion messagePacketUnion;
+	os_memcpy(messagePacketUnion.p_buff, p_buffer, 20);
+40102184:	f90f01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+40102187:	0000c0        	callx0	a0
+
+	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
+4010218a:	001c32        	l16ui	a3, a12, 0
+4010218d:	ffec21        	l32r	a2, 40102140 <uart_rx_intr_enable+0x28>
+40102190:	ff1005        	call0	40101294 <os_printf_plus>
+	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
+40102193:	011c32        	l16ui	a3, a12, 2
+40102196:	ffeb21        	l32r	a2, 40102144 <uart_rx_intr_enable+0x2c>
+40102199:	ff0f85        	call0	40101294 <os_printf_plus>
+
+	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;
+4010219c:	001c22        	l16ui	a2, a12, 0
+	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
 	extern  struct espconn ptrespconn;
-	remot_info *Mpremot=0;
+	remot_info *Mpremot=NULL;
 	if (espconn_get_connection_info(&ptrespconn, &Mpremot, 0) != 0)
-4010217e:	ffefd1        	l32r	a13, 4010213c <uart_rx_intr_enable+0x24>
+4010219f:	ffebd1        	l32r	a13, 4010214c <uart_rx_intr_enable+0x34>
+	os_memcpy(messagePacketUnion.p_buff, p_buffer, 20);
 
+	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
+	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
 
-uint16 deviceNumber=15;
+	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;
+401021a2:	015c22        	s16i	a2, a12, 2
+	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+401021a5:	ffe821        	l32r	a2, 40102148 <uart_rx_intr_enable+0x30>
 
-bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
-{
-40102181:	0e61c2        	s32i	a12, a1, 56
-	uint16 sender;	//发送者ID
-	uint16 receiver;	//接收者ID
-
-	//将发送者的IP地址和端口变为UDP接收IP地址和地址
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
 	extern  struct espconn ptrespconn;
-	remot_info *Mpremot=0;
-40102184:	00a042        	movi	a4, 0
+	remot_info *Mpremot=NULL;
+401021a8:	040c      	movi.n	a4, 0
 
+	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
+	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
 
-uint16 deviceNumber=15;
+	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;
+	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+401021aa:	001222        	l16ui	a2, a2, 0
 
-bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
-{
-40102187:	03cd      	mov.n	a12, a3
-	uint16 receiver;	//接收者ID
-
-	//将发送者的IP地址和端口变为UDP接收IP地址和地址
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
 	extern  struct espconn ptrespconn;
-	remot_info *Mpremot=0;
+	remot_info *Mpremot=NULL;
 	if (espconn_get_connection_info(&ptrespconn, &Mpremot, 0) != 0)
-40102189:	0d2d      	mov.n	a2, a13
-4010218b:	18c132        	addi	a3, a1, 24
+401021ad:	013d      	mov.n	a3, a1
 
+	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
+	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
 
-uint16 deviceNumber=15;
+	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;
+	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+401021af:	005c22        	s16i	a2, a12, 0
 
-bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
-{
-4010218e:	f109      	s32i.n	a0, a1, 60
-40102190:	c1e9      	s32i.n	a14, a1, 48
-40102192:	b1f9      	s32i.n	a15, a1, 44
-	uint16 sender;	//发送者ID
-	uint16 receiver;	//接收者ID
-
-	//将发送者的IP地址和端口变为UDP接收IP地址和地址
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
 	extern  struct espconn ptrespconn;
-	remot_info *Mpremot=0;
-40102194:	6149      	s32i.n	a4, a1, 24
+	remot_info *Mpremot=NULL;
 	if (espconn_get_connection_info(&ptrespconn, &Mpremot, 0) != 0)
-40102196:	fff601        	l32r	a0, 40102170 <uart_rx_intr_enable+0x58>
-40102199:	0000c0        	callx0	a0
-4010219c:	742020        	extui	a2, a2, 0, 8
-4010219f:	009216        	beqz	a2, 401021ac <DealWithMessagePacketState+0x34>
+401021b2:	0d2d      	mov.n	a2, a13
+	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
+
+	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;
+	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
+401021b4:	040ce2        	l8ui	a14, a12, 4
+	extern  struct espconn ptrespconn;
+	remot_info *Mpremot=NULL;
+401021b7:	0149      	s32i.n	a4, a1, 0
+	if (espconn_get_connection_info(&ptrespconn, &Mpremot, 0) != 0)
+401021b9:	ffeb01        	l32r	a0, 40102168 <uart_rx_intr_enable+0x50>
+401021bc:	0000c0        	callx0	a0
+401021bf:	742020        	extui	a2, a2, 0, 8
+401021c2:	728c      	beqz.n	a2, 401021cd <DealWithMessagePacketState+0x5d>
 			os_printf("get_connection_info fail\n");
-401021a2:	ffe721        	l32r	a2, 40102140 <uart_rx_intr_enable+0x28>
-401021a5:	ff0ec5        	call0	40101294 <os_printf_plus>
-401021a8:	000606        	j	401021c4 <DealWithMessagePacketState+0x4c>
-401021ab:	2d2800        	excw
+401021c4:	ffe321        	l32r	a2, 40102150 <uart_rx_intr_enable+0x38>
+401021c7:	ff0cc5        	call0	40101294 <os_printf_plus>
+401021ca:	0005c6        	j	401021e5 <DealWithMessagePacketState+0x75>
 	else{
 		os_memcpy(ptrespconn.proto.udp->remote_ip, Mpremot->remote_ip, 4);
-401021ae:	6138      	l32i.n	a3, a1, 24
-401021b0:	22cb      	addi.n	a2, a2, 12
-401021b2:	338b      	addi.n	a3, a3, 8
-401021b4:	440c      	movi.n	a4, 4
-401021b6:	f90201        	l32r	a0, 401005c0 <wdt_feed+0x188>
-401021b9:	0000c0        	callx0	a0
+401021cd:	2d28      	l32i.n	a2, a13, 8
+401021cf:	0138      	l32i.n	a3, a1, 0
+401021d1:	22cb      	addi.n	a2, a2, 12
+401021d3:	338b      	addi.n	a3, a3, 8
+401021d5:	440c      	movi.n	a4, 4
+401021d7:	f8fa01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+401021da:	0000c0        	callx0	a0
 		ptrespconn.proto.udp->remote_port = Mpremot->remote_port;
-401021bc:	6138      	l32i.n	a3, a1, 24
-401021be:	2d28      	l32i.n	a2, a13, 8
-401021c0:	1338      	l32i.n	a3, a3, 4
-401021c2:	0239      	s32i.n	a3, a2, 0
+401021dd:	0138      	l32i.n	a3, a1, 0
+401021df:	2d28      	l32i.n	a2, a13, 8
+401021e1:	1338      	l32i.n	a3, a3, 4
+401021e3:	0239      	s32i.n	a3, a2, 0
 	}
 
-	switch(messagePacketState)
-	{
-	case FIRST_BYTE:
-		if(*p_buffer!=0xBB)
-401021c4:	000c32        	l8ui	a3, a12, 0
-401021c7:	bba022        	movi	a2, 187
-401021ca:	071327        	beq	a3, a2, 401021d5 <DealWithMessagePacketState+0x5d>
+	switch(messageCtrFunction)
+401021e5:	051e26        	beqi	a14, 1, 401021ee <DealWithMessagePacketState+0x7e>
+401021e8:	1c2e26        	beqi	a14, 2, 40102208 <DealWithMessagePacketState+0x98>
+401021eb:	002946        	j	40102294 <DealWithMessagePacketState+0x124>
+		//服务器存在
+		break;
+	case FIND_DEVICE:
+		//恢复心跳包给查找者
+
+		messagePacketUnion.messagePacket.function_word=0;	//心跳包
+401021ee:	020c      	movi.n	a2, 0
+401021f0:	044c22        	s8i	a2, a12, 4
+
+		espconn_send(&ptrespconn,messagePacketUnion.p_buff,6);	//发送心跳包
+401021f3:	0c3d      	mov.n	a3, a12
+401021f5:	0d2d      	mov.n	a2, a13
+401021f7:	06a042        	movi	a4, 6
+401021fa:	ffdc01        	l32r	a0, 4010216c <uart_rx_intr_enable+0x54>
+401021fd:	0000c0        	callx0	a0
+		os_printf("发送心跳包\r\n");
+40102200:	ffd521        	l32r	a2, 40102154 <uart_rx_intr_enable+0x3c>
+40102203:	001bc6        	j	40102276 <DealWithMessagePacketState+0x106>
+40102206:	210000        	srai	a0, a0, 0
+		break;
+	case LIGHT:
+		PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2);	//选择引脚功能
+40102209:	32ffd4        	excw
+4010220c:	ae          	.byte 0xae
+4010220d:	cf          	.byte 0xcf
+4010220e:	0020c0        	memw
+40102211:	0248      	l32i.n	a4, a2, 0
+40102213:	103430        	and	a3, a4, a3
+40102216:	0020c0        	memw
+40102219:	0239      	s32i.n	a3, a2, 0
+		PIN_PULLUP_DIS(PERIPHS_IO_MUX_GPIO2_U);	//屏蔽GPIO2 上拉
+4010221b:	0020c0        	memw
+4010221e:	0248      	l32i.n	a4, a2, 0
+40102220:	7faf32        	movi	a3, -129
+40102223:	103430        	and	a3, a4, a3
+40102226:	0020c0        	memw
+40102229:	0239      	s32i.n	a3, a2, 0
+
+		uint8 luminance=messagePacketUnion.messagePacket.data[0];	//亮度
+4010222b:	050c52        	l8ui	a5, a12, 5
+		//const uint32 one_duty=1/PWM_PERIOD * 1000 /45/200;
+		if(luminance==255)	//全开
+4010222e:	ffa022        	movi	a2, 255
+40102231:	219527        	bne	a5, a2, 40102256 <DealWithMessagePacketState+0xe6>
 		{
-			os_printf("不是本系统的包\r\n");
-401021cd:	ffdd21        	l32r	a2, 40102144 <uart_rx_intr_enable+0x2c>
-401021d0:	000f46        	j	40102211 <DealWithMessagePacketState+0x99>
-401021d3:	e20000        	excw
-			return FALSE;	//不是本系统范围内的包
+			GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 1);	//设置为高电平
+40102234:	420c      	movi.n	a2, 4
+40102236:	030c      	movi.n	a3, 0
+40102238:	024d      	mov.n	a4, a2
+4010223a:	035d      	mov.n	a5, a3
+4010223c:	fc6f01        	l32r	a0, 401013f8 <system_restart_core+0x3c>
+4010223f:	0000c0        	callx0	a0
+			//replyPacket[6]=1;	//灯状态
+			espconn_send(&ptrespconn,messagePacketUnion.p_buff,7);	//发送确认包
+40102242:	0d2d      	mov.n	a2, a13
+40102244:	203cc0        	or	a3, a12, a12
+40102247:	07a042        	movi	a4, 7
+4010224a:	ffc801        	l32r	a0, 4010216c <uart_rx_intr_enable+0x54>
+4010224d:	0000c0        	callx0	a0
+			os_printf("开灯操作\r\n");
+40102250:	ffc321        	l32r	a2, 4010215c <uart_rx_intr_enable+0x44>
+40102253:	0007c6        	j	40102276 <DealWithMessagePacketState+0x106>
 		}
-		p_buffer++;
-		//break;
-	case SENDER:
-		sender=(uint8)*p_buffer<<8;
-401021d6:	010c      	movi.n	a1, 0
-		sender |=(uint8)*(p_buffer+1);
-401021d8:	020c22        	l8ui	a2, a12, 2
-			return FALSE;	//不是本系统范围内的包
-		}
-		p_buffer++;
-		//break;
-	case SENDER:
-		sender=(uint8)*p_buffer<<8;
-401021db:	11ee80        	slli	a14, a14, 8
-		sender |=(uint8)*(p_buffer+1);
-401021de:	20ee20        	or	a14, a14, a2
-		p_buffer+=2;
-		os_printf("发送者：%d\r\n",sender);
-401021e1:	ffd921        	l32r	a2, 40102148 <uart_rx_intr_enable+0x30>
-401021e4:	203ee0        	or	a3, a14, a14
-401021e7:	ff0ac5        	call0	40101294 <os_printf_plus>
-		//break;
-	case RECEIVER:
-		//
-		receiver=(uint8)*p_buffer<<8;
-401021ea:	030cf2        	l8ui	a15, a12, 3
-		receiver |=(uint8)*(p_buffer+1);
-401021ed:	040c22        	l8ui	a2, a12, 4
-		p_buffer+=2;
-		os_printf("发送者：%d\r\n",sender);
-		//break;
-	case RECEIVER:
-		//
-		receiver=(uint8)*p_buffer<<8;
-401021f0:	11ff80        	slli	a15, a15, 8
-		receiver |=(uint8)*(p_buffer+1);
-401021f3:	20ff20        	or	a15, a15, a2
-		p_buffer+=2;
-		os_printf("接收者：%d\r\n",receiver);
-401021f6:	ffd521        	l32r	a2, 4010214c <uart_rx_intr_enable+0x34>
-401021f9:	203ff0        	or	a3, a15, a15
-401021fc:	ff0945        	call0	40101294 <os_printf_plus>
-		if(!((deviceNumber==receiver)||(receiver==0xffff)))
-401021ff:	ffd421        	l32r	a2, 40102150 <uart_rx_intr_enable+0x38>
-40102202:	001222        	l16ui	a2, a2, 0
-40102205:	0f12f7        	beq	a2, a15, 40102218 <DealWithMessagePacketState+0xa0>
-40102208:	fbe631        	l32r	a3, 401011a0 <vPortDefineHeapRegions+0x10c>
-4010220b:	091f37        	beq	a15, a3, 40102218 <DealWithMessagePacketState+0xa0>
+		else if(luminance==0)	//全关
+40102256:	023556        	bnez	a5, 4010227d <DealWithMessagePacketState+0x10d>
 		{
-			os_printf("不是本设备的包\r\n");
-4010220e:	ffd121        	l32r	a2, 40102154 <uart_rx_intr_enable+0x3c>
-40102211:	ff0805        	call0	40101294 <os_printf_plus>
-			return FALSE;
-40102214:	0038c6        	j	401022fb <DealWithMessagePacketState+0x183>
-40102217:	0c3200        	excw
+			GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 0);	//设置为低电平
+40102259:	04a032        	movi	a3, 4
+4010225c:	202550        	or	a2, a5, a5
+4010225f:	034d      	mov.n	a4, a3
+40102261:	fc6501        	l32r	a0, 401013f8 <system_restart_core+0x3c>
+40102264:	0000c0        	callx0	a0
+			//replyPacket[6]=0;	//灯状态
+			espconn_send(&ptrespconn,messagePacketUnion.p_buff,7);	//发送确认包
+40102267:	0d2d      	mov.n	a2, a13
+40102269:	0c3d      	mov.n	a3, a12
+4010226b:	740c      	movi.n	a4, 7
+4010226d:	ffbf01        	l32r	a0, 4010216c <uart_rx_intr_enable+0x54>
+40102270:	0000c0        	callx0	a0
+			os_printf("关灯操作\r\n");
+40102273:	ffbb21        	l32r	a2, 40102160 <uart_rx_intr_enable+0x48>
+40102276:	ff01c5        	call0	40101294 <os_printf_plus>
+40102279:	0005c6        	j	40102294 <DealWithMessagePacketState+0x124>
+4010227c:	b92100        	excw
 		}
-		//break;
-	case FUNCTION:
-		messageCtrFunction=*p_buffer;
-4010221a:	cf4105        	call0	400d162c <__floatsidf+0xc333c>
-4010221d:	ff          	.byte 0xff
-4010221e:	0439      	s32i.n	a3, a4, 0
-		p_buffer++;
-		switch(messageCtrFunction)
-40102220:	051326        	beqi	a3, 1, 40102229 <DealWithMessagePacketState+0xb1>
-40102223:	2d2326        	beqi	a3, 2, 40102254 <DealWithMessagePacketState+0xdc>
-40102226:	0032c6        	j	401022f5 <DealWithMessagePacketState+0x17d>
-		case HEARTBEAT:
-			//服务器存在
-			break;
-		case FIND_DEVICE:
-			//发送本设备给查找者
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-40102229:	413820        	srli	a3, a2, 8
-			replyPacket[2]=deviceNumber;
-4010222c:	024122        	s8i	a2, a1, 2
-			replyPacket[3]=sender>>8;
-4010222f:	4128e0        	srli	a2, a14, 8
-40102232:	034122        	s8i	a2, a1, 3
-			replyPacket[4]=sender;
-			replyPacket[5]=0;	//心跳包
-40102235:	020c      	movi.n	a2, 0
-		case HEARTBEAT:
-			//服务器存在
-			break;
-		case FIND_DEVICE:
-			//发送本设备给查找者
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-40102237:	014132        	s8i	a3, a1, 1
-			replyPacket[2]=deviceNumber;
-			replyPacket[3]=sender>>8;
-			replyPacket[4]=sender;
-			replyPacket[5]=0;	//心跳包
-4010223a:	054122        	s8i	a2, a1, 5
-			espconn_send(&ptrespconn,replyPacket,6);	//发送心跳包
-4010223d:	013d      	mov.n	a3, a1
-4010223f:	0d2d      	mov.n	a2, a13
-40102241:	640c      	movi.n	a4, 6
-		case FIND_DEVICE:
-			//发送本设备给查找者
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-			replyPacket[2]=deviceNumber;
-			replyPacket[3]=sender>>8;
-			replyPacket[4]=sender;
-40102243:	0441e2        	s8i	a14, a1, 4
-			replyPacket[5]=0;	//心跳包
-			espconn_send(&ptrespconn,replyPacket,6);	//发送心跳包
-40102246:	ffcb01        	l32r	a0, 40102174 <uart_rx_intr_enable+0x5c>
-40102249:	0000c0        	callx0	a0
-			os_printf("发送心跳包\r\n");
-4010224c:	ffc421        	l32r	a2, 4010215c <uart_rx_intr_enable+0x44>
-4010224f:	002506        	j	401022e7 <DealWithMessagePacketState+0x16f>
-40102252:	410000        	srli	a0, a0, 0
-			//os_printf(replyPacket);
-			break;
-		case LIGHT:
-			PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2);	//选择引脚功能
-40102255:	52ffc3        	excw
-40102258:	ae          	.byte 0xae
-40102259:	cf          	.byte 0xcf
-4010225a:	0020c0        	memw
-4010225d:	0468      	l32i.n	a6, a4, 0
-4010225f:	105650        	and	a5, a6, a5
-40102262:	0020c0        	memw
-40102265:	0459      	s32i.n	a5, a4, 0
-			PIN_PULLUP_DIS(PERIPHS_IO_MUX_GPIO2_U);	//屏蔽GPIO2 上拉
-40102267:	0020c0        	memw
-4010226a:	0468      	l32i.n	a6, a4, 0
-4010226c:	7faf52        	movi	a5, -129
-4010226f:	105650        	and	a5, a6, a5
-40102272:	0020c0        	memw
-40102275:	0459      	s32i.n	a5, a4, 0
-			replyPacket[0]=0xBB;
-40102277:	bbaf42        	movi	a4, -69
-4010227a:	004142        	s8i	a4, a1, 0
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-			replyPacket[2]=deviceNumber;
-4010227d:	024122        	s8i	a2, a1, 2
-			break;
-		case LIGHT:
-			PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2);	//选择引脚功能
-			PIN_PULLUP_DIS(PERIPHS_IO_MUX_GPIO2_U);	//屏蔽GPIO2 上拉
-			replyPacket[0]=0xBB;
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-40102280:	414820        	srli	a4, a2, 8
-			replyPacket[2]=deviceNumber;
-			replyPacket[3]=sender>>8;
-			replyPacket[4]=sender;
-			replyPacket[5]=LIGHT;	//灯控制
-			uint8 luminance=(uint8)*p_buffer;	//亮度
-40102283:	060cc2        	l8ui	a12, a12, 6
-			PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2);	//选择引脚功能
-			PIN_PULLUP_DIS(PERIPHS_IO_MUX_GPIO2_U);	//屏蔽GPIO2 上拉
-			replyPacket[0]=0xBB;
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-			replyPacket[2]=deviceNumber;
-			replyPacket[3]=sender>>8;
-40102286:	4128e0        	srli	a2, a14, 8
-40102289:	034122        	s8i	a2, a1, 3
-			break;
-		case LIGHT:
-			PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2);	//选择引脚功能
-			PIN_PULLUP_DIS(PERIPHS_IO_MUX_GPIO2_U);	//屏蔽GPIO2 上拉
-			replyPacket[0]=0xBB;
-			replyPacket[1]=deviceNumber>>8;	//先传低位
-4010228c:	014142        	s8i	a4, a1, 1
-			replyPacket[2]=deviceNumber;
-			replyPacket[3]=sender>>8;
-			replyPacket[4]=sender;
-4010228f:	0441e2        	s8i	a14, a1, 4
-			replyPacket[5]=LIGHT;	//灯控制
-40102292:	054132        	s8i	a3, a1, 5
-			uint8 luminance=(uint8)*p_buffer;	//亮度
-			//const uint32 one_duty=1/PWM_PERIOD * 1000 /45/200;
-			if(luminance==255)	//全开
-40102295:	ffa022        	movi	a2, 255
-40102298:	269c27        	bne	a12, a2, 401022c2 <DealWithMessagePacketState+0x14a>
-			{
-				GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 1);	//设置为高电平
-4010229b:	420c      	movi.n	a2, 4
-4010229d:	030c      	movi.n	a3, 0
-4010229f:	024d      	mov.n	a4, a2
-401022a1:	035d      	mov.n	a5, a3
-401022a3:	fc5501        	l32r	a0, 401013f8 <system_restart_core+0x3c>
-401022a6:	0000c0        	callx0	a0
-				replyPacket[6]=1;	//灯状态
-401022a9:	120c      	movi.n	a2, 1
-401022ab:	064122        	s8i	a2, a1, 6
-				espconn_send(&ptrespconn,replyPacket,7);	//发送确认包
-401022ae:	013d      	mov.n	a3, a1
-401022b0:	202dd0        	or	a2, a13, a13
-401022b3:	07a042        	movi	a4, 7
-401022b6:	ffaf01        	l32r	a0, 40102174 <uart_rx_intr_enable+0x5c>
-401022b9:	0000c0        	callx0	a0
-				os_printf("开灯操作\r\n");
-401022bc:	ffaa21        	l32r	a2, 40102164 <uart_rx_intr_enable+0x4c>
-401022bf:	000906        	j	401022e7 <DealWithMessagePacketState+0x16f>
-			}
-			else if(luminance==0)	//全关
-401022c2:	027c56        	bnez	a12, 401022ed <DealWithMessagePacketState+0x175>
-			{
-				GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 0);	//设置为低电平
-401022c5:	04a032        	movi	a3, 4
-401022c8:	204330        	or	a4, a3, a3
-401022cb:	0c2d      	mov.n	a2, a12
-401022cd:	0c5d      	mov.n	a5, a12
-401022cf:	fc4a01        	l32r	a0, 401013f8 <system_restart_core+0x3c>
-401022d2:	0000c0        	callx0	a0
-				replyPacket[6]=0;	//灯状态
-				espconn_send(&ptrespconn,replyPacket,7);	//发送确认包
-401022d5:	0d2d      	mov.n	a2, a13
-401022d7:	013d      	mov.n	a3, a1
-401022d9:	740c      	movi.n	a4, 7
-				os_printf("开灯操作\r\n");
-			}
-			else if(luminance==0)	//全关
-			{
-				GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 0);	//设置为低电平
-				replyPacket[6]=0;	//灯状态
-401022db:	0641c2        	s8i	a12, a1, 6
-				espconn_send(&ptrespconn,replyPacket,7);	//发送确认包
-401022de:	ffa501        	l32r	a0, 40102174 <uart_rx_intr_enable+0x5c>
-401022e1:	0000c0        	callx0	a0
-				os_printf("关灯操作\r\n");
-401022e4:	ffa121        	l32r	a2, 40102168 <uart_rx_intr_enable+0x50>
-401022e7:	fefac5        	call0	40101294 <os_printf_plus>
-401022ea:	0001c6        	j	401022f5 <DealWithMessagePacketState+0x17d>
-			}
-			else	//pwm功率控制
-			{
-				os_printf("PWM:%d\r\n",luminance);
-401022ed:	ff9f21        	l32r	a2, 4010216c <uart_rx_intr_enable+0x54>
-401022f0:	0c3d      	mov.n	a3, a12
-401022f2:	fefa05        	call0	40101294 <os_printf_plus>
-401022f5:	000106        	j	401022fd <DealWithMessagePacketState+0x185>
-401022f8:	000000        	ill
-401022fb:	020c      	movi.n	a2, 0
-	case	DATA:
-			break;
+		else	//pwm功率控制
+		{
+			os_printf("PWM:%d\r\n",luminance);
+4010227f:	ff          	.byte 0xff
+40102280:	203550        	or	a3, a5, a5
+40102283:	ff0105        	call0	40101294 <os_printf_plus>
+			espconn_send(&ptrespconn,messagePacketUnion.p_buff,7);	//发送确认包
+40102286:	202dd0        	or	a2, a13, a13
+40102289:	203cc0        	or	a3, a12, a12
+4010228c:	740c      	movi.n	a4, 7
+4010228e:	ffb701        	l32r	a0, 4010216c <uart_rx_intr_enable+0x54>
+40102291:	0000c0        	callx0	a0
+	case HUMITURE:
+		break;
 	default:
-		;
+		break;
 	}
 }
-401022fd:	f108      	l32i.n	a0, a1, 60
-401022ff:	e1c8      	l32i.n	a12, a1, 56
-40102301:	d1d8      	l32i.n	a13, a1, 52
-40102303:	c1e8      	l32i.n	a14, a1, 48
-40102305:	b1f8      	l32i.n	a15, a1, 44
-40102307:	40c112        	addi	a1, a1, 64
-4010230a:	f00d      	ret.n
-4010230c:	fe8f44        	excw
-4010230f:	3f          	.byte 0x3f
-40102310:	61d8      	l32i.n	a13, a1, 24
-40102312:	0c4022        	s8i	a2, a0, 12
+40102294:	7108      	l32i.n	a0, a1, 28
+40102296:	61c8      	l32i.n	a12, a1, 24
+40102298:	51d8      	l32i.n	a13, a1, 20
+4010229a:	41e8      	l32i.n	a14, a1, 16
+4010229c:	20c112        	addi	a1, a1, 32
+4010229f:	f00d      	ret.n
+401022a1:	000000        	ill
+401022a4:	fe8f24        	excw
+401022a7:	3f          	.byte 0x3f
+401022a8:	61d8      	l32i.n	a13, a1, 24
+401022aa:	0c4022        	s8i	a2, a0, 12
 
-40102314 <register_phy_ops>:
-40102314:	030c      	movi.n	a3, 0
-40102316:	f0c112        	addi	a1, a1, -16
-40102319:	025d      	mov.n	a5, a2
-4010231b:	0109      	s32i.n	a0, a1, 0
-4010231d:	fffb01        	l32r	a0, 4010230c <DealWithMessagePacketState+0x194>
-40102320:	120c      	movi.n	a2, 1
-40102322:	0059      	s32i.n	a5, a0, 0
-40102324:	fffb01        	l32r	a0, 40102310 <DealWithMessagePacketState+0x198>
-40102327:	0000c0        	callx0	a0
-4010232a:	0108      	l32i.n	a0, a1, 0
-4010232c:	10c112        	addi	a1, a1, 16
-4010232f:	f00d      	ret.n
-40102331:	000000        	ill
+401022ac <register_phy_ops>:
+401022ac:	030c      	movi.n	a3, 0
+401022ae:	f0c112        	addi	a1, a1, -16
+401022b1:	025d      	mov.n	a5, a2
+401022b3:	0109      	s32i.n	a0, a1, 0
+401022b5:	fffb01        	l32r	a0, 401022a4 <DealWithMessagePacketState+0x134>
+401022b8:	120c      	movi.n	a2, 1
+401022ba:	0059      	s32i.n	a5, a0, 0
+401022bc:	fffb01        	l32r	a0, 401022a8 <DealWithMessagePacketState+0x138>
+401022bf:	0000c0        	callx0	a0
+401022c2:	0108      	l32i.n	a0, a1, 0
+401022c4:	10c112        	addi	a1, a1, 16
+401022c7:	f00d      	ret.n
+401022c9:	000000        	ill
 
-40102334 <register_get_phy_addr>:
-40102334:	fff631        	l32r	a3, 4010230c <DealWithMessagePacketState+0x194>
-40102337:	0329      	s32i.n	a2, a3, 0
-40102339:	f00d      	ret.n
+401022cc <register_get_phy_addr>:
+401022cc:	fff631        	l32r	a3, 401022a4 <DealWithMessagePacketState+0x134>
+401022cf:	0329      	s32i.n	a2, a3, 0
+401022d1:	f00d      	ret.n
 	...
 
-4010233c <phy_change_channel>:
-4010233c:	f0c112        	addi	a1, a1, -16
-4010233f:	0109      	s32i.n	a0, a1, 0
-40102341:	fff201        	l32r	a0, 4010230c <DealWithMessagePacketState+0x194>
-40102344:	0008      	l32i.n	a0, a0, 0
-40102346:	1008      	l32i.n	a0, a0, 4
-40102348:	0000c0        	callx0	a0
-4010234b:	020c      	movi.n	a2, 0
-4010234d:	0108      	l32i.n	a0, a1, 0
-4010234f:	10c112        	addi	a1, a1, 16
-40102352:	f00d      	ret.n
+401022d4 <phy_change_channel>:
+401022d4:	f0c112        	addi	a1, a1, -16
+401022d7:	0109      	s32i.n	a0, a1, 0
+401022d9:	fff201        	l32r	a0, 401022a4 <DealWithMessagePacketState+0x134>
+401022dc:	0008      	l32i.n	a0, a0, 0
+401022de:	1008      	l32i.n	a0, a0, 4
+401022e0:	0000c0        	callx0	a0
+401022e3:	020c      	movi.n	a2, 0
+401022e5:	0108      	l32i.n	a0, a1, 0
+401022e7:	10c112        	addi	a1, a1, 16
+401022ea:	f00d      	ret.n
 
-40102354 <phy_get_mactime>:
-40102354:	fc5721        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
-40102357:	0020c0        	memw
-4010235a:	802222        	l32i	a2, a2, 0x200
-4010235d:	f00d      	ret.n
-4010235f:	8f4800        	excw
-40102362:	fe          	.byte 0xfe
-40102363:	3f          	.byte 0x3f
-40102364:	000000        	ill
-40102367:	ff          	.byte 0xff
-40102368:	000a00        	excw
-4010236b:	00ff60        	excw
-4010236e:	ff          	.byte 0xff
-4010236f:	ff          	.byte 0xff
-40102370:	fe8f50        	excw
-40102373:	3f          	.byte 0x3f
-40102374:	000f00        	excw
-40102377:	8ff400        	excw
-4010237a:	fe          	.byte 0xfe
-4010237b:	3f          	.byte 0x3f
-4010237c:	ff          	.byte 0xff
-4010237d:	ff          	.byte 0xff
-4010237e:	df          	.byte 0xdf
-4010237f:	ff          	.byte 0xff
+401022ec <phy_get_mactime>:
+401022ec:	fc7121        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
+401022ef:	0020c0        	memw
+401022f2:	802222        	l32i	a2, a2, 0x200
+401022f5:	f00d      	ret.n
+401022f7:	8f2800        	excw
+401022fa:	fe          	.byte 0xfe
+401022fb:	3f          	.byte 0x3f
+401022fc:	000000        	ill
+401022ff:	ff          	.byte 0xff
+40102300:	000a00        	excw
+40102303:	00ff60        	excw
+40102306:	ff          	.byte 0xff
+40102307:	ff          	.byte 0xff
+40102308:	fe8f30        	excw
+4010230b:	3f          	.byte 0x3f
+4010230c:	000f00        	excw
+4010230f:	8fd400        	excw
+40102312:	fe          	.byte 0xfe
+40102313:	3f          	.byte 0x3f
+40102314:	ff          	.byte 0xff
+40102315:	ff          	.byte 0xff
+40102316:	df          	.byte 0xdf
+40102317:	ff          	.byte 0xff
 
-40102380 <phy_adc_read_fast>:
-40102380:	03ad      	mov.n	a10, a3
-40102382:	260c      	movi.n	a6, 2
-40102384:	fff781        	l32r	a8, 40102360 <phy_get_mactime+0xc>
-40102387:	170c      	movi.n	a7, 1
-40102389:	d0c112        	addi	a1, a1, -48
-4010238c:	31d9      	s32i.n	a13, a1, 12
-4010238e:	41e9      	s32i.n	a14, a1, 16
-40102390:	51f9      	s32i.n	a15, a1, 20
-40102392:	6129      	s32i.n	a2, a1, 24
-40102394:	21c9      	s32i.n	a12, a1, 8
-40102396:	1109      	s32i.n	a0, a1, 4
-40102398:	004872        	s8i	a7, a8, 0
-4010239b:	fff201        	l32r	a0, 40102364 <phy_get_mactime+0x10>
-4010239e:	fff2c1        	l32r	a12, 40102368 <phy_get_mactime+0x14>
-401023a1:	0124b6        	bltui	a4, 2, 401023a6 <phy_adc_read_fast+0x26>
-401023a4:	046d      	mov.n	a6, a4
-401023a6:	748060        	extui	a8, a6, 0, 8
-401023a9:	0020c0        	memw
-401023ac:	d42c62        	l32i	a6, a12, 0x350
-401023af:	0169      	s32i.n	a6, a1, 0
-401023b1:	0020c0        	memw
-401023b4:	d52cf2        	l32i	a15, a12, 0x354
-401023b7:	0020c0        	memw
-401023ba:	114880        	slli	a4, a8, 8
-401023bd:	ffeb51        	l32r	a5, 4010236c <phy_get_mactime+0x18>
-401023c0:	d62ce2        	l32i	a14, a12, 0x358
+40102318 <phy_adc_read_fast>:
+40102318:	03ad      	mov.n	a10, a3
+4010231a:	260c      	movi.n	a6, 2
+4010231c:	fff781        	l32r	a8, 401022f8 <phy_get_mactime+0xc>
+4010231f:	170c      	movi.n	a7, 1
+40102321:	d0c112        	addi	a1, a1, -48
+40102324:	31d9      	s32i.n	a13, a1, 12
+40102326:	41e9      	s32i.n	a14, a1, 16
+40102328:	51f9      	s32i.n	a15, a1, 20
+4010232a:	6129      	s32i.n	a2, a1, 24
+4010232c:	21c9      	s32i.n	a12, a1, 8
+4010232e:	1109      	s32i.n	a0, a1, 4
+40102330:	004872        	s8i	a7, a8, 0
+40102333:	fff201        	l32r	a0, 401022fc <phy_get_mactime+0x10>
+40102336:	fff2c1        	l32r	a12, 40102300 <phy_get_mactime+0x14>
+40102339:	0124b6        	bltui	a4, 2, 4010233e <phy_adc_read_fast+0x26>
+4010233c:	046d      	mov.n	a6, a4
+4010233e:	748060        	extui	a8, a6, 0, 8
+40102341:	0020c0        	memw
+40102344:	d42c62        	l32i	a6, a12, 0x350
+40102347:	0169      	s32i.n	a6, a1, 0
+40102349:	0020c0        	memw
+4010234c:	d52cf2        	l32i	a15, a12, 0x354
+4010234f:	0020c0        	memw
+40102352:	114880        	slli	a4, a8, 8
+40102355:	ffeb51        	l32r	a5, 40102304 <phy_get_mactime+0x18>
+40102358:	d62ce2        	l32i	a14, a12, 0x358
+4010235b:	0020c0        	memw
+4010235e:	d42c32        	l32i	a3, a12, 0x350
+40102361:	103350        	and	a3, a3, a5
+40102364:	203340        	or	a3, a3, a4
+40102367:	0020c0        	memw
+4010236a:	d46c32        	s32i	a3, a12, 0x350
+4010236d:	280b      	addi.n	a2, a8, -1
+4010236f:	113200        	slli	a3, a2, 16
+40102372:	a0b880        	addx4	a11, a8, a8
+40102375:	112280        	slli	a2, a2, 8
+40102378:	223a      	add.n	a2, a2, a3
+4010237a:	bb2a      	add.n	a11, a11, a2
+4010237c:	bb0b      	addi.n	a11, a11, -1
+4010237e:	0020c0        	memw
+40102381:	d52c92        	l32i	a9, a12, 0x354
+40102384:	109900        	and	a9, a9, a0
+40102387:	2099b0        	or	a9, a9, a11
+4010238a:	0020c0        	memw
+4010238d:	d56c92        	s32i	a9, a12, 0x354
+40102390:	a07880        	addx4	a7, a8, a8
+40102393:	906880        	addx2	a6, a8, a8
+40102396:	a05880        	addx4	a5, a8, a8
+40102399:	905580        	addx2	a5, a5, a8
+4010239c:	660b      	addi.n	a6, a6, -1
+4010239e:	f87c      	movi.n	a8, -1
+401023a0:	907780        	addx2	a7, a7, a8
+401023a3:	116680        	slli	a6, a6, 8
+401023a6:	117700        	slli	a7, a7, 16
+401023a9:	667a      	add.n	a6, a6, a7
+401023ab:	556a      	add.n	a5, a5, a6
+401023ad:	550b      	addi.n	a5, a5, -1
+401023af:	0020c0        	memw
+401023b2:	d62c42        	l32i	a4, a12, 0x358
+401023b5:	104400        	and	a4, a4, a0
+401023b8:	204450        	or	a4, a4, a5
+401023bb:	0020c0        	memw
+401023be:	d66c42        	s32i	a4, a12, 0x358
+401023c1:	336c      	movi.n	a3, -29
 401023c3:	0020c0        	memw
-401023c6:	d42c32        	l32i	a3, a12, 0x350
-401023c9:	103350        	and	a3, a3, a5
-401023cc:	203340        	or	a3, a3, a4
-401023cf:	0020c0        	memw
-401023d2:	d46c32        	s32i	a3, a12, 0x350
-401023d5:	280b      	addi.n	a2, a8, -1
-401023d7:	113200        	slli	a3, a2, 16
-401023da:	a0b880        	addx4	a11, a8, a8
-401023dd:	112280        	slli	a2, a2, 8
-401023e0:	223a      	add.n	a2, a2, a3
-401023e2:	bb2a      	add.n	a11, a11, a2
-401023e4:	bb0b      	addi.n	a11, a11, -1
-401023e6:	0020c0        	memw
-401023e9:	d52c92        	l32i	a9, a12, 0x354
-401023ec:	109900        	and	a9, a9, a0
-401023ef:	2099b0        	or	a9, a9, a11
-401023f2:	0020c0        	memw
-401023f5:	d56c92        	s32i	a9, a12, 0x354
-401023f8:	a07880        	addx4	a7, a8, a8
-401023fb:	906880        	addx2	a6, a8, a8
-401023fe:	a05880        	addx4	a5, a8, a8
-40102401:	905580        	addx2	a5, a5, a8
-40102404:	660b      	addi.n	a6, a6, -1
-40102406:	f87c      	movi.n	a8, -1
-40102408:	907780        	addx2	a7, a7, a8
-4010240b:	116680        	slli	a6, a6, 8
-4010240e:	117700        	slli	a7, a7, 16
-40102411:	667a      	add.n	a6, a6, a7
-40102413:	556a      	add.n	a5, a5, a6
-40102415:	550b      	addi.n	a5, a5, -1
-40102417:	0020c0        	memw
-4010241a:	d62c42        	l32i	a4, a12, 0x358
-4010241d:	104400        	and	a4, a4, a0
-40102420:	204450        	or	a4, a4, a5
-40102423:	0020c0        	memw
-40102426:	d66c42        	s32i	a4, a12, 0x358
-40102429:	336c      	movi.n	a3, -29
+401023c6:	d42c22        	l32i	a2, a12, 0x350
+401023c9:	102230        	and	a2, a2, a3
+401023cc:	0020c0        	memw
+401023cf:	230c      	movi.n	a3, 2
+401023d1:	040c      	movi.n	a4, 0
+401023d3:	550c      	movi.n	a5, 5
+401023d5:	560c      	movi.n	a6, 5
+401023d7:	170c      	movi.n	a7, 1
+401023d9:	ffcb01        	l32r	a0, 40102308 <phy_get_mactime+0x1c>
+401023dc:	81a9      	s32i.n	a10, a1, 32
+401023de:	0008      	l32i.n	a0, a0, 0
+401023e0:	d46c22        	s32i	a2, a12, 0x350
+401023e3:	272002        	l32i	a0, a0, 156
+401023e6:	6ca022        	movi	a2, 108
+401023e9:	0000c0        	callx0	a0
+401023ec:	770c      	movi.n	a7, 7
+401023ee:	f865a1        	l32r	a10, 40100584 <wdt_feed+0x14c>
+401023f1:	8108      	l32i.n	a0, a1, 32
+401023f3:	0020c0        	memw
+401023f6:	d72c92        	l32i	a9, a12, 0x35c
+401023f9:	2099a0        	or	a9, a9, a10
+401023fc:	0020c0        	memw
+401023ff:	d76c92        	s32i	a9, a12, 0x35c
+40102402:	0020c0        	memw
+40102405:	d42c82        	l32i	a8, a12, 0x350
+40102408:	758880        	extui	a8, a8, 24, 8
+4010240b:	0b0787        	bnone	a7, a8, 4010241a <phy_adc_read_fast+0x102>
+4010240e:	0020c0        	memw
+40102411:	d42cb2        	l32i	a11, a12, 0x350
+40102414:	25b8b0        	extui	a11, a11, 24, 3
+40102417:	ff3b56        	bnez	a11, 4010240e <phy_adc_read_fast+0xf6>
+4010241a:	7109      	s32i.n	a0, a1, 28
+4010241c:	91f9      	s32i.n	a15, a1, 36
+4010241e:	a1e9      	s32i.n	a14, a1, 40
+40102420:	0a5016        	beqz	a0, 401024c9 <phy_adc_read_fast+0x1b1>
+40102423:	0d0c      	movi.n	a13, 0
+40102425:	ffa0f2        	movi	a15, 255
+40102428:	fb5ee1        	l32r	a14, 401011a0 <vPortDefineHeapRegions+0x10c>
 4010242b:	0020c0        	memw
-4010242e:	d42c22        	l32i	a2, a12, 0x350
-40102431:	102230        	and	a2, a2, a3
-40102434:	0020c0        	memw
-40102437:	230c      	movi.n	a3, 2
-40102439:	040c      	movi.n	a4, 0
-4010243b:	550c      	movi.n	a5, 5
-4010243d:	560c      	movi.n	a6, 5
-4010243f:	170c      	movi.n	a7, 1
-40102441:	ffcb01        	l32r	a0, 40102370 <phy_get_mactime+0x1c>
-40102444:	81a9      	s32i.n	a10, a1, 32
-40102446:	0008      	l32i.n	a0, a0, 0
-40102448:	d46c22        	s32i	a2, a12, 0x350
-4010244b:	272002        	l32i	a0, a0, 156
-4010244e:	6ca022        	movi	a2, 108
-40102451:	0000c0        	callx0	a0
-40102454:	770c      	movi.n	a7, 7
-40102456:	f84ba1        	l32r	a10, 40100584 <wdt_feed+0x14c>
-40102459:	8108      	l32i.n	a0, a1, 32
-4010245b:	0020c0        	memw
-4010245e:	d72c92        	l32i	a9, a12, 0x35c
-40102461:	2099a0        	or	a9, a9, a10
-40102464:	0020c0        	memw
-40102467:	d76c92        	s32i	a9, a12, 0x35c
-4010246a:	0020c0        	memw
-4010246d:	d42c82        	l32i	a8, a12, 0x350
-40102470:	758880        	extui	a8, a8, 24, 8
-40102473:	0b0787        	bnone	a7, a8, 40102482 <phy_adc_read_fast+0x102>
-40102476:	0020c0        	memw
-40102479:	d42cb2        	l32i	a11, a12, 0x350
-4010247c:	25b8b0        	extui	a11, a11, 24, 3
-4010247f:	ff3b56        	bnez	a11, 40102476 <phy_adc_read_fast+0xf6>
-40102482:	7109      	s32i.n	a0, a1, 28
-40102484:	91f9      	s32i.n	a15, a1, 36
-40102486:	a1e9      	s32i.n	a14, a1, 40
-40102488:	0a5016        	beqz	a0, 40102531 <phy_adc_read_fast+0x1b1>
-4010248b:	0d0c      	movi.n	a13, 0
-4010248d:	ffa0f2        	movi	a15, 255
-40102490:	fb44e1        	l32r	a14, 401011a0 <vPortDefineHeapRegions+0x10c>
-40102493:	0020c0        	memw
-40102496:	d42ca2        	l32i	a10, a12, 0x350
-40102499:	db7c      	movi.n	a11, -3
-4010249b:	10aab0        	and	a10, a10, a11
-4010249e:	0020c0        	memw
-401024a1:	d46ca2        	s32i	a10, a12, 0x350
-401024a4:	0020c0        	memw
-401024a7:	d42c82        	l32i	a8, a12, 0x350
-401024aa:	290c      	movi.n	a9, 2
-401024ac:	208890        	or	a8, a8, a9
-401024af:	0020c0        	memw
-401024b2:	d46c82        	s32i	a8, a12, 0x350
-401024b5:	120c      	movi.n	a2, 1
-401024b7:	fbd101        	l32r	a0, 401013fc <system_restart_core+0x40>
-401024ba:	0000c0        	callx0	a0
-401024bd:	ffad01        	l32r	a0, 40102374 <phy_get_mactime+0x20>
-401024c0:	040c      	movi.n	a4, 0
-401024c2:	fb7c      	movi.n	a11, -1
-401024c4:	ffad21        	l32r	a2, 40102378 <phy_get_mactime+0x24>
-401024c7:	0020c0        	memw
-401024ca:	d42c32        	l32i	a3, a12, 0x350
-401024cd:	770c      	movi.n	a7, 7
-401024cf:	753830        	extui	a3, a3, 24, 8
-401024d2:	0b0737        	bnone	a7, a3, 401024e1 <phy_adc_read_fast+0x161>
-401024d5:	0020c0        	memw
-401024d8:	d42c52        	l32i	a5, a12, 0x350
-401024db:	255850        	extui	a5, a5, 24, 3
-401024de:	ff3556        	bnez	a5, 401024d5 <phy_adc_read_fast+0x155>
-401024e1:	0f8d      	mov.n	a8, a15
-401024e3:	0020c0        	memw
-401024e6:	17a132        	movi	a3, 0x117
-401024e9:	e02c52        	l32i	a5, a12, 0x380
-401024ec:	6c0262        	l8ui	a6, a2, 108
-401024ef:	3055b0        	xor	a5, a5, a11
-401024f2:	c066f0        	sub	a6, a6, a15
-401024f5:	a49050        	extui	a9, a5, 0, 11
-401024f8:	745050        	extui	a5, a5, 0, 8
-401024fb:	ebc552        	addi	a5, a5, -21
-401024fe:	b34550        	movgez	a4, a5, a5
-40102501:	82a430        	mull	a10, a4, a3
-40102504:	6158      	l32i.n	a5, a1, 24
-40102506:	103900        	and	a3, a9, a0
-40102509:	21a8a0        	srai	a10, a10, 8
-4010250c:	905d50        	addx2	a5, a13, a5
-4010250f:	dd1b      	addi.n	a13, a13, 1
-40102511:	f4d0d0        	extui	a13, a13, 0, 16
-40102514:	012fa7        	blt	a15, a10, 40102519 <phy_adc_read_fast+0x199>
-40102517:	0a8d      	mov.n	a8, a10
-40102519:	383a      	add.n	a3, a8, a3
-4010251b:	f43030        	extui	a3, a3, 0, 16
-4010251e:	331b      	addi.n	a3, a3, 1
-40102520:	213130        	srai	a3, a3, 1
-40102523:	833e60        	moveqz	a3, a14, a6
-40102526:	7168      	l32i.n	a6, a1, 28
-40102528:	005532        	s16i	a3, a5, 0
-4010252b:	0216d7        	beq	a6, a13, 40102531 <phy_adc_read_fast+0x1b1>
-4010252e:	ffd846        	j	40102493 <phy_adc_read_fast+0x113>
-40102531:	a1e8      	l32i.n	a14, a1, 40
-40102533:	91f8      	l32i.n	a15, a1, 36
-40102535:	01d8      	l32i.n	a13, a1, 0
-40102537:	6ca022        	movi	a2, 108
-4010253a:	230c      	movi.n	a3, 2
-4010253c:	040c      	movi.n	a4, 0
-4010253e:	ff8c01        	l32r	a0, 40102370 <phy_get_mactime+0x1c>
-40102541:	550c      	movi.n	a5, 5
-40102543:	0008      	l32i.n	a0, a0, 0
-40102545:	560c      	movi.n	a6, 5
-40102547:	272002        	l32i	a0, a0, 156
-4010254a:	070c      	movi.n	a7, 0
-4010254c:	0000c0        	callx0	a0
-4010254f:	120c      	movi.n	a2, 1
-40102551:	ff8301        	l32r	a0, 40102360 <phy_get_mactime+0xc>
-40102554:	0020c0        	memw
-40102557:	d46cd2        	s32i	a13, a12, 0x350
-4010255a:	0020c0        	memw
-4010255d:	d56cf2        	s32i	a15, a12, 0x354
-40102560:	0020c0        	memw
-40102563:	d66ce2        	s32i	a14, a12, 0x358
-40102566:	0020c0        	memw
-40102569:	d42c42        	l32i	a4, a12, 0x350
-4010256c:	730c      	movi.n	a3, 7
-4010256e:	754840        	extui	a4, a4, 24, 8
-40102571:	0b0347        	bnone	a3, a4, 40102580 <phy_adc_read_fast+0x200>
-40102574:	0020c0        	memw
-40102577:	d42c52        	l32i	a5, a12, 0x350
-4010257a:	255850        	extui	a5, a5, 24, 3
-4010257d:	ff3556        	bnez	a5, 40102574 <phy_adc_read_fast+0x1f4>
-40102580:	ff7fb1        	l32r	a11, 4010237c <phy_get_mactime+0x28>
-40102583:	0020c0        	memw
-40102586:	d72ca2        	l32i	a10, a12, 0x35c
-40102589:	10aab0        	and	a10, a10, a11
-4010258c:	0020c0        	memw
-4010258f:	d76ca2        	s32i	a10, a12, 0x35c
-40102592:	e97c      	movi.n	a9, -2
-40102594:	0020c0        	memw
-40102597:	d82c82        	l32i	a8, a12, 0x360
-4010259a:	108890        	and	a8, a8, a9
-4010259d:	0020c0        	memw
-401025a0:	d86c82        	s32i	a8, a12, 0x360
-401025a3:	0020c0        	memw
-401025a6:	d82c72        	l32i	a7, a12, 0x360
-401025a9:	207720        	or	a7, a7, a2
-401025ac:	0020c0        	memw
-401025af:	31d8      	l32i.n	a13, a1, 12
-401025b1:	41e8      	l32i.n	a14, a1, 16
-401025b3:	51f8      	l32i.n	a15, a1, 20
-401025b5:	d86c72        	s32i	a7, a12, 0x360
-401025b8:	060c      	movi.n	a6, 0
-401025ba:	21c8      	l32i.n	a12, a1, 8
-401025bc:	004062        	s8i	a6, a0, 0
-401025bf:	1108      	l32i.n	a0, a1, 4
-401025c1:	30c112        	addi	a1, a1, 48
-401025c4:	f00d      	ret.n
-401025c6:	740000        	extui	a0, a0, 0, 8
-401025c9:	3ffe80        	excw
-401025cc:	22d150        	excw
-401025cf:	bd1c40        	excw
-401025d2:	0c4022        	s8i	a2, a0, 12
+4010242e:	d42ca2        	l32i	a10, a12, 0x350
+40102431:	db7c      	movi.n	a11, -3
+40102433:	10aab0        	and	a10, a10, a11
+40102436:	0020c0        	memw
+40102439:	d46ca2        	s32i	a10, a12, 0x350
+4010243c:	0020c0        	memw
+4010243f:	d42c82        	l32i	a8, a12, 0x350
+40102442:	290c      	movi.n	a9, 2
+40102444:	208890        	or	a8, a8, a9
+40102447:	0020c0        	memw
+4010244a:	d46c82        	s32i	a8, a12, 0x350
+4010244d:	120c      	movi.n	a2, 1
+4010244f:	fbeb01        	l32r	a0, 401013fc <system_restart_core+0x40>
+40102452:	0000c0        	callx0	a0
+40102455:	ffad01        	l32r	a0, 4010230c <phy_get_mactime+0x20>
+40102458:	040c      	movi.n	a4, 0
+4010245a:	fb7c      	movi.n	a11, -1
+4010245c:	ffad21        	l32r	a2, 40102310 <phy_get_mactime+0x24>
+4010245f:	0020c0        	memw
+40102462:	d42c32        	l32i	a3, a12, 0x350
+40102465:	770c      	movi.n	a7, 7
+40102467:	753830        	extui	a3, a3, 24, 8
+4010246a:	0b0737        	bnone	a7, a3, 40102479 <phy_adc_read_fast+0x161>
+4010246d:	0020c0        	memw
+40102470:	d42c52        	l32i	a5, a12, 0x350
+40102473:	255850        	extui	a5, a5, 24, 3
+40102476:	ff3556        	bnez	a5, 4010246d <phy_adc_read_fast+0x155>
+40102479:	0f8d      	mov.n	a8, a15
+4010247b:	0020c0        	memw
+4010247e:	17a132        	movi	a3, 0x117
+40102481:	e02c52        	l32i	a5, a12, 0x380
+40102484:	6c0262        	l8ui	a6, a2, 108
+40102487:	3055b0        	xor	a5, a5, a11
+4010248a:	c066f0        	sub	a6, a6, a15
+4010248d:	a49050        	extui	a9, a5, 0, 11
+40102490:	745050        	extui	a5, a5, 0, 8
+40102493:	ebc552        	addi	a5, a5, -21
+40102496:	b34550        	movgez	a4, a5, a5
+40102499:	82a430        	mull	a10, a4, a3
+4010249c:	6158      	l32i.n	a5, a1, 24
+4010249e:	103900        	and	a3, a9, a0
+401024a1:	21a8a0        	srai	a10, a10, 8
+401024a4:	905d50        	addx2	a5, a13, a5
+401024a7:	dd1b      	addi.n	a13, a13, 1
+401024a9:	f4d0d0        	extui	a13, a13, 0, 16
+401024ac:	012fa7        	blt	a15, a10, 401024b1 <phy_adc_read_fast+0x199>
+401024af:	0a8d      	mov.n	a8, a10
+401024b1:	383a      	add.n	a3, a8, a3
+401024b3:	f43030        	extui	a3, a3, 0, 16
+401024b6:	331b      	addi.n	a3, a3, 1
+401024b8:	213130        	srai	a3, a3, 1
+401024bb:	833e60        	moveqz	a3, a14, a6
+401024be:	7168      	l32i.n	a6, a1, 28
+401024c0:	005532        	s16i	a3, a5, 0
+401024c3:	0216d7        	beq	a6, a13, 401024c9 <phy_adc_read_fast+0x1b1>
+401024c6:	ffd846        	j	4010242b <phy_adc_read_fast+0x113>
+401024c9:	a1e8      	l32i.n	a14, a1, 40
+401024cb:	91f8      	l32i.n	a15, a1, 36
+401024cd:	01d8      	l32i.n	a13, a1, 0
+401024cf:	6ca022        	movi	a2, 108
+401024d2:	230c      	movi.n	a3, 2
+401024d4:	040c      	movi.n	a4, 0
+401024d6:	ff8c01        	l32r	a0, 40102308 <phy_get_mactime+0x1c>
+401024d9:	550c      	movi.n	a5, 5
+401024db:	0008      	l32i.n	a0, a0, 0
+401024dd:	560c      	movi.n	a6, 5
+401024df:	272002        	l32i	a0, a0, 156
+401024e2:	070c      	movi.n	a7, 0
+401024e4:	0000c0        	callx0	a0
+401024e7:	120c      	movi.n	a2, 1
+401024e9:	ff8301        	l32r	a0, 401022f8 <phy_get_mactime+0xc>
+401024ec:	0020c0        	memw
+401024ef:	d46cd2        	s32i	a13, a12, 0x350
+401024f2:	0020c0        	memw
+401024f5:	d56cf2        	s32i	a15, a12, 0x354
+401024f8:	0020c0        	memw
+401024fb:	d66ce2        	s32i	a14, a12, 0x358
+401024fe:	0020c0        	memw
+40102501:	d42c42        	l32i	a4, a12, 0x350
+40102504:	730c      	movi.n	a3, 7
+40102506:	754840        	extui	a4, a4, 24, 8
+40102509:	0b0347        	bnone	a3, a4, 40102518 <phy_adc_read_fast+0x200>
+4010250c:	0020c0        	memw
+4010250f:	d42c52        	l32i	a5, a12, 0x350
+40102512:	255850        	extui	a5, a5, 24, 3
+40102515:	ff3556        	bnez	a5, 4010250c <phy_adc_read_fast+0x1f4>
+40102518:	ff7fb1        	l32r	a11, 40102314 <phy_get_mactime+0x28>
+4010251b:	0020c0        	memw
+4010251e:	d72ca2        	l32i	a10, a12, 0x35c
+40102521:	10aab0        	and	a10, a10, a11
+40102524:	0020c0        	memw
+40102527:	d76ca2        	s32i	a10, a12, 0x35c
+4010252a:	e97c      	movi.n	a9, -2
+4010252c:	0020c0        	memw
+4010252f:	d82c82        	l32i	a8, a12, 0x360
+40102532:	108890        	and	a8, a8, a9
+40102535:	0020c0        	memw
+40102538:	d86c82        	s32i	a8, a12, 0x360
+4010253b:	0020c0        	memw
+4010253e:	d82c72        	l32i	a7, a12, 0x360
+40102541:	207720        	or	a7, a7, a2
+40102544:	0020c0        	memw
+40102547:	31d8      	l32i.n	a13, a1, 12
+40102549:	41e8      	l32i.n	a14, a1, 16
+4010254b:	51f8      	l32i.n	a15, a1, 20
+4010254d:	d86c72        	s32i	a7, a12, 0x360
+40102550:	060c      	movi.n	a6, 0
+40102552:	21c8      	l32i.n	a12, a1, 8
+40102554:	004062        	s8i	a6, a0, 0
+40102557:	1108      	l32i.n	a0, a1, 4
+40102559:	30c112        	addi	a1, a1, 48
+4010255c:	f00d      	ret.n
+4010255e:	740000        	extui	a0, a0, 0, 8
+40102561:	3ffe80        	excw
+40102564:	22d150        	excw
+40102567:	bd1c40        	excw
+4010256a:	0c4022        	s8i	a2, a0, 12
 
-401025d4 <tx_pwr_backoff_old>:
-401025d4:	140c      	movi.n	a4, 1
-401025d6:	f51c      	movi.n	a5, 31
-401025d8:	080c      	movi.n	a8, 0
-401025da:	38a192        	movi	a9, 0x138
-401025dd:	fffa61        	l32r	a6, 401025c8 <phy_adc_read_fast+0x248>
-401025e0:	c0c112        	addi	a1, a1, -64
-401025e3:	61c9      	s32i.n	a12, a1, 24
-401025e5:	71d9      	s32i.n	a13, a1, 28
-401025e7:	81e9      	s32i.n	a14, a1, 32
-401025e9:	91f9      	s32i.n	a15, a1, 36
-401025eb:	10c172        	addi	a7, a1, 16
-401025ee:	c129      	s32i.n	a2, a1, 48
-401025f0:	5109      	s32i.n	a0, a1, 20
-401025f2:	024c      	movi.n	a2, 64
-401025f4:	c138      	l32i.n	a3, a1, 48
-401025f6:	000662        	l8ui	a6, a6, 0
-401025f9:	0199      	s32i.n	a9, a1, 0
-401025fb:	1189      	s32i.n	a8, a1, 4
-401025fd:	016680        	slli	a6, a6, 24
-40102600:	316860        	srai	a6, a6, 24
-40102603:	fff201        	l32r	a0, 401025cc <phy_adc_read_fast+0x24c>
-40102606:	0000c0        	callx0	a0
-40102609:	0e0c      	movi.n	a14, 0
-4010260b:	000c      	movi.n	a0, 0
-4010260d:	6fa0f2        	movi	a15, 111
-40102610:	100172        	l8ui	a7, a1, 16
-40102613:	c168      	l32i.n	a6, a1, 48
-40102615:	0a0c      	movi.n	a10, 0
-40102617:	d1a9      	s32i.n	a10, a1, 52
-40102619:	050682        	l8ui	a8, a6, 5
-4010261c:	017780        	slli	a7, a7, 24
-4010261f:	000662        	l8ui	a6, a6, 0
-40102622:	317870        	srai	a7, a7, 24
-40102625:	1fc772        	addi	a7, a7, 31
-40102628:	104172        	s8i	a7, a1, 16
-4010262b:	c06680        	sub	a6, a6, a8
-4010262e:	116600        	slli	a6, a6, 16
-40102631:	316060        	srai	a6, a6, 16
-40102634:	1176f0        	slli	a7, a6, 1
-40102637:	f9c782        	addi	a8, a7, -7
-4010263a:	b189      	s32i.n	a8, a1, 44
-4010263c:	f8c772        	addi	a7, a7, -8
-4010263f:	117700        	slli	a7, a7, 16
-40102642:	317070        	srai	a7, a7, 16
-40102645:	a179      	s32i.n	a7, a1, 40
-40102647:	100132        	l8ui	a3, a1, 16
-4010264a:	0f2d      	mov.n	a2, a15
-4010264c:	013380        	slli	a3, a3, 24
-4010264f:	313830        	srai	a3, a3, 24
-40102652:	030a      	add.n	a0, a3, a0
-40102654:	104102        	s8i	a0, a1, 16
-40102657:	c60a      	add.n	a12, a6, a0
-40102659:	010080        	slli	a0, a0, 24
-4010265c:	310800        	srai	a0, a0, 24
-4010265f:	012f07        	blt	a15, a0, 40102664 <tx_pwr_backoff_old+0x90>
-40102662:	002d      	mov.n	a2, a0
-40102664:	104122        	s8i	a2, a1, 16
-40102667:	f169      	s32i.n	a6, a1, 60
-40102669:	ffd901        	l32r	a0, 401025d0 <phy_adc_read_fast+0x250>
-4010266c:	0000c0        	callx0	a0
-4010266f:	014c80        	slli	a4, a12, 24
-40102672:	02dd      	mov.n	a13, a2
-40102674:	1c0c      	movi.n	a12, 1
-40102676:	314840        	srai	a4, a4, 24
-40102679:	e149      	s32i.n	a4, a1, 56
-4010267b:	012f47        	blt	a15, a4, 40102680 <tx_pwr_backoff_old+0xac>
-4010267e:	0c0c      	movi.n	a12, 0
-40102680:	e128      	l32i.n	a2, a1, 56
-40102682:	932fc0        	movnez	a2, a15, a12
-40102685:	ffd201        	l32r	a0, 401025d0 <phy_adc_read_fast+0x250>
-40102688:	0000c0        	callx0	a0
-4010268b:	b158      	l32i.n	a5, a1, 44
-4010268d:	c07d20        	sub	a7, a13, a2
-40102690:	110700        	slli	a0, a7, 16
-40102693:	310000        	srai	a0, a0, 16
-40102696:	052057        	blt	a0, a5, 4010269f <tx_pwr_backoff_old+0xcb>
-40102699:	a8a032        	movi	a3, 168
-4010269c:	51a3d7        	bge	a3, a13, 401026f1 <tx_pwr_backoff_old+0x11d>
-4010269f:	ee8c      	beqz.n	a14, 401026b1 <tx_pwr_backoff_old+0xdd>
-401026a1:	d148      	l32i.n	a4, a1, 52
-401026a3:	a158      	l32i.n	a5, a1, 40
-401026a5:	082407        	blt	a4, a0, 401026b1 <tx_pwr_backoff_old+0xdd>
-401026a8:	052057        	blt	a0, a5, 401026b1 <tx_pwr_backoff_old+0xdd>
-401026ab:	a8a062        	movi	a6, 168
-401026ae:	3fa6d7        	bge	a6, a13, 401026f1 <tx_pwr_backoff_old+0x11d>
-401026b1:	085c      	movi.n	a8, 80
-401026b3:	3a2287        	blt	a2, a8, 401026f1 <tx_pwr_backoff_old+0x11d>
-401026b6:	e198      	l32i.n	a9, a1, 56
-401026b8:	f168      	l32i.n	a6, a1, 60
-401026ba:	939fc0        	movnez	a9, a15, a12
-401026bd:	3019f7        	beq	a9, a15, 401026f1 <tx_pwr_backoff_old+0x11d>
-401026c0:	ee1b      	addi.n	a14, a14, 1
-401026c2:	112700        	slli	a2, a7, 16
-401026c5:	2a0c      	movi.n	a10, 2
-401026c7:	901b      	addi.n	a9, a0, 1
-401026c9:	802b      	addi.n	a8, a0, 2
-401026cb:	b38990        	movgez	a8, a9, a9
-401026ce:	0a0d      	mov.n	a0, a10
-401026d0:	218180        	srai	a8, a8, 1
-401026d3:	c08680        	sub	a8, a6, a8
-401026d6:	880b      	addi.n	a8, a8, -1
-401026d8:	018880        	slli	a8, a8, 24
-401026db:	318880        	srai	a8, a8, 24
-401026de:	0128a6        	blti	a8, 2, 401026e3 <tx_pwr_backoff_old+0x10f>
-401026e1:	080d      	mov.n	a0, a8
-401026e3:	74e0e0        	extui	a14, a14, 0, 8
-401026e6:	312020        	srai	a2, a2, 16
-401026e9:	d129      	s32i.n	a2, a1, 52
-401026eb:	f6cea2        	addi	a10, a14, -10
-401026ee:	f55a56        	bnez	a10, 40102647 <tx_pwr_backoff_old+0x73>
-401026f1:	c108      	l32i.n	a0, a1, 48
-401026f3:	61c8      	l32i.n	a12, a1, 24
-401026f5:	000002        	l8ui	a0, a0, 0
-401026f8:	91f8      	l32i.n	a15, a1, 36
-401026fa:	1130f0        	slli	a3, a0, 1
-401026fd:	1fad37        	bge	a13, a3, 40102720 <tx_pwr_backoff_old+0x14c>
-40102700:	ce9c      	beqz.n	a14, 40102720 <tx_pwr_backoff_old+0x14c>
-40102702:	d020d0        	subx2	a2, a0, a13
-40102705:	321b      	addi.n	a3, a2, 1
-40102707:	222b      	addi.n	a2, a2, 2
-40102709:	b32330        	movgez	a2, a3, a3
-4010270c:	212120        	srai	a2, a2, 1
-4010270f:	112200        	slli	a2, a2, 16
-40102712:	312020        	srai	a2, a2, 16
-40102715:	71d8      	l32i.n	a13, a1, 28
-40102717:	81e8      	l32i.n	a14, a1, 32
-40102719:	5108      	l32i.n	a0, a1, 20
-4010271b:	40c112        	addi	a1, a1, 64
-4010271e:	f00d      	ret.n
-40102720:	020c      	movi.n	a2, 0
-40102722:	fffbc6        	j	40102715 <tx_pwr_backoff_old+0x141>
-40102725:	000000        	ill
+4010256c <tx_pwr_backoff_old>:
+4010256c:	140c      	movi.n	a4, 1
+4010256e:	f51c      	movi.n	a5, 31
+40102570:	080c      	movi.n	a8, 0
+40102572:	38a192        	movi	a9, 0x138
+40102575:	fffa61        	l32r	a6, 40102560 <phy_adc_read_fast+0x248>
+40102578:	c0c112        	addi	a1, a1, -64
+4010257b:	61c9      	s32i.n	a12, a1, 24
+4010257d:	71d9      	s32i.n	a13, a1, 28
+4010257f:	81e9      	s32i.n	a14, a1, 32
+40102581:	91f9      	s32i.n	a15, a1, 36
+40102583:	10c172        	addi	a7, a1, 16
+40102586:	c129      	s32i.n	a2, a1, 48
+40102588:	5109      	s32i.n	a0, a1, 20
+4010258a:	024c      	movi.n	a2, 64
+4010258c:	c138      	l32i.n	a3, a1, 48
+4010258e:	000662        	l8ui	a6, a6, 0
+40102591:	0199      	s32i.n	a9, a1, 0
+40102593:	1189      	s32i.n	a8, a1, 4
+40102595:	016680        	slli	a6, a6, 24
+40102598:	316860        	srai	a6, a6, 24
+4010259b:	fff201        	l32r	a0, 40102564 <phy_adc_read_fast+0x24c>
+4010259e:	0000c0        	callx0	a0
+401025a1:	0e0c      	movi.n	a14, 0
+401025a3:	000c      	movi.n	a0, 0
+401025a5:	6fa0f2        	movi	a15, 111
+401025a8:	100172        	l8ui	a7, a1, 16
+401025ab:	c168      	l32i.n	a6, a1, 48
+401025ad:	0a0c      	movi.n	a10, 0
+401025af:	d1a9      	s32i.n	a10, a1, 52
+401025b1:	050682        	l8ui	a8, a6, 5
+401025b4:	017780        	slli	a7, a7, 24
+401025b7:	000662        	l8ui	a6, a6, 0
+401025ba:	317870        	srai	a7, a7, 24
+401025bd:	1fc772        	addi	a7, a7, 31
+401025c0:	104172        	s8i	a7, a1, 16
+401025c3:	c06680        	sub	a6, a6, a8
+401025c6:	116600        	slli	a6, a6, 16
+401025c9:	316060        	srai	a6, a6, 16
+401025cc:	1176f0        	slli	a7, a6, 1
+401025cf:	f9c782        	addi	a8, a7, -7
+401025d2:	b189      	s32i.n	a8, a1, 44
+401025d4:	f8c772        	addi	a7, a7, -8
+401025d7:	117700        	slli	a7, a7, 16
+401025da:	317070        	srai	a7, a7, 16
+401025dd:	a179      	s32i.n	a7, a1, 40
+401025df:	100132        	l8ui	a3, a1, 16
+401025e2:	0f2d      	mov.n	a2, a15
+401025e4:	013380        	slli	a3, a3, 24
+401025e7:	313830        	srai	a3, a3, 24
+401025ea:	030a      	add.n	a0, a3, a0
+401025ec:	104102        	s8i	a0, a1, 16
+401025ef:	c60a      	add.n	a12, a6, a0
+401025f1:	010080        	slli	a0, a0, 24
+401025f4:	310800        	srai	a0, a0, 24
+401025f7:	012f07        	blt	a15, a0, 401025fc <tx_pwr_backoff_old+0x90>
+401025fa:	002d      	mov.n	a2, a0
+401025fc:	104122        	s8i	a2, a1, 16
+401025ff:	f169      	s32i.n	a6, a1, 60
+40102601:	ffd901        	l32r	a0, 40102568 <phy_adc_read_fast+0x250>
+40102604:	0000c0        	callx0	a0
+40102607:	014c80        	slli	a4, a12, 24
+4010260a:	02dd      	mov.n	a13, a2
+4010260c:	1c0c      	movi.n	a12, 1
+4010260e:	314840        	srai	a4, a4, 24
+40102611:	e149      	s32i.n	a4, a1, 56
+40102613:	012f47        	blt	a15, a4, 40102618 <tx_pwr_backoff_old+0xac>
+40102616:	0c0c      	movi.n	a12, 0
+40102618:	e128      	l32i.n	a2, a1, 56
+4010261a:	932fc0        	movnez	a2, a15, a12
+4010261d:	ffd201        	l32r	a0, 40102568 <phy_adc_read_fast+0x250>
+40102620:	0000c0        	callx0	a0
+40102623:	b158      	l32i.n	a5, a1, 44
+40102625:	c07d20        	sub	a7, a13, a2
+40102628:	110700        	slli	a0, a7, 16
+4010262b:	310000        	srai	a0, a0, 16
+4010262e:	052057        	blt	a0, a5, 40102637 <tx_pwr_backoff_old+0xcb>
+40102631:	a8a032        	movi	a3, 168
+40102634:	51a3d7        	bge	a3, a13, 40102689 <tx_pwr_backoff_old+0x11d>
+40102637:	ee8c      	beqz.n	a14, 40102649 <tx_pwr_backoff_old+0xdd>
+40102639:	d148      	l32i.n	a4, a1, 52
+4010263b:	a158      	l32i.n	a5, a1, 40
+4010263d:	082407        	blt	a4, a0, 40102649 <tx_pwr_backoff_old+0xdd>
+40102640:	052057        	blt	a0, a5, 40102649 <tx_pwr_backoff_old+0xdd>
+40102643:	a8a062        	movi	a6, 168
+40102646:	3fa6d7        	bge	a6, a13, 40102689 <tx_pwr_backoff_old+0x11d>
+40102649:	085c      	movi.n	a8, 80
+4010264b:	3a2287        	blt	a2, a8, 40102689 <tx_pwr_backoff_old+0x11d>
+4010264e:	e198      	l32i.n	a9, a1, 56
+40102650:	f168      	l32i.n	a6, a1, 60
+40102652:	939fc0        	movnez	a9, a15, a12
+40102655:	3019f7        	beq	a9, a15, 40102689 <tx_pwr_backoff_old+0x11d>
+40102658:	ee1b      	addi.n	a14, a14, 1
+4010265a:	112700        	slli	a2, a7, 16
+4010265d:	2a0c      	movi.n	a10, 2
+4010265f:	901b      	addi.n	a9, a0, 1
+40102661:	802b      	addi.n	a8, a0, 2
+40102663:	b38990        	movgez	a8, a9, a9
+40102666:	0a0d      	mov.n	a0, a10
+40102668:	218180        	srai	a8, a8, 1
+4010266b:	c08680        	sub	a8, a6, a8
+4010266e:	880b      	addi.n	a8, a8, -1
+40102670:	018880        	slli	a8, a8, 24
+40102673:	318880        	srai	a8, a8, 24
+40102676:	0128a6        	blti	a8, 2, 4010267b <tx_pwr_backoff_old+0x10f>
+40102679:	080d      	mov.n	a0, a8
+4010267b:	74e0e0        	extui	a14, a14, 0, 8
+4010267e:	312020        	srai	a2, a2, 16
+40102681:	d129      	s32i.n	a2, a1, 52
+40102683:	f6cea2        	addi	a10, a14, -10
+40102686:	f55a56        	bnez	a10, 401025df <tx_pwr_backoff_old+0x73>
+40102689:	c108      	l32i.n	a0, a1, 48
+4010268b:	61c8      	l32i.n	a12, a1, 24
+4010268d:	000002        	l8ui	a0, a0, 0
+40102690:	91f8      	l32i.n	a15, a1, 36
+40102692:	1130f0        	slli	a3, a0, 1
+40102695:	1fad37        	bge	a13, a3, 401026b8 <tx_pwr_backoff_old+0x14c>
+40102698:	ce9c      	beqz.n	a14, 401026b8 <tx_pwr_backoff_old+0x14c>
+4010269a:	d020d0        	subx2	a2, a0, a13
+4010269d:	321b      	addi.n	a3, a2, 1
+4010269f:	222b      	addi.n	a2, a2, 2
+401026a1:	b32330        	movgez	a2, a3, a3
+401026a4:	212120        	srai	a2, a2, 1
+401026a7:	112200        	slli	a2, a2, 16
+401026aa:	312020        	srai	a2, a2, 16
+401026ad:	71d8      	l32i.n	a13, a1, 28
+401026af:	81e8      	l32i.n	a14, a1, 32
+401026b1:	5108      	l32i.n	a0, a1, 20
+401026b3:	40c112        	addi	a1, a1, 64
+401026b6:	f00d      	ret.n
+401026b8:	020c      	movi.n	a2, 0
+401026ba:	fffbc6        	j	401026ad <tx_pwr_backoff_old+0x141>
+401026bd:	000000        	ill
 
-40102728 <unsign_to_sign>:
-40102728:	160c      	movi.n	a6, 1
-4010272a:	530b      	addi.n	a5, a3, -1
-4010272c:	f0c112        	addi	a1, a1, -16
-4010272f:	0109      	s32i.n	a0, a1, 0
-40102731:	401500        	ssl	a5
-40102734:	020d      	mov.n	a0, a2
-40102736:	a14600        	sll	a4, a6
-40102739:	0e2247        	blt	a2, a4, 4010274b <unsign_to_sign+0x23>
-4010273c:	401300        	ssl	a3
-4010273f:	a10600        	sll	a0, a6
-40102742:	c00200        	sub	a0, a2, a0
-40102745:	110000        	slli	a0, a0, 16
-40102748:	310000        	srai	a0, a0, 16
-4010274b:	002d      	mov.n	a2, a0
-4010274d:	0108      	l32i.n	a0, a1, 0
-4010274f:	10c112        	addi	a1, a1, 16
-40102752:	f00d      	ret.n
-40102754:	009600        	excw
-40102757:	fe0060        	excw
-4010275a:	ff3ff1        	l32r	a15, 40102458 <phy_adc_read_fast+0xd8>
-4010275d:	7f          	.byte 0x7f
-4010275e:	a40000        	extui	a0, a0, 0, 11
-40102761:	3ffe90        	excw
+401026c0 <unsign_to_sign>:
+401026c0:	160c      	movi.n	a6, 1
+401026c2:	530b      	addi.n	a5, a3, -1
+401026c4:	f0c112        	addi	a1, a1, -16
+401026c7:	0109      	s32i.n	a0, a1, 0
+401026c9:	401500        	ssl	a5
+401026cc:	020d      	mov.n	a0, a2
+401026ce:	a14600        	sll	a4, a6
+401026d1:	0e2247        	blt	a2, a4, 401026e3 <unsign_to_sign+0x23>
+401026d4:	401300        	ssl	a3
+401026d7:	a10600        	sll	a0, a6
+401026da:	c00200        	sub	a0, a2, a0
+401026dd:	110000        	slli	a0, a0, 16
+401026e0:	310000        	srai	a0, a0, 16
+401026e3:	002d      	mov.n	a2, a0
+401026e5:	0108      	l32i.n	a0, a1, 0
+401026e7:	10c112        	addi	a1, a1, 16
+401026ea:	f00d      	ret.n
+401026ec:	009600        	excw
+401026ef:	fe0060        	excw
+401026f2:	ff3ff1        	l32r	a15, 401023f0 <phy_adc_read_fast+0xd8>
+401026f5:	7f          	.byte 0x7f
+401026f6:	840000        	extui	a0, a0, 0, 9
+401026f9:	3ffe90        	excw
 
-40102764 <phy_get_bb_freqoffset>:
-40102764:	f0c112        	addi	a1, a1, -16
-40102767:	0109      	s32i.n	a0, a1, 0
-40102769:	11c9      	s32i.n	a12, a1, 4
-4010276b:	fffb21        	l32r	a2, 40102758 <unsign_to_sign+0x30>
-4010276e:	fff9c1        	l32r	a12, 40102754 <unsign_to_sign+0x2c>
-40102771:	f00c      	movi.n	a0, 15
-40102773:	0020c0        	memw
-40102776:	8f2222        	l32i	a2, a2, 0x23c
-40102779:	352020        	extui	a2, a2, 16, 4
-4010277c:	2a82f6        	bgeui	a2, 8, 401027aa <phy_get_bb_freqoffset+0x46>
-4010277f:	0020c0        	memw
-40102782:	802c22        	l32i	a2, a12, 0x200
-40102785:	1b6207        	bbci	a2, 0, 401027a4 <phy_get_bb_freqoffset+0x40>
-40102788:	742820        	extui	a2, a2, 8, 8
-4010278b:	830c      	movi.n	a3, 8
-4010278d:	fff985        	call0	40102728 <unsign_to_sign>
-40102790:	f00c      	movi.n	a0, 15
-40102792:	6ba032        	movi	a3, 107
-40102795:	d12230        	mul16s	a2, a2, a3
-40102798:	212620        	srai	a2, a2, 6
-4010279b:	112200        	slli	a2, a2, 16
-4010279e:	312020        	srai	a2, a2, 16
-401027a1:	000206        	j	401027ad <phy_get_bb_freqoffset+0x49>
-401027a4:	ffee21        	l32r	a2, 4010275c <unsign_to_sign+0x34>
-401027a7:	000086        	j	401027ad <phy_get_bb_freqoffset+0x49>
-401027aa:	ffec21        	l32r	a2, 4010275c <unsign_to_sign+0x34>
-401027ad:	0020c0        	memw
-401027b0:	b72c52        	l32i	a5, a12, 0x2dc
-401027b3:	205500        	or	a5, a5, a0
-401027b6:	0020c0        	memw
-401027b9:	ffe941        	l32r	a4, 40102760 <unsign_to_sign+0x38>
-401027bc:	b76c52        	s32i	a5, a12, 0x2dc
-401027bf:	0108      	l32i.n	a0, a1, 0
-401027c1:	11c8      	l32i.n	a12, a1, 4
-401027c3:	10c112        	addi	a1, a1, 16
-401027c6:	035422        	s16i	a2, a4, 6
-401027c9:	f00d      	ret.n
-401027cb:	9a0000        	excw
-401027ce:	686000        	excw
-401027d1:	e690a5        	excw
-401027d4:	b4d027        	bbs	a0, a2, 4010278c <phy_get_bb_freqoffset+0x28>
-401027d7:	21ea      	add.n	a2, a1, a14
+401026fc <phy_get_bb_freqoffset>:
+401026fc:	f0c112        	addi	a1, a1, -16
+401026ff:	0109      	s32i.n	a0, a1, 0
+40102701:	11c9      	s32i.n	a12, a1, 4
+40102703:	fffb21        	l32r	a2, 401026f0 <unsign_to_sign+0x30>
+40102706:	fff9c1        	l32r	a12, 401026ec <unsign_to_sign+0x2c>
+40102709:	f00c      	movi.n	a0, 15
+4010270b:	0020c0        	memw
+4010270e:	8f2222        	l32i	a2, a2, 0x23c
+40102711:	352020        	extui	a2, a2, 16, 4
+40102714:	2a82f6        	bgeui	a2, 8, 40102742 <phy_get_bb_freqoffset+0x46>
+40102717:	0020c0        	memw
+4010271a:	802c22        	l32i	a2, a12, 0x200
+4010271d:	1b6207        	bbci	a2, 0, 4010273c <phy_get_bb_freqoffset+0x40>
+40102720:	742820        	extui	a2, a2, 8, 8
+40102723:	830c      	movi.n	a3, 8
+40102725:	fff985        	call0	401026c0 <unsign_to_sign>
+40102728:	f00c      	movi.n	a0, 15
+4010272a:	6ba032        	movi	a3, 107
+4010272d:	d12230        	mul16s	a2, a2, a3
+40102730:	212620        	srai	a2, a2, 6
+40102733:	112200        	slli	a2, a2, 16
+40102736:	312020        	srai	a2, a2, 16
+40102739:	000206        	j	40102745 <phy_get_bb_freqoffset+0x49>
+4010273c:	ffee21        	l32r	a2, 401026f4 <unsign_to_sign+0x34>
+4010273f:	000086        	j	40102745 <phy_get_bb_freqoffset+0x49>
+40102742:	ffec21        	l32r	a2, 401026f4 <unsign_to_sign+0x34>
+40102745:	0020c0        	memw
+40102748:	b72c52        	l32i	a5, a12, 0x2dc
+4010274b:	205500        	or	a5, a5, a0
+4010274e:	0020c0        	memw
+40102751:	ffe941        	l32r	a4, 401026f8 <unsign_to_sign+0x38>
+40102754:	b76c52        	s32i	a5, a12, 0x2dc
+40102757:	0108      	l32i.n	a0, a1, 0
+40102759:	11c8      	l32i.n	a12, a1, 4
+4010275b:	10c112        	addi	a1, a1, 16
+4010275e:	035422        	s16i	a2, a4, 6
+40102761:	f00d      	ret.n
+40102763:	9a0000        	excw
+40102766:	686000        	excw
+40102769:	e690a5        	excw
+4010276c:	b4d027        	bbs	a0, a2, 40102724 <phy_get_bb_freqoffset+0x28>
+4010276f:	21ea      	add.n	a2, a1, a14
 
-401027d8 <phy_get_bb_evm>:
-401027d8:	fffd21        	l32r	a2, 401027cc <phy_get_bb_freqoffset+0x68>
-401027db:	180c      	movi.n	a8, 1
-401027dd:	fee251        	l32r	a5, 40102368 <phy_get_mactime+0x14>
-401027e0:	0020c0        	memw
-401027e3:	d22572        	l32i	a7, a5, 0x348
-401027e6:	207780        	or	a7, a7, a8
+40102770 <phy_get_bb_evm>:
+40102770:	fffd21        	l32r	a2, 40102764 <phy_get_bb_freqoffset+0x68>
+40102773:	180c      	movi.n	a8, 1
+40102775:	fee251        	l32r	a5, 40102300 <phy_get_mactime+0x14>
+40102778:	0020c0        	memw
+4010277b:	d22572        	l32i	a7, a5, 0x348
+4010277e:	207780        	or	a7, a7, a8
+40102781:	0020c0        	memw
+40102784:	d26572        	s32i	a7, a5, 0x348
+40102787:	e67c      	movi.n	a6, -2
+40102789:	0020c0        	memw
+4010278c:	d22542        	l32i	a4, a5, 0x348
+4010278f:	104460        	and	a4, a4, a6
+40102792:	0020c0        	memw
+40102795:	d26542        	s32i	a4, a5, 0x348
+40102798:	f69731        	l32r	a3, 401001f4 <Cache_Read_Enable_New+0x40>
+4010279b:	0020c0        	memw
+4010279e:	962332        	l32i	a3, a3, 0x258
+401027a1:	a40c      	movi.n	a4, 10
+401027a3:	343c30        	extui	a3, a3, 12, 4
+401027a6:	103340        	and	a3, a3, a4
+401027a9:	0b9366        	bnei	a3, 10, 401027b8 <phy_get_bb_evm+0x48>
+401027ac:	ffef91        	l32r	a9, 40102768 <phy_get_bb_freqoffset+0x6c>
+401027af:	0020c0        	memw
+401027b2:	dd6292        	s32i	a9, a2, 0x374
+401027b5:	000206        	j	401027c1 <phy_get_bb_evm+0x51>
+401027b8:	ffeda1        	l32r	a10, 4010276c <phy_get_bb_freqoffset+0x70>
+401027bb:	0020c0        	memw
+401027be:	dd62a2        	s32i	a10, a2, 0x374
+401027c1:	ffca21        	l32r	a2, 401026ec <unsign_to_sign+0x2c>
+401027c4:	0020c0        	memw
+401027c7:	802222        	l32i	a2, a2, 0x200
+401027ca:	c52020        	extui	a2, a2, 16, 13
+401027cd:	f00d      	ret.n
+401027cf:	ffff00        	excw
+401027d2:	ff          	.byte 0xff
+401027d3:	7f          	.byte 0x7f
+401027d4:	ff          	.byte 0xff
+401027d5:	ff          	.byte 0xff
+401027d6:	ff          	.byte 0xff
+401027d7:	0f          	.byte 0xf
+
+401027d8 <pm_rtc_clock_cali>:
+401027d8:	f0c112        	addi	a1, a1, -16
+401027db:	0109      	s32i.n	a0, a1, 0
+401027dd:	21d9      	s32i.n	a13, a1, 8
+401027df:	11c9      	s32i.n	a12, a1, 4
+401027e1:	fffb51        	l32r	a5, 401027d0 <phy_get_bb_evm+0x60>
+401027e4:	02cd      	mov.n	a12, a2
+401027e6:	f6e0d1        	l32r	a13, 40100368 <esp_crc8+0xd8>
 401027e9:	0020c0        	memw
-401027ec:	d26572        	s32i	a7, a5, 0x348
-401027ef:	e67c      	movi.n	a6, -2
-401027f1:	0020c0        	memw
-401027f4:	d22542        	l32i	a4, a5, 0x348
-401027f7:	104460        	and	a4, a4, a6
-401027fa:	0020c0        	memw
-401027fd:	d26542        	s32i	a4, a5, 0x348
-40102800:	f67d31        	l32r	a3, 401001f4 <Cache_Read_Enable_New+0x40>
-40102803:	0020c0        	memw
-40102806:	962332        	l32i	a3, a3, 0x258
-40102809:	a40c      	movi.n	a4, 10
-4010280b:	343c30        	extui	a3, a3, 12, 4
-4010280e:	103340        	and	a3, a3, a4
-40102811:	0b9366        	bnei	a3, 10, 40102820 <phy_get_bb_evm+0x48>
-40102814:	ffef91        	l32r	a9, 401027d0 <phy_get_bb_freqoffset+0x6c>
-40102817:	0020c0        	memw
-4010281a:	dd6292        	s32i	a9, a2, 0x374
-4010281d:	000206        	j	40102829 <phy_get_bb_evm+0x51>
-40102820:	ffeda1        	l32r	a10, 401027d4 <phy_get_bb_freqoffset+0x70>
-40102823:	0020c0        	memw
-40102826:	dd62a2        	s32i	a10, a2, 0x374
-40102829:	ffca21        	l32r	a2, 40102754 <unsign_to_sign+0x2c>
-4010282c:	0020c0        	memw
-4010282f:	802222        	l32i	a2, a2, 0x200
-40102832:	c52020        	extui	a2, a2, 16, 13
-40102835:	f00d      	ret.n
-40102837:	ffff00        	excw
-4010283a:	ff          	.byte 0xff
-4010283b:	7f          	.byte 0x7f
-4010283c:	ff          	.byte 0xff
-4010283d:	ff          	.byte 0xff
-4010283e:	ff          	.byte 0xff
-4010283f:	0f          	.byte 0xf
+401027ec:	5c2d42        	l32i	a4, a13, 0x170
+401027ef:	104450        	and	a4, a4, a5
+401027f2:	0020c0        	memw
+401027f5:	5c6d42        	s32i	a4, a13, 0x170
+401027f8:	01a132        	movi	a3, 0x101
+401027fb:	0020c0        	memw
+401027fe:	5b6d32        	s32i	a3, a13, 0x16c
+40102801:	f90121        	l32r	a2, 40100c08 <prvInsertBlockIntoUsedList+0x28>
+40102804:	0020c0        	memw
+40102807:	5b2d02        	l32i	a0, a13, 0x16c
+4010280a:	200020        	or	a0, a0, a2
+4010280d:	0020c0        	memw
+40102810:	64a022        	movi	a2, 100
+40102813:	5b6d02        	s32i	a0, a13, 0x16c
+40102816:	faf901        	l32r	a0, 401013fc <system_restart_core+0x40>
+40102819:	0000c0        	callx0	a0
+4010281c:	0020c0        	memw
+4010281f:	5c2d62        	l32i	a6, a13, 0x170
+40102822:	008696        	bltz	a6, 4010282e <pm_rtc_clock_cali+0x56>
+40102825:	0020c0        	memw
+40102828:	5c2d72        	l32i	a7, a13, 0x170
+4010282b:	ff67d6        	bgez	a7, 40102825 <pm_rtc_clock_cali+0x4d>
+4010282e:	ffe931        	l32r	a3, 401027d4 <phy_get_bb_evm+0x64>
+40102831:	0020c0        	memw
+40102834:	feb701        	l32r	a0, 40102310 <phy_get_mactime+0x24>
+40102837:	5c2d22        	l32i	a2, a13, 0x170
+4010283a:	010002        	l8ui	a0, a0, 1
+4010283d:	102230        	and	a2, a2, a3
+40102840:	408c      	beqz.n	a0, 40102848 <pm_rtc_clock_cali+0x70>
+40102842:	071026        	beqi	a0, 1, 4010284d <pm_rtc_clock_cali+0x75>
+40102845:	3f2026        	beqi	a0, 2, 40102888 <pm_rtc_clock_cali+0xb0>
+40102848:	832c      	movi.n	a3, 40
+4010284a:	000046        	j	4010284f <pm_rtc_clock_cali+0x77>
+4010284d:	a31c      	movi.n	a3, 26
+4010284f:	1122c0        	slli	a2, a2, 4
+40102852:	f75801        	l32r	a0, 401005b4 <wdt_feed+0x17c>
+40102855:	0000c0        	callx0	a0
+40102858:	21d8      	l32i.n	a13, a1, 8
+4010285a:	12ac      	beqz.n	a2, 4010287f <pm_rtc_clock_cali+0xa7>
+4010285c:	1c08      	l32i.n	a0, a12, 4
+4010285e:	b09c      	beqz.n	a0, 4010287d <pm_rtc_clock_cali+0xa5>
+40102860:	ffa142        	movi	a4, 0x1ff
+40102863:	05b027        	bgeu	a0, a2, 4010286c <pm_rtc_clock_cali+0x94>
+40102866:	c03200        	sub	a3, a2, a0
+40102869:	000086        	j	4010286f <pm_rtc_clock_cali+0x97>
+4010286c:	c03020        	sub	a3, a0, a2
+4010286f:	0c3437        	bltu	a4, a3, 4010287f <pm_rtc_clock_cali+0xa7>
+40102872:	a03220        	addx4	a3, a2, a2
+40102875:	902000        	addx2	a2, a0, a0
+40102878:	223a      	add.n	a2, a2, a3
+4010287a:	412320        	srli	a2, a2, 3
+4010287d:	1c29      	s32i.n	a2, a12, 4
+4010287f:	11c8      	l32i.n	a12, a1, 4
+40102881:	0108      	l32i.n	a0, a1, 0
+40102883:	10c112        	addi	a1, a1, 16
+40102886:	f00d      	ret.n
+40102888:	831c      	movi.n	a3, 24
+4010288a:	fff046        	j	4010284f <pm_rtc_clock_cali+0x77>
+4010288d:	000000        	ill
+40102890:	008000        	excw
+40102893:	909000        	addx2	a9, a0, a0
+40102896:	fe          	.byte 0xfe
+40102897:	3f          	.byte 0x3f
+40102898:	fe9064        	excw
+4010289b:	3f          	.byte 0x3f
+4010289c:	fe9065        	excw
+4010289f:	3f          	.byte 0x3f
+401028a0:	ff          	.byte 0xff
+401028a1:	cf          	.byte 0xcf
+401028a2:	ff          	.byte 0xff
+401028a3:	ff          	.byte 0xff
+401028a4:	ff          	.byte 0xff
+401028a5:	ff          	.byte 0xff
+401028a6:	2cfff0        	excw
+401028a9:	22dd      	excw
+401028ab:	fa4140        	excw
 
-40102840 <pm_rtc_clock_cali>:
-40102840:	f0c112        	addi	a1, a1, -16
-40102843:	0109      	s32i.n	a0, a1, 0
-40102845:	21d9      	s32i.n	a13, a1, 8
-40102847:	11c9      	s32i.n	a12, a1, 4
-40102849:	fffb51        	l32r	a5, 40102838 <phy_get_bb_evm+0x60>
-4010284c:	02cd      	mov.n	a12, a2
-4010284e:	f6c6d1        	l32r	a13, 40100368 <esp_crc8+0xd8>
-40102851:	0020c0        	memw
-40102854:	5c2d42        	l32i	a4, a13, 0x170
-40102857:	104450        	and	a4, a4, a5
-4010285a:	0020c0        	memw
-4010285d:	5c6d42        	s32i	a4, a13, 0x170
-40102860:	01a132        	movi	a3, 0x101
-40102863:	0020c0        	memw
-40102866:	5b6d32        	s32i	a3, a13, 0x16c
-40102869:	f8e721        	l32r	a2, 40100c08 <prvInsertBlockIntoUsedList+0x28>
-4010286c:	0020c0        	memw
-4010286f:	5b2d02        	l32i	a0, a13, 0x16c
-40102872:	200020        	or	a0, a0, a2
-40102875:	0020c0        	memw
-40102878:	64a022        	movi	a2, 100
-4010287b:	5b6d02        	s32i	a0, a13, 0x16c
-4010287e:	fadf01        	l32r	a0, 401013fc <system_restart_core+0x40>
-40102881:	0000c0        	callx0	a0
-40102884:	0020c0        	memw
-40102887:	5c2d62        	l32i	a6, a13, 0x170
-4010288a:	008696        	bltz	a6, 40102896 <pm_rtc_clock_cali+0x56>
-4010288d:	0020c0        	memw
-40102890:	5c2d72        	l32i	a7, a13, 0x170
-40102893:	ff67d6        	bgez	a7, 4010288d <pm_rtc_clock_cali+0x4d>
-40102896:	ffe931        	l32r	a3, 4010283c <phy_get_bb_evm+0x64>
-40102899:	0020c0        	memw
-4010289c:	feb701        	l32r	a0, 40102378 <phy_get_mactime+0x24>
-4010289f:	5c2d22        	l32i	a2, a13, 0x170
-401028a2:	010002        	l8ui	a0, a0, 1
-401028a5:	102230        	and	a2, a2, a3
-401028a8:	408c      	beqz.n	a0, 401028b0 <pm_rtc_clock_cali+0x70>
-401028aa:	071026        	beqi	a0, 1, 401028b5 <pm_rtc_clock_cali+0x75>
-401028ad:	3f2026        	beqi	a0, 2, 401028f0 <pm_rtc_clock_cali+0xb0>
-401028b0:	832c      	movi.n	a3, 40
-401028b2:	000046        	j	401028b7 <pm_rtc_clock_cali+0x77>
-401028b5:	a31c      	movi.n	a3, 26
-401028b7:	1122c0        	slli	a2, a2, 4
-401028ba:	f73e01        	l32r	a0, 401005b4 <wdt_feed+0x17c>
-401028bd:	0000c0        	callx0	a0
-401028c0:	21d8      	l32i.n	a13, a1, 8
-401028c2:	12ac      	beqz.n	a2, 401028e7 <pm_rtc_clock_cali+0xa7>
-401028c4:	1c08      	l32i.n	a0, a12, 4
-401028c6:	b09c      	beqz.n	a0, 401028e5 <pm_rtc_clock_cali+0xa5>
-401028c8:	ffa142        	movi	a4, 0x1ff
-401028cb:	05b027        	bgeu	a0, a2, 401028d4 <pm_rtc_clock_cali+0x94>
-401028ce:	c03200        	sub	a3, a2, a0
-401028d1:	000086        	j	401028d7 <pm_rtc_clock_cali+0x97>
-401028d4:	c03020        	sub	a3, a0, a2
-401028d7:	0c3437        	bltu	a4, a3, 401028e7 <pm_rtc_clock_cali+0xa7>
-401028da:	a03220        	addx4	a3, a2, a2
-401028dd:	902000        	addx2	a2, a0, a0
-401028e0:	223a      	add.n	a2, a2, a3
-401028e2:	412320        	srli	a2, a2, 3
-401028e5:	1c29      	s32i.n	a2, a12, 4
-401028e7:	11c8      	l32i.n	a12, a1, 4
-401028e9:	0108      	l32i.n	a0, a1, 0
-401028eb:	10c112        	addi	a1, a1, 16
-401028ee:	f00d      	ret.n
-401028f0:	831c      	movi.n	a3, 24
-401028f2:	fff046        	j	401028b7 <pm_rtc_clock_cali+0x77>
-401028f5:	000000        	ill
-401028f8:	008000        	excw
-401028fb:	90b000        	addx2	a11, a0, a0
-401028fe:	fe          	.byte 0xfe
-401028ff:	3f          	.byte 0x3f
-40102900:	fe9084        	excw
-40102903:	3f          	.byte 0x3f
-40102904:	fe9085        	call0	40101210 <load_non_32_wide_handler+0x64>
-40102907:	3f          	.byte 0x3f
-40102908:	ff          	.byte 0xff
-40102909:	cf          	.byte 0xcf
-4010290a:	ff          	.byte 0xff
-4010290b:	ff          	.byte 0xff
-4010290c:	ff          	.byte 0xff
-4010290d:	ff          	.byte 0xff
-4010290e:	2cfff0        	excw
-40102911:	22dd      	excw
-40102913:	fa4140        	excw
+401028ac <pm_goto_sleep>:
+401028ac:	fffa41        	l32r	a4, 40102894 <pm_rtc_clock_cali+0xbc>
+401028af:	f0c112        	addi	a1, a1, -16
+401028b2:	2109      	s32i.n	a0, a1, 8
+401028b4:	011462        	l16ui	a6, a4, 2
+401028b7:	0169      	s32i.n	a6, a1, 0
+401028b9:	fff551        	l32r	a5, 40102890 <pm_rtc_clock_cali+0xb8>
+401028bc:	f64e01        	l32r	a0, 401001f4 <Cache_Read_Enable_New+0x40>
+401028bf:	0020c0        	memw
+401028c2:	962032        	l32i	a3, a0, 0x258
+401028c5:	103350        	and	a3, a3, a5
+401028c8:	413f30        	srli	a3, a3, 15
+401028cb:	1139      	s32i.n	a3, a1, 4
+401028cd:	0b1226        	beqi	a2, 1, 401028dc <pm_goto_sleep+0x30>
+401028d0:	082226        	beqi	a2, 2, 401028dc <pm_goto_sleep+0x30>
+401028d3:	120c      	movi.n	a2, 1
+401028d5:	2108      	l32i.n	a0, a1, 8
+401028d7:	10c112        	addi	a1, a1, 16
+401028da:	f00d      	ret.n
+401028dc:	fff301        	l32r	a0, 401028a8 <pm_rtc_clock_cali+0xd0>
+401028df:	0000c0        	callx0	a0
+401028e2:	f64441        	l32r	a4, 401001f4 <Cache_Read_Enable_New+0x40>
+401028e5:	ffec81        	l32r	a8, 40102898 <pm_rtc_clock_cali+0xc0>
+401028e8:	ffeb01        	l32r	a0, 40102894 <pm_rtc_clock_cali+0xbc>
+401028eb:	000882        	l8ui	a8, a8, 0
+401028ee:	000072        	l8ui	a7, a0, 0
+401028f1:	054022        	s8i	a2, a0, 5
+401028f4:	107780        	and	a7, a7, a8
+401028f7:	207270        	or	a7, a2, a7
+401028fa:	044072        	s8i	a7, a0, 4
+401028fd:	747070        	extui	a7, a7, 0, 8
+40102900:	fcf756        	bnez	a7, 401028d3 <pm_goto_sleep+0x27>
+40102903:	fb7c      	movi.n	a11, -1
+40102905:	ffe661        	l32r	a6, 401028a0 <pm_rtc_clock_cali+0xc8>
+40102908:	ffe531        	l32r	a3, 4010289c <pm_rtc_clock_cali+0xc4>
+4010290b:	120c      	movi.n	a2, 1
+4010290d:	004322        	s8i	a2, a3, 0
+40102910:	ffe571        	l32r	a7, 401028a4 <pm_rtc_clock_cali+0xcc>
+40102913:	c0afa2        	movi	a10, -64
+40102916:	f64121        	l32r	a2, 4010021c <NmiTimSetFunc+0x20>
+40102919:	0020c0        	memw
+4010291c:	1198      	l32i.n	a9, a1, 4
+4010291e:	4962b2        	s32i	a11, a2, 0x124
+40102921:	461966        	bnei	a9, 1, 4010296b <pm_goto_sleep+0xbf>
+40102924:	0188      	l32i.n	a8, a1, 0
+40102926:	345080        	extui	a5, a8, 0, 4
+40102929:	115500        	slli	a5, a5, 16
+4010292c:	0020c0        	memw
+4010292f:	822432        	l32i	a3, a4, 0x208
+40102932:	103370        	and	a3, a3, a7
+40102935:	203350        	or	a3, a3, a5
+40102938:	0020c0        	memw
+4010293b:	826432        	s32i	a3, a4, 0x208
+4010293e:	14b480        	extui	a11, a8, 4, 2
+40102941:	11bb40        	slli	a11, a11, 12
+40102944:	0020c0        	memw
+40102947:	822492        	l32i	a9, a4, 0x208
+4010294a:	109960        	and	a9, a9, a6
+4010294d:	2099b0        	or	a9, a9, a11
+40102950:	0020c0        	memw
+40102953:	826492        	s32i	a9, a4, 0x208
+40102956:	548680        	extui	a8, a8, 6, 6
+40102959:	0020c0        	memw
+4010295c:	872452        	l32i	a5, a4, 0x21c
+4010295f:	1055a0        	and	a5, a5, a10
+40102962:	205580        	or	a5, a5, a8
+40102965:	0020c0        	memw
+40102968:	876452        	s32i	a5, a4, 0x21c
+4010296b:	fe6591        	l32r	a9, 40102300 <phy_get_mactime+0x14>
+4010296e:	f70c81        	l32r	a8, 401005a0 <wdt_feed+0x168>
+40102971:	0020c0        	memw
+40102974:	422252        	l32i	a5, a2, 0x108
+40102977:	205580        	or	a5, a5, a8
+4010297a:	0020c0        	memw
+4010297d:	426252        	s32i	a5, a2, 0x108
+40102980:	8b0c      	movi.n	a11, 8
+40102982:	337c      	movi.n	a3, -13
+40102984:	0020c0        	memw
+40102987:	d02982        	l32i	a8, a9, 0x340
+4010298a:	108830        	and	a8, a8, a3
+4010298d:	2088b0        	or	a8, a8, a11
+40102990:	0020c0        	memw
+40102993:	64a052        	movi	a5, 100
+40102996:	d06982        	s32i	a8, a9, 0x340
+40102999:	1198      	l32i.n	a9, a1, 4
+4010299b:	550b      	addi.n	a5, a5, -1
+4010299d:	fa0566        	bnei	a5, -1, 4010299b <pm_goto_sleep+0xef>
+401029a0:	511966        	bnei	a9, 1, 401029f5 <pm_goto_sleep+0x149>
+401029a3:	0020c0        	memw
+401029a6:	4a22b2        	l32i	a11, a2, 0x128
+401029a9:	14b0b0        	extui	a11, a11, 0, 2
+401029ac:	abcc      	bnez.n	a11, 401029ba <pm_goto_sleep+0x10e>
+401029ae:	0020c0        	memw
+401029b1:	4a2232        	l32i	a3, a2, 0x128
+401029b4:	143030        	extui	a3, a3, 0, 2
+401029b7:	ff3316        	beqz	a3, 401029ae <pm_goto_sleep+0x102>
+401029ba:	0020c0        	memw
+401029bd:	822432        	l32i	a3, a4, 0x208
+401029c0:	103370        	and	a3, a3, a7
+401029c3:	0020c0        	memw
+401029c6:	826432        	s32i	a3, a4, 0x208
+401029c9:	0020c0        	memw
+401029cc:	8224b2        	l32i	a11, a4, 0x208
+401029cf:	10bb60        	and	a11, a11, a6
+401029d2:	0020c0        	memw
+401029d5:	8264b2        	s32i	a11, a4, 0x208
+401029d8:	0020c0        	memw
+401029db:	872492        	l32i	a9, a4, 0x21c
+401029de:	1099a0        	and	a9, a9, a10
+401029e1:	0020c0        	memw
+401029e4:	876492        	s32i	a9, a4, 0x21c
+401029e7:	280c      	movi.n	a8, 2
+401029e9:	0020c0        	memw
+401029ec:	4a2252        	l32i	a5, a2, 0x128
+401029ef:	105580        	and	a5, a5, a8
+401029f2:	064052        	s8i	a5, a0, 6
+401029f5:	020c      	movi.n	a2, 0
+401029f7:	ffb686        	j	401028d5 <pm_goto_sleep+0x29>
+	...
 
-40102914 <pm_goto_sleep>:
-40102914:	fffa41        	l32r	a4, 401028fc <pm_rtc_clock_cali+0xbc>
-40102917:	f0c112        	addi	a1, a1, -16
-4010291a:	2109      	s32i.n	a0, a1, 8
-4010291c:	011462        	l16ui	a6, a4, 2
-4010291f:	0169      	s32i.n	a6, a1, 0
-40102921:	fff551        	l32r	a5, 401028f8 <pm_rtc_clock_cali+0xb8>
-40102924:	f63401        	l32r	a0, 401001f4 <Cache_Read_Enable_New+0x40>
-40102927:	0020c0        	memw
-4010292a:	962032        	l32i	a3, a0, 0x258
-4010292d:	103350        	and	a3, a3, a5
-40102930:	413f30        	srli	a3, a3, 15
-40102933:	1139      	s32i.n	a3, a1, 4
-40102935:	0b1226        	beqi	a2, 1, 40102944 <pm_goto_sleep+0x30>
-40102938:	082226        	beqi	a2, 2, 40102944 <pm_goto_sleep+0x30>
-4010293b:	120c      	movi.n	a2, 1
-4010293d:	2108      	l32i.n	a0, a1, 8
-4010293f:	10c112        	addi	a1, a1, 16
-40102942:	f00d      	ret.n
-40102944:	fff301        	l32r	a0, 40102910 <pm_rtc_clock_cali+0xd0>
-40102947:	0000c0        	callx0	a0
-4010294a:	f62a41        	l32r	a4, 401001f4 <Cache_Read_Enable_New+0x40>
-4010294d:	ffec81        	l32r	a8, 40102900 <pm_rtc_clock_cali+0xc0>
-40102950:	ffeb01        	l32r	a0, 401028fc <pm_rtc_clock_cali+0xbc>
-40102953:	000882        	l8ui	a8, a8, 0
-40102956:	000072        	l8ui	a7, a0, 0
-40102959:	054022        	s8i	a2, a0, 5
-4010295c:	107780        	and	a7, a7, a8
-4010295f:	207270        	or	a7, a2, a7
-40102962:	044072        	s8i	a7, a0, 4
-40102965:	747070        	extui	a7, a7, 0, 8
-40102968:	fcf756        	bnez	a7, 4010293b <pm_goto_sleep+0x27>
-4010296b:	fb7c      	movi.n	a11, -1
-4010296d:	ffe661        	l32r	a6, 40102908 <pm_rtc_clock_cali+0xc8>
-40102970:	ffe531        	l32r	a3, 40102904 <pm_rtc_clock_cali+0xc4>
-40102973:	120c      	movi.n	a2, 1
-40102975:	004322        	s8i	a2, a3, 0
-40102978:	ffe571        	l32r	a7, 4010290c <pm_rtc_clock_cali+0xcc>
-4010297b:	c0afa2        	movi	a10, -64
-4010297e:	f62721        	l32r	a2, 4010021c <NmiTimSetFunc+0x20>
-40102981:	0020c0        	memw
-40102984:	1198      	l32i.n	a9, a1, 4
-40102986:	4962b2        	s32i	a11, a2, 0x124
-40102989:	461966        	bnei	a9, 1, 401029d3 <pm_goto_sleep+0xbf>
-4010298c:	0188      	l32i.n	a8, a1, 0
-4010298e:	345080        	extui	a5, a8, 0, 4
-40102991:	115500        	slli	a5, a5, 16
-40102994:	0020c0        	memw
-40102997:	822432        	l32i	a3, a4, 0x208
-4010299a:	103370        	and	a3, a3, a7
-4010299d:	203350        	or	a3, a3, a5
-401029a0:	0020c0        	memw
-401029a3:	826432        	s32i	a3, a4, 0x208
-401029a6:	14b480        	extui	a11, a8, 4, 2
-401029a9:	11bb40        	slli	a11, a11, 12
-401029ac:	0020c0        	memw
-401029af:	822492        	l32i	a9, a4, 0x208
-401029b2:	109960        	and	a9, a9, a6
-401029b5:	2099b0        	or	a9, a9, a11
-401029b8:	0020c0        	memw
-401029bb:	826492        	s32i	a9, a4, 0x208
-401029be:	548680        	extui	a8, a8, 6, 6
-401029c1:	0020c0        	memw
-401029c4:	872452        	l32i	a5, a4, 0x21c
-401029c7:	1055a0        	and	a5, a5, a10
-401029ca:	205580        	or	a5, a5, a8
-401029cd:	0020c0        	memw
-401029d0:	876452        	s32i	a5, a4, 0x21c
-401029d3:	fe6591        	l32r	a9, 40102368 <phy_get_mactime+0x14>
-401029d6:	f6f281        	l32r	a8, 401005a0 <wdt_feed+0x168>
-401029d9:	0020c0        	memw
-401029dc:	422252        	l32i	a5, a2, 0x108
-401029df:	205580        	or	a5, a5, a8
-401029e2:	0020c0        	memw
-401029e5:	426252        	s32i	a5, a2, 0x108
-401029e8:	8b0c      	movi.n	a11, 8
-401029ea:	337c      	movi.n	a3, -13
-401029ec:	0020c0        	memw
-401029ef:	d02982        	l32i	a8, a9, 0x340
-401029f2:	108830        	and	a8, a8, a3
-401029f5:	2088b0        	or	a8, a8, a11
-401029f8:	0020c0        	memw
-401029fb:	64a052        	movi	a5, 100
-401029fe:	d06982        	s32i	a8, a9, 0x340
-40102a01:	1198      	l32i.n	a9, a1, 4
-40102a03:	550b      	addi.n	a5, a5, -1
-40102a05:	fa0566        	bnei	a5, -1, 40102a03 <pm_goto_sleep+0xef>
-40102a08:	511966        	bnei	a9, 1, 40102a5d <pm_goto_sleep+0x149>
-40102a0b:	0020c0        	memw
-40102a0e:	4a22b2        	l32i	a11, a2, 0x128
-40102a11:	14b0b0        	extui	a11, a11, 0, 2
-40102a14:	abcc      	bnez.n	a11, 40102a22 <pm_goto_sleep+0x10e>
+401029fc <clockgate_watchdog>:
+401029fc:	f5fe41        	l32r	a4, 401001f4 <Cache_Read_Enable_New+0x40>
+401029ff:	129c      	beqz.n	a2, 40102a14 <clockgate_watchdog+0x18>
+40102a01:	767c      	movi.n	a6, -9
+40102a03:	0020c0        	memw
+40102a06:	862452        	l32i	a5, a4, 0x218
+40102a09:	105560        	and	a5, a5, a6
+40102a0c:	0020c0        	memw
+40102a0f:	866452        	s32i	a5, a4, 0x218
+40102a12:	f00d      	ret.n
+40102a14:	830c      	movi.n	a3, 8
 40102a16:	0020c0        	memw
-40102a19:	4a2232        	l32i	a3, a2, 0x128
-40102a1c:	143030        	extui	a3, a3, 0, 2
-40102a1f:	ff3316        	beqz	a3, 40102a16 <pm_goto_sleep+0x102>
-40102a22:	0020c0        	memw
-40102a25:	822432        	l32i	a3, a4, 0x208
-40102a28:	103370        	and	a3, a3, a7
-40102a2b:	0020c0        	memw
-40102a2e:	826432        	s32i	a3, a4, 0x208
-40102a31:	0020c0        	memw
-40102a34:	8224b2        	l32i	a11, a4, 0x208
-40102a37:	10bb60        	and	a11, a11, a6
-40102a3a:	0020c0        	memw
-40102a3d:	8264b2        	s32i	a11, a4, 0x208
-40102a40:	0020c0        	memw
-40102a43:	872492        	l32i	a9, a4, 0x21c
-40102a46:	1099a0        	and	a9, a9, a10
-40102a49:	0020c0        	memw
-40102a4c:	876492        	s32i	a9, a4, 0x21c
-40102a4f:	280c      	movi.n	a8, 2
-40102a51:	0020c0        	memw
-40102a54:	4a2252        	l32i	a5, a2, 0x128
-40102a57:	105580        	and	a5, a5, a8
-40102a5a:	064052        	s8i	a5, a0, 6
-40102a5d:	020c      	movi.n	a2, 0
-40102a5f:	ffb686        	j	4010293d <pm_goto_sleep+0x29>
-	...
+40102a19:	862422        	l32i	a2, a4, 0x218
+40102a1c:	202230        	or	a2, a2, a3
+40102a1f:	0020c0        	memw
+40102a22:	866422        	s32i	a2, a4, 0x218
+40102a25:	f00d      	ret.n
+40102a27:	90e000        	addx2	a14, a0, a0
+40102a2a:	fe          	.byte 0xfe
+40102a2b:	3f          	.byte 0x3f
 
-40102a64 <clockgate_watchdog>:
-40102a64:	f5e441        	l32r	a4, 401001f4 <Cache_Read_Enable_New+0x40>
-40102a67:	129c      	beqz.n	a2, 40102a7c <clockgate_watchdog+0x18>
-40102a69:	767c      	movi.n	a6, -9
-40102a6b:	0020c0        	memw
-40102a6e:	862452        	l32i	a5, a4, 0x218
-40102a71:	105560        	and	a5, a5, a6
-40102a74:	0020c0        	memw
-40102a77:	866452        	s32i	a5, a4, 0x218
-40102a7a:	f00d      	ret.n
-40102a7c:	830c      	movi.n	a3, 8
-40102a7e:	0020c0        	memw
-40102a81:	862422        	l32i	a2, a4, 0x218
-40102a84:	202230        	or	a2, a2, a3
-40102a87:	0020c0        	memw
-40102a8a:	866422        	s32i	a2, a4, 0x218
-40102a8d:	f00d      	ret.n
-40102a8f:	910000        	srl	a0, a0
-40102a92:	fe          	.byte 0xfe
-40102a93:	3f          	.byte 0x3f
+40102a2c <lmacIsActive>:
+40102a2c:	ffff31        	l32r	a3, 40102a28 <clockgate_watchdog+0x2c>
+40102a2f:	000332        	l8ui	a3, a3, 0
+40102a32:	120c      	movi.n	a2, 1
+40102a34:	0183b6        	bltui	a3, 8, 40102a39 <lmacIsActive+0xd>
+40102a37:	020c      	movi.n	a2, 0
+40102a39:	f00d      	ret.n
+40102a3b:	911000        	srl	a1, a0
+40102a3e:	fe          	.byte 0xfe
+40102a3f:	3f          	.byte 0x3f
 
-40102a94 <lmacIsActive>:
-40102a94:	ffff31        	l32r	a3, 40102a90 <clockgate_watchdog+0x2c>
-40102a97:	000332        	l8ui	a3, a3, 0
-40102a9a:	120c      	movi.n	a2, 1
-40102a9c:	0183b6        	bltui	a3, 8, 40102aa1 <lmacIsActive+0xd>
-40102a9f:	020c      	movi.n	a2, 0
-40102aa1:	f00d      	ret.n
-40102aa3:	913000        	srl	a3, a0
-40102aa6:	fe          	.byte 0xfe
-40102aa7:	3f          	.byte 0x3f
-
-40102aa8 <lmacIsIdle>:
-40102aa8:	130c      	movi.n	a3, 1
-40102aaa:	fffe51        	l32r	a5, 40102aa4 <lmacIsActive+0x10>
-40102aad:	b04220        	addx8	a4, a2, a2
-40102ab0:	a04450        	addx4	a4, a4, a5
-40102ab3:	110442        	l8ui	a4, a4, 17
-40102ab6:	020c      	movi.n	a2, 0
-40102ab8:	832340        	moveqz	a2, a3, a4
-40102abb:	f00d      	ret.n
-40102abd:	000000        	ill
-40102ac0:	8738      	l32i.n	a3, a7, 32
-40102ac2:	fe          	.byte 0xfe
-40102ac3:	3f          	.byte 0x3f
-40102ac4:	fe8954        	excw
-40102ac7:	3f          	.byte 0x3f
-40102ac8:	f0c112        	addi	a1, a1, -16
-40102acb:	1109      	s32i.n	a0, a1, 4
-40102acd:	fff001        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-40102ad0:	9008      	l32i.n	a0, a0, 36
-40102ad2:	0129      	s32i.n	a2, a1, 0
-40102ad4:	00dc      	bnez.n	a0, 40102ae8 <lmacIsIdle+0x40>
-40102ad6:	fffa21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40102ad9:	fffa31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40102adc:	eda042        	movi	a4, 237
-40102adf:	f5a801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40102ae2:	0000c0        	callx0	a0
-40102ae5:	ffff06        	j	40102ae5 <lmacIsIdle+0x3d>
-40102ae8:	202330        	or	a2, a3, a3
-40102aeb:	03a032        	movi	a3, 3
-40102aee:	032705        	call0	40105d60 <wDev_SetFrameAckType>
-40102af1:	0138      	l32i.n	a3, a1, 0
-40102af3:	104322        	s8i	a2, a3, 16
-40102af6:	a20c      	movi.n	a2, 10
-40102af8:	031f85        	call0	40105cf4 <wDev_SetWaitingQueue>
-40102afb:	1108      	l32i.n	a0, a1, 4
-40102afd:	10c112        	addi	a1, a1, 16
-40102b00:	f00d      	ret.n
-40102b02:	120000        	excw
-40102b05:	09f0c1        	l32r	a12, 400c52c8 <__floatsidf+0xb6fd8>
-40102b08:	e10101        	l32r	a0, 400faf0c <__floatsidf+0xecc1c>
-40102b0b:	ff          	.byte 0xff
-40102b0c:	9008      	l32i.n	a0, a0, 36
-40102b0e:	029d      	mov.n	a9, a2
-40102b10:	00dc      	bnez.n	a0, 40102b24 <lmacIsIdle+0x7c>
-40102b12:	ffeb21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40102b15:	ffeb31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40102b18:	f8a042        	movi	a4, 248
-40102b1b:	f59901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40102b1e:	0000c0        	callx0	a0
-40102b21:	ffff06        	j	40102b21 <lmacIsIdle+0x79>
-40102b24:	202330        	or	a2, a3, a3
-40102b27:	100932        	l8ui	a3, a9, 16
-40102b2a:	032345        	call0	40105d60 <wDev_SetFrameAckType>
-40102b2d:	0aa022        	movi	a2, 10
-40102b30:	032085        	call0	40105d3c <wDev_ClearWaitingQueue>
-40102b33:	0108      	l32i.n	a0, a1, 0
-40102b35:	10c112        	addi	a1, a1, 16
-40102b38:	f00d      	ret.n
-40102b3a:	120000        	excw
-40102b3d:	09f0c1        	l32r	a12, 400c5300 <__floatsidf+0xb7010>
-40102b40:	014501        	l32r	a0, 400c3054 <__floatsidf+0xb4d64>
-40102b43:	010800        	slli	a0, a8, 32
-40102b46:	10c112        	addi	a1, a1, 16
-40102b49:	f00d      	ret.n
-40102b4b:	ffff00        	excw
-40102b4e:	000003        	excw
-40102b51:	102000        	and	a2, a0, a0
-40102b54:	283c      	movi.n	a8, 50
-40102b56:	0c4023        	excw
-40102b59:	a0b205        	call0	400a367c <__floatsidf+0x9538c>
-40102b5c:	c11280        	mul16u	a1, a2, a8
-40102b5f:	6109c0        	excw
-40102b62:	71c9      	s32i.n	a12, a1, 28
-40102b64:	81d9      	s32i.n	a13, a1, 32
-40102b66:	02cd      	mov.n	a12, a2
-40102b68:	03dd      	mov.n	a13, a3
-40102b6a:	ffc921        	l32r	a2, 40102a90 <clockgate_watchdog+0x2c>
-40102b6d:	33cc      	bnez.n	a3, 40102b74 <lmacIsIdle+0xcc>
-40102b6f:	0c08      	l32i.n	a0, a12, 0
-40102b71:	000046        	j	40102b76 <lmacIsIdle+0xce>
-40102b74:	9208      	l32i.n	a0, a2, 36
-40102b76:	110c72        	l8ui	a7, a12, 17
-40102b79:	4068      	l32i.n	a6, a0, 16
-40102b7b:	0b1032        	l16ui	a3, a0, 22
-40102b7e:	9088      	l32i.n	a8, a0, 36
-40102b80:	0a1022        	l16ui	a2, a0, 20
-40102b83:	0898      	l32i.n	a9, a8, 0
-40102b85:	223a      	add.n	a2, a2, a3
-40102b87:	f42020        	extui	a2, a2, 0, 16
-40102b8a:	1838      	l32i.n	a3, a8, 4
-40102b8c:	41a690        	srli	a10, a9, 6
-40102b8f:	10bab0        	and	a11, a10, a11
-40102b92:	853730        	extui	a3, a3, 23, 9
-40102b95:	0469d7        	bbci	a9, 13, 40102b9d <lmacIsIdle+0xf5>
-40102b98:	01e9c7        	bbsi	a9, 12, 40102b9d <lmacIsIdle+0xf5>
-40102b9b:	150c      	movi.n	a5, 1
-40102b9d:	679c      	beqz.n	a7, 40102bb7 <lmacIsIdle+0x10f>
-40102b9f:	143726        	beqi	a7, 3, 40102bb7 <lmacIsIdle+0x10f>
-40102ba2:	112726        	beqi	a7, 2, 40102bb7 <lmacIsIdle+0x10f>
-40102ba5:	ffc621        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40102ba8:	ffc731        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40102bab:	15a142        	movi	a4, 0x115
-40102bae:	f57401        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40102bb1:	0000c0        	callx0	a0
-40102bb4:	ffff06        	j	40102bb4 <lmacIsIdle+0x10c>
-40102bb7:	070c      	movi.n	a7, 0
-40102bb9:	1159      	s32i.n	a5, a1, 4
-40102bbb:	4129      	s32i.n	a2, a1, 16
-40102bbd:	140c      	movi.n	a4, 1
-40102bbf:	5149      	s32i.n	a4, a1, 20
-40102bc1:	107a67        	bbci	a10, 22, 40102bd5 <lmacIsIdle+0x12d>
-40102bc4:	120c      	movi.n	a2, 1
-40102bc6:	9088      	l32i.n	a8, a0, 36
-40102bc8:	015632        	s16i	a3, a6, 2
-40102bcb:	08a8      	l32i.n	a10, a8, 0
-40102bcd:	130c      	movi.n	a3, 1
-40102bcf:	41a6a0        	srli	a10, a10, 6
-40102bd2:	0016c6        	j	40102c31 <lmacIsIdle+0x189>
-40102bd5:	0b0c22        	l8ui	a2, a12, 11
-40102bd8:	42cc      	bnez.n	a2, 40102be0 <lmacIsIdle+0x138>
-40102bda:	0d0c42        	l8ui	a4, a12, 13
-40102bdd:	28d416        	beqz	a4, 40102e6e <lmacIsIdle+0x3c6>
-40102be0:	032d      	mov.n	a2, a3
-40102be2:	051842        	l16ui	a4, a8, 10
-40102be5:	0b9c92        	l16si	a9, a12, 22
-40102be8:	0a9cb2        	l16si	a11, a12, 20
-40102beb:	ffa9a1        	l32r	a10, 40102a90 <clockgate_watchdog+0x2c>
-40102bee:	115300        	slli	a5, a3, 16
-40102bf1:	aaa8      	l32i.n	a10, a10, 40
-40102bf3:	315050        	srai	a5, a5, 16
-40102bf6:	9aa8      	l32i.n	a10, a10, 36
-40102bf8:	c0bb90        	sub	a11, a11, a9
-40102bfb:	1aa8      	l32i.n	a10, a10, 4
-40102bfd:	0a5cb2        	s16i	a11, a12, 20
-40102c00:	0a9c92        	l16si	a9, a12, 20
-40102c03:	85a7a0        	extui	a10, a10, 23, 9
-40102c06:	44aa      	add.n	a4, a4, a10
-40102c08:	c03430        	sub	a3, a4, a3
-40102c0b:	113300        	slli	a3, a3, 16
-40102c0e:	313030        	srai	a3, a3, 16
-40102c11:	0b5c32        	s16i	a3, a12, 22
-40102c14:	c03930        	sub	a3, a9, a3
-40102c17:	082537        	blt	a5, a3, 40102c23 <lmacIsIdle+0x17b>
-40102c1a:	015622        	s16i	a2, a6, 2
-40102c1d:	0c4c72        	s8i	a7, a12, 12
-40102c20:	000086        	j	40102c26 <lmacIsIdle+0x17e>
-40102c23:	015632        	s16i	a3, a6, 2
-40102c26:	9088      	l32i.n	a8, a0, 36
-40102c28:	030c      	movi.n	a3, 0
-40102c2a:	08a8      	l32i.n	a10, a8, 0
-40102c2c:	020c      	movi.n	a2, 0
-40102c2e:	41a6a0        	srli	a10, a10, 6
-40102c31:	021216        	beqz	a2, 40102c56 <lmacIsIdle+0x1ae>
-40102c34:	096132        	s32i	a3, a1, 36
-40102c37:	0a6172        	s32i	a7, a1, 40
-40102c3a:	b169      	s32i.n	a6, a1, 44
-40102c3c:	c109      	s32i.n	a0, a1, 48
-40102c3e:	146a87        	bbci	a10, 8, 40102c56 <lmacIsIdle+0x1ae>
-40102c41:	080822        	l8ui	a2, a8, 8
-40102c44:	01d845        	call0	401049cc <RC_GetAckTime>
-40102c47:	c108      	l32i.n	a0, a1, 48
-40102c49:	b168      	l32i.n	a6, a1, 44
-40102c4b:	9088      	l32i.n	a8, a0, 36
-40102c4d:	a178      	l32i.n	a7, a1, 40
-40102c4f:	08a8      	l32i.n	a10, a8, 0
-40102c51:	9138      	l32i.n	a3, a1, 36
-40102c53:	41a6a0        	srli	a10, a10, 6
-40102c56:	1008      	l32i.n	a0, a0, 4
-40102c58:	02a4b2        	movi	a11, 0x402
-40102c5b:	0b8ab7        	bany	a10, a11, 40102c6a <lmacIsIdle+0x1c2>
-40102c5e:	0526a0        	extui	a2, a10, 22, 1
-40102c61:	18e216        	beqz	a2, 40102df3 <lmacIsIdle+0x34b>
-40102c64:	0543a0        	extui	a4, a10, 19, 1
-40102c67:	188456        	bnez	a4, 40102df3 <lmacIsIdle+0x34b>
-40102c6a:	020c      	movi.n	a2, 0
-40102c6c:	000246        	j	40102c79 <lmacIsIdle+0x1d1>
-40102c6f:	0593a0        	extui	a9, a10, 19, 1
-40102c72:	5128      	l32i.n	a2, a1, 20
-40102c74:	250c      	movi.n	a5, 2
-40102c76:	932590        	movnez	a2, a5, a9
-40102c79:	f64b51        	l32r	a5, 401005a8 <wdt_feed+0x170>
-40102c7c:	41b8      	l32i.n	a11, a1, 16
-40102c7e:	011692        	l16ui	a9, a6, 2
-40102c81:	242020        	extui	a2, a2, 0, 3
-40102c84:	012280        	slli	a2, a2, 24
-40102c87:	ffb161        	l32r	a6, 40102b4c <lmacIsIdle+0xa4>
-40102c8a:	119900        	slli	a9, a9, 16
-40102c8d:	b4b0b0        	extui	a11, a11, 0, 12
-40102c90:	106060        	and	a6, a0, a6
-40102c93:	fa0701        	l32r	a0, 401014b0 <system_deep_sleep_local_2+0xb0>
-40102c96:	164d16        	beqz	a13, 40102dfe <lmacIsIdle+0x356>
-40102c99:	016a97        	bbci	a10, 9, 40102c9e <lmacIsIdle+0x1f6>
-40102c9c:	33cc      	bnez.n	a3, 40102ca3 <lmacIsIdle+0x1fb>
-40102c9e:	0d0c      	movi.n	a13, 0
-40102ca0:	000086        	j	40102ca6 <lmacIsIdle+0x1fe>
-40102ca3:	fa64d1        	l32r	a13, 40101634 <Cache_Read_Enable_2+0x2c>
-40102ca6:	016a87        	bbci	a10, 8, 40102cab <lmacIsIdle+0x203>
-40102ca9:	33cc      	bnez.n	a3, 40102cb0 <lmacIsIdle+0x208>
-40102cab:	0a0c      	movi.n	a10, 0
-40102cad:	000086        	j	40102cb3 <lmacIsIdle+0x20b>
-40102cb0:	fb09a1        	l32r	a10, 401018d4 <flash_gd25q32c_read_status+0x190>
-40102cb3:	0a9c32        	l16si	a3, a12, 20
-40102cb6:	0c13e6        	bgei	a3, 1, 40102cc6 <lmacIsIdle+0x21e>
-40102cb9:	1148      	l32i.n	a4, a1, 4
-40102cbb:	744040        	extui	a4, a4, 0, 8
-40102cbe:	44cc      	bnez.n	a4, 40102cc6 <lmacIsIdle+0x21e>
-40102cc0:	0808c2        	l8ui	a12, a8, 8
-40102cc3:	04bcb6        	bltui	a12, 16, 40102ccb <lmacIsIdle+0x223>
-40102cc6:	030c      	movi.n	a3, 0
-40102cc8:	000086        	j	40102cce <lmacIsIdle+0x226>
-40102ccb:	f62f31        	l32r	a3, 40100588 <wdt_feed+0x150>
-40102cce:	20cda0        	or	a12, a13, a10
-40102cd1:	203360        	or	a3, a3, a6
-40102cd4:	20c2c0        	or	a12, a2, a12
-40102cd7:	20cc30        	or	a12, a12, a3
-40102cda:	053d      	mov.n	a3, a5
-40102cdc:	0020c0        	memw
-40102cdf:	b760c2        	s32i	a12, a0, 0x2dc
-40102ce2:	0020c0        	memw
-40102ce5:	ba6092        	s32i	a9, a0, 0x2e8
-40102ce8:	0c0852        	l8ui	a5, a8, 12
-40102ceb:	080822        	l8ui	a2, a8, 8
-40102cee:	115500        	slli	a5, a5, 16
-40102cf1:	34d020        	extui	a13, a2, 0, 4
-40102cf4:	11dd40        	slli	a13, a13, 12
-40102cf7:	20dbd0        	or	a13, a11, a13
-40102cfa:	01b2f6        	bgeui	a2, 16, 40102cff <lmacIsIdle+0x257>
-40102cfd:	073d      	mov.n	a3, a7
-40102cff:	204350        	or	a4, a3, a5
-40102d02:	20dd40        	or	a13, a13, a4
-40102d05:	0020c0        	memw
-40102d08:	b860d2        	s32i	a13, a0, 0x2e0
-40102d0b:	080822        	l8ui	a2, a8, 8
-40102d0e:	87a032        	movi	a3, 135
-40102d11:	02b2f6        	bgeui	a2, 16, 40102d17 <lmacIsIdle+0x26f>
-40102d14:	003406        	j	40102de8 <lmacIsIdle+0x340>
-40102d17:	841c      	movi.n	a4, 24
-40102d19:	850c      	movi.n	a5, 8
-40102d1b:	076d      	mov.n	a6, a7
-40102d1d:	0898      	l32i.n	a9, a8, 0
-40102d1f:	41c8      	l32i.n	a12, a1, 16
-40102d21:	f0c2a2        	addi	a10, a2, -16
-40102d24:	24a0a0        	extui	a10, a10, 0, 3
-40102d27:	11cc80        	slli	a12, a12, 8
-40102d2a:	059c90        	extui	a9, a9, 28, 1
-40102d2d:	936590        	movnez	a6, a5, a9
-40102d30:	20aac0        	or	a10, a10, a12
-40102d33:	01a247        	bge	a2, a4, 40102d38 <lmacIsIdle+0x290>
-40102d36:	730c      	movi.n	a3, 7
-40102d38:	20b360        	or	a11, a3, a6
-40102d3b:	01bb80        	slli	a11, a11, 24
-40102d3e:	20aab0        	or	a10, a10, a11
-40102d41:	0020c0        	memw
-40102d44:	b960a2        	s32i	a10, a0, 0x2e4
-40102d47:	002746        	j	40102de8 <lmacIsIdle+0x340>
-40102d4a:	f60fa1        	l32r	a10, 40100588 <wdt_feed+0x150>
-40102d4d:	f61631        	l32r	a3, 401005a8 <wdt_feed+0x170>
-40102d50:	205d50        	or	a5, a13, a5
-40102d53:	206a60        	or	a6, a10, a6
-40102d56:	205250        	or	a5, a2, a5
-40102d59:	205560        	or	a5, a5, a6
-40102d5c:	040c22        	l8ui	a2, a12, 4
-40102d5f:	866c      	movi.n	a6, -24
-40102d61:	d12620        	mul16s	a2, a6, a2
-40102d64:	220a      	add.n	a2, a2, a0
-40102d66:	0020c0        	memw
-40102d69:	f16252        	s32i	a5, a2, 0x3c4
-40102d6c:	040c42        	l8ui	a4, a12, 4
-40102d6f:	d14640        	mul16s	a4, a6, a4
-40102d72:	440a      	add.n	a4, a4, a0
-40102d74:	0020c0        	memw
-40102d77:	f46492        	s32i	a9, a4, 0x3d0
-40102d7a:	0c0852        	l8ui	a5, a8, 12
-40102d7d:	040c22        	l8ui	a2, a12, 4
-40102d80:	115500        	slli	a5, a5, 16
-40102d83:	d16620        	mul16s	a6, a6, a2
-40102d86:	080822        	l8ui	a2, a8, 8
-40102d89:	660a      	add.n	a6, a6, a0
-40102d8b:	01b2f6        	bgeui	a2, 16, 40102d90 <lmacIsIdle+0x2e8>
-40102d8e:	073d      	mov.n	a3, a7
-40102d90:	20a350        	or	a10, a3, a5
-40102d93:	349020        	extui	a9, a2, 0, 4
-40102d96:	119940        	slli	a9, a9, 12
-40102d99:	209b90        	or	a9, a11, a9
-40102d9c:	2099a0        	or	a9, a9, a10
-40102d9f:	0020c0        	memw
-40102da2:	f26692        	s32i	a9, a6, 0x3c8
-40102da5:	080822        	l8ui	a2, a8, 8
-40102da8:	3cb2b6        	bltui	a2, 16, 40102de8 <lmacIsIdle+0x340>
-40102dab:	8a1c      	movi.n	a10, 24
-40102dad:	040cd2        	l8ui	a13, a12, 4
-40102db0:	8b6c      	movi.n	a11, -24
-40102db2:	830c      	movi.n	a3, 8
-40102db4:	0848      	l32i.n	a4, a8, 0
-40102db6:	076d      	mov.n	a6, a7
-40102db8:	054c40        	extui	a4, a4, 28, 1
-40102dbb:	936340        	movnez	a6, a3, a4
-40102dbe:	d1bbd0        	mul16s	a11, a11, a13
-40102dc1:	0b0a      	add.n	a0, a11, a0
-40102dc3:	87a032        	movi	a3, 135
-40102dc6:	01a2a7        	bge	a2, a10, 40102dcb <lmacIsIdle+0x323>
-40102dc9:	730c      	movi.n	a3, 7
-40102dcb:	4188      	l32i.n	a8, a1, 16
-40102dcd:	f0c252        	addi	a5, a2, -16
-40102dd0:	207360        	or	a7, a3, a6
-40102dd3:	017780        	slli	a7, a7, 24
-40102dd6:	245050        	extui	a5, a5, 0, 3
-40102dd9:	118880        	slli	a8, a8, 8
-40102ddc:	205580        	or	a5, a5, a8
-40102ddf:	205570        	or	a5, a5, a7
-40102de2:	0020c0        	memw
-40102de5:	f36052        	s32i	a5, a0, 0x3cc
-40102de8:	71c8      	l32i.n	a12, a1, 28
-40102dea:	81d8      	l32i.n	a13, a1, 32
-40102dec:	6108      	l32i.n	a0, a1, 24
-40102dee:	40c112        	addi	a1, a1, 64
-40102df1:	f00d      	ret.n
-40102df3:	0594a0        	extui	a9, a10, 20, 1
-40102df6:	e75916        	beqz	a9, 40102c6f <lmacIsIdle+0x1c7>
-40102df9:	320c      	movi.n	a2, 3
-40102dfb:	ff9e86        	j	40102c79 <lmacIsIdle+0x1d1>
-40102dfe:	0020c0        	memw
-40102e01:	68a8      	l32i.n	a10, a8, 24
-40102e03:	040c52        	l8ui	a5, a12, 4
-40102e06:	ff2241        	l32r	a4, 40102a90 <clockgate_watchdog+0x2c>
-40102e09:	8d6c      	movi.n	a13, -24
-40102e0b:	1448      	l32i.n	a4, a4, 4
-40102e0d:	d1dd50        	mul16s	a13, a13, a5
-40102e10:	802052        	l32i	a5, a0, 0x200
-40102e13:	dd0a      	add.n	a13, a13, a0
-40102e15:	c055a0        	sub	a5, a5, a10
-40102e18:	5a0c      	movi.n	a10, 5
-40102e1a:	415a50        	srli	a5, a5, 10
-40102e1d:	c05450        	sub	a5, a4, a5
-40102e20:	3159      	s32i.n	a5, a1, 12
-40102e22:	013457        	bltu	a4, a5, 40102e27 <lmacIsIdle+0x37f>
-40102e25:	31a8      	l32i.n	a10, a1, 12
-40102e27:	b4a0a0        	extui	a10, a10, 0, 12
-40102e2a:	11aa40        	slli	a10, a10, 12
-40102e2d:	0020c0        	memw
-40102e30:	f56da2        	s32i	a10, a13, 0x3d4
-40102e33:	0858      	l32i.n	a5, a8, 0
-40102e35:	41a650        	srli	a10, a5, 6
-40102e38:	0165f7        	bbci	a5, 15, 40102e3d <lmacIsIdle+0x395>
-40102e3b:	43cc      	bnez.n	a3, 40102e43 <lmacIsIdle+0x39b>
-40102e3d:	f5d1d1        	l32r	a13, 40100584 <wdt_feed+0x14c>
-40102e40:	000086        	j	40102e46 <lmacIsIdle+0x39e>
-40102e43:	ff43d1        	l32r	a13, 40102b50 <lmacIsIdle+0xa8>
-40102e46:	016a87        	bbci	a10, 8, 40102e4b <lmacIsIdle+0x3a3>
-40102e49:	33cc      	bnez.n	a3, 40102e50 <lmacIsIdle+0x3a8>
-40102e4b:	050c      	movi.n	a5, 0
-40102e4d:	000086        	j	40102e53 <lmacIsIdle+0x3ab>
-40102e50:	faa151        	l32r	a5, 401018d4 <flash_gd25q32c_read_status+0x190>
-40102e53:	0a9c32        	l16si	a3, a12, 20
-40102e56:	0f13e6        	bgei	a3, 1, 40102e69 <lmacIsIdle+0x3c1>
-40102e59:	1148      	l32i.n	a4, a1, 4
-40102e5b:	744040        	extui	a4, a4, 0, 8
-40102e5e:	74cc      	bnez.n	a4, 40102e69 <lmacIsIdle+0x3c1>
-40102e60:	0808a2        	l8ui	a10, a8, 8
-40102e63:	02baf6        	bgeui	a10, 16, 40102e69 <lmacIsIdle+0x3c1>
-40102e66:	ffb806        	j	40102d4a <lmacIsIdle+0x2a2>
-40102e69:	0a0c      	movi.n	a10, 0
-40102e6b:	ffb786        	j	40102d4d <lmacIsIdle+0x2a5>
-40102e6e:	0c1c22        	l16ui	a2, a12, 24
-40102e71:	074216        	beqz	a2, 40102ee9 <lmacIsIdle+0x441>
+40102a40 <lmacIsIdle>:
+40102a40:	130c      	movi.n	a3, 1
+40102a42:	fffe51        	l32r	a5, 40102a3c <lmacIsActive+0x10>
+40102a45:	b04220        	addx8	a4, a2, a2
+40102a48:	a04450        	addx4	a4, a4, a5
+40102a4b:	110442        	l8ui	a4, a4, 17
+40102a4e:	020c      	movi.n	a2, 0
+40102a50:	832340        	moveqz	a2, a3, a4
+40102a53:	f00d      	ret.n
+40102a55:	000000        	ill
+40102a58:	8738      	l32i.n	a3, a7, 32
+40102a5a:	fe          	.byte 0xfe
+40102a5b:	3f          	.byte 0x3f
+40102a5c:	893c      	movi.n	a9, 56
+40102a5e:	fe          	.byte 0xfe
+40102a5f:	3f          	.byte 0x3f
+40102a60:	f0c112        	addi	a1, a1, -16
+40102a63:	1109      	s32i.n	a0, a1, 4
+40102a65:	fff001        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40102a68:	9008      	l32i.n	a0, a0, 36
+40102a6a:	0129      	s32i.n	a2, a1, 0
+40102a6c:	00dc      	bnez.n	a0, 40102a80 <lmacIsIdle+0x40>
+40102a6e:	fffa21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102a71:	fffa31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102a74:	eda042        	movi	a4, 237
+40102a77:	f5c201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102a7a:	0000c0        	callx0	a0
+40102a7d:	ffff06        	j	40102a7d <lmacIsIdle+0x3d>
+40102a80:	202330        	or	a2, a3, a3
+40102a83:	03a032        	movi	a3, 3
+40102a86:	032705        	call0	40105cf8 <wDev_SetFrameAckType>
+40102a89:	0138      	l32i.n	a3, a1, 0
+40102a8b:	104322        	s8i	a2, a3, 16
+40102a8e:	a20c      	movi.n	a2, 10
+40102a90:	031f85        	call0	40105c8c <wDev_SetWaitingQueue>
+40102a93:	1108      	l32i.n	a0, a1, 4
+40102a95:	10c112        	addi	a1, a1, 16
+40102a98:	f00d      	ret.n
+40102a9a:	120000        	excw
+40102a9d:	09f0c1        	l32r	a12, 400c5260 <__floatsidf+0xb6f70>
+40102aa0:	e10101        	l32r	a0, 400faea4 <__floatsidf+0xecbb4>
+40102aa3:	ff          	.byte 0xff
+40102aa4:	9008      	l32i.n	a0, a0, 36
+40102aa6:	029d      	mov.n	a9, a2
+40102aa8:	00dc      	bnez.n	a0, 40102abc <lmacIsIdle+0x7c>
+40102aaa:	ffeb21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102aad:	ffeb31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102ab0:	f8a042        	movi	a4, 248
+40102ab3:	f5b301        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102ab6:	0000c0        	callx0	a0
+40102ab9:	ffff06        	j	40102ab9 <lmacIsIdle+0x79>
+40102abc:	202330        	or	a2, a3, a3
+40102abf:	100932        	l8ui	a3, a9, 16
+40102ac2:	032345        	call0	40105cf8 <wDev_SetFrameAckType>
+40102ac5:	0aa022        	movi	a2, 10
+40102ac8:	032085        	call0	40105cd4 <wDev_ClearWaitingQueue>
+40102acb:	0108      	l32i.n	a0, a1, 0
+40102acd:	10c112        	addi	a1, a1, 16
+40102ad0:	f00d      	ret.n
+40102ad2:	120000        	excw
+40102ad5:	09f0c1        	l32r	a12, 400c5298 <__floatsidf+0xb6fa8>
+40102ad8:	014501        	l32r	a0, 400c2fec <__floatsidf+0xb4cfc>
+40102adb:	010800        	slli	a0, a8, 32
+40102ade:	10c112        	addi	a1, a1, 16
+40102ae1:	f00d      	ret.n
+40102ae3:	ffff00        	excw
+40102ae6:	000003        	excw
+40102ae9:	102000        	and	a2, a0, a0
+40102aec:	283c      	movi.n	a8, 50
+40102aee:	0c4023        	excw
+40102af1:	a0b205        	call0	400a3614 <__floatsidf+0x95324>
+40102af4:	c11280        	mul16u	a1, a2, a8
+40102af7:	6109c0        	excw
+40102afa:	71c9      	s32i.n	a12, a1, 28
+40102afc:	81d9      	s32i.n	a13, a1, 32
+40102afe:	02cd      	mov.n	a12, a2
+40102b00:	03dd      	mov.n	a13, a3
+40102b02:	ffc921        	l32r	a2, 40102a28 <clockgate_watchdog+0x2c>
+40102b05:	33cc      	bnez.n	a3, 40102b0c <lmacIsIdle+0xcc>
+40102b07:	0c08      	l32i.n	a0, a12, 0
+40102b09:	000046        	j	40102b0e <lmacIsIdle+0xce>
+40102b0c:	9208      	l32i.n	a0, a2, 36
+40102b0e:	110c72        	l8ui	a7, a12, 17
+40102b11:	4068      	l32i.n	a6, a0, 16
+40102b13:	0b1032        	l16ui	a3, a0, 22
+40102b16:	9088      	l32i.n	a8, a0, 36
+40102b18:	0a1022        	l16ui	a2, a0, 20
+40102b1b:	0898      	l32i.n	a9, a8, 0
+40102b1d:	223a      	add.n	a2, a2, a3
+40102b1f:	f42020        	extui	a2, a2, 0, 16
+40102b22:	1838      	l32i.n	a3, a8, 4
+40102b24:	41a690        	srli	a10, a9, 6
+40102b27:	10bab0        	and	a11, a10, a11
+40102b2a:	853730        	extui	a3, a3, 23, 9
+40102b2d:	0469d7        	bbci	a9, 13, 40102b35 <lmacIsIdle+0xf5>
+40102b30:	01e9c7        	bbsi	a9, 12, 40102b35 <lmacIsIdle+0xf5>
+40102b33:	150c      	movi.n	a5, 1
+40102b35:	679c      	beqz.n	a7, 40102b4f <lmacIsIdle+0x10f>
+40102b37:	143726        	beqi	a7, 3, 40102b4f <lmacIsIdle+0x10f>
+40102b3a:	112726        	beqi	a7, 2, 40102b4f <lmacIsIdle+0x10f>
+40102b3d:	ffc621        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102b40:	ffc731        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102b43:	15a142        	movi	a4, 0x115
+40102b46:	f58e01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102b49:	0000c0        	callx0	a0
+40102b4c:	ffff06        	j	40102b4c <lmacIsIdle+0x10c>
+40102b4f:	070c      	movi.n	a7, 0
+40102b51:	1159      	s32i.n	a5, a1, 4
+40102b53:	4129      	s32i.n	a2, a1, 16
+40102b55:	140c      	movi.n	a4, 1
+40102b57:	5149      	s32i.n	a4, a1, 20
+40102b59:	107a67        	bbci	a10, 22, 40102b6d <lmacIsIdle+0x12d>
+40102b5c:	120c      	movi.n	a2, 1
+40102b5e:	9088      	l32i.n	a8, a0, 36
+40102b60:	015632        	s16i	a3, a6, 2
+40102b63:	08a8      	l32i.n	a10, a8, 0
+40102b65:	130c      	movi.n	a3, 1
+40102b67:	41a6a0        	srli	a10, a10, 6
+40102b6a:	0016c6        	j	40102bc9 <lmacIsIdle+0x189>
+40102b6d:	0b0c22        	l8ui	a2, a12, 11
+40102b70:	42cc      	bnez.n	a2, 40102b78 <lmacIsIdle+0x138>
+40102b72:	0d0c42        	l8ui	a4, a12, 13
+40102b75:	28d416        	beqz	a4, 40102e06 <lmacIsIdle+0x3c6>
+40102b78:	032d      	mov.n	a2, a3
+40102b7a:	051842        	l16ui	a4, a8, 10
+40102b7d:	0b9c92        	l16si	a9, a12, 22
+40102b80:	0a9cb2        	l16si	a11, a12, 20
+40102b83:	ffa9a1        	l32r	a10, 40102a28 <clockgate_watchdog+0x2c>
+40102b86:	115300        	slli	a5, a3, 16
+40102b89:	aaa8      	l32i.n	a10, a10, 40
+40102b8b:	315050        	srai	a5, a5, 16
+40102b8e:	9aa8      	l32i.n	a10, a10, 36
+40102b90:	c0bb90        	sub	a11, a11, a9
+40102b93:	1aa8      	l32i.n	a10, a10, 4
+40102b95:	0a5cb2        	s16i	a11, a12, 20
+40102b98:	0a9c92        	l16si	a9, a12, 20
+40102b9b:	85a7a0        	extui	a10, a10, 23, 9
+40102b9e:	44aa      	add.n	a4, a4, a10
+40102ba0:	c03430        	sub	a3, a4, a3
+40102ba3:	113300        	slli	a3, a3, 16
+40102ba6:	313030        	srai	a3, a3, 16
+40102ba9:	0b5c32        	s16i	a3, a12, 22
+40102bac:	c03930        	sub	a3, a9, a3
+40102baf:	082537        	blt	a5, a3, 40102bbb <lmacIsIdle+0x17b>
+40102bb2:	015622        	s16i	a2, a6, 2
+40102bb5:	0c4c72        	s8i	a7, a12, 12
+40102bb8:	000086        	j	40102bbe <lmacIsIdle+0x17e>
+40102bbb:	015632        	s16i	a3, a6, 2
+40102bbe:	9088      	l32i.n	a8, a0, 36
+40102bc0:	030c      	movi.n	a3, 0
+40102bc2:	08a8      	l32i.n	a10, a8, 0
+40102bc4:	020c      	movi.n	a2, 0
+40102bc6:	41a6a0        	srli	a10, a10, 6
+40102bc9:	021216        	beqz	a2, 40102bee <lmacIsIdle+0x1ae>
+40102bcc:	096132        	s32i	a3, a1, 36
+40102bcf:	0a6172        	s32i	a7, a1, 40
+40102bd2:	b169      	s32i.n	a6, a1, 44
+40102bd4:	c109      	s32i.n	a0, a1, 48
+40102bd6:	146a87        	bbci	a10, 8, 40102bee <lmacIsIdle+0x1ae>
+40102bd9:	080822        	l8ui	a2, a8, 8
+40102bdc:	01d845        	call0	40104964 <RC_GetAckTime>
+40102bdf:	c108      	l32i.n	a0, a1, 48
+40102be1:	b168      	l32i.n	a6, a1, 44
+40102be3:	9088      	l32i.n	a8, a0, 36
+40102be5:	a178      	l32i.n	a7, a1, 40
+40102be7:	08a8      	l32i.n	a10, a8, 0
+40102be9:	9138      	l32i.n	a3, a1, 36
+40102beb:	41a6a0        	srli	a10, a10, 6
+40102bee:	1008      	l32i.n	a0, a0, 4
+40102bf0:	02a4b2        	movi	a11, 0x402
+40102bf3:	0b8ab7        	bany	a10, a11, 40102c02 <lmacIsIdle+0x1c2>
+40102bf6:	0526a0        	extui	a2, a10, 22, 1
+40102bf9:	18e216        	beqz	a2, 40102d8b <lmacIsIdle+0x34b>
+40102bfc:	0543a0        	extui	a4, a10, 19, 1
+40102bff:	188456        	bnez	a4, 40102d8b <lmacIsIdle+0x34b>
+40102c02:	020c      	movi.n	a2, 0
+40102c04:	000246        	j	40102c11 <lmacIsIdle+0x1d1>
+40102c07:	0593a0        	extui	a9, a10, 19, 1
+40102c0a:	5128      	l32i.n	a2, a1, 20
+40102c0c:	250c      	movi.n	a5, 2
+40102c0e:	932590        	movnez	a2, a5, a9
+40102c11:	f66551        	l32r	a5, 401005a8 <wdt_feed+0x170>
+40102c14:	41b8      	l32i.n	a11, a1, 16
+40102c16:	011692        	l16ui	a9, a6, 2
+40102c19:	242020        	extui	a2, a2, 0, 3
+40102c1c:	012280        	slli	a2, a2, 24
+40102c1f:	ffb161        	l32r	a6, 40102ae4 <lmacIsIdle+0xa4>
+40102c22:	119900        	slli	a9, a9, 16
+40102c25:	b4b0b0        	extui	a11, a11, 0, 12
+40102c28:	106060        	and	a6, a0, a6
+40102c2b:	fa2101        	l32r	a0, 401014b0 <system_deep_sleep_local_2+0xb0>
+40102c2e:	164d16        	beqz	a13, 40102d96 <lmacIsIdle+0x356>
+40102c31:	016a97        	bbci	a10, 9, 40102c36 <lmacIsIdle+0x1f6>
+40102c34:	33cc      	bnez.n	a3, 40102c3b <lmacIsIdle+0x1fb>
+40102c36:	0d0c      	movi.n	a13, 0
+40102c38:	000086        	j	40102c3e <lmacIsIdle+0x1fe>
+40102c3b:	fa7ed1        	l32r	a13, 40101634 <Cache_Read_Enable_2+0x2c>
+40102c3e:	016a87        	bbci	a10, 8, 40102c43 <lmacIsIdle+0x203>
+40102c41:	33cc      	bnez.n	a3, 40102c48 <lmacIsIdle+0x208>
+40102c43:	0a0c      	movi.n	a10, 0
+40102c45:	000086        	j	40102c4b <lmacIsIdle+0x20b>
+40102c48:	fb23a1        	l32r	a10, 401018d4 <flash_gd25q32c_read_status+0x190>
+40102c4b:	0a9c32        	l16si	a3, a12, 20
+40102c4e:	0c13e6        	bgei	a3, 1, 40102c5e <lmacIsIdle+0x21e>
+40102c51:	1148      	l32i.n	a4, a1, 4
+40102c53:	744040        	extui	a4, a4, 0, 8
+40102c56:	44cc      	bnez.n	a4, 40102c5e <lmacIsIdle+0x21e>
+40102c58:	0808c2        	l8ui	a12, a8, 8
+40102c5b:	04bcb6        	bltui	a12, 16, 40102c63 <lmacIsIdle+0x223>
+40102c5e:	030c      	movi.n	a3, 0
+40102c60:	000086        	j	40102c66 <lmacIsIdle+0x226>
+40102c63:	f64931        	l32r	a3, 40100588 <wdt_feed+0x150>
+40102c66:	20cda0        	or	a12, a13, a10
+40102c69:	203360        	or	a3, a3, a6
+40102c6c:	20c2c0        	or	a12, a2, a12
+40102c6f:	20cc30        	or	a12, a12, a3
+40102c72:	053d      	mov.n	a3, a5
+40102c74:	0020c0        	memw
+40102c77:	b760c2        	s32i	a12, a0, 0x2dc
+40102c7a:	0020c0        	memw
+40102c7d:	ba6092        	s32i	a9, a0, 0x2e8
+40102c80:	0c0852        	l8ui	a5, a8, 12
+40102c83:	080822        	l8ui	a2, a8, 8
+40102c86:	115500        	slli	a5, a5, 16
+40102c89:	34d020        	extui	a13, a2, 0, 4
+40102c8c:	11dd40        	slli	a13, a13, 12
+40102c8f:	20dbd0        	or	a13, a11, a13
+40102c92:	01b2f6        	bgeui	a2, 16, 40102c97 <lmacIsIdle+0x257>
+40102c95:	073d      	mov.n	a3, a7
+40102c97:	204350        	or	a4, a3, a5
+40102c9a:	20dd40        	or	a13, a13, a4
+40102c9d:	0020c0        	memw
+40102ca0:	b860d2        	s32i	a13, a0, 0x2e0
+40102ca3:	080822        	l8ui	a2, a8, 8
+40102ca6:	87a032        	movi	a3, 135
+40102ca9:	02b2f6        	bgeui	a2, 16, 40102caf <lmacIsIdle+0x26f>
+40102cac:	003406        	j	40102d80 <lmacIsIdle+0x340>
+40102caf:	841c      	movi.n	a4, 24
+40102cb1:	850c      	movi.n	a5, 8
+40102cb3:	076d      	mov.n	a6, a7
+40102cb5:	0898      	l32i.n	a9, a8, 0
+40102cb7:	41c8      	l32i.n	a12, a1, 16
+40102cb9:	f0c2a2        	addi	a10, a2, -16
+40102cbc:	24a0a0        	extui	a10, a10, 0, 3
+40102cbf:	11cc80        	slli	a12, a12, 8
+40102cc2:	059c90        	extui	a9, a9, 28, 1
+40102cc5:	936590        	movnez	a6, a5, a9
+40102cc8:	20aac0        	or	a10, a10, a12
+40102ccb:	01a247        	bge	a2, a4, 40102cd0 <lmacIsIdle+0x290>
+40102cce:	730c      	movi.n	a3, 7
+40102cd0:	20b360        	or	a11, a3, a6
+40102cd3:	01bb80        	slli	a11, a11, 24
+40102cd6:	20aab0        	or	a10, a10, a11
+40102cd9:	0020c0        	memw
+40102cdc:	b960a2        	s32i	a10, a0, 0x2e4
+40102cdf:	002746        	j	40102d80 <lmacIsIdle+0x340>
+40102ce2:	f629a1        	l32r	a10, 40100588 <wdt_feed+0x150>
+40102ce5:	f63031        	l32r	a3, 401005a8 <wdt_feed+0x170>
+40102ce8:	205d50        	or	a5, a13, a5
+40102ceb:	206a60        	or	a6, a10, a6
+40102cee:	205250        	or	a5, a2, a5
+40102cf1:	205560        	or	a5, a5, a6
+40102cf4:	040c22        	l8ui	a2, a12, 4
+40102cf7:	866c      	movi.n	a6, -24
+40102cf9:	d12620        	mul16s	a2, a6, a2
+40102cfc:	220a      	add.n	a2, a2, a0
+40102cfe:	0020c0        	memw
+40102d01:	f16252        	s32i	a5, a2, 0x3c4
+40102d04:	040c42        	l8ui	a4, a12, 4
+40102d07:	d14640        	mul16s	a4, a6, a4
+40102d0a:	440a      	add.n	a4, a4, a0
+40102d0c:	0020c0        	memw
+40102d0f:	f46492        	s32i	a9, a4, 0x3d0
+40102d12:	0c0852        	l8ui	a5, a8, 12
+40102d15:	040c22        	l8ui	a2, a12, 4
+40102d18:	115500        	slli	a5, a5, 16
+40102d1b:	d16620        	mul16s	a6, a6, a2
+40102d1e:	080822        	l8ui	a2, a8, 8
+40102d21:	660a      	add.n	a6, a6, a0
+40102d23:	01b2f6        	bgeui	a2, 16, 40102d28 <lmacIsIdle+0x2e8>
+40102d26:	073d      	mov.n	a3, a7
+40102d28:	20a350        	or	a10, a3, a5
+40102d2b:	349020        	extui	a9, a2, 0, 4
+40102d2e:	119940        	slli	a9, a9, 12
+40102d31:	209b90        	or	a9, a11, a9
+40102d34:	2099a0        	or	a9, a9, a10
+40102d37:	0020c0        	memw
+40102d3a:	f26692        	s32i	a9, a6, 0x3c8
+40102d3d:	080822        	l8ui	a2, a8, 8
+40102d40:	3cb2b6        	bltui	a2, 16, 40102d80 <lmacIsIdle+0x340>
+40102d43:	8a1c      	movi.n	a10, 24
+40102d45:	040cd2        	l8ui	a13, a12, 4
+40102d48:	8b6c      	movi.n	a11, -24
+40102d4a:	830c      	movi.n	a3, 8
+40102d4c:	0848      	l32i.n	a4, a8, 0
+40102d4e:	076d      	mov.n	a6, a7
+40102d50:	054c40        	extui	a4, a4, 28, 1
+40102d53:	936340        	movnez	a6, a3, a4
+40102d56:	d1bbd0        	mul16s	a11, a11, a13
+40102d59:	0b0a      	add.n	a0, a11, a0
+40102d5b:	87a032        	movi	a3, 135
+40102d5e:	01a2a7        	bge	a2, a10, 40102d63 <lmacIsIdle+0x323>
+40102d61:	730c      	movi.n	a3, 7
+40102d63:	4188      	l32i.n	a8, a1, 16
+40102d65:	f0c252        	addi	a5, a2, -16
+40102d68:	207360        	or	a7, a3, a6
+40102d6b:	017780        	slli	a7, a7, 24
+40102d6e:	245050        	extui	a5, a5, 0, 3
+40102d71:	118880        	slli	a8, a8, 8
+40102d74:	205580        	or	a5, a5, a8
+40102d77:	205570        	or	a5, a5, a7
+40102d7a:	0020c0        	memw
+40102d7d:	f36052        	s32i	a5, a0, 0x3cc
+40102d80:	71c8      	l32i.n	a12, a1, 28
+40102d82:	81d8      	l32i.n	a13, a1, 32
+40102d84:	6108      	l32i.n	a0, a1, 24
+40102d86:	40c112        	addi	a1, a1, 64
+40102d89:	f00d      	ret.n
+40102d8b:	0594a0        	extui	a9, a10, 20, 1
+40102d8e:	e75916        	beqz	a9, 40102c07 <lmacIsIdle+0x1c7>
+40102d91:	320c      	movi.n	a2, 3
+40102d93:	ff9e86        	j	40102c11 <lmacIsIdle+0x1d1>
+40102d96:	0020c0        	memw
+40102d99:	68a8      	l32i.n	a10, a8, 24
+40102d9b:	040c52        	l8ui	a5, a12, 4
+40102d9e:	ff2241        	l32r	a4, 40102a28 <clockgate_watchdog+0x2c>
+40102da1:	8d6c      	movi.n	a13, -24
+40102da3:	1448      	l32i.n	a4, a4, 4
+40102da5:	d1dd50        	mul16s	a13, a13, a5
+40102da8:	802052        	l32i	a5, a0, 0x200
+40102dab:	dd0a      	add.n	a13, a13, a0
+40102dad:	c055a0        	sub	a5, a5, a10
+40102db0:	5a0c      	movi.n	a10, 5
+40102db2:	415a50        	srli	a5, a5, 10
+40102db5:	c05450        	sub	a5, a4, a5
+40102db8:	3159      	s32i.n	a5, a1, 12
+40102dba:	013457        	bltu	a4, a5, 40102dbf <lmacIsIdle+0x37f>
+40102dbd:	31a8      	l32i.n	a10, a1, 12
+40102dbf:	b4a0a0        	extui	a10, a10, 0, 12
+40102dc2:	11aa40        	slli	a10, a10, 12
+40102dc5:	0020c0        	memw
+40102dc8:	f56da2        	s32i	a10, a13, 0x3d4
+40102dcb:	0858      	l32i.n	a5, a8, 0
+40102dcd:	41a650        	srli	a10, a5, 6
+40102dd0:	0165f7        	bbci	a5, 15, 40102dd5 <lmacIsIdle+0x395>
+40102dd3:	43cc      	bnez.n	a3, 40102ddb <lmacIsIdle+0x39b>
+40102dd5:	f5ebd1        	l32r	a13, 40100584 <wdt_feed+0x14c>
+40102dd8:	000086        	j	40102dde <lmacIsIdle+0x39e>
+40102ddb:	ff43d1        	l32r	a13, 40102ae8 <lmacIsIdle+0xa8>
+40102dde:	016a87        	bbci	a10, 8, 40102de3 <lmacIsIdle+0x3a3>
+40102de1:	33cc      	bnez.n	a3, 40102de8 <lmacIsIdle+0x3a8>
+40102de3:	050c      	movi.n	a5, 0
+40102de5:	000086        	j	40102deb <lmacIsIdle+0x3ab>
+40102de8:	fabb51        	l32r	a5, 401018d4 <flash_gd25q32c_read_status+0x190>
+40102deb:	0a9c32        	l16si	a3, a12, 20
+40102dee:	0f13e6        	bgei	a3, 1, 40102e01 <lmacIsIdle+0x3c1>
+40102df1:	1148      	l32i.n	a4, a1, 4
+40102df3:	744040        	extui	a4, a4, 0, 8
+40102df6:	74cc      	bnez.n	a4, 40102e01 <lmacIsIdle+0x3c1>
+40102df8:	0808a2        	l8ui	a10, a8, 8
+40102dfb:	02baf6        	bgeui	a10, 16, 40102e01 <lmacIsIdle+0x3c1>
+40102dfe:	ffb806        	j	40102ce2 <lmacIsIdle+0x2a2>
+40102e01:	0a0c      	movi.n	a10, 0
+40102e03:	ffb786        	j	40102ce5 <lmacIsIdle+0x2a5>
+40102e06:	0c1c22        	l16ui	a2, a12, 24
+40102e09:	074216        	beqz	a2, 40102e81 <lmacIsIdle+0x441>
+40102e0c:	015632        	s16i	a3, a6, 2
+40102e0f:	092082        	l32i	a8, a0, 36
+40102e12:	202330        	or	a2, a3, a3
+40102e15:	002892        	l32i	a9, a8, 0
+40102e18:	0139      	s32i.n	a3, a1, 0
+40102e1a:	2af907        	bbsi	a9, 16, 40102e48 <lmacIsIdle+0x408>
+40102e1d:	27e977        	bbsi	a9, 7, 40102e48 <lmacIsIdle+0x408>
+40102e20:	a179      	s32i.n	a7, a1, 40
+40102e22:	b169      	s32i.n	a6, a1, 44
+40102e24:	c109      	s32i.n	a0, a1, 48
+40102e26:	0879c7        	bbci	a9, 28, 40102e32 <lmacIsIdle+0x3f2>
+40102e29:	a179      	s32i.n	a7, a1, 40
+40102e2b:	b169      	s32i.n	a6, a1, 44
+40102e2d:	c109      	s32i.n	a0, a1, 48
+40102e2f:	157997        	bbci	a9, 25, 40102e48 <lmacIsIdle+0x408>
+40102e32:	342290        	extui	a2, a9, 2, 4
+40102e35:	0138      	l32i.n	a3, a1, 0
+40102e37:	0c1c42        	l16ui	a4, a12, 24
+40102e3a:	019fc5        	call0	40104838 <ppCalTxop>
+40102e3d:	a178      	l32i.n	a7, a1, 40
+40102e3f:	c108      	l32i.n	a0, a1, 48
+40102e41:	b168      	l32i.n	a6, a1, 44
+40102e43:	9088      	l32i.n	a8, a0, 36
+40102e45:	015622        	s16i	a2, a6, 2
+40102e48:	0148      	l32i.n	a4, a1, 0
+40102e4a:	0fb427        	bgeu	a4, a2, 40102e5d <lmacIsIdle+0x41d>
+40102e4d:	0b5c72        	s16i	a7, a12, 22
+40102e50:	0a5c22        	s16i	a2, a12, 20
+40102e53:	5158      	l32i.n	a5, a1, 20
+40102e55:	0c4c52        	s8i	a5, a12, 12
+40102e58:	120c      	movi.n	a2, 1
+40102e5a:	000106        	j	40102e62 <lmacIsIdle+0x422>
+40102e5d:	0a5c72        	s16i	a7, a12, 20
+40102e60:	020c      	movi.n	a2, 0
+40102e62:	08a8      	l32i.n	a10, a8, 0
+40102e64:	41a6a0        	srli	a10, a10, 6
+40102e67:	000446        	j	40102e7c <lmacIsIdle+0x43c>
+40102e6a:	0808b2        	l8ui	a11, a8, 8
+40102e6d:	09bbb6        	bltui	a11, 16, 40102e7a <lmacIsIdle+0x43a>
+40102e70:	9088      	l32i.n	a8, a0, 36
+40102e72:	08a8      	l32i.n	a10, a8, 0
 40102e74:	015632        	s16i	a3, a6, 2
-40102e77:	092082        	l32i	a8, a0, 36
-40102e7a:	202330        	or	a2, a3, a3
-40102e7d:	002892        	l32i	a9, a8, 0
-40102e80:	0139      	s32i.n	a3, a1, 0
-40102e82:	2af907        	bbsi	a9, 16, 40102eb0 <lmacIsIdle+0x408>
-40102e85:	27e977        	bbsi	a9, 7, 40102eb0 <lmacIsIdle+0x408>
-40102e88:	a179      	s32i.n	a7, a1, 40
-40102e8a:	b169      	s32i.n	a6, a1, 44
-40102e8c:	c109      	s32i.n	a0, a1, 48
-40102e8e:	0879c7        	bbci	a9, 28, 40102e9a <lmacIsIdle+0x3f2>
-40102e91:	a179      	s32i.n	a7, a1, 40
-40102e93:	b169      	s32i.n	a6, a1, 44
-40102e95:	c109      	s32i.n	a0, a1, 48
-40102e97:	157997        	bbci	a9, 25, 40102eb0 <lmacIsIdle+0x408>
-40102e9a:	342290        	extui	a2, a9, 2, 4
-40102e9d:	0138      	l32i.n	a3, a1, 0
-40102e9f:	0c1c42        	l16ui	a4, a12, 24
-40102ea2:	019fc5        	call0	401048a0 <ppCalTxop>
-40102ea5:	a178      	l32i.n	a7, a1, 40
-40102ea7:	c108      	l32i.n	a0, a1, 48
-40102ea9:	b168      	l32i.n	a6, a1, 44
-40102eab:	9088      	l32i.n	a8, a0, 36
-40102ead:	015622        	s16i	a2, a6, 2
-40102eb0:	0148      	l32i.n	a4, a1, 0
-40102eb2:	0fb427        	bgeu	a4, a2, 40102ec5 <lmacIsIdle+0x41d>
-40102eb5:	0b5c72        	s16i	a7, a12, 22
-40102eb8:	0a5c22        	s16i	a2, a12, 20
-40102ebb:	5158      	l32i.n	a5, a1, 20
-40102ebd:	0c4c52        	s8i	a5, a12, 12
-40102ec0:	120c      	movi.n	a2, 1
-40102ec2:	000106        	j	40102eca <lmacIsIdle+0x422>
-40102ec5:	0a5c72        	s16i	a7, a12, 20
-40102ec8:	020c      	movi.n	a2, 0
-40102eca:	08a8      	l32i.n	a10, a8, 0
-40102ecc:	41a6a0        	srli	a10, a10, 6
-40102ecf:	000446        	j	40102ee4 <lmacIsIdle+0x43c>
-40102ed2:	0808b2        	l8ui	a11, a8, 8
-40102ed5:	09bbb6        	bltui	a11, 16, 40102ee2 <lmacIsIdle+0x43a>
-40102ed8:	9088      	l32i.n	a8, a0, 36
-40102eda:	08a8      	l32i.n	a10, a8, 0
-40102edc:	015632        	s16i	a3, a6, 2
-40102edf:	41a6a0        	srli	a10, a10, 6
-40102ee2:	020c      	movi.n	a2, 0
-40102ee4:	130c      	movi.n	a3, 1
-40102ee6:	ff51c6        	j	40102c31 <lmacIsIdle+0x189>
-40102ee9:	fe5b16        	beqz	a11, 40102ed2 <lmacIsIdle+0x42a>
-40102eec:	2139      	s32i.n	a3, a1, 8
-40102eee:	a179      	s32i.n	a7, a1, 40
-40102ef0:	b169      	s32i.n	a6, a1, 44
-40102ef2:	c109      	s32i.n	a0, a1, 48
-40102ef4:	daea67        	bbsi	a10, 6, 40102ed2 <lmacIsIdle+0x42a>
-40102ef7:	342290        	extui	a2, a9, 2, 4
-40102efa:	ff1601        	l32r	a0, 40102b54 <lmacIsIdle+0xac>
-40102efd:	0000c0        	callx0	a0
-40102f00:	b168      	l32i.n	a6, a1, 44
-40102f02:	21b8      	l32i.n	a11, a1, 8
-40102f04:	0156b2        	s16i	a11, a6, 2
-40102f07:	32cc      	bnez.n	a2, 40102f0e <lmacIsIdle+0x466>
-40102f09:	020c      	movi.n	a2, 0
-40102f0b:	0002c6        	j	40102f1a <lmacIsIdle+0x472>
-40102f0e:	9208      	l32i.n	a0, a2, 36
-40102f10:	051002        	l16ui	a0, a0, 10
-40102f13:	120c      	movi.n	a2, 1
-40102f15:	00ba      	add.n	a0, a0, a11
-40102f17:	015602        	s16i	a0, a6, 2
-40102f1a:	c108      	l32i.n	a0, a1, 48
-40102f1c:	a178      	l32i.n	a7, a1, 40
-40102f1e:	9088      	l32i.n	a8, a0, 36
-40102f20:	ffe986        	j	40102eca <lmacIsIdle+0x422>
+40102e77:	41a6a0        	srli	a10, a10, 6
+40102e7a:	020c      	movi.n	a2, 0
+40102e7c:	130c      	movi.n	a3, 1
+40102e7e:	ff51c6        	j	40102bc9 <lmacIsIdle+0x189>
+40102e81:	fe5b16        	beqz	a11, 40102e6a <lmacIsIdle+0x42a>
+40102e84:	2139      	s32i.n	a3, a1, 8
+40102e86:	a179      	s32i.n	a7, a1, 40
+40102e88:	b169      	s32i.n	a6, a1, 44
+40102e8a:	c109      	s32i.n	a0, a1, 48
+40102e8c:	daea67        	bbsi	a10, 6, 40102e6a <lmacIsIdle+0x42a>
+40102e8f:	342290        	extui	a2, a9, 2, 4
+40102e92:	ff1601        	l32r	a0, 40102aec <lmacIsIdle+0xac>
+40102e95:	0000c0        	callx0	a0
+40102e98:	b168      	l32i.n	a6, a1, 44
+40102e9a:	21b8      	l32i.n	a11, a1, 8
+40102e9c:	0156b2        	s16i	a11, a6, 2
+40102e9f:	32cc      	bnez.n	a2, 40102ea6 <lmacIsIdle+0x466>
+40102ea1:	020c      	movi.n	a2, 0
+40102ea3:	0002c6        	j	40102eb2 <lmacIsIdle+0x472>
+40102ea6:	9208      	l32i.n	a0, a2, 36
+40102ea8:	051002        	l16ui	a0, a0, 10
+40102eab:	120c      	movi.n	a2, 1
+40102ead:	00ba      	add.n	a0, a0, a11
+40102eaf:	015602        	s16i	a0, a6, 2
+40102eb2:	c108      	l32i.n	a0, a1, 48
+40102eb4:	a178      	l32i.n	a7, a1, 40
+40102eb6:	9088      	l32i.n	a8, a0, 36
+40102eb8:	ffe986        	j	40102e62 <lmacIsIdle+0x422>
 	...
 
-40102f24 <lmacSetAcParam>:
-40102f24:	e0c112        	addi	a1, a1, -32
-40102f27:	0129      	s32i.n	a2, a1, 0
-40102f29:	1139      	s32i.n	a3, a1, 4
-40102f2b:	5169      	s32i.n	a6, a1, 20
-40102f2d:	2109      	s32i.n	a0, a1, 8
-40102f2f:	31c9      	s32i.n	a12, a1, 12
-40102f31:	41d9      	s32i.n	a13, a1, 16
-40102f33:	05cd      	mov.n	a12, a5
-40102f35:	04dd      	mov.n	a13, a4
-40102f37:	f55a01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40102f3a:	0000c0        	callx0	a0
-40102f3d:	5108      	l32i.n	a0, a1, 20
-40102f3f:	0128      	l32i.n	a2, a1, 0
-40102f41:	fed831        	l32r	a3, 40102aa4 <lmacIsActive+0x10>
-40102f44:	b02220        	addx8	a2, a2, a2
-40102f47:	a02230        	addx4	a2, a2, a3
-40102f4a:	0742d2        	s8i	a13, a2, 7
-40102f4d:	1138      	l32i.n	a3, a1, 4
-40102f4f:	054232        	s8i	a3, a2, 5
-40102f52:	060232        	l8ui	a3, a2, 6
-40102f55:	0842c2        	s8i	a12, a2, 8
-40102f58:	043c37        	bltu	a12, a3, 40102f60 <lmacSetAcParam+0x3c>
-40102f5b:	04b3d7        	bgeu	a3, a13, 40102f63 <lmacSetAcParam+0x3f>
-40102f5e:	0dcd      	mov.n	a12, a13
-40102f60:	0642c2        	s8i	a12, a2, 6
-40102f63:	31c8      	l32i.n	a12, a1, 12
-40102f65:	41d8      	l32i.n	a13, a1, 16
-40102f67:	0c5202        	s16i	a0, a2, 24
-40102f6a:	f69401        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40102f6d:	0000c0        	callx0	a0
-40102f70:	2108      	l32i.n	a0, a1, 8
-40102f72:	20c112        	addi	a1, a1, 32
-40102f75:	f00d      	ret.n
+40102ebc <lmacSetAcParam>:
+40102ebc:	e0c112        	addi	a1, a1, -32
+40102ebf:	0129      	s32i.n	a2, a1, 0
+40102ec1:	1139      	s32i.n	a3, a1, 4
+40102ec3:	5169      	s32i.n	a6, a1, 20
+40102ec5:	2109      	s32i.n	a0, a1, 8
+40102ec7:	31c9      	s32i.n	a12, a1, 12
+40102ec9:	41d9      	s32i.n	a13, a1, 16
+40102ecb:	05cd      	mov.n	a12, a5
+40102ecd:	04dd      	mov.n	a13, a4
+40102ecf:	f57401        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40102ed2:	0000c0        	callx0	a0
+40102ed5:	5108      	l32i.n	a0, a1, 20
+40102ed7:	0128      	l32i.n	a2, a1, 0
+40102ed9:	fed831        	l32r	a3, 40102a3c <lmacIsActive+0x10>
+40102edc:	b02220        	addx8	a2, a2, a2
+40102edf:	a02230        	addx4	a2, a2, a3
+40102ee2:	0742d2        	s8i	a13, a2, 7
+40102ee5:	1138      	l32i.n	a3, a1, 4
+40102ee7:	054232        	s8i	a3, a2, 5
+40102eea:	060232        	l8ui	a3, a2, 6
+40102eed:	0842c2        	s8i	a12, a2, 8
+40102ef0:	043c37        	bltu	a12, a3, 40102ef8 <lmacSetAcParam+0x3c>
+40102ef3:	04b3d7        	bgeu	a3, a13, 40102efb <lmacSetAcParam+0x3f>
+40102ef6:	0dcd      	mov.n	a12, a13
+40102ef8:	0642c2        	s8i	a12, a2, 6
+40102efb:	31c8      	l32i.n	a12, a1, 12
+40102efd:	41d8      	l32i.n	a13, a1, 16
+40102eff:	0c5202        	s16i	a0, a2, 24
+40102f02:	f6ae01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40102f05:	0000c0        	callx0	a0
+40102f08:	2108      	l32i.n	a0, a1, 8
+40102f0a:	20c112        	addi	a1, a1, 32
+40102f0d:	f00d      	ret.n
 	...
 
-40102f78 <lmacProcessTXStartData>:
-40102f78:	fec661        	l32r	a6, 40102a90 <clockgate_watchdog+0x2c>
-40102f7b:	f6c252        	addi	a5, a2, -10
-40102f7e:	140c      	movi.n	a4, 1
-40102f80:	030c      	movi.n	a3, 0
-40102f82:	f0c112        	addi	a1, a1, -16
-40102f85:	1109      	s32i.n	a0, a1, 4
-40102f87:	833450        	moveqz	a3, a4, a5
-40102f8a:	000652        	l8ui	a5, a6, 0
-40102f8d:	020d      	mov.n	a0, a2
-40102f8f:	930530        	movnez	a0, a5, a3
-40102f92:	740000        	extui	a0, a0, 0, 8
-40102f95:	1180b6        	bltui	a0, 8, 40102faa <lmacProcessTXStartData+0x32>
-40102f98:	feca21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40102f9b:	feca31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40102f9e:	3ba242        	movi	a4, 0x23b
-40102fa1:	f47701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40102fa4:	0000c0        	callx0	a0
-40102fa7:	ffff06        	j	40102fa7 <lmacProcessTXStartData+0x2f>
-40102faa:	30c672        	addi	a7, a6, 48
-40102fad:	b04000        	addx8	a4, a0, a0
-40102fb0:	a04470        	addx4	a4, a4, a7
-40102fb3:	110482        	l8ui	a8, a4, 17
-40102fb6:	361826        	beqi	a8, 1, 40102ff0 <lmacProcessTXStartData+0x78>
-40102fb9:	2c85f6        	bgeui	a5, 8, 40102fe9 <lmacProcessTXStartData+0x71>
-40102fbc:	b04550        	addx8	a4, a5, a5
-40102fbf:	a04470        	addx4	a4, a4, a7
-40102fc2:	110482        	l8ui	a8, a4, 17
-40102fc5:	050d      	mov.n	a0, a5
-40102fc7:	251826        	beqi	a8, 1, 40102ff0 <lmacProcessTXStartData+0x78>
-40102fca:	febd21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40102fcd:	febd31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40102fd0:	47a242        	movi	a4, 0x247
-40102fd3:	f46b01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40102fd6:	0000c0        	callx0	a0
-40102fd9:	ffff06        	j	40102fd9 <lmacProcessTXStartData+0x61>
-40102fdc:	002d      	mov.n	a2, a0
-40102fde:	250c      	movi.n	a5, 2
-40102fe0:	114052        	s8i	a5, a0, 17
-40102fe3:	000405        	call0	40103024 <lmacProcessTXStartData+0xac>
-40102fe6:	008e45        	call0	401038cc <lmacProcessCollisions>
-40102fe9:	1108      	l32i.n	a0, a1, 4
-40102feb:	10c112        	addi	a1, a1, 16
-40102fee:	f00d      	ret.n
-40102ff0:	004602        	s8i	a0, a6, 0
-40102ff3:	0149      	s32i.n	a4, a1, 0
-40102ff5:	119266        	bnei	a2, 10, 4010300a <lmacProcessTXStartData+0x92>
-40102ff8:	fea631        	l32r	a3, 40102a90 <clockgate_watchdog+0x2c>
-40102ffb:	042d      	mov.n	a2, a4
-40102ffd:	2c0332        	l8ui	a3, a3, 44
-40103000:	ffb005        	call0	40102b04 <lmacIsIdle+0x5c>
-40103003:	fea351        	l32r	a5, 40102a90 <clockgate_watchdog+0x2c>
-40103006:	040c      	movi.n	a4, 0
-40103008:	9549      	s32i.n	a4, a5, 36
-4010300a:	0108      	l32i.n	a0, a1, 0
-4010300c:	0068      	l32i.n	a6, a0, 0
-4010300e:	fca656        	bnez	a6, 40102fdc <lmacProcessTXStartData+0x64>
-40103011:	feab21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103014:	feac31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103017:	4fa242        	movi	a4, 0x24f
-4010301a:	f45901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010301d:	0000c0        	callx0	a0
-40103020:	ffff06        	j	40103020 <lmacProcessTXStartData+0xa8>
-40103023:	c11200        	mul16u	a1, a2, a0
-40103026:	21c9f0        	srai	a12, a15, 9
-40103029:	02cd      	mov.n	a12, a2
-4010302b:	0228      	l32i.n	a2, a2, 0
-4010302d:	1109      	s32i.n	a0, a1, 4
-4010302f:	02dc      	bnez.n	a2, 40103043 <lmacProcessTXStartData+0xcb>
-40103031:	fea321        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103034:	fea431        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103037:	66a242        	movi	a4, 0x266
-4010303a:	f45101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010303d:	0000c0        	callx0	a0
-40103040:	ffff06        	j	40103040 <lmacProcessTXStartData+0xc8>
-40103043:	fe9351        	l32r	a5, 40102a90 <clockgate_watchdog+0x2c>
-40103046:	a508      	l32i.n	a0, a5, 40
-40103048:	9538      	l32i.n	a3, a5, 36
-4010304a:	40ec      	bnez.n	a0, 40103072 <lmacProcessTXStartData+0xfa>
-4010304c:	b3ac      	beqz.n	a3, 4010307b <lmacProcessTXStartData+0x103>
-4010304e:	fe9c21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103051:	fe9c31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103054:	6da242        	movi	a4, 0x26d
-40103057:	f44a01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010305a:	0000c0        	callx0	a0
-4010305d:	ffff06        	j	4010305d <lmacProcessTXStartData+0xe5>
-40103060:	046550        	extui	a6, a5, 5, 1
-40103063:	0a4616        	beqz	a6, 4010310b <lmacProcessTXStartData+0x193>
-40103066:	040472        	l8ui	a7, a4, 4
-40103069:	417470        	srli	a7, a7, 4
-4010306c:	0227a6        	blti	a7, 2, 40103072 <lmacProcessTXStartData+0xfa>
-4010306f:	002606        	j	4010310b <lmacProcessTXStartData+0x193>
-40103072:	21c8      	l32i.n	a12, a1, 8
-40103074:	1108      	l32i.n	a0, a1, 4
-40103076:	10c112        	addi	a1, a1, 16
-40103079:	f00d      	ret.n
-4010307b:	a529      	s32i.n	a2, a5, 40
-4010307d:	9248      	l32i.n	a4, a2, 36
-4010307f:	080c      	movi.n	a8, 0
-40103081:	0408      	l32i.n	a0, a4, 0
-40103083:	0c89      	s32i.n	a8, a12, 0
-40103085:	e9f0c7        	bbsi	a0, 28, 40103072 <lmacProcessTXStartData+0xfa>
-40103088:	0129      	s32i.n	a2, a1, 0
-4010308a:	0b0c92        	l8ui	a9, a12, 11
-4010308d:	0c1c22        	l16ui	a2, a12, 24
-40103090:	b9cc      	bnez.n	a9, 4010309f <lmacProcessTXStartData+0x127>
-40103092:	0a9ca2        	l16si	a10, a12, 20
-40103095:	061aa6        	blti	a10, 1, 4010309f <lmacProcessTXStartData+0x127>
-40103098:	1b0c      	movi.n	a11, 1
-4010309a:	0d4cb2        	s8i	a11, a12, 13
-4010309d:	0408      	l32i.n	a0, a4, 0
-4010309f:	03f216        	beqz	a2, 401030e2 <lmacProcessTXStartData+0x16a>
-401030a2:	0b0c32        	l8ui	a3, a12, 11
-401030a5:	0c0c42        	l8ui	a4, a12, 12
-401030a8:	038c      	beqz.n	a3, 401030ac <lmacProcessTXStartData+0x134>
-401030aa:	34cc      	bnez.n	a4, 401030b1 <lmacProcessTXStartData+0x139>
-401030ac:	0d0c52        	l8ui	a5, a12, 13
-401030af:	f5ac      	beqz.n	a5, 401030e2 <lmacProcessTXStartData+0x16a>
-401030b1:	342200        	extui	a2, a0, 2, 4
-401030b4:	011305        	call0	401041e8 <ppFetchTxQFirstAvail>
-401030b7:	002142        	l32i	a4, a1, 0
-401030ba:	092442        	l32i	a4, a4, 36
-401030bd:	002402        	l32i	a0, a4, 0
-401030c0:	e29c      	beqz.n	a2, 401030e2 <lmacProcessTXStartData+0x16a>
-401030c2:	415600        	srli	a5, a0, 6
-401030c5:	97f007        	bbsi	a0, 16, 40103060 <lmacProcessTXStartData+0xe8>
-401030c8:	94e077        	bbsi	a0, 7, 40103060 <lmacProcessTXStartData+0xe8>
-401030cb:	fe7151        	l32r	a5, 40102a90 <clockgate_watchdog+0x2c>
-401030ce:	130c      	movi.n	a3, 1
-401030d0:	9529      	s32i.n	a2, a5, 36
-401030d2:	0c2d      	mov.n	a2, a12
-401030d4:	ffa645        	call0	40102b3c <lmacIsIdle+0x94>
-401030d7:	0c2d      	mov.n	a2, a12
-401030d9:	d4a032        	movi	a3, 212
-401030dc:	ff9e85        	call0	40102ac8 <lmacIsIdle+0x20>
-401030df:	ffe3c6        	j	40103072 <lmacProcessTXStartData+0xfa>
-401030e2:	8c60d7        	bbci	a0, 13, 40103072 <lmacProcessTXStartData+0xfa>
-401030e5:	89e0c7        	bbsi	a0, 12, 40103072 <lmacProcessTXStartData+0xfa>
-401030e8:	342200        	extui	a2, a0, 2, 4
-401030eb:	010fc5        	call0	401041e8 <ppFetchTxQFirstAvail>
-401030ee:	f80216        	beqz	a2, 40103072 <lmacProcessTXStartData+0xfa>
-401030f1:	fe6761        	l32r	a6, 40102a90 <clockgate_watchdog+0x2c>
-401030f4:	01a032        	movi	a3, 1
-401030f7:	096622        	s32i	a2, a6, 36
-401030fa:	202cc0        	or	a2, a12, a12
-401030fd:	ffa3c5        	call0	40102b3c <lmacIsIdle+0x94>
-40103100:	0c2d      	mov.n	a2, a12
-40103102:	d4a032        	movi	a3, 212
-40103105:	ff9c05        	call0	40102ac8 <lmacIsIdle+0x20>
-40103108:	ffd986        	j	40103072 <lmacProcessTXStartData+0xfa>
-4010310b:	006c22        	s32i	a2, a12, 0
-4010310e:	00a032        	movi	a3, 0
-40103111:	202cc0        	or	a2, a12, a12
-40103114:	ffa245        	call0	40102b3c <lmacIsIdle+0x94>
-40103117:	040c22        	l8ui	a2, a12, 4
-4010311a:	030c      	movi.n	a3, 0
-4010311c:	040c      	movi.n	a4, 0
-4010311e:	02aec5        	call0	40105c0c <wDev_EnableTransmit>
-40103121:	ffd346        	j	40103072 <lmacProcessTXStartData+0xfa>
+40102f10 <lmacProcessTXStartData>:
+40102f10:	fec661        	l32r	a6, 40102a28 <clockgate_watchdog+0x2c>
+40102f13:	f6c252        	addi	a5, a2, -10
+40102f16:	140c      	movi.n	a4, 1
+40102f18:	030c      	movi.n	a3, 0
+40102f1a:	f0c112        	addi	a1, a1, -16
+40102f1d:	1109      	s32i.n	a0, a1, 4
+40102f1f:	833450        	moveqz	a3, a4, a5
+40102f22:	000652        	l8ui	a5, a6, 0
+40102f25:	020d      	mov.n	a0, a2
+40102f27:	930530        	movnez	a0, a5, a3
+40102f2a:	740000        	extui	a0, a0, 0, 8
+40102f2d:	1180b6        	bltui	a0, 8, 40102f42 <lmacProcessTXStartData+0x32>
+40102f30:	feca21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102f33:	feca31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102f36:	3ba242        	movi	a4, 0x23b
+40102f39:	f49101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102f3c:	0000c0        	callx0	a0
+40102f3f:	ffff06        	j	40102f3f <lmacProcessTXStartData+0x2f>
+40102f42:	30c672        	addi	a7, a6, 48
+40102f45:	b04000        	addx8	a4, a0, a0
+40102f48:	a04470        	addx4	a4, a4, a7
+40102f4b:	110482        	l8ui	a8, a4, 17
+40102f4e:	361826        	beqi	a8, 1, 40102f88 <lmacProcessTXStartData+0x78>
+40102f51:	2c85f6        	bgeui	a5, 8, 40102f81 <lmacProcessTXStartData+0x71>
+40102f54:	b04550        	addx8	a4, a5, a5
+40102f57:	a04470        	addx4	a4, a4, a7
+40102f5a:	110482        	l8ui	a8, a4, 17
+40102f5d:	050d      	mov.n	a0, a5
+40102f5f:	251826        	beqi	a8, 1, 40102f88 <lmacProcessTXStartData+0x78>
+40102f62:	febd21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102f65:	febd31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102f68:	47a242        	movi	a4, 0x247
+40102f6b:	f48501        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102f6e:	0000c0        	callx0	a0
+40102f71:	ffff06        	j	40102f71 <lmacProcessTXStartData+0x61>
+40102f74:	002d      	mov.n	a2, a0
+40102f76:	250c      	movi.n	a5, 2
+40102f78:	114052        	s8i	a5, a0, 17
+40102f7b:	000405        	call0	40102fbc <lmacProcessTXStartData+0xac>
+40102f7e:	008e45        	call0	40103864 <lmacProcessCollisions>
+40102f81:	1108      	l32i.n	a0, a1, 4
+40102f83:	10c112        	addi	a1, a1, 16
+40102f86:	f00d      	ret.n
+40102f88:	004602        	s8i	a0, a6, 0
+40102f8b:	0149      	s32i.n	a4, a1, 0
+40102f8d:	119266        	bnei	a2, 10, 40102fa2 <lmacProcessTXStartData+0x92>
+40102f90:	fea631        	l32r	a3, 40102a28 <clockgate_watchdog+0x2c>
+40102f93:	042d      	mov.n	a2, a4
+40102f95:	2c0332        	l8ui	a3, a3, 44
+40102f98:	ffb005        	call0	40102a9c <lmacIsIdle+0x5c>
+40102f9b:	fea351        	l32r	a5, 40102a28 <clockgate_watchdog+0x2c>
+40102f9e:	040c      	movi.n	a4, 0
+40102fa0:	9549      	s32i.n	a4, a5, 36
+40102fa2:	0108      	l32i.n	a0, a1, 0
+40102fa4:	0068      	l32i.n	a6, a0, 0
+40102fa6:	fca656        	bnez	a6, 40102f74 <lmacProcessTXStartData+0x64>
+40102fa9:	feab21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102fac:	feac31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102faf:	4fa242        	movi	a4, 0x24f
+40102fb2:	f47301        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102fb5:	0000c0        	callx0	a0
+40102fb8:	ffff06        	j	40102fb8 <lmacProcessTXStartData+0xa8>
+40102fbb:	c11200        	mul16u	a1, a2, a0
+40102fbe:	21c9f0        	srai	a12, a15, 9
+40102fc1:	02cd      	mov.n	a12, a2
+40102fc3:	0228      	l32i.n	a2, a2, 0
+40102fc5:	1109      	s32i.n	a0, a1, 4
+40102fc7:	02dc      	bnez.n	a2, 40102fdb <lmacProcessTXStartData+0xcb>
+40102fc9:	fea321        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102fcc:	fea431        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102fcf:	66a242        	movi	a4, 0x266
+40102fd2:	f46b01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102fd5:	0000c0        	callx0	a0
+40102fd8:	ffff06        	j	40102fd8 <lmacProcessTXStartData+0xc8>
+40102fdb:	fe9351        	l32r	a5, 40102a28 <clockgate_watchdog+0x2c>
+40102fde:	a508      	l32i.n	a0, a5, 40
+40102fe0:	9538      	l32i.n	a3, a5, 36
+40102fe2:	40ec      	bnez.n	a0, 4010300a <lmacProcessTXStartData+0xfa>
+40102fe4:	b3ac      	beqz.n	a3, 40103013 <lmacProcessTXStartData+0x103>
+40102fe6:	fe9c21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40102fe9:	fe9c31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40102fec:	6da242        	movi	a4, 0x26d
+40102fef:	f46401        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40102ff2:	0000c0        	callx0	a0
+40102ff5:	ffff06        	j	40102ff5 <lmacProcessTXStartData+0xe5>
+40102ff8:	046550        	extui	a6, a5, 5, 1
+40102ffb:	0a4616        	beqz	a6, 401030a3 <lmacProcessTXStartData+0x193>
+40102ffe:	040472        	l8ui	a7, a4, 4
+40103001:	417470        	srli	a7, a7, 4
+40103004:	0227a6        	blti	a7, 2, 4010300a <lmacProcessTXStartData+0xfa>
+40103007:	002606        	j	401030a3 <lmacProcessTXStartData+0x193>
+4010300a:	21c8      	l32i.n	a12, a1, 8
+4010300c:	1108      	l32i.n	a0, a1, 4
+4010300e:	10c112        	addi	a1, a1, 16
+40103011:	f00d      	ret.n
+40103013:	a529      	s32i.n	a2, a5, 40
+40103015:	9248      	l32i.n	a4, a2, 36
+40103017:	080c      	movi.n	a8, 0
+40103019:	0408      	l32i.n	a0, a4, 0
+4010301b:	0c89      	s32i.n	a8, a12, 0
+4010301d:	e9f0c7        	bbsi	a0, 28, 4010300a <lmacProcessTXStartData+0xfa>
+40103020:	0129      	s32i.n	a2, a1, 0
+40103022:	0b0c92        	l8ui	a9, a12, 11
+40103025:	0c1c22        	l16ui	a2, a12, 24
+40103028:	b9cc      	bnez.n	a9, 40103037 <lmacProcessTXStartData+0x127>
+4010302a:	0a9ca2        	l16si	a10, a12, 20
+4010302d:	061aa6        	blti	a10, 1, 40103037 <lmacProcessTXStartData+0x127>
+40103030:	1b0c      	movi.n	a11, 1
+40103032:	0d4cb2        	s8i	a11, a12, 13
+40103035:	0408      	l32i.n	a0, a4, 0
+40103037:	03f216        	beqz	a2, 4010307a <lmacProcessTXStartData+0x16a>
+4010303a:	0b0c32        	l8ui	a3, a12, 11
+4010303d:	0c0c42        	l8ui	a4, a12, 12
+40103040:	038c      	beqz.n	a3, 40103044 <lmacProcessTXStartData+0x134>
+40103042:	34cc      	bnez.n	a4, 40103049 <lmacProcessTXStartData+0x139>
+40103044:	0d0c52        	l8ui	a5, a12, 13
+40103047:	f5ac      	beqz.n	a5, 4010307a <lmacProcessTXStartData+0x16a>
+40103049:	342200        	extui	a2, a0, 2, 4
+4010304c:	011305        	call0	40104180 <ppFetchTxQFirstAvail>
+4010304f:	002142        	l32i	a4, a1, 0
+40103052:	092442        	l32i	a4, a4, 36
+40103055:	002402        	l32i	a0, a4, 0
+40103058:	e29c      	beqz.n	a2, 4010307a <lmacProcessTXStartData+0x16a>
+4010305a:	415600        	srli	a5, a0, 6
+4010305d:	97f007        	bbsi	a0, 16, 40102ff8 <lmacProcessTXStartData+0xe8>
+40103060:	94e077        	bbsi	a0, 7, 40102ff8 <lmacProcessTXStartData+0xe8>
+40103063:	fe7151        	l32r	a5, 40102a28 <clockgate_watchdog+0x2c>
+40103066:	130c      	movi.n	a3, 1
+40103068:	9529      	s32i.n	a2, a5, 36
+4010306a:	0c2d      	mov.n	a2, a12
+4010306c:	ffa645        	call0	40102ad4 <lmacIsIdle+0x94>
+4010306f:	0c2d      	mov.n	a2, a12
+40103071:	d4a032        	movi	a3, 212
+40103074:	ff9e85        	call0	40102a60 <lmacIsIdle+0x20>
+40103077:	ffe3c6        	j	4010300a <lmacProcessTXStartData+0xfa>
+4010307a:	8c60d7        	bbci	a0, 13, 4010300a <lmacProcessTXStartData+0xfa>
+4010307d:	89e0c7        	bbsi	a0, 12, 4010300a <lmacProcessTXStartData+0xfa>
+40103080:	342200        	extui	a2, a0, 2, 4
+40103083:	010fc5        	call0	40104180 <ppFetchTxQFirstAvail>
+40103086:	f80216        	beqz	a2, 4010300a <lmacProcessTXStartData+0xfa>
+40103089:	fe6761        	l32r	a6, 40102a28 <clockgate_watchdog+0x2c>
+4010308c:	01a032        	movi	a3, 1
+4010308f:	096622        	s32i	a2, a6, 36
+40103092:	202cc0        	or	a2, a12, a12
+40103095:	ffa3c5        	call0	40102ad4 <lmacIsIdle+0x94>
+40103098:	0c2d      	mov.n	a2, a12
+4010309a:	d4a032        	movi	a3, 212
+4010309d:	ff9c05        	call0	40102a60 <lmacIsIdle+0x20>
+401030a0:	ffd986        	j	4010300a <lmacProcessTXStartData+0xfa>
+401030a3:	006c22        	s32i	a2, a12, 0
+401030a6:	00a032        	movi	a3, 0
+401030a9:	202cc0        	or	a2, a12, a12
+401030ac:	ffa245        	call0	40102ad4 <lmacIsIdle+0x94>
+401030af:	040c22        	l8ui	a2, a12, 4
+401030b2:	030c      	movi.n	a3, 0
+401030b4:	040c      	movi.n	a4, 0
+401030b6:	02aec5        	call0	40105ba4 <wDev_EnableTransmit>
+401030b9:	ffd346        	j	4010300a <lmacProcessTXStartData+0xfa>
 
-40103124 <lmacProcessTxSuccess>:
-40103124:	f0c112        	addi	a1, a1, -16
-40103127:	11c9      	s32i.n	a12, a1, 4
-40103129:	0109      	s32i.n	a0, a1, 0
-4010312b:	03cd      	mov.n	a12, a3
-4010312d:	ff9645        	call0	40102a94 <lmacIsActive>
-40103130:	0a3216        	beqz	a2, 401031d7 <lmacProcessTxSuccess+0xb3>
-40103133:	ff9605        	call0	40102a94 <lmacIsActive>
-40103136:	02dc      	bnez.n	a2, 4010314a <lmacProcessTxSuccess+0x26>
-40103138:	fe6221        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-4010313b:	fe6231        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010313e:	a8a242        	movi	a4, 0x2a8
-40103141:	f40f01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103144:	0000c0        	callx0	a0
-40103147:	ffff06        	j	40103147 <lmacProcessTxSuccess+0x23>
-4010314a:	fe5161        	l32r	a6, 40102a90 <clockgate_watchdog+0x2c>
-4010314d:	a608      	l32i.n	a0, a6, 40
-4010314f:	000622        	l8ui	a2, a6, 0
-40103152:	00dc      	bnez.n	a0, 40103166 <lmacProcessTxSuccess+0x42>
-40103154:	fe5b21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103157:	fe5b31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010315a:	aba242        	movi	a4, 0x2ab
-4010315d:	f40801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103160:	0000c0        	callx0	a0
-40103163:	ffff06        	j	40103163 <lmacProcessTxSuccess+0x3f>
-40103166:	30c632        	addi	a3, a6, 48
-40103169:	b02220        	addx8	a2, a2, a2
-4010316c:	a02230        	addx4	a2, a2, a3
-4010316f:	110232        	l8ui	a3, a2, 17
-40103172:	112326        	beqi	a3, 2, 40103187 <lmacProcessTxSuccess+0x63>
-40103175:	fe5221        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103178:	fe5331        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010317b:	aca242        	movi	a4, 0x2ac
-4010317e:	f40001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103181:	0000c0        	callx0	a0
-40103184:	ffff06        	j	40103184 <lmacProcessTxSuccess+0x60>
-40103187:	9008      	l32i.n	a0, a0, 36
-40103189:	070c      	movi.n	a7, 0
-4010318b:	0038      	l32i.n	a3, a0, 0
-4010318d:	02a442        	movi	a4, 0x402
-40103190:	418630        	srli	a8, a3, 6
-40103193:	058847        	bany	a8, a4, 4010319c <lmacProcessTxSuccess+0x78>
-40103196:	5373c7        	bbci	a3, 28, 401031ed <lmacProcessTxSuccess+0xc9>
-40103199:	50f397        	bbsi	a3, 25, 401031ed <lmacProcessTxSuccess+0xc9>
-4010319c:	094272        	s8i	a7, a2, 9
-4010319f:	0a4272        	s8i	a7, a2, 10
-401031a2:	7fa0c2        	movi	a12, 127
-401031a5:	070252        	l8ui	a5, a2, 7
-401031a8:	064252        	s8i	a5, a2, 6
-401031ab:	0940c2        	s8i	a12, a0, 9
-401031ae:	a608      	l32i.n	a0, a6, 40
-401031b0:	9008      	l32i.n	a0, a0, 36
-401031b2:	0078      	l32i.n	a7, a0, 0
-401031b4:	1058      	l32i.n	a5, a0, 4
-401031b6:	2667b7        	bbci	a7, 11, 401031e0 <lmacProcessTxSuccess+0xbc>
-401031b9:	343450        	extui	a3, a5, 4, 4
-401031bc:	2023e6        	bgei	a3, 2, 401031e0 <lmacProcessTxSuccess+0xbc>
-401031bf:	431b      	addi.n	a4, a3, 1
-401031c1:	0faf32        	movi	a3, -241
-401031c4:	344040        	extui	a4, a4, 0, 4
-401031c7:	1144c0        	slli	a4, a4, 4
-401031ca:	103530        	and	a3, a5, a3
-401031cd:	203340        	or	a3, a3, a4
-401031d0:	1039      	s32i.n	a3, a0, 4
-401031d2:	130c      	movi.n	a3, 1
-401031d4:	002285        	call0	40103400 <lmacRecycleMPDU+0x178>
-401031d7:	11c8      	l32i.n	a12, a1, 4
-401031d9:	0108      	l32i.n	a0, a1, 0
-401031db:	10c112        	addi	a1, a1, 16
-401031de:	f00d      	ret.n
-401031e0:	030c      	movi.n	a3, 0
-401031e2:	540c      	movi.n	a4, 5
-401031e4:	114242        	s8i	a4, a2, 17
-401031e7:	002185        	call0	40103400 <lmacRecycleMPDU+0x178>
-401031ea:	fffa46        	j	401031d7 <lmacProcessTxSuccess+0xb3>
-401031ed:	070232        	l8ui	a3, a2, 7
-401031f0:	08e887        	bbsi	a8, 8, 401031fc <lmacProcessTxSuccess+0xd8>
-401031f3:	064232        	s8i	a3, a2, 6
-401031f6:	094272        	s8i	a7, a2, 9
-401031f9:	ffeb86        	j	401031ab <lmacProcessTxSuccess+0x87>
-401031fc:	064232        	s8i	a3, a2, 6
-401031ff:	094272        	s8i	a7, a2, 9
-40103202:	0a4272        	s8i	a7, a2, 10
-40103205:	ffe886        	j	401031ab <lmacProcessTxSuccess+0x87>
-40103208:	e0c112        	addi	a1, a1, -32
-4010320b:	0109      	s32i.n	a0, a1, 0
-4010320d:	41f9      	s32i.n	a15, a1, 16
-4010320f:	31e9      	s32i.n	a14, a1, 12
-40103211:	11c9      	s32i.n	a12, a1, 4
-40103213:	21d9      	s32i.n	a13, a1, 8
-40103215:	03cd      	mov.n	a12, a3
-40103217:	04dd      	mov.n	a13, a4
-40103219:	02ed      	mov.n	a14, a2
-4010321b:	05fd      	mov.n	a15, a5
-4010321d:	8e38      	l32i.n	a3, a14, 32
-4010321f:	9c28      	l32i.n	a2, a12, 36
-40103221:	331b      	addi.n	a3, a3, 1
-40103223:	8e39      	s32i.n	a3, a14, 32
-40103225:	0208      	l32i.n	a0, a2, 0
-40103227:	0f42d2        	s8i	a13, a2, 15
-4010322a:	0c60d7        	bbci	a0, 13, 4010323a <lmacProcessTxSuccess+0x116>
-4010322d:	09e0c7        	bbsi	a0, 12, 4010323a <lmacProcessTxSuccess+0x116>
-40103230:	0c2d      	mov.n	a2, a12
-40103232:	030c      	movi.n	a3, 0
-40103234:	00e145        	call0	4010404c <lmacTxFrame+0x154>
-40103237:	000186        	j	40103241 <lmacProcessTxSuccess+0x11d>
-4010323a:	0f3d      	mov.n	a3, a15
-4010323c:	0c2d      	mov.n	a2, a12
-4010323e:	00e0c5        	call0	4010404c <lmacTxFrame+0x154>
-40103241:	092c02        	l32i	a0, a12, 36
-40103244:	002002        	l32i	a0, a0, 0
-40103247:	0e60d7        	bbci	a0, 13, 40103259 <lmacProcessTxSuccess+0x135>
-4010324a:	0be0c7        	bbsi	a0, 12, 40103259 <lmacProcessTxSuccess+0x135>
-4010324d:	342200        	extui	a2, a0, 2, 4
-40103250:	00fd45        	call0	40104228 <ppDequeueTxQ>
-40103253:	20c220        	or	a12, a2, a2
-40103256:	fc3256        	bnez	a2, 4010321d <lmacProcessTxSuccess+0xf9>
-40103259:	11c8      	l32i.n	a12, a1, 4
-4010325b:	21d8      	l32i.n	a13, a1, 8
-4010325d:	31e8      	l32i.n	a14, a1, 12
-4010325f:	41f8      	l32i.n	a15, a1, 16
-40103261:	0108      	l32i.n	a0, a1, 0
-40103263:	20c112        	addi	a1, a1, 32
-40103266:	f00d      	ret.n
+401030bc <lmacProcessTxSuccess>:
+401030bc:	f0c112        	addi	a1, a1, -16
+401030bf:	11c9      	s32i.n	a12, a1, 4
+401030c1:	0109      	s32i.n	a0, a1, 0
+401030c3:	03cd      	mov.n	a12, a3
+401030c5:	ff9645        	call0	40102a2c <lmacIsActive>
+401030c8:	0a3216        	beqz	a2, 4010316f <lmacProcessTxSuccess+0xb3>
+401030cb:	ff9605        	call0	40102a2c <lmacIsActive>
+401030ce:	02dc      	bnez.n	a2, 401030e2 <lmacProcessTxSuccess+0x26>
+401030d0:	fe6221        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401030d3:	fe6231        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401030d6:	a8a242        	movi	a4, 0x2a8
+401030d9:	f42901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401030dc:	0000c0        	callx0	a0
+401030df:	ffff06        	j	401030df <lmacProcessTxSuccess+0x23>
+401030e2:	fe5161        	l32r	a6, 40102a28 <clockgate_watchdog+0x2c>
+401030e5:	a608      	l32i.n	a0, a6, 40
+401030e7:	000622        	l8ui	a2, a6, 0
+401030ea:	00dc      	bnez.n	a0, 401030fe <lmacProcessTxSuccess+0x42>
+401030ec:	fe5b21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401030ef:	fe5b31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401030f2:	aba242        	movi	a4, 0x2ab
+401030f5:	f42201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401030f8:	0000c0        	callx0	a0
+401030fb:	ffff06        	j	401030fb <lmacProcessTxSuccess+0x3f>
+401030fe:	30c632        	addi	a3, a6, 48
+40103101:	b02220        	addx8	a2, a2, a2
+40103104:	a02230        	addx4	a2, a2, a3
+40103107:	110232        	l8ui	a3, a2, 17
+4010310a:	112326        	beqi	a3, 2, 4010311f <lmacProcessTxSuccess+0x63>
+4010310d:	fe5221        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103110:	fe5331        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103113:	aca242        	movi	a4, 0x2ac
+40103116:	f41a01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103119:	0000c0        	callx0	a0
+4010311c:	ffff06        	j	4010311c <lmacProcessTxSuccess+0x60>
+4010311f:	9008      	l32i.n	a0, a0, 36
+40103121:	070c      	movi.n	a7, 0
+40103123:	0038      	l32i.n	a3, a0, 0
+40103125:	02a442        	movi	a4, 0x402
+40103128:	418630        	srli	a8, a3, 6
+4010312b:	058847        	bany	a8, a4, 40103134 <lmacProcessTxSuccess+0x78>
+4010312e:	5373c7        	bbci	a3, 28, 40103185 <lmacProcessTxSuccess+0xc9>
+40103131:	50f397        	bbsi	a3, 25, 40103185 <lmacProcessTxSuccess+0xc9>
+40103134:	094272        	s8i	a7, a2, 9
+40103137:	0a4272        	s8i	a7, a2, 10
+4010313a:	7fa0c2        	movi	a12, 127
+4010313d:	070252        	l8ui	a5, a2, 7
+40103140:	064252        	s8i	a5, a2, 6
+40103143:	0940c2        	s8i	a12, a0, 9
+40103146:	a608      	l32i.n	a0, a6, 40
+40103148:	9008      	l32i.n	a0, a0, 36
+4010314a:	0078      	l32i.n	a7, a0, 0
+4010314c:	1058      	l32i.n	a5, a0, 4
+4010314e:	2667b7        	bbci	a7, 11, 40103178 <lmacProcessTxSuccess+0xbc>
+40103151:	343450        	extui	a3, a5, 4, 4
+40103154:	2023e6        	bgei	a3, 2, 40103178 <lmacProcessTxSuccess+0xbc>
+40103157:	431b      	addi.n	a4, a3, 1
+40103159:	0faf32        	movi	a3, -241
+4010315c:	344040        	extui	a4, a4, 0, 4
+4010315f:	1144c0        	slli	a4, a4, 4
+40103162:	103530        	and	a3, a5, a3
+40103165:	203340        	or	a3, a3, a4
+40103168:	1039      	s32i.n	a3, a0, 4
+4010316a:	130c      	movi.n	a3, 1
+4010316c:	002285        	call0	40103398 <lmacRecycleMPDU+0x178>
+4010316f:	11c8      	l32i.n	a12, a1, 4
+40103171:	0108      	l32i.n	a0, a1, 0
+40103173:	10c112        	addi	a1, a1, 16
+40103176:	f00d      	ret.n
+40103178:	030c      	movi.n	a3, 0
+4010317a:	540c      	movi.n	a4, 5
+4010317c:	114242        	s8i	a4, a2, 17
+4010317f:	002185        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103182:	fffa46        	j	4010316f <lmacProcessTxSuccess+0xb3>
+40103185:	070232        	l8ui	a3, a2, 7
+40103188:	08e887        	bbsi	a8, 8, 40103194 <lmacProcessTxSuccess+0xd8>
+4010318b:	064232        	s8i	a3, a2, 6
+4010318e:	094272        	s8i	a7, a2, 9
+40103191:	ffeb86        	j	40103143 <lmacProcessTxSuccess+0x87>
+40103194:	064232        	s8i	a3, a2, 6
+40103197:	094272        	s8i	a7, a2, 9
+4010319a:	0a4272        	s8i	a7, a2, 10
+4010319d:	ffe886        	j	40103143 <lmacProcessTxSuccess+0x87>
+401031a0:	e0c112        	addi	a1, a1, -32
+401031a3:	0109      	s32i.n	a0, a1, 0
+401031a5:	41f9      	s32i.n	a15, a1, 16
+401031a7:	31e9      	s32i.n	a14, a1, 12
+401031a9:	11c9      	s32i.n	a12, a1, 4
+401031ab:	21d9      	s32i.n	a13, a1, 8
+401031ad:	03cd      	mov.n	a12, a3
+401031af:	04dd      	mov.n	a13, a4
+401031b1:	02ed      	mov.n	a14, a2
+401031b3:	05fd      	mov.n	a15, a5
+401031b5:	8e38      	l32i.n	a3, a14, 32
+401031b7:	9c28      	l32i.n	a2, a12, 36
+401031b9:	331b      	addi.n	a3, a3, 1
+401031bb:	8e39      	s32i.n	a3, a14, 32
+401031bd:	0208      	l32i.n	a0, a2, 0
+401031bf:	0f42d2        	s8i	a13, a2, 15
+401031c2:	0c60d7        	bbci	a0, 13, 401031d2 <lmacProcessTxSuccess+0x116>
+401031c5:	09e0c7        	bbsi	a0, 12, 401031d2 <lmacProcessTxSuccess+0x116>
+401031c8:	0c2d      	mov.n	a2, a12
+401031ca:	030c      	movi.n	a3, 0
+401031cc:	00e145        	call0	40103fe4 <lmacTxFrame+0x154>
+401031cf:	000186        	j	401031d9 <lmacProcessTxSuccess+0x11d>
+401031d2:	0f3d      	mov.n	a3, a15
+401031d4:	0c2d      	mov.n	a2, a12
+401031d6:	00e0c5        	call0	40103fe4 <lmacTxFrame+0x154>
+401031d9:	092c02        	l32i	a0, a12, 36
+401031dc:	002002        	l32i	a0, a0, 0
+401031df:	0e60d7        	bbci	a0, 13, 401031f1 <lmacProcessTxSuccess+0x135>
+401031e2:	0be0c7        	bbsi	a0, 12, 401031f1 <lmacProcessTxSuccess+0x135>
+401031e5:	342200        	extui	a2, a0, 2, 4
+401031e8:	00fd45        	call0	401041c0 <ppDequeueTxQ>
+401031eb:	20c220        	or	a12, a2, a2
+401031ee:	fc3256        	bnez	a2, 401031b5 <lmacProcessTxSuccess+0xf9>
+401031f1:	11c8      	l32i.n	a12, a1, 4
+401031f3:	21d8      	l32i.n	a13, a1, 8
+401031f5:	31e8      	l32i.n	a14, a1, 12
+401031f7:	41f8      	l32i.n	a15, a1, 16
+401031f9:	0108      	l32i.n	a0, a1, 0
+401031fb:	20c112        	addi	a1, a1, 32
+401031fe:	f00d      	ret.n
 
-40103268 <GetAccess>:
-40103268:	fe0f31        	l32r	a3, 40102aa4 <lmacIsActive+0x10>
-4010326b:	b02220        	addx8	a2, a2, a2
-4010326e:	a02230        	addx4	a2, a2, a3
-40103271:	f00d      	ret.n
+40103200 <GetAccess>:
+40103200:	fe0f31        	l32r	a3, 40102a3c <lmacIsActive+0x10>
+40103203:	b02220        	addx8	a2, a2, a2
+40103206:	a02230        	addx4	a2, a2, a3
+40103209:	f00d      	ret.n
 	...
 
-40103274 <lmacDiscardAgedMSDU>:
-40103274:	045d      	mov.n	a5, a4
-40103276:	f0c112        	addi	a1, a1, -16
-40103279:	440c      	movi.n	a4, 4
-4010327b:	0109      	s32i.n	a0, a1, 0
-4010327d:	fff885        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-40103280:	0108      	l32i.n	a0, a1, 0
-40103282:	10c112        	addi	a1, a1, 16
-40103285:	f00d      	ret.n
+4010320c <lmacDiscardAgedMSDU>:
+4010320c:	045d      	mov.n	a5, a4
+4010320e:	f0c112        	addi	a1, a1, -16
+40103211:	440c      	movi.n	a4, 4
+40103213:	0109      	s32i.n	a0, a1, 0
+40103215:	fff885        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+40103218:	0108      	l32i.n	a0, a1, 0
+4010321a:	10c112        	addi	a1, a1, 16
+4010321d:	f00d      	ret.n
 	...
 
-40103288 <lmacRecycleMPDU>:
-40103288:	026d      	mov.n	a6, a2
-4010328a:	f0c112        	addi	a1, a1, -16
-4010328d:	0109      	s32i.n	a0, a1, 0
-4010328f:	032d      	mov.n	a2, a3
-40103291:	100c      	movi.n	a0, 1
-40103293:	043d      	mov.n	a3, a4
-40103295:	7658      	l32i.n	a5, a6, 28
-40103297:	9248      	l32i.n	a4, a2, 36
-40103299:	551b      	addi.n	a5, a5, 1
-4010329b:	7659      	s32i.n	a5, a6, 28
-4010329d:	0f4402        	s8i	a0, a4, 15
-401032a0:	00da85        	call0	4010404c <lmacTxFrame+0x154>
-401032a3:	0108      	l32i.n	a0, a1, 0
-401032a5:	10c112        	addi	a1, a1, 16
-401032a8:	f00d      	ret.n
-401032aa:	120000        	excw
-401032ad:	09f0c1        	l32r	a12, 400c5a70 <__floatsidf+0xb7780>
-401032b0:	023211        	l32r	a1, 400c3b78 <__floatsidf+0xb5888>
-401032b3:	020811        	l32r	a1, 400c3ad4 <__floatsidf+0xb57e4>
-401032b6:	116326        	beqi	a3, 6, 401032cb <lmacRecycleMPDU+0x43>
-401032b9:	fe0121        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401032bc:	fe0231        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401032bf:	f4a242        	movi	a4, 0x2f4
-401032c2:	f3af01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401032c5:	0000c0        	callx0	a0
-401032c8:	ffff06        	j	401032c8 <lmacRecycleMPDU+0x40>
-401032cb:	006102        	s32i	a0, a1, 0
-401032ce:	092062        	l32i	a6, a0, 36
-401032d1:	00a072        	movi	a7, 0
-401032d4:	0279      	s32i.n	a7, a2, 0
-401032d6:	114272        	s8i	a7, a2, 17
-401032d9:	0658      	l32i.n	a5, a6, 0
-401032db:	1668      	l32i.n	a6, a6, 4
-401032dd:	2375b7        	bbci	a5, 27, 40103304 <lmacRecycleMPDU+0x7c>
-401032e0:	342250        	extui	a2, a5, 2, 4
-401032e3:	343460        	extui	a3, a6, 4, 4
-401032e6:	332b      	addi.n	a3, a3, 2
-401032e8:	743030        	extui	a3, a3, 0, 8
-401032eb:	00f885        	call0	40104274 <ppRecordBarRRC>
-401032ee:	0148      	l32i.n	a4, a1, 0
-401032f0:	9448      	l32i.n	a4, a4, 36
-401032f2:	022c      	movi.n	a2, 32
-401032f4:	0448      	l32i.n	a4, a4, 0
-401032f6:	630c      	movi.n	a3, 6
-401032f8:	344240        	extui	a4, a4, 2, 4
-401032fb:	f5c601        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
-401032fe:	0000c0        	callx0	a0
-40103301:	000cc6        	j	40103338 <lmacRecycleMPDU+0xb0>
-40103304:	fde331        	l32r	a3, 40102a90 <clockgate_watchdog+0x2c>
-40103307:	545860        	extui	a5, a6, 8, 6
-4010330a:	0d0372        	l8ui	a7, a3, 13
-4010330d:	0c0392        	l8ui	a9, a3, 12
-40103310:	0b3577        	bltu	a5, a7, 4010331f <lmacRecycleMPDU+0x97>
-40103313:	240c      	movi.n	a4, 2
-40103315:	150c      	movi.n	a5, 1
-40103317:	003d      	mov.n	a3, a0
-40103319:	ffeec5        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-4010331c:	000606        	j	40103338 <lmacRecycleMPDU+0xb0>
-4010331f:	548e60        	extui	a8, a6, 14, 6
-40103322:	0b3897        	bltu	a8, a9, 40103331 <lmacRecycleMPDU+0xa9>
-40103325:	340c      	movi.n	a4, 3
-40103327:	150c      	movi.n	a5, 1
-40103329:	003d      	mov.n	a3, a0
-4010332b:	ffedc5        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-4010332e:	000186        	j	40103338 <lmacRecycleMPDU+0xb0>
-40103331:	140c      	movi.n	a4, 1
-40103333:	003d      	mov.n	a3, a0
-40103335:	fff3c5        	call0	40103274 <lmacDiscardAgedMSDU>
-40103338:	1108      	l32i.n	a0, a1, 4
-4010333a:	10c112        	addi	a1, a1, 16
-4010333d:	f00d      	ret.n
-4010333f:	024200        	excw
-40103342:	0c0d      	mov.n	a0, a12
-40103344:	448c05        	call0	40147c08 <_etext+0x4140c>
-40103347:	0b4232        	s8i	a3, a2, 11
-4010334a:	0d4252        	s8i	a5, a2, 13
-4010334d:	f00d      	ret.n
-4010334f:	c11200        	mul16u	a1, a2, a0
-40103352:	61c2f0        	xsr.eps2	a15
-40103355:	610201        	l32r	a0, 400db760 <__floatsidf+0xcd470>
-40103358:	020200        	excw
-4010335b:	200b      	addi.n	a2, a0, -1
-4010335d:	ac20c2        	l32i	a12, a0, 0x2b0
-40103360:	022260        	excw
-40103363:	0c0c      	movi.n	a12, 0
-40103365:	f28c00        	excw
-40103368:	0c28      	l32i.n	a2, a12, 0
-4010336a:	9228      	l32i.n	a2, a2, 36
-4010336c:	0228      	l32i.n	a2, a2, 0
-4010336e:	342220        	extui	a2, a2, 2, 4
-40103371:	00e745        	call0	401041e8 <ppFetchTxQFirstAvail>
-40103374:	0c29      	s32i.n	a2, a12, 0
-40103376:	0000c6        	j	4010337d <lmacRecycleMPDU+0xf5>
-40103379:	002d      	mov.n	a2, a0
-4010337b:	0c29      	s32i.n	a2, a12, 0
-4010337d:	d29c      	beqz.n	a2, 4010339e <lmacRecycleMPDU+0x116>
-4010337f:	0c2d      	mov.n	a2, a12
-40103381:	030c      	movi.n	a3, 0
-40103383:	007a05        	call0	40103b24 <lmacMSDUAged+0x188>
-40103386:	000186        	j	40103390 <lmacRecycleMPDU+0x108>
-40103389:	030c      	movi.n	a3, 0
-4010338b:	fffb45        	call0	40103340 <lmacRecycleMPDU+0xb8>
-4010338e:	020c      	movi.n	a2, 0
-40103390:	930c      	movi.n	a3, 9
-40103392:	0108      	l32i.n	a0, a1, 0
-40103394:	124c32        	s8i	a3, a12, 18
-40103397:	11c8      	l32i.n	a12, a1, 4
-40103399:	10c112        	addi	a1, a1, 16
-4010339c:	f00d      	ret.n
-4010339e:	020c      	movi.n	a2, 0
-401033a0:	040c      	movi.n	a4, 0
-401033a2:	0b4c42        	s8i	a4, a12, 11
-401033a5:	fff9c6        	j	40103390 <lmacRecycleMPDU+0x108>
-401033a8:	f0c112        	addi	a1, a1, -16
-401033ab:	11c9      	s32i.n	a12, a1, 4
-401033ad:	0109      	s32i.n	a0, a1, 0
-401033af:	0b0202        	l8ui	a0, a2, 11
-401033b2:	02cd      	mov.n	a12, a2
-401033b4:	608c      	beqz.n	a0, 401033be <lmacRecycleMPDU+0x136>
-401033b6:	020c      	movi.n	a2, 0
-401033b8:	0b4c22        	s8i	a2, a12, 11
-401033bb:	000146        	j	401033c4 <lmacRecycleMPDU+0x13c>
-401033be:	00a032        	movi	a3, 0
-401033c1:	fff7c5        	call0	40103340 <lmacRecycleMPDU+0xb8>
-401033c4:	fdb321        	l32r	a2, 40102a90 <clockgate_watchdog+0x2c>
-401033c7:	092222        	l32i	a2, a2, 36
-401033ca:	00e845        	call0	40104250 <ppRollBackTxQ>
-401033cd:	0ca032        	movi	a3, 12
-401033d0:	0108      	l32i.n	a0, a1, 0
-401033d2:	124c32        	s8i	a3, a12, 18
-401033d5:	11c8      	l32i.n	a12, a1, 4
-401033d7:	10c112        	addi	a1, a1, 16
-401033da:	f00d      	ret.n
-401033dc:	130c      	movi.n	a3, 1
-401033de:	f0c112        	addi	a1, a1, -16
-401033e1:	0109      	s32i.n	a0, a1, 0
-401033e3:	11c9      	s32i.n	a12, a1, 4
-401033e5:	fdaa01        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-401033e8:	02cd      	mov.n	a12, a2
-401033ea:	9008      	l32i.n	a0, a0, 36
-401033ec:	0209      	s32i.n	a0, a2, 0
-401033ee:	007345        	call0	40103b24 <lmacMSDUAged+0x188>
-401033f1:	b30c      	movi.n	a3, 11
-401033f3:	0108      	l32i.n	a0, a1, 0
-401033f5:	124c32        	s8i	a3, a12, 18
-401033f8:	11c8      	l32i.n	a12, a1, 4
-401033fa:	10c112        	addi	a1, a1, 16
-401033fd:	f00d      	ret.n
-401033ff:	340c00        	extui	a0, a0, 12, 4
-40103402:	94a052        	movi	a5, 148
-40103405:	d0c112        	addi	a1, a1, -48
-40103408:	71e9      	s32i.n	a14, a1, 28
-4010340a:	4109      	s32i.n	a0, a1, 16
-4010340c:	51c9      	s32i.n	a12, a1, 20
-4010340e:	81f9      	s32i.n	a15, a1, 32
-40103410:	61d9      	s32i.n	a13, a1, 24
-40103412:	0f0c      	movi.n	a15, 0
-40103414:	fd9fd1        	l32r	a13, 40102a90 <clockgate_watchdog+0x2c>
-40103417:	02cd      	mov.n	a12, a2
-40103419:	110c02        	l8ui	a0, a12, 17
-4010341c:	032d      	mov.n	a2, a3
-4010341e:	d4a032        	movi	a3, 212
-40103421:	b2ec      	bnez.n	a2, 40103450 <lmacRecycleMPDU+0x1c8>
-40103423:	1e0c      	movi.n	a14, 1
-40103425:	fac022        	addi	a2, a0, -6
-40103428:	09f256        	bnez	a2, 401034cb <lmacRecycleMPDU+0x243>
-4010342b:	ad08      	l32i.n	a0, a13, 40
-4010342d:	114cf2        	s8i	a15, a12, 17
-40103430:	ad48      	l32i.n	a4, a13, 40
-40103432:	0c28      	l32i.n	a2, a12, 0
-40103434:	1a2456        	bnez	a4, 401035da <lmacRecycleMPDU+0x352>
-40103437:	328c      	beqz.n	a2, 4010343e <lmacRecycleMPDU+0x1b6>
-40103439:	9d58      	l32i.n	a5, a13, 36
-4010343b:	2d8516        	beqz	a5, 40103717 <lmacRecycleMPDU+0x48f>
-4010343e:	fda021        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103441:	fda031        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103444:	59a342        	movi	a4, 0x359
-40103447:	f34e01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010344a:	0000c0        	callx0	a0
-4010344d:	ffff06        	j	4010344d <lmacRecycleMPDU+0x1c5>
-40103450:	142026        	beqi	a0, 2, 40103468 <lmacRecycleMPDU+0x1e0>
-40103453:	111026        	beqi	a0, 1, 40103468 <lmacRecycleMPDU+0x1e0>
-40103456:	fd9a21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103459:	fd9a31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010345c:	caa342        	movi	a4, 0x3ca
-4010345f:	f34801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103462:	0000c0        	callx0	a0
-40103465:	ffff06        	j	40103465 <lmacRecycleMPDU+0x1dd>
-40103468:	ad08      	l32i.n	a0, a13, 40
-4010346a:	9d78      	l32i.n	a7, a13, 36
-4010346c:	40dc      	bnez.n	a0, 40103484 <lmacRecycleMPDU+0x1fc>
-4010346e:	0c2d      	mov.n	a2, a12
-40103470:	030c      	movi.n	a3, 0
-40103472:	360c      	movi.n	a6, 3
-40103474:	114c62        	s8i	a6, a12, 17
-40103477:	006ac5        	call0	40103b24 <lmacMSDUAged+0x188>
-4010347a:	02ed      	mov.n	a14, a2
-4010347c:	500c      	movi.n	a0, 5
-4010347e:	124c02        	s8i	a0, a12, 18
-40103481:	001dc6        	j	401034fc <lmacRecycleMPDU+0x274>
-40103484:	02c716        	beqz	a7, 401034b4 <lmacRecycleMPDU+0x22c>
-40103487:	092082        	l32i	a8, a0, 36
-4010348a:	002882        	l32i	a8, a8, 0
-4010348d:	0c2d      	mov.n	a2, a12
-4010348f:	058980        	extui	a8, a8, 25, 1
-40103492:	933580        	movnez	a3, a5, a8
-40103495:	ff66c5        	call0	40102b04 <lmacIsIdle+0x5c>
-40103498:	9d28      	l32i.n	a2, a13, 36
-4010349a:	00db45        	call0	40104250 <ppRollBackTxQ>
-4010349d:	0c2d      	mov.n	a2, a12
-4010349f:	030c      	movi.n	a3, 0
-401034a1:	390c      	movi.n	a9, 3
-401034a3:	ada8      	l32i.n	a10, a13, 40
-401034a5:	0ca9      	s32i.n	a10, a12, 0
-401034a7:	114c92        	s8i	a9, a12, 17
-401034aa:	006785        	call0	40103b24 <lmacMSDUAged+0x188>
-401034ad:	02ed      	mov.n	a14, a2
-401034af:	600c      	movi.n	a0, 6
-401034b1:	fff246        	j	4010347e <lmacRecycleMPDU+0x1f6>
-401034b4:	0cb8      	l32i.n	a11, a12, 0
-401034b6:	070b16        	beqz	a11, 4010352a <lmacRecycleMPDU+0x2a2>
-401034b9:	fd8121        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401034bc:	fd8231        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401034bf:	d9a342        	movi	a4, 0x3d9
-401034c2:	f32f01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401034c5:	0000c0        	callx0	a0
-401034c8:	ffff06        	j	401034c8 <lmacRecycleMPDU+0x240>
-401034cb:	195066        	bnei	a0, 5, 401034e8 <lmacRecycleMPDU+0x260>
-401034ce:	114cf2        	s8i	a15, a12, 17
-401034d1:	ad08      	l32i.n	a0, a13, 40
-401034d3:	08e056        	bnez	a0, 40103565 <lmacRecycleMPDU+0x2dd>
-401034d6:	fd7a21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401034d9:	fd7a31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401034dc:	89a342        	movi	a4, 0x389
-401034df:	f32801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401034e2:	0000c0        	callx0	a0
-401034e5:	ffff06        	j	401034e5 <lmacRecycleMPDU+0x25d>
-401034e8:	fd7621        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401034eb:	fd7631        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401034ee:	c4a342        	movi	a4, 0x3c4
-401034f1:	f32301        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401034f4:	0000c0        	callx0	a0
-401034f7:	ffff06        	j	401034f7 <lmacRecycleMPDU+0x26f>
-401034fa:	0e0c      	movi.n	a14, 0
-401034fc:	000c      	movi.n	a0, 0
-401034fe:	9d58      	l32i.n	a5, a13, 36
-40103500:	840c      	movi.n	a4, 8
-40103502:	000d32        	l8ui	a3, a13, 0
-40103505:	adf9      	s32i.n	a15, a13, 40
-40103507:	0d0c22        	l8ui	a2, a12, 13
-4010350a:	8334e0        	moveqz	a3, a4, a14
-4010350d:	835f00        	moveqz	a5, a15, a0
-40103510:	9d59      	s32i.n	a5, a13, 36
-40103512:	004d32        	s8i	a3, a13, 0
-40103515:	0dd216        	beqz	a2, 401035f6 <lmacRecycleMPDU+0x36e>
-40103518:	fd6a21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-4010351b:	fd6a31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010351e:	f1a342        	movi	a4, 0x3f1
-40103521:	f31701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103524:	0000c0        	callx0	a0
-40103527:	ffff06        	j	40103527 <lmacRecycleMPDU+0x29f>
-4010352a:	9028      	l32i.n	a2, a0, 36
-4010352c:	0268      	l32i.n	a6, a2, 0
-4010352e:	1876c7        	bbci	a6, 28, 4010354a <lmacRecycleMPDU+0x2c2>
-40103531:	1228      	l32i.n	a2, a2, 4
-40103533:	342420        	extui	a2, a2, 4, 4
-40103536:	1012a6        	blti	a2, 1, 4010354a <lmacRecycleMPDU+0x2c2>
-40103539:	0b1062        	l16ui	a6, a0, 22
-4010353c:	0a1052        	l16ui	a5, a0, 20
-4010353f:	071d32        	l16ui	a3, a13, 14
-40103542:	556a      	add.n	a5, a5, a6
-40103544:	b22357        	blt	a3, a5, 401034fa <lmacRecycleMPDU+0x272>
-40103547:	af32e6        	bgei	a2, 3, 401034fa <lmacRecycleMPDU+0x272>
-4010354a:	0c09      	s32i.n	a0, a12, 0
-4010354c:	0b0c72        	l8ui	a7, a12, 11
-4010354f:	114c42        	s8i	a4, a12, 17
-40103552:	178c      	beqz.n	a7, 40103557 <lmacRecycleMPDU+0x2cf>
-40103554:	0b4cf2        	s8i	a15, a12, 11
-40103557:	0c2d      	mov.n	a2, a12
-40103559:	030c      	movi.n	a3, 0
-4010355b:	005c85        	call0	40103b24 <lmacMSDUAged+0x188>
-4010355e:	02ed      	mov.n	a14, a2
-40103560:	700c      	movi.n	a0, 7
-40103562:	ffc606        	j	4010347e <lmacRecycleMPDU+0x1f6>
-40103565:	092d82        	l32i	a8, a13, 36
-40103568:	034816        	beqz	a8, 401035a0 <lmacRecycleMPDU+0x318>
-4010356b:	092092        	l32i	a9, a0, 36
-4010356e:	0998      	l32i.n	a9, a9, 0
-40103570:	0c2d      	mov.n	a2, a12
-40103572:	059990        	extui	a9, a9, 25, 1
-40103575:	933590        	movnez	a3, a5, a9
-40103578:	2c4d32        	s8i	a3, a13, 44
-4010357b:	0e3d      	mov.n	a3, a14
-4010357d:	ffdc05        	call0	40103340 <lmacRecycleMPDU+0xb8>
-40103580:	040c22        	l8ui	a2, a12, 4
-40103583:	9da8      	l32i.n	a10, a13, 36
-40103585:	0ca9      	s32i.n	a10, a12, 0
-40103587:	026dc5        	call0	40105c64 <Tx_Copy2Queue>
-4010358a:	0c2d      	mov.n	a2, a12
-4010358c:	040c      	movi.n	a4, 0
-4010358e:	124cf2        	s8i	a15, a12, 18
-40103591:	114ce2        	s8i	a14, a12, 17
-40103594:	ad38      	l32i.n	a3, a13, 40
-40103596:	ffcf05        	call0	40103288 <lmacRecycleMPDU>
-40103599:	100c      	movi.n	a0, 1
-4010359b:	1e0c      	movi.n	a14, 1
-4010359d:	ffd746        	j	401034fe <lmacRecycleMPDU+0x276>
-401035a0:	002cb2        	l32i	a11, a12, 0
-401035a3:	05eb56        	bnez	a11, 40103605 <lmacRecycleMPDU+0x37d>
-401035a6:	092022        	l32i	a2, a0, 36
-401035a9:	0228      	l32i.n	a2, a2, 0
-401035ab:	052920        	extui	a2, a2, 25, 1
-401035ae:	137216        	beqz	a2, 401036e9 <lmacRecycleMPDU+0x461>
-401035b1:	012d      	mov.n	a2, a1
-401035b3:	312b      	addi.n	a3, a1, 2
-401035b5:	414b      	addi.n	a4, a1, 4
-401035b7:	518b      	addi.n	a5, a1, 8
-401035b9:	02a945        	call0	40106050 <wDev_GetBAInfo>
-401035bc:	ad08      	l32i.n	a0, a13, 40
-401035be:	2158      	l32i.n	a5, a1, 8
-401035c0:	9008      	l32i.n	a0, a0, 36
-401035c2:	1148      	l32i.n	a4, a1, 4
-401035c4:	0068      	l32i.n	a6, a0, 0
-401035c6:	011132        	l16ui	a3, a1, 2
-401035c9:	342260        	extui	a2, a6, 2, 4
-401035cc:	056b60        	extui	a6, a6, 27, 1
-401035cf:	0e5656        	bnez	a6, 401036b8 <lmacRecycleMPDU+0x430>
-401035d2:	060c      	movi.n	a6, 0
-401035d4:	00cac5        	call0	40104284 <ppTxqUpdateBitmap>
-401035d7:	003ac6        	j	401036c6 <lmacRecycleMPDU+0x43e>
-401035da:	9d48      	l32i.n	a4, a13, 36
-401035dc:	3109      	s32i.n	a0, a1, 12
-401035de:	042416        	beqz	a4, 40103624 <lmacRecycleMPDU+0x39c>
-401035e1:	13e216        	beqz	a2, 40103723 <lmacRecycleMPDU+0x49b>
-401035e4:	fd3721        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401035e7:	fd3731        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401035ea:	5ea342        	movi	a4, 0x35e
-401035ed:	f2e401        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401035f0:	0000c0        	callx0	a0
-401035f3:	ffff06        	j	401035f3 <lmacRecycleMPDU+0x36b>
-401035f6:	51c8      	l32i.n	a12, a1, 20
-401035f8:	61d8      	l32i.n	a13, a1, 24
-401035fa:	71e8      	l32i.n	a14, a1, 28
-401035fc:	81f8      	l32i.n	a15, a1, 32
-401035fe:	4108      	l32i.n	a0, a1, 16
-40103600:	30c112        	addi	a1, a1, 48
-40103603:	f00d      	ret.n
-40103605:	0c2d      	mov.n	a2, a12
-40103607:	0e3d      	mov.n	a3, a14
-40103609:	ffd345        	call0	40103340 <lmacRecycleMPDU+0xb8>
-4010360c:	0c2d      	mov.n	a2, a12
-4010360e:	040c      	movi.n	a4, 0
-40103610:	114ce2        	s8i	a14, a12, 17
-40103613:	450c      	movi.n	a5, 4
-40103615:	124c52        	s8i	a5, a12, 18
-40103618:	ad38      	l32i.n	a3, a13, 40
-4010361a:	ffc6c5        	call0	40103288 <lmacRecycleMPDU>
-4010361d:	1e0c      	movi.n	a14, 1
-4010361f:	000c      	movi.n	a0, 0
-40103621:	ffb646        	j	401034fe <lmacRecycleMPDU+0x276>
-40103624:	72dc      	bnez.n	a2, 4010363f <lmacRecycleMPDU+0x3b7>
-40103626:	0c2d      	mov.n	a2, a12
-40103628:	0f3d      	mov.n	a3, a15
-4010362a:	ffd145        	call0	40103340 <lmacRecycleMPDU+0xb8>
-4010362d:	0b0c62        	l8ui	a6, a12, 11
-40103630:	168c      	beqz.n	a6, 40103635 <lmacRecycleMPDU+0x3ad>
-40103632:	0b4cf2        	s8i	a15, a12, 11
-40103635:	0e0c      	movi.n	a14, 0
-40103637:	a70c      	movi.n	a7, 10
-40103639:	124c72        	s8i	a7, a12, 18
-4010363c:	000486        	j	40103652 <lmacRecycleMPDU+0x3ca>
-4010363f:	0e3d      	mov.n	a3, a14
-40103641:	0c2d      	mov.n	a2, a12
-40103643:	ffcfc5        	call0	40103340 <lmacRecycleMPDU+0xb8>
-40103646:	1e0c      	movi.n	a14, 1
-40103648:	d80c      	movi.n	a8, 13
-4010364a:	190c      	movi.n	a9, 1
-4010364c:	114c92        	s8i	a9, a12, 17
-4010364f:	124c82        	s8i	a8, a12, 18
-40103652:	032102        	l32i	a0, a1, 12
-40103655:	092002        	l32i	a0, a0, 36
-40103658:	002022        	l32i	a2, a0, 0
-4010365b:	1008      	l32i.n	a0, a0, 4
-4010365d:	2372b7        	bbci	a2, 27, 40103684 <lmacRecycleMPDU+0x3fc>
-40103660:	342220        	extui	a2, a2, 2, 4
-40103663:	343400        	extui	a3, a0, 4, 4
-40103666:	332b      	addi.n	a3, a3, 2
-40103668:	743030        	extui	a3, a3, 0, 8
-4010366b:	00c085        	call0	40104274 <ppRecordBarRRC>
-4010366e:	3148      	l32i.n	a4, a1, 12
-40103670:	9448      	l32i.n	a4, a4, 36
-40103672:	022c      	movi.n	a2, 32
-40103674:	0448      	l32i.n	a4, a4, 0
-40103676:	630c      	movi.n	a3, 6
-40103678:	344240        	extui	a4, a4, 2, 4
-4010367b:	f4e601        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
-4010367e:	0000c0        	callx0	a0
-40103681:	ffe686        	j	4010361f <lmacRecycleMPDU+0x397>
-40103684:	546800        	extui	a6, a0, 8, 6
-40103687:	110c92        	l8ui	a9, a12, 17
-4010368a:	180c      	movi.n	a8, 1
-4010368c:	050c      	movi.n	a5, 0
-4010368e:	0d0d72        	l8ui	a7, a13, 13
-40103691:	835890        	moveqz	a5, a8, a9
-40103694:	0b3677        	bltu	a6, a7, 401036a3 <lmacRecycleMPDU+0x41b>
-40103697:	3138      	l32i.n	a3, a1, 12
-40103699:	0c2d      	mov.n	a2, a12
-4010369b:	240c      	movi.n	a4, 2
-4010369d:	ffb685        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-401036a0:	ffdec6        	j	4010361f <lmacRecycleMPDU+0x397>
-401036a3:	0c0db2        	l8ui	a11, a13, 12
-401036a6:	54ae00        	extui	a10, a0, 14, 6
-401036a9:	5e3ab7        	bltu	a10, a11, 4010370b <lmacRecycleMPDU+0x483>
-401036ac:	3138      	l32i.n	a3, a1, 12
-401036ae:	0c2d      	mov.n	a2, a12
-401036b0:	340c      	movi.n	a4, 3
-401036b2:	ffb545        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-401036b5:	ffd986        	j	4010361f <lmacRecycleMPDU+0x397>
-401036b8:	040062        	l8ui	a6, a0, 4
-401036bb:	416460        	srli	a6, a6, 4
-401036be:	661b      	addi.n	a6, a6, 1
-401036c0:	746060        	extui	a6, a6, 0, 8
-401036c3:	00bc05        	call0	40104284 <ppTxqUpdateBitmap>
-401036c6:	ad48      	l32i.n	a4, a13, 40
-401036c8:	9448      	l32i.n	a4, a4, 36
-401036ca:	022c      	movi.n	a2, 32
-401036cc:	0448      	l32i.n	a4, a4, 0
-401036ce:	630c      	movi.n	a3, 6
-401036d0:	344240        	extui	a4, a4, 2, 4
-401036d3:	f4d001        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
-401036d6:	0000c0        	callx0	a0
-401036d9:	0c2d      	mov.n	a2, a12
-401036db:	030c      	movi.n	a3, 0
-401036dd:	ffc605        	call0	40103340 <lmacRecycleMPDU+0xb8>
-401036e0:	124ce2        	s8i	a14, a12, 18
-401036e3:	0007c6        	j	40103706 <lmacRecycleMPDU+0x47e>
-401036e6:	000000        	ill
-401036e9:	0c2d      	mov.n	a2, a12
-401036eb:	0f3d      	mov.n	a3, a15
-401036ed:	ffc505        	call0	40103340 <lmacRecycleMPDU+0xb8>
-401036f0:	0b0c52        	l8ui	a5, a12, 11
-401036f3:	158c      	beqz.n	a5, 401036f8 <lmacRecycleMPDU+0x470>
-401036f5:	0b4cf2        	s8i	a15, a12, 11
-401036f8:	0c2d      	mov.n	a2, a12
-401036fa:	140c      	movi.n	a4, 1
-401036fc:	360c      	movi.n	a6, 3
-401036fe:	124c62        	s8i	a6, a12, 18
-40103701:	ad38      	l32i.n	a3, a13, 40
-40103703:	ffb845        	call0	40103288 <lmacRecycleMPDU>
-40103706:	0e0c      	movi.n	a14, 0
-40103708:	ffc4c6        	j	4010361f <lmacRecycleMPDU+0x397>
-4010370b:	3138      	l32i.n	a3, a1, 12
-4010370d:	0c2d      	mov.n	a2, a12
-4010370f:	440c      	movi.n	a4, 4
-40103711:	ffaf45        	call0	40103208 <lmacProcessTxSuccess+0xe4>
-40103714:	ffc1c6        	j	4010361f <lmacRecycleMPDU+0x397>
-40103717:	3129      	s32i.n	a2, a1, 12
-40103719:	0c2d      	mov.n	a2, a12
-4010371b:	ffc345        	call0	40103350 <lmacRecycleMPDU+0xc8>
-4010371e:	02ed      	mov.n	a14, a2
-40103720:	ffcb86        	j	40103652 <lmacRecycleMPDU+0x3ca>
-40103723:	9078      	l32i.n	a7, a0, 36
-40103725:	0c2d      	mov.n	a2, a12
-40103727:	0778      	l32i.n	a7, a7, 0
-40103729:	00ed      	mov.n	a14, a0
-4010372b:	057970        	extui	a7, a7, 25, 1
-4010372e:	933570        	movnez	a3, a5, a7
-40103731:	ff3d05        	call0	40102b04 <lmacIsIdle+0x5c>
-40103734:	9e28      	l32i.n	a2, a14, 36
-40103736:	0228      	l32i.n	a2, a2, 0
-40103738:	0c62d7        	bbci	a2, 13, 40103748 <lmacRecycleMPDU+0x4c0>
-4010373b:	09e2c7        	bbsi	a2, 12, 40103748 <lmacRecycleMPDU+0x4c0>
-4010373e:	0c2d      	mov.n	a2, a12
-40103740:	ffc645        	call0	401033a8 <lmacRecycleMPDU+0x120>
-40103743:	0e0c      	movi.n	a14, 0
-40103745:	ffc246        	j	40103652 <lmacRecycleMPDU+0x3ca>
-40103748:	0c2d      	mov.n	a2, a12
-4010374a:	ffc905        	call0	401033dc <lmacRecycleMPDU+0x154>
-4010374d:	02ed      	mov.n	a14, a2
-4010374f:	ffbfc6        	j	40103652 <lmacRecycleMPDU+0x3ca>
-40103752:	000000        	ill
-40103755:	c00000        	sub	a0, a0, a0
-40103758:	ff          	.byte 0xff
-40103759:	ff          	.byte 0xff
-4010375a:	ff          	.byte 0xff
-4010375b:	3f          	.byte 0x3f
-4010375c:	f0c112        	addi	a1, a1, -16
-4010375f:	11c9      	s32i.n	a12, a1, 4
-40103761:	0109      	s32i.n	a0, a1, 0
-40103763:	02cd      	mov.n	a12, a2
-40103765:	f34e01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40103768:	0000c0        	callx0	a0
-4010376b:	fffa31        	l32r	a3, 40103754 <lmacRecycleMPDU+0x4cc>
-4010376e:	f75021        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
-40103771:	0020c0        	memw
-40103774:	9d2202        	l32i	a0, a2, 0x274
-40103777:	200030        	or	a0, a0, a3
-4010377a:	0020c0        	memw
-4010377d:	9d6202        	s32i	a0, a2, 0x274
-40103780:	f48f01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40103783:	0000c0        	callx0	a0
-40103786:	222c      	movi.n	a2, 34
-40103788:	f71d01        	l32r	a0, 401013fc <system_restart_core+0x40>
-4010378b:	0000c0        	callx0	a0
-4010378e:	f34401        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40103791:	0000c0        	callx0	a0
-40103794:	f7eb81        	l32r	a8, 40101740 <spi_flash_write_status+0x78>
-40103797:	806c      	movi.n	a0, -24
-40103799:	f74551        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
-4010379c:	d100c0        	mul16s	a0, a0, a12
-4010379f:	005a      	add.n	a0, a0, a5
-401037a1:	0020c0        	memw
-401037a4:	f12072        	l32i	a7, a0, 0x3c4
-401037a7:	107780        	and	a7, a7, a8
-401037aa:	0020c0        	memw
-401037ad:	f16072        	s32i	a7, a0, 0x3c4
-401037b0:	ffea61        	l32r	a6, 40103758 <lmacRecycleMPDU+0x4d0>
-401037b3:	0020c0        	memw
-401037b6:	9d2542        	l32i	a4, a5, 0x274
-401037b9:	104460        	and	a4, a4, a6
-401037bc:	0020c0        	memw
-401037bf:	9d6542        	s32i	a4, a5, 0x274
-401037c2:	fcb831        	l32r	a3, 40102aa4 <lmacIsActive+0x10>
-401037c5:	b02cc0        	addx8	a2, a12, a12
-401037c8:	a02230        	addx4	a2, a2, a3
-401037cb:	110242        	l8ui	a4, a2, 17
-401037ce:	021466        	bnei	a4, 1, 401037d4 <lmacRecycleMPDU+0x54c>
-401037d1:	347c26        	beqi	a12, 7, 40103809 <lmacRecycleMPDU+0x581>
-401037d4:	0020c0        	memw
-401037d7:	f12032        	l32i	a3, a0, 0x3c4
-401037da:	f78a51        	l32r	a5, 40101604 <Cache_Read_Disable_2+0x3c>
-401037dd:	028396        	bltz	a3, 40103809 <lmacRecycleMPDU+0x581>
-401037e0:	0208      	l32i.n	a0, a2, 0
-401037e2:	045016        	beqz	a0, 4010382b <lmacRecycleMPDU+0x5a3>
-401037e5:	9048      	l32i.n	a4, a0, 36
-401037e7:	0428      	l32i.n	a2, a4, 0
-401037e9:	410620        	srli	a0, a2, 6
-401037ec:	546020        	extui	a6, a2, 0, 6
-401037ef:	207050        	or	a7, a0, a5
-401037f2:	1177a0        	slli	a7, a7, 6
-401037f5:	206670        	or	a6, a6, a7
-401037f8:	0469      	s32i.n	a6, a4, 0
-401037fa:	11c8      	l32i.n	a12, a1, 4
-401037fc:	f47001        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401037ff:	0000c0        	callx0	a0
-40103802:	0108      	l32i.n	a0, a1, 0
-40103804:	10c112        	addi	a1, a1, 16
-40103807:	f00d      	ret.n
-40103809:	fc0bb1        	l32r	a11, 40102838 <phy_get_bb_evm+0x60>
-4010380c:	0020c0        	memw
-4010380f:	f120a2        	l32i	a10, a0, 0x3c4
-40103812:	10aab0        	and	a10, a10, a11
-40103815:	0020c0        	memw
-40103818:	f160a2        	s32i	a10, a0, 0x3c4
-4010381b:	690c      	movi.n	a9, 6
-4010381d:	0288      	l32i.n	a8, a2, 0
-4010381f:	114292        	s8i	a9, a2, 17
-40103822:	fd4816        	beqz	a8, 401037fa <lmacRecycleMPDU+0x572>
-40103825:	ffa845        	call0	401032ac <lmacRecycleMPDU+0x24>
-40103828:	fff386        	j	401037fa <lmacRecycleMPDU+0x572>
-4010382b:	fc9901        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-4010382e:	a008      	l32i.n	a0, a0, 40
-40103830:	fc6016        	beqz	a0, 401037fa <lmacRecycleMPDU+0x572>
-40103833:	9008      	l32i.n	a0, a0, 36
-40103835:	040232        	l8ui	a3, a2, 4
-40103838:	1048      	l32i.n	a4, a0, 4
-4010383a:	0028      	l32i.n	a2, a0, 0
-4010383c:	254440        	extui	a4, a4, 20, 3
-4010383f:	b79347        	bne	a3, a4, 401037fa <lmacRecycleMPDU+0x572>
-40103842:	004d      	mov.n	a4, a0
-40103844:	410620        	srli	a0, a2, 6
-40103847:	ffe846        	j	401037ec <lmacRecycleMPDU+0x564>
-4010384a:	ff0000        	excw
-4010384d:	ff          	.byte 0xff
-4010384e:	12f000        	excw
+40103220 <lmacRecycleMPDU>:
+40103220:	026d      	mov.n	a6, a2
+40103222:	f0c112        	addi	a1, a1, -16
+40103225:	0109      	s32i.n	a0, a1, 0
+40103227:	032d      	mov.n	a2, a3
+40103229:	100c      	movi.n	a0, 1
+4010322b:	043d      	mov.n	a3, a4
+4010322d:	7658      	l32i.n	a5, a6, 28
+4010322f:	9248      	l32i.n	a4, a2, 36
+40103231:	551b      	addi.n	a5, a5, 1
+40103233:	7659      	s32i.n	a5, a6, 28
+40103235:	0f4402        	s8i	a0, a4, 15
+40103238:	00da85        	call0	40103fe4 <lmacTxFrame+0x154>
+4010323b:	0108      	l32i.n	a0, a1, 0
+4010323d:	10c112        	addi	a1, a1, 16
+40103240:	f00d      	ret.n
+40103242:	120000        	excw
+40103245:	09f0c1        	l32r	a12, 400c5a08 <__floatsidf+0xb7718>
+40103248:	023211        	l32r	a1, 400c3b10 <__floatsidf+0xb5820>
+4010324b:	020811        	l32r	a1, 400c3a6c <__floatsidf+0xb577c>
+4010324e:	116326        	beqi	a3, 6, 40103263 <lmacRecycleMPDU+0x43>
+40103251:	fe0121        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103254:	fe0231        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103257:	f4a242        	movi	a4, 0x2f4
+4010325a:	f3c901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010325d:	0000c0        	callx0	a0
+40103260:	ffff06        	j	40103260 <lmacRecycleMPDU+0x40>
+40103263:	006102        	s32i	a0, a1, 0
+40103266:	092062        	l32i	a6, a0, 36
+40103269:	00a072        	movi	a7, 0
+4010326c:	0279      	s32i.n	a7, a2, 0
+4010326e:	114272        	s8i	a7, a2, 17
+40103271:	0658      	l32i.n	a5, a6, 0
+40103273:	1668      	l32i.n	a6, a6, 4
+40103275:	2375b7        	bbci	a5, 27, 4010329c <lmacRecycleMPDU+0x7c>
+40103278:	342250        	extui	a2, a5, 2, 4
+4010327b:	343460        	extui	a3, a6, 4, 4
+4010327e:	332b      	addi.n	a3, a3, 2
+40103280:	743030        	extui	a3, a3, 0, 8
+40103283:	00f885        	call0	4010420c <ppRecordBarRRC>
+40103286:	0148      	l32i.n	a4, a1, 0
+40103288:	9448      	l32i.n	a4, a4, 36
+4010328a:	022c      	movi.n	a2, 32
+4010328c:	0448      	l32i.n	a4, a4, 0
+4010328e:	630c      	movi.n	a3, 6
+40103290:	344240        	extui	a4, a4, 2, 4
+40103293:	f5e001        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
+40103296:	0000c0        	callx0	a0
+40103299:	000cc6        	j	401032d0 <lmacRecycleMPDU+0xb0>
+4010329c:	fde331        	l32r	a3, 40102a28 <clockgate_watchdog+0x2c>
+4010329f:	545860        	extui	a5, a6, 8, 6
+401032a2:	0d0372        	l8ui	a7, a3, 13
+401032a5:	0c0392        	l8ui	a9, a3, 12
+401032a8:	0b3577        	bltu	a5, a7, 401032b7 <lmacRecycleMPDU+0x97>
+401032ab:	240c      	movi.n	a4, 2
+401032ad:	150c      	movi.n	a5, 1
+401032af:	003d      	mov.n	a3, a0
+401032b1:	ffeec5        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+401032b4:	000606        	j	401032d0 <lmacRecycleMPDU+0xb0>
+401032b7:	548e60        	extui	a8, a6, 14, 6
+401032ba:	0b3897        	bltu	a8, a9, 401032c9 <lmacRecycleMPDU+0xa9>
+401032bd:	340c      	movi.n	a4, 3
+401032bf:	150c      	movi.n	a5, 1
+401032c1:	003d      	mov.n	a3, a0
+401032c3:	ffedc5        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+401032c6:	000186        	j	401032d0 <lmacRecycleMPDU+0xb0>
+401032c9:	140c      	movi.n	a4, 1
+401032cb:	003d      	mov.n	a3, a0
+401032cd:	fff3c5        	call0	4010320c <lmacDiscardAgedMSDU>
+401032d0:	1108      	l32i.n	a0, a1, 4
+401032d2:	10c112        	addi	a1, a1, 16
+401032d5:	f00d      	ret.n
+401032d7:	024200        	excw
+401032da:	0c0d      	mov.n	a0, a12
+401032dc:	448c05        	call0	40147ba0 <_etext+0x4140c>
+401032df:	0b4232        	s8i	a3, a2, 11
+401032e2:	0d4252        	s8i	a5, a2, 13
+401032e5:	f00d      	ret.n
+401032e7:	c11200        	mul16u	a1, a2, a0
+401032ea:	61c2f0        	xsr.eps2	a15
+401032ed:	610201        	l32r	a0, 400db6f8 <__floatsidf+0xcd408>
+401032f0:	020200        	excw
+401032f3:	200b      	addi.n	a2, a0, -1
+401032f5:	ac20c2        	l32i	a12, a0, 0x2b0
+401032f8:	022260        	excw
+401032fb:	0c0c      	movi.n	a12, 0
+401032fd:	f28c00        	excw
+40103300:	0c28      	l32i.n	a2, a12, 0
+40103302:	9228      	l32i.n	a2, a2, 36
+40103304:	0228      	l32i.n	a2, a2, 0
+40103306:	342220        	extui	a2, a2, 2, 4
+40103309:	00e745        	call0	40104180 <ppFetchTxQFirstAvail>
+4010330c:	0c29      	s32i.n	a2, a12, 0
+4010330e:	0000c6        	j	40103315 <lmacRecycleMPDU+0xf5>
+40103311:	002d      	mov.n	a2, a0
+40103313:	0c29      	s32i.n	a2, a12, 0
+40103315:	d29c      	beqz.n	a2, 40103336 <lmacRecycleMPDU+0x116>
+40103317:	0c2d      	mov.n	a2, a12
+40103319:	030c      	movi.n	a3, 0
+4010331b:	007a05        	call0	40103abc <lmacMSDUAged+0x188>
+4010331e:	000186        	j	40103328 <lmacRecycleMPDU+0x108>
+40103321:	030c      	movi.n	a3, 0
+40103323:	fffb45        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103326:	020c      	movi.n	a2, 0
+40103328:	930c      	movi.n	a3, 9
+4010332a:	0108      	l32i.n	a0, a1, 0
+4010332c:	124c32        	s8i	a3, a12, 18
+4010332f:	11c8      	l32i.n	a12, a1, 4
+40103331:	10c112        	addi	a1, a1, 16
+40103334:	f00d      	ret.n
+40103336:	020c      	movi.n	a2, 0
+40103338:	040c      	movi.n	a4, 0
+4010333a:	0b4c42        	s8i	a4, a12, 11
+4010333d:	fff9c6        	j	40103328 <lmacRecycleMPDU+0x108>
+40103340:	f0c112        	addi	a1, a1, -16
+40103343:	11c9      	s32i.n	a12, a1, 4
+40103345:	0109      	s32i.n	a0, a1, 0
+40103347:	0b0202        	l8ui	a0, a2, 11
+4010334a:	02cd      	mov.n	a12, a2
+4010334c:	608c      	beqz.n	a0, 40103356 <lmacRecycleMPDU+0x136>
+4010334e:	020c      	movi.n	a2, 0
+40103350:	0b4c22        	s8i	a2, a12, 11
+40103353:	000146        	j	4010335c <lmacRecycleMPDU+0x13c>
+40103356:	00a032        	movi	a3, 0
+40103359:	fff7c5        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+4010335c:	fdb321        	l32r	a2, 40102a28 <clockgate_watchdog+0x2c>
+4010335f:	092222        	l32i	a2, a2, 36
+40103362:	00e845        	call0	401041e8 <ppRollBackTxQ>
+40103365:	0ca032        	movi	a3, 12
+40103368:	0108      	l32i.n	a0, a1, 0
+4010336a:	124c32        	s8i	a3, a12, 18
+4010336d:	11c8      	l32i.n	a12, a1, 4
+4010336f:	10c112        	addi	a1, a1, 16
+40103372:	f00d      	ret.n
+40103374:	130c      	movi.n	a3, 1
+40103376:	f0c112        	addi	a1, a1, -16
+40103379:	0109      	s32i.n	a0, a1, 0
+4010337b:	11c9      	s32i.n	a12, a1, 4
+4010337d:	fdaa01        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40103380:	02cd      	mov.n	a12, a2
+40103382:	9008      	l32i.n	a0, a0, 36
+40103384:	0209      	s32i.n	a0, a2, 0
+40103386:	007345        	call0	40103abc <lmacMSDUAged+0x188>
+40103389:	b30c      	movi.n	a3, 11
+4010338b:	0108      	l32i.n	a0, a1, 0
+4010338d:	124c32        	s8i	a3, a12, 18
+40103390:	11c8      	l32i.n	a12, a1, 4
+40103392:	10c112        	addi	a1, a1, 16
+40103395:	f00d      	ret.n
+40103397:	340c00        	extui	a0, a0, 12, 4
+4010339a:	94a052        	movi	a5, 148
+4010339d:	d0c112        	addi	a1, a1, -48
+401033a0:	71e9      	s32i.n	a14, a1, 28
+401033a2:	4109      	s32i.n	a0, a1, 16
+401033a4:	51c9      	s32i.n	a12, a1, 20
+401033a6:	81f9      	s32i.n	a15, a1, 32
+401033a8:	61d9      	s32i.n	a13, a1, 24
+401033aa:	0f0c      	movi.n	a15, 0
+401033ac:	fd9fd1        	l32r	a13, 40102a28 <clockgate_watchdog+0x2c>
+401033af:	02cd      	mov.n	a12, a2
+401033b1:	110c02        	l8ui	a0, a12, 17
+401033b4:	032d      	mov.n	a2, a3
+401033b6:	d4a032        	movi	a3, 212
+401033b9:	b2ec      	bnez.n	a2, 401033e8 <lmacRecycleMPDU+0x1c8>
+401033bb:	1e0c      	movi.n	a14, 1
+401033bd:	fac022        	addi	a2, a0, -6
+401033c0:	09f256        	bnez	a2, 40103463 <lmacRecycleMPDU+0x243>
+401033c3:	ad08      	l32i.n	a0, a13, 40
+401033c5:	114cf2        	s8i	a15, a12, 17
+401033c8:	ad48      	l32i.n	a4, a13, 40
+401033ca:	0c28      	l32i.n	a2, a12, 0
+401033cc:	1a2456        	bnez	a4, 40103572 <lmacRecycleMPDU+0x352>
+401033cf:	328c      	beqz.n	a2, 401033d6 <lmacRecycleMPDU+0x1b6>
+401033d1:	9d58      	l32i.n	a5, a13, 36
+401033d3:	2d8516        	beqz	a5, 401036af <lmacRecycleMPDU+0x48f>
+401033d6:	fda021        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401033d9:	fda031        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401033dc:	59a342        	movi	a4, 0x359
+401033df:	f36801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401033e2:	0000c0        	callx0	a0
+401033e5:	ffff06        	j	401033e5 <lmacRecycleMPDU+0x1c5>
+401033e8:	142026        	beqi	a0, 2, 40103400 <lmacRecycleMPDU+0x1e0>
+401033eb:	111026        	beqi	a0, 1, 40103400 <lmacRecycleMPDU+0x1e0>
+401033ee:	fd9a21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401033f1:	fd9a31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401033f4:	caa342        	movi	a4, 0x3ca
+401033f7:	f36201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401033fa:	0000c0        	callx0	a0
+401033fd:	ffff06        	j	401033fd <lmacRecycleMPDU+0x1dd>
+40103400:	ad08      	l32i.n	a0, a13, 40
+40103402:	9d78      	l32i.n	a7, a13, 36
+40103404:	40dc      	bnez.n	a0, 4010341c <lmacRecycleMPDU+0x1fc>
+40103406:	0c2d      	mov.n	a2, a12
+40103408:	030c      	movi.n	a3, 0
+4010340a:	360c      	movi.n	a6, 3
+4010340c:	114c62        	s8i	a6, a12, 17
+4010340f:	006ac5        	call0	40103abc <lmacMSDUAged+0x188>
+40103412:	02ed      	mov.n	a14, a2
+40103414:	500c      	movi.n	a0, 5
+40103416:	124c02        	s8i	a0, a12, 18
+40103419:	001dc6        	j	40103494 <lmacRecycleMPDU+0x274>
+4010341c:	02c716        	beqz	a7, 4010344c <lmacRecycleMPDU+0x22c>
+4010341f:	092082        	l32i	a8, a0, 36
+40103422:	002882        	l32i	a8, a8, 0
+40103425:	0c2d      	mov.n	a2, a12
+40103427:	058980        	extui	a8, a8, 25, 1
+4010342a:	933580        	movnez	a3, a5, a8
+4010342d:	ff66c5        	call0	40102a9c <lmacIsIdle+0x5c>
+40103430:	9d28      	l32i.n	a2, a13, 36
+40103432:	00db45        	call0	401041e8 <ppRollBackTxQ>
+40103435:	0c2d      	mov.n	a2, a12
+40103437:	030c      	movi.n	a3, 0
+40103439:	390c      	movi.n	a9, 3
+4010343b:	ada8      	l32i.n	a10, a13, 40
+4010343d:	0ca9      	s32i.n	a10, a12, 0
+4010343f:	114c92        	s8i	a9, a12, 17
+40103442:	006785        	call0	40103abc <lmacMSDUAged+0x188>
+40103445:	02ed      	mov.n	a14, a2
+40103447:	600c      	movi.n	a0, 6
+40103449:	fff246        	j	40103416 <lmacRecycleMPDU+0x1f6>
+4010344c:	0cb8      	l32i.n	a11, a12, 0
+4010344e:	070b16        	beqz	a11, 401034c2 <lmacRecycleMPDU+0x2a2>
+40103451:	fd8121        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103454:	fd8231        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103457:	d9a342        	movi	a4, 0x3d9
+4010345a:	f34901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010345d:	0000c0        	callx0	a0
+40103460:	ffff06        	j	40103460 <lmacRecycleMPDU+0x240>
+40103463:	195066        	bnei	a0, 5, 40103480 <lmacRecycleMPDU+0x260>
+40103466:	114cf2        	s8i	a15, a12, 17
+40103469:	ad08      	l32i.n	a0, a13, 40
+4010346b:	08e056        	bnez	a0, 401034fd <lmacRecycleMPDU+0x2dd>
+4010346e:	fd7a21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103471:	fd7a31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103474:	89a342        	movi	a4, 0x389
+40103477:	f34201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010347a:	0000c0        	callx0	a0
+4010347d:	ffff06        	j	4010347d <lmacRecycleMPDU+0x25d>
+40103480:	fd7621        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103483:	fd7631        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103486:	c4a342        	movi	a4, 0x3c4
+40103489:	f33d01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010348c:	0000c0        	callx0	a0
+4010348f:	ffff06        	j	4010348f <lmacRecycleMPDU+0x26f>
+40103492:	0e0c      	movi.n	a14, 0
+40103494:	000c      	movi.n	a0, 0
+40103496:	9d58      	l32i.n	a5, a13, 36
+40103498:	840c      	movi.n	a4, 8
+4010349a:	000d32        	l8ui	a3, a13, 0
+4010349d:	adf9      	s32i.n	a15, a13, 40
+4010349f:	0d0c22        	l8ui	a2, a12, 13
+401034a2:	8334e0        	moveqz	a3, a4, a14
+401034a5:	835f00        	moveqz	a5, a15, a0
+401034a8:	9d59      	s32i.n	a5, a13, 36
+401034aa:	004d32        	s8i	a3, a13, 0
+401034ad:	0dd216        	beqz	a2, 4010358e <lmacRecycleMPDU+0x36e>
+401034b0:	fd6a21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401034b3:	fd6a31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401034b6:	f1a342        	movi	a4, 0x3f1
+401034b9:	f33101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401034bc:	0000c0        	callx0	a0
+401034bf:	ffff06        	j	401034bf <lmacRecycleMPDU+0x29f>
+401034c2:	9028      	l32i.n	a2, a0, 36
+401034c4:	0268      	l32i.n	a6, a2, 0
+401034c6:	1876c7        	bbci	a6, 28, 401034e2 <lmacRecycleMPDU+0x2c2>
+401034c9:	1228      	l32i.n	a2, a2, 4
+401034cb:	342420        	extui	a2, a2, 4, 4
+401034ce:	1012a6        	blti	a2, 1, 401034e2 <lmacRecycleMPDU+0x2c2>
+401034d1:	0b1062        	l16ui	a6, a0, 22
+401034d4:	0a1052        	l16ui	a5, a0, 20
+401034d7:	071d32        	l16ui	a3, a13, 14
+401034da:	556a      	add.n	a5, a5, a6
+401034dc:	b22357        	blt	a3, a5, 40103492 <lmacRecycleMPDU+0x272>
+401034df:	af32e6        	bgei	a2, 3, 40103492 <lmacRecycleMPDU+0x272>
+401034e2:	0c09      	s32i.n	a0, a12, 0
+401034e4:	0b0c72        	l8ui	a7, a12, 11
+401034e7:	114c42        	s8i	a4, a12, 17
+401034ea:	178c      	beqz.n	a7, 401034ef <lmacRecycleMPDU+0x2cf>
+401034ec:	0b4cf2        	s8i	a15, a12, 11
+401034ef:	0c2d      	mov.n	a2, a12
+401034f1:	030c      	movi.n	a3, 0
+401034f3:	005c85        	call0	40103abc <lmacMSDUAged+0x188>
+401034f6:	02ed      	mov.n	a14, a2
+401034f8:	700c      	movi.n	a0, 7
+401034fa:	ffc606        	j	40103416 <lmacRecycleMPDU+0x1f6>
+401034fd:	092d82        	l32i	a8, a13, 36
+40103500:	034816        	beqz	a8, 40103538 <lmacRecycleMPDU+0x318>
+40103503:	092092        	l32i	a9, a0, 36
+40103506:	0998      	l32i.n	a9, a9, 0
+40103508:	0c2d      	mov.n	a2, a12
+4010350a:	059990        	extui	a9, a9, 25, 1
+4010350d:	933590        	movnez	a3, a5, a9
+40103510:	2c4d32        	s8i	a3, a13, 44
+40103513:	0e3d      	mov.n	a3, a14
+40103515:	ffdc05        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103518:	040c22        	l8ui	a2, a12, 4
+4010351b:	9da8      	l32i.n	a10, a13, 36
+4010351d:	0ca9      	s32i.n	a10, a12, 0
+4010351f:	026dc5        	call0	40105bfc <Tx_Copy2Queue>
+40103522:	0c2d      	mov.n	a2, a12
+40103524:	040c      	movi.n	a4, 0
+40103526:	124cf2        	s8i	a15, a12, 18
+40103529:	114ce2        	s8i	a14, a12, 17
+4010352c:	ad38      	l32i.n	a3, a13, 40
+4010352e:	ffcf05        	call0	40103220 <lmacRecycleMPDU>
+40103531:	100c      	movi.n	a0, 1
+40103533:	1e0c      	movi.n	a14, 1
+40103535:	ffd746        	j	40103496 <lmacRecycleMPDU+0x276>
+40103538:	002cb2        	l32i	a11, a12, 0
+4010353b:	05eb56        	bnez	a11, 4010359d <lmacRecycleMPDU+0x37d>
+4010353e:	092022        	l32i	a2, a0, 36
+40103541:	0228      	l32i.n	a2, a2, 0
+40103543:	052920        	extui	a2, a2, 25, 1
+40103546:	137216        	beqz	a2, 40103681 <lmacRecycleMPDU+0x461>
+40103549:	012d      	mov.n	a2, a1
+4010354b:	312b      	addi.n	a3, a1, 2
+4010354d:	414b      	addi.n	a4, a1, 4
+4010354f:	518b      	addi.n	a5, a1, 8
+40103551:	02a945        	call0	40105fe8 <wDev_GetBAInfo>
+40103554:	ad08      	l32i.n	a0, a13, 40
+40103556:	2158      	l32i.n	a5, a1, 8
+40103558:	9008      	l32i.n	a0, a0, 36
+4010355a:	1148      	l32i.n	a4, a1, 4
+4010355c:	0068      	l32i.n	a6, a0, 0
+4010355e:	011132        	l16ui	a3, a1, 2
+40103561:	342260        	extui	a2, a6, 2, 4
+40103564:	056b60        	extui	a6, a6, 27, 1
+40103567:	0e5656        	bnez	a6, 40103650 <lmacRecycleMPDU+0x430>
+4010356a:	060c      	movi.n	a6, 0
+4010356c:	00cac5        	call0	4010421c <ppTxqUpdateBitmap>
+4010356f:	003ac6        	j	4010365e <lmacRecycleMPDU+0x43e>
+40103572:	9d48      	l32i.n	a4, a13, 36
+40103574:	3109      	s32i.n	a0, a1, 12
+40103576:	042416        	beqz	a4, 401035bc <lmacRecycleMPDU+0x39c>
+40103579:	13e216        	beqz	a2, 401036bb <lmacRecycleMPDU+0x49b>
+4010357c:	fd3721        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+4010357f:	fd3731        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103582:	5ea342        	movi	a4, 0x35e
+40103585:	f2fe01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103588:	0000c0        	callx0	a0
+4010358b:	ffff06        	j	4010358b <lmacRecycleMPDU+0x36b>
+4010358e:	51c8      	l32i.n	a12, a1, 20
+40103590:	61d8      	l32i.n	a13, a1, 24
+40103592:	71e8      	l32i.n	a14, a1, 28
+40103594:	81f8      	l32i.n	a15, a1, 32
+40103596:	4108      	l32i.n	a0, a1, 16
+40103598:	30c112        	addi	a1, a1, 48
+4010359b:	f00d      	ret.n
+4010359d:	0c2d      	mov.n	a2, a12
+4010359f:	0e3d      	mov.n	a3, a14
+401035a1:	ffd345        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+401035a4:	0c2d      	mov.n	a2, a12
+401035a6:	040c      	movi.n	a4, 0
+401035a8:	114ce2        	s8i	a14, a12, 17
+401035ab:	450c      	movi.n	a5, 4
+401035ad:	124c52        	s8i	a5, a12, 18
+401035b0:	ad38      	l32i.n	a3, a13, 40
+401035b2:	ffc6c5        	call0	40103220 <lmacRecycleMPDU>
+401035b5:	1e0c      	movi.n	a14, 1
+401035b7:	000c      	movi.n	a0, 0
+401035b9:	ffb646        	j	40103496 <lmacRecycleMPDU+0x276>
+401035bc:	72dc      	bnez.n	a2, 401035d7 <lmacRecycleMPDU+0x3b7>
+401035be:	0c2d      	mov.n	a2, a12
+401035c0:	0f3d      	mov.n	a3, a15
+401035c2:	ffd145        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+401035c5:	0b0c62        	l8ui	a6, a12, 11
+401035c8:	168c      	beqz.n	a6, 401035cd <lmacRecycleMPDU+0x3ad>
+401035ca:	0b4cf2        	s8i	a15, a12, 11
+401035cd:	0e0c      	movi.n	a14, 0
+401035cf:	a70c      	movi.n	a7, 10
+401035d1:	124c72        	s8i	a7, a12, 18
+401035d4:	000486        	j	401035ea <lmacRecycleMPDU+0x3ca>
+401035d7:	0e3d      	mov.n	a3, a14
+401035d9:	0c2d      	mov.n	a2, a12
+401035db:	ffcfc5        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+401035de:	1e0c      	movi.n	a14, 1
+401035e0:	d80c      	movi.n	a8, 13
+401035e2:	190c      	movi.n	a9, 1
+401035e4:	114c92        	s8i	a9, a12, 17
+401035e7:	124c82        	s8i	a8, a12, 18
+401035ea:	032102        	l32i	a0, a1, 12
+401035ed:	092002        	l32i	a0, a0, 36
+401035f0:	002022        	l32i	a2, a0, 0
+401035f3:	1008      	l32i.n	a0, a0, 4
+401035f5:	2372b7        	bbci	a2, 27, 4010361c <lmacRecycleMPDU+0x3fc>
+401035f8:	342220        	extui	a2, a2, 2, 4
+401035fb:	343400        	extui	a3, a0, 4, 4
+401035fe:	332b      	addi.n	a3, a3, 2
+40103600:	743030        	extui	a3, a3, 0, 8
+40103603:	00c085        	call0	4010420c <ppRecordBarRRC>
+40103606:	3148      	l32i.n	a4, a1, 12
+40103608:	9448      	l32i.n	a4, a4, 36
+4010360a:	022c      	movi.n	a2, 32
+4010360c:	0448      	l32i.n	a4, a4, 0
+4010360e:	630c      	movi.n	a3, 6
+40103610:	344240        	extui	a4, a4, 2, 4
+40103613:	f50001        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
+40103616:	0000c0        	callx0	a0
+40103619:	ffe686        	j	401035b7 <lmacRecycleMPDU+0x397>
+4010361c:	546800        	extui	a6, a0, 8, 6
+4010361f:	110c92        	l8ui	a9, a12, 17
+40103622:	180c      	movi.n	a8, 1
+40103624:	050c      	movi.n	a5, 0
+40103626:	0d0d72        	l8ui	a7, a13, 13
+40103629:	835890        	moveqz	a5, a8, a9
+4010362c:	0b3677        	bltu	a6, a7, 4010363b <lmacRecycleMPDU+0x41b>
+4010362f:	3138      	l32i.n	a3, a1, 12
+40103631:	0c2d      	mov.n	a2, a12
+40103633:	240c      	movi.n	a4, 2
+40103635:	ffb685        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+40103638:	ffdec6        	j	401035b7 <lmacRecycleMPDU+0x397>
+4010363b:	0c0db2        	l8ui	a11, a13, 12
+4010363e:	54ae00        	extui	a10, a0, 14, 6
+40103641:	5e3ab7        	bltu	a10, a11, 401036a3 <lmacRecycleMPDU+0x483>
+40103644:	3138      	l32i.n	a3, a1, 12
+40103646:	0c2d      	mov.n	a2, a12
+40103648:	340c      	movi.n	a4, 3
+4010364a:	ffb545        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+4010364d:	ffd986        	j	401035b7 <lmacRecycleMPDU+0x397>
+40103650:	040062        	l8ui	a6, a0, 4
+40103653:	416460        	srli	a6, a6, 4
+40103656:	661b      	addi.n	a6, a6, 1
+40103658:	746060        	extui	a6, a6, 0, 8
+4010365b:	00bc05        	call0	4010421c <ppTxqUpdateBitmap>
+4010365e:	ad48      	l32i.n	a4, a13, 40
+40103660:	9448      	l32i.n	a4, a4, 36
+40103662:	022c      	movi.n	a2, 32
+40103664:	0448      	l32i.n	a4, a4, 0
+40103666:	630c      	movi.n	a3, 6
+40103668:	344240        	extui	a4, a4, 2, 4
+4010366b:	f4ea01        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
+4010366e:	0000c0        	callx0	a0
+40103671:	0c2d      	mov.n	a2, a12
+40103673:	030c      	movi.n	a3, 0
+40103675:	ffc605        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103678:	124ce2        	s8i	a14, a12, 18
+4010367b:	0007c6        	j	4010369e <lmacRecycleMPDU+0x47e>
+4010367e:	000000        	ill
+40103681:	0c2d      	mov.n	a2, a12
+40103683:	0f3d      	mov.n	a3, a15
+40103685:	ffc505        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103688:	0b0c52        	l8ui	a5, a12, 11
+4010368b:	158c      	beqz.n	a5, 40103690 <lmacRecycleMPDU+0x470>
+4010368d:	0b4cf2        	s8i	a15, a12, 11
+40103690:	0c2d      	mov.n	a2, a12
+40103692:	140c      	movi.n	a4, 1
+40103694:	360c      	movi.n	a6, 3
+40103696:	124c62        	s8i	a6, a12, 18
+40103699:	ad38      	l32i.n	a3, a13, 40
+4010369b:	ffb845        	call0	40103220 <lmacRecycleMPDU>
+4010369e:	0e0c      	movi.n	a14, 0
+401036a0:	ffc4c6        	j	401035b7 <lmacRecycleMPDU+0x397>
+401036a3:	3138      	l32i.n	a3, a1, 12
+401036a5:	0c2d      	mov.n	a2, a12
+401036a7:	440c      	movi.n	a4, 4
+401036a9:	ffaf45        	call0	401031a0 <lmacProcessTxSuccess+0xe4>
+401036ac:	ffc1c6        	j	401035b7 <lmacRecycleMPDU+0x397>
+401036af:	3129      	s32i.n	a2, a1, 12
+401036b1:	0c2d      	mov.n	a2, a12
+401036b3:	ffc345        	call0	401032e8 <lmacRecycleMPDU+0xc8>
+401036b6:	02ed      	mov.n	a14, a2
+401036b8:	ffcb86        	j	401035ea <lmacRecycleMPDU+0x3ca>
+401036bb:	9078      	l32i.n	a7, a0, 36
+401036bd:	0c2d      	mov.n	a2, a12
+401036bf:	0778      	l32i.n	a7, a7, 0
+401036c1:	00ed      	mov.n	a14, a0
+401036c3:	057970        	extui	a7, a7, 25, 1
+401036c6:	933570        	movnez	a3, a5, a7
+401036c9:	ff3d05        	call0	40102a9c <lmacIsIdle+0x5c>
+401036cc:	9e28      	l32i.n	a2, a14, 36
+401036ce:	0228      	l32i.n	a2, a2, 0
+401036d0:	0c62d7        	bbci	a2, 13, 401036e0 <lmacRecycleMPDU+0x4c0>
+401036d3:	09e2c7        	bbsi	a2, 12, 401036e0 <lmacRecycleMPDU+0x4c0>
+401036d6:	0c2d      	mov.n	a2, a12
+401036d8:	ffc645        	call0	40103340 <lmacRecycleMPDU+0x120>
+401036db:	0e0c      	movi.n	a14, 0
+401036dd:	ffc246        	j	401035ea <lmacRecycleMPDU+0x3ca>
+401036e0:	0c2d      	mov.n	a2, a12
+401036e2:	ffc905        	call0	40103374 <lmacRecycleMPDU+0x154>
+401036e5:	02ed      	mov.n	a14, a2
+401036e7:	ffbfc6        	j	401035ea <lmacRecycleMPDU+0x3ca>
+401036ea:	000000        	ill
+401036ed:	c00000        	sub	a0, a0, a0
+401036f0:	ff          	.byte 0xff
+401036f1:	ff          	.byte 0xff
+401036f2:	ff          	.byte 0xff
+401036f3:	3f          	.byte 0x3f
+401036f4:	f0c112        	addi	a1, a1, -16
+401036f7:	11c9      	s32i.n	a12, a1, 4
+401036f9:	0109      	s32i.n	a0, a1, 0
+401036fb:	02cd      	mov.n	a12, a2
+401036fd:	f36801        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40103700:	0000c0        	callx0	a0
+40103703:	fffa31        	l32r	a3, 401036ec <lmacRecycleMPDU+0x4cc>
+40103706:	f76a21        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
+40103709:	0020c0        	memw
+4010370c:	9d2202        	l32i	a0, a2, 0x274
+4010370f:	200030        	or	a0, a0, a3
+40103712:	0020c0        	memw
+40103715:	9d6202        	s32i	a0, a2, 0x274
+40103718:	f4a901        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+4010371b:	0000c0        	callx0	a0
+4010371e:	222c      	movi.n	a2, 34
+40103720:	f73701        	l32r	a0, 401013fc <system_restart_core+0x40>
+40103723:	0000c0        	callx0	a0
+40103726:	f35e01        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40103729:	0000c0        	callx0	a0
+4010372c:	f80581        	l32r	a8, 40101740 <spi_flash_write_status+0x78>
+4010372f:	806c      	movi.n	a0, -24
+40103731:	f75f51        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
+40103734:	d100c0        	mul16s	a0, a0, a12
+40103737:	005a      	add.n	a0, a0, a5
+40103739:	0020c0        	memw
+4010373c:	f12072        	l32i	a7, a0, 0x3c4
+4010373f:	107780        	and	a7, a7, a8
+40103742:	0020c0        	memw
+40103745:	f16072        	s32i	a7, a0, 0x3c4
+40103748:	ffea61        	l32r	a6, 401036f0 <lmacRecycleMPDU+0x4d0>
+4010374b:	0020c0        	memw
+4010374e:	9d2542        	l32i	a4, a5, 0x274
+40103751:	104460        	and	a4, a4, a6
+40103754:	0020c0        	memw
+40103757:	9d6542        	s32i	a4, a5, 0x274
+4010375a:	fcb831        	l32r	a3, 40102a3c <lmacIsActive+0x10>
+4010375d:	b02cc0        	addx8	a2, a12, a12
+40103760:	a02230        	addx4	a2, a2, a3
+40103763:	110242        	l8ui	a4, a2, 17
+40103766:	021466        	bnei	a4, 1, 4010376c <lmacRecycleMPDU+0x54c>
+40103769:	347c26        	beqi	a12, 7, 401037a1 <lmacRecycleMPDU+0x581>
+4010376c:	0020c0        	memw
+4010376f:	f12032        	l32i	a3, a0, 0x3c4
+40103772:	f7a451        	l32r	a5, 40101604 <Cache_Read_Disable_2+0x3c>
+40103775:	028396        	bltz	a3, 401037a1 <lmacRecycleMPDU+0x581>
+40103778:	0208      	l32i.n	a0, a2, 0
+4010377a:	045016        	beqz	a0, 401037c3 <lmacRecycleMPDU+0x5a3>
+4010377d:	9048      	l32i.n	a4, a0, 36
+4010377f:	0428      	l32i.n	a2, a4, 0
+40103781:	410620        	srli	a0, a2, 6
+40103784:	546020        	extui	a6, a2, 0, 6
+40103787:	207050        	or	a7, a0, a5
+4010378a:	1177a0        	slli	a7, a7, 6
+4010378d:	206670        	or	a6, a6, a7
+40103790:	0469      	s32i.n	a6, a4, 0
+40103792:	11c8      	l32i.n	a12, a1, 4
+40103794:	f48a01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40103797:	0000c0        	callx0	a0
+4010379a:	0108      	l32i.n	a0, a1, 0
+4010379c:	10c112        	addi	a1, a1, 16
+4010379f:	f00d      	ret.n
+401037a1:	fc0bb1        	l32r	a11, 401027d0 <phy_get_bb_evm+0x60>
+401037a4:	0020c0        	memw
+401037a7:	f120a2        	l32i	a10, a0, 0x3c4
+401037aa:	10aab0        	and	a10, a10, a11
+401037ad:	0020c0        	memw
+401037b0:	f160a2        	s32i	a10, a0, 0x3c4
+401037b3:	690c      	movi.n	a9, 6
+401037b5:	0288      	l32i.n	a8, a2, 0
+401037b7:	114292        	s8i	a9, a2, 17
+401037ba:	fd4816        	beqz	a8, 40103792 <lmacRecycleMPDU+0x572>
+401037bd:	ffa845        	call0	40103244 <lmacRecycleMPDU+0x24>
+401037c0:	fff386        	j	40103792 <lmacRecycleMPDU+0x572>
+401037c3:	fc9901        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+401037c6:	a008      	l32i.n	a0, a0, 40
+401037c8:	fc6016        	beqz	a0, 40103792 <lmacRecycleMPDU+0x572>
+401037cb:	9008      	l32i.n	a0, a0, 36
+401037cd:	040232        	l8ui	a3, a2, 4
+401037d0:	1048      	l32i.n	a4, a0, 4
+401037d2:	0028      	l32i.n	a2, a0, 0
+401037d4:	254440        	extui	a4, a4, 20, 3
+401037d7:	b79347        	bne	a3, a4, 40103792 <lmacRecycleMPDU+0x572>
+401037da:	004d      	mov.n	a4, a0
+401037dc:	410620        	srli	a0, a2, 6
+401037df:	ffe846        	j	40103784 <lmacRecycleMPDU+0x564>
+401037e2:	ff0000        	excw
+401037e5:	ff          	.byte 0xff
+401037e6:	12f000        	excw
 
-40103850 <lmacProcessTxTimeout>:
-40103850:	e0c112        	addi	a1, a1, -32
-40103853:	0109      	s32i.n	a0, a1, 0
-40103855:	41f9      	s32i.n	a15, a1, 16
-40103857:	31e9      	s32i.n	a14, a1, 12
-40103859:	21d9      	s32i.n	a13, a1, 8
-4010385b:	11c9      	s32i.n	a12, a1, 4
-4010385d:	f71421        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
-40103860:	0020c0        	memw
-40103863:	b022c2        	l32i	a12, a2, 0x2c0
-40103866:	fff931        	l32r	a3, 4010384c <lmacRecycleMPDU+0x5c4>
-40103869:	b5c0c0        	extui	a12, a12, 16, 12
-4010386c:	0020c0        	memw
-4010386f:	b02202        	l32i	a0, a2, 0x2c0
-40103872:	100030        	and	a0, a0, a3
-40103875:	0020c0        	memw
-40103878:	b06202        	s32i	a0, a2, 0x2c0
-4010387b:	9cac      	beqz.n	a12, 401038a8 <lmacProcessTxTimeout+0x58>
-4010387d:	1e0c      	movi.n	a14, 1
-4010387f:	ff7c      	movi.n	a15, -1
-40103881:	000446        	j	40103896 <lmacProcessTxTimeout+0x46>
-40103884:	7420d0        	extui	a2, a13, 0, 8
-40103887:	ffed45        	call0	4010375c <lmacRecycleMPDU+0x4d4>
-4010388a:	401d00        	ssl	a13
-4010388d:	a10e00        	sll	a0, a14
-40103890:	3000f0        	xor	a0, a0, a15
-40103893:	10cc00        	and	a12, a12, a0
-40103896:	60d0c0        	neg	a13, a12
-40103899:	10ddc0        	and	a13, a13, a12
-4010389c:	40fdd0        	nsau	a13, a13
-4010389f:	60d0d0        	neg	a13, a13
-401038a2:	1fcdd2        	addi	a13, a13, 31
-401038a5:	fdbdd6        	bgez	a13, 40103884 <lmacProcessTxTimeout+0x34>
-401038a8:	11c8      	l32i.n	a12, a1, 4
-401038aa:	21d8      	l32i.n	a13, a1, 8
-401038ac:	31e8      	l32i.n	a14, a1, 12
-401038ae:	41f8      	l32i.n	a15, a1, 16
-401038b0:	0108      	l32i.n	a0, a1, 0
-401038b2:	20c112        	addi	a1, a1, 32
-401038b5:	f00d      	ret.n
+401037e8 <lmacProcessTxTimeout>:
+401037e8:	e0c112        	addi	a1, a1, -32
+401037eb:	0109      	s32i.n	a0, a1, 0
+401037ed:	41f9      	s32i.n	a15, a1, 16
+401037ef:	31e9      	s32i.n	a14, a1, 12
+401037f1:	21d9      	s32i.n	a13, a1, 8
+401037f3:	11c9      	s32i.n	a12, a1, 4
+401037f5:	f72e21        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
+401037f8:	0020c0        	memw
+401037fb:	b022c2        	l32i	a12, a2, 0x2c0
+401037fe:	fff931        	l32r	a3, 401037e4 <lmacRecycleMPDU+0x5c4>
+40103801:	b5c0c0        	extui	a12, a12, 16, 12
+40103804:	0020c0        	memw
+40103807:	b02202        	l32i	a0, a2, 0x2c0
+4010380a:	100030        	and	a0, a0, a3
+4010380d:	0020c0        	memw
+40103810:	b06202        	s32i	a0, a2, 0x2c0
+40103813:	9cac      	beqz.n	a12, 40103840 <lmacProcessTxTimeout+0x58>
+40103815:	1e0c      	movi.n	a14, 1
+40103817:	ff7c      	movi.n	a15, -1
+40103819:	000446        	j	4010382e <lmacProcessTxTimeout+0x46>
+4010381c:	7420d0        	extui	a2, a13, 0, 8
+4010381f:	ffed45        	call0	401036f4 <lmacRecycleMPDU+0x4d4>
+40103822:	401d00        	ssl	a13
+40103825:	a10e00        	sll	a0, a14
+40103828:	3000f0        	xor	a0, a0, a15
+4010382b:	10cc00        	and	a12, a12, a0
+4010382e:	60d0c0        	neg	a13, a12
+40103831:	10ddc0        	and	a13, a13, a12
+40103834:	40fdd0        	nsau	a13, a13
+40103837:	60d0d0        	neg	a13, a13
+4010383a:	1fcdd2        	addi	a13, a13, 31
+4010383d:	fdbdd6        	bgez	a13, 4010381c <lmacProcessTxTimeout+0x34>
+40103840:	11c8      	l32i.n	a12, a1, 4
+40103842:	21d8      	l32i.n	a13, a1, 8
+40103844:	31e8      	l32i.n	a14, a1, 12
+40103846:	41f8      	l32i.n	a15, a1, 16
+40103848:	0108      	l32i.n	a0, a1, 0
+4010384a:	20c112        	addi	a1, a1, 32
+4010384d:	f00d      	ret.n
 	...
 
-401038b8 <lmacProcessAllTxTimeout>:
-401038b8:	0ea022        	movi	a2, 14
-401038bb:	f0c112        	addi	a1, a1, -16
-401038be:	006102        	s32i	a0, a1, 0
-401038c1:	00f285        	call0	401047ec <pp_post>
-401038c4:	002102        	l32i	a0, a1, 0
-401038c7:	10c112        	addi	a1, a1, 16
-401038ca:	f00d      	ret.n
+40103850 <lmacProcessAllTxTimeout>:
+40103850:	0ea022        	movi	a2, 14
+40103853:	f0c112        	addi	a1, a1, -16
+40103856:	006102        	s32i	a0, a1, 0
+40103859:	00f285        	call0	40104784 <pp_post>
+4010385c:	002102        	l32i	a0, a1, 0
+4010385f:	10c112        	addi	a1, a1, 16
+40103862:	f00d      	ret.n
 
-401038cc <lmacProcessCollisions>:
-401038cc:	e0c112        	addi	a1, a1, -32
-401038cf:	0161c2        	s32i	a12, a1, 4
-401038d2:	0261d2        	s32i	a13, a1, 8
-401038d5:	0361e2        	s32i	a14, a1, 12
-401038d8:	41f9      	s32i.n	a15, a1, 16
-401038da:	0109      	s32i.n	a0, a1, 0
-401038dc:	023ec5        	call0	40105ccc <wDev_GetTxqCollisions>
-401038df:	02cd      	mov.n	a12, a2
-401038e1:	52bc      	beqz.n	a2, 4010391a <lmacProcessCollisions+0x4e>
-401038e3:	1f0c      	movi.n	a15, 1
-401038e5:	000706        	j	40103905 <lmacProcessCollisions+0x39>
-401038e8:	74e0d0        	extui	a14, a13, 0, 8
-401038eb:	202ee0        	or	a2, a14, a14
-401038ee:	023b85        	call0	40105ca8 <wDev_ProcessCollision>
-401038f1:	202ee0        	or	a2, a14, a14
-401038f4:	000345        	call0	4010392c <lmacProcessCollision>
-401038f7:	f07c      	movi.n	a0, -1
-401038f9:	401d00        	ssl	a13
-401038fc:	a12f00        	sll	a2, a15
-401038ff:	302200        	xor	a2, a2, a0
-40103902:	10cc20        	and	a12, a12, a2
-40103905:	60d0c0        	neg	a13, a12
-40103908:	10ddc0        	and	a13, a13, a12
-4010390b:	40fdd0        	nsau	a13, a13
-4010390e:	60d0d0        	neg	a13, a13
-40103911:	1fcdd2        	addi	a13, a13, 31
-40103914:	fd0dd6        	bgez	a13, 401038e8 <lmacProcessCollisions+0x1c>
-40103917:	023c45        	call0	40105cdc <wDev_ClearTxqCollisions>
-4010391a:	11c8      	l32i.n	a12, a1, 4
-4010391c:	21d8      	l32i.n	a13, a1, 8
-4010391e:	31e8      	l32i.n	a14, a1, 12
-40103920:	41f8      	l32i.n	a15, a1, 16
-40103922:	0108      	l32i.n	a0, a1, 0
-40103924:	20c112        	addi	a1, a1, 32
-40103927:	f00d      	ret.n
-40103929:	000000        	ill
+40103864 <lmacProcessCollisions>:
+40103864:	e0c112        	addi	a1, a1, -32
+40103867:	0161c2        	s32i	a12, a1, 4
+4010386a:	0261d2        	s32i	a13, a1, 8
+4010386d:	0361e2        	s32i	a14, a1, 12
+40103870:	41f9      	s32i.n	a15, a1, 16
+40103872:	0109      	s32i.n	a0, a1, 0
+40103874:	023ec5        	call0	40105c64 <wDev_GetTxqCollisions>
+40103877:	02cd      	mov.n	a12, a2
+40103879:	52bc      	beqz.n	a2, 401038b2 <lmacProcessCollisions+0x4e>
+4010387b:	1f0c      	movi.n	a15, 1
+4010387d:	000706        	j	4010389d <lmacProcessCollisions+0x39>
+40103880:	74e0d0        	extui	a14, a13, 0, 8
+40103883:	202ee0        	or	a2, a14, a14
+40103886:	023b85        	call0	40105c40 <wDev_ProcessCollision>
+40103889:	202ee0        	or	a2, a14, a14
+4010388c:	000345        	call0	401038c4 <lmacProcessCollision>
+4010388f:	f07c      	movi.n	a0, -1
+40103891:	401d00        	ssl	a13
+40103894:	a12f00        	sll	a2, a15
+40103897:	302200        	xor	a2, a2, a0
+4010389a:	10cc20        	and	a12, a12, a2
+4010389d:	60d0c0        	neg	a13, a12
+401038a0:	10ddc0        	and	a13, a13, a12
+401038a3:	40fdd0        	nsau	a13, a13
+401038a6:	60d0d0        	neg	a13, a13
+401038a9:	1fcdd2        	addi	a13, a13, 31
+401038ac:	fd0dd6        	bgez	a13, 40103880 <lmacProcessCollisions+0x1c>
+401038af:	023c45        	call0	40105c74 <wDev_ClearTxqCollisions>
+401038b2:	11c8      	l32i.n	a12, a1, 4
+401038b4:	21d8      	l32i.n	a13, a1, 8
+401038b6:	31e8      	l32i.n	a14, a1, 12
+401038b8:	41f8      	l32i.n	a15, a1, 16
+401038ba:	0108      	l32i.n	a0, a1, 0
+401038bc:	20c112        	addi	a1, a1, 32
+401038bf:	f00d      	ret.n
+401038c1:	000000        	ill
 
-4010392c <lmacProcessCollision>:
-4010392c:	f0c112        	addi	a1, a1, -16
-4010392f:	0109      	s32i.n	a0, a1, 0
-40103931:	1182b6        	bltui	a2, 8, 40103946 <lmacProcessCollision+0x1a>
-40103934:	fc6321        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103937:	fc6331        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010393a:	3ea442        	movi	a4, 0x43e
-4010393d:	f21001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103940:	0000c0        	callx0	a0
-40103943:	ffff06        	j	40103943 <lmacProcessCollision+0x17>
-40103946:	fc5761        	l32r	a6, 40102aa4 <lmacIsActive+0x10>
-40103949:	b02220        	addx8	a2, a2, a2
-4010394c:	a02260        	addx4	a2, a2, a6
-4010394f:	0238      	l32i.n	a3, a2, 0
-40103951:	73bc      	beqz.n	a3, 4010398c <lmacProcessCollision+0x60>
-40103953:	110242        	l8ui	a4, a2, 17
-40103956:	111426        	beqi	a4, 1, 4010396b <lmacProcessCollision+0x3f>
-40103959:	fc5921        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-4010395c:	fc5a31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-4010395f:	47a442        	movi	a4, 0x447
-40103962:	f20701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103965:	0000c0        	callx0	a0
-40103968:	ffff06        	j	40103968 <lmacProcessCollision+0x3c>
-4010396b:	9358      	l32i.n	a5, a3, 36
-4010396d:	0b1392        	l16ui	a9, a3, 22
-40103970:	0558      	l32i.n	a5, a5, 0
-40103972:	00a372        	movi	a7, 0x300
-40103975:	415650        	srli	a5, a5, 6
-40103978:	178577        	bany	a5, a7, 40103993 <lmacProcessCollision+0x67>
-4010397b:	0a1382        	l16ui	a8, a3, 20
-4010397e:	d0c672        	addi	a7, a6, -48
-40103981:	071772        	l16ui	a7, a7, 14
-40103984:	889a      	add.n	a8, a8, a9
-40103986:	09a787        	bge	a7, a8, 40103993 <lmacProcessCollision+0x67>
-40103989:	0026c5        	call0	40103bf8 <lmacMSDUAged+0x25c>
-4010398c:	0108      	l32i.n	a0, a1, 0
-4010398e:	10c112        	addi	a1, a1, 16
-40103991:	f00d      	ret.n
-40103993:	140c      	movi.n	a4, 1
-40103995:	000305        	call0	401039c8 <lmacMSDUAged+0x2c>
-40103998:	fffc06        	j	4010398c <lmacProcessCollision+0x60>
+401038c4 <lmacProcessCollision>:
+401038c4:	f0c112        	addi	a1, a1, -16
+401038c7:	0109      	s32i.n	a0, a1, 0
+401038c9:	1182b6        	bltui	a2, 8, 401038de <lmacProcessCollision+0x1a>
+401038cc:	fc6321        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401038cf:	fc6331        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401038d2:	3ea442        	movi	a4, 0x43e
+401038d5:	f22a01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401038d8:	0000c0        	callx0	a0
+401038db:	ffff06        	j	401038db <lmacProcessCollision+0x17>
+401038de:	fc5761        	l32r	a6, 40102a3c <lmacIsActive+0x10>
+401038e1:	b02220        	addx8	a2, a2, a2
+401038e4:	a02260        	addx4	a2, a2, a6
+401038e7:	0238      	l32i.n	a3, a2, 0
+401038e9:	73bc      	beqz.n	a3, 40103924 <lmacProcessCollision+0x60>
+401038eb:	110242        	l8ui	a4, a2, 17
+401038ee:	111426        	beqi	a4, 1, 40103903 <lmacProcessCollision+0x3f>
+401038f1:	fc5921        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+401038f4:	fc5a31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+401038f7:	47a442        	movi	a4, 0x447
+401038fa:	f22101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401038fd:	0000c0        	callx0	a0
+40103900:	ffff06        	j	40103900 <lmacProcessCollision+0x3c>
+40103903:	9358      	l32i.n	a5, a3, 36
+40103905:	0b1392        	l16ui	a9, a3, 22
+40103908:	0558      	l32i.n	a5, a5, 0
+4010390a:	00a372        	movi	a7, 0x300
+4010390d:	415650        	srli	a5, a5, 6
+40103910:	178577        	bany	a5, a7, 4010392b <lmacProcessCollision+0x67>
+40103913:	0a1382        	l16ui	a8, a3, 20
+40103916:	d0c672        	addi	a7, a6, -48
+40103919:	071772        	l16ui	a7, a7, 14
+4010391c:	889a      	add.n	a8, a8, a9
+4010391e:	09a787        	bge	a7, a8, 4010392b <lmacProcessCollision+0x67>
+40103921:	0026c5        	call0	40103b90 <lmacMSDUAged+0x25c>
+40103924:	0108      	l32i.n	a0, a1, 0
+40103926:	10c112        	addi	a1, a1, 16
+40103929:	f00d      	ret.n
+4010392b:	140c      	movi.n	a4, 1
+4010392d:	000305        	call0	40103960 <lmacMSDUAged+0x2c>
+40103930:	fffc06        	j	40103924 <lmacProcessCollision+0x60>
 	...
 
-4010399c <lmacMSDUAged>:
-4010399c:	f6c541        	l32r	a4, 401014b0 <system_deep_sleep_local_2+0xb0>
-4010399f:	0020c0        	memw
-401039a2:	802442        	l32i	a4, a4, 0x200
-401039a5:	9258      	l32i.n	a5, a2, 36
-401039a7:	fc3a31        	l32r	a3, 40102a90 <clockgate_watchdog+0x2c>
-401039aa:	6558      	l32i.n	a5, a5, 24
-401039ac:	1338      	l32i.n	a3, a3, 4
-401039ae:	c04450        	sub	a4, a4, a5
-401039b1:	fbc332        	addi	a3, a3, -5
-401039b4:	113360        	slli	a3, a3, 10
-401039b7:	03b347        	bgeu	a3, a4, 401039be <lmacMSDUAged+0x22>
-401039ba:	120c      	movi.n	a2, 1
-401039bc:	f00d      	ret.n
-401039be:	020c      	movi.n	a2, 0
-401039c0:	f00d      	ret.n
-401039c2:	ff0000        	excw
-401039c5:	ffffc0        	excw
-401039c8:	f0c112        	addi	a1, a1, -16
-401039cb:	0109      	s32i.n	a0, a1, 0
-401039cd:	11c9      	s32i.n	a12, a1, 4
-401039cf:	21d9      	s32i.n	a13, a1, 8
-401039d1:	02cd      	mov.n	a12, a2
-401039d3:	03dd      	mov.n	a13, a3
-401039d5:	03dc      	bnez.n	a3, 401039e9 <lmacMSDUAged+0x4d>
-401039d7:	fc3a21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-401039da:	fc3a31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-401039dd:	63a442        	movi	a4, 0x463
-401039e0:	f1e801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401039e3:	0000c0        	callx0	a0
-401039e6:	ffff06        	j	401039e6 <lmacMSDUAged+0x4a>
-401039e9:	fc2901        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-401039ec:	090272        	l8ui	a7, a2, 9
-401039ef:	0d0022        	l8ui	a2, a0, 13
-401039f2:	073d      	mov.n	a3, a7
-401039f4:	0ab727        	bgeu	a7, a2, 40103a02 <lmacMSDUAged+0x66>
-401039f7:	371b      	addi.n	a3, a7, 1
-401039f9:	094c32        	s8i	a3, a12, 9
-401039fc:	743030        	extui	a3, a3, 0, 8
-401039ff:	0d0022        	l8ui	a2, a0, 13
-40103a02:	9db8      	l32i.n	a11, a13, 36
-40103a04:	fff0a1        	l32r	a10, 401039c4 <lmacMSDUAged+0x28>
-40103a07:	10b327        	bgeu	a3, a2, 40103a1b <lmacMSDUAged+0x7f>
-40103a0a:	060c22        	l8ui	a2, a12, 6
-40103a0d:	080c52        	l8ui	a5, a12, 8
-40103a10:	621b      	addi.n	a6, a2, 1
-40103a12:	0bb257        	bgeu	a2, a5, 40103a21 <lmacMSDUAged+0x85>
-40103a15:	064c62        	s8i	a6, a12, 6
-40103a18:	000146        	j	40103a21 <lmacMSDUAged+0x85>
-40103a1b:	070c72        	l8ui	a7, a12, 7
-40103a1e:	064c72        	s8i	a7, a12, 6
-40103a21:	1b28      	l32i.n	a2, a11, 4
-40103a23:	000082        	l8ui	a8, a0, 0
-40103a26:	10a2a0        	and	a10, a2, a10
-40103a29:	542820        	extui	a2, a2, 8, 6
-40103a2c:	221b      	addi.n	a2, a2, 1
-40103a2e:	542020        	extui	a2, a2, 0, 6
-40103a31:	112280        	slli	a2, a2, 8
-40103a34:	20aa20        	or	a10, a10, a2
-40103a37:	1ba9      	s32i.n	a10, a11, 4
-40103a39:	040c92        	l8ui	a9, a12, 4
-40103a3c:	269897        	bne	a8, a9, 40103a66 <lmacMSDUAged+0xca>
-40103a3f:	9d28      	l32i.n	a2, a13, 36
-40103a41:	1278      	l32i.n	a7, a2, 4
-40103a43:	343470        	extui	a3, a7, 4, 4
-40103a46:	948c      	beqz.n	a4, 40103a53 <lmacMSDUAged+0xb7>
-40103a48:	54b870        	extui	a11, a7, 8, 6
-40103a4b:	19a3b7        	bge	a3, a11, 40103a68 <lmacMSDUAged+0xcc>
-40103a4e:	0248      	l32i.n	a4, a2, 0
-40103a50:	14f4c7        	bbsi	a4, 28, 40103a68 <lmacMSDUAged+0xcc>
-40103a53:	631b      	addi.n	a6, a3, 1
-40103a55:	0faf52        	movi	a5, -241
-40103a58:	105750        	and	a5, a7, a5
-40103a5b:	346060        	extui	a6, a6, 0, 4
-40103a5e:	1166c0        	slli	a6, a6, 4
-40103a61:	205560        	or	a5, a5, a6
-40103a64:	1259      	s32i.n	a5, a2, 4
-40103a66:	9d28      	l32i.n	a2, a13, 36
-40103a68:	110c32        	l8ui	a3, a12, 17
-40103a6b:	142326        	beqi	a3, 2, 40103a83 <lmacMSDUAged+0xe7>
-40103a6e:	111326        	beqi	a3, 1, 40103a83 <lmacMSDUAged+0xe7>
-40103a71:	fc1321        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103a74:	fc1431        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103a77:	74a442        	movi	a4, 0x474
-40103a7a:	f1c101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103a7d:	0000c0        	callx0	a0
-40103a80:	ffff06        	j	40103a80 <lmacMSDUAged+0xe4>
-40103a83:	018dc5        	call0	40105360 <rcReachRetryLimit>
-40103a86:	fc0201        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-40103a89:	018256        	bnez	a2, 40103aa5 <lmacMSDUAged+0x109>
-40103a8c:	092d62        	l32i	a6, a13, 36
-40103a8f:	012662        	l32i	a6, a6, 4
-40103a92:	0d0072        	l8ui	a7, a0, 13
-40103a95:	546860        	extui	a6, a6, 8, 6
-40103a98:	09b677        	bgeu	a6, a7, 40103aa5 <lmacMSDUAged+0x109>
-40103a9b:	0d2d      	mov.n	a2, a13
-40103a9d:	ffefc5        	call0	4010399c <lmacMSDUAged>
-40103aa0:	fbfc01        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-40103aa3:	62ac      	beqz.n	a2, 40103acd <lmacMSDUAged+0x131>
-40103aa5:	040c82        	l8ui	a8, a12, 4
-40103aa8:	690c      	movi.n	a9, 6
-40103aaa:	000072        	l8ui	a7, a0, 0
-40103aad:	114c92        	s8i	a9, a12, 17
-40103ab0:	099787        	bne	a7, a8, 40103abd <lmacMSDUAged+0x121>
-40103ab3:	0c2d      	mov.n	a2, a12
-40103ab5:	030c      	movi.n	a3, 0
-40103ab7:	ff9485        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103aba:	000106        	j	40103ac2 <lmacMSDUAged+0x126>
-40103abd:	0c2d      	mov.n	a2, a12
-40103abf:	ff7ec5        	call0	401032ac <lmacRecycleMPDU+0x24>
-40103ac2:	11c8      	l32i.n	a12, a1, 4
-40103ac4:	21d8      	l32i.n	a13, a1, 8
-40103ac6:	0108      	l32i.n	a0, a1, 0
-40103ac8:	10c112        	addi	a1, a1, 16
-40103acb:	f00d      	ret.n
-40103acd:	040cb2        	l8ui	a11, a12, 4
-40103ad0:	0000a2        	l8ui	a10, a0, 0
-40103ad3:	259ab7        	bne	a10, a11, 40103afc <lmacMSDUAged+0x160>
-40103ad6:	a028      	l32i.n	a2, a0, 40
-40103ad8:	1692d7        	bne	a2, a13, 40103af2 <lmacMSDUAged+0x156>
-40103adb:	9d08      	l32i.n	a0, a13, 36
-40103add:	0008      	l32i.n	a0, a0, 0
-40103adf:	0ff0c7        	bbsi	a0, 28, 40103af2 <lmacMSDUAged+0x156>
-40103ae2:	0cf0b7        	bbsi	a0, 27, 40103af2 <lmacMSDUAged+0x156>
-40103ae5:	4d38      	l32i.n	a3, a13, 16
-40103ae7:	010322        	l8ui	a2, a3, 1
-40103aea:	840c      	movi.n	a4, 8
-40103aec:	202240        	or	a2, a2, a4
-40103aef:	014322        	s8i	a2, a3, 1
-40103af2:	0c2d      	mov.n	a2, a12
-40103af4:	130c      	movi.n	a3, 1
-40103af6:	ff9085        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103af9:	fff146        	j	40103ac2 <lmacMSDUAged+0x126>
-40103afc:	110c52        	l8ui	a5, a12, 17
-40103aff:	111526        	beqi	a5, 1, 40103b14 <lmacMSDUAged+0x178>
-40103b02:	fbef21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103b05:	fbef31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103b08:	97a442        	movi	a4, 0x497
-40103b0b:	f19d01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103b0e:	0000c0        	callx0	a0
-40103b11:	ffff06        	j	40103b11 <lmacMSDUAged+0x175>
-40103b14:	0c2d      	mov.n	a2, a12
-40103b16:	030c      	movi.n	a3, 0
-40103b18:	460c      	movi.n	a6, 4
-40103b1a:	114c62        	s8i	a6, a12, 17
-40103b1d:	000045        	call0	40103b24 <lmacMSDUAged+0x188>
-40103b20:	ffe786        	j	40103ac2 <lmacMSDUAged+0x126>
-40103b23:	c11200        	mul16u	a1, a2, a0
-40103b26:	6102f0        	excw
-40103b29:	220201        	l32r	a0, 400cc334 <__floatsidf+0xbe044>
-40103b2c:	21c900        	srai	a12, a0, 9
-40103b2f:	9068      	l32i.n	a6, a0, 36
-40103b31:	02cd      	mov.n	a12, a2
-40103b33:	0628      	l32i.n	a2, a6, 0
-40103b35:	040c      	movi.n	a4, 0
-40103b37:	21f277        	bbsi	a2, 23, 40103b5c <lmacMSDUAged+0x1c0>
-40103b3a:	0b0c22        	l8ui	a2, a12, 11
-40103b3d:	63bc      	beqz.n	a3, 40103b77 <lmacMSDUAged+0x1db>
-40103b3f:	07d216        	beqz	a2, 40103bc0 <lmacMSDUAged+0x224>
-40103b42:	040c22        	l8ui	a2, a12, 4
-40103b45:	0211c5        	call0	40105c64 <Tx_Copy2Queue>
-40103b48:	040c22        	l8ui	a2, a12, 4
-40103b4b:	130c      	movi.n	a3, 1
-40103b4d:	040c      	movi.n	a4, 0
-40103b4f:	114c32        	s8i	a3, a12, 17
-40103b52:	030c      	movi.n	a3, 0
-40103b54:	020b45        	call0	40105c0c <wDev_EnableTransmit>
-40103b57:	120c      	movi.n	a2, 1
-40103b59:	000446        	j	40103b6e <lmacMSDUAged+0x1d2>
-40103b5c:	0c49      	s32i.n	a4, a12, 0
-40103b5e:	114c42        	s8i	a4, a12, 17
-40103b61:	708c      	beqz.n	a0, 40103b6c <lmacMSDUAged+0x1d0>
-40103b63:	0c2d      	mov.n	a2, a12
-40103b65:	140c      	movi.n	a4, 1
-40103b67:	003d      	mov.n	a3, a0
-40103b69:	ff7085        	call0	40103274 <lmacDiscardAgedMSDU>
-40103b6c:	020c      	movi.n	a2, 0
-40103b6e:	21c8      	l32i.n	a12, a1, 8
-40103b70:	1108      	l32i.n	a0, a1, 4
-40103b72:	10c112        	addi	a1, a1, 16
-40103b75:	f00d      	ret.n
-40103b77:	059216        	beqz	a2, 40103bd4 <lmacMSDUAged+0x238>
-40103b7a:	203660        	or	a3, a6, a6
-40103b7d:	072022        	l32i	a2, a0, 28
-40103b80:	1678      	l32i.n	a7, a6, 4
-40103b82:	080652        	l8ui	a5, a6, 8
-40103b85:	0159      	s32i.n	a5, a1, 0
-40103b87:	857770        	extui	a7, a7, 23, 9
-40103b8a:	0b5c72        	s16i	a7, a12, 22
-40103b8d:	012c05        	call0	40104e50 <rcGetRate>
-40103b90:	0c28      	l32i.n	a2, a12, 0
-40103b92:	9268      	l32i.n	a6, a2, 36
-40103b94:	0198      	l32i.n	a9, a1, 0
-40103b96:	080682        	l8ui	a8, a6, 8
-40103b99:	061897        	beq	a8, a9, 40103ba3 <lmacMSDUAged+0x207>
-40103b9c:	00d805        	call0	40104920 <ppCalFrameTimes>
-40103b9f:	0c68      	l32i.n	a6, a12, 0
-40103ba1:	9668      	l32i.n	a6, a6, 36
-40103ba3:	0c2d      	mov.n	a2, a12
-40103ba5:	0b9c72        	l16si	a7, a12, 22
-40103ba8:	1698      	l32i.n	a9, a6, 4
-40103baa:	051682        	l16ui	a8, a6, 10
-40103bad:	859790        	extui	a9, a9, 23, 9
-40103bb0:	c08890        	sub	a8, a8, a9
-40103bb3:	778a      	add.n	a7, a7, a8
-40103bb5:	0b5c72        	s16i	a7, a12, 22
-40103bb8:	004645        	call0	40104020 <lmacTxFrame+0x128>
-40103bbb:	120c      	movi.n	a2, 1
-40103bbd:	ffeb46        	j	40103b6e <lmacMSDUAged+0x1d2>
-40103bc0:	0c2d      	mov.n	a2, a12
-40103bc2:	030c      	movi.n	a3, 0
-40103bc4:	ff7785        	call0	40103340 <lmacRecycleMPDU+0xb8>
-40103bc7:	0c28      	l32i.n	a2, a12, 0
-40103bc9:	040c32        	l8ui	a3, a12, 4
-40103bcc:	003285        	call0	40103ef8 <lmacTxFrame>
-40103bcf:	020c      	movi.n	a2, 0
-40103bd1:	ffe646        	j	40103b6e <lmacMSDUAged+0x1d2>
-40103bd4:	202cc0        	or	a2, a12, a12
-40103bd7:	00a032        	movi	a3, 0
-40103bda:	ff7645        	call0	40103340 <lmacRecycleMPDU+0xb8>
-40103bdd:	002c32        	l32i	a3, a12, 0
-40103be0:	7328      	l32i.n	a2, a3, 28
-40103be2:	9338      	l32i.n	a3, a3, 36
-40103be4:	012685        	call0	40104e50 <rcGetRate>
-40103be7:	0c28      	l32i.n	a2, a12, 0
-40103be9:	040c32        	l8ui	a3, a12, 4
-40103bec:	003085        	call0	40103ef8 <lmacTxFrame>
-40103bef:	020c      	movi.n	a2, 0
-40103bf1:	ffde46        	j	40103b6e <lmacMSDUAged+0x1d2>
-40103bf4:	ff          	.byte 0xff
-40103bf5:	3f          	.byte 0x3f
-40103bf6:	12fff0        	excw
-40103bf9:	52f0c1        	l32r	a12, 400d87bc <__floatsidf+0xca4cc>
-40103bfc:	090a02        	l8ui	a0, a10, 9
-40103bff:	11c901        	l32r	a0, 400c8324 <__floatsidf+0xba034>
-40103c02:	21d9      	s32i.n	a13, a1, 8
-40103c04:	fba3d1        	l32r	a13, 40102a90 <clockgate_watchdog+0x2c>
-40103c07:	02cd      	mov.n	a12, a2
-40103c09:	0c0d02        	l8ui	a0, a13, 12
-40103c0c:	052d      	mov.n	a2, a5
-40103c0e:	0ab507        	bgeu	a5, a0, 40103c1c <lmacMSDUAged+0x280>
-40103c11:	251b      	addi.n	a2, a5, 1
-40103c13:	0a4c22        	s8i	a2, a12, 10
-40103c16:	0c0d02        	l8ui	a0, a13, 12
-40103c19:	742020        	extui	a2, a2, 0, 8
-40103c1c:	10b207        	bgeu	a2, a0, 40103c30 <lmacMSDUAged+0x294>
-40103c1f:	060c02        	l8ui	a0, a12, 6
-40103c22:	080c32        	l8ui	a3, a12, 8
-40103c25:	401b      	addi.n	a4, a0, 1
-40103c27:	0bb037        	bgeu	a0, a3, 40103c36 <lmacMSDUAged+0x29a>
-40103c2a:	064c42        	s8i	a4, a12, 6
-40103c2d:	000146        	j	40103c36 <lmacMSDUAged+0x29a>
-40103c30:	070c52        	l8ui	a5, a12, 7
-40103c33:	064c52        	s8i	a5, a12, 6
-40103c36:	ad98      	l32i.n	a9, a13, 40
-40103c38:	9998      	l32i.n	a9, a9, 36
-40103c3a:	ffee81        	l32r	a8, 40103bf4 <lmacMSDUAged+0x258>
-40103c3d:	19a8      	l32i.n	a10, a9, 4
-40103c3f:	000d62        	l8ui	a6, a13, 0
-40103c42:	108a80        	and	a8, a10, a8
-40103c45:	54aea0        	extui	a10, a10, 14, 6
-40103c48:	aa1b      	addi.n	a10, a10, 1
-40103c4a:	54a0a0        	extui	a10, a10, 0, 6
-40103c4d:	11aa20        	slli	a10, a10, 14
-40103c50:	2088a0        	or	a8, a8, a10
-40103c53:	1989      	s32i.n	a8, a9, 4
-40103c55:	040c72        	l8ui	a7, a12, 4
-40103c58:	adb8      	l32i.n	a11, a13, 40
-40103c5a:	199677        	bne	a6, a7, 40103c77 <lmacMSDUAged+0x2db>
-40103c5d:	9bb8      	l32i.n	a11, a11, 36
-40103c5f:	1b08      	l32i.n	a0, a11, 4
-40103c61:	0fafa2        	movi	a10, -241
-40103c64:	10a0a0        	and	a10, a0, a10
-40103c67:	410400        	srli	a0, a0, 4
-40103c6a:	001b      	addi.n	a0, a0, 1
-40103c6c:	340000        	extui	a0, a0, 0, 4
-40103c6f:	1100c0        	slli	a0, a0, 4
-40103c72:	20aa00        	or	a10, a10, a0
-40103c75:	1ba9      	s32i.n	a10, a11, 4
-40103c77:	110c02        	l8ui	a0, a12, 17
-40103c7a:	142026        	beqi	a0, 2, 40103c92 <lmacMSDUAged+0x2f6>
-40103c7d:	111026        	beqi	a0, 1, 40103c92 <lmacMSDUAged+0x2f6>
-40103c80:	fb9021        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103c83:	fb9031        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103c86:	eba442        	movi	a4, 0x4eb
-40103c89:	f13d01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103c8c:	0000c0        	callx0	a0
-40103c8f:	ffff06        	j	40103c8f <lmacMSDUAged+0x2f3>
-40103c92:	0a2d22        	l32i	a2, a13, 40
-40103c95:	092222        	l32i	a2, a2, 36
-40103c98:	016c45        	call0	40105360 <rcReachRetryLimit>
-40103c9b:	013256        	bnez	a2, 40103cb2 <lmacMSDUAged+0x316>
-40103c9e:	ad28      	l32i.n	a2, a13, 40
-40103ca0:	9238      	l32i.n	a3, a2, 36
-40103ca2:	1338      	l32i.n	a3, a3, 4
-40103ca4:	0c0d42        	l8ui	a4, a13, 12
-40103ca7:	543e30        	extui	a3, a3, 14, 6
-40103caa:	04b347        	bgeu	a3, a4, 40103cb2 <lmacMSDUAged+0x316>
-40103cad:	ffcec5        	call0	4010399c <lmacMSDUAged>
-40103cb0:	62ac      	beqz.n	a2, 40103cda <lmacMSDUAged+0x33e>
-40103cb2:	040c52        	l8ui	a5, a12, 4
-40103cb5:	660c      	movi.n	a6, 6
-40103cb7:	000d42        	l8ui	a4, a13, 0
-40103cba:	114c62        	s8i	a6, a12, 17
-40103cbd:	099457        	bne	a4, a5, 40103cca <lmacMSDUAged+0x32e>
-40103cc0:	0c2d      	mov.n	a2, a12
-40103cc2:	030c      	movi.n	a3, 0
-40103cc4:	ff7385        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103cc7:	000106        	j	40103ccf <lmacMSDUAged+0x333>
-40103cca:	0c2d      	mov.n	a2, a12
-40103ccc:	ff5dc5        	call0	401032ac <lmacRecycleMPDU+0x24>
-40103ccf:	11c8      	l32i.n	a12, a1, 4
-40103cd1:	21d8      	l32i.n	a13, a1, 8
-40103cd3:	0108      	l32i.n	a0, a1, 0
-40103cd5:	10c112        	addi	a1, a1, 16
-40103cd8:	f00d      	ret.n
-40103cda:	040c82        	l8ui	a8, a12, 4
-40103cdd:	000d72        	l8ui	a7, a13, 0
-40103ce0:	1f9787        	bne	a7, a8, 40103d03 <lmacMSDUAged+0x367>
-40103ce3:	ad28      	l32i.n	a2, a13, 40
-40103ce5:	9298      	l32i.n	a9, a2, 36
-40103ce7:	0998      	l32i.n	a9, a9, 0
-40103ce9:	0cf9c7        	bbsi	a9, 28, 40103cf9 <lmacMSDUAged+0x35d>
-40103cec:	42b8      	l32i.n	a11, a2, 16
-40103cee:	010ba2        	l8ui	a10, a11, 1
-40103cf1:	8d0c      	movi.n	a13, 8
-40103cf3:	20aad0        	or	a10, a10, a13
-40103cf6:	014ba2        	s8i	a10, a11, 1
-40103cf9:	0c2d      	mov.n	a2, a12
-40103cfb:	130c      	movi.n	a3, 1
-40103cfd:	ff7005        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103d00:	fff2c6        	j	40103ccf <lmacMSDUAged+0x333>
-40103d03:	110c02        	l8ui	a0, a12, 17
-40103d06:	111026        	beqi	a0, 1, 40103d1b <lmacMSDUAged+0x37f>
-40103d09:	fb6d21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103d0c:	fb6e31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103d0f:	01a542        	movi	a4, 0x501
-40103d12:	f11b01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103d15:	0000c0        	callx0	a0
-40103d18:	ffff06        	j	40103d18 <lmacMSDUAged+0x37c>
-40103d1b:	420c      	movi.n	a2, 4
-40103d1d:	030c      	movi.n	a3, 0
-40103d1f:	114c22        	s8i	a2, a12, 17
-40103d22:	0c2d      	mov.n	a2, a12
-40103d24:	ffdfc5        	call0	40103b24 <lmacMSDUAged+0x188>
-40103d27:	ffe906        	j	40103ccf <lmacMSDUAged+0x333>
+40103934 <lmacMSDUAged>:
+40103934:	f6df41        	l32r	a4, 401014b0 <system_deep_sleep_local_2+0xb0>
+40103937:	0020c0        	memw
+4010393a:	802442        	l32i	a4, a4, 0x200
+4010393d:	9258      	l32i.n	a5, a2, 36
+4010393f:	fc3a31        	l32r	a3, 40102a28 <clockgate_watchdog+0x2c>
+40103942:	6558      	l32i.n	a5, a5, 24
+40103944:	1338      	l32i.n	a3, a3, 4
+40103946:	c04450        	sub	a4, a4, a5
+40103949:	fbc332        	addi	a3, a3, -5
+4010394c:	113360        	slli	a3, a3, 10
+4010394f:	03b347        	bgeu	a3, a4, 40103956 <lmacMSDUAged+0x22>
+40103952:	120c      	movi.n	a2, 1
+40103954:	f00d      	ret.n
+40103956:	020c      	movi.n	a2, 0
+40103958:	f00d      	ret.n
+4010395a:	ff0000        	excw
+4010395d:	ffffc0        	excw
+40103960:	f0c112        	addi	a1, a1, -16
+40103963:	0109      	s32i.n	a0, a1, 0
+40103965:	11c9      	s32i.n	a12, a1, 4
+40103967:	21d9      	s32i.n	a13, a1, 8
+40103969:	02cd      	mov.n	a12, a2
+4010396b:	03dd      	mov.n	a13, a3
+4010396d:	03dc      	bnez.n	a3, 40103981 <lmacMSDUAged+0x4d>
+4010396f:	fc3a21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103972:	fc3a31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103975:	63a442        	movi	a4, 0x463
+40103978:	f20201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010397b:	0000c0        	callx0	a0
+4010397e:	ffff06        	j	4010397e <lmacMSDUAged+0x4a>
+40103981:	fc2901        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40103984:	090272        	l8ui	a7, a2, 9
+40103987:	0d0022        	l8ui	a2, a0, 13
+4010398a:	073d      	mov.n	a3, a7
+4010398c:	0ab727        	bgeu	a7, a2, 4010399a <lmacMSDUAged+0x66>
+4010398f:	371b      	addi.n	a3, a7, 1
+40103991:	094c32        	s8i	a3, a12, 9
+40103994:	743030        	extui	a3, a3, 0, 8
+40103997:	0d0022        	l8ui	a2, a0, 13
+4010399a:	9db8      	l32i.n	a11, a13, 36
+4010399c:	fff0a1        	l32r	a10, 4010395c <lmacMSDUAged+0x28>
+4010399f:	10b327        	bgeu	a3, a2, 401039b3 <lmacMSDUAged+0x7f>
+401039a2:	060c22        	l8ui	a2, a12, 6
+401039a5:	080c52        	l8ui	a5, a12, 8
+401039a8:	621b      	addi.n	a6, a2, 1
+401039aa:	0bb257        	bgeu	a2, a5, 401039b9 <lmacMSDUAged+0x85>
+401039ad:	064c62        	s8i	a6, a12, 6
+401039b0:	000146        	j	401039b9 <lmacMSDUAged+0x85>
+401039b3:	070c72        	l8ui	a7, a12, 7
+401039b6:	064c72        	s8i	a7, a12, 6
+401039b9:	1b28      	l32i.n	a2, a11, 4
+401039bb:	000082        	l8ui	a8, a0, 0
+401039be:	10a2a0        	and	a10, a2, a10
+401039c1:	542820        	extui	a2, a2, 8, 6
+401039c4:	221b      	addi.n	a2, a2, 1
+401039c6:	542020        	extui	a2, a2, 0, 6
+401039c9:	112280        	slli	a2, a2, 8
+401039cc:	20aa20        	or	a10, a10, a2
+401039cf:	1ba9      	s32i.n	a10, a11, 4
+401039d1:	040c92        	l8ui	a9, a12, 4
+401039d4:	269897        	bne	a8, a9, 401039fe <lmacMSDUAged+0xca>
+401039d7:	9d28      	l32i.n	a2, a13, 36
+401039d9:	1278      	l32i.n	a7, a2, 4
+401039db:	343470        	extui	a3, a7, 4, 4
+401039de:	948c      	beqz.n	a4, 401039eb <lmacMSDUAged+0xb7>
+401039e0:	54b870        	extui	a11, a7, 8, 6
+401039e3:	19a3b7        	bge	a3, a11, 40103a00 <lmacMSDUAged+0xcc>
+401039e6:	0248      	l32i.n	a4, a2, 0
+401039e8:	14f4c7        	bbsi	a4, 28, 40103a00 <lmacMSDUAged+0xcc>
+401039eb:	631b      	addi.n	a6, a3, 1
+401039ed:	0faf52        	movi	a5, -241
+401039f0:	105750        	and	a5, a7, a5
+401039f3:	346060        	extui	a6, a6, 0, 4
+401039f6:	1166c0        	slli	a6, a6, 4
+401039f9:	205560        	or	a5, a5, a6
+401039fc:	1259      	s32i.n	a5, a2, 4
+401039fe:	9d28      	l32i.n	a2, a13, 36
+40103a00:	110c32        	l8ui	a3, a12, 17
+40103a03:	142326        	beqi	a3, 2, 40103a1b <lmacMSDUAged+0xe7>
+40103a06:	111326        	beqi	a3, 1, 40103a1b <lmacMSDUAged+0xe7>
+40103a09:	fc1321        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103a0c:	fc1431        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103a0f:	74a442        	movi	a4, 0x474
+40103a12:	f1db01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103a15:	0000c0        	callx0	a0
+40103a18:	ffff06        	j	40103a18 <lmacMSDUAged+0xe4>
+40103a1b:	018dc5        	call0	401052f8 <rcReachRetryLimit>
+40103a1e:	fc0201        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40103a21:	018256        	bnez	a2, 40103a3d <lmacMSDUAged+0x109>
+40103a24:	092d62        	l32i	a6, a13, 36
+40103a27:	012662        	l32i	a6, a6, 4
+40103a2a:	0d0072        	l8ui	a7, a0, 13
+40103a2d:	546860        	extui	a6, a6, 8, 6
+40103a30:	09b677        	bgeu	a6, a7, 40103a3d <lmacMSDUAged+0x109>
+40103a33:	0d2d      	mov.n	a2, a13
+40103a35:	ffefc5        	call0	40103934 <lmacMSDUAged>
+40103a38:	fbfc01        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40103a3b:	62ac      	beqz.n	a2, 40103a65 <lmacMSDUAged+0x131>
+40103a3d:	040c82        	l8ui	a8, a12, 4
+40103a40:	690c      	movi.n	a9, 6
+40103a42:	000072        	l8ui	a7, a0, 0
+40103a45:	114c92        	s8i	a9, a12, 17
+40103a48:	099787        	bne	a7, a8, 40103a55 <lmacMSDUAged+0x121>
+40103a4b:	0c2d      	mov.n	a2, a12
+40103a4d:	030c      	movi.n	a3, 0
+40103a4f:	ff9485        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103a52:	000106        	j	40103a5a <lmacMSDUAged+0x126>
+40103a55:	0c2d      	mov.n	a2, a12
+40103a57:	ff7ec5        	call0	40103244 <lmacRecycleMPDU+0x24>
+40103a5a:	11c8      	l32i.n	a12, a1, 4
+40103a5c:	21d8      	l32i.n	a13, a1, 8
+40103a5e:	0108      	l32i.n	a0, a1, 0
+40103a60:	10c112        	addi	a1, a1, 16
+40103a63:	f00d      	ret.n
+40103a65:	040cb2        	l8ui	a11, a12, 4
+40103a68:	0000a2        	l8ui	a10, a0, 0
+40103a6b:	259ab7        	bne	a10, a11, 40103a94 <lmacMSDUAged+0x160>
+40103a6e:	a028      	l32i.n	a2, a0, 40
+40103a70:	1692d7        	bne	a2, a13, 40103a8a <lmacMSDUAged+0x156>
+40103a73:	9d08      	l32i.n	a0, a13, 36
+40103a75:	0008      	l32i.n	a0, a0, 0
+40103a77:	0ff0c7        	bbsi	a0, 28, 40103a8a <lmacMSDUAged+0x156>
+40103a7a:	0cf0b7        	bbsi	a0, 27, 40103a8a <lmacMSDUAged+0x156>
+40103a7d:	4d38      	l32i.n	a3, a13, 16
+40103a7f:	010322        	l8ui	a2, a3, 1
+40103a82:	840c      	movi.n	a4, 8
+40103a84:	202240        	or	a2, a2, a4
+40103a87:	014322        	s8i	a2, a3, 1
+40103a8a:	0c2d      	mov.n	a2, a12
+40103a8c:	130c      	movi.n	a3, 1
+40103a8e:	ff9085        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103a91:	fff146        	j	40103a5a <lmacMSDUAged+0x126>
+40103a94:	110c52        	l8ui	a5, a12, 17
+40103a97:	111526        	beqi	a5, 1, 40103aac <lmacMSDUAged+0x178>
+40103a9a:	fbef21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103a9d:	fbef31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103aa0:	97a442        	movi	a4, 0x497
+40103aa3:	f1b701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103aa6:	0000c0        	callx0	a0
+40103aa9:	ffff06        	j	40103aa9 <lmacMSDUAged+0x175>
+40103aac:	0c2d      	mov.n	a2, a12
+40103aae:	030c      	movi.n	a3, 0
+40103ab0:	460c      	movi.n	a6, 4
+40103ab2:	114c62        	s8i	a6, a12, 17
+40103ab5:	000045        	call0	40103abc <lmacMSDUAged+0x188>
+40103ab8:	ffe786        	j	40103a5a <lmacMSDUAged+0x126>
+40103abb:	c11200        	mul16u	a1, a2, a0
+40103abe:	6102f0        	excw
+40103ac1:	220201        	l32r	a0, 400cc2cc <__floatsidf+0xbdfdc>
+40103ac4:	21c900        	srai	a12, a0, 9
+40103ac7:	9068      	l32i.n	a6, a0, 36
+40103ac9:	02cd      	mov.n	a12, a2
+40103acb:	0628      	l32i.n	a2, a6, 0
+40103acd:	040c      	movi.n	a4, 0
+40103acf:	21f277        	bbsi	a2, 23, 40103af4 <lmacMSDUAged+0x1c0>
+40103ad2:	0b0c22        	l8ui	a2, a12, 11
+40103ad5:	63bc      	beqz.n	a3, 40103b0f <lmacMSDUAged+0x1db>
+40103ad7:	07d216        	beqz	a2, 40103b58 <lmacMSDUAged+0x224>
+40103ada:	040c22        	l8ui	a2, a12, 4
+40103add:	0211c5        	call0	40105bfc <Tx_Copy2Queue>
+40103ae0:	040c22        	l8ui	a2, a12, 4
+40103ae3:	130c      	movi.n	a3, 1
+40103ae5:	040c      	movi.n	a4, 0
+40103ae7:	114c32        	s8i	a3, a12, 17
+40103aea:	030c      	movi.n	a3, 0
+40103aec:	020b45        	call0	40105ba4 <wDev_EnableTransmit>
+40103aef:	120c      	movi.n	a2, 1
+40103af1:	000446        	j	40103b06 <lmacMSDUAged+0x1d2>
+40103af4:	0c49      	s32i.n	a4, a12, 0
+40103af6:	114c42        	s8i	a4, a12, 17
+40103af9:	708c      	beqz.n	a0, 40103b04 <lmacMSDUAged+0x1d0>
+40103afb:	0c2d      	mov.n	a2, a12
+40103afd:	140c      	movi.n	a4, 1
+40103aff:	003d      	mov.n	a3, a0
+40103b01:	ff7085        	call0	4010320c <lmacDiscardAgedMSDU>
+40103b04:	020c      	movi.n	a2, 0
+40103b06:	21c8      	l32i.n	a12, a1, 8
+40103b08:	1108      	l32i.n	a0, a1, 4
+40103b0a:	10c112        	addi	a1, a1, 16
+40103b0d:	f00d      	ret.n
+40103b0f:	059216        	beqz	a2, 40103b6c <lmacMSDUAged+0x238>
+40103b12:	203660        	or	a3, a6, a6
+40103b15:	072022        	l32i	a2, a0, 28
+40103b18:	1678      	l32i.n	a7, a6, 4
+40103b1a:	080652        	l8ui	a5, a6, 8
+40103b1d:	0159      	s32i.n	a5, a1, 0
+40103b1f:	857770        	extui	a7, a7, 23, 9
+40103b22:	0b5c72        	s16i	a7, a12, 22
+40103b25:	012c05        	call0	40104de8 <rcGetRate>
+40103b28:	0c28      	l32i.n	a2, a12, 0
+40103b2a:	9268      	l32i.n	a6, a2, 36
+40103b2c:	0198      	l32i.n	a9, a1, 0
+40103b2e:	080682        	l8ui	a8, a6, 8
+40103b31:	061897        	beq	a8, a9, 40103b3b <lmacMSDUAged+0x207>
+40103b34:	00d805        	call0	401048b8 <ppCalFrameTimes>
+40103b37:	0c68      	l32i.n	a6, a12, 0
+40103b39:	9668      	l32i.n	a6, a6, 36
+40103b3b:	0c2d      	mov.n	a2, a12
+40103b3d:	0b9c72        	l16si	a7, a12, 22
+40103b40:	1698      	l32i.n	a9, a6, 4
+40103b42:	051682        	l16ui	a8, a6, 10
+40103b45:	859790        	extui	a9, a9, 23, 9
+40103b48:	c08890        	sub	a8, a8, a9
+40103b4b:	778a      	add.n	a7, a7, a8
+40103b4d:	0b5c72        	s16i	a7, a12, 22
+40103b50:	004645        	call0	40103fb8 <lmacTxFrame+0x128>
+40103b53:	120c      	movi.n	a2, 1
+40103b55:	ffeb46        	j	40103b06 <lmacMSDUAged+0x1d2>
+40103b58:	0c2d      	mov.n	a2, a12
+40103b5a:	030c      	movi.n	a3, 0
+40103b5c:	ff7785        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103b5f:	0c28      	l32i.n	a2, a12, 0
+40103b61:	040c32        	l8ui	a3, a12, 4
+40103b64:	003285        	call0	40103e90 <lmacTxFrame>
+40103b67:	020c      	movi.n	a2, 0
+40103b69:	ffe646        	j	40103b06 <lmacMSDUAged+0x1d2>
+40103b6c:	202cc0        	or	a2, a12, a12
+40103b6f:	00a032        	movi	a3, 0
+40103b72:	ff7645        	call0	401032d8 <lmacRecycleMPDU+0xb8>
+40103b75:	002c32        	l32i	a3, a12, 0
+40103b78:	7328      	l32i.n	a2, a3, 28
+40103b7a:	9338      	l32i.n	a3, a3, 36
+40103b7c:	012685        	call0	40104de8 <rcGetRate>
+40103b7f:	0c28      	l32i.n	a2, a12, 0
+40103b81:	040c32        	l8ui	a3, a12, 4
+40103b84:	003085        	call0	40103e90 <lmacTxFrame>
+40103b87:	020c      	movi.n	a2, 0
+40103b89:	ffde46        	j	40103b06 <lmacMSDUAged+0x1d2>
+40103b8c:	ff          	.byte 0xff
+40103b8d:	3f          	.byte 0x3f
+40103b8e:	12fff0        	excw
+40103b91:	52f0c1        	l32r	a12, 400d8754 <__floatsidf+0xca464>
+40103b94:	090a02        	l8ui	a0, a10, 9
+40103b97:	11c901        	l32r	a0, 400c82bc <__floatsidf+0xb9fcc>
+40103b9a:	21d9      	s32i.n	a13, a1, 8
+40103b9c:	fba3d1        	l32r	a13, 40102a28 <clockgate_watchdog+0x2c>
+40103b9f:	02cd      	mov.n	a12, a2
+40103ba1:	0c0d02        	l8ui	a0, a13, 12
+40103ba4:	052d      	mov.n	a2, a5
+40103ba6:	0ab507        	bgeu	a5, a0, 40103bb4 <lmacMSDUAged+0x280>
+40103ba9:	251b      	addi.n	a2, a5, 1
+40103bab:	0a4c22        	s8i	a2, a12, 10
+40103bae:	0c0d02        	l8ui	a0, a13, 12
+40103bb1:	742020        	extui	a2, a2, 0, 8
+40103bb4:	10b207        	bgeu	a2, a0, 40103bc8 <lmacMSDUAged+0x294>
+40103bb7:	060c02        	l8ui	a0, a12, 6
+40103bba:	080c32        	l8ui	a3, a12, 8
+40103bbd:	401b      	addi.n	a4, a0, 1
+40103bbf:	0bb037        	bgeu	a0, a3, 40103bce <lmacMSDUAged+0x29a>
+40103bc2:	064c42        	s8i	a4, a12, 6
+40103bc5:	000146        	j	40103bce <lmacMSDUAged+0x29a>
+40103bc8:	070c52        	l8ui	a5, a12, 7
+40103bcb:	064c52        	s8i	a5, a12, 6
+40103bce:	ad98      	l32i.n	a9, a13, 40
+40103bd0:	9998      	l32i.n	a9, a9, 36
+40103bd2:	ffee81        	l32r	a8, 40103b8c <lmacMSDUAged+0x258>
+40103bd5:	19a8      	l32i.n	a10, a9, 4
+40103bd7:	000d62        	l8ui	a6, a13, 0
+40103bda:	108a80        	and	a8, a10, a8
+40103bdd:	54aea0        	extui	a10, a10, 14, 6
+40103be0:	aa1b      	addi.n	a10, a10, 1
+40103be2:	54a0a0        	extui	a10, a10, 0, 6
+40103be5:	11aa20        	slli	a10, a10, 14
+40103be8:	2088a0        	or	a8, a8, a10
+40103beb:	1989      	s32i.n	a8, a9, 4
+40103bed:	040c72        	l8ui	a7, a12, 4
+40103bf0:	adb8      	l32i.n	a11, a13, 40
+40103bf2:	199677        	bne	a6, a7, 40103c0f <lmacMSDUAged+0x2db>
+40103bf5:	9bb8      	l32i.n	a11, a11, 36
+40103bf7:	1b08      	l32i.n	a0, a11, 4
+40103bf9:	0fafa2        	movi	a10, -241
+40103bfc:	10a0a0        	and	a10, a0, a10
+40103bff:	410400        	srli	a0, a0, 4
+40103c02:	001b      	addi.n	a0, a0, 1
+40103c04:	340000        	extui	a0, a0, 0, 4
+40103c07:	1100c0        	slli	a0, a0, 4
+40103c0a:	20aa00        	or	a10, a10, a0
+40103c0d:	1ba9      	s32i.n	a10, a11, 4
+40103c0f:	110c02        	l8ui	a0, a12, 17
+40103c12:	142026        	beqi	a0, 2, 40103c2a <lmacMSDUAged+0x2f6>
+40103c15:	111026        	beqi	a0, 1, 40103c2a <lmacMSDUAged+0x2f6>
+40103c18:	fb9021        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103c1b:	fb9031        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103c1e:	eba442        	movi	a4, 0x4eb
+40103c21:	f15701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103c24:	0000c0        	callx0	a0
+40103c27:	ffff06        	j	40103c27 <lmacMSDUAged+0x2f3>
+40103c2a:	0a2d22        	l32i	a2, a13, 40
+40103c2d:	092222        	l32i	a2, a2, 36
+40103c30:	016c45        	call0	401052f8 <rcReachRetryLimit>
+40103c33:	013256        	bnez	a2, 40103c4a <lmacMSDUAged+0x316>
+40103c36:	ad28      	l32i.n	a2, a13, 40
+40103c38:	9238      	l32i.n	a3, a2, 36
+40103c3a:	1338      	l32i.n	a3, a3, 4
+40103c3c:	0c0d42        	l8ui	a4, a13, 12
+40103c3f:	543e30        	extui	a3, a3, 14, 6
+40103c42:	04b347        	bgeu	a3, a4, 40103c4a <lmacMSDUAged+0x316>
+40103c45:	ffcec5        	call0	40103934 <lmacMSDUAged>
+40103c48:	62ac      	beqz.n	a2, 40103c72 <lmacMSDUAged+0x33e>
+40103c4a:	040c52        	l8ui	a5, a12, 4
+40103c4d:	660c      	movi.n	a6, 6
+40103c4f:	000d42        	l8ui	a4, a13, 0
+40103c52:	114c62        	s8i	a6, a12, 17
+40103c55:	099457        	bne	a4, a5, 40103c62 <lmacMSDUAged+0x32e>
+40103c58:	0c2d      	mov.n	a2, a12
+40103c5a:	030c      	movi.n	a3, 0
+40103c5c:	ff7385        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103c5f:	000106        	j	40103c67 <lmacMSDUAged+0x333>
+40103c62:	0c2d      	mov.n	a2, a12
+40103c64:	ff5dc5        	call0	40103244 <lmacRecycleMPDU+0x24>
+40103c67:	11c8      	l32i.n	a12, a1, 4
+40103c69:	21d8      	l32i.n	a13, a1, 8
+40103c6b:	0108      	l32i.n	a0, a1, 0
+40103c6d:	10c112        	addi	a1, a1, 16
+40103c70:	f00d      	ret.n
+40103c72:	040c82        	l8ui	a8, a12, 4
+40103c75:	000d72        	l8ui	a7, a13, 0
+40103c78:	1f9787        	bne	a7, a8, 40103c9b <lmacMSDUAged+0x367>
+40103c7b:	ad28      	l32i.n	a2, a13, 40
+40103c7d:	9298      	l32i.n	a9, a2, 36
+40103c7f:	0998      	l32i.n	a9, a9, 0
+40103c81:	0cf9c7        	bbsi	a9, 28, 40103c91 <lmacMSDUAged+0x35d>
+40103c84:	42b8      	l32i.n	a11, a2, 16
+40103c86:	010ba2        	l8ui	a10, a11, 1
+40103c89:	8d0c      	movi.n	a13, 8
+40103c8b:	20aad0        	or	a10, a10, a13
+40103c8e:	014ba2        	s8i	a10, a11, 1
+40103c91:	0c2d      	mov.n	a2, a12
+40103c93:	130c      	movi.n	a3, 1
+40103c95:	ff7005        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103c98:	fff2c6        	j	40103c67 <lmacMSDUAged+0x333>
+40103c9b:	110c02        	l8ui	a0, a12, 17
+40103c9e:	111026        	beqi	a0, 1, 40103cb3 <lmacMSDUAged+0x37f>
+40103ca1:	fb6d21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103ca4:	fb6e31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103ca7:	01a542        	movi	a4, 0x501
+40103caa:	f13501        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103cad:	0000c0        	callx0	a0
+40103cb0:	ffff06        	j	40103cb0 <lmacMSDUAged+0x37c>
+40103cb3:	420c      	movi.n	a2, 4
+40103cb5:	030c      	movi.n	a3, 0
+40103cb7:	114c22        	s8i	a2, a12, 17
+40103cba:	0c2d      	mov.n	a2, a12
+40103cbc:	ffdfc5        	call0	40103abc <lmacMSDUAged+0x188>
+40103cbf:	ffe906        	j	40103c67 <lmacMSDUAged+0x333>
 	...
 
-40103d2c <lmacProcessCtsTimeout>:
-40103d2c:	b03220        	addx8	a3, a2, a2
-40103d2f:	f0c112        	addi	a1, a1, -16
-40103d32:	fb5c41        	l32r	a4, 40102aa4 <lmacIsActive+0x10>
-40103d35:	0109      	s32i.n	a0, a1, 0
-40103d37:	a02340        	addx4	a2, a3, a4
-40103d3a:	110202        	l8ui	a0, a2, 17
-40103d3d:	1a1066        	bnei	a0, 1, 40103d5b <lmacProcessCtsTimeout+0x2f>
-40103d40:	0238      	l32i.n	a3, a2, 0
-40103d42:	03dc      	bnez.n	a3, 40103d56 <lmacProcessCtsTimeout+0x2a>
-40103d44:	fb5f21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103d47:	fb5f31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103d4a:	17a542        	movi	a4, 0x517
-40103d4d:	f10c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103d50:	0000c0        	callx0	a0
-40103d53:	ffff06        	j	40103d53 <lmacProcessCtsTimeout+0x27>
-40103d56:	140c      	movi.n	a4, 1
-40103d58:	ffc6c5        	call0	401039c8 <lmacMSDUAged+0x2c>
-40103d5b:	0108      	l32i.n	a0, a1, 0
-40103d5d:	10c112        	addi	a1, a1, 16
-40103d60:	f00d      	ret.n
+40103cc4 <lmacProcessCtsTimeout>:
+40103cc4:	b03220        	addx8	a3, a2, a2
+40103cc7:	f0c112        	addi	a1, a1, -16
+40103cca:	fb5c41        	l32r	a4, 40102a3c <lmacIsActive+0x10>
+40103ccd:	0109      	s32i.n	a0, a1, 0
+40103ccf:	a02340        	addx4	a2, a3, a4
+40103cd2:	110202        	l8ui	a0, a2, 17
+40103cd5:	1a1066        	bnei	a0, 1, 40103cf3 <lmacProcessCtsTimeout+0x2f>
+40103cd8:	0238      	l32i.n	a3, a2, 0
+40103cda:	03dc      	bnez.n	a3, 40103cee <lmacProcessCtsTimeout+0x2a>
+40103cdc:	fb5f21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103cdf:	fb5f31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103ce2:	17a542        	movi	a4, 0x517
+40103ce5:	f12601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103ce8:	0000c0        	callx0	a0
+40103ceb:	ffff06        	j	40103ceb <lmacProcessCtsTimeout+0x27>
+40103cee:	140c      	movi.n	a4, 1
+40103cf0:	ffc6c5        	call0	40103960 <lmacMSDUAged+0x2c>
+40103cf3:	0108      	l32i.n	a0, a1, 0
+40103cf5:	10c112        	addi	a1, a1, 16
+40103cf8:	f00d      	ret.n
 	...
 
-40103d64 <lmacProcessAckTimeout>:
-40103d64:	f0c112        	addi	a1, a1, -16
-40103d67:	0109      	s32i.n	a0, a1, 0
-40103d69:	fed285        	call0	40102a94 <lmacIsActive>
-40103d6c:	044216        	beqz	a2, 40103db4 <lmacProcessAckTimeout+0x50>
-40103d6f:	fed245        	call0	40102a94 <lmacIsActive>
-40103d72:	02dc      	bnez.n	a2, 40103d86 <lmacProcessAckTimeout+0x22>
-40103d74:	fb5321        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103d77:	fb5331        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103d7a:	29a542        	movi	a4, 0x529
-40103d7d:	f10001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103d80:	0000c0        	callx0	a0
-40103d83:	ffff06        	j	40103d83 <lmacProcessAckTimeout+0x1f>
-40103d86:	fb4241        	l32r	a4, 40102a90 <clockgate_watchdog+0x2c>
-40103d89:	000422        	l8ui	a2, a4, 0
-40103d8c:	a438      	l32i.n	a3, a4, 40
-40103d8e:	30c442        	addi	a4, a4, 48
-40103d91:	9308      	l32i.n	a0, a3, 36
-40103d93:	b02220        	addx8	a2, a2, a2
-40103d96:	0008      	l32i.n	a0, a0, 0
-40103d98:	a02240        	addx4	a2, a2, a4
-40103d9b:	1060e7        	bbci	a0, 14, 40103daf <lmacProcessAckTimeout+0x4b>
-40103d9e:	030c      	movi.n	a3, 0
-40103da0:	070242        	l8ui	a4, a2, 7
-40103da3:	064242        	s8i	a4, a2, 6
-40103da6:	094232        	s8i	a3, a2, 9
-40103da9:	ffe4c5        	call0	40103bf8 <lmacMSDUAged+0x25c>
-40103dac:	000106        	j	40103db4 <lmacProcessAckTimeout+0x50>
-40103daf:	040c      	movi.n	a4, 0
-40103db1:	ffc145        	call0	401039c8 <lmacMSDUAged+0x2c>
-40103db4:	0108      	l32i.n	a0, a1, 0
-40103db6:	10c112        	addi	a1, a1, 16
-40103db9:	f00d      	ret.n
+40103cfc <lmacProcessAckTimeout>:
+40103cfc:	f0c112        	addi	a1, a1, -16
+40103cff:	0109      	s32i.n	a0, a1, 0
+40103d01:	fed285        	call0	40102a2c <lmacIsActive>
+40103d04:	044216        	beqz	a2, 40103d4c <lmacProcessAckTimeout+0x50>
+40103d07:	fed245        	call0	40102a2c <lmacIsActive>
+40103d0a:	02dc      	bnez.n	a2, 40103d1e <lmacProcessAckTimeout+0x22>
+40103d0c:	fb5321        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103d0f:	fb5331        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103d12:	29a542        	movi	a4, 0x529
+40103d15:	f11a01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103d18:	0000c0        	callx0	a0
+40103d1b:	ffff06        	j	40103d1b <lmacProcessAckTimeout+0x1f>
+40103d1e:	fb4241        	l32r	a4, 40102a28 <clockgate_watchdog+0x2c>
+40103d21:	000422        	l8ui	a2, a4, 0
+40103d24:	a438      	l32i.n	a3, a4, 40
+40103d26:	30c442        	addi	a4, a4, 48
+40103d29:	9308      	l32i.n	a0, a3, 36
+40103d2b:	b02220        	addx8	a2, a2, a2
+40103d2e:	0008      	l32i.n	a0, a0, 0
+40103d30:	a02240        	addx4	a2, a2, a4
+40103d33:	1060e7        	bbci	a0, 14, 40103d47 <lmacProcessAckTimeout+0x4b>
+40103d36:	030c      	movi.n	a3, 0
+40103d38:	070242        	l8ui	a4, a2, 7
+40103d3b:	064242        	s8i	a4, a2, 6
+40103d3e:	094232        	s8i	a3, a2, 9
+40103d41:	ffe4c5        	call0	40103b90 <lmacMSDUAged+0x25c>
+40103d44:	000106        	j	40103d4c <lmacProcessAckTimeout+0x50>
+40103d47:	040c      	movi.n	a4, 0
+40103d49:	ffc145        	call0	40103960 <lmacMSDUAged+0x2c>
+40103d4c:	0108      	l32i.n	a0, a1, 0
+40103d4e:	10c112        	addi	a1, a1, 16
+40103d51:	f00d      	ret.n
 	...
 
-40103dbc <lmacProcessRtsStart>:
-40103dbc:	fb3531        	l32r	a3, 40102a90 <clockgate_watchdog+0x2c>
-40103dbf:	004322        	s8i	a2, a3, 0
-40103dc2:	f00d      	ret.n
-40103dc4:	240a20        	extui	a0, a2, 10, 3
-40103dc7:	c11240        	mul16u	a1, a2, a4
+40103d54 <lmacProcessRtsStart>:
+40103d54:	fb3531        	l32r	a3, 40102a28 <clockgate_watchdog+0x2c>
+40103d57:	004322        	s8i	a2, a3, 0
+40103d5a:	f00d      	ret.n
+40103d5c:	240a20        	extui	a0, a2, 10, 3
+40103d5f:	c11240        	mul16u	a1, a2, a4
 
-40103dc8 <lmacProcessTxRtsError>:
-40103dc8:	f0c112        	addi	a1, a1, -16
-40103dcb:	0109      	s32i.n	a0, a1, 0
-40103dcd:	11c9      	s32i.n	a12, a1, 4
-40103dcf:	21d9      	s32i.n	a13, a1, 8
-40103dd1:	02cd      	mov.n	a12, a2
-40103dd3:	03dd      	mov.n	a13, a3
-40103dd5:	fecbc5        	call0	40102a94 <lmacIsActive>
-40103dd8:	067216        	beqz	a2, 40103e43 <lmacProcessTxRtsError+0x7b>
-40103ddb:	fecb85        	call0	40102a94 <lmacIsActive>
-40103dde:	02dc      	bnez.n	a2, 40103df2 <lmacProcessTxRtsError+0x2a>
-40103de0:	fb3821        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103de3:	fb3831        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103de6:	46a542        	movi	a4, 0x546
-40103de9:	f0e501        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103dec:	0000c0        	callx0	a0
-40103def:	ffff06        	j	40103def <lmacProcessTxRtsError+0x27>
-40103df2:	fb2701        	l32r	a0, 40102a90 <clockgate_watchdog+0x2c>
-40103df5:	000002        	l8ui	a0, a0, 0
-40103df8:	111d07        	beq	a13, a0, 40103e0d <lmacProcessTxRtsError+0x45>
-40103dfb:	fb3121        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103dfe:	fb3131        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103e01:	47a542        	movi	a4, 0x547
-40103e04:	f0df01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103e07:	0000c0        	callx0	a0
-40103e0a:	ffff06        	j	40103e0a <lmacProcessTxRtsError+0x42>
-40103e0d:	2d1c26        	beqi	a12, 1, 40103e3e <lmacProcessTxRtsError+0x76>
-40103e10:	2a3c26        	beqi	a12, 3, 40103e3e <lmacProcessTxRtsError+0x76>
-40103e13:	121c      	movi.n	a2, 17
-40103e15:	0222c7        	blt	a2, a12, 40103e1b <lmacProcessTxRtsError+0x53>
-40103e18:	32bce6        	bgei	a12, 16, 40103e4e <lmacProcessTxRtsError+0x86>
-40103e1b:	c0a032        	movi	a3, 192
-40103e1e:	2c1c37        	beq	a12, a3, 40103e4e <lmacProcessTxRtsError+0x86>
-40103e21:	ffe821        	l32r	a2, 40103dc4 <lmacProcessRtsStart+0x8>
-40103e24:	0c3d      	mov.n	a3, a12
-40103e26:	fd46c5        	call0	40101294 <os_printf_plus>
-40103e29:	fb2521        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103e2c:	fb2631        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103e2f:	5aa542        	movi	a4, 0x55a
-40103e32:	f0d301        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103e35:	0000c0        	callx0	a0
-40103e38:	ffff06        	j	40103e38 <lmacProcessTxRtsError+0x70>
-40103e3b:	000000        	ill
-40103e3e:	0d2d      	mov.n	a2, a13
-40103e40:	ffee85        	call0	40103d2c <lmacProcessCtsTimeout>
-40103e43:	11c8      	l32i.n	a12, a1, 4
-40103e45:	21d8      	l32i.n	a13, a1, 8
-40103e47:	0108      	l32i.n	a0, a1, 0
-40103e49:	10c112        	addi	a1, a1, 16
-40103e4c:	f00d      	ret.n
-40103e4e:	640c      	movi.n	a4, 6
-40103e50:	fb1531        	l32r	a3, 40102aa4 <lmacIsActive+0x10>
-40103e53:	b02000        	addx8	a2, a0, a0
-40103e56:	a02230        	addx4	a2, a2, a3
-40103e59:	114242        	s8i	a4, a2, 17
-40103e5c:	030c      	movi.n	a3, 0
-40103e5e:	ff5a05        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103e61:	fff786        	j	40103e43 <lmacProcessTxRtsError+0x7b>
-40103e64:	240a40        	extui	a0, a4, 10, 3
-40103e67:	c11240        	mul16u	a1, a2, a4
+40103d60 <lmacProcessTxRtsError>:
+40103d60:	f0c112        	addi	a1, a1, -16
+40103d63:	0109      	s32i.n	a0, a1, 0
+40103d65:	11c9      	s32i.n	a12, a1, 4
+40103d67:	21d9      	s32i.n	a13, a1, 8
+40103d69:	02cd      	mov.n	a12, a2
+40103d6b:	03dd      	mov.n	a13, a3
+40103d6d:	fecbc5        	call0	40102a2c <lmacIsActive>
+40103d70:	067216        	beqz	a2, 40103ddb <lmacProcessTxRtsError+0x7b>
+40103d73:	fecb85        	call0	40102a2c <lmacIsActive>
+40103d76:	02dc      	bnez.n	a2, 40103d8a <lmacProcessTxRtsError+0x2a>
+40103d78:	fb3821        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103d7b:	fb3831        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103d7e:	46a542        	movi	a4, 0x546
+40103d81:	f0ff01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103d84:	0000c0        	callx0	a0
+40103d87:	ffff06        	j	40103d87 <lmacProcessTxRtsError+0x27>
+40103d8a:	fb2701        	l32r	a0, 40102a28 <clockgate_watchdog+0x2c>
+40103d8d:	000002        	l8ui	a0, a0, 0
+40103d90:	111d07        	beq	a13, a0, 40103da5 <lmacProcessTxRtsError+0x45>
+40103d93:	fb3121        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103d96:	fb3131        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103d99:	47a542        	movi	a4, 0x547
+40103d9c:	f0f901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103d9f:	0000c0        	callx0	a0
+40103da2:	ffff06        	j	40103da2 <lmacProcessTxRtsError+0x42>
+40103da5:	2d1c26        	beqi	a12, 1, 40103dd6 <lmacProcessTxRtsError+0x76>
+40103da8:	2a3c26        	beqi	a12, 3, 40103dd6 <lmacProcessTxRtsError+0x76>
+40103dab:	121c      	movi.n	a2, 17
+40103dad:	0222c7        	blt	a2, a12, 40103db3 <lmacProcessTxRtsError+0x53>
+40103db0:	32bce6        	bgei	a12, 16, 40103de6 <lmacProcessTxRtsError+0x86>
+40103db3:	c0a032        	movi	a3, 192
+40103db6:	2c1c37        	beq	a12, a3, 40103de6 <lmacProcessTxRtsError+0x86>
+40103db9:	ffe821        	l32r	a2, 40103d5c <lmacProcessRtsStart+0x8>
+40103dbc:	0c3d      	mov.n	a3, a12
+40103dbe:	fd4d45        	call0	40101294 <os_printf_plus>
+40103dc1:	fb2521        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103dc4:	fb2631        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103dc7:	5aa542        	movi	a4, 0x55a
+40103dca:	f0ed01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103dcd:	0000c0        	callx0	a0
+40103dd0:	ffff06        	j	40103dd0 <lmacProcessTxRtsError+0x70>
+40103dd3:	000000        	ill
+40103dd6:	0d2d      	mov.n	a2, a13
+40103dd8:	ffee85        	call0	40103cc4 <lmacProcessCtsTimeout>
+40103ddb:	11c8      	l32i.n	a12, a1, 4
+40103ddd:	21d8      	l32i.n	a13, a1, 8
+40103ddf:	0108      	l32i.n	a0, a1, 0
+40103de1:	10c112        	addi	a1, a1, 16
+40103de4:	f00d      	ret.n
+40103de6:	640c      	movi.n	a4, 6
+40103de8:	fb1531        	l32r	a3, 40102a3c <lmacIsActive+0x10>
+40103deb:	b02000        	addx8	a2, a0, a0
+40103dee:	a02230        	addx4	a2, a2, a3
+40103df1:	114242        	s8i	a4, a2, 17
+40103df4:	030c      	movi.n	a3, 0
+40103df6:	ff5a05        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103df9:	fff786        	j	40103ddb <lmacProcessTxRtsError+0x7b>
+40103dfc:	240a40        	extui	a0, a4, 10, 3
+40103dff:	c11240        	mul16u	a1, a2, a4
 
-40103e68 <lmacProcessTxError>:
-40103e68:	f0c112        	addi	a1, a1, -16
-40103e6b:	11c9      	s32i.n	a12, a1, 4
-40103e6d:	0109      	s32i.n	a0, a1, 0
-40103e6f:	02cd      	mov.n	a12, a2
-40103e71:	fec205        	call0	40102a94 <lmacIsActive>
-40103e74:	050216        	beqz	a2, 40103ec8 <lmacProcessTxError+0x60>
-40103e77:	fec1c5        	call0	40102a94 <lmacIsActive>
-40103e7a:	02dc      	bnez.n	a2, 40103e8e <lmacProcessTxError+0x26>
-40103e7c:	fb1121        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103e7f:	fb1131        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103e82:	6da542        	movi	a4, 0x56d
-40103e85:	f0be01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103e88:	0000c0        	callx0	a0
-40103e8b:	ffff06        	j	40103e8b <lmacProcessTxError+0x23>
-40103e8e:	331c26        	beqi	a12, 1, 40103ec5 <lmacProcessTxError+0x5d>
-40103e91:	303c26        	beqi	a12, 3, 40103ec5 <lmacProcessTxError+0x5d>
-40103e94:	101c      	movi.n	a0, 17
-40103e96:	0220c7        	blt	a0, a12, 40103e9c <lmacProcessTxError+0x34>
-40103e99:	34bce6        	bgei	a12, 16, 40103ed1 <lmacProcessTxError+0x69>
-40103e9c:	c1a022        	movi	a2, 193
-40103e9f:	0522c7        	blt	a2, a12, 40103ea8 <lmacProcessTxError+0x40>
-40103ea2:	c0a032        	movi	a3, 192
-40103ea5:	28ac37        	bge	a12, a3, 40103ed1 <lmacProcessTxError+0x69>
-40103ea8:	ffef21        	l32r	a2, 40103e64 <lmacProcessTxRtsError+0x9c>
-40103eab:	0c3d      	mov.n	a3, a12
-40103ead:	fd3e45        	call0	40101294 <os_printf_plus>
-40103eb0:	fb0421        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103eb3:	fb0431        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103eb6:	83a542        	movi	a4, 0x583
-40103eb9:	f0b101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103ebc:	0000c0        	callx0	a0
-40103ebf:	ffff06        	j	40103ebf <lmacProcessTxError+0x57>
-40103ec2:	000000        	ill
-40103ec5:	ffe9c5        	call0	40103d64 <lmacProcessAckTimeout>
-40103ec8:	11c8      	l32i.n	a12, a1, 4
-40103eca:	0108      	l32i.n	a0, a1, 0
-40103ecc:	10c112        	addi	a1, a1, 16
-40103ecf:	f00d      	ret.n
-40103ed1:	030c      	movi.n	a3, 0
-40103ed3:	faef51        	l32r	a5, 40102a90 <clockgate_watchdog+0x2c>
-40103ed6:	640c      	movi.n	a4, 6
-40103ed8:	000522        	l8ui	a2, a5, 0
-40103edb:	30c552        	addi	a5, a5, 48
-40103ede:	b02220        	addx8	a2, a2, a2
-40103ee1:	a02250        	addx4	a2, a2, a5
-40103ee4:	114242        	s8i	a4, a2, 17
-40103ee7:	ff5185        	call0	40103400 <lmacRecycleMPDU+0x178>
-40103eea:	fff686        	j	40103ec8 <lmacProcessTxError+0x60>
-40103eed:	000000        	ill
-40103ef0:	ff          	.byte 0xff
-40103ef1:	ef          	.byte 0xef
-40103ef2:	ff          	.byte 0xff
-40103ef3:	0e0003        	excw
-40103ef6:	123ff2        	excw
+40103e00 <lmacProcessTxError>:
+40103e00:	f0c112        	addi	a1, a1, -16
+40103e03:	11c9      	s32i.n	a12, a1, 4
+40103e05:	0109      	s32i.n	a0, a1, 0
+40103e07:	02cd      	mov.n	a12, a2
+40103e09:	fec205        	call0	40102a2c <lmacIsActive>
+40103e0c:	050216        	beqz	a2, 40103e60 <lmacProcessTxError+0x60>
+40103e0f:	fec1c5        	call0	40102a2c <lmacIsActive>
+40103e12:	02dc      	bnez.n	a2, 40103e26 <lmacProcessTxError+0x26>
+40103e14:	fb1121        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103e17:	fb1131        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103e1a:	6da542        	movi	a4, 0x56d
+40103e1d:	f0d801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103e20:	0000c0        	callx0	a0
+40103e23:	ffff06        	j	40103e23 <lmacProcessTxError+0x23>
+40103e26:	331c26        	beqi	a12, 1, 40103e5d <lmacProcessTxError+0x5d>
+40103e29:	303c26        	beqi	a12, 3, 40103e5d <lmacProcessTxError+0x5d>
+40103e2c:	101c      	movi.n	a0, 17
+40103e2e:	0220c7        	blt	a0, a12, 40103e34 <lmacProcessTxError+0x34>
+40103e31:	34bce6        	bgei	a12, 16, 40103e69 <lmacProcessTxError+0x69>
+40103e34:	c1a022        	movi	a2, 193
+40103e37:	0522c7        	blt	a2, a12, 40103e40 <lmacProcessTxError+0x40>
+40103e3a:	c0a032        	movi	a3, 192
+40103e3d:	28ac37        	bge	a12, a3, 40103e69 <lmacProcessTxError+0x69>
+40103e40:	ffef21        	l32r	a2, 40103dfc <lmacProcessTxRtsError+0x9c>
+40103e43:	0c3d      	mov.n	a3, a12
+40103e45:	fd44c5        	call0	40101294 <os_printf_plus>
+40103e48:	fb0421        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103e4b:	fb0431        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103e4e:	83a542        	movi	a4, 0x583
+40103e51:	f0cb01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103e54:	0000c0        	callx0	a0
+40103e57:	ffff06        	j	40103e57 <lmacProcessTxError+0x57>
+40103e5a:	000000        	ill
+40103e5d:	ffe9c5        	call0	40103cfc <lmacProcessAckTimeout>
+40103e60:	11c8      	l32i.n	a12, a1, 4
+40103e62:	0108      	l32i.n	a0, a1, 0
+40103e64:	10c112        	addi	a1, a1, 16
+40103e67:	f00d      	ret.n
+40103e69:	030c      	movi.n	a3, 0
+40103e6b:	faef51        	l32r	a5, 40102a28 <clockgate_watchdog+0x2c>
+40103e6e:	640c      	movi.n	a4, 6
+40103e70:	000522        	l8ui	a2, a5, 0
+40103e73:	30c552        	addi	a5, a5, 48
+40103e76:	b02220        	addx8	a2, a2, a2
+40103e79:	a02250        	addx4	a2, a2, a5
+40103e7c:	114242        	s8i	a4, a2, 17
+40103e7f:	ff5185        	call0	40103398 <lmacRecycleMPDU+0x178>
+40103e82:	fff686        	j	40103e60 <lmacProcessTxError+0x60>
+40103e85:	000000        	ill
+40103e88:	ff          	.byte 0xff
+40103e89:	ef          	.byte 0xef
+40103e8a:	ff          	.byte 0xff
+40103e8b:	0e0003        	excw
+40103e8e:	123ff2        	excw
 
-40103ef8 <lmacTxFrame>:
-40103ef8:	f0c112        	addi	a1, a1, -16
-40103efb:	11c9      	s32i.n	a12, a1, 4
-40103efd:	0109      	s32i.n	a0, a1, 0
-40103eff:	fae901        	l32r	a0, 40102aa4 <lmacIsActive+0x10>
-40103f02:	b0c330        	addx8	a12, a3, a3
-40103f05:	a0cc00        	addx4	a12, a12, a0
-40103f08:	110c02        	l8ui	a0, a12, 17
-40103f0b:	609c      	beqz.n	a0, 40103f25 <lmacTxFrame+0x2d>
-40103f0d:	143026        	beqi	a0, 3, 40103f25 <lmacTxFrame+0x2d>
-40103f10:	2a4026        	beqi	a0, 4, 40103f3e <lmacTxFrame+0x46>
-40103f13:	faeb21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103f16:	faeb31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103f19:	2ea642        	movi	a4, 0x62e
-40103f1c:	f09901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103f1f:	0000c0        	callx0	a0
-40103f22:	ffff06        	j	40103f22 <lmacTxFrame+0x2a>
-40103f25:	154026        	beqi	a0, 4, 40103f3e <lmacTxFrame+0x46>
-40103f28:	0c29      	s32i.n	a2, a12, 0
-40103f2a:	a2ec      	bnez.n	a2, 40103f58 <lmacTxFrame+0x60>
-40103f2c:	fae521        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103f2f:	fae531        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103f32:	36a642        	movi	a4, 0x636
-40103f35:	f09201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103f38:	0000c0        	callx0	a0
-40103f3b:	ffff06        	j	40103f3b <lmacTxFrame+0x43>
-40103f3e:	0c38      	l32i.n	a3, a12, 0
-40103f40:	c03320        	sub	a3, a3, a2
-40103f43:	0a7316        	beqz	a3, 40103fee <lmacTxFrame+0xf6>
-40103f46:	fade21        	l32r	a2, 40102ac0 <lmacIsIdle+0x18>
-40103f49:	fade31        	l32r	a3, 40102ac4 <lmacIsIdle+0x1c>
-40103f4c:	31a642        	movi	a4, 0x631
-40103f4f:	f08c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40103f52:	0000c0        	callx0	a0
-40103f55:	ffff06        	j	40103f55 <lmacTxFrame+0x5d>
-40103f58:	00a182        	movi	a8, 0x100
-40103f5b:	0b1262        	l16ui	a6, a2, 22
-40103f5e:	0a1252        	l16ui	a5, a2, 20
-40103f61:	ffe371        	l32r	a7, 40103ef0 <lmacProcessTxError+0x88>
-40103f64:	805560        	add	a5, a5, a6
-40103f67:	092262        	l32i	a6, a2, 36
-40103f6a:	fac941        	l32r	a4, 40102a90 <clockgate_watchdog+0x2c>
-40103f6d:	002632        	l32i	a3, a6, 0
-40103f70:	071442        	l16ui	a4, a4, 14
-40103f73:	410630        	srli	a0, a3, 6
-40103f76:	22a457        	bge	a4, a5, 40103f9c <lmacTxFrame+0xa4>
-40103f79:	1fe377        	bbsi	a3, 7, 40103f9c <lmacTxFrame+0xa4>
-40103f7c:	205080        	or	a5, a0, a8
-40103f7f:	544030        	extui	a4, a3, 0, 6
-40103f82:	1155a0        	slli	a5, a5, 6
-40103f85:	204450        	or	a4, a4, a5
-40103f88:	543040        	extui	a3, a4, 0, 6
-40103f8b:	414640        	srli	a4, a4, 6
-40103f8e:	104470        	and	a4, a4, a7
-40103f91:	1144a0        	slli	a4, a4, 6
-40103f94:	203340        	or	a3, a3, a4
-40103f97:	0639      	s32i.n	a3, a6, 0
-40103f99:	410630        	srli	a0, a3, 6
-40103f9c:	4760c7        	bbci	a0, 12, 40103fe7 <lmacTxFrame+0xef>
-40103f9f:	110c92        	l8ui	a9, a12, 17
-40103fa2:	413966        	bnei	a9, 3, 40103fe7 <lmacTxFrame+0xef>
-40103fa5:	1658      	l32i.n	a5, a6, 4
-40103fa7:	34a450        	extui	a10, a5, 4, 4
-40103faa:	393aa6        	blti	a10, 3, 40103fe7 <lmacTxFrame+0xef>
-40103fad:	ff1141        	l32r	a4, 40103bf4 <lmacMSDUAged+0x258>
-40103fb0:	54a030        	extui	a10, a3, 0, 6
-40103fb3:	20b080        	or	a11, a0, a8
-40103fb6:	549850        	extui	a9, a5, 8, 6
-40103fb9:	119920        	slli	a9, a9, 14
-40103fbc:	11bba0        	slli	a11, a11, 6
-40103fbf:	20aab0        	or	a10, a10, a11
-40103fc2:	104540        	and	a4, a5, a4
-40103fc5:	204490        	or	a4, a4, a9
-40103fc8:	41b6a0        	srli	a11, a10, 6
-40103fcb:	fe7e91        	l32r	a9, 401039c4 <lmacMSDUAged+0x28>
-40103fce:	54a0a0        	extui	a10, a10, 0, 6
-40103fd1:	10bb70        	and	a11, a11, a7
-40103fd4:	1649      	s32i.n	a4, a6, 4
-40103fd6:	9248      	l32i.n	a4, a2, 36
-40103fd8:	11bba0        	slli	a11, a11, 6
-40103fdb:	20aab0        	or	a10, a10, a11
-40103fde:	06a9      	s32i.n	a10, a6, 0
-40103fe0:	14b8      	l32i.n	a11, a4, 4
-40103fe2:	10bb90        	and	a11, a11, a9
-40103fe5:	14b9      	s32i.n	a11, a4, 4
-40103fe7:	0c2d      	mov.n	a2, a12
-40103fe9:	030c      	movi.n	a3, 0
-40103feb:	feb6c5        	call0	40102b58 <lmacIsIdle+0xb0>
-40103fee:	ffc141        	l32r	a4, 40103ef4 <lmacProcessTxError+0x8c>
-40103ff1:	060c72        	l8ui	a7, a12, 6
-40103ff4:	160c      	movi.n	a6, 1
-40103ff6:	401700        	ssl	a7
-40103ff9:	a15600        	sll	a5, a6
-40103ffc:	550b      	addi.n	a5, a5, -1
-40103ffe:	0020c0        	memw
-40104001:	040c22        	l8ui	a2, a12, 4
-40104004:	050c32        	l8ui	a3, a12, 5
-40104007:	112442        	l32i	a4, a4, 68
-4010400a:	114c62        	s8i	a6, a12, 17
-4010400d:	104450        	and	a4, a4, a5
-40104010:	f44040        	extui	a4, a4, 0, 16
-40104013:	11c8      	l32i.n	a12, a1, 4
-40104015:	01bf45        	call0	40105c0c <wDev_EnableTransmit>
-40104018:	0108      	l32i.n	a0, a1, 0
-4010401a:	10c112        	addi	a1, a1, 16
-4010401d:	f00d      	ret.n
-4010401f:	a03200        	addx4	a3, a2, a0
-40104022:	c11200        	mul16u	a1, a2, a0
-40104025:	61c2f0        	xsr.eps2	a15
-40104028:	610201        	l32r	a0, 400dc430 <__floatsidf+0xce140>
-4010402b:	02cd00        	excw
-4010402e:	feb285        	call0	40102b58 <lmacIsIdle+0xb0>
-40104031:	030c      	movi.n	a3, 0
-40104033:	040c      	movi.n	a4, 0
-40104035:	100c      	movi.n	a0, 1
-40104037:	040c22        	l8ui	a2, a12, 4
-4010403a:	114c02        	s8i	a0, a12, 17
-4010403d:	11c8      	l32i.n	a12, a1, 4
-4010403f:	01bcc5        	call0	40105c0c <wDev_EnableTransmit>
-40104042:	0108      	l32i.n	a0, a1, 0
-40104044:	10c112        	addi	a1, a1, 16
-40104047:	f00d      	ret.n
-40104049:	000000        	ill
-4010404c:	f0c112        	addi	a1, a1, -16
-4010404f:	0139      	s32i.n	a3, a1, 0
-40104051:	21c9      	s32i.n	a12, a1, 8
-40104053:	1109      	s32i.n	a0, a1, 4
-40104055:	02cd      	mov.n	a12, a2
-40104057:	002545        	call0	401042ac <ppEnqueueTxDone>
-4010405a:	9c38      	l32i.n	a3, a12, 36
-4010405c:	0308      	l32i.n	a0, a3, 0
-4010405e:	076097        	bbci	a0, 9, 40104069 <lmacTxFrame+0x171>
-40104061:	04f0c7        	bbsi	a0, 28, 40104069 <lmacTxFrame+0x171>
-40104064:	7c28      	l32i.n	a2, a12, 28
-40104066:	00bf45        	call0	40104c5c <rcUpdateTxDone>
-40104069:	420c      	movi.n	a2, 4
-4010406b:	007805        	call0	401047ec <pp_post>
-4010406e:	0108      	l32i.n	a0, a1, 0
-40104070:	409c      	beqz.n	a0, 40104088 <lmacTxFrame+0x190>
-40104072:	9c28      	l32i.n	a2, a12, 36
-40104074:	1228      	l32i.n	a2, a2, 4
-40104076:	252420        	extui	a2, a2, 20, 3
-40104079:	fea2c5        	call0	40102aa8 <lmacIsIdle>
-4010407c:	828c      	beqz.n	a2, 40104088 <lmacTxFrame+0x190>
-4010407e:	9c28      	l32i.n	a2, a12, 36
-40104080:	1228      	l32i.n	a2, a2, 4
-40104082:	252420        	extui	a2, a2, 20, 3
-40104085:	007645        	call0	401047ec <pp_post>
-40104088:	21c8      	l32i.n	a12, a1, 8
-4010408a:	1108      	l32i.n	a0, a1, 4
-4010408c:	10c112        	addi	a1, a1, 16
-4010408f:	f00d      	ret.n
-40104091:	000000        	ill
+40103e90 <lmacTxFrame>:
+40103e90:	f0c112        	addi	a1, a1, -16
+40103e93:	11c9      	s32i.n	a12, a1, 4
+40103e95:	0109      	s32i.n	a0, a1, 0
+40103e97:	fae901        	l32r	a0, 40102a3c <lmacIsActive+0x10>
+40103e9a:	b0c330        	addx8	a12, a3, a3
+40103e9d:	a0cc00        	addx4	a12, a12, a0
+40103ea0:	110c02        	l8ui	a0, a12, 17
+40103ea3:	609c      	beqz.n	a0, 40103ebd <lmacTxFrame+0x2d>
+40103ea5:	143026        	beqi	a0, 3, 40103ebd <lmacTxFrame+0x2d>
+40103ea8:	2a4026        	beqi	a0, 4, 40103ed6 <lmacTxFrame+0x46>
+40103eab:	faeb21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103eae:	faeb31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103eb1:	2ea642        	movi	a4, 0x62e
+40103eb4:	f0b301        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103eb7:	0000c0        	callx0	a0
+40103eba:	ffff06        	j	40103eba <lmacTxFrame+0x2a>
+40103ebd:	154026        	beqi	a0, 4, 40103ed6 <lmacTxFrame+0x46>
+40103ec0:	0c29      	s32i.n	a2, a12, 0
+40103ec2:	a2ec      	bnez.n	a2, 40103ef0 <lmacTxFrame+0x60>
+40103ec4:	fae521        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103ec7:	fae531        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103eca:	36a642        	movi	a4, 0x636
+40103ecd:	f0ac01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103ed0:	0000c0        	callx0	a0
+40103ed3:	ffff06        	j	40103ed3 <lmacTxFrame+0x43>
+40103ed6:	0c38      	l32i.n	a3, a12, 0
+40103ed8:	c03320        	sub	a3, a3, a2
+40103edb:	0a7316        	beqz	a3, 40103f86 <lmacTxFrame+0xf6>
+40103ede:	fade21        	l32r	a2, 40102a58 <lmacIsIdle+0x18>
+40103ee1:	fade31        	l32r	a3, 40102a5c <lmacIsIdle+0x1c>
+40103ee4:	31a642        	movi	a4, 0x631
+40103ee7:	f0a601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40103eea:	0000c0        	callx0	a0
+40103eed:	ffff06        	j	40103eed <lmacTxFrame+0x5d>
+40103ef0:	00a182        	movi	a8, 0x100
+40103ef3:	0b1262        	l16ui	a6, a2, 22
+40103ef6:	0a1252        	l16ui	a5, a2, 20
+40103ef9:	ffe371        	l32r	a7, 40103e88 <lmacProcessTxError+0x88>
+40103efc:	805560        	add	a5, a5, a6
+40103eff:	092262        	l32i	a6, a2, 36
+40103f02:	fac941        	l32r	a4, 40102a28 <clockgate_watchdog+0x2c>
+40103f05:	002632        	l32i	a3, a6, 0
+40103f08:	071442        	l16ui	a4, a4, 14
+40103f0b:	410630        	srli	a0, a3, 6
+40103f0e:	22a457        	bge	a4, a5, 40103f34 <lmacTxFrame+0xa4>
+40103f11:	1fe377        	bbsi	a3, 7, 40103f34 <lmacTxFrame+0xa4>
+40103f14:	205080        	or	a5, a0, a8
+40103f17:	544030        	extui	a4, a3, 0, 6
+40103f1a:	1155a0        	slli	a5, a5, 6
+40103f1d:	204450        	or	a4, a4, a5
+40103f20:	543040        	extui	a3, a4, 0, 6
+40103f23:	414640        	srli	a4, a4, 6
+40103f26:	104470        	and	a4, a4, a7
+40103f29:	1144a0        	slli	a4, a4, 6
+40103f2c:	203340        	or	a3, a3, a4
+40103f2f:	0639      	s32i.n	a3, a6, 0
+40103f31:	410630        	srli	a0, a3, 6
+40103f34:	4760c7        	bbci	a0, 12, 40103f7f <lmacTxFrame+0xef>
+40103f37:	110c92        	l8ui	a9, a12, 17
+40103f3a:	413966        	bnei	a9, 3, 40103f7f <lmacTxFrame+0xef>
+40103f3d:	1658      	l32i.n	a5, a6, 4
+40103f3f:	34a450        	extui	a10, a5, 4, 4
+40103f42:	393aa6        	blti	a10, 3, 40103f7f <lmacTxFrame+0xef>
+40103f45:	ff1141        	l32r	a4, 40103b8c <lmacMSDUAged+0x258>
+40103f48:	54a030        	extui	a10, a3, 0, 6
+40103f4b:	20b080        	or	a11, a0, a8
+40103f4e:	549850        	extui	a9, a5, 8, 6
+40103f51:	119920        	slli	a9, a9, 14
+40103f54:	11bba0        	slli	a11, a11, 6
+40103f57:	20aab0        	or	a10, a10, a11
+40103f5a:	104540        	and	a4, a5, a4
+40103f5d:	204490        	or	a4, a4, a9
+40103f60:	41b6a0        	srli	a11, a10, 6
+40103f63:	fe7e91        	l32r	a9, 4010395c <lmacMSDUAged+0x28>
+40103f66:	54a0a0        	extui	a10, a10, 0, 6
+40103f69:	10bb70        	and	a11, a11, a7
+40103f6c:	1649      	s32i.n	a4, a6, 4
+40103f6e:	9248      	l32i.n	a4, a2, 36
+40103f70:	11bba0        	slli	a11, a11, 6
+40103f73:	20aab0        	or	a10, a10, a11
+40103f76:	06a9      	s32i.n	a10, a6, 0
+40103f78:	14b8      	l32i.n	a11, a4, 4
+40103f7a:	10bb90        	and	a11, a11, a9
+40103f7d:	14b9      	s32i.n	a11, a4, 4
+40103f7f:	0c2d      	mov.n	a2, a12
+40103f81:	030c      	movi.n	a3, 0
+40103f83:	feb6c5        	call0	40102af0 <lmacIsIdle+0xb0>
+40103f86:	ffc141        	l32r	a4, 40103e8c <lmacProcessTxError+0x8c>
+40103f89:	060c72        	l8ui	a7, a12, 6
+40103f8c:	160c      	movi.n	a6, 1
+40103f8e:	401700        	ssl	a7
+40103f91:	a15600        	sll	a5, a6
+40103f94:	550b      	addi.n	a5, a5, -1
+40103f96:	0020c0        	memw
+40103f99:	040c22        	l8ui	a2, a12, 4
+40103f9c:	050c32        	l8ui	a3, a12, 5
+40103f9f:	112442        	l32i	a4, a4, 68
+40103fa2:	114c62        	s8i	a6, a12, 17
+40103fa5:	104450        	and	a4, a4, a5
+40103fa8:	f44040        	extui	a4, a4, 0, 16
+40103fab:	11c8      	l32i.n	a12, a1, 4
+40103fad:	01bf45        	call0	40105ba4 <wDev_EnableTransmit>
+40103fb0:	0108      	l32i.n	a0, a1, 0
+40103fb2:	10c112        	addi	a1, a1, 16
+40103fb5:	f00d      	ret.n
+40103fb7:	a03200        	addx4	a3, a2, a0
+40103fba:	c11200        	mul16u	a1, a2, a0
+40103fbd:	61c2f0        	xsr.eps2	a15
+40103fc0:	610201        	l32r	a0, 400dc3c8 <__floatsidf+0xce0d8>
+40103fc3:	02cd00        	excw
+40103fc6:	feb285        	call0	40102af0 <lmacIsIdle+0xb0>
+40103fc9:	030c      	movi.n	a3, 0
+40103fcb:	040c      	movi.n	a4, 0
+40103fcd:	100c      	movi.n	a0, 1
+40103fcf:	040c22        	l8ui	a2, a12, 4
+40103fd2:	114c02        	s8i	a0, a12, 17
+40103fd5:	11c8      	l32i.n	a12, a1, 4
+40103fd7:	01bcc5        	call0	40105ba4 <wDev_EnableTransmit>
+40103fda:	0108      	l32i.n	a0, a1, 0
+40103fdc:	10c112        	addi	a1, a1, 16
+40103fdf:	f00d      	ret.n
+40103fe1:	000000        	ill
+40103fe4:	f0c112        	addi	a1, a1, -16
+40103fe7:	0139      	s32i.n	a3, a1, 0
+40103fe9:	21c9      	s32i.n	a12, a1, 8
+40103feb:	1109      	s32i.n	a0, a1, 4
+40103fed:	02cd      	mov.n	a12, a2
+40103fef:	002545        	call0	40104244 <ppEnqueueTxDone>
+40103ff2:	9c38      	l32i.n	a3, a12, 36
+40103ff4:	0308      	l32i.n	a0, a3, 0
+40103ff6:	076097        	bbci	a0, 9, 40104001 <lmacTxFrame+0x171>
+40103ff9:	04f0c7        	bbsi	a0, 28, 40104001 <lmacTxFrame+0x171>
+40103ffc:	7c28      	l32i.n	a2, a12, 28
+40103ffe:	00bf45        	call0	40104bf4 <rcUpdateTxDone>
+40104001:	420c      	movi.n	a2, 4
+40104003:	007805        	call0	40104784 <pp_post>
+40104006:	0108      	l32i.n	a0, a1, 0
+40104008:	409c      	beqz.n	a0, 40104020 <lmacTxFrame+0x190>
+4010400a:	9c28      	l32i.n	a2, a12, 36
+4010400c:	1228      	l32i.n	a2, a2, 4
+4010400e:	252420        	extui	a2, a2, 20, 3
+40104011:	fea2c5        	call0	40102a40 <lmacIsIdle>
+40104014:	828c      	beqz.n	a2, 40104020 <lmacTxFrame+0x190>
+40104016:	9c28      	l32i.n	a2, a12, 36
+40104018:	1228      	l32i.n	a2, a2, 4
+4010401a:	252420        	extui	a2, a2, 20, 3
+4010401d:	007645        	call0	40104784 <pp_post>
+40104020:	21c8      	l32i.n	a12, a1, 8
+40104022:	1108      	l32i.n	a0, a1, 4
+40104024:	10c112        	addi	a1, a1, 16
+40104027:	f00d      	ret.n
+40104029:	000000        	ill
 
-40104094 <lmacRxDone>:
-40104094:	f0c112        	addi	a1, a1, -16
-40104097:	006102        	s32i	a0, a1, 0
-4010409a:	002445        	call0	401042e0 <ppEnqueueRxq>
-4010409d:	05a022        	movi	a2, 5
-401040a0:	007485        	call0	401047ec <pp_post>
-401040a3:	0108      	l32i.n	a0, a1, 0
-401040a5:	10c112        	addi	a1, a1, 16
-401040a8:	f00d      	ret.n
-401040aa:	420000        	excw
-401040ad:	1c88a0        	excw
-401040b0:	e51c86        	j	400fd526 <__floatsidf+0xef236>
-401040b3:	010272        	l8ui	a7, a2, 1
-401040b6:	000232        	l8ui	a3, a2, 0
-401040b9:	8ca082        	movi	a8, 140
-401040bc:	103380        	and	a3, a3, a8
-401040bf:	147070        	extui	a7, a7, 0, 2
-401040c2:	fdc772        	addi	a7, a7, -3
-401040c5:	935670        	movnez	a5, a6, a7
-401040c8:	019347        	bne	a3, a4, 401040cd <lmacRxDone+0x39>
-401040cb:	552b      	addi.n	a5, a5, 2
-401040cd:	052d      	mov.n	a2, a5
-401040cf:	f00d      	ret.n
-401040d1:	000000        	ill
-401040d4:	fe93d0        	excw
-401040d7:	3f          	.byte 0x3f
-401040d8:	fe8084        	excw
-401040db:	3f          	.byte 0x3f
-401040dc:	1118      	l32i.n	a1, a1, 4
-401040de:	214022        	s8i	a2, a0, 33
+4010402c <lmacRxDone>:
+4010402c:	f0c112        	addi	a1, a1, -16
+4010402f:	006102        	s32i	a0, a1, 0
+40104032:	002445        	call0	40104278 <ppEnqueueRxq>
+40104035:	05a022        	movi	a2, 5
+40104038:	007485        	call0	40104784 <pp_post>
+4010403b:	0108      	l32i.n	a0, a1, 0
+4010403d:	10c112        	addi	a1, a1, 16
+40104040:	f00d      	ret.n
+40104042:	420000        	excw
+40104045:	1c88a0        	excw
+40104048:	e51c86        	j	400fd4be <__floatsidf+0xef1ce>
+4010404b:	010272        	l8ui	a7, a2, 1
+4010404e:	000232        	l8ui	a3, a2, 0
+40104051:	8ca082        	movi	a8, 140
+40104054:	103380        	and	a3, a3, a8
+40104057:	147070        	extui	a7, a7, 0, 2
+4010405a:	fdc772        	addi	a7, a7, -3
+4010405d:	935670        	movnez	a5, a6, a7
+40104060:	019347        	bne	a3, a4, 40104065 <lmacRxDone+0x39>
+40104063:	552b      	addi.n	a5, a5, 2
+40104065:	052d      	mov.n	a2, a5
+40104067:	f00d      	ret.n
+40104069:	000000        	ill
+4010406c:	fe93b0        	excw
+4010406f:	3f          	.byte 0x3f
+40104070:	fe8084        	excw
+40104073:	3f          	.byte 0x3f
+40104074:	1118      	l32i.n	a1, a1, 4
+40104076:	214022        	s8i	a2, a0, 33
 
-401040e0 <pp_soft_wdt_feed_local>:
-401040e0:	fffd21        	l32r	a2, 401040d4 <lmacRxDone+0x40>
-401040e3:	03e880        	rsr.exccause	a8
-401040e6:	e0c112        	addi	a1, a1, -32
-401040e9:	076102        	s32i	a0, a1, 28
-401040ec:	03b170        	rsr.epc1	a7
-401040ef:	f04b01        	l32r	a0, 4010021c <NmiTimSetFunc+0x20>
-401040f2:	03b260        	rsr.epc2	a6
-401040f5:	03b350        	rsr.epc3	a5
-401040f8:	03ee40        	rsr.excvaddr	a4
-401040fb:	03c030        	rsr.depc	a3
-401040fe:	016182        	s32i	a8, a1, 4
-40104101:	2179      	s32i.n	a7, a1, 8
-40104103:	3169      	s32i.n	a6, a1, 12
-40104105:	4159      	s32i.n	a5, a1, 16
-40104107:	5149      	s32i.n	a4, a1, 20
-40104109:	000222        	l8ui	a2, a2, 0
-4010410c:	6139      	s32i.n	a3, a1, 24
-4010410e:	2f1266        	bnei	a2, 1, 40104141 <pp_soft_wdt_feed_local+0x61>
-40104111:	390c      	movi.n	a9, 3
-40104113:	0020c0        	memw
-40104116:	020c      	movi.n	a2, 0
-40104118:	013d      	mov.n	a3, a1
-4010411a:	c41c      	movi.n	a4, 28
-4010411c:	4c6092        	s32i	a9, a0, 0x130
-4010411f:	0199      	s32i.n	a9, a1, 0
-40104121:	fd3f05        	call0	40101514 <system_rtc_mem_write>
-40104124:	f0df01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40104127:	0000c0        	callx0	a0
-4010412a:	f0dc21        	l32r	a2, 4010049c <wdt_feed+0x64>
-4010412d:	0228      	l32i.n	a2, a2, 0
-4010412f:	f0dd01        	l32r	a0, 401004a4 <wdt_feed+0x6c>
-40104132:	0000c0        	callx0	a0
-40104135:	fc07c5        	call0	401001b4 <Cache_Read_Enable_New>
-40104138:	ffe901        	l32r	a0, 401040dc <lmacRxDone+0x48>
-4010413b:	0000c0        	callx0	a0
-4010413e:	000a46        	j	4010416b <pp_soft_wdt_feed_local+0x8b>
-40104141:	01a032        	movi	a3, 1
-40104144:	0020c0        	memw
-40104147:	00a022        	movi	a2, 0
-4010414a:	4c6032        	s32i	a3, a0, 0x130
-4010414d:	c41c      	movi.n	a4, 28
-4010414f:	0139      	s32i.n	a3, a1, 0
-40104151:	013d      	mov.n	a3, a1
-40104153:	fd3c05        	call0	40101514 <system_rtc_mem_write>
-40104156:	ffe021        	l32r	a2, 401040d8 <lmacRxDone+0x44>
-40104159:	0228      	l32i.n	a2, a2, 0
-4010415b:	016d85        	call0	40105834 <wDev_MacTim1Arm>
-4010415e:	c20c      	movi.n	a2, 12
-40104160:	ffdd41        	l32r	a4, 401040d4 <lmacRxDone+0x40>
-40104163:	130c      	movi.n	a3, 1
-40104165:	004432        	s8i	a3, a4, 0
-40104168:	006805        	call0	401047ec <pp_post>
-4010416b:	7108      	l32i.n	a0, a1, 28
-4010416d:	20c112        	addi	a1, a1, 32
-40104170:	f00d      	ret.n
+40104078 <pp_soft_wdt_feed_local>:
+40104078:	fffd21        	l32r	a2, 4010406c <lmacRxDone+0x40>
+4010407b:	03e880        	rsr.exccause	a8
+4010407e:	e0c112        	addi	a1, a1, -32
+40104081:	076102        	s32i	a0, a1, 28
+40104084:	03b170        	rsr.epc1	a7
+40104087:	f06501        	l32r	a0, 4010021c <NmiTimSetFunc+0x20>
+4010408a:	03b260        	rsr.epc2	a6
+4010408d:	03b350        	rsr.epc3	a5
+40104090:	03ee40        	rsr.excvaddr	a4
+40104093:	03c030        	rsr.depc	a3
+40104096:	016182        	s32i	a8, a1, 4
+40104099:	2179      	s32i.n	a7, a1, 8
+4010409b:	3169      	s32i.n	a6, a1, 12
+4010409d:	4159      	s32i.n	a5, a1, 16
+4010409f:	5149      	s32i.n	a4, a1, 20
+401040a1:	000222        	l8ui	a2, a2, 0
+401040a4:	6139      	s32i.n	a3, a1, 24
+401040a6:	2f1266        	bnei	a2, 1, 401040d9 <pp_soft_wdt_feed_local+0x61>
+401040a9:	390c      	movi.n	a9, 3
+401040ab:	0020c0        	memw
+401040ae:	020c      	movi.n	a2, 0
+401040b0:	013d      	mov.n	a3, a1
+401040b2:	c41c      	movi.n	a4, 28
+401040b4:	4c6092        	s32i	a9, a0, 0x130
+401040b7:	0199      	s32i.n	a9, a1, 0
+401040b9:	fd4585        	call0	40101514 <system_rtc_mem_write>
+401040bc:	f0f901        	l32r	a0, 401004a0 <wdt_feed+0x68>
+401040bf:	0000c0        	callx0	a0
+401040c2:	f0f621        	l32r	a2, 4010049c <wdt_feed+0x64>
+401040c5:	0228      	l32i.n	a2, a2, 0
+401040c7:	f0f701        	l32r	a0, 401004a4 <wdt_feed+0x6c>
+401040ca:	0000c0        	callx0	a0
+401040cd:	fc0e45        	call0	401001b4 <Cache_Read_Enable_New>
+401040d0:	ffe901        	l32r	a0, 40104074 <lmacRxDone+0x48>
+401040d3:	0000c0        	callx0	a0
+401040d6:	000a46        	j	40104103 <pp_soft_wdt_feed_local+0x8b>
+401040d9:	01a032        	movi	a3, 1
+401040dc:	0020c0        	memw
+401040df:	00a022        	movi	a2, 0
+401040e2:	4c6032        	s32i	a3, a0, 0x130
+401040e5:	c41c      	movi.n	a4, 28
+401040e7:	0139      	s32i.n	a3, a1, 0
+401040e9:	013d      	mov.n	a3, a1
+401040eb:	fd4285        	call0	40101514 <system_rtc_mem_write>
+401040ee:	ffe021        	l32r	a2, 40104070 <lmacRxDone+0x44>
+401040f1:	0228      	l32i.n	a2, a2, 0
+401040f3:	016d85        	call0	401057cc <wDev_MacTim1Arm>
+401040f6:	c20c      	movi.n	a2, 12
+401040f8:	ffdd41        	l32r	a4, 4010406c <lmacRxDone+0x40>
+401040fb:	130c      	movi.n	a3, 1
+401040fd:	004432        	s8i	a3, a4, 0
+40104100:	006805        	call0	40104784 <pp_post>
+40104103:	7108      	l32i.n	a0, a1, 28
+40104105:	20c112        	addi	a1, a1, 32
+40104108:	f00d      	ret.n
 	...
 
-40104174 <ppProcessTxQ>:
-40104174:	f0c112        	addi	a1, a1, -16
-40104177:	0261d2        	s32i	a13, a1, 8
-4010417a:	0161c2        	s32i	a12, a1, 4
-4010417d:	006102        	s32i	a0, a1, 0
-40104180:	02cd      	mov.n	a12, a2
-40104182:	f0c701        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40104185:	0000c0        	callx0	a0
-40104188:	0c2d      	mov.n	a2, a12
-4010418a:	fe91c5        	call0	40102aa8 <lmacIsIdle>
-4010418d:	92cc      	bnez.n	a2, 4010419a <ppProcessTxQ+0x26>
-4010418f:	f20b01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40104192:	0000c0        	callx0	a0
-40104195:	f27c      	movi.n	a2, -1
-40104197:	001046        	j	401041dc <ppProcessTxQ+0x68>
-4010419a:	0c2d      	mov.n	a2, a12
-4010419c:	001e85        	call0	40104388 <ppEnqueueRxq+0xa8>
-4010419f:	02dd      	mov.n	a13, a2
-401041a1:	92cc      	bnez.n	a2, 401041ae <ppProcessTxQ+0x3a>
-401041a3:	f20601        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401041a6:	0000c0        	callx0	a0
-401041a9:	e27c      	movi.n	a2, -2
-401041ab:	000b46        	j	401041dc <ppProcessTxQ+0x68>
-401041ae:	092202        	l32i	a0, a2, 36
-401041b1:	ffc931        	l32r	a3, 401040d8 <lmacRxDone+0x44>
-401041b4:	002002        	l32i	a0, a0, 0
-401041b7:	042332        	l32i	a3, a3, 16
-401041ba:	0f70d7        	bbci	a0, 29, 401041cd <ppProcessTxQ+0x59>
-401041bd:	592322        	l32i	a2, a3, 0x164
-401041c0:	5a2342        	l32i	a4, a3, 0x168
-401041c3:	221b      	addi.n	a2, a2, 1
-401041c5:	440b      	addi.n	a4, a4, -1
-401041c7:	5a6342        	s32i	a4, a3, 0x168
-401041ca:	596322        	s32i	a2, a3, 0x164
-401041cd:	f1fb01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401041d0:	0000c0        	callx0	a0
-401041d3:	0c3d      	mov.n	a3, a12
-401041d5:	0d2d      	mov.n	a2, a13
-401041d7:	ffd205        	call0	40103ef8 <lmacTxFrame>
-401041da:	020c      	movi.n	a2, 0
-401041dc:	11c8      	l32i.n	a12, a1, 4
-401041de:	21d8      	l32i.n	a13, a1, 8
-401041e0:	0108      	l32i.n	a0, a1, 0
-401041e2:	10c112        	addi	a1, a1, 16
-401041e5:	f00d      	ret.n
+4010410c <ppProcessTxQ>:
+4010410c:	f0c112        	addi	a1, a1, -16
+4010410f:	0261d2        	s32i	a13, a1, 8
+40104112:	0161c2        	s32i	a12, a1, 4
+40104115:	006102        	s32i	a0, a1, 0
+40104118:	02cd      	mov.n	a12, a2
+4010411a:	f0e101        	l32r	a0, 401004a0 <wdt_feed+0x68>
+4010411d:	0000c0        	callx0	a0
+40104120:	0c2d      	mov.n	a2, a12
+40104122:	fe91c5        	call0	40102a40 <lmacIsIdle>
+40104125:	92cc      	bnez.n	a2, 40104132 <ppProcessTxQ+0x26>
+40104127:	f22501        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+4010412a:	0000c0        	callx0	a0
+4010412d:	f27c      	movi.n	a2, -1
+4010412f:	001046        	j	40104174 <ppProcessTxQ+0x68>
+40104132:	0c2d      	mov.n	a2, a12
+40104134:	001e85        	call0	40104320 <ppEnqueueRxq+0xa8>
+40104137:	02dd      	mov.n	a13, a2
+40104139:	92cc      	bnez.n	a2, 40104146 <ppProcessTxQ+0x3a>
+4010413b:	f22001        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+4010413e:	0000c0        	callx0	a0
+40104141:	e27c      	movi.n	a2, -2
+40104143:	000b46        	j	40104174 <ppProcessTxQ+0x68>
+40104146:	092202        	l32i	a0, a2, 36
+40104149:	ffc931        	l32r	a3, 40104070 <lmacRxDone+0x44>
+4010414c:	002002        	l32i	a0, a0, 0
+4010414f:	042332        	l32i	a3, a3, 16
+40104152:	0f70d7        	bbci	a0, 29, 40104165 <ppProcessTxQ+0x59>
+40104155:	592322        	l32i	a2, a3, 0x164
+40104158:	5a2342        	l32i	a4, a3, 0x168
+4010415b:	221b      	addi.n	a2, a2, 1
+4010415d:	440b      	addi.n	a4, a4, -1
+4010415f:	5a6342        	s32i	a4, a3, 0x168
+40104162:	596322        	s32i	a2, a3, 0x164
+40104165:	f21501        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40104168:	0000c0        	callx0	a0
+4010416b:	0c3d      	mov.n	a3, a12
+4010416d:	0d2d      	mov.n	a2, a13
+4010416f:	ffd205        	call0	40103e90 <lmacTxFrame>
+40104172:	020c      	movi.n	a2, 0
+40104174:	11c8      	l32i.n	a12, a1, 4
+40104176:	21d8      	l32i.n	a13, a1, 8
+40104178:	0108      	l32i.n	a0, a1, 0
+4010417a:	10c112        	addi	a1, a1, 16
+4010417d:	f00d      	ret.n
 	...
 
-401041e8 <ppFetchTxQFirstAvail>:
-401041e8:	2b82f6        	bgeui	a2, 8, 40104217 <ppFetchTxQFirstAvail+0x2f>
-401041eb:	ffbb41        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-401041ee:	4448      	l32i.n	a4, a4, 16
-401041f0:	1152b0        	slli	a5, a2, 5
-401041f3:	445a      	add.n	a4, a4, a5
-401041f5:	270432        	l8ui	a3, a4, 39
-401041f8:	6428      	l32i.n	a2, a4, 24
-401041fa:	93dc      	bnez.n	a3, 40104217 <ppFetchTxQFirstAvail+0x2f>
-401041fc:	929c      	beqz.n	a2, 40104219 <ppFetchTxQFirstAvail+0x31>
-401041fe:	9258      	l32i.n	a5, a2, 36
-40104200:	0558      	l32i.n	a5, a5, 0
-40104202:	8268      	l32i.n	a6, a2, 32
-40104204:	11f587        	bbsi	a5, 24, 40104219 <ppFetchTxQFirstAvail+0x31>
-40104207:	6469      	s32i.n	a6, a4, 24
-40104209:	080c      	movi.n	a8, 0
-4010420b:	36cc      	bnez.n	a6, 40104212 <ppFetchTxQFirstAvail+0x2a>
-4010420d:	18c472        	addi	a7, a4, 24
-40104210:	7479      	s32i.n	a7, a4, 28
-40104212:	8289      	s32i.n	a8, a2, 32
-40104214:	000046        	j	40104219 <ppFetchTxQFirstAvail+0x31>
-40104217:	020c      	movi.n	a2, 0
-40104219:	728c      	beqz.n	a2, 40104224 <ppFetchTxQFirstAvail+0x3c>
-4010421b:	9298      	l32i.n	a9, a2, 36
-4010421d:	0998      	l32i.n	a9, a9, 0
-4010421f:	017987        	bbci	a9, 24, 40104224 <ppFetchTxQFirstAvail+0x3c>
-40104222:	020c      	movi.n	a2, 0
-40104224:	f00d      	ret.n
+40104180 <ppFetchTxQFirstAvail>:
+40104180:	2b82f6        	bgeui	a2, 8, 401041af <ppFetchTxQFirstAvail+0x2f>
+40104183:	ffbb41        	l32r	a4, 40104070 <lmacRxDone+0x44>
+40104186:	4448      	l32i.n	a4, a4, 16
+40104188:	1152b0        	slli	a5, a2, 5
+4010418b:	445a      	add.n	a4, a4, a5
+4010418d:	270432        	l8ui	a3, a4, 39
+40104190:	6428      	l32i.n	a2, a4, 24
+40104192:	93dc      	bnez.n	a3, 401041af <ppFetchTxQFirstAvail+0x2f>
+40104194:	929c      	beqz.n	a2, 401041b1 <ppFetchTxQFirstAvail+0x31>
+40104196:	9258      	l32i.n	a5, a2, 36
+40104198:	0558      	l32i.n	a5, a5, 0
+4010419a:	8268      	l32i.n	a6, a2, 32
+4010419c:	11f587        	bbsi	a5, 24, 401041b1 <ppFetchTxQFirstAvail+0x31>
+4010419f:	6469      	s32i.n	a6, a4, 24
+401041a1:	080c      	movi.n	a8, 0
+401041a3:	36cc      	bnez.n	a6, 401041aa <ppFetchTxQFirstAvail+0x2a>
+401041a5:	18c472        	addi	a7, a4, 24
+401041a8:	7479      	s32i.n	a7, a4, 28
+401041aa:	8289      	s32i.n	a8, a2, 32
+401041ac:	000046        	j	401041b1 <ppFetchTxQFirstAvail+0x31>
+401041af:	020c      	movi.n	a2, 0
+401041b1:	728c      	beqz.n	a2, 401041bc <ppFetchTxQFirstAvail+0x3c>
+401041b3:	9298      	l32i.n	a9, a2, 36
+401041b5:	0998      	l32i.n	a9, a9, 0
+401041b7:	017987        	bbci	a9, 24, 401041bc <ppFetchTxQFirstAvail+0x3c>
+401041ba:	020c      	movi.n	a2, 0
+401041bc:	f00d      	ret.n
 	...
 
-40104228 <ppDequeueTxQ>:
-40104228:	1e82f6        	bgeui	a2, 8, 4010424a <ppDequeueTxQ+0x22>
-4010422b:	ffab41        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-4010422e:	4448      	l32i.n	a4, a4, 16
-40104230:	1152b0        	slli	a5, a2, 5
-40104233:	445a      	add.n	a4, a4, a5
-40104235:	6428      	l32i.n	a2, a4, 24
-40104237:	129c      	beqz.n	a2, 4010424c <ppDequeueTxQ+0x24>
-40104239:	070c      	movi.n	a7, 0
-4010423b:	8258      	l32i.n	a5, a2, 32
-4010423d:	6459      	s32i.n	a5, a4, 24
-4010423f:	35cc      	bnez.n	a5, 40104246 <ppDequeueTxQ+0x1e>
-40104241:	18c462        	addi	a6, a4, 24
-40104244:	7469      	s32i.n	a6, a4, 28
-40104246:	8279      	s32i.n	a7, a2, 32
-40104248:	f00d      	ret.n
-4010424a:	020c      	movi.n	a2, 0
-4010424c:	f00d      	ret.n
+401041c0 <ppDequeueTxQ>:
+401041c0:	1e82f6        	bgeui	a2, 8, 401041e2 <ppDequeueTxQ+0x22>
+401041c3:	ffab41        	l32r	a4, 40104070 <lmacRxDone+0x44>
+401041c6:	4448      	l32i.n	a4, a4, 16
+401041c8:	1152b0        	slli	a5, a2, 5
+401041cb:	445a      	add.n	a4, a4, a5
+401041cd:	6428      	l32i.n	a2, a4, 24
+401041cf:	129c      	beqz.n	a2, 401041e4 <ppDequeueTxQ+0x24>
+401041d1:	070c      	movi.n	a7, 0
+401041d3:	8258      	l32i.n	a5, a2, 32
+401041d5:	6459      	s32i.n	a5, a4, 24
+401041d7:	35cc      	bnez.n	a5, 401041de <ppDequeueTxQ+0x1e>
+401041d9:	18c462        	addi	a6, a4, 24
+401041dc:	7469      	s32i.n	a6, a4, 28
+401041de:	8279      	s32i.n	a7, a2, 32
+401041e0:	f00d      	ret.n
+401041e2:	020c      	movi.n	a2, 0
+401041e4:	f00d      	ret.n
 	...
 
-40104250 <ppRollBackTxQ>:
-40104250:	9248      	l32i.n	a4, a2, 36
-40104252:	ffa161        	l32r	a6, 401040d8 <lmacRxDone+0x44>
-40104255:	0448      	l32i.n	a4, a4, 0
-40104257:	4668      	l32i.n	a6, a6, 16
-40104259:	344240        	extui	a4, a4, 2, 4
-4010425c:	1184f6        	bgeui	a4, 8, 40104271 <ppRollBackTxQ+0x21>
-4010425f:	1144b0        	slli	a4, a4, 5
-40104262:	464a      	add.n	a4, a6, a4
-40104264:	6458      	l32i.n	a5, a4, 24
-40104266:	8259      	s32i.n	a5, a2, 32
-40104268:	35cc      	bnez.n	a5, 4010426f <ppRollBackTxQ+0x1f>
-4010426a:	20c272        	addi	a7, a2, 32
-4010426d:	7479      	s32i.n	a7, a4, 28
-4010426f:	6429      	s32i.n	a2, a4, 24
-40104271:	f00d      	ret.n
+401041e8 <ppRollBackTxQ>:
+401041e8:	9248      	l32i.n	a4, a2, 36
+401041ea:	ffa161        	l32r	a6, 40104070 <lmacRxDone+0x44>
+401041ed:	0448      	l32i.n	a4, a4, 0
+401041ef:	4668      	l32i.n	a6, a6, 16
+401041f1:	344240        	extui	a4, a4, 2, 4
+401041f4:	1184f6        	bgeui	a4, 8, 40104209 <ppRollBackTxQ+0x21>
+401041f7:	1144b0        	slli	a4, a4, 5
+401041fa:	464a      	add.n	a4, a6, a4
+401041fc:	6458      	l32i.n	a5, a4, 24
+401041fe:	8259      	s32i.n	a5, a2, 32
+40104200:	35cc      	bnez.n	a5, 40104207 <ppRollBackTxQ+0x1f>
+40104202:	20c272        	addi	a7, a2, 32
+40104205:	7479      	s32i.n	a7, a4, 28
+40104207:	6429      	s32i.n	a2, a4, 24
+40104209:	f00d      	ret.n
 	...
 
-40104274 <ppRecordBarRRC>:
-40104274:	ff9941        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-40104277:	4448      	l32i.n	a4, a4, 16
-40104279:	1152b0        	slli	a5, a2, 5
-4010427c:	445a      	add.n	a4, a4, a5
-4010427e:	204432        	s8i	a3, a4, 32
-40104281:	f00d      	ret.n
+4010420c <ppRecordBarRRC>:
+4010420c:	ff9941        	l32r	a4, 40104070 <lmacRxDone+0x44>
+4010420f:	4448      	l32i.n	a4, a4, 16
+40104211:	1152b0        	slli	a5, a2, 5
+40104214:	445a      	add.n	a4, a4, a5
+40104216:	204432        	s8i	a3, a4, 32
+40104219:	f00d      	ret.n
 	...
 
-40104284 <ppTxqUpdateBitmap>:
-40104284:	ff9581        	l32r	a8, 401040d8 <lmacRxDone+0x44>
-40104287:	4888      	l32i.n	a8, a8, 16
-40104289:	1192b0        	slli	a9, a2, 5
-4010428c:	889a      	add.n	a8, a8, a9
-4010428e:	115832        	s16i	a3, a8, 34
-40104291:	c859      	s32i.n	a5, a8, 48
-40104293:	200872        	l8ui	a7, a8, 32
-40104296:	d849      	s32i.n	a4, a8, 52
-40104298:	776a      	add.n	a7, a7, a6
-4010429a:	204872        	s8i	a7, a8, 32
-4010429d:	f00d      	ret.n
-4010429f:	873800        	excw
-401042a2:	fe          	.byte 0xfe
-401042a3:	3f          	.byte 0x3f
-401042a4:	fe8960        	excw
-401042a7:	3f          	.byte 0x3f
-401042a8:	000a93        	excw
+4010421c <ppTxqUpdateBitmap>:
+4010421c:	ff9581        	l32r	a8, 40104070 <lmacRxDone+0x44>
+4010421f:	4888      	l32i.n	a8, a8, 16
+40104221:	1192b0        	slli	a9, a2, 5
+40104224:	889a      	add.n	a8, a8, a9
+40104226:	115832        	s16i	a3, a8, 34
+40104229:	c859      	s32i.n	a5, a8, 48
+4010422b:	200872        	l8ui	a7, a8, 32
+4010422e:	d849      	s32i.n	a4, a8, 52
+40104230:	776a      	add.n	a7, a7, a6
+40104232:	204872        	s8i	a7, a8, 32
+40104235:	f00d      	ret.n
+40104237:	873800        	excw
+4010423a:	fe          	.byte 0xfe
+4010423b:	3f          	.byte 0x3f
+4010423c:	8948      	l32i.n	a4, a9, 32
+4010423e:	fe          	.byte 0xfe
+4010423f:	3f          	.byte 0x3f
+40104240:	000a93        	excw
 	...
 
-401042ac <ppEnqueueTxDone>:
-401042ac:	f0c112        	addi	a1, a1, -16
-401042af:	0109      	s32i.n	a0, a1, 0
-401042b1:	02dc      	bnez.n	a2, 401042c5 <ppEnqueueTxDone+0x19>
-401042b3:	fffb21        	l32r	a2, 401042a0 <ppTxqUpdateBitmap+0x1c>
-401042b6:	fffb31        	l32r	a3, 401042a4 <ppTxqUpdateBitmap+0x20>
-401042b9:	fffb41        	l32r	a4, 401042a8 <ppTxqUpdateBitmap+0x24>
-401042bc:	efb101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401042bf:	0000c0        	callx0	a0
-401042c2:	ffff06        	j	401042c2 <ppEnqueueTxDone+0x16>
-401042c5:	ff8431        	l32r	a3, 401040d8 <lmacRxDone+0x44>
-401042c8:	20c202        	addi	a0, a2, 32
-401042cb:	4338      	l32i.n	a3, a3, 16
-401042cd:	050c      	movi.n	a5, 0
-401042cf:	4b2342        	l32i	a4, a3, 0x12c
-401042d2:	8259      	s32i.n	a5, a2, 32
-401042d4:	0429      	s32i.n	a2, a4, 0
-401042d6:	4b6302        	s32i	a0, a3, 0x12c
-401042d9:	0108      	l32i.n	a0, a1, 0
-401042db:	10c112        	addi	a1, a1, 16
-401042de:	f00d      	ret.n
+40104244 <ppEnqueueTxDone>:
+40104244:	f0c112        	addi	a1, a1, -16
+40104247:	0109      	s32i.n	a0, a1, 0
+40104249:	02dc      	bnez.n	a2, 4010425d <ppEnqueueTxDone+0x19>
+4010424b:	fffb21        	l32r	a2, 40104238 <ppTxqUpdateBitmap+0x1c>
+4010424e:	fffb31        	l32r	a3, 4010423c <ppTxqUpdateBitmap+0x20>
+40104251:	fffb41        	l32r	a4, 40104240 <ppTxqUpdateBitmap+0x24>
+40104254:	efcb01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40104257:	0000c0        	callx0	a0
+4010425a:	ffff06        	j	4010425a <ppEnqueueTxDone+0x16>
+4010425d:	ff8431        	l32r	a3, 40104070 <lmacRxDone+0x44>
+40104260:	20c202        	addi	a0, a2, 32
+40104263:	4338      	l32i.n	a3, a3, 16
+40104265:	050c      	movi.n	a5, 0
+40104267:	4b2342        	l32i	a4, a3, 0x12c
+4010426a:	8259      	s32i.n	a5, a2, 32
+4010426c:	0429      	s32i.n	a2, a4, 0
+4010426e:	4b6302        	s32i	a0, a3, 0x12c
+40104271:	0108      	l32i.n	a0, a1, 0
+40104273:	10c112        	addi	a1, a1, 16
+40104276:	f00d      	ret.n
 
-401042e0 <ppEnqueueRxq>:
-401042e0:	ff7e41        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-401042e3:	20c232        	addi	a3, a2, 32
-401042e6:	4448      	l32i.n	a4, a4, 16
-401042e8:	060c      	movi.n	a6, 0
-401042ea:	4d2452        	l32i	a5, a4, 0x134
-401042ed:	8269      	s32i.n	a6, a2, 32
-401042ef:	0529      	s32i.n	a2, a5, 0
-401042f1:	4d6432        	s32i	a3, a4, 0x134
-401042f4:	f00d      	ret.n
-401042f6:	120000        	excw
-401042f9:	d9f0c1        	l32r	a12, 400faabc <__floatsidf+0xec7cc>
-401042fc:	21c931        	l32r	a3, 400cca20 <__floatsidf+0xbe730>
-401042ff:	ff76c1        	l32r	a12, 401040d8 <lmacRxDone+0x44>
-40104302:	1109      	s32i.n	a0, a1, 4
-40104304:	4c08      	l32i.n	a0, a12, 16
-40104306:	11d2b0        	slli	a13, a2, 5
-40104309:	00da      	add.n	a0, a0, a13
-4010430b:	240002        	l8ui	a0, a0, 36
-4010430e:	309c      	beqz.n	a0, 40104325 <ppEnqueueRxq+0x45>
-40104310:	113026        	beqi	a0, 3, 40104325 <ppEnqueueRxq+0x45>
-40104313:	0930b6        	bltui	a0, 3, 40104320 <ppEnqueueRxq+0x40>
-40104316:	120c      	movi.n	a2, 1
-40104318:	0c60b6        	bltui	a0, 6, 40104328 <ppEnqueueRxq+0x48>
-4010431b:	020c      	movi.n	a2, 0
-4010431d:	0001c6        	j	40104328 <ppEnqueueRxq+0x48>
-40104320:	320c      	movi.n	a2, 3
-40104322:	000086        	j	40104328 <ppEnqueueRxq+0x48>
-40104325:	02a022        	movi	a2, 2
-40104328:	fef3c5        	call0	40103268 <GetAccess>
-4010432b:	042c52        	l32i	a5, a12, 16
-4010432e:	200220        	or	a0, a2, a2
-40104331:	55da      	add.n	a5, a5, a13
-40104333:	210562        	l8ui	a6, a5, 33
-40104336:	0c0c      	movi.n	a12, 0
-40104338:	96cc      	bnez.n	a6, 40104345 <ppEnqueueRxq+0x65>
-4010433a:	b528      	l32i.n	a2, a5, 44
-4010433c:	328c      	beqz.n	a2, 40104343 <ppEnqueueRxq+0x63>
-4010433e:	02cd      	mov.n	a12, a2
-40104340:	000046        	j	40104345 <ppEnqueueRxq+0x65>
-40104343:	b68c      	beqz.n	a6, 40104352 <ppEnqueueRxq+0x72>
-40104345:	1108      	l32i.n	a0, a1, 4
-40104347:	0c2d      	mov.n	a2, a12
-40104349:	31d8      	l32i.n	a13, a1, 12
-4010434b:	21c8      	l32i.n	a12, a1, 8
-4010434d:	10c112        	addi	a1, a1, 16
-40104350:	f00d      	ret.n
-40104352:	0109      	s32i.n	a0, a1, 0
-40104354:	65c8      	l32i.n	a12, a5, 24
-40104356:	000c      	movi.n	a0, 0
-40104358:	fe9c16        	beqz	a12, 40104345 <ppEnqueueRxq+0x65>
-4010435b:	8c68      	l32i.n	a6, a12, 32
-4010435d:	6569      	s32i.n	a6, a5, 24
-4010435f:	36cc      	bnez.n	a6, 40104366 <ppEnqueueRxq+0x86>
-40104361:	18c572        	addi	a7, a5, 24
-40104364:	7579      	s32i.n	a7, a5, 28
-40104366:	202cc0        	or	a2, a12, a12
-40104369:	086c02        	s32i	a0, a12, 32
-4010436c:	ff62c5        	call0	4010399c <lmacMSDUAged>
-4010436f:	fd2216        	beqz	a2, 40104345 <ppEnqueueRxq+0x65>
-40104372:	0c3d      	mov.n	a3, a12
-40104374:	0128      	l32i.n	a2, a1, 0
-40104376:	040c      	movi.n	a4, 0
-40104378:	feef85        	call0	40103274 <lmacDiscardAgedMSDU>
-4010437b:	ff5751        	l32r	a5, 401040d8 <lmacRxDone+0x44>
-4010437e:	4558      	l32i.n	a5, a5, 16
-40104380:	55da      	add.n	a5, a5, a13
-40104382:	fff386        	j	40104354 <ppEnqueueRxq+0x74>
-40104385:	000000        	ill
-40104388:	e0c112        	addi	a1, a1, -32
-4010438b:	21c9      	s32i.n	a12, a1, 8
-4010438d:	41e9      	s32i.n	a14, a1, 16
-4010438f:	51f9      	s32i.n	a15, a1, 20
-40104391:	31d9      	s32i.n	a13, a1, 12
-40104393:	1109      	s32i.n	a0, a1, 4
-40104395:	02dd      	mov.n	a13, a2
-40104397:	000e85        	call0	40104480 <ppEnqueueRxq+0x1a0>
-4010439a:	ff4f01        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-4010439d:	1f0c      	movi.n	a15, 1
-4010439f:	4008      	l32i.n	a0, a0, 16
-401043a1:	11ede0        	slli	a14, a13, 2
-401043a4:	2d0a      	add.n	a2, a13, a0
-401043a6:	a04d00        	addx4	a4, a13, a0
-401043a9:	1448      	l32i.n	a4, a4, 4
-401043ab:	140222        	l8ui	a2, a2, 20
-401043ae:	fdec      	bnez.n	a13, 401043e1 <ppEnqueueRxq+0x101>
-401043b0:	400200        	ssr	a2
-401043b3:	913040        	srl	a3, a4
-401043b6:	0a6307        	bbci	a3, 0, 401043c4 <ppEnqueueRxq+0xe4>
-401043b9:	1152b0        	slli	a5, a2, 5
-401043bc:	505a      	add.n	a5, a0, a5
-401043be:	280552        	l8ui	a5, a5, 40
-401043c1:	1c1526        	beqi	a5, 1, 401043e1 <ppEnqueueRxq+0x101>
-401043c4:	0c0c      	movi.n	a12, 0
-401043c6:	6129      	s32i.n	a2, a1, 24
-401043c8:	7420c0        	extui	a2, a12, 0, 8
-401043cb:	fff2c5        	call0	401042f8 <ppEnqueueRxq+0x18>
-401043ce:	09e256        	bnez	a2, 40104470 <ppEnqueueRxq+0x190>
-401043d1:	cc1b      	addi.n	a12, a12, 1
-401043d3:	f12c66        	bnei	a12, 2, 401043c8 <ppEnqueueRxq+0xe8>
-401043d6:	ff4041        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-401043d9:	4448      	l32i.n	a4, a4, 16
-401043db:	6128      	l32i.n	a2, a1, 24
-401043dd:	44ea      	add.n	a4, a4, a14
-401043df:	1448      	l32i.n	a4, a4, 4
-401043e1:	01d9      	s32i.n	a13, a1, 0
-401043e3:	401200        	ssl	a2
-401043e6:	a1cf00        	sll	a12, a15
-401043e9:	cc0b      	addi.n	a12, a12, -1
-401043eb:	10c4c0        	and	a12, a4, a12
-401043ee:	30e4c0        	xor	a14, a4, a12
-401043f1:	60d0e0        	neg	a13, a14
-401043f4:	10dde0        	and	a13, a13, a14
-401043f7:	40fdd0        	nsau	a13, a13
-401043fa:	60d0d0        	neg	a13, a13
-401043fd:	1fcdd2        	addi	a13, a13, 31
-40104400:	019d96        	bltz	a13, 4010441d <ppEnqueueRxq+0x13d>
-40104403:	7420d0        	extui	a2, a13, 0, 8
-40104406:	ffef05        	call0	401042f8 <ppEnqueueRxq+0x18>
-40104409:	04a256        	bnez	a2, 40104457 <ppEnqueueRxq+0x177>
-4010440c:	f27c      	movi.n	a2, -1
-4010440e:	401d00        	ssl	a13
-40104411:	a10f00        	sll	a0, a15
-40104414:	300020        	xor	a0, a0, a2
-40104417:	10ee00        	and	a14, a14, a0
-4010441a:	fff4c6        	j	401043f1 <ppEnqueueRxq+0x111>
-4010441d:	60d0c0        	neg	a13, a12
-40104420:	10ddc0        	and	a13, a13, a12
-40104423:	40fdd0        	nsau	a13, a13
-40104426:	60d0d0        	neg	a13, a13
-40104429:	1fcdd2        	addi	a13, a13, 31
-4010442c:	03ed96        	bltz	a13, 4010446e <ppEnqueueRxq+0x18e>
-4010442f:	7420d0        	extui	a2, a13, 0, 8
-40104432:	ffec45        	call0	401042f8 <ppEnqueueRxq+0x18>
-40104435:	f2cc      	bnez.n	a2, 40104448 <ppEnqueueRxq+0x168>
-40104437:	f07c      	movi.n	a0, -1
-40104439:	401d00        	ssl	a13
-4010443c:	a1ef00        	sll	a14, a15
-4010443f:	30ee00        	xor	a14, a14, a0
-40104442:	10cce0        	and	a12, a12, a14
-40104445:	fff506        	j	4010441d <ppEnqueueRxq+0x13d>
-40104448:	ff2401        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-4010444b:	0138      	l32i.n	a3, a1, 0
-4010444d:	4008      	l32i.n	a0, a0, 16
-4010444f:	330a      	add.n	a3, a3, a0
-40104451:	1443d2        	s8i	a13, a3, 20
-40104454:	0002c6        	j	40104463 <ppEnqueueRxq+0x183>
-40104457:	ff2001        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-4010445a:	0138      	l32i.n	a3, a1, 0
-4010445c:	4008      	l32i.n	a0, a0, 16
-4010445e:	330a      	add.n	a3, a3, a0
-40104460:	1443d2        	s8i	a13, a3, 20
-40104463:	113db0        	slli	a3, a13, 5
-40104466:	303a      	add.n	a3, a0, a3
-40104468:	2843f2        	s8i	a15, a3, 40
-4010446b:	000046        	j	40104470 <ppEnqueueRxq+0x190>
-4010446e:	020c      	movi.n	a2, 0
-40104470:	21c8      	l32i.n	a12, a1, 8
-40104472:	31d8      	l32i.n	a13, a1, 12
-40104474:	41e8      	l32i.n	a14, a1, 16
-40104476:	51f8      	l32i.n	a15, a1, 20
-40104478:	1108      	l32i.n	a0, a1, 4
-4010447a:	20c112        	addi	a1, a1, 32
-4010447d:	f00d      	ret.n
-4010447f:	190c00        	excw
-40104482:	f0c112        	addi	a1, a1, -16
-40104485:	ff1481        	l32r	a8, 401040d8 <lmacRxDone+0x44>
-40104488:	2109      	s32i.n	a0, a1, 8
-4010448a:	4808      	l32i.n	a0, a8, 16
-4010448c:	1172e0        	slli	a7, a2, 2
-4010448f:	a05200        	addx4	a5, a2, a0
-40104492:	420a      	add.n	a4, a2, a0
-40104494:	140442        	l8ui	a4, a4, 20
-40104497:	1538      	l32i.n	a3, a5, 4
-40104499:	400400        	ssr	a4
-4010449c:	913030        	srl	a3, a3
-4010449f:	02e307        	bbsi	a3, 0, 401044a5 <ppEnqueueRxq+0x1c5>
-401044a2:	001fc6        	j	40104525 <ppEnqueueRxq+0x245>
-401044a5:	1164b0        	slli	a6, a4, 5
-401044a8:	606a      	add.n	a6, a0, a6
-401044aa:	2806a2        	l8ui	a10, a6, 40
-401044ad:	f87c      	movi.n	a8, -1
-401044af:	072a16        	beqz	a10, 40104525 <ppEnqueueRxq+0x245>
-401044b2:	0b0c      	movi.n	a11, 0
-401044b4:	66a8      	l32i.n	a10, a6, 24
-401044b6:	2846b2        	s8i	a11, a6, 40
-401044b9:	9afc      	bnez.n	a10, 401044f6 <ppEnqueueRxq+0x216>
-401044bb:	1179      	s32i.n	a7, a1, 4
-401044bd:	0149      	s32i.n	a4, a1, 0
-401044bf:	b638      	l32i.n	a3, a6, 44
-401044c1:	3129      	s32i.n	a2, a1, 12
-401044c3:	f3ec      	bnez.n	a3, 401044f6 <ppEnqueueRxq+0x216>
-401044c5:	1578      	l32i.n	a7, a5, 4
-401044c7:	f87c      	movi.n	a8, -1
-401044c9:	401400        	ssl	a4
-401044cc:	160c      	movi.n	a6, 1
-401044ce:	a16600        	sll	a6, a6
-401044d1:	306680        	xor	a6, a6, a8
-401044d4:	107760        	and	a7, a7, a6
-401044d7:	1579      	s32i.n	a7, a5, 4
-401044d9:	0048      	l32i.n	a4, a0, 0
-401044db:	820c      	movi.n	a2, 8
-401044dd:	104460        	and	a4, a4, a6
-401044e0:	0049      	s32i.n	a4, a0, 0
-401044e2:	003085        	call0	401047ec <pp_post>
-401044e5:	3128      	l32i.n	a2, a1, 12
-401044e7:	0148      	l32i.n	a4, a1, 0
-401044e9:	f87c      	movi.n	a8, -1
-401044eb:	fefb01        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-401044ee:	1158      	l32i.n	a5, a1, 4
-401044f0:	4008      	l32i.n	a0, a0, 16
-401044f2:	190c      	movi.n	a9, 1
-401044f4:	550a      	add.n	a5, a5, a0
-401044f6:	1558      	l32i.n	a5, a5, 4
-401044f8:	95ac      	beqz.n	a5, 40104525 <ppEnqueueRxq+0x245>
-401044fa:	401400        	ssl	a4
-401044fd:	a16900        	sll	a6, a9
-40104500:	307680        	xor	a7, a6, a8
-40104503:	660b      	addi.n	a6, a6, -1
-40104505:	106560        	and	a6, a5, a6
-40104508:	30a560        	xor	a10, a5, a6
-4010450b:	1077a0        	and	a7, a7, a10
-4010450e:	604070        	neg	a4, a7
-40104511:	104470        	and	a4, a4, a7
-40104514:	40f440        	nsau	a4, a4
-40104517:	604040        	neg	a4, a4
-4010451a:	1fc442        	addi	a4, a4, 31
-4010451d:	00b496        	bltz	a4, 4010452c <ppEnqueueRxq+0x24c>
-40104520:	720a      	add.n	a7, a2, a0
-40104522:	144742        	s8i	a4, a7, 20
-40104525:	2108      	l32i.n	a0, a1, 8
-40104527:	10c112        	addi	a1, a1, 16
-4010452a:	f00d      	ret.n
-4010452c:	604060        	neg	a4, a6
-4010452f:	104460        	and	a4, a4, a6
-40104532:	40f440        	nsau	a4, a4
-40104535:	604040        	neg	a4, a4
-40104538:	1fc442        	addi	a4, a4, 31
-4010453b:	fe14d6        	bgez	a4, 40104520 <ppEnqueueRxq+0x240>
-4010453e:	fff8c6        	j	40104525 <ppEnqueueRxq+0x245>
-40104541:	000000        	ill
-40104544:	1b0c      	movi.n	a11, 1
-40104546:	080c      	movi.n	a8, 0
-40104548:	fee4a1        	l32r	a10, 401040d8 <lmacRxDone+0x44>
-4010454b:	f0c112        	addi	a1, a1, -16
-4010454e:	11c9      	s32i.n	a12, a1, 4
-40104550:	21d9      	s32i.n	a13, a1, 8
-40104552:	4aa8      	l32i.n	a10, a10, 16
-40104554:	0109      	s32i.n	a0, a1, 0
-40104556:	a075a0        	addx4	a7, a5, a10
-40104559:	1708      	l32i.n	a0, a7, 4
-4010455b:	0ad8      	l32i.n	a13, a10, 0
-4010455d:	041056        	bnez	a0, 401045a2 <ppEnqueueRxq+0x2c2>
-40104560:	95aa      	add.n	a9, a5, a10
-40104562:	140992        	l8ui	a9, a9, 20
-40104565:	400900        	ssr	a9
-40104568:	91c0d0        	srl	a12, a13
-4010456b:	33ec07        	bbsi	a12, 0, 401045a2 <ppEnqueueRxq+0x2c2>
-4010456e:	090d      	mov.n	a0, a9
-40104570:	401900        	ssl	a9
-40104573:	1159b0        	slli	a5, a9, 5
-40104576:	5a5a      	add.n	a5, a10, a5
-40104578:	244542        	s8i	a4, a5, 36
-4010457b:	254532        	s8i	a3, a5, 37
-4010457e:	284582        	s8i	a8, a5, 40
-40104581:	264522        	s8i	a2, a5, 38
-40104584:	1728      	l32i.n	a2, a7, 4
-40104586:	a13b00        	sll	a3, a11
-40104589:	202230        	or	a2, a2, a3
-4010458c:	1729      	s32i.n	a2, a7, 4
-4010458e:	0a68      	l32i.n	a6, a10, 0
-40104590:	206630        	or	a6, a6, a3
-40104593:	0a69      	s32i.n	a6, a10, 0
-40104595:	11c8      	l32i.n	a12, a1, 4
-40104597:	21d8      	l32i.n	a13, a1, 8
-40104599:	002d      	mov.n	a2, a0
-4010459b:	0108      	l32i.n	a0, a1, 0
-4010459d:	10c112        	addi	a1, a1, 16
-401045a0:	f00d      	ret.n
-401045a2:	fc7c      	movi.n	a12, -1
-401045a4:	608000        	neg	a8, a0
-401045a7:	108800        	and	a8, a8, a0
-401045aa:	40f880        	nsau	a8, a8
-401045ad:	608080        	neg	a8, a8
-401045b0:	1fc882        	addi	a8, a8, 31
-401045b3:	028896        	bltz	a8, 401045df <ppEnqueueRxq+0x2ff>
-401045b6:	1198b0        	slli	a9, a8, 5
-401045b9:	9a9a      	add.n	a9, a10, a9
-401045bb:	240962        	l8ui	a6, a9, 36
-401045be:	401800        	ssl	a8
-401045c1:	0e9647        	bne	a6, a4, 401045d3 <ppEnqueueRxq+0x2f3>
-401045c4:	250962        	l8ui	a6, a9, 37
-401045c7:	260972        	l8ui	a7, a9, 38
-401045ca:	059637        	bne	a6, a3, 401045d3 <ppEnqueueRxq+0x2f3>
-401045cd:	c07720        	sub	a7, a7, a2
-401045d0:	0cf716        	beqz	a7, 401046a3 <ppEnqueueRxq+0x3c3>
-401045d3:	a19b00        	sll	a9, a11
-401045d6:	3099c0        	xor	a9, a9, a12
-401045d9:	100090        	and	a0, a0, a9
-401045dc:	fff086        	j	401045a2 <ppEnqueueRxq+0x2c2>
-401045df:	380c      	movi.n	a8, 3
-401045e1:	95aa      	add.n	a9, a5, a10
-401045e3:	140992        	l8ui	a9, a9, 20
-401045e6:	208d80        	or	a8, a13, a8
-401045e9:	401900        	ssl	a9
-401045ec:	a17b00        	sll	a7, a11
-401045ef:	ffa092        	movi	a9, 255
-401045f2:	30c890        	xor	a12, a8, a9
-401045f5:	770b      	addi.n	a7, a7, -1
-401045f7:	1077c0        	and	a7, a7, a12
-401045fa:	40f760        	nsau	a6, a7
-401045fd:	fc1c      	movi.n	a12, 31
-401045ff:	c00c60        	sub	a0, a12, a6
-40104602:	13c6a6        	blti	a6, 32, 40104619 <ppEnqueueRxq+0x339>
-40104605:	306870        	xor	a6, a8, a7
-40104608:	306690        	xor	a6, a6, a9
-4010460b:	40f660        	nsau	a6, a6
-4010460e:	c00c60        	sub	a0, a12, a6
-40104611:	04c6a6        	blti	a6, 32, 40104619 <ppEnqueueRxq+0x339>
-40104614:	800c      	movi.n	a0, 8
-40104616:	ffdec6        	j	40104595 <ppEnqueueRxq+0x2b5>
-40104619:	a075a0        	addx4	a7, a5, a10
+40104278 <ppEnqueueRxq>:
+40104278:	ff7e41        	l32r	a4, 40104070 <lmacRxDone+0x44>
+4010427b:	20c232        	addi	a3, a2, 32
+4010427e:	4448      	l32i.n	a4, a4, 16
+40104280:	060c      	movi.n	a6, 0
+40104282:	4d2452        	l32i	a5, a4, 0x134
+40104285:	8269      	s32i.n	a6, a2, 32
+40104287:	0529      	s32i.n	a2, a5, 0
+40104289:	4d6432        	s32i	a3, a4, 0x134
+4010428c:	f00d      	ret.n
+4010428e:	120000        	excw
+40104291:	d9f0c1        	l32r	a12, 400faa54 <__floatsidf+0xec764>
+40104294:	21c931        	l32r	a3, 400cc9b8 <__floatsidf+0xbe6c8>
+40104297:	ff76c1        	l32r	a12, 40104070 <lmacRxDone+0x44>
+4010429a:	1109      	s32i.n	a0, a1, 4
+4010429c:	4c08      	l32i.n	a0, a12, 16
+4010429e:	11d2b0        	slli	a13, a2, 5
+401042a1:	00da      	add.n	a0, a0, a13
+401042a3:	240002        	l8ui	a0, a0, 36
+401042a6:	309c      	beqz.n	a0, 401042bd <ppEnqueueRxq+0x45>
+401042a8:	113026        	beqi	a0, 3, 401042bd <ppEnqueueRxq+0x45>
+401042ab:	0930b6        	bltui	a0, 3, 401042b8 <ppEnqueueRxq+0x40>
+401042ae:	120c      	movi.n	a2, 1
+401042b0:	0c60b6        	bltui	a0, 6, 401042c0 <ppEnqueueRxq+0x48>
+401042b3:	020c      	movi.n	a2, 0
+401042b5:	0001c6        	j	401042c0 <ppEnqueueRxq+0x48>
+401042b8:	320c      	movi.n	a2, 3
+401042ba:	000086        	j	401042c0 <ppEnqueueRxq+0x48>
+401042bd:	02a022        	movi	a2, 2
+401042c0:	fef3c5        	call0	40103200 <GetAccess>
+401042c3:	042c52        	l32i	a5, a12, 16
+401042c6:	200220        	or	a0, a2, a2
+401042c9:	55da      	add.n	a5, a5, a13
+401042cb:	210562        	l8ui	a6, a5, 33
+401042ce:	0c0c      	movi.n	a12, 0
+401042d0:	96cc      	bnez.n	a6, 401042dd <ppEnqueueRxq+0x65>
+401042d2:	b528      	l32i.n	a2, a5, 44
+401042d4:	328c      	beqz.n	a2, 401042db <ppEnqueueRxq+0x63>
+401042d6:	02cd      	mov.n	a12, a2
+401042d8:	000046        	j	401042dd <ppEnqueueRxq+0x65>
+401042db:	b68c      	beqz.n	a6, 401042ea <ppEnqueueRxq+0x72>
+401042dd:	1108      	l32i.n	a0, a1, 4
+401042df:	0c2d      	mov.n	a2, a12
+401042e1:	31d8      	l32i.n	a13, a1, 12
+401042e3:	21c8      	l32i.n	a12, a1, 8
+401042e5:	10c112        	addi	a1, a1, 16
+401042e8:	f00d      	ret.n
+401042ea:	0109      	s32i.n	a0, a1, 0
+401042ec:	65c8      	l32i.n	a12, a5, 24
+401042ee:	000c      	movi.n	a0, 0
+401042f0:	fe9c16        	beqz	a12, 401042dd <ppEnqueueRxq+0x65>
+401042f3:	8c68      	l32i.n	a6, a12, 32
+401042f5:	6569      	s32i.n	a6, a5, 24
+401042f7:	36cc      	bnez.n	a6, 401042fe <ppEnqueueRxq+0x86>
+401042f9:	18c572        	addi	a7, a5, 24
+401042fc:	7579      	s32i.n	a7, a5, 28
+401042fe:	202cc0        	or	a2, a12, a12
+40104301:	086c02        	s32i	a0, a12, 32
+40104304:	ff62c5        	call0	40103934 <lmacMSDUAged>
+40104307:	fd2216        	beqz	a2, 401042dd <ppEnqueueRxq+0x65>
+4010430a:	0c3d      	mov.n	a3, a12
+4010430c:	0128      	l32i.n	a2, a1, 0
+4010430e:	040c      	movi.n	a4, 0
+40104310:	feef85        	call0	4010320c <lmacDiscardAgedMSDU>
+40104313:	ff5751        	l32r	a5, 40104070 <lmacRxDone+0x44>
+40104316:	4558      	l32i.n	a5, a5, 16
+40104318:	55da      	add.n	a5, a5, a13
+4010431a:	fff386        	j	401042ec <ppEnqueueRxq+0x74>
+4010431d:	000000        	ill
+40104320:	e0c112        	addi	a1, a1, -32
+40104323:	21c9      	s32i.n	a12, a1, 8
+40104325:	41e9      	s32i.n	a14, a1, 16
+40104327:	51f9      	s32i.n	a15, a1, 20
+40104329:	31d9      	s32i.n	a13, a1, 12
+4010432b:	1109      	s32i.n	a0, a1, 4
+4010432d:	02dd      	mov.n	a13, a2
+4010432f:	000e85        	call0	40104418 <ppEnqueueRxq+0x1a0>
+40104332:	ff4f01        	l32r	a0, 40104070 <lmacRxDone+0x44>
+40104335:	1f0c      	movi.n	a15, 1
+40104337:	4008      	l32i.n	a0, a0, 16
+40104339:	11ede0        	slli	a14, a13, 2
+4010433c:	2d0a      	add.n	a2, a13, a0
+4010433e:	a04d00        	addx4	a4, a13, a0
+40104341:	1448      	l32i.n	a4, a4, 4
+40104343:	140222        	l8ui	a2, a2, 20
+40104346:	fdec      	bnez.n	a13, 40104379 <ppEnqueueRxq+0x101>
+40104348:	400200        	ssr	a2
+4010434b:	913040        	srl	a3, a4
+4010434e:	0a6307        	bbci	a3, 0, 4010435c <ppEnqueueRxq+0xe4>
+40104351:	1152b0        	slli	a5, a2, 5
+40104354:	505a      	add.n	a5, a0, a5
+40104356:	280552        	l8ui	a5, a5, 40
+40104359:	1c1526        	beqi	a5, 1, 40104379 <ppEnqueueRxq+0x101>
+4010435c:	0c0c      	movi.n	a12, 0
+4010435e:	6129      	s32i.n	a2, a1, 24
+40104360:	7420c0        	extui	a2, a12, 0, 8
+40104363:	fff2c5        	call0	40104290 <ppEnqueueRxq+0x18>
+40104366:	09e256        	bnez	a2, 40104408 <ppEnqueueRxq+0x190>
+40104369:	cc1b      	addi.n	a12, a12, 1
+4010436b:	f12c66        	bnei	a12, 2, 40104360 <ppEnqueueRxq+0xe8>
+4010436e:	ff4041        	l32r	a4, 40104070 <lmacRxDone+0x44>
+40104371:	4448      	l32i.n	a4, a4, 16
+40104373:	6128      	l32i.n	a2, a1, 24
+40104375:	44ea      	add.n	a4, a4, a14
+40104377:	1448      	l32i.n	a4, a4, 4
+40104379:	01d9      	s32i.n	a13, a1, 0
+4010437b:	401200        	ssl	a2
+4010437e:	a1cf00        	sll	a12, a15
+40104381:	cc0b      	addi.n	a12, a12, -1
+40104383:	10c4c0        	and	a12, a4, a12
+40104386:	30e4c0        	xor	a14, a4, a12
+40104389:	60d0e0        	neg	a13, a14
+4010438c:	10dde0        	and	a13, a13, a14
+4010438f:	40fdd0        	nsau	a13, a13
+40104392:	60d0d0        	neg	a13, a13
+40104395:	1fcdd2        	addi	a13, a13, 31
+40104398:	019d96        	bltz	a13, 401043b5 <ppEnqueueRxq+0x13d>
+4010439b:	7420d0        	extui	a2, a13, 0, 8
+4010439e:	ffef05        	call0	40104290 <ppEnqueueRxq+0x18>
+401043a1:	04a256        	bnez	a2, 401043ef <ppEnqueueRxq+0x177>
+401043a4:	f27c      	movi.n	a2, -1
+401043a6:	401d00        	ssl	a13
+401043a9:	a10f00        	sll	a0, a15
+401043ac:	300020        	xor	a0, a0, a2
+401043af:	10ee00        	and	a14, a14, a0
+401043b2:	fff4c6        	j	40104389 <ppEnqueueRxq+0x111>
+401043b5:	60d0c0        	neg	a13, a12
+401043b8:	10ddc0        	and	a13, a13, a12
+401043bb:	40fdd0        	nsau	a13, a13
+401043be:	60d0d0        	neg	a13, a13
+401043c1:	1fcdd2        	addi	a13, a13, 31
+401043c4:	03ed96        	bltz	a13, 40104406 <ppEnqueueRxq+0x18e>
+401043c7:	7420d0        	extui	a2, a13, 0, 8
+401043ca:	ffec45        	call0	40104290 <ppEnqueueRxq+0x18>
+401043cd:	f2cc      	bnez.n	a2, 401043e0 <ppEnqueueRxq+0x168>
+401043cf:	f07c      	movi.n	a0, -1
+401043d1:	401d00        	ssl	a13
+401043d4:	a1ef00        	sll	a14, a15
+401043d7:	30ee00        	xor	a14, a14, a0
+401043da:	10cce0        	and	a12, a12, a14
+401043dd:	fff506        	j	401043b5 <ppEnqueueRxq+0x13d>
+401043e0:	ff2401        	l32r	a0, 40104070 <lmacRxDone+0x44>
+401043e3:	0138      	l32i.n	a3, a1, 0
+401043e5:	4008      	l32i.n	a0, a0, 16
+401043e7:	330a      	add.n	a3, a3, a0
+401043e9:	1443d2        	s8i	a13, a3, 20
+401043ec:	0002c6        	j	401043fb <ppEnqueueRxq+0x183>
+401043ef:	ff2001        	l32r	a0, 40104070 <lmacRxDone+0x44>
+401043f2:	0138      	l32i.n	a3, a1, 0
+401043f4:	4008      	l32i.n	a0, a0, 16
+401043f6:	330a      	add.n	a3, a3, a0
+401043f8:	1443d2        	s8i	a13, a3, 20
+401043fb:	113db0        	slli	a3, a13, 5
+401043fe:	303a      	add.n	a3, a0, a3
+40104400:	2843f2        	s8i	a15, a3, 40
+40104403:	000046        	j	40104408 <ppEnqueueRxq+0x190>
+40104406:	020c      	movi.n	a2, 0
+40104408:	21c8      	l32i.n	a12, a1, 8
+4010440a:	31d8      	l32i.n	a13, a1, 12
+4010440c:	41e8      	l32i.n	a14, a1, 16
+4010440e:	51f8      	l32i.n	a15, a1, 20
+40104410:	1108      	l32i.n	a0, a1, 4
+40104412:	20c112        	addi	a1, a1, 32
+40104415:	f00d      	ret.n
+40104417:	190c00        	excw
+4010441a:	f0c112        	addi	a1, a1, -16
+4010441d:	ff1481        	l32r	a8, 40104070 <lmacRxDone+0x44>
+40104420:	2109      	s32i.n	a0, a1, 8
+40104422:	4808      	l32i.n	a0, a8, 16
+40104424:	1172e0        	slli	a7, a2, 2
+40104427:	a05200        	addx4	a5, a2, a0
+4010442a:	420a      	add.n	a4, a2, a0
+4010442c:	140442        	l8ui	a4, a4, 20
+4010442f:	1538      	l32i.n	a3, a5, 4
+40104431:	400400        	ssr	a4
+40104434:	913030        	srl	a3, a3
+40104437:	02e307        	bbsi	a3, 0, 4010443d <ppEnqueueRxq+0x1c5>
+4010443a:	001fc6        	j	401044bd <ppEnqueueRxq+0x245>
+4010443d:	1164b0        	slli	a6, a4, 5
+40104440:	606a      	add.n	a6, a0, a6
+40104442:	2806a2        	l8ui	a10, a6, 40
+40104445:	f87c      	movi.n	a8, -1
+40104447:	072a16        	beqz	a10, 401044bd <ppEnqueueRxq+0x245>
+4010444a:	0b0c      	movi.n	a11, 0
+4010444c:	66a8      	l32i.n	a10, a6, 24
+4010444e:	2846b2        	s8i	a11, a6, 40
+40104451:	9afc      	bnez.n	a10, 4010448e <ppEnqueueRxq+0x216>
+40104453:	1179      	s32i.n	a7, a1, 4
+40104455:	0149      	s32i.n	a4, a1, 0
+40104457:	b638      	l32i.n	a3, a6, 44
+40104459:	3129      	s32i.n	a2, a1, 12
+4010445b:	f3ec      	bnez.n	a3, 4010448e <ppEnqueueRxq+0x216>
+4010445d:	1578      	l32i.n	a7, a5, 4
+4010445f:	f87c      	movi.n	a8, -1
+40104461:	401400        	ssl	a4
+40104464:	160c      	movi.n	a6, 1
+40104466:	a16600        	sll	a6, a6
+40104469:	306680        	xor	a6, a6, a8
+4010446c:	107760        	and	a7, a7, a6
+4010446f:	1579      	s32i.n	a7, a5, 4
+40104471:	0048      	l32i.n	a4, a0, 0
+40104473:	820c      	movi.n	a2, 8
+40104475:	104460        	and	a4, a4, a6
+40104478:	0049      	s32i.n	a4, a0, 0
+4010447a:	003085        	call0	40104784 <pp_post>
+4010447d:	3128      	l32i.n	a2, a1, 12
+4010447f:	0148      	l32i.n	a4, a1, 0
+40104481:	f87c      	movi.n	a8, -1
+40104483:	fefb01        	l32r	a0, 40104070 <lmacRxDone+0x44>
+40104486:	1158      	l32i.n	a5, a1, 4
+40104488:	4008      	l32i.n	a0, a0, 16
+4010448a:	190c      	movi.n	a9, 1
+4010448c:	550a      	add.n	a5, a5, a0
+4010448e:	1558      	l32i.n	a5, a5, 4
+40104490:	95ac      	beqz.n	a5, 401044bd <ppEnqueueRxq+0x245>
+40104492:	401400        	ssl	a4
+40104495:	a16900        	sll	a6, a9
+40104498:	307680        	xor	a7, a6, a8
+4010449b:	660b      	addi.n	a6, a6, -1
+4010449d:	106560        	and	a6, a5, a6
+401044a0:	30a560        	xor	a10, a5, a6
+401044a3:	1077a0        	and	a7, a7, a10
+401044a6:	604070        	neg	a4, a7
+401044a9:	104470        	and	a4, a4, a7
+401044ac:	40f440        	nsau	a4, a4
+401044af:	604040        	neg	a4, a4
+401044b2:	1fc442        	addi	a4, a4, 31
+401044b5:	00b496        	bltz	a4, 401044c4 <ppEnqueueRxq+0x24c>
+401044b8:	720a      	add.n	a7, a2, a0
+401044ba:	144742        	s8i	a4, a7, 20
+401044bd:	2108      	l32i.n	a0, a1, 8
+401044bf:	10c112        	addi	a1, a1, 16
+401044c2:	f00d      	ret.n
+401044c4:	604060        	neg	a4, a6
+401044c7:	104460        	and	a4, a4, a6
+401044ca:	40f440        	nsau	a4, a4
+401044cd:	604040        	neg	a4, a4
+401044d0:	1fc442        	addi	a4, a4, 31
+401044d3:	fe14d6        	bgez	a4, 401044b8 <ppEnqueueRxq+0x240>
+401044d6:	fff8c6        	j	401044bd <ppEnqueueRxq+0x245>
+401044d9:	000000        	ill
+401044dc:	1b0c      	movi.n	a11, 1
+401044de:	080c      	movi.n	a8, 0
+401044e0:	fee4a1        	l32r	a10, 40104070 <lmacRxDone+0x44>
+401044e3:	f0c112        	addi	a1, a1, -16
+401044e6:	11c9      	s32i.n	a12, a1, 4
+401044e8:	21d9      	s32i.n	a13, a1, 8
+401044ea:	4aa8      	l32i.n	a10, a10, 16
+401044ec:	0109      	s32i.n	a0, a1, 0
+401044ee:	a075a0        	addx4	a7, a5, a10
+401044f1:	1708      	l32i.n	a0, a7, 4
+401044f3:	0ad8      	l32i.n	a13, a10, 0
+401044f5:	041056        	bnez	a0, 4010453a <ppEnqueueRxq+0x2c2>
+401044f8:	95aa      	add.n	a9, a5, a10
+401044fa:	140992        	l8ui	a9, a9, 20
+401044fd:	400900        	ssr	a9
+40104500:	91c0d0        	srl	a12, a13
+40104503:	33ec07        	bbsi	a12, 0, 4010453a <ppEnqueueRxq+0x2c2>
+40104506:	090d      	mov.n	a0, a9
+40104508:	401900        	ssl	a9
+4010450b:	1159b0        	slli	a5, a9, 5
+4010450e:	5a5a      	add.n	a5, a10, a5
+40104510:	244542        	s8i	a4, a5, 36
+40104513:	254532        	s8i	a3, a5, 37
+40104516:	284582        	s8i	a8, a5, 40
+40104519:	264522        	s8i	a2, a5, 38
+4010451c:	1728      	l32i.n	a2, a7, 4
+4010451e:	a13b00        	sll	a3, a11
+40104521:	202230        	or	a2, a2, a3
+40104524:	1729      	s32i.n	a2, a7, 4
+40104526:	0a68      	l32i.n	a6, a10, 0
+40104528:	206630        	or	a6, a6, a3
+4010452b:	0a69      	s32i.n	a6, a10, 0
+4010452d:	11c8      	l32i.n	a12, a1, 4
+4010452f:	21d8      	l32i.n	a13, a1, 8
+40104531:	002d      	mov.n	a2, a0
+40104533:	0108      	l32i.n	a0, a1, 0
+40104535:	10c112        	addi	a1, a1, 16
+40104538:	f00d      	ret.n
+4010453a:	fc7c      	movi.n	a12, -1
+4010453c:	608000        	neg	a8, a0
+4010453f:	108800        	and	a8, a8, a0
+40104542:	40f880        	nsau	a8, a8
+40104545:	608080        	neg	a8, a8
+40104548:	1fc882        	addi	a8, a8, 31
+4010454b:	028896        	bltz	a8, 40104577 <ppEnqueueRxq+0x2ff>
+4010454e:	1198b0        	slli	a9, a8, 5
+40104551:	9a9a      	add.n	a9, a10, a9
+40104553:	240962        	l8ui	a6, a9, 36
+40104556:	401800        	ssl	a8
+40104559:	0e9647        	bne	a6, a4, 4010456b <ppEnqueueRxq+0x2f3>
+4010455c:	250962        	l8ui	a6, a9, 37
+4010455f:	260972        	l8ui	a7, a9, 38
+40104562:	059637        	bne	a6, a3, 4010456b <ppEnqueueRxq+0x2f3>
+40104565:	c07720        	sub	a7, a7, a2
+40104568:	0cf716        	beqz	a7, 4010463b <ppEnqueueRxq+0x3c3>
+4010456b:	a19b00        	sll	a9, a11
+4010456e:	3099c0        	xor	a9, a9, a12
+40104571:	100090        	and	a0, a0, a9
+40104574:	fff086        	j	4010453a <ppEnqueueRxq+0x2c2>
+40104577:	380c      	movi.n	a8, 3
+40104579:	95aa      	add.n	a9, a5, a10
+4010457b:	140992        	l8ui	a9, a9, 20
+4010457e:	208d80        	or	a8, a13, a8
+40104581:	401900        	ssl	a9
+40104584:	a17b00        	sll	a7, a11
+40104587:	ffa092        	movi	a9, 255
+4010458a:	30c890        	xor	a12, a8, a9
+4010458d:	770b      	addi.n	a7, a7, -1
+4010458f:	1077c0        	and	a7, a7, a12
+40104592:	40f760        	nsau	a6, a7
+40104595:	fc1c      	movi.n	a12, 31
+40104597:	c00c60        	sub	a0, a12, a6
+4010459a:	13c6a6        	blti	a6, 32, 401045b1 <ppEnqueueRxq+0x339>
+4010459d:	306870        	xor	a6, a8, a7
+401045a0:	306690        	xor	a6, a6, a9
+401045a3:	40f660        	nsau	a6, a6
+401045a6:	c00c60        	sub	a0, a12, a6
+401045a9:	04c6a6        	blti	a6, 32, 401045b1 <ppEnqueueRxq+0x339>
+401045ac:	800c      	movi.n	a0, 8
+401045ae:	ffdec6        	j	4010452d <ppEnqueueRxq+0x2b5>
+401045b1:	a075a0        	addx4	a7, a5, a10
+401045b4:	401000        	ssl	a0
+401045b7:	a15b00        	sll	a5, a11
+401045ba:	550b      	addi.n	a5, a5, -1
+401045bc:	1085d0        	and	a8, a5, a13
+401045bf:	40f880        	nsau	a8, a8
+401045c2:	2fc8e6        	bgei	a8, 32, 401045f5 <ppEnqueueRxq+0x37d>
+401045c5:	c00080        	sub	a0, a0, a8
+401045c8:	060c      	movi.n	a6, 0
+401045ca:	20c052        	addi	a5, a0, 32
+401045cd:	21c002        	addi	a0, a0, 33
+401045d0:	b30550        	movgez	a0, a5, a5
+401045d3:	740100        	extui	a0, a0, 1, 8
+401045d6:	401000        	ssl	a0
+401045d9:	1150b0        	slli	a5, a0, 5
+401045dc:	5a5a      	add.n	a5, a10, a5
+401045de:	284562        	s8i	a6, a5, 40
+401045e1:	254532        	s8i	a3, a5, 37
+401045e4:	244542        	s8i	a4, a5, 36
+401045e7:	264522        	s8i	a2, a5, 38
+401045ea:	1728      	l32i.n	a2, a7, 4
+401045ec:	a13b00        	sll	a3, a11
+401045ef:	202230        	or	a2, a2, a3
+401045f2:	ffcb86        	j	40104524 <ppEnqueueRxq+0x2ac>
+401045f5:	f67c      	movi.n	a6, -1
+401045f7:	305560        	xor	a5, a5, a6
+401045fa:	105d50        	and	a5, a13, a5
+401045fd:	40f550        	nsau	a5, a5
+40104600:	c05050        	sub	a5, a0, a5
+40104603:	25c562        	addi	a6, a5, 37
+40104606:	26c552        	addi	a5, a5, 38
+40104609:	b35660        	movgez	a5, a6, a6
+4010460c:	060c      	movi.n	a6, 0
+4010460e:	215150        	srai	a5, a5, 1
+40104611:	050d      	mov.n	a0, a5
+40104613:	0285a6        	blti	a5, 8, 40104619 <ppEnqueueRxq+0x3a1>
+40104616:	fac502        	addi	a0, a5, -6
+40104619:	740000        	extui	a0, a0, 0, 8
 4010461c:	401000        	ssl	a0
-4010461f:	a15b00        	sll	a5, a11
-40104622:	550b      	addi.n	a5, a5, -1
-40104624:	1085d0        	and	a8, a5, a13
-40104627:	40f880        	nsau	a8, a8
-4010462a:	2fc8e6        	bgei	a8, 32, 4010465d <ppEnqueueRxq+0x37d>
-4010462d:	c00080        	sub	a0, a0, a8
-40104630:	060c      	movi.n	a6, 0
-40104632:	20c052        	addi	a5, a0, 32
-40104635:	21c002        	addi	a0, a0, 33
-40104638:	b30550        	movgez	a0, a5, a5
-4010463b:	740100        	extui	a0, a0, 1, 8
-4010463e:	401000        	ssl	a0
-40104641:	1150b0        	slli	a5, a0, 5
-40104644:	5a5a      	add.n	a5, a10, a5
-40104646:	284562        	s8i	a6, a5, 40
-40104649:	254532        	s8i	a3, a5, 37
-4010464c:	244542        	s8i	a4, a5, 36
-4010464f:	264522        	s8i	a2, a5, 38
-40104652:	1728      	l32i.n	a2, a7, 4
-40104654:	a13b00        	sll	a3, a11
-40104657:	202230        	or	a2, a2, a3
-4010465a:	ffcb86        	j	4010458c <ppEnqueueRxq+0x2ac>
-4010465d:	f67c      	movi.n	a6, -1
-4010465f:	305560        	xor	a5, a5, a6
-40104662:	105d50        	and	a5, a13, a5
-40104665:	40f550        	nsau	a5, a5
-40104668:	c05050        	sub	a5, a0, a5
-4010466b:	25c562        	addi	a6, a5, 37
-4010466e:	26c552        	addi	a5, a5, 38
-40104671:	b35660        	movgez	a5, a6, a6
-40104674:	060c      	movi.n	a6, 0
-40104676:	215150        	srai	a5, a5, 1
-40104679:	050d      	mov.n	a0, a5
-4010467b:	0285a6        	blti	a5, 8, 40104681 <ppEnqueueRxq+0x3a1>
-4010467e:	fac502        	addi	a0, a5, -6
-40104681:	740000        	extui	a0, a0, 0, 8
-40104684:	401000        	ssl	a0
-40104687:	1150b0        	slli	a5, a0, 5
-4010468a:	5a5a      	add.n	a5, a10, a5
-4010468c:	244542        	s8i	a4, a5, 36
-4010468f:	254532        	s8i	a3, a5, 37
-40104692:	284562        	s8i	a6, a5, 40
-40104695:	264522        	s8i	a2, a5, 38
-40104698:	1728      	l32i.n	a2, a7, 4
-4010469a:	a13b00        	sll	a3, a11
-4010469d:	202230        	or	a2, a2, a3
-401046a0:	ffba06        	j	4010458c <ppEnqueueRxq+0x2ac>
-401046a3:	740080        	extui	a0, a8, 0, 8
-401046a6:	ffbac6        	j	40104595 <ppEnqueueRxq+0x2b5>
-401046a9:	000000        	ill
-401046ac:	c0c112        	addi	a1, a1, -64
-401046af:	b1c9      	s32i.n	a12, a1, 44
-401046b1:	d1e9      	s32i.n	a14, a1, 52
-401046b3:	e1f9      	s32i.n	a15, a1, 56
-401046b5:	c1d9      	s32i.n	a13, a1, 48
-401046b7:	a109      	s32i.n	a0, a1, 40
-401046b9:	02dd      	mov.n	a13, a2
-401046bb:	ef7901        	l32r	a0, 401004a0 <wdt_feed+0x68>
-401046be:	0000c0        	callx0	a0
-401046c1:	fe85c1        	l32r	a12, 401040d8 <lmacRxDone+0x44>
-401046c4:	4cc8      	l32i.n	a12, a12, 16
-401046c6:	0cc8      	l32i.n	a12, a12, 0
-401046c8:	f0bd01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401046cb:	0000c0        	callx0	a0
-401046ce:	ffa0f2        	movi	a15, 255
-401046d1:	3e0c      	movi.n	a14, 3
-401046d3:	20ece0        	or	a14, a12, a14
-401046d6:	30eef0        	xor	a14, a14, a15
-401046d9:	0e4e16        	beqz	a14, 401047c1 <ppEnqueueRxq+0x4e1>
-401046dc:	fe7f21        	l32r	a2, 401040d8 <lmacRxDone+0x44>
-401046df:	11fdd0        	slli	a15, a13, 3
-401046e2:	4228      	l32i.n	a2, a2, 16
-401046e4:	f1f9      	s32i.n	a15, a1, 60
-401046e6:	b02d20        	addx8	a2, a13, a2
-401046e9:	4622e2        	l32i	a14, a2, 0x118
-401046ec:	01d232        	addmi	a3, a2, 0x100
-401046ef:	0cee16        	beqz	a14, 401047c1 <ppEnqueueRxq+0x4e1>
-401046f2:	81e9      	s32i.n	a14, a1, 32
-401046f4:	18c332        	addi	a3, a3, 24
-401046f7:	000c      	movi.n	a0, 0
-401046f9:	466202        	s32i	a0, a2, 0x118
-401046fc:	476232        	s32i	a3, a2, 0x11c
-401046ff:	0ecd      	mov.n	a12, a14
-40104701:	0abe16        	beqz	a14, 401047b0 <ppEnqueueRxq+0x4d0>
-40104704:	7c58      	l32i.n	a5, a12, 28
-40104706:	8ee8      	l32i.n	a14, a14, 32
-40104708:	81e9      	s32i.n	a14, a1, 32
-4010470a:	8c09      	s32i.n	a0, a12, 32
-4010470c:	85cc      	bnez.n	a5, 40104718 <ppEnqueueRxq+0x438>
-4010470e:	9cd8      	l32i.n	a13, a12, 36
-40104710:	0dd8      	l32i.n	a13, a13, 0
-40104712:	04d1d0        	extui	a13, a13, 1, 1
-40104715:	000986        	j	4010473f <ppEnqueueRxq+0x45f>
-40104718:	ef6201        	l32r	a0, 401004a0 <wdt_feed+0x68>
-4010471b:	0000c0        	callx0	a0
-4010471e:	7c38      	l32i.n	a3, a12, 28
-40104720:	9c58      	l32i.n	a5, a12, 36
-40104722:	760332        	l8ui	a3, a3, 118
-40104725:	0528      	l32i.n	a2, a5, 0
-40104727:	1558      	l32i.n	a5, a5, 4
-40104729:	042120        	extui	a2, a2, 1, 1
-4010472c:	344050        	extui	a4, a5, 0, 4
-4010472f:	255450        	extui	a5, a5, 20, 3
-40104732:	ffe105        	call0	40104544 <ppEnqueueRxq+0x264>
-40104735:	02dd      	mov.n	a13, a2
-40104737:	f0a101        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-4010473a:	0000c0        	callx0	a0
-4010473d:	000c      	movi.n	a0, 0
-4010473f:	20ccf2        	addi	a15, a12, 32
-40104742:	158d66        	bnei	a13, 8, 4010475b <ppEnqueueRxq+0x47b>
-40104745:	fe6441        	l32r	a4, 401040d8 <lmacRxDone+0x44>
-40104748:	f158      	l32i.n	a5, a1, 60
-4010474a:	4448      	l32i.n	a4, a4, 16
-4010474c:	445a      	add.n	a4, a4, a5
-4010474e:	472452        	l32i	a5, a4, 0x11c
-40104751:	8c09      	s32i.n	a0, a12, 32
-40104753:	05c9      	s32i.n	a12, a5, 0
-40104755:	4764f2        	s32i	a15, a4, 0x11c
-40104758:	ffe8c6        	j	401046ff <ppEnqueueRxq+0x41f>
-4010475b:	c3af82        	movi	a8, -61
-4010475e:	9c68      	l32i.n	a6, a12, 36
-40104760:	3470d0        	extui	a7, a13, 0, 4
-40104763:	0658      	l32i.n	a5, a6, 0
-40104765:	1177e0        	slli	a7, a7, 2
-40104768:	105580        	and	a5, a5, a8
-4010476b:	205570        	or	a5, a5, a7
-4010476e:	0659      	s32i.n	a5, a6, 0
-40104770:	ef4c01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40104773:	0000c0        	callx0	a0
-40104776:	fe58d1        	l32r	a13, 401040d8 <lmacRxDone+0x44>
-40104779:	9c98      	l32i.n	a9, a12, 36
-4010477b:	0b0c      	movi.n	a11, 0
-4010477d:	8cb9      	s32i.n	a11, a12, 32
-4010477f:	09a8      	l32i.n	a10, a9, 0
-40104781:	4d88      	l32i.n	a8, a13, 16
-40104783:	34a2a0        	extui	a10, a10, 2, 4
-40104786:	11aab0        	slli	a10, a10, 5
-40104789:	a8aa      	add.n	a10, a8, a10
-4010478b:	7aa8      	l32i.n	a10, a10, 28
-4010478d:	0ac9      	s32i.n	a12, a10, 0
-4010478f:	0998      	l32i.n	a9, a9, 0
-40104791:	349290        	extui	a9, a9, 2, 4
-40104794:	1199b0        	slli	a9, a9, 5
-40104797:	889a      	add.n	a8, a8, a9
-40104799:	78f9      	s32i.n	a15, a8, 28
-4010479b:	f08801        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-4010479e:	0000c0        	callx0	a0
-401047a1:	9c28      	l32i.n	a2, a12, 36
-401047a3:	1228      	l32i.n	a2, a2, 4
-401047a5:	252420        	extui	a2, a2, 20, 3
-401047a8:	000405        	call0	401047ec <pp_post>
-401047ab:	000c      	movi.n	a0, 0
-401047ad:	ffd386        	j	401046ff <ppEnqueueRxq+0x41f>
-401047b0:	120c      	movi.n	a2, 1
-401047b2:	b1c8      	l32i.n	a12, a1, 44
-401047b4:	c1d8      	l32i.n	a13, a1, 48
-401047b6:	d1e8      	l32i.n	a14, a1, 52
-401047b8:	e1f8      	l32i.n	a15, a1, 56
-401047ba:	a108      	l32i.n	a0, a1, 40
-401047bc:	40c112        	addi	a1, a1, 64
-401047bf:	f00d      	ret.n
-401047c1:	020c      	movi.n	a2, 0
-401047c3:	fffac6        	j	401047b2 <ppEnqueueRxq+0x4d2>
+4010461f:	1150b0        	slli	a5, a0, 5
+40104622:	5a5a      	add.n	a5, a10, a5
+40104624:	244542        	s8i	a4, a5, 36
+40104627:	254532        	s8i	a3, a5, 37
+4010462a:	284562        	s8i	a6, a5, 40
+4010462d:	264522        	s8i	a2, a5, 38
+40104630:	1728      	l32i.n	a2, a7, 4
+40104632:	a13b00        	sll	a3, a11
+40104635:	202230        	or	a2, a2, a3
+40104638:	ffba06        	j	40104524 <ppEnqueueRxq+0x2ac>
+4010463b:	740080        	extui	a0, a8, 0, 8
+4010463e:	ffbac6        	j	4010452d <ppEnqueueRxq+0x2b5>
+40104641:	000000        	ill
+40104644:	c0c112        	addi	a1, a1, -64
+40104647:	b1c9      	s32i.n	a12, a1, 44
+40104649:	d1e9      	s32i.n	a14, a1, 52
+4010464b:	e1f9      	s32i.n	a15, a1, 56
+4010464d:	c1d9      	s32i.n	a13, a1, 48
+4010464f:	a109      	s32i.n	a0, a1, 40
+40104651:	02dd      	mov.n	a13, a2
+40104653:	ef9301        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40104656:	0000c0        	callx0	a0
+40104659:	fe85c1        	l32r	a12, 40104070 <lmacRxDone+0x44>
+4010465c:	4cc8      	l32i.n	a12, a12, 16
+4010465e:	0cc8      	l32i.n	a12, a12, 0
+40104660:	f0d701        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40104663:	0000c0        	callx0	a0
+40104666:	ffa0f2        	movi	a15, 255
+40104669:	3e0c      	movi.n	a14, 3
+4010466b:	20ece0        	or	a14, a12, a14
+4010466e:	30eef0        	xor	a14, a14, a15
+40104671:	0e4e16        	beqz	a14, 40104759 <ppEnqueueRxq+0x4e1>
+40104674:	fe7f21        	l32r	a2, 40104070 <lmacRxDone+0x44>
+40104677:	11fdd0        	slli	a15, a13, 3
+4010467a:	4228      	l32i.n	a2, a2, 16
+4010467c:	f1f9      	s32i.n	a15, a1, 60
+4010467e:	b02d20        	addx8	a2, a13, a2
+40104681:	4622e2        	l32i	a14, a2, 0x118
+40104684:	01d232        	addmi	a3, a2, 0x100
+40104687:	0cee16        	beqz	a14, 40104759 <ppEnqueueRxq+0x4e1>
+4010468a:	81e9      	s32i.n	a14, a1, 32
+4010468c:	18c332        	addi	a3, a3, 24
+4010468f:	000c      	movi.n	a0, 0
+40104691:	466202        	s32i	a0, a2, 0x118
+40104694:	476232        	s32i	a3, a2, 0x11c
+40104697:	0ecd      	mov.n	a12, a14
+40104699:	0abe16        	beqz	a14, 40104748 <ppEnqueueRxq+0x4d0>
+4010469c:	7c58      	l32i.n	a5, a12, 28
+4010469e:	8ee8      	l32i.n	a14, a14, 32
+401046a0:	81e9      	s32i.n	a14, a1, 32
+401046a2:	8c09      	s32i.n	a0, a12, 32
+401046a4:	85cc      	bnez.n	a5, 401046b0 <ppEnqueueRxq+0x438>
+401046a6:	9cd8      	l32i.n	a13, a12, 36
+401046a8:	0dd8      	l32i.n	a13, a13, 0
+401046aa:	04d1d0        	extui	a13, a13, 1, 1
+401046ad:	000986        	j	401046d7 <ppEnqueueRxq+0x45f>
+401046b0:	ef7c01        	l32r	a0, 401004a0 <wdt_feed+0x68>
+401046b3:	0000c0        	callx0	a0
+401046b6:	7c38      	l32i.n	a3, a12, 28
+401046b8:	9c58      	l32i.n	a5, a12, 36
+401046ba:	760332        	l8ui	a3, a3, 118
+401046bd:	0528      	l32i.n	a2, a5, 0
+401046bf:	1558      	l32i.n	a5, a5, 4
+401046c1:	042120        	extui	a2, a2, 1, 1
+401046c4:	344050        	extui	a4, a5, 0, 4
+401046c7:	255450        	extui	a5, a5, 20, 3
+401046ca:	ffe105        	call0	401044dc <ppEnqueueRxq+0x264>
+401046cd:	02dd      	mov.n	a13, a2
+401046cf:	f0bb01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+401046d2:	0000c0        	callx0	a0
+401046d5:	000c      	movi.n	a0, 0
+401046d7:	20ccf2        	addi	a15, a12, 32
+401046da:	158d66        	bnei	a13, 8, 401046f3 <ppEnqueueRxq+0x47b>
+401046dd:	fe6441        	l32r	a4, 40104070 <lmacRxDone+0x44>
+401046e0:	f158      	l32i.n	a5, a1, 60
+401046e2:	4448      	l32i.n	a4, a4, 16
+401046e4:	445a      	add.n	a4, a4, a5
+401046e6:	472452        	l32i	a5, a4, 0x11c
+401046e9:	8c09      	s32i.n	a0, a12, 32
+401046eb:	05c9      	s32i.n	a12, a5, 0
+401046ed:	4764f2        	s32i	a15, a4, 0x11c
+401046f0:	ffe8c6        	j	40104697 <ppEnqueueRxq+0x41f>
+401046f3:	c3af82        	movi	a8, -61
+401046f6:	9c68      	l32i.n	a6, a12, 36
+401046f8:	3470d0        	extui	a7, a13, 0, 4
+401046fb:	0658      	l32i.n	a5, a6, 0
+401046fd:	1177e0        	slli	a7, a7, 2
+40104700:	105580        	and	a5, a5, a8
+40104703:	205570        	or	a5, a5, a7
+40104706:	0659      	s32i.n	a5, a6, 0
+40104708:	ef6601        	l32r	a0, 401004a0 <wdt_feed+0x68>
+4010470b:	0000c0        	callx0	a0
+4010470e:	fe58d1        	l32r	a13, 40104070 <lmacRxDone+0x44>
+40104711:	9c98      	l32i.n	a9, a12, 36
+40104713:	0b0c      	movi.n	a11, 0
+40104715:	8cb9      	s32i.n	a11, a12, 32
+40104717:	09a8      	l32i.n	a10, a9, 0
+40104719:	4d88      	l32i.n	a8, a13, 16
+4010471b:	34a2a0        	extui	a10, a10, 2, 4
+4010471e:	11aab0        	slli	a10, a10, 5
+40104721:	a8aa      	add.n	a10, a8, a10
+40104723:	7aa8      	l32i.n	a10, a10, 28
+40104725:	0ac9      	s32i.n	a12, a10, 0
+40104727:	0998      	l32i.n	a9, a9, 0
+40104729:	349290        	extui	a9, a9, 2, 4
+4010472c:	1199b0        	slli	a9, a9, 5
+4010472f:	889a      	add.n	a8, a8, a9
+40104731:	78f9      	s32i.n	a15, a8, 28
+40104733:	f0a201        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40104736:	0000c0        	callx0	a0
+40104739:	9c28      	l32i.n	a2, a12, 36
+4010473b:	1228      	l32i.n	a2, a2, 4
+4010473d:	252420        	extui	a2, a2, 20, 3
+40104740:	000405        	call0	40104784 <pp_post>
+40104743:	000c      	movi.n	a0, 0
+40104745:	ffd386        	j	40104697 <ppEnqueueRxq+0x41f>
+40104748:	120c      	movi.n	a2, 1
+4010474a:	b1c8      	l32i.n	a12, a1, 44
+4010474c:	c1d8      	l32i.n	a13, a1, 48
+4010474e:	d1e8      	l32i.n	a14, a1, 52
+40104750:	e1f8      	l32i.n	a15, a1, 56
+40104752:	a108      	l32i.n	a0, a1, 40
+40104754:	40c112        	addi	a1, a1, 64
+40104757:	f00d      	ret.n
+40104759:	020c      	movi.n	a2, 0
+4010475b:	fffac6        	j	4010474a <ppEnqueueRxq+0x4d2>
 	...
 
-401047c8 <ppDiscardMPDU>:
-401047c8:	040c      	movi.n	a4, 0
-401047ca:	f0c112        	addi	a1, a1, -16
-401047cd:	0109      	s32i.n	a0, a1, 0
-401047cf:	9238      	l32i.n	a3, a2, 36
-401047d1:	400c      	movi.n	a0, 4
-401047d3:	4349      	s32i.n	a4, a3, 16
-401047d5:	0f4302        	s8i	a0, a3, 15
-401047d8:	ffad05        	call0	401042ac <ppEnqueueTxDone>
-401047db:	420c      	movi.n	a2, 4
-401047dd:	0000c5        	call0	401047ec <pp_post>
-401047e0:	0108      	l32i.n	a0, a1, 0
-401047e2:	10c112        	addi	a1, a1, 16
-401047e5:	f00d      	ret.n
-401047e7:	95c000        	extui	a12, a0, 16, 10
-401047ea:	fe          	.byte 0xfe
-401047eb:	3f          	.byte 0x3f
+40104760 <ppDiscardMPDU>:
+40104760:	040c      	movi.n	a4, 0
+40104762:	f0c112        	addi	a1, a1, -16
+40104765:	0109      	s32i.n	a0, a1, 0
+40104767:	9238      	l32i.n	a3, a2, 36
+40104769:	400c      	movi.n	a0, 4
+4010476b:	4349      	s32i.n	a4, a3, 16
+4010476d:	0f4302        	s8i	a0, a3, 15
+40104770:	ffad05        	call0	40104244 <ppEnqueueTxDone>
+40104773:	420c      	movi.n	a2, 4
+40104775:	0000c5        	call0	40104784 <pp_post>
+40104778:	0108      	l32i.n	a0, a1, 0
+4010477a:	10c112        	addi	a1, a1, 16
+4010477d:	f00d      	ret.n
+4010477f:	95a000        	extui	a10, a0, 16, 10
+40104782:	fe          	.byte 0xfe
+40104783:	3f          	.byte 0x3f
 
-401047ec <pp_post>:
-401047ec:	f0c112        	addi	a1, a1, -16
-401047ef:	21c9      	s32i.n	a12, a1, 8
-401047f1:	1109      	s32i.n	a0, a1, 4
-401047f3:	02cd      	mov.n	a12, a2
-401047f5:	ef2a01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-401047f8:	0000c0        	callx0	a0
-401047fb:	fffb01        	l32r	a0, 401047e8 <ppDiscardMPDU+0x20>
-401047fe:	0c0a      	add.n	a0, a12, a0
-40104800:	0109      	s32i.n	a0, a1, 0
-40104802:	000002        	l8ui	a0, a0, 0
-40104805:	908c      	beqz.n	a0, 40104812 <pp_post+0x26>
-40104807:	f06d01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-4010480a:	0000c0        	callx0	a0
-4010480d:	020c      	movi.n	a2, 0
-4010480f:	001686        	j	4010486d <pp_post+0x81>
-40104812:	0138      	l32i.n	a3, a1, 0
-40104814:	201b      	addi.n	a2, a0, 1
-40104816:	004322        	s8i	a2, a3, 0
-40104819:	f06801        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-4010481c:	0000c0        	callx0	a0
-4010481f:	fe2d01        	l32r	a0, 401040d4 <lmacRxDone+0x40>
-40104822:	04ac66        	bnei	a12, 12, 4010482a <pp_post+0x3e>
-40104825:	140c      	movi.n	a4, 1
-40104827:	394042        	s8i	a4, a0, 57
-4010482a:	022c      	movi.n	a2, 32
-4010482c:	0c3d      	mov.n	a3, a12
-4010482e:	040c      	movi.n	a4, 0
-40104830:	f07901        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
-40104833:	0000c0        	callx0	a0
-40104836:	020d      	mov.n	a0, a2
-40104838:	f2ac      	beqz.n	a2, 4010486b <pp_post+0x7f>
-4010483a:	3129      	s32i.n	a2, a1, 12
-4010483c:	2bac66        	bnei	a12, 12, 4010486b <pp_post+0x7f>
-4010483f:	ef1801        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40104842:	0000c0        	callx0	a0
-40104845:	fe23a1        	l32r	a10, 401040d4 <lmacRxDone+0x40>
-40104848:	0188      	l32i.n	a8, a1, 0
-4010484a:	090c      	movi.n	a9, 0
-4010484c:	000872        	l8ui	a7, a8, 0
-4010484f:	004a92        	s8i	a9, a10, 0
-40104852:	770b      	addi.n	a7, a7, -1
-40104854:	004872        	s8i	a7, a8, 0
-40104857:	73a052        	movi	a5, 115
-4010485a:	ee7061        	l32r	a6, 4010021c <NmiTimSetFunc+0x20>
-4010485d:	0020c0        	memw
-40104860:	c56652        	s32i	a5, a6, 0x314
-40104863:	f05601        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40104866:	0000c0        	callx0	a0
-40104869:	3108      	l32i.n	a0, a1, 12
-4010486b:	002d      	mov.n	a2, a0
-4010486d:	21c8      	l32i.n	a12, a1, 8
-4010486f:	1108      	l32i.n	a0, a1, 4
-40104871:	10c112        	addi	a1, a1, 16
-40104874:	f00d      	ret.n
+40104784 <pp_post>:
+40104784:	f0c112        	addi	a1, a1, -16
+40104787:	21c9      	s32i.n	a12, a1, 8
+40104789:	1109      	s32i.n	a0, a1, 4
+4010478b:	02cd      	mov.n	a12, a2
+4010478d:	ef4401        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40104790:	0000c0        	callx0	a0
+40104793:	fffb01        	l32r	a0, 40104780 <ppDiscardMPDU+0x20>
+40104796:	0c0a      	add.n	a0, a12, a0
+40104798:	0109      	s32i.n	a0, a1, 0
+4010479a:	000002        	l8ui	a0, a0, 0
+4010479d:	908c      	beqz.n	a0, 401047aa <pp_post+0x26>
+4010479f:	f08701        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+401047a2:	0000c0        	callx0	a0
+401047a5:	020c      	movi.n	a2, 0
+401047a7:	001686        	j	40104805 <pp_post+0x81>
+401047aa:	0138      	l32i.n	a3, a1, 0
+401047ac:	201b      	addi.n	a2, a0, 1
+401047ae:	004322        	s8i	a2, a3, 0
+401047b1:	f08201        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+401047b4:	0000c0        	callx0	a0
+401047b7:	fe2d01        	l32r	a0, 4010406c <lmacRxDone+0x40>
+401047ba:	04ac66        	bnei	a12, 12, 401047c2 <pp_post+0x3e>
+401047bd:	140c      	movi.n	a4, 1
+401047bf:	394042        	s8i	a4, a0, 57
+401047c2:	022c      	movi.n	a2, 32
+401047c4:	0c3d      	mov.n	a3, a12
+401047c6:	040c      	movi.n	a4, 0
+401047c8:	f09301        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
+401047cb:	0000c0        	callx0	a0
+401047ce:	020d      	mov.n	a0, a2
+401047d0:	f2ac      	beqz.n	a2, 40104803 <pp_post+0x7f>
+401047d2:	3129      	s32i.n	a2, a1, 12
+401047d4:	2bac66        	bnei	a12, 12, 40104803 <pp_post+0x7f>
+401047d7:	ef3201        	l32r	a0, 401004a0 <wdt_feed+0x68>
+401047da:	0000c0        	callx0	a0
+401047dd:	fe23a1        	l32r	a10, 4010406c <lmacRxDone+0x40>
+401047e0:	0188      	l32i.n	a8, a1, 0
+401047e2:	090c      	movi.n	a9, 0
+401047e4:	000872        	l8ui	a7, a8, 0
+401047e7:	004a92        	s8i	a9, a10, 0
+401047ea:	770b      	addi.n	a7, a7, -1
+401047ec:	004872        	s8i	a7, a8, 0
+401047ef:	73a052        	movi	a5, 115
+401047f2:	ee8a61        	l32r	a6, 4010021c <NmiTimSetFunc+0x20>
+401047f5:	0020c0        	memw
+401047f8:	c56652        	s32i	a5, a6, 0x314
+401047fb:	f07001        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+401047fe:	0000c0        	callx0	a0
+40104801:	3108      	l32i.n	a0, a1, 12
+40104803:	002d      	mov.n	a2, a0
+40104805:	21c8      	l32i.n	a12, a1, 8
+40104807:	1108      	l32i.n	a0, a1, 4
+40104809:	10c112        	addi	a1, a1, 16
+4010480c:	f00d      	ret.n
 	...
 
-40104878 <pp_post2>:
-40104878:	f0c112        	addi	a1, a1, -16
-4010487b:	0109      	s32i.n	a0, a1, 0
-4010487d:	fe1601        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-40104880:	6008      	l32i.n	a0, a0, 24
-40104882:	0b0002        	l8ui	a0, a0, 11
-40104885:	08c0f6        	bgeui	a0, 32, 40104891 <pp_post2+0x19>
-40104888:	f06301        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
-4010488b:	0000c0        	callx0	a0
-4010488e:	000046        	j	40104893 <pp_post2+0x1b>
-40104891:	120c      	movi.n	a2, 1
-40104893:	0108      	l32i.n	a0, a1, 0
-40104895:	10c112        	addi	a1, a1, 16
-40104898:	f00d      	ret.n
-4010489a:	070000        	excw
-4010489d:	000d      	mov.n	a0, a0
+40104810 <pp_post2>:
+40104810:	f0c112        	addi	a1, a1, -16
+40104813:	0109      	s32i.n	a0, a1, 0
+40104815:	fe1601        	l32r	a0, 40104070 <lmacRxDone+0x44>
+40104818:	6008      	l32i.n	a0, a0, 24
+4010481a:	0b0002        	l8ui	a0, a0, 11
+4010481d:	08c0f6        	bgeui	a0, 32, 40104829 <pp_post2+0x19>
+40104820:	f07d01        	l32r	a0, 40100a14 <ets_timer_disarm+0x54>
+40104823:	0000c0        	callx0	a0
+40104826:	000046        	j	4010482b <pp_post2+0x1b>
+40104829:	120c      	movi.n	a2, 1
+4010482b:	0108      	l32i.n	a0, a1, 0
+4010482d:	10c112        	addi	a1, a1, 16
+40104830:	f00d      	ret.n
+40104832:	070000        	excw
+40104835:	000d      	mov.n	a0, a0
 	...
 
-401048a0 <ppCalTxop>:
-401048a0:	f0c112        	addi	a1, a1, -16
-401048a3:	31c9      	s32i.n	a12, a1, 12
-401048a5:	2109      	s32i.n	a0, a1, 8
-401048a7:	03cd      	mov.n	a12, a3
-401048a9:	fe0b01        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-401048ac:	043d      	mov.n	a3, a4
-401048ae:	0139      	s32i.n	a3, a1, 0
-401048b0:	4008      	l32i.n	a0, a0, 16
-401048b2:	1142b0        	slli	a4, a2, 5
-401048b5:	004a      	add.n	a0, a0, a4
-401048b7:	270002        	l8ui	a0, a0, 39
-401048ba:	1149      	s32i.n	a4, a1, 4
-401048bc:	20fc      	bnez.n	a0, 401048f2 <ppCalTxop+0x52>
-401048be:	eef801        	l32r	a0, 401004a0 <wdt_feed+0x68>
-401048c1:	0000c0        	callx0	a0
-401048c4:	fe0501        	l32r	a0, 401040d8 <lmacRxDone+0x44>
-401048c7:	1128      	l32i.n	a2, a1, 4
-401048c9:	4008      	l32i.n	a0, a0, 16
-401048cb:	002a      	add.n	a0, a0, a2
-401048cd:	6008      	l32i.n	a0, a0, 24
-401048cf:	909c      	beqz.n	a0, 401048ec <ppCalTxop+0x4c>
-401048d1:	9068      	l32i.n	a6, a0, 36
-401048d3:	0628      	l32i.n	a2, a6, 0
-401048d5:	13f287        	bbsi	a2, 24, 401048ec <ppCalTxop+0x4c>
-401048d8:	051622        	l16ui	a2, a6, 10
-401048db:	0138      	l32i.n	a3, a1, 0
-401048dd:	c2ca      	add.n	a12, a2, a12
-401048df:	f4c0c0        	extui	a12, a12, 0, 16
-401048e2:	709c      	beqz.n	a0, 401048fd <ppCalTxop+0x5d>
-401048e4:	27bc37        	bgeu	a12, a3, 4010490f <ppCalTxop+0x6f>
-401048e7:	8008      	l32i.n	a0, a0, 32
-401048e9:	fe4056        	bnez	a0, 401048d1 <ppCalTxop+0x31>
-401048ec:	f03401        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401048ef:	0000c0        	callx0	a0
-401048f2:	0c2d      	mov.n	a2, a12
-401048f4:	2108      	l32i.n	a0, a1, 8
-401048f6:	31c8      	l32i.n	a12, a1, 12
-401048f8:	10c112        	addi	a1, a1, 16
-401048fb:	f00d      	ret.n
-401048fd:	fe6821        	l32r	a2, 401042a0 <ppTxqUpdateBitmap+0x1c>
-40104900:	fe6931        	l32r	a3, 401042a4 <ppTxqUpdateBitmap+0x20>
-40104903:	ffe641        	l32r	a4, 4010489c <pp_post2+0x24>
-40104906:	ee1e01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40104909:	0000c0        	callx0	a0
-4010490c:	ffff06        	j	4010490c <ppCalTxop+0x6c>
-4010490f:	f02b01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40104912:	0000c0        	callx0	a0
-40104915:	01c8      	l32i.n	a12, a1, 0
-40104917:	fff5c6        	j	401048f2 <ppCalTxop+0x52>
-4010491a:	ff0000        	excw
-4010491d:	ff          	.byte 0xff
-4010491e:	7f          	.byte 0x7f
+40104838 <ppCalTxop>:
+40104838:	f0c112        	addi	a1, a1, -16
+4010483b:	31c9      	s32i.n	a12, a1, 12
+4010483d:	2109      	s32i.n	a0, a1, 8
+4010483f:	03cd      	mov.n	a12, a3
+40104841:	fe0b01        	l32r	a0, 40104070 <lmacRxDone+0x44>
+40104844:	043d      	mov.n	a3, a4
+40104846:	0139      	s32i.n	a3, a1, 0
+40104848:	4008      	l32i.n	a0, a0, 16
+4010484a:	1142b0        	slli	a4, a2, 5
+4010484d:	004a      	add.n	a0, a0, a4
+4010484f:	270002        	l8ui	a0, a0, 39
+40104852:	1149      	s32i.n	a4, a1, 4
+40104854:	20fc      	bnez.n	a0, 4010488a <ppCalTxop+0x52>
+40104856:	ef1201        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40104859:	0000c0        	callx0	a0
+4010485c:	fe0501        	l32r	a0, 40104070 <lmacRxDone+0x44>
+4010485f:	1128      	l32i.n	a2, a1, 4
+40104861:	4008      	l32i.n	a0, a0, 16
+40104863:	002a      	add.n	a0, a0, a2
+40104865:	6008      	l32i.n	a0, a0, 24
+40104867:	909c      	beqz.n	a0, 40104884 <ppCalTxop+0x4c>
+40104869:	9068      	l32i.n	a6, a0, 36
+4010486b:	0628      	l32i.n	a2, a6, 0
+4010486d:	13f287        	bbsi	a2, 24, 40104884 <ppCalTxop+0x4c>
+40104870:	051622        	l16ui	a2, a6, 10
+40104873:	0138      	l32i.n	a3, a1, 0
+40104875:	c2ca      	add.n	a12, a2, a12
+40104877:	f4c0c0        	extui	a12, a12, 0, 16
+4010487a:	709c      	beqz.n	a0, 40104895 <ppCalTxop+0x5d>
+4010487c:	27bc37        	bgeu	a12, a3, 401048a7 <ppCalTxop+0x6f>
+4010487f:	8008      	l32i.n	a0, a0, 32
+40104881:	fe4056        	bnez	a0, 40104869 <ppCalTxop+0x31>
+40104884:	f04e01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40104887:	0000c0        	callx0	a0
+4010488a:	0c2d      	mov.n	a2, a12
+4010488c:	2108      	l32i.n	a0, a1, 8
+4010488e:	31c8      	l32i.n	a12, a1, 12
+40104890:	10c112        	addi	a1, a1, 16
+40104893:	f00d      	ret.n
+40104895:	fe6821        	l32r	a2, 40104238 <ppTxqUpdateBitmap+0x1c>
+40104898:	fe6931        	l32r	a3, 4010423c <ppTxqUpdateBitmap+0x20>
+4010489b:	ffe641        	l32r	a4, 40104834 <pp_post2+0x24>
+4010489e:	ee3801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401048a1:	0000c0        	callx0	a0
+401048a4:	ffff06        	j	401048a4 <ppCalTxop+0x6c>
+401048a7:	f04501        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+401048aa:	0000c0        	callx0	a0
+401048ad:	01c8      	l32i.n	a12, a1, 0
+401048af:	fff5c6        	j	4010488a <ppCalTxop+0x52>
+401048b2:	ff0000        	excw
+401048b5:	ff          	.byte 0xff
+401048b6:	7f          	.byte 0x7f
 	...
 
-40104920 <ppCalFrameTimes>:
-40104920:	f0c112        	addi	a1, a1, -16
-40104923:	0161c2        	s32i	a12, a1, 4
-40104926:	006102        	s32i	a0, a1, 0
-40104929:	092202        	l32i	a0, a2, 36
-4010492c:	02cd      	mov.n	a12, a2
-4010492e:	0028      	l32i.n	a2, a0, 0
-40104930:	0a7297        	bbci	a2, 25, 4010493e <ppCalFrameTimes+0x1e>
-40104933:	080022        	l8ui	a2, a0, 8
-40104936:	000e05        	call0	40104a18 <RC_GetBlockAckTime>
-40104939:	9c08      	l32i.n	a0, a12, 36
-4010493b:	000546        	j	40104954 <ppCalFrameTimes+0x34>
-4010493e:	10f207        	bbsi	a2, 16, 40104952 <ppCalFrameTimes+0x32>
-40104941:	0de277        	bbsi	a2, 7, 40104952 <ppCalFrameTimes+0x32>
-40104944:	080022        	l8ui	a2, a0, 8
-40104947:	000845        	call0	401049cc <RC_GetAckTime>
-4010494a:	9c08      	l32i.n	a0, a12, 36
-4010494c:	000106        	j	40104954 <ppCalFrameTimes+0x34>
-4010494f:	000000        	ill
-40104952:	020c      	movi.n	a2, 0
-40104954:	092c42        	l32i	a4, a12, 36
-40104957:	fff171        	l32r	a7, 4010491c <ppCalTxop+0x7c>
-4010495a:	012052        	l32i	a5, a0, 4
-4010495d:	016290        	slli	a6, a2, 23
-40104960:	105570        	and	a5, a5, a7
-40104963:	205560        	or	a5, a5, a6
-40104966:	016052        	s32i	a5, a0, 4
-40104969:	080422        	l8ui	a2, a4, 8
-4010496c:	0b1c52        	l16ui	a5, a12, 22
-4010496f:	1448      	l32i.n	a4, a4, 4
-40104971:	0a1c32        	l16ui	a3, a12, 20
-40104974:	854740        	extui	a4, a4, 23, 9
-40104977:	335a      	add.n	a3, a3, a5
-40104979:	f43030        	extui	a3, a3, 0, 16
-4010497c:	000605        	call0	401049e0 <RC_GetCtsTime>
-4010497f:	0108      	l32i.n	a0, a1, 0
-40104981:	9c88      	l32i.n	a8, a12, 36
-40104983:	11c8      	l32i.n	a12, a1, 4
-40104985:	055822        	s16i	a2, a8, 10
-40104988:	10c112        	addi	a1, a1, 16
-4010498b:	f00d      	ret.n
-4010498d:	000000        	ill
-40104990:	1352b6        	bltui	a2, 5, 401049a7 <ppCalFrameTimes+0x87>
-40104993:	0982b6        	bltui	a2, 8, 401049a0 <ppCalFrameTimes+0x80>
-40104996:	442c      	movi.n	a4, 36
-40104998:	07b2f6        	bgeui	a2, 16, 401049a3 <ppCalFrameTimes+0x83>
-4010499b:	441c      	movi.n	a4, 20
-4010499d:	000086        	j	401049a3 <ppCalFrameTimes+0x83>
-401049a0:	60a042        	movi	a4, 96
-401049a3:	042d      	mov.n	a2, a4
-401049a5:	f00d      	ret.n
-401049a7:	c0a022        	movi	a2, 192
-401049aa:	f00d      	ret.n
-401049ac:	fe9720        	excw
-401049af:	3f          	.byte 0x3f
+401048b8 <ppCalFrameTimes>:
+401048b8:	f0c112        	addi	a1, a1, -16
+401048bb:	0161c2        	s32i	a12, a1, 4
+401048be:	006102        	s32i	a0, a1, 0
+401048c1:	092202        	l32i	a0, a2, 36
+401048c4:	02cd      	mov.n	a12, a2
+401048c6:	0028      	l32i.n	a2, a0, 0
+401048c8:	0a7297        	bbci	a2, 25, 401048d6 <ppCalFrameTimes+0x1e>
+401048cb:	080022        	l8ui	a2, a0, 8
+401048ce:	000e05        	call0	401049b0 <RC_GetBlockAckTime>
+401048d1:	9c08      	l32i.n	a0, a12, 36
+401048d3:	000546        	j	401048ec <ppCalFrameTimes+0x34>
+401048d6:	10f207        	bbsi	a2, 16, 401048ea <ppCalFrameTimes+0x32>
+401048d9:	0de277        	bbsi	a2, 7, 401048ea <ppCalFrameTimes+0x32>
+401048dc:	080022        	l8ui	a2, a0, 8
+401048df:	000845        	call0	40104964 <RC_GetAckTime>
+401048e2:	9c08      	l32i.n	a0, a12, 36
+401048e4:	000106        	j	401048ec <ppCalFrameTimes+0x34>
+401048e7:	000000        	ill
+401048ea:	020c      	movi.n	a2, 0
+401048ec:	092c42        	l32i	a4, a12, 36
+401048ef:	fff171        	l32r	a7, 401048b4 <ppCalTxop+0x7c>
+401048f2:	012052        	l32i	a5, a0, 4
+401048f5:	016290        	slli	a6, a2, 23
+401048f8:	105570        	and	a5, a5, a7
+401048fb:	205560        	or	a5, a5, a6
+401048fe:	016052        	s32i	a5, a0, 4
+40104901:	080422        	l8ui	a2, a4, 8
+40104904:	0b1c52        	l16ui	a5, a12, 22
+40104907:	1448      	l32i.n	a4, a4, 4
+40104909:	0a1c32        	l16ui	a3, a12, 20
+4010490c:	854740        	extui	a4, a4, 23, 9
+4010490f:	335a      	add.n	a3, a3, a5
+40104911:	f43030        	extui	a3, a3, 0, 16
+40104914:	000605        	call0	40104978 <RC_GetCtsTime>
+40104917:	0108      	l32i.n	a0, a1, 0
+40104919:	9c88      	l32i.n	a8, a12, 36
+4010491b:	11c8      	l32i.n	a12, a1, 4
+4010491d:	055822        	s16i	a2, a8, 10
+40104920:	10c112        	addi	a1, a1, 16
+40104923:	f00d      	ret.n
+40104925:	000000        	ill
+40104928:	1352b6        	bltui	a2, 5, 4010493f <ppCalFrameTimes+0x87>
+4010492b:	0982b6        	bltui	a2, 8, 40104938 <ppCalFrameTimes+0x80>
+4010492e:	442c      	movi.n	a4, 36
+40104930:	07b2f6        	bgeui	a2, 16, 4010493b <ppCalFrameTimes+0x83>
+40104933:	441c      	movi.n	a4, 20
+40104935:	000086        	j	4010493b <ppCalFrameTimes+0x83>
+40104938:	60a042        	movi	a4, 96
+4010493b:	042d      	mov.n	a2, a4
+4010493d:	f00d      	ret.n
+4010493f:	c0a022        	movi	a2, 192
+40104942:	f00d      	ret.n
+40104944:	fe9700        	excw
+40104947:	3f          	.byte 0x3f
 
-401049b0 <RC_GetAckRate>:
-401049b0:	ffff31        	l32r	a3, 401049ac <ppCalFrameTimes+0x8c>
-401049b3:	b02230        	addx8	a2, a2, a3
-401049b6:	050222        	l8ui	a2, a2, 5
-401049b9:	f00d      	ret.n
+40104948 <RC_GetAckRate>:
+40104948:	ffff31        	l32r	a3, 40104944 <ppCalFrameTimes+0x8c>
+4010494b:	b02230        	addx8	a2, a2, a3
+4010494e:	050222        	l8ui	a2, a2, 5
+40104951:	f00d      	ret.n
 	...
 
-401049bc <RC_GetRtsRate>:
-401049bc:	fffc31        	l32r	a3, 401049ac <ppCalFrameTimes+0x8c>
-401049bf:	b02230        	addx8	a2, a2, a3
-401049c2:	040222        	l8ui	a2, a2, 4
-401049c5:	f00d      	ret.n
-401049c7:	80a000        	add	a10, a0, a0
-401049ca:	fe          	.byte 0xfe
-401049cb:	3f          	.byte 0x3f
+40104954 <RC_GetRtsRate>:
+40104954:	fffc31        	l32r	a3, 40104944 <ppCalFrameTimes+0x8c>
+40104957:	b02230        	addx8	a2, a2, a3
+4010495a:	040222        	l8ui	a2, a2, 4
+4010495d:	f00d      	ret.n
+4010495f:	80a000        	add	a10, a0, a0
+40104962:	fe          	.byte 0xfe
+40104963:	3f          	.byte 0x3f
 
-401049cc <RC_GetAckTime>:
-401049cc:	fff831        	l32r	a3, 401049ac <ppCalFrameTimes+0x8c>
-401049cf:	b02230        	addx8	a2, a2, a3
-401049d2:	fffd31        	l32r	a3, 401049c8 <RC_GetRtsRate+0xc>
-401049d5:	050222        	l8ui	a2, a2, 5
-401049d8:	902230        	addx2	a2, a2, a3
-401049db:	001222        	l16ui	a2, a2, 0
-401049de:	f00d      	ret.n
+40104964 <RC_GetAckTime>:
+40104964:	fff831        	l32r	a3, 40104944 <ppCalFrameTimes+0x8c>
+40104967:	b02230        	addx8	a2, a2, a3
+4010496a:	fffd31        	l32r	a3, 40104960 <RC_GetRtsRate+0xc>
+4010496d:	050222        	l8ui	a2, a2, 5
+40104970:	902230        	addx2	a2, a2, a3
+40104973:	001222        	l16ui	a2, a2, 0
+40104976:	f00d      	ret.n
 
-401049e0 <RC_GetCtsTime>:
-401049e0:	e0c112        	addi	a1, a1, -32
-401049e3:	0139      	s32i.n	a3, a1, 0
-401049e5:	1149      	s32i.n	a4, a1, 4
-401049e7:	31c9      	s32i.n	a12, a1, 12
-401049e9:	2109      	s32i.n	a0, a1, 8
-401049eb:	02cd      	mov.n	a12, a2
-401049ed:	fffa05        	call0	40104990 <ppCalFrameTimes+0x70>
-401049f0:	4129      	s32i.n	a2, a1, 16
-401049f2:	0138      	l32i.n	a3, a1, 0
-401049f4:	0c2d      	mov.n	a2, a12
-401049f6:	0005c5        	call0	40104a54 <RC_GetBlockAckTime+0x3c>
-401049f9:	4108      	l32i.n	a0, a1, 16
-401049fb:	1138      	l32i.n	a3, a1, 4
-401049fd:	a40c      	movi.n	a4, 10
-401049ff:	232a      	add.n	a2, a3, a2
-40104a01:	018cb6        	bltui	a12, 8, 40104a06 <RC_GetCtsTime+0x26>
-40104a04:	041c      	movi.n	a4, 16
-40104a06:	31c8      	l32i.n	a12, a1, 12
-40104a08:	504a      	add.n	a5, a0, a4
-40104a0a:	225a      	add.n	a2, a2, a5
-40104a0c:	2108      	l32i.n	a0, a1, 8
-40104a0e:	20c112        	addi	a1, a1, 32
-40104a11:	f42020        	extui	a2, a2, 0, 16
-40104a14:	f00d      	ret.n
+40104978 <RC_GetCtsTime>:
+40104978:	e0c112        	addi	a1, a1, -32
+4010497b:	0139      	s32i.n	a3, a1, 0
+4010497d:	1149      	s32i.n	a4, a1, 4
+4010497f:	31c9      	s32i.n	a12, a1, 12
+40104981:	2109      	s32i.n	a0, a1, 8
+40104983:	02cd      	mov.n	a12, a2
+40104985:	fffa05        	call0	40104928 <ppCalFrameTimes+0x70>
+40104988:	4129      	s32i.n	a2, a1, 16
+4010498a:	0138      	l32i.n	a3, a1, 0
+4010498c:	0c2d      	mov.n	a2, a12
+4010498e:	0005c5        	call0	401049ec <RC_GetBlockAckTime+0x3c>
+40104991:	4108      	l32i.n	a0, a1, 16
+40104993:	1138      	l32i.n	a3, a1, 4
+40104995:	a40c      	movi.n	a4, 10
+40104997:	232a      	add.n	a2, a3, a2
+40104999:	018cb6        	bltui	a12, 8, 4010499e <RC_GetCtsTime+0x26>
+4010499c:	041c      	movi.n	a4, 16
+4010499e:	31c8      	l32i.n	a12, a1, 12
+401049a0:	504a      	add.n	a5, a0, a4
+401049a2:	225a      	add.n	a2, a2, a5
+401049a4:	2108      	l32i.n	a0, a1, 8
+401049a6:	20c112        	addi	a1, a1, 32
+401049a9:	f42020        	extui	a2, a2, 0, 16
+401049ac:	f00d      	ret.n
 	...
 
-40104a18 <RC_GetBlockAckTime>:
-40104a18:	f0c112        	addi	a1, a1, -16
-40104a1b:	31c9      	s32i.n	a12, a1, 12
-40104a1d:	2109      	s32i.n	a0, a1, 8
-40104a1f:	ffe301        	l32r	a0, 401049ac <ppCalFrameTimes+0x8c>
-40104a22:	ac0c      	movi.n	a12, 10
-40104a24:	b00200        	addx8	a0, a2, a0
-40104a27:	050022        	l8ui	a2, a0, 5
-40104a2a:	0109      	s32i.n	a0, a1, 0
-40104a2c:	0182b6        	bltui	a2, 8, 40104a31 <RC_GetBlockAckTime+0x19>
-40104a2f:	0c1c      	movi.n	a12, 16
-40104a31:	fff5c5        	call0	40104990 <ppCalFrameTimes+0x70>
-40104a34:	1129      	s32i.n	a2, a1, 4
-40104a36:	0128      	l32i.n	a2, a1, 0
-40104a38:	032c      	movi.n	a3, 32
-40104a3a:	050222        	l8ui	a2, a2, 5
-40104a3d:	000145        	call0	40104a54 <RC_GetBlockAckTime+0x3c>
-40104a40:	1138      	l32i.n	a3, a1, 4
-40104a42:	2108      	l32i.n	a0, a1, 8
-40104a44:	3c3a      	add.n	a3, a12, a3
-40104a46:	31c8      	l32i.n	a12, a1, 12
-40104a48:	223a      	add.n	a2, a2, a3
-40104a4a:	f42020        	extui	a2, a2, 0, 16
-40104a4d:	10c112        	addi	a1, a1, 16
-40104a50:	f00d      	ret.n
-40104a52:	d00000        	subx2	a0, a0, a0
-40104a55:	511143        	excw
-40104a58:	40ffd5        	excw
-40104a5b:	41f430        	srli	a15, a3, 4
-40104a5e:	f83b      	addi.n	a15, a8, 3
-40104a60:	b05250        	addx8	a5, a2, a5
-40104a63:	0558      	l32i.n	a5, a5, 0
-40104a65:	0582b6        	bltui	a2, 8, 40104a6e <RC_GetBlockAckTime+0x56>
-40104a68:	16c332        	addi	a3, a3, 22
-40104a6b:	f43030        	extui	a3, a3, 0, 16
-40104a6e:	823530        	mull	a3, a5, a3
-40104a71:	334a      	add.n	a3, a3, a4
-40104a73:	d53230        	extui	a3, a3, 18, 14
-40104a76:	0682b6        	bltui	a2, 8, 40104a80 <RC_GetBlockAckTime+0x68>
-40104a79:	c47c      	movi.n	a4, -4
-40104a7b:	333b      	addi.n	a3, a3, 3
-40104a7d:	103340        	and	a3, a3, a4
-40104a80:	f42030        	extui	a2, a3, 0, 16
-40104a83:	f00d      	ret.n
-40104a85:	000000        	ill
-40104a88:	c06230        	sub	a6, a2, a3
-40104a8b:	033237        	bltu	a2, a3, 40104a92 <RC_GetBlockAckTime+0x7a>
-40104a8e:	062d      	mov.n	a2, a6
-40104a90:	f00d      	ret.n
-40104a92:	260b      	addi.n	a2, a6, -1
-40104a94:	f00d      	ret.n
-40104a96:	aa0000        	excw
-40104a99:	104a      	add.n	a1, a0, a4
-40104a9b:	b2f640        	excw
-40104a9e:	413a      	add.n	a4, a1, a3
-40104aa0:	fe          	.byte 0xfe
-40104aa1:	ff          	.byte 0xff
-40104aa2:	903220        	addx2	a3, a2, a2
-40104aa5:	334a      	add.n	a3, a3, a4
-40104aa7:	0003a0        	jx	a3
-40104aaa:	001646        	j	40104b07 <RC_GetBlockAckTime+0xef>
-40104aad:	001486        	j	40104b03 <RC_GetBlockAckTime+0xeb>
-40104ab0:	0012c6        	j	40104aff <RC_GetBlockAckTime+0xe7>
-40104ab3:	0008c6        	j	40104ada <RC_GetBlockAckTime+0xc2>
-40104ab6:	000806        	j	40104ada <RC_GetBlockAckTime+0xc2>
-40104ab9:	001186        	j	40104b03 <RC_GetBlockAckTime+0xeb>
-40104abc:	000fc6        	j	40104aff <RC_GetBlockAckTime+0xe7>
-40104abf:	0005c6        	j	40104ada <RC_GetBlockAckTime+0xc2>
-40104ac2:	000d46        	j	40104afb <RC_GetBlockAckTime+0xe3>
-40104ac5:	000b86        	j	40104af7 <RC_GetBlockAckTime+0xdf>
-40104ac8:	0009c6        	j	40104af3 <RC_GetBlockAckTime+0xdb>
-40104acb:	000806        	j	40104aef <RC_GetBlockAckTime+0xd7>
-40104ace:	000346        	j	40104adf <RC_GetBlockAckTime+0xc7>
-40104ad1:	000586        	j	40104aeb <RC_GetBlockAckTime+0xd3>
-40104ad4:	0003c6        	j	40104ae7 <RC_GetBlockAckTime+0xcf>
-40104ad7:	000206        	j	40104ae3 <RC_GetBlockAckTime+0xcb>
-40104ada:	ffa022        	movi	a2, 255
-40104add:	f00d      	ret.n
-40104adf:	020c      	movi.n	a2, 0
-40104ae1:	f00d      	ret.n
-40104ae3:	620c      	movi.n	a2, 6
-40104ae5:	f00d      	ret.n
-40104ae7:	420c      	movi.n	a2, 4
-40104ae9:	f00d      	ret.n
-40104aeb:	220c      	movi.n	a2, 2
-40104aed:	f00d      	ret.n
-40104aef:	720c      	movi.n	a2, 7
+401049b0 <RC_GetBlockAckTime>:
+401049b0:	f0c112        	addi	a1, a1, -16
+401049b3:	31c9      	s32i.n	a12, a1, 12
+401049b5:	2109      	s32i.n	a0, a1, 8
+401049b7:	ffe301        	l32r	a0, 40104944 <ppCalFrameTimes+0x8c>
+401049ba:	ac0c      	movi.n	a12, 10
+401049bc:	b00200        	addx8	a0, a2, a0
+401049bf:	050022        	l8ui	a2, a0, 5
+401049c2:	0109      	s32i.n	a0, a1, 0
+401049c4:	0182b6        	bltui	a2, 8, 401049c9 <RC_GetBlockAckTime+0x19>
+401049c7:	0c1c      	movi.n	a12, 16
+401049c9:	fff5c5        	call0	40104928 <ppCalFrameTimes+0x70>
+401049cc:	1129      	s32i.n	a2, a1, 4
+401049ce:	0128      	l32i.n	a2, a1, 0
+401049d0:	032c      	movi.n	a3, 32
+401049d2:	050222        	l8ui	a2, a2, 5
+401049d5:	000145        	call0	401049ec <RC_GetBlockAckTime+0x3c>
+401049d8:	1138      	l32i.n	a3, a1, 4
+401049da:	2108      	l32i.n	a0, a1, 8
+401049dc:	3c3a      	add.n	a3, a12, a3
+401049de:	31c8      	l32i.n	a12, a1, 12
+401049e0:	223a      	add.n	a2, a2, a3
+401049e2:	f42020        	extui	a2, a2, 0, 16
+401049e5:	10c112        	addi	a1, a1, 16
+401049e8:	f00d      	ret.n
+401049ea:	d00000        	subx2	a0, a0, a0
+401049ed:	511143        	excw
+401049f0:	40ffd5        	excw
+401049f3:	41f430        	srli	a15, a3, 4
+401049f6:	f83b      	addi.n	a15, a8, 3
+401049f8:	b05250        	addx8	a5, a2, a5
+401049fb:	0558      	l32i.n	a5, a5, 0
+401049fd:	0582b6        	bltui	a2, 8, 40104a06 <RC_GetBlockAckTime+0x56>
+40104a00:	16c332        	addi	a3, a3, 22
+40104a03:	f43030        	extui	a3, a3, 0, 16
+40104a06:	823530        	mull	a3, a5, a3
+40104a09:	334a      	add.n	a3, a3, a4
+40104a0b:	d53230        	extui	a3, a3, 18, 14
+40104a0e:	0682b6        	bltui	a2, 8, 40104a18 <RC_GetBlockAckTime+0x68>
+40104a11:	c47c      	movi.n	a4, -4
+40104a13:	333b      	addi.n	a3, a3, 3
+40104a15:	103340        	and	a3, a3, a4
+40104a18:	f42030        	extui	a2, a3, 0, 16
+40104a1b:	f00d      	ret.n
+40104a1d:	000000        	ill
+40104a20:	c06230        	sub	a6, a2, a3
+40104a23:	033237        	bltu	a2, a3, 40104a2a <RC_GetBlockAckTime+0x7a>
+40104a26:	062d      	mov.n	a2, a6
+40104a28:	f00d      	ret.n
+40104a2a:	260b      	addi.n	a2, a6, -1
+40104a2c:	f00d      	ret.n
+40104a2e:	420000        	excw
+40104a31:	104a      	add.n	a1, a0, a4
+40104a33:	b2f640        	excw
+40104a36:	413a      	add.n	a4, a1, a3
+40104a38:	fe          	.byte 0xfe
+40104a39:	ff          	.byte 0xff
+40104a3a:	903220        	addx2	a3, a2, a2
+40104a3d:	334a      	add.n	a3, a3, a4
+40104a3f:	0003a0        	jx	a3
+40104a42:	001646        	j	40104a9f <RC_GetBlockAckTime+0xef>
+40104a45:	001486        	j	40104a9b <RC_GetBlockAckTime+0xeb>
+40104a48:	0012c6        	j	40104a97 <RC_GetBlockAckTime+0xe7>
+40104a4b:	0008c6        	j	40104a72 <RC_GetBlockAckTime+0xc2>
+40104a4e:	000806        	j	40104a72 <RC_GetBlockAckTime+0xc2>
+40104a51:	001186        	j	40104a9b <RC_GetBlockAckTime+0xeb>
+40104a54:	000fc6        	j	40104a97 <RC_GetBlockAckTime+0xe7>
+40104a57:	0005c6        	j	40104a72 <RC_GetBlockAckTime+0xc2>
+40104a5a:	000d46        	j	40104a93 <RC_GetBlockAckTime+0xe3>
+40104a5d:	000b86        	j	40104a8f <RC_GetBlockAckTime+0xdf>
+40104a60:	0009c6        	j	40104a8b <RC_GetBlockAckTime+0xdb>
+40104a63:	000806        	j	40104a87 <RC_GetBlockAckTime+0xd7>
+40104a66:	000346        	j	40104a77 <RC_GetBlockAckTime+0xc7>
+40104a69:	000586        	j	40104a83 <RC_GetBlockAckTime+0xd3>
+40104a6c:	0003c6        	j	40104a7f <RC_GetBlockAckTime+0xcf>
+40104a6f:	000206        	j	40104a7b <RC_GetBlockAckTime+0xcb>
+40104a72:	ffa022        	movi	a2, 255
+40104a75:	f00d      	ret.n
+40104a77:	020c      	movi.n	a2, 0
+40104a79:	f00d      	ret.n
+40104a7b:	620c      	movi.n	a2, 6
+40104a7d:	f00d      	ret.n
+40104a7f:	420c      	movi.n	a2, 4
+40104a81:	f00d      	ret.n
+40104a83:	220c      	movi.n	a2, 2
+40104a85:	f00d      	ret.n
+40104a87:	720c      	movi.n	a2, 7
+40104a89:	f00d      	ret.n
+40104a8b:	520c      	movi.n	a2, 5
+40104a8d:	f00d      	ret.n
+40104a8f:	320c      	movi.n	a2, 3
+40104a91:	f00d      	ret.n
+40104a93:	120c      	movi.n	a2, 1
+40104a95:	f00d      	ret.n
+40104a97:	820c      	movi.n	a2, 8
+40104a99:	f00d      	ret.n
+40104a9b:	920c      	movi.n	a2, 9
+40104a9d:	f00d      	ret.n
+40104a9f:	a20c      	movi.n	a2, 10
+40104aa1:	f00d      	ret.n
+40104aa3:	12ac00        	excw
+40104aa6:	171226        	beqi	a2, 1, 40104ac1 <RC_GetBlockAckTime+0x111>
+40104aa9:	182226        	beqi	a2, 2, 40104ac5 <RC_GetBlockAckTime+0x115>
+40104aac:	0d3226        	beqi	a2, 3, 40104abd <RC_GetBlockAckTime+0x10d>
+40104aaf:	0e5226        	beqi	a2, 5, 40104ac1 <RC_GetBlockAckTime+0x111>
+40104ab2:	0f6226        	beqi	a2, 6, 40104ac5 <RC_GetBlockAckTime+0x115>
+40104ab5:	047226        	beqi	a2, 7, 40104abd <RC_GetBlockAckTime+0x10d>
+40104ab8:	ffa022        	movi	a2, 255
+40104abb:	f00d      	ret.n
+40104abd:	020c      	movi.n	a2, 0
+40104abf:	f00d      	ret.n
+40104ac1:	220c      	movi.n	a2, 2
+40104ac3:	f00d      	ret.n
+40104ac5:	120c      	movi.n	a2, 1
+40104ac7:	f00d      	ret.n
+40104ac9:	320c      	movi.n	a2, 3
+40104acb:	f00d      	ret.n
+40104acd:	000000        	ill
+40104ad0:	07a120        	excw
+40104ad3:	ff3100        	excw
+40104ad6:	ff          	.byte 0xff
+40104ad7:	182252        	l32i	a5, a2, 96
+40104ada:	040c      	movi.n	a4, 0
+40104adc:	0b4542        	s8i	a4, a5, 11
+40104adf:	a249      	s32i.n	a4, a2, 40
+40104ae1:	9249      	s32i.n	a4, a2, 36
+40104ae3:	e249      	s32i.n	a4, a2, 56
+40104ae5:	164242        	s8i	a4, a2, 22
+40104ae8:	174242        	s8i	a4, a2, 23
+40104aeb:	064242        	s8i	a4, a2, 6
+40104aee:	166232        	s32i	a3, a2, 88
 40104af1:	f00d      	ret.n
-40104af3:	520c      	movi.n	a2, 5
-40104af5:	f00d      	ret.n
-40104af7:	320c      	movi.n	a2, 3
-40104af9:	f00d      	ret.n
-40104afb:	120c      	movi.n	a2, 1
-40104afd:	f00d      	ret.n
-40104aff:	820c      	movi.n	a2, 8
-40104b01:	f00d      	ret.n
-40104b03:	920c      	movi.n	a2, 9
-40104b05:	f00d      	ret.n
-40104b07:	a20c      	movi.n	a2, 10
-40104b09:	f00d      	ret.n
-40104b0b:	12ac00        	excw
-40104b0e:	171226        	beqi	a2, 1, 40104b29 <RC_GetBlockAckTime+0x111>
-40104b11:	182226        	beqi	a2, 2, 40104b2d <RC_GetBlockAckTime+0x115>
-40104b14:	0d3226        	beqi	a2, 3, 40104b25 <RC_GetBlockAckTime+0x10d>
-40104b17:	0e5226        	beqi	a2, 5, 40104b29 <RC_GetBlockAckTime+0x111>
-40104b1a:	0f6226        	beqi	a2, 6, 40104b2d <RC_GetBlockAckTime+0x115>
-40104b1d:	047226        	beqi	a2, 7, 40104b25 <RC_GetBlockAckTime+0x10d>
-40104b20:	ffa022        	movi	a2, 255
-40104b23:	f00d      	ret.n
-40104b25:	020c      	movi.n	a2, 0
-40104b27:	f00d      	ret.n
-40104b29:	220c      	movi.n	a2, 2
-40104b2b:	f00d      	ret.n
-40104b2d:	120c      	movi.n	a2, 1
-40104b2f:	f00d      	ret.n
-40104b31:	320c      	movi.n	a2, 3
-40104b33:	f00d      	ret.n
-40104b35:	000000        	ill
-40104b38:	07a120        	excw
-40104b3b:	ff3100        	excw
-40104b3e:	ff          	.byte 0xff
-40104b3f:	182252        	l32i	a5, a2, 96
-40104b42:	040c      	movi.n	a4, 0
-40104b44:	0b4542        	s8i	a4, a5, 11
-40104b47:	a249      	s32i.n	a4, a2, 40
-40104b49:	9249      	s32i.n	a4, a2, 36
-40104b4b:	e249      	s32i.n	a4, a2, 56
-40104b4d:	164242        	s8i	a4, a2, 22
-40104b50:	174242        	s8i	a4, a2, 23
-40104b53:	064242        	s8i	a4, a2, 6
-40104b56:	166232        	s32i	a3, a2, 88
-40104b59:	f00d      	ret.n
-40104b5b:	d84400        	excw
-40104b5e:	fe          	.byte 0xfe
-40104b5f:	3f          	.byte 0x3f
-40104b60:	fe80f0        	excw
-40104b63:	3f          	.byte 0x3f
-40104b64:	2fb8      	l32i.n	a11, a15, 8
-40104b66:	124023        	excw
-40104b69:	09f0c1        	l32r	a12, 400c732c <__floatsidf+0xb903c>
-40104b6c:	21d901        	l32r	a0, 400cd2d0 <__floatsidf+0xbefe0>
-40104b6f:	11c9      	s32i.n	a12, a1, 4
-40104b71:	03dd      	mov.n	a13, a3
-40104b73:	02cd      	mov.n	a12, a2
-40104b75:	fffc45        	call0	40104b3c <RC_GetBlockAckTime+0x124>
-40104b78:	fff901        	l32r	a0, 40104b5c <RC_GetBlockAckTime+0x144>
-40104b7b:	770c22        	l8ui	a2, a12, 119
-40104b7e:	7e0002        	l8ui	a0, a0, 126
-40104b81:	400200        	ssr	a2
-40104b84:	910000        	srl	a0, a0
-40104b87:	1d6007        	bbci	a0, 0, 40104ba8 <RC_GetBlockAckTime+0x190>
-40104b8a:	5c0c22        	l8ui	a2, a12, 92
-40104b8d:	790c32        	l8ui	a3, a12, 121
-40104b90:	fff501        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-40104b93:	0000c0        	callx0	a0
-40104b96:	770c02        	l8ui	a0, a12, 119
-40104b99:	fff131        	l32r	a3, 40104b60 <RC_GetBlockAckTime+0x148>
-40104b9c:	900200        	addx2	a0, a2, a0
-40104b9f:	900030        	addx2	a0, a0, a3
-40104ba2:	010002        	l8ui	a0, a0, 1
-40104ba5:	000886        	j	40104bcb <RC_GetBlockAckTime+0x1b3>
-40104ba8:	020c22        	l8ui	a2, a12, 2
-40104bab:	901c      	movi.n	a0, 25
-40104bad:	012280        	slli	a2, a2, 24
-40104bb0:	312820        	srai	a2, a2, 24
-40104bb3:	112027        	blt	a0, a2, 40104bc8 <RC_GetBlockAckTime+0x1b0>
-40104bb6:	030c32        	l8ui	a3, a12, 3
-40104bb9:	013380        	slli	a3, a3, 24
-40104bbc:	313830        	srai	a3, a3, 24
-40104bbf:	052037        	blt	a0, a3, 40104bc8 <RC_GetBlockAckTime+0x1b0>
-40104bc2:	050c02        	l8ui	a0, a12, 5
-40104bc5:	000086        	j	40104bcb <RC_GetBlockAckTime+0x1b3>
-40104bc8:	780c02        	l8ui	a0, a12, 120
-40104bcb:	182c22        	l32i	a2, a12, 96
-40104bce:	0a0242        	l8ui	a4, a2, 10
-40104bd1:	f23751        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
-40104bd4:	44da      	add.n	a4, a4, a13
-40104bd6:	1b2047        	blt	a0, a4, 40104bf5 <RC_GetBlockAckTime+0x1dd>
-40104bd9:	900dd0        	addx2	a0, a13, a13
-40104bdc:	a06020        	addx4	a6, a0, a2
-40104bdf:	186c62        	s32i	a6, a12, 96
-40104be2:	0020c0        	memw
-40104be5:	0108      	l32i.n	a0, a1, 0
-40104be7:	802552        	l32i	a5, a5, 0x200
-40104bea:	bc59      	s32i.n	a5, a12, 44
-40104bec:	21d8      	l32i.n	a13, a1, 8
-40104bee:	11c8      	l32i.n	a12, a1, 4
-40104bf0:	10c112        	addi	a1, a1, 16
-40104bf3:	f00d      	ret.n
-40104bf5:	900000        	addx2	a0, a0, a0
-40104bf8:	1a2c22        	l32i	a2, a12, 104
-40104bfb:	fff746        	j	40104bdc <RC_GetBlockAckTime+0x1c4>
-40104bfe:	0c0000        	excw
-40104c01:	c112a6        	blti	a2, 1, 40104bc6 <RC_GetBlockAckTime+0x1ae>
-40104c04:	0109f0        	slli	a0, a9, 17
-40104c07:	182242        	l32i	a4, a2, 96
-40104c0a:	a208      	l32i.n	a0, a2, 40
-40104c0c:	010442        	l8ui	a4, a4, 1
-40104c0f:	001b      	addi.n	a0, a0, 1
-40104c11:	2b3437        	bltu	a4, a3, 40104c40 <RC_GetBlockAckTime+0x228>
-40104c14:	9248      	l32i.n	a4, a2, 36
-40104c16:	a209      	s32i.n	a0, a2, 40
-40104c18:	034a      	add.n	a0, a3, a4
-40104c1a:	001b      	addi.n	a0, a0, 1
-40104c1c:	9209      	s32i.n	a0, a2, 36
-40104c1e:	2963f6        	bgeui	a3, 6, 40104c4b <RC_GetBlockAckTime+0x233>
-40104c21:	0933f6        	bgeui	a3, 3, 40104c2e <RC_GetBlockAckTime+0x216>
-40104c24:	000c      	movi.n	a0, 0
-40104c26:	050c      	movi.n	a5, 0
-40104c28:	064252        	s8i	a5, a2, 6
-40104c2b:	000086        	j	40104c31 <RC_GetBlockAckTime+0x219>
-40104c2e:	060202        	l8ui	a0, a2, 6
-40104c31:	04b607        	bgeu	a6, a0, 40104c39 <RC_GetBlockAckTime+0x221>
-40104c34:	130c      	movi.n	a3, 1
-40104c36:	fff305        	call0	40104b68 <RC_GetBlockAckTime+0x150>
-40104c39:	0108      	l32i.n	a0, a1, 0
-40104c3b:	10c112        	addi	a1, a1, 16
-40104c3e:	f00d      	ret.n
-40104c40:	9248      	l32i.n	a4, a2, 36
-40104c42:	a209      	s32i.n	a0, a2, 40
-40104c44:	034a      	add.n	a0, a3, a4
-40104c46:	002b      	addi.n	a0, a0, 2
-40104c48:	fff406        	j	40104c1c <RC_GetBlockAckTime+0x204>
-40104c4b:	060202        	l8ui	a0, a2, 6
-40104c4e:	001b      	addi.n	a0, a0, 1
-40104c50:	740000        	extui	a0, a0, 0, 8
-40104c53:	064202        	s8i	a0, a2, 6
-40104c56:	fff5c6        	j	40104c31 <RC_GetBlockAckTime+0x219>
-40104c59:	000000        	ill
+40104af3:	d82400        	excw
+40104af6:	fe          	.byte 0xfe
+40104af7:	3f          	.byte 0x3f
+40104af8:	fe80f0        	excw
+40104afb:	3f          	.byte 0x3f
+40104afc:	2fb8      	l32i.n	a11, a15, 8
+40104afe:	124023        	excw
+40104b01:	09f0c1        	l32r	a12, 400c72c4 <__floatsidf+0xb8fd4>
+40104b04:	21d901        	l32r	a0, 400cd268 <__floatsidf+0xbef78>
+40104b07:	11c9      	s32i.n	a12, a1, 4
+40104b09:	03dd      	mov.n	a13, a3
+40104b0b:	02cd      	mov.n	a12, a2
+40104b0d:	fffc45        	call0	40104ad4 <RC_GetBlockAckTime+0x124>
+40104b10:	fff901        	l32r	a0, 40104af4 <RC_GetBlockAckTime+0x144>
+40104b13:	770c22        	l8ui	a2, a12, 119
+40104b16:	7e0002        	l8ui	a0, a0, 126
+40104b19:	400200        	ssr	a2
+40104b1c:	910000        	srl	a0, a0
+40104b1f:	1d6007        	bbci	a0, 0, 40104b40 <RC_GetBlockAckTime+0x190>
+40104b22:	5c0c22        	l8ui	a2, a12, 92
+40104b25:	790c32        	l8ui	a3, a12, 121
+40104b28:	fff501        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+40104b2b:	0000c0        	callx0	a0
+40104b2e:	770c02        	l8ui	a0, a12, 119
+40104b31:	fff131        	l32r	a3, 40104af8 <RC_GetBlockAckTime+0x148>
+40104b34:	900200        	addx2	a0, a2, a0
+40104b37:	900030        	addx2	a0, a0, a3
+40104b3a:	010002        	l8ui	a0, a0, 1
+40104b3d:	000886        	j	40104b63 <RC_GetBlockAckTime+0x1b3>
+40104b40:	020c22        	l8ui	a2, a12, 2
+40104b43:	901c      	movi.n	a0, 25
+40104b45:	012280        	slli	a2, a2, 24
+40104b48:	312820        	srai	a2, a2, 24
+40104b4b:	112027        	blt	a0, a2, 40104b60 <RC_GetBlockAckTime+0x1b0>
+40104b4e:	030c32        	l8ui	a3, a12, 3
+40104b51:	013380        	slli	a3, a3, 24
+40104b54:	313830        	srai	a3, a3, 24
+40104b57:	052037        	blt	a0, a3, 40104b60 <RC_GetBlockAckTime+0x1b0>
+40104b5a:	050c02        	l8ui	a0, a12, 5
+40104b5d:	000086        	j	40104b63 <RC_GetBlockAckTime+0x1b3>
+40104b60:	780c02        	l8ui	a0, a12, 120
+40104b63:	182c22        	l32i	a2, a12, 96
+40104b66:	0a0242        	l8ui	a4, a2, 10
+40104b69:	f25151        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
+40104b6c:	44da      	add.n	a4, a4, a13
+40104b6e:	1b2047        	blt	a0, a4, 40104b8d <RC_GetBlockAckTime+0x1dd>
+40104b71:	900dd0        	addx2	a0, a13, a13
+40104b74:	a06020        	addx4	a6, a0, a2
+40104b77:	186c62        	s32i	a6, a12, 96
+40104b7a:	0020c0        	memw
+40104b7d:	0108      	l32i.n	a0, a1, 0
+40104b7f:	802552        	l32i	a5, a5, 0x200
+40104b82:	bc59      	s32i.n	a5, a12, 44
+40104b84:	21d8      	l32i.n	a13, a1, 8
+40104b86:	11c8      	l32i.n	a12, a1, 4
+40104b88:	10c112        	addi	a1, a1, 16
+40104b8b:	f00d      	ret.n
+40104b8d:	900000        	addx2	a0, a0, a0
+40104b90:	1a2c22        	l32i	a2, a12, 104
+40104b93:	fff746        	j	40104b74 <RC_GetBlockAckTime+0x1c4>
+40104b96:	0c0000        	excw
+40104b99:	c112a6        	blti	a2, 1, 40104b5e <RC_GetBlockAckTime+0x1ae>
+40104b9c:	0109f0        	slli	a0, a9, 17
+40104b9f:	182242        	l32i	a4, a2, 96
+40104ba2:	a208      	l32i.n	a0, a2, 40
+40104ba4:	010442        	l8ui	a4, a4, 1
+40104ba7:	001b      	addi.n	a0, a0, 1
+40104ba9:	2b3437        	bltu	a4, a3, 40104bd8 <RC_GetBlockAckTime+0x228>
+40104bac:	9248      	l32i.n	a4, a2, 36
+40104bae:	a209      	s32i.n	a0, a2, 40
+40104bb0:	034a      	add.n	a0, a3, a4
+40104bb2:	001b      	addi.n	a0, a0, 1
+40104bb4:	9209      	s32i.n	a0, a2, 36
+40104bb6:	2963f6        	bgeui	a3, 6, 40104be3 <RC_GetBlockAckTime+0x233>
+40104bb9:	0933f6        	bgeui	a3, 3, 40104bc6 <RC_GetBlockAckTime+0x216>
+40104bbc:	000c      	movi.n	a0, 0
+40104bbe:	050c      	movi.n	a5, 0
+40104bc0:	064252        	s8i	a5, a2, 6
+40104bc3:	000086        	j	40104bc9 <RC_GetBlockAckTime+0x219>
+40104bc6:	060202        	l8ui	a0, a2, 6
+40104bc9:	04b607        	bgeu	a6, a0, 40104bd1 <RC_GetBlockAckTime+0x221>
+40104bcc:	130c      	movi.n	a3, 1
+40104bce:	fff305        	call0	40104b00 <RC_GetBlockAckTime+0x150>
+40104bd1:	0108      	l32i.n	a0, a1, 0
+40104bd3:	10c112        	addi	a1, a1, 16
+40104bd6:	f00d      	ret.n
+40104bd8:	9248      	l32i.n	a4, a2, 36
+40104bda:	a209      	s32i.n	a0, a2, 40
+40104bdc:	034a      	add.n	a0, a3, a4
+40104bde:	002b      	addi.n	a0, a0, 2
+40104be0:	fff406        	j	40104bb4 <RC_GetBlockAckTime+0x204>
+40104be3:	060202        	l8ui	a0, a2, 6
+40104be6:	001b      	addi.n	a0, a0, 1
+40104be8:	740000        	extui	a0, a0, 0, 8
+40104beb:	064202        	s8i	a0, a2, 6
+40104bee:	fff5c6        	j	40104bc9 <RC_GetBlockAckTime+0x219>
+40104bf1:	000000        	ill
 
-40104c5c <rcUpdateTxDone>:
-40104c5c:	f0c112        	addi	a1, a1, -16
-40104c5f:	0109      	s32i.n	a0, a1, 0
-40104c61:	07a216        	beqz	a2, 40104cdf <rcUpdateTxDone+0x83>
-40104c64:	182202        	l32i	a0, a2, 96
-40104c67:	074016        	beqz	a0, 40104cdf <rcUpdateTxDone+0x83>
-40104c6a:	7348      	l32i.n	a4, a3, 28
-40104c6c:	0f0352        	l8ui	a5, a3, 15
-40104c6f:	6c9407        	bne	a4, a0, 40104cdf <rcUpdateTxDone+0x83>
-40104c72:	e268      	l32i.n	a6, a2, 56
-40104c74:	661b      	addi.n	a6, a6, 1
-40104c76:	e269      	s32i.n	a6, a2, 56
-40104c78:	5d1566        	bnei	a5, 1, 40104cd9 <rcUpdateTxDone+0x7d>
-40104c7b:	5278      	l32i.n	a7, a2, 20
-40104c7d:	7fa082        	movi	a8, 127
-40104c80:	49e727        	bbsi	a7, 2, 40104ccd <rcUpdateTxDone+0x71>
-40104c83:	090302        	l8ui	a0, a3, 9
-40104c86:	070c      	movi.n	a7, 0
-40104c88:	016080        	slli	a6, a0, 24
-40104c8b:	316860        	srai	a6, a6, 24
-40104c8e:	3b1687        	beq	a6, a8, 40104ccd <rcUpdateTxDone+0x71>
-40104c91:	000292        	l8ui	a9, a2, 0
-40104c94:	004202        	s8i	a0, a2, 0
-40104c97:	010980        	slli	a0, a9, 24
-40104c9a:	81c992        	addi	a9, a9, -127
-40104c9d:	310800        	srai	a0, a0, 24
-40104ca0:	060a      	add.n	a0, a6, a0
-40104ca2:	210100        	srai	a0, a0, 1
-40104ca5:	830790        	moveqz	a0, a7, a9
-40104ca8:	016080        	slli	a6, a0, 24
-40104cab:	010272        	l8ui	a7, a2, 1
-40104cae:	316860        	srai	a6, a6, 24
-40104cb1:	151787        	beq	a7, a8, 40104cca <rcUpdateTxDone+0x6e>
-40104cb4:	014780        	slli	a4, a7, 24
-40104cb7:	314840        	srai	a4, a4, 24
-40104cba:	904440        	addx2	a4, a4, a4
-40104cbd:	464a      	add.n	a4, a6, a4
-40104cbf:	1144e0        	slli	a4, a4, 2
-40104cc2:	04fb      	addi.n	a0, a4, 15
-40104cc4:	b30440        	movgez	a0, a4, a4
-40104cc7:	210400        	srai	a0, a0, 4
-40104cca:	014202        	s8i	a0, a2, 1
-40104ccd:	040332        	l8ui	a3, a3, 4
-40104cd0:	413430        	srli	a3, a3, 4
-40104cd3:	fff2c5        	call0	40104c00 <RC_GetBlockAckTime+0x1e8>
-40104cd6:	000146        	j	40104cdf <rcUpdateTxDone+0x83>
-40104cd9:	092526        	beqi	a5, 2, 40104ce6 <rcUpdateTxDone+0x8a>
-40104cdc:	063526        	beqi	a5, 3, 40104ce6 <rcUpdateTxDone+0x8a>
-40104cdf:	0108      	l32i.n	a0, a1, 0
-40104ce1:	10c112        	addi	a1, a1, 16
+40104bf4 <rcUpdateTxDone>:
+40104bf4:	f0c112        	addi	a1, a1, -16
+40104bf7:	0109      	s32i.n	a0, a1, 0
+40104bf9:	07a216        	beqz	a2, 40104c77 <rcUpdateTxDone+0x83>
+40104bfc:	182202        	l32i	a0, a2, 96
+40104bff:	074016        	beqz	a0, 40104c77 <rcUpdateTxDone+0x83>
+40104c02:	7348      	l32i.n	a4, a3, 28
+40104c04:	0f0352        	l8ui	a5, a3, 15
+40104c07:	6c9407        	bne	a4, a0, 40104c77 <rcUpdateTxDone+0x83>
+40104c0a:	e268      	l32i.n	a6, a2, 56
+40104c0c:	661b      	addi.n	a6, a6, 1
+40104c0e:	e269      	s32i.n	a6, a2, 56
+40104c10:	5d1566        	bnei	a5, 1, 40104c71 <rcUpdateTxDone+0x7d>
+40104c13:	5278      	l32i.n	a7, a2, 20
+40104c15:	7fa082        	movi	a8, 127
+40104c18:	49e727        	bbsi	a7, 2, 40104c65 <rcUpdateTxDone+0x71>
+40104c1b:	090302        	l8ui	a0, a3, 9
+40104c1e:	070c      	movi.n	a7, 0
+40104c20:	016080        	slli	a6, a0, 24
+40104c23:	316860        	srai	a6, a6, 24
+40104c26:	3b1687        	beq	a6, a8, 40104c65 <rcUpdateTxDone+0x71>
+40104c29:	000292        	l8ui	a9, a2, 0
+40104c2c:	004202        	s8i	a0, a2, 0
+40104c2f:	010980        	slli	a0, a9, 24
+40104c32:	81c992        	addi	a9, a9, -127
+40104c35:	310800        	srai	a0, a0, 24
+40104c38:	060a      	add.n	a0, a6, a0
+40104c3a:	210100        	srai	a0, a0, 1
+40104c3d:	830790        	moveqz	a0, a7, a9
+40104c40:	016080        	slli	a6, a0, 24
+40104c43:	010272        	l8ui	a7, a2, 1
+40104c46:	316860        	srai	a6, a6, 24
+40104c49:	151787        	beq	a7, a8, 40104c62 <rcUpdateTxDone+0x6e>
+40104c4c:	014780        	slli	a4, a7, 24
+40104c4f:	314840        	srai	a4, a4, 24
+40104c52:	904440        	addx2	a4, a4, a4
+40104c55:	464a      	add.n	a4, a6, a4
+40104c57:	1144e0        	slli	a4, a4, 2
+40104c5a:	04fb      	addi.n	a0, a4, 15
+40104c5c:	b30440        	movgez	a0, a4, a4
+40104c5f:	210400        	srai	a0, a0, 4
+40104c62:	014202        	s8i	a0, a2, 1
+40104c65:	040332        	l8ui	a3, a3, 4
+40104c68:	413430        	srli	a3, a3, 4
+40104c6b:	fff2c5        	call0	40104b98 <RC_GetBlockAckTime+0x1e8>
+40104c6e:	000146        	j	40104c77 <rcUpdateTxDone+0x83>
+40104c71:	092526        	beqi	a5, 2, 40104c7e <rcUpdateTxDone+0x8a>
+40104c74:	063526        	beqi	a5, 3, 40104c7e <rcUpdateTxDone+0x8a>
+40104c77:	0108      	l32i.n	a0, a1, 0
+40104c79:	10c112        	addi	a1, a1, 16
+40104c7c:	f00d      	ret.n
+40104c7e:	080032        	l8ui	a3, a0, 8
+40104c81:	fff145        	call0	40104b98 <RC_GetBlockAckTime+0x1e8>
+40104c84:	fffbc6        	j	40104c77 <rcUpdateTxDone+0x83>
+	...
+
+40104c88 <rcUpdateRxDone>:
+40104c88:	000362        	l8ui	a6, a3, 0
+40104c8b:	014680        	slli	a4, a6, 24
+40104c8e:	313840        	srai	a3, a4, 24
+40104c91:	04a216        	beqz	a2, 40104cdf <rcUpdateRxDone+0x57>
+40104c94:	5258      	l32i.n	a5, a2, 20
+40104c96:	7fa082        	movi	a8, 127
+40104c99:	42e507        	bbsi	a5, 0, 40104cdf <rcUpdateRxDone+0x57>
+40104c9c:	020272        	l8ui	a7, a2, 2
+40104c9f:	079787        	bne	a7, a8, 40104caa <rcUpdateRxDone+0x22>
+40104ca2:	024262        	s8i	a6, a2, 2
+40104ca5:	060c      	movi.n	a6, 0
+40104ca7:	000546        	j	40104cc0 <rcUpdateRxDone+0x38>
+40104caa:	024262        	s8i	a6, a2, 2
+40104cad:	016780        	slli	a6, a7, 24
+40104cb0:	316860        	srai	a6, a6, 24
+40104cb3:	636a      	add.n	a6, a3, a6
+40104cb5:	216160        	srai	a6, a6, 1
+40104cb8:	016680        	slli	a6, a6, 24
+40104cbb:	316860        	srai	a6, a6, 24
+40104cbe:	063d      	mov.n	a3, a6
+40104cc0:	030272        	l8ui	a7, a2, 3
+40104cc3:	151787        	beq	a7, a8, 40104cdc <rcUpdateRxDone+0x54>
+40104cc6:	014780        	slli	a4, a7, 24
+40104cc9:	314840        	srai	a4, a4, 24
+40104ccc:	904440        	addx2	a4, a4, a4
+40104ccf:	464a      	add.n	a4, a6, a4
+40104cd1:	1144e0        	slli	a4, a4, 2
+40104cd4:	34fb      	addi.n	a3, a4, 15
+40104cd6:	b33440        	movgez	a3, a4, a4
+40104cd9:	213430        	srai	a3, a3, 4
+40104cdc:	034232        	s8i	a3, a2, 3
+40104cdf:	f00d      	ret.n
+40104ce1:	000000        	ill
+
+40104ce4 <rcUpdateDataRxDone>:
 40104ce4:	f00d      	ret.n
-40104ce6:	080032        	l8ui	a3, a0, 8
-40104ce9:	fff145        	call0	40104c00 <RC_GetBlockAckTime+0x1e8>
-40104cec:	fffbc6        	j	40104cdf <rcUpdateTxDone+0x83>
-	...
+40104ce6:	240000        	extui	a0, a0, 0, 3
+40104ce9:	3ffe83        	excw
+40104cec:	240d30        	extui	a0, a3, 13, 3
+40104cef:	826440        	mull	a6, a4, a4
+40104cf2:	fe          	.byte 0xfe
+40104cf3:	3f          	.byte 0x3f
+40104cf4:	fe82c4        	excw
+40104cf7:	3f          	.byte 0x3f
+40104cf8:	200800        	or	a0, a8, a0
+40104cfb:	80e000        	add	a14, a0, a0
+40104cfe:	fe          	.byte 0xfe
+40104cff:	3f          	.byte 0x3f
 
-40104cf0 <rcUpdateRxDone>:
-40104cf0:	000362        	l8ui	a6, a3, 0
-40104cf3:	014680        	slli	a4, a6, 24
-40104cf6:	313840        	srai	a3, a4, 24
-40104cf9:	04a216        	beqz	a2, 40104d47 <rcUpdateRxDone+0x57>
-40104cfc:	5258      	l32i.n	a5, a2, 20
-40104cfe:	7fa082        	movi	a8, 127
-40104d01:	42e507        	bbsi	a5, 0, 40104d47 <rcUpdateRxDone+0x57>
-40104d04:	020272        	l8ui	a7, a2, 2
-40104d07:	079787        	bne	a7, a8, 40104d12 <rcUpdateRxDone+0x22>
-40104d0a:	024262        	s8i	a6, a2, 2
-40104d0d:	060c      	movi.n	a6, 0
-40104d0f:	000546        	j	40104d28 <rcUpdateRxDone+0x38>
-40104d12:	024262        	s8i	a6, a2, 2
-40104d15:	016780        	slli	a6, a7, 24
-40104d18:	316860        	srai	a6, a6, 24
-40104d1b:	636a      	add.n	a6, a3, a6
-40104d1d:	216160        	srai	a6, a6, 1
-40104d20:	016680        	slli	a6, a6, 24
-40104d23:	316860        	srai	a6, a6, 24
-40104d26:	063d      	mov.n	a3, a6
-40104d28:	030272        	l8ui	a7, a2, 3
-40104d2b:	151787        	beq	a7, a8, 40104d44 <rcUpdateRxDone+0x54>
-40104d2e:	014780        	slli	a4, a7, 24
-40104d31:	314840        	srai	a4, a4, 24
-40104d34:	904440        	addx2	a4, a4, a4
-40104d37:	464a      	add.n	a4, a6, a4
-40104d39:	1144e0        	slli	a4, a4, 2
-40104d3c:	34fb      	addi.n	a3, a4, 15
-40104d3e:	b33440        	movgez	a3, a4, a4
-40104d41:	213430        	srai	a3, a3, 4
-40104d44:	034232        	s8i	a3, a2, 3
-40104d47:	f00d      	ret.n
-40104d49:	000000        	ill
+40104d00 <rcGetSched>:
+40104d00:	ff7d61        	l32r	a6, 40104af4 <RC_GetBlockAckTime+0x144>
+40104d03:	f0c112        	addi	a1, a1, -16
+40104d06:	0109      	s32i.n	a0, a1, 0
+40104d08:	11c9      	s32i.n	a12, a1, 4
+40104d0a:	fff701        	l32r	a0, 40104ce8 <rcUpdateDataRxDone+0x4>
+40104d0d:	02cd      	mov.n	a12, a2
+40104d0f:	032d      	mov.n	a2, a3
+40104d11:	04ec16        	beqz	a12, 40104d63 <rcGetSched+0x63>
+40104d14:	182c32        	l32i	a3, a12, 96
+40104d17:	048316        	beqz	a3, 40104d63 <rcGetSched+0x63>
+40104d1a:	0238      	l32i.n	a3, a2, 0
+40104d1c:	417630        	srli	a7, a3, 6
+40104d1f:	586387        	bbci	a3, 8, 40104d7b <rcGetSched+0x7b>
+40104d22:	7209      	s32i.n	a0, a2, 28
+40104d24:	026122        	s32i	a2, a1, 8
+40104d27:	00d056        	bnez	a0, 40104d38 <rcGetSched+0x38>
+40104d2a:	fff021        	l32r	a2, 40104cec <rcUpdateDataRxDone+0x8>
+40104d2d:	fc5645        	call0	40101294 <os_printf_plus>
+40104d30:	022122        	l32i	a2, a1, 8
+40104d33:	ff7061        	l32r	a6, 40104af4 <RC_GetBlockAckTime+0x144>
+40104d36:	0238      	l32i.n	a3, a2, 0
+40104d38:	9c8c      	beqz.n	a12, 40104d45 <rcGetSched+0x45>
+40104d3a:	5c48      	l32i.n	a4, a12, 20
+40104d3c:	045930        	extui	a5, a3, 9, 1
+40104d3f:	026467        	bbci	a4, 6, 40104d45 <rcGetSched+0x45>
+40104d42:	091556        	bnez	a5, 40104dd7 <rcGetSched+0xd7>
+40104d45:	7a0672        	l8ui	a7, a6, 122
+40104d48:	048130        	extui	a8, a3, 1, 1
+40104d4b:	400800        	ssr	a8
+40104d4e:	917070        	srl	a7, a7
+40104d51:	1e6707        	bbci	a7, 0, 40104d73 <rcGetSched+0x73>
+40104d54:	7b0602        	l8ui	a0, a6, 123
+40104d57:	11c8      	l32i.n	a12, a1, 4
+40104d59:	084202        	s8i	a0, a2, 8
+40104d5c:	0108      	l32i.n	a0, a1, 0
+40104d5e:	10c112        	addi	a1, a1, 16
+40104d61:	f00d      	ret.n
+40104d63:	0238      	l32i.n	a3, a2, 0
+40104d65:	790642        	l8ui	a4, a6, 121
+40104d68:	186307        	bbci	a3, 0, 40104d84 <rcGetSched+0x84>
+40104d6b:	ffe101        	l32r	a0, 40104cf0 <rcUpdateDataRxDone+0xc>
+40104d6e:	7209      	s32i.n	a0, a2, 28
+40104d70:	ffec06        	j	40104d24 <rcGetSched+0x24>
+40104d73:	7208      	l32i.n	a0, a2, 28
+40104d75:	000002        	l8ui	a0, a0, 0
+40104d78:	fff6c6        	j	40104d57 <rcGetSched+0x57>
+40104d7b:	1c6377        	bbci	a3, 7, 40104d9b <rcGetSched+0x9b>
+40104d7e:	192c02        	l32i	a0, a12, 100
+40104d81:	fffa46        	j	40104d6e <rcGetSched+0x6e>
+40104d84:	9a1466        	bnei	a4, 1, 40104d22 <rcGetSched+0x22>
+40104d87:	97e377        	bbsi	a3, 7, 40104d22 <rcGetSched+0x22>
+40104d8a:	94f3f7        	bbsi	a3, 31, 40104d22 <rcGetSched+0x22>
+40104d8d:	4c8c      	beqz.n	a12, 40104d95 <rcGetSched+0x95>
+40104d8f:	172c52        	l32i	a5, a12, 92
+40104d92:	f8c516        	beqz	a5, 40104d22 <rcGetSched+0x22>
+40104d95:	ffd701        	l32r	a0, 40104cf4 <rcUpdateDataRxDone+0x10>
+40104d98:	ffe186        	j	40104d22 <rcGetSched+0x22>
+40104d9b:	2129      	s32i.n	a2, a1, 8
+40104d9d:	256397        	bbci	a3, 9, 40104dc6 <rcGetSched+0xc6>
+40104da0:	0c2d      	mov.n	a2, a12
+40104da2:	002e05        	call0	40105084 <rcGetRate+0x29c>
+40104da5:	ff5361        	l32r	a6, 40104af4 <RC_GetBlockAckTime+0x144>
+40104da8:	2128      	l32i.n	a2, a1, 8
+40104daa:	182c02        	l32i	a0, a12, 96
+40104dad:	0248      	l32i.n	a4, a2, 0
+40104daf:	ed6f51        	l32r	a5, 4010036c <esp_crc8+0xdc>
+40104db2:	543040        	extui	a3, a4, 0, 6
+40104db5:	414640        	srli	a4, a4, 6
+40104db8:	204450        	or	a4, a4, a5
+40104dbb:	1144a0        	slli	a4, a4, 6
+40104dbe:	203340        	or	a3, a3, a4
+40104dc1:	0239      	s32i.n	a3, a2, 0
+40104dc3:	ffe9c6        	j	40104d6e <rcGetSched+0x6e>
+40104dc6:	ffcc51        	l32r	a5, 40104cf8 <rcUpdateDataRxDone+0x14>
+40104dc9:	100577        	bnone	a5, a7, 40104ddd <rcGetSched+0xdd>
+40104dcc:	172c72        	l32i	a7, a12, 92
+40104dcf:	a78c      	beqz.n	a7, 40104ddd <rcGetSched+0xdd>
+40104dd1:	ffca01        	l32r	a0, 40104cfc <rcUpdateDataRxDone+0x18>
+40104dd4:	ffe586        	j	40104d6e <rcGetSched+0x6e>
+40104dd7:	070c02        	l8ui	a0, a12, 7
+40104dda:	ffde46        	j	40104d57 <rcGetSched+0x57>
+40104ddd:	192c02        	l32i	a0, a12, 100
+40104de0:	ffe286        	j	40104d6e <rcGetSched+0x6e>
+40104de3:	90e400        	addx2	a14, a4, a0
+40104de6:	fe          	.byte 0xfe
+40104de7:	3f          	.byte 0x3f
 
-40104d4c <rcUpdateDataRxDone>:
-40104d4c:	f00d      	ret.n
-40104d4e:	240000        	extui	a0, a0, 0, 3
-40104d51:	3ffe83        	excw
-40104d54:	240d30        	extui	a0, a3, 13, 3
-40104d57:	826440        	mull	a6, a4, a4
-40104d5a:	fe          	.byte 0xfe
-40104d5b:	3f          	.byte 0x3f
-40104d5c:	fe82c4        	excw
-40104d5f:	3f          	.byte 0x3f
-40104d60:	200800        	or	a0, a8, a0
-40104d63:	80e000        	add	a14, a0, a0
-40104d66:	fe          	.byte 0xfe
-40104d67:	3f          	.byte 0x3f
+40104de8 <rcGetRate>:
+40104de8:	03a8      	l32i.n	a10, a3, 0
+40104dea:	f0c112        	addi	a1, a1, -16
+40104ded:	4156a0        	srli	a5, a10, 6
+40104df0:	64fac7        	bbsi	a10, 28, 40104e58 <rcGetRate+0x70>
+40104df3:	070c      	movi.n	a7, 0
+40104df5:	060c      	movi.n	a6, 0
+40104df7:	0159      	s32i.n	a5, a1, 0
+40104df9:	1398      	l32i.n	a9, a3, 4
+40104dfb:	7388      	l32i.n	a8, a3, 28
+40104dfd:	349490        	extui	a9, a9, 4, 4
+40104e00:	90b680        	addx2	a11, a6, a8
+40104e03:	010b42        	l8ui	a4, a11, 1
+40104e06:	661b      	addi.n	a6, a6, 1
+40104e08:	747a      	add.n	a7, a4, a7
+40104e0a:	747070        	extui	a7, a7, 0, 8
+40104e0d:	202977        	blt	a9, a7, 40104e31 <rcGetRate+0x49>
+40104e10:	746060        	extui	a6, a6, 0, 8
+40104e13:	e94666        	bnei	a6, 4, 40104e00 <rcGetRate+0x18>
+40104e16:	ff3771        	l32r	a7, 40104af4 <RC_GetBlockAckTime+0x144>
+40104e19:	0491a0        	extui	a9, a10, 1, 1
+40104e1c:	7a0772        	l8ui	a7, a7, 122
+40104e1f:	400900        	ssr	a9
+40104e22:	917070        	srl	a7, a7
+40104e25:	466707        	bbci	a7, 0, 40104e6f <rcGetRate+0x87>
+40104e28:	ff3321        	l32r	a2, 40104af4 <RC_GetBlockAckTime+0x144>
+40104e2b:	7b0222        	l8ui	a2, a2, 123
+40104e2e:	0008c6        	j	40104e55 <rcGetRate+0x6d>
+40104e31:	828c      	beqz.n	a2, 40104e3d <rcGetRate+0x55>
+40104e33:	5248      	l32i.n	a4, a2, 20
+40104e35:	0158      	l32i.n	a5, a1, 0
+40104e37:	026467        	bbci	a4, 6, 40104e3d <rcGetRate+0x55>
+40104e3a:	3de537        	bbsi	a5, 3, 40104e7b <rcGetRate+0x93>
+40104e3d:	ff2d61        	l32r	a6, 40104af4 <RC_GetBlockAckTime+0x144>
+40104e40:	0471a0        	extui	a7, a10, 1, 1
+40104e43:	7a0662        	l8ui	a6, a6, 122
+40104e46:	400700        	ssr	a7
+40104e49:	916060        	srl	a6, a6
+40104e4c:	0d6607        	bbci	a6, 0, 40104e5d <rcGetRate+0x75>
+40104e4f:	ff2921        	l32r	a2, 40104af4 <RC_GetBlockAckTime+0x144>
+40104e52:	7b0222        	l8ui	a2, a2, 123
+40104e55:	084322        	s8i	a2, a3, 8
+40104e58:	10c112        	addi	a1, a1, 16
+40104e5b:	f00d      	ret.n
+40104e5d:	ffe141        	l32r	a4, 40104de4 <rcGetSched+0xe4>
+40104e60:	080442        	l8ui	a4, a4, 8
+40104e63:	fec442        	addi	a4, a4, -2
+40104e66:	0b2947        	blt	a9, a4, 40104e75 <rcGetRate+0x8d>
+40104e69:	060822        	l8ui	a2, a8, 6
+40104e6c:	fff946        	j	40104e55 <rcGetRate+0x6d>
+40104e6f:	060822        	l8ui	a2, a8, 6
+40104e72:	fff7c6        	j	40104e55 <rcGetRate+0x6d>
+40104e75:	000b22        	l8ui	a2, a11, 0
+40104e78:	fff646        	j	40104e55 <rcGetRate+0x6d>
+40104e7b:	070222        	l8ui	a2, a2, 7
+40104e7e:	fff4c6        	j	40104e55 <rcGetRate+0x6d>
+40104e81:	000000        	ill
+40104e84:	4e99      	s32i.n	a9, a14, 16
+40104e86:	624010        	excw
+40104e89:	f6ffa0        	excw
+40104e8c:	516ac3        	excw
+40104e8f:	fffd      	excw
+40104e91:	904330        	addx2	a4, a3, a3
+40104e94:	445a      	add.n	a4, a4, a5
+40104e96:	0004a0        	jx	a4
+40104e99:	001706        	j	40104ef9 <rcGetRate+0x111>
+40104e9c:	006d86        	j	40105056 <rcGetRate+0x26e>
+40104e9f:	006586        	j	40105039 <rcGetRate+0x251>
+40104ea2:	005d06        	j	4010501a <rcGetRate+0x232>
+40104ea5:	001406        	j	40104ef9 <rcGetRate+0x111>
+40104ea8:	006a86        	j	40105056 <rcGetRate+0x26e>
+40104eab:	006286        	j	40105039 <rcGetRate+0x251>
+40104eae:	005a06        	j	4010501a <rcGetRate+0x232>
+40104eb1:	005186        	j	40104ffb <rcGetRate+0x213>
+40104eb4:	004906        	j	40104fdc <rcGetRate+0x1f4>
+40104eb7:	004106        	j	40104fbf <rcGetRate+0x1d7>
+40104eba:	003886        	j	40104fa0 <rcGetRate+0x1b8>
+40104ebd:	003006        	j	40104f81 <rcGetRate+0x199>
+40104ec0:	002786        	j	40104f62 <rcGetRate+0x17a>
+40104ec3:	001f06        	j	40104f43 <rcGetRate+0x15b>
+40104ec6:	001706        	j	40104f26 <rcGetRate+0x13e>
+40104ec9:	0034c6        	j	40104fa0 <rcGetRate+0x1b8>
+40104ecc:	003bc6        	j	40104fbf <rcGetRate+0x1d7>
+40104ecf:	001c06        	j	40104f43 <rcGetRate+0x15b>
+40104ed2:	004186        	j	40104fdc <rcGetRate+0x1f4>
+40104ed5:	002246        	j	40104f62 <rcGetRate+0x17a>
+40104ed8:	0047c6        	j	40104ffb <rcGetRate+0x213>
+40104edb:	002886        	j	40104f81 <rcGetRate+0x199>
+40104ede:	000886        	j	40104f04 <rcGetRate+0x11c>
+40104ee1:	002ec6        	j	40104fa0 <rcGetRate+0x1b8>
+40104ee4:	0035c6        	j	40104fbf <rcGetRate+0x1d7>
+40104ee7:	001606        	j	40104f43 <rcGetRate+0x15b>
+40104eea:	003b86        	j	40104fdc <rcGetRate+0x1f4>
+40104eed:	001c46        	j	40104f62 <rcGetRate+0x17a>
+40104ef0:	0041c6        	j	40104ffb <rcGetRate+0x213>
+40104ef3:	002286        	j	40104f81 <rcGetRate+0x199>
+40104ef6:	000286        	j	40104f04 <rcGetRate+0x11c>
+40104ef9:	032c      	movi.n	a3, 32
+40104efb:	03b327        	bgeu	a3, a2, 40104f02 <rcGetRate+0x11a>
+40104efe:	032d      	mov.n	a2, a3
+40104f00:	f00d      	ret.n
+40104f02:	f00d      	ret.n
+40104f04:	172c      	movi.n	a7, 33
+40104f06:	02b727        	bgeu	a7, a2, 40104f0c <rcGetRate+0x124>
+40104f09:	049267        	bne	a2, a6, 40104f11 <rcGetRate+0x129>
+40104f0c:	020c      	movi.n	a2, 0
+40104f0e:	000386        	j	40104f20 <rcGetRate+0x138>
+40104f11:	dfc232        	addi	a3, a2, -33
+40104f14:	e0c222        	addi	a2, a2, -32
+40104f17:	b32330        	movgez	a2, a3, a3
+40104f1a:	212120        	srai	a2, a2, 1
+40104f1d:	902220        	addx2	a2, a2, a2
+40104f20:	742020        	extui	a2, a2, 0, 8
+40104f23:	fff486        	j	40104ef9 <rcGetRate+0x111>
+40104f26:	0292b6        	bltui	a2, 10, 40104f2c <rcGetRate+0x144>
+40104f29:	049267        	bne	a2, a6, 40104f31 <rcGetRate+0x149>
+40104f2c:	020c      	movi.n	a2, 0
+40104f2e:	fffb86        	j	40104f20 <rcGetRate+0x138>
+40104f31:	f7c232        	addi	a3, a2, -9
+40104f34:	f8c222        	addi	a2, a2, -8
+40104f37:	b32330        	movgez	a2, a3, a3
+40104f3a:	212120        	srai	a2, a2, 1
+40104f3d:	902220        	addx2	a2, a2, a2
+40104f40:	fff706        	j	40104f20 <rcGetRate+0x138>
+40104f43:	d40c      	movi.n	a4, 13
+40104f45:	02b427        	bgeu	a4, a2, 40104f4b <rcGetRate+0x163>
+40104f48:	049267        	bne	a2, a6, 40104f50 <rcGetRate+0x168>
+40104f4b:	020c      	movi.n	a2, 0
+40104f4d:	fff3c6        	j	40104f20 <rcGetRate+0x138>
+40104f50:	f3c232        	addi	a3, a2, -13
+40104f53:	f4c222        	addi	a2, a2, -12
+40104f56:	b32330        	movgez	a2, a3, a3
+40104f59:	212120        	srai	a2, a2, 1
+40104f5c:	902220        	addx2	a2, a2, a2
+40104f5f:	ffef46        	j	40104f20 <rcGetRate+0x138>
+40104f62:	541c      	movi.n	a4, 21
+40104f64:	02b427        	bgeu	a4, a2, 40104f6a <rcGetRate+0x182>
+40104f67:	049267        	bne	a2, a6, 40104f6f <rcGetRate+0x187>
+40104f6a:	020c      	movi.n	a2, 0
+40104f6c:	ffec06        	j	40104f20 <rcGetRate+0x138>
+40104f6f:	ebc232        	addi	a3, a2, -21
+40104f72:	ecc222        	addi	a2, a2, -20
+40104f75:	b32330        	movgez	a2, a3, a3
+40104f78:	212120        	srai	a2, a2, 1
+40104f7b:	902220        	addx2	a2, a2, a2
+40104f7e:	ffe786        	j	40104f20 <rcGetRate+0x138>
+40104f81:	d41c      	movi.n	a4, 29
+40104f83:	02b427        	bgeu	a4, a2, 40104f89 <rcGetRate+0x1a1>
+40104f86:	049267        	bne	a2, a6, 40104f8e <rcGetRate+0x1a6>
+40104f89:	020c      	movi.n	a2, 0
+40104f8b:	ffe446        	j	40104f20 <rcGetRate+0x138>
+40104f8e:	e3c232        	addi	a3, a2, -29
+40104f91:	e4c222        	addi	a2, a2, -28
+40104f94:	b32330        	movgez	a2, a3, a3
+40104f97:	212120        	srai	a2, a2, 1
+40104f9a:	902220        	addx2	a2, a2, a2
+40104f9d:	ffdfc6        	j	40104f20 <rcGetRate+0x138>
+40104fa0:	840c      	movi.n	a4, 8
+40104fa2:	02b427        	bgeu	a4, a2, 40104fa8 <rcGetRate+0x1c0>
+40104fa5:	049267        	bne	a2, a6, 40104fad <rcGetRate+0x1c5>
+40104fa8:	020c      	movi.n	a2, 0
+40104faa:	ffdc86        	j	40104f20 <rcGetRate+0x138>
+40104fad:	f8c232        	addi	a3, a2, -8
+40104fb0:	f9c222        	addi	a2, a2, -7
+40104fb3:	b32330        	movgez	a2, a3, a3
+40104fb6:	212120        	srai	a2, a2, 1
+40104fb9:	902220        	addx2	a2, a2, a2
+40104fbc:	ffd806        	j	40104f20 <rcGetRate+0x138>
+40104fbf:	02a2b6        	bltui	a2, 12, 40104fc5 <rcGetRate+0x1dd>
+40104fc2:	049267        	bne	a2, a6, 40104fca <rcGetRate+0x1e2>
+40104fc5:	020c      	movi.n	a2, 0
+40104fc7:	ffd546        	j	40104f20 <rcGetRate+0x138>
+40104fca:	f5c232        	addi	a3, a2, -11
+40104fcd:	f6c222        	addi	a2, a2, -10
+40104fd0:	b32330        	movgez	a2, a3, a3
+40104fd3:	212120        	srai	a2, a2, 1
+40104fd6:	902220        	addx2	a2, a2, a2
+40104fd9:	ffd0c6        	j	40104f20 <rcGetRate+0x138>
+40104fdc:	041c      	movi.n	a4, 16
+40104fde:	02b427        	bgeu	a4, a2, 40104fe4 <rcGetRate+0x1fc>
+40104fe1:	049267        	bne	a2, a6, 40104fe9 <rcGetRate+0x201>
+40104fe4:	020c      	movi.n	a2, 0
+40104fe6:	ffcd86        	j	40104f20 <rcGetRate+0x138>
+40104fe9:	f0c232        	addi	a3, a2, -16
+40104fec:	f1c222        	addi	a2, a2, -15
+40104fef:	b32330        	movgez	a2, a3, a3
+40104ff2:	212120        	srai	a2, a2, 1
+40104ff5:	902220        	addx2	a2, a2, a2
+40104ff8:	ffc906        	j	40104f20 <rcGetRate+0x138>
+40104ffb:	a41c      	movi.n	a4, 26
+40104ffd:	02b427        	bgeu	a4, a2, 40105003 <rcGetRate+0x21b>
+40105000:	049267        	bne	a2, a6, 40105008 <rcGetRate+0x220>
+40105003:	020c      	movi.n	a2, 0
+40105005:	ffc5c6        	j	40104f20 <rcGetRate+0x138>
+40105008:	e6c232        	addi	a3, a2, -26
+4010500b:	e7c222        	addi	a2, a2, -25
+4010500e:	b32330        	movgez	a2, a3, a3
+40105011:	212120        	srai	a2, a2, 1
+40105014:	902220        	addx2	a2, a2, a2
+40105017:	ffc146        	j	40104f20 <rcGetRate+0x138>
+4010501a:	e40c      	movi.n	a4, 14
+4010501c:	02b427        	bgeu	a4, a2, 40105022 <rcGetRate+0x23a>
+4010501f:	049267        	bne	a2, a6, 40105027 <rcGetRate+0x23f>
+40105022:	020c      	movi.n	a2, 0
+40105024:	ffbe06        	j	40104f20 <rcGetRate+0x138>
+40105027:	f2c232        	addi	a3, a2, -14
+4010502a:	f3c222        	addi	a2, a2, -13
+4010502d:	b32330        	movgez	a2, a3, a3
+40105030:	212120        	srai	a2, a2, 1
+40105033:	902220        	addx2	a2, a2, a2
+40105036:	ffb986        	j	40104f20 <rcGetRate+0x138>
+40105039:	02a2b6        	bltui	a2, 12, 4010503f <rcGetRate+0x257>
+4010503c:	049267        	bne	a2, a6, 40105044 <rcGetRate+0x25c>
+4010503f:	020c      	movi.n	a2, 0
+40105041:	ffb6c6        	j	40104f20 <rcGetRate+0x138>
+40105044:	f5c232        	addi	a3, a2, -11
+40105047:	f6c222        	addi	a2, a2, -10
+4010504a:	b32330        	movgez	a2, a3, a3
+4010504d:	212120        	srai	a2, a2, 1
+40105050:	902220        	addx2	a2, a2, a2
+40105053:	ffb246        	j	40104f20 <rcGetRate+0x138>
+40105056:	a40c      	movi.n	a4, 10
+40105058:	02b427        	bgeu	a4, a2, 4010505e <rcGetRate+0x276>
+4010505b:	049267        	bne	a2, a6, 40105063 <rcGetRate+0x27b>
+4010505e:	020c      	movi.n	a2, 0
+40105060:	ffaf06        	j	40104f20 <rcGetRate+0x138>
+40105063:	f6c232        	addi	a3, a2, -10
+40105066:	f7c222        	addi	a2, a2, -9
+40105069:	b32330        	movgez	a2, a3, a3
+4010506c:	212120        	srai	a2, a2, 1
+4010506f:	902220        	addx2	a2, a2, a2
+40105072:	ffaa86        	j	40104f20 <rcGetRate+0x138>
+40105075:	000000        	ill
+40105078:	9f          	.byte 0x9f
+40105079:	000186        	j	40105083 <rcGetRate+0x29b>
+4010507c:	fe9800        	excw
+4010507f:	3f          	.byte 0x3f
+40105080:	3d0900        	excw
+40105083:	c11200        	mul16u	a1, a2, a0
+40105086:	31d9e0        	srai	a13, a14, 25
+40105089:	51f9      	s32i.n	a15, a1, 20
+4010508b:	1109      	s32i.n	a0, a1, 4
+4010508d:	41e9      	s32i.n	a14, a1, 16
+4010508f:	21c9      	s32i.n	a12, a1, 8
+40105091:	02cd      	mov.n	a12, a2
+40105093:	f107e1        	l32r	a14, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105096:	0020c0        	memw
+40105099:	802ed2        	l32i	a13, a14, 0x200
+4010509c:	d238      	l32i.n	a3, a2, 52
+4010509e:	0d2d      	mov.n	a2, a13
+401050a0:	ff97c5        	call0	40104a20 <RC_GetBlockAckTime+0x70>
+401050a3:	9c38      	l32i.n	a3, a12, 36
+401050a5:	63a002        	movi	a0, 99
+401050a8:	166316        	beqz	a3, 40105212 <rcGetRate+0x42a>
+401050ab:	ec48      	l32i.n	a4, a12, 56
+401050ad:	fff251        	l32r	a5, 40105078 <rcGetRate+0x290>
+401050b0:	053047        	bltu	a0, a4, 401050b9 <rcGetRate+0x2d1>
+401050b3:	023527        	bltu	a5, a2, 401050b9 <rcGetRate+0x2d1>
+401050b6:	005606        	j	40105212 <rcGetRate+0x42a>
+401050b9:	dcd9      	s32i.n	a13, a12, 52
+401050bb:	fe8ff1        	l32r	a15, 40104af8 <RC_GetBlockAckTime+0x148>
+401050be:	ffefe1        	l32r	a14, 4010507c <rcGetRate+0x294>
+401050c1:	ac28      	l32i.n	a2, a12, 40
+401050c3:	0e48      	l32i.n	a4, a14, 0
+401050c5:	112290        	slli	a2, a2, 7
+401050c8:	441b      	addi.n	a4, a4, 1
+401050ca:	0e49      	s32i.n	a4, a14, 0
+401050cc:	ed3a01        	l32r	a0, 401005b4 <wdt_feed+0x17c>
+401050cf:	0000c0        	callx0	a0
+401050d2:	742020        	extui	a2, a2, 0, 8
+401050d5:	170c02        	l8ui	a0, a12, 23
+401050d8:	164c22        	s8i	a2, a12, 22
+401050db:	07b016        	beqz	a0, 4010515a <rcGetRate+0x372>
+401050de:	520a      	add.n	a5, a2, a0
+401050e0:	cc38      	l32i.n	a3, a12, 48
+401050e2:	0d2d      	mov.n	a2, a13
+401050e4:	215150        	srai	a5, a5, 1
+401050e7:	174c52        	s8i	a5, a12, 23
+401050ea:	ff9345        	call0	40104a20 <RC_GetBlockAckTime+0x70>
+401050ed:	170ce2        	l8ui	a14, a12, 23
+401050f0:	0129      	s32i.n	a2, a1, 0
+401050f2:	182c32        	l32i	a3, a12, 96
+401050f5:	010c22        	l8ui	a2, a12, 1
+401050f8:	000332        	l8ui	a3, a3, 0
+401050fb:	ffd8c5        	call0	40104e88 <rcGetRate+0xa0>
+401050fe:	182c02        	l32i	a0, a12, 96
+40105101:	742120        	extui	a2, a2, 1, 8
+40105104:	090032        	l8ui	a3, a0, 9
+40105107:	054c      	movi.n	a5, 64
+40105109:	d3cc      	bnez.n	a3, 4010511a <rcGetRate+0x332>
+4010510b:	a45c      	movi.n	a4, 90
+4010510d:	c04420        	sub	a4, a4, a2
+40105110:	120c      	movi.n	a2, 1
+40105112:	2f34e7        	bltu	a4, a14, 40105145 <rcGetRate+0x35d>
+40105115:	020c      	movi.n	a2, 0
+40105117:	000a86        	j	40105145 <rcGetRate+0x35d>
+4010511a:	0f3537        	bltu	a5, a3, 4010512d <rcGetRate+0x345>
+4010511d:	64a062        	movi	a6, 100
+40105120:	c06620        	sub	a6, a6, a2
+40105123:	120c      	movi.n	a2, 1
+40105125:	1c36e7        	bltu	a6, a14, 40105145 <rcGetRate+0x35d>
+40105128:	020c      	movi.n	a2, 0
+4010512a:	0005c6        	j	40105145 <rcGetRate+0x35d>
+4010512d:	060c      	movi.n	a6, 0
+4010512f:	6ea072        	movi	a7, 110
+40105132:	c07720        	sub	a7, a7, a2
+40105135:	09b7e7        	bgeu	a7, a14, 40105142 <rcGetRate+0x35a>
+40105138:	c08320        	sub	a8, a3, a2
+4010513b:	882b      	addi.n	a8, a8, 2
+4010513d:	01b8e7        	bgeu	a8, a14, 40105142 <rcGetRate+0x35a>
+40105140:	160c      	movi.n	a6, 1
+40105142:	742060        	extui	a2, a6, 0, 8
+40105145:	1e0c      	movi.n	a14, 1
+40105147:	0d2216        	beqz	a2, 4010521d <rcGetRate+0x435>
+4010514a:	01a8      	l32i.n	a10, a1, 0
+4010514c:	162c92        	l32i	a9, a12, 88
+4010514f:	0239a7        	bltu	a9, a10, 40105155 <rcGetRate+0x36d>
+40105152:	0031c6        	j	4010521d <rcGetRate+0x435>
+40105155:	0e0d      	mov.n	a0, a14
+40105157:	004706        	j	40105277 <rcGetRate+0x48f>
+4010515a:	182c02        	l32i	a0, a12, 96
+4010515d:	090002        	l8ui	a0, a0, 9
+40105160:	900000        	addx2	a0, a0, a0
+40105163:	01d002        	addmi	a0, a0, 0x100
+40105166:	80c002        	addi	a0, a0, -128
+40105169:	740200        	extui	a0, a0, 2, 8
+4010516c:	174c02        	s8i	a0, a12, 23
+4010516f:	07b027        	bgeu	a0, a2, 4010517a <rcGetRate+0x392>
+40105172:	320a      	add.n	a3, a2, a0
+40105174:	213130        	srai	a3, a3, 1
+40105177:	174c32        	s8i	a3, a12, 23
+4010517a:	5c0c22        	l8ui	a2, a12, 92
+4010517d:	790c32        	l8ui	a3, a12, 121
+40105180:	fe5f01        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+40105183:	0000c0        	callx0	a0
+40105186:	790c32        	l8ui	a3, a12, 121
+40105189:	182c42        	l32i	a4, a12, 96
+4010518c:	770c52        	l8ui	a5, a12, 119
+4010518f:	0a0442        	l8ui	a4, a4, 10
+40105192:	905250        	addx2	a5, a2, a5
+40105195:	172c22        	l32i	a2, a12, 92
+40105198:	9055f0        	addx2	a5, a5, a15
+4010519b:	000552        	l8ui	a5, a5, 0
+4010519e:	742020        	extui	a2, a2, 0, 8
+401051a1:	353457        	bltu	a4, a5, 401051da <rcGetRate+0x3f2>
+401051a4:	fe5601        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+401051a7:	0000c0        	callx0	a0
+401051aa:	182c02        	l32i	a0, a12, 96
+401051ad:	770c62        	l8ui	a6, a12, 119
+401051b0:	0a0002        	l8ui	a0, a0, 10
+401051b3:	906260        	addx2	a6, a2, a6
+401051b6:	9066f0        	addx2	a6, a6, a15
+401051b9:	010662        	l8ui	a6, a6, 1
+401051bc:	2cb607        	bgeu	a6, a0, 401051ec <rcGetRate+0x404>
+401051bf:	5c0c22        	l8ui	a2, a12, 92
+401051c2:	790c32        	l8ui	a3, a12, 121
+401051c5:	fe4d01        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+401051c8:	0000c0        	callx0	a0
+401051cb:	770c02        	l8ui	a0, a12, 119
+401051ce:	900200        	addx2	a0, a2, a0
+401051d1:	9000f0        	addx2	a0, a0, a15
+401051d4:	010002        	l8ui	a0, a0, 1
+401051d7:	000446        	j	401051ec <rcGetRate+0x404>
+401051da:	fe4801        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+401051dd:	0000c0        	callx0	a0
+401051e0:	770c02        	l8ui	a0, a12, 119
+401051e3:	900200        	addx2	a0, a2, a0
+401051e6:	9000f0        	addx2	a0, a0, a15
+401051e9:	000002        	l8ui	a0, a0, 0
+401051ec:	030c      	movi.n	a3, 0
+401051ee:	742000        	extui	a2, a0, 0, 8
+401051f1:	ac39      	s32i.n	a3, a12, 40
+401051f3:	9c39      	s32i.n	a3, a12, 36
+401051f5:	ec39      	s32i.n	a3, a12, 56
+401051f7:	1a2c32        	l32i	a3, a12, 104
+401051fa:	902220        	addx2	a2, a2, a2
+401051fd:	a02230        	addx4	a2, a2, a3
+40105200:	186c22        	s32i	a2, a12, 96
+40105203:	21c8      	l32i.n	a12, a1, 8
+40105205:	31d8      	l32i.n	a13, a1, 12
+40105207:	41e8      	l32i.n	a14, a1, 16
+40105209:	51f8      	l32i.n	a15, a1, 20
+4010520b:	1108      	l32i.n	a0, a1, 4
+4010520d:	20c112        	addi	a1, a1, 32
+40105210:	f00d      	ret.n
+40105212:	122c22        	l32i	a2, a12, 72
+40105215:	dc38      	l32i.n	a3, a12, 52
+40105217:	ff8085        	call0	40104a20 <RC_GetBlockAckTime+0x70>
+4010521a:	fff946        	j	40105203 <rcGetRate+0x41b>
+4010521d:	0b0042        	l8ui	a4, a0, 11
+40105220:	0ae407        	bbsi	a4, 0, 4010522e <rcGetRate+0x446>
+40105223:	ff9651        	l32r	a5, 4010507c <rcGetRate+0x294>
+40105226:	0558      	l32i.n	a5, a5, 0
+40105228:	145050        	extui	a5, a5, 0, 2
+4010522b:	f4b556        	bnez	a5, 4010517a <rcGetRate+0x392>
+4010522e:	010c22        	l8ui	a2, a12, 1
+40105231:	000032        	l8ui	a3, a0, 0
+40105234:	ffc505        	call0	40104e88 <rcGetRate+0xa0>
+40105237:	170c62        	l8ui	a6, a12, 23
+4010523a:	182c02        	l32i	a0, a12, 96
+4010523d:	748120        	extui	a8, a2, 1, 8
+40105240:	090072        	l8ui	a7, a0, 9
+40105243:	0b0022        	l8ui	a2, a0, 11
+40105246:	c07780        	sub	a7, a7, a8
+40105249:	16a677        	bge	a6, a7, 40105263 <rcGetRate+0x47b>
+4010524c:	0e6207        	bbci	a2, 0, 4010525e <rcGetRate+0x476>
+4010524f:	162c02        	l32i	a0, a12, 88
+40105252:	ff8b91        	l32r	a9, 40105080 <rcGetRate+0x298>
+40105255:	053907        	bltu	a9, a0, 4010525e <rcGetRate+0x476>
+40105258:	11a0f0        	slli	a10, a0, 1
+4010525b:	166ca2        	s32i	a10, a12, 88
+4010525e:	200c      	movi.n	a0, 2
+40105260:	0004c6        	j	40105277 <rcGetRate+0x48f>
+40105263:	0e6207        	bbci	a2, 0, 40105275 <rcGetRate+0x48d>
+40105266:	fe1ab1        	l32r	a11, 40104ad0 <RC_GetBlockAckTime+0x120>
+40105269:	fea032        	movi	a3, 254
+4010526c:	103230        	and	a3, a2, a3
+4010526f:	0b4032        	s8i	a3, a0, 11
+40105272:	166cb2        	s32i	a11, a12, 88
+40105275:	000c      	movi.n	a0, 0
+40105277:	311066        	bnei	a0, 1, 401052ac <rcGetRate+0x4c4>
+4010527a:	0c2d      	mov.n	a2, a12
+4010527c:	ff8545        	call0	40104ad4 <RC_GetBlockAckTime+0x124>
+4010527f:	fe1d41        	l32r	a4, 40104af4 <RC_GetBlockAckTime+0x144>
+40105282:	770c52        	l8ui	a5, a12, 119
+40105285:	7e0442        	l8ui	a4, a4, 126
+40105288:	400500        	ssr	a5
+4010528b:	914040        	srl	a4, a4
+4010528e:	3a6407        	bbci	a4, 0, 401052cc <rcGetRate+0x4e4>
+40105291:	5c0c22        	l8ui	a2, a12, 92
+40105294:	790c32        	l8ui	a3, a12, 121
+40105297:	fe1901        	l32r	a0, 40104afc <RC_GetBlockAckTime+0x14c>
+4010529a:	0000c0        	callx0	a0
+4010529d:	770c32        	l8ui	a3, a12, 119
+401052a0:	902230        	addx2	a2, a2, a3
+401052a3:	9022f0        	addx2	a2, a2, a15
+401052a6:	000222        	l8ui	a2, a2, 0
+401052a9:	000886        	j	401052cf <rcGetRate+0x4e7>
+401052ac:	fec042        	addi	a4, a0, -2
+401052af:	ec7456        	bnez	a4, 4010517a <rcGetRate+0x392>
+401052b2:	0d2d      	mov.n	a2, a13
+401052b4:	bc38      	l32i.n	a3, a12, 44
+401052b6:	ff7685        	call0	40104a20 <RC_GetBlockAckTime+0x70>
+401052b9:	ec8851        	l32r	a5, 401004dc <wdt_feed+0xa4>
+401052bc:	023527        	bltu	a5, a2, 401052c2 <rcGetRate+0x4da>
+401052bf:	ffadc6        	j	4010517a <rcGetRate+0x392>
+401052c2:	0c2d      	mov.n	a2, a12
+401052c4:	130c      	movi.n	a3, 1
+401052c6:	ff8385        	call0	40104b00 <RC_GetBlockAckTime+0x150>
+401052c9:	ffab46        	j	4010517a <rcGetRate+0x392>
+401052cc:	040c22        	l8ui	a2, a12, 4
+401052cf:	182c02        	l32i	a0, a12, 96
+401052d2:	0a0062        	l8ui	a6, a0, 10
+401052d5:	023267        	bltu	a2, a6, 401052db <rcGetRate+0x4f3>
+401052d8:	ffa786        	j	4010517a <rcGetRate+0x392>
+401052db:	f4c092        	addi	a9, a0, -12
+401052de:	0b0982        	l8ui	a8, a9, 11
+401052e1:	186c92        	s32i	a9, a12, 96
+401052e4:	2088e0        	or	a8, a8, a14
+401052e7:	0b4982        	s8i	a8, a9, 11
+401052ea:	0020c0        	memw
+401052ed:	f07071        	l32r	a7, 401014b0 <system_deep_sleep_local_2+0xb0>
+401052f0:	802772        	l32i	a7, a7, 0x200
+401052f3:	cc79      	s32i.n	a7, a12, 48
+401052f5:	ffa046        	j	4010517a <rcGetRate+0x392>
 
-40104d68 <rcGetSched>:
-40104d68:	ff7d61        	l32r	a6, 40104b5c <RC_GetBlockAckTime+0x144>
-40104d6b:	f0c112        	addi	a1, a1, -16
-40104d6e:	0109      	s32i.n	a0, a1, 0
-40104d70:	11c9      	s32i.n	a12, a1, 4
-40104d72:	fff701        	l32r	a0, 40104d50 <rcUpdateDataRxDone+0x4>
-40104d75:	02cd      	mov.n	a12, a2
-40104d77:	032d      	mov.n	a2, a3
-40104d79:	04ec16        	beqz	a12, 40104dcb <rcGetSched+0x63>
-40104d7c:	182c32        	l32i	a3, a12, 96
-40104d7f:	048316        	beqz	a3, 40104dcb <rcGetSched+0x63>
-40104d82:	0238      	l32i.n	a3, a2, 0
-40104d84:	417630        	srli	a7, a3, 6
-40104d87:	586387        	bbci	a3, 8, 40104de3 <rcGetSched+0x7b>
-40104d8a:	7209      	s32i.n	a0, a2, 28
-40104d8c:	026122        	s32i	a2, a1, 8
-40104d8f:	00d056        	bnez	a0, 40104da0 <rcGetSched+0x38>
-40104d92:	fff021        	l32r	a2, 40104d54 <rcUpdateDataRxDone+0x8>
-40104d95:	fc4fc5        	call0	40101294 <os_printf_plus>
-40104d98:	022122        	l32i	a2, a1, 8
-40104d9b:	ff7061        	l32r	a6, 40104b5c <RC_GetBlockAckTime+0x144>
-40104d9e:	0238      	l32i.n	a3, a2, 0
-40104da0:	9c8c      	beqz.n	a12, 40104dad <rcGetSched+0x45>
-40104da2:	5c48      	l32i.n	a4, a12, 20
-40104da4:	045930        	extui	a5, a3, 9, 1
-40104da7:	026467        	bbci	a4, 6, 40104dad <rcGetSched+0x45>
-40104daa:	091556        	bnez	a5, 40104e3f <rcGetSched+0xd7>
-40104dad:	7a0672        	l8ui	a7, a6, 122
-40104db0:	048130        	extui	a8, a3, 1, 1
-40104db3:	400800        	ssr	a8
-40104db6:	917070        	srl	a7, a7
-40104db9:	1e6707        	bbci	a7, 0, 40104ddb <rcGetSched+0x73>
-40104dbc:	7b0602        	l8ui	a0, a6, 123
-40104dbf:	11c8      	l32i.n	a12, a1, 4
-40104dc1:	084202        	s8i	a0, a2, 8
-40104dc4:	0108      	l32i.n	a0, a1, 0
-40104dc6:	10c112        	addi	a1, a1, 16
-40104dc9:	f00d      	ret.n
-40104dcb:	0238      	l32i.n	a3, a2, 0
-40104dcd:	790642        	l8ui	a4, a6, 121
-40104dd0:	186307        	bbci	a3, 0, 40104dec <rcGetSched+0x84>
-40104dd3:	ffe101        	l32r	a0, 40104d58 <rcUpdateDataRxDone+0xc>
-40104dd6:	7209      	s32i.n	a0, a2, 28
-40104dd8:	ffec06        	j	40104d8c <rcGetSched+0x24>
-40104ddb:	7208      	l32i.n	a0, a2, 28
-40104ddd:	000002        	l8ui	a0, a0, 0
-40104de0:	fff6c6        	j	40104dbf <rcGetSched+0x57>
-40104de3:	1c6377        	bbci	a3, 7, 40104e03 <rcGetSched+0x9b>
-40104de6:	192c02        	l32i	a0, a12, 100
-40104de9:	fffa46        	j	40104dd6 <rcGetSched+0x6e>
-40104dec:	9a1466        	bnei	a4, 1, 40104d8a <rcGetSched+0x22>
-40104def:	97e377        	bbsi	a3, 7, 40104d8a <rcGetSched+0x22>
-40104df2:	94f3f7        	bbsi	a3, 31, 40104d8a <rcGetSched+0x22>
-40104df5:	4c8c      	beqz.n	a12, 40104dfd <rcGetSched+0x95>
-40104df7:	172c52        	l32i	a5, a12, 92
-40104dfa:	f8c516        	beqz	a5, 40104d8a <rcGetSched+0x22>
-40104dfd:	ffd701        	l32r	a0, 40104d5c <rcUpdateDataRxDone+0x10>
-40104e00:	ffe186        	j	40104d8a <rcGetSched+0x22>
-40104e03:	2129      	s32i.n	a2, a1, 8
-40104e05:	256397        	bbci	a3, 9, 40104e2e <rcGetSched+0xc6>
-40104e08:	0c2d      	mov.n	a2, a12
-40104e0a:	002e05        	call0	401050ec <rcGetRate+0x29c>
-40104e0d:	ff5361        	l32r	a6, 40104b5c <RC_GetBlockAckTime+0x144>
-40104e10:	2128      	l32i.n	a2, a1, 8
-40104e12:	182c02        	l32i	a0, a12, 96
-40104e15:	0248      	l32i.n	a4, a2, 0
-40104e17:	ed5551        	l32r	a5, 4010036c <esp_crc8+0xdc>
-40104e1a:	543040        	extui	a3, a4, 0, 6
-40104e1d:	414640        	srli	a4, a4, 6
-40104e20:	204450        	or	a4, a4, a5
-40104e23:	1144a0        	slli	a4, a4, 6
-40104e26:	203340        	or	a3, a3, a4
-40104e29:	0239      	s32i.n	a3, a2, 0
-40104e2b:	ffe9c6        	j	40104dd6 <rcGetSched+0x6e>
-40104e2e:	ffcc51        	l32r	a5, 40104d60 <rcUpdateDataRxDone+0x14>
-40104e31:	100577        	bnone	a5, a7, 40104e45 <rcGetSched+0xdd>
-40104e34:	172c72        	l32i	a7, a12, 92
-40104e37:	a78c      	beqz.n	a7, 40104e45 <rcGetSched+0xdd>
-40104e39:	ffca01        	l32r	a0, 40104d64 <rcUpdateDataRxDone+0x18>
-40104e3c:	ffe586        	j	40104dd6 <rcGetSched+0x6e>
-40104e3f:	070c02        	l8ui	a0, a12, 7
-40104e42:	ffde46        	j	40104dbf <rcGetSched+0x57>
-40104e45:	192c02        	l32i	a0, a12, 100
-40104e48:	ffe286        	j	40104dd6 <rcGetSched+0x6e>
-40104e4b:	910400        	excw
-40104e4e:	fe          	.byte 0xfe
-40104e4f:	3f          	.byte 0x3f
+401052f8 <rcReachRetryLimit>:
+401052f8:	040232        	l8ui	a3, a2, 4
+401052fb:	feba41        	l32r	a4, 40104de4 <rcGetSched+0xe4>
+401052fe:	120c      	movi.n	a2, 1
+40105300:	080442        	l8ui	a4, a4, 8
+40105303:	413430        	srli	a3, a3, 4
+40105306:	01a347        	bge	a3, a4, 4010530b <rcReachRetryLimit+0x13>
+40105309:	020c      	movi.n	a2, 0
+4010530b:	f00d      	ret.n
+4010530d:	000000        	ill
 
-40104e50 <rcGetRate>:
-40104e50:	03a8      	l32i.n	a10, a3, 0
-40104e52:	f0c112        	addi	a1, a1, -16
-40104e55:	4156a0        	srli	a5, a10, 6
-40104e58:	64fac7        	bbsi	a10, 28, 40104ec0 <rcGetRate+0x70>
-40104e5b:	070c      	movi.n	a7, 0
-40104e5d:	060c      	movi.n	a6, 0
-40104e5f:	0159      	s32i.n	a5, a1, 0
-40104e61:	1398      	l32i.n	a9, a3, 4
-40104e63:	7388      	l32i.n	a8, a3, 28
-40104e65:	349490        	extui	a9, a9, 4, 4
-40104e68:	90b680        	addx2	a11, a6, a8
-40104e6b:	010b42        	l8ui	a4, a11, 1
-40104e6e:	661b      	addi.n	a6, a6, 1
-40104e70:	747a      	add.n	a7, a4, a7
-40104e72:	747070        	extui	a7, a7, 0, 8
-40104e75:	202977        	blt	a9, a7, 40104e99 <rcGetRate+0x49>
-40104e78:	746060        	extui	a6, a6, 0, 8
-40104e7b:	e94666        	bnei	a6, 4, 40104e68 <rcGetRate+0x18>
-40104e7e:	ff3771        	l32r	a7, 40104b5c <RC_GetBlockAckTime+0x144>
-40104e81:	0491a0        	extui	a9, a10, 1, 1
-40104e84:	7a0772        	l8ui	a7, a7, 122
-40104e87:	400900        	ssr	a9
-40104e8a:	917070        	srl	a7, a7
-40104e8d:	466707        	bbci	a7, 0, 40104ed7 <rcGetRate+0x87>
-40104e90:	ff3321        	l32r	a2, 40104b5c <RC_GetBlockAckTime+0x144>
-40104e93:	7b0222        	l8ui	a2, a2, 123
-40104e96:	0008c6        	j	40104ebd <rcGetRate+0x6d>
-40104e99:	828c      	beqz.n	a2, 40104ea5 <rcGetRate+0x55>
-40104e9b:	5248      	l32i.n	a4, a2, 20
-40104e9d:	0158      	l32i.n	a5, a1, 0
-40104e9f:	026467        	bbci	a4, 6, 40104ea5 <rcGetRate+0x55>
-40104ea2:	3de537        	bbsi	a5, 3, 40104ee3 <rcGetRate+0x93>
-40104ea5:	ff2d61        	l32r	a6, 40104b5c <RC_GetBlockAckTime+0x144>
-40104ea8:	0471a0        	extui	a7, a10, 1, 1
-40104eab:	7a0662        	l8ui	a6, a6, 122
-40104eae:	400700        	ssr	a7
-40104eb1:	916060        	srl	a6, a6
-40104eb4:	0d6607        	bbci	a6, 0, 40104ec5 <rcGetRate+0x75>
-40104eb7:	ff2921        	l32r	a2, 40104b5c <RC_GetBlockAckTime+0x144>
-40104eba:	7b0222        	l8ui	a2, a2, 123
-40104ebd:	084322        	s8i	a2, a3, 8
-40104ec0:	10c112        	addi	a1, a1, 16
-40104ec3:	f00d      	ret.n
-40104ec5:	ffe141        	l32r	a4, 40104e4c <rcGetSched+0xe4>
-40104ec8:	080442        	l8ui	a4, a4, 8
-40104ecb:	fec442        	addi	a4, a4, -2
-40104ece:	0b2947        	blt	a9, a4, 40104edd <rcGetRate+0x8d>
-40104ed1:	060822        	l8ui	a2, a8, 6
-40104ed4:	fff946        	j	40104ebd <rcGetRate+0x6d>
-40104ed7:	060822        	l8ui	a2, a8, 6
-40104eda:	fff7c6        	j	40104ebd <rcGetRate+0x6d>
-40104edd:	000b22        	l8ui	a2, a11, 0
-40104ee0:	fff646        	j	40104ebd <rcGetRate+0x6d>
-40104ee3:	070222        	l8ui	a2, a2, 7
-40104ee6:	fff4c6        	j	40104ebd <rcGetRate+0x6d>
-40104ee9:	000000        	ill
-40104eec:	104f01        	l32r	a0, 400c9028 <__floatsidf+0xbad38>
-40104eef:	a06240        	addx4	a6, a2, a4
-40104ef2:	ff          	.byte 0xff
-40104ef3:	6ac3f6        	bgeui	a3, 32, 40104f61 <rcGetRate+0x111>
-40104ef6:	fffd51        	l32r	a5, 40104eec <rcGetRate+0x9c>
-40104ef9:	904330        	addx2	a4, a3, a3
-40104efc:	445a      	add.n	a4, a4, a5
-40104efe:	0004a0        	jx	a4
-40104f01:	001706        	j	40104f61 <rcGetRate+0x111>
-40104f04:	006d86        	j	401050be <rcGetRate+0x26e>
-40104f07:	006586        	j	401050a1 <rcGetRate+0x251>
-40104f0a:	005d06        	j	40105082 <rcGetRate+0x232>
-40104f0d:	001406        	j	40104f61 <rcGetRate+0x111>
-40104f10:	006a86        	j	401050be <rcGetRate+0x26e>
-40104f13:	006286        	j	401050a1 <rcGetRate+0x251>
-40104f16:	005a06        	j	40105082 <rcGetRate+0x232>
-40104f19:	005186        	j	40105063 <rcGetRate+0x213>
-40104f1c:	004906        	j	40105044 <rcGetRate+0x1f4>
-40104f1f:	004106        	j	40105027 <rcGetRate+0x1d7>
-40104f22:	003886        	j	40105008 <rcGetRate+0x1b8>
-40104f25:	003006        	j	40104fe9 <rcGetRate+0x199>
-40104f28:	002786        	j	40104fca <rcGetRate+0x17a>
-40104f2b:	001f06        	j	40104fab <rcGetRate+0x15b>
-40104f2e:	001706        	j	40104f8e <rcGetRate+0x13e>
-40104f31:	0034c6        	j	40105008 <rcGetRate+0x1b8>
-40104f34:	003bc6        	j	40105027 <rcGetRate+0x1d7>
-40104f37:	001c06        	j	40104fab <rcGetRate+0x15b>
-40104f3a:	004186        	j	40105044 <rcGetRate+0x1f4>
-40104f3d:	002246        	j	40104fca <rcGetRate+0x17a>
-40104f40:	0047c6        	j	40105063 <rcGetRate+0x213>
-40104f43:	002886        	j	40104fe9 <rcGetRate+0x199>
-40104f46:	000886        	j	40104f6c <rcGetRate+0x11c>
-40104f49:	002ec6        	j	40105008 <rcGetRate+0x1b8>
-40104f4c:	0035c6        	j	40105027 <rcGetRate+0x1d7>
-40104f4f:	001606        	j	40104fab <rcGetRate+0x15b>
-40104f52:	003b86        	j	40105044 <rcGetRate+0x1f4>
-40104f55:	001c46        	j	40104fca <rcGetRate+0x17a>
-40104f58:	0041c6        	j	40105063 <rcGetRate+0x213>
-40104f5b:	002286        	j	40104fe9 <rcGetRate+0x199>
-40104f5e:	000286        	j	40104f6c <rcGetRate+0x11c>
-40104f61:	032c      	movi.n	a3, 32
-40104f63:	03b327        	bgeu	a3, a2, 40104f6a <rcGetRate+0x11a>
-40104f66:	032d      	mov.n	a2, a3
-40104f68:	f00d      	ret.n
-40104f6a:	f00d      	ret.n
-40104f6c:	172c      	movi.n	a7, 33
-40104f6e:	02b727        	bgeu	a7, a2, 40104f74 <rcGetRate+0x124>
-40104f71:	049267        	bne	a2, a6, 40104f79 <rcGetRate+0x129>
-40104f74:	020c      	movi.n	a2, 0
-40104f76:	000386        	j	40104f88 <rcGetRate+0x138>
-40104f79:	dfc232        	addi	a3, a2, -33
-40104f7c:	e0c222        	addi	a2, a2, -32
-40104f7f:	b32330        	movgez	a2, a3, a3
-40104f82:	212120        	srai	a2, a2, 1
-40104f85:	902220        	addx2	a2, a2, a2
-40104f88:	742020        	extui	a2, a2, 0, 8
-40104f8b:	fff486        	j	40104f61 <rcGetRate+0x111>
-40104f8e:	0292b6        	bltui	a2, 10, 40104f94 <rcGetRate+0x144>
-40104f91:	049267        	bne	a2, a6, 40104f99 <rcGetRate+0x149>
-40104f94:	020c      	movi.n	a2, 0
-40104f96:	fffb86        	j	40104f88 <rcGetRate+0x138>
-40104f99:	f7c232        	addi	a3, a2, -9
-40104f9c:	f8c222        	addi	a2, a2, -8
-40104f9f:	b32330        	movgez	a2, a3, a3
-40104fa2:	212120        	srai	a2, a2, 1
-40104fa5:	902220        	addx2	a2, a2, a2
-40104fa8:	fff706        	j	40104f88 <rcGetRate+0x138>
-40104fab:	d40c      	movi.n	a4, 13
-40104fad:	02b427        	bgeu	a4, a2, 40104fb3 <rcGetRate+0x163>
-40104fb0:	049267        	bne	a2, a6, 40104fb8 <rcGetRate+0x168>
-40104fb3:	020c      	movi.n	a2, 0
-40104fb5:	fff3c6        	j	40104f88 <rcGetRate+0x138>
-40104fb8:	f3c232        	addi	a3, a2, -13
-40104fbb:	f4c222        	addi	a2, a2, -12
-40104fbe:	b32330        	movgez	a2, a3, a3
-40104fc1:	212120        	srai	a2, a2, 1
-40104fc4:	902220        	addx2	a2, a2, a2
-40104fc7:	ffef46        	j	40104f88 <rcGetRate+0x138>
-40104fca:	541c      	movi.n	a4, 21
-40104fcc:	02b427        	bgeu	a4, a2, 40104fd2 <rcGetRate+0x182>
-40104fcf:	049267        	bne	a2, a6, 40104fd7 <rcGetRate+0x187>
-40104fd2:	020c      	movi.n	a2, 0
-40104fd4:	ffec06        	j	40104f88 <rcGetRate+0x138>
-40104fd7:	ebc232        	addi	a3, a2, -21
-40104fda:	ecc222        	addi	a2, a2, -20
-40104fdd:	b32330        	movgez	a2, a3, a3
-40104fe0:	212120        	srai	a2, a2, 1
-40104fe3:	902220        	addx2	a2, a2, a2
-40104fe6:	ffe786        	j	40104f88 <rcGetRate+0x138>
-40104fe9:	d41c      	movi.n	a4, 29
-40104feb:	02b427        	bgeu	a4, a2, 40104ff1 <rcGetRate+0x1a1>
-40104fee:	049267        	bne	a2, a6, 40104ff6 <rcGetRate+0x1a6>
-40104ff1:	020c      	movi.n	a2, 0
-40104ff3:	ffe446        	j	40104f88 <rcGetRate+0x138>
-40104ff6:	e3c232        	addi	a3, a2, -29
-40104ff9:	e4c222        	addi	a2, a2, -28
-40104ffc:	b32330        	movgez	a2, a3, a3
-40104fff:	212120        	srai	a2, a2, 1
-40105002:	902220        	addx2	a2, a2, a2
-40105005:	ffdfc6        	j	40104f88 <rcGetRate+0x138>
-40105008:	840c      	movi.n	a4, 8
-4010500a:	02b427        	bgeu	a4, a2, 40105010 <rcGetRate+0x1c0>
-4010500d:	049267        	bne	a2, a6, 40105015 <rcGetRate+0x1c5>
-40105010:	020c      	movi.n	a2, 0
-40105012:	ffdc86        	j	40104f88 <rcGetRate+0x138>
-40105015:	f8c232        	addi	a3, a2, -8
-40105018:	f9c222        	addi	a2, a2, -7
-4010501b:	b32330        	movgez	a2, a3, a3
-4010501e:	212120        	srai	a2, a2, 1
-40105021:	902220        	addx2	a2, a2, a2
-40105024:	ffd806        	j	40104f88 <rcGetRate+0x138>
-40105027:	02a2b6        	bltui	a2, 12, 4010502d <rcGetRate+0x1dd>
-4010502a:	049267        	bne	a2, a6, 40105032 <rcGetRate+0x1e2>
-4010502d:	020c      	movi.n	a2, 0
-4010502f:	ffd546        	j	40104f88 <rcGetRate+0x138>
-40105032:	f5c232        	addi	a3, a2, -11
-40105035:	f6c222        	addi	a2, a2, -10
-40105038:	b32330        	movgez	a2, a3, a3
-4010503b:	212120        	srai	a2, a2, 1
-4010503e:	902220        	addx2	a2, a2, a2
-40105041:	ffd0c6        	j	40104f88 <rcGetRate+0x138>
-40105044:	041c      	movi.n	a4, 16
-40105046:	02b427        	bgeu	a4, a2, 4010504c <rcGetRate+0x1fc>
-40105049:	049267        	bne	a2, a6, 40105051 <rcGetRate+0x201>
-4010504c:	020c      	movi.n	a2, 0
-4010504e:	ffcd86        	j	40104f88 <rcGetRate+0x138>
-40105051:	f0c232        	addi	a3, a2, -16
-40105054:	f1c222        	addi	a2, a2, -15
-40105057:	b32330        	movgez	a2, a3, a3
-4010505a:	212120        	srai	a2, a2, 1
-4010505d:	902220        	addx2	a2, a2, a2
-40105060:	ffc906        	j	40104f88 <rcGetRate+0x138>
-40105063:	a41c      	movi.n	a4, 26
-40105065:	02b427        	bgeu	a4, a2, 4010506b <rcGetRate+0x21b>
-40105068:	049267        	bne	a2, a6, 40105070 <rcGetRate+0x220>
-4010506b:	020c      	movi.n	a2, 0
-4010506d:	ffc5c6        	j	40104f88 <rcGetRate+0x138>
-40105070:	e6c232        	addi	a3, a2, -26
-40105073:	e7c222        	addi	a2, a2, -25
-40105076:	b32330        	movgez	a2, a3, a3
-40105079:	212120        	srai	a2, a2, 1
-4010507c:	902220        	addx2	a2, a2, a2
-4010507f:	ffc146        	j	40104f88 <rcGetRate+0x138>
-40105082:	e40c      	movi.n	a4, 14
-40105084:	02b427        	bgeu	a4, a2, 4010508a <rcGetRate+0x23a>
-40105087:	049267        	bne	a2, a6, 4010508f <rcGetRate+0x23f>
-4010508a:	020c      	movi.n	a2, 0
-4010508c:	ffbe06        	j	40104f88 <rcGetRate+0x138>
-4010508f:	f2c232        	addi	a3, a2, -14
-40105092:	f3c222        	addi	a2, a2, -13
-40105095:	b32330        	movgez	a2, a3, a3
-40105098:	212120        	srai	a2, a2, 1
-4010509b:	902220        	addx2	a2, a2, a2
-4010509e:	ffb986        	j	40104f88 <rcGetRate+0x138>
-401050a1:	02a2b6        	bltui	a2, 12, 401050a7 <rcGetRate+0x257>
-401050a4:	049267        	bne	a2, a6, 401050ac <rcGetRate+0x25c>
-401050a7:	020c      	movi.n	a2, 0
-401050a9:	ffb6c6        	j	40104f88 <rcGetRate+0x138>
-401050ac:	f5c232        	addi	a3, a2, -11
-401050af:	f6c222        	addi	a2, a2, -10
-401050b2:	b32330        	movgez	a2, a3, a3
-401050b5:	212120        	srai	a2, a2, 1
-401050b8:	902220        	addx2	a2, a2, a2
-401050bb:	ffb246        	j	40104f88 <rcGetRate+0x138>
-401050be:	a40c      	movi.n	a4, 10
-401050c0:	02b427        	bgeu	a4, a2, 401050c6 <rcGetRate+0x276>
-401050c3:	049267        	bne	a2, a6, 401050cb <rcGetRate+0x27b>
-401050c6:	020c      	movi.n	a2, 0
-401050c8:	ffaf06        	j	40104f88 <rcGetRate+0x138>
-401050cb:	f6c232        	addi	a3, a2, -10
-401050ce:	f7c222        	addi	a2, a2, -9
-401050d1:	b32330        	movgez	a2, a3, a3
-401050d4:	212120        	srai	a2, a2, 1
-401050d7:	902220        	addx2	a2, a2, a2
-401050da:	ffaa86        	j	40104f88 <rcGetRate+0x138>
-401050dd:	000000        	ill
-401050e0:	9f          	.byte 0x9f
-401050e1:	000186        	j	401050eb <rcGetRate+0x29b>
-401050e4:	fe9820        	excw
-401050e7:	3f          	.byte 0x3f
-401050e8:	3d0900        	excw
-401050eb:	c11200        	mul16u	a1, a2, a0
-401050ee:	31d9e0        	srai	a13, a14, 25
-401050f1:	51f9      	s32i.n	a15, a1, 20
-401050f3:	1109      	s32i.n	a0, a1, 4
-401050f5:	41e9      	s32i.n	a14, a1, 16
-401050f7:	21c9      	s32i.n	a12, a1, 8
-401050f9:	02cd      	mov.n	a12, a2
-401050fb:	f0ede1        	l32r	a14, 401014b0 <system_deep_sleep_local_2+0xb0>
-401050fe:	0020c0        	memw
-40105101:	802ed2        	l32i	a13, a14, 0x200
-40105104:	d238      	l32i.n	a3, a2, 52
-40105106:	0d2d      	mov.n	a2, a13
-40105108:	ff97c5        	call0	40104a88 <RC_GetBlockAckTime+0x70>
-4010510b:	9c38      	l32i.n	a3, a12, 36
-4010510d:	63a002        	movi	a0, 99
-40105110:	166316        	beqz	a3, 4010527a <rcGetRate+0x42a>
-40105113:	ec48      	l32i.n	a4, a12, 56
-40105115:	fff251        	l32r	a5, 401050e0 <rcGetRate+0x290>
-40105118:	053047        	bltu	a0, a4, 40105121 <rcGetRate+0x2d1>
-4010511b:	023527        	bltu	a5, a2, 40105121 <rcGetRate+0x2d1>
-4010511e:	005606        	j	4010527a <rcGetRate+0x42a>
-40105121:	dcd9      	s32i.n	a13, a12, 52
-40105123:	fe8ff1        	l32r	a15, 40104b60 <RC_GetBlockAckTime+0x148>
-40105126:	ffefe1        	l32r	a14, 401050e4 <rcGetRate+0x294>
-40105129:	ac28      	l32i.n	a2, a12, 40
-4010512b:	0e48      	l32i.n	a4, a14, 0
-4010512d:	112290        	slli	a2, a2, 7
-40105130:	441b      	addi.n	a4, a4, 1
-40105132:	0e49      	s32i.n	a4, a14, 0
-40105134:	ed2001        	l32r	a0, 401005b4 <wdt_feed+0x17c>
-40105137:	0000c0        	callx0	a0
-4010513a:	742020        	extui	a2, a2, 0, 8
-4010513d:	170c02        	l8ui	a0, a12, 23
-40105140:	164c22        	s8i	a2, a12, 22
-40105143:	07b016        	beqz	a0, 401051c2 <rcGetRate+0x372>
-40105146:	520a      	add.n	a5, a2, a0
-40105148:	cc38      	l32i.n	a3, a12, 48
-4010514a:	0d2d      	mov.n	a2, a13
-4010514c:	215150        	srai	a5, a5, 1
-4010514f:	174c52        	s8i	a5, a12, 23
-40105152:	ff9345        	call0	40104a88 <RC_GetBlockAckTime+0x70>
-40105155:	170ce2        	l8ui	a14, a12, 23
-40105158:	0129      	s32i.n	a2, a1, 0
-4010515a:	182c32        	l32i	a3, a12, 96
-4010515d:	010c22        	l8ui	a2, a12, 1
-40105160:	000332        	l8ui	a3, a3, 0
-40105163:	ffd8c5        	call0	40104ef0 <rcGetRate+0xa0>
-40105166:	182c02        	l32i	a0, a12, 96
-40105169:	742120        	extui	a2, a2, 1, 8
-4010516c:	090032        	l8ui	a3, a0, 9
-4010516f:	054c      	movi.n	a5, 64
-40105171:	d3cc      	bnez.n	a3, 40105182 <rcGetRate+0x332>
-40105173:	a45c      	movi.n	a4, 90
-40105175:	c04420        	sub	a4, a4, a2
-40105178:	120c      	movi.n	a2, 1
-4010517a:	2f34e7        	bltu	a4, a14, 401051ad <rcGetRate+0x35d>
-4010517d:	020c      	movi.n	a2, 0
-4010517f:	000a86        	j	401051ad <rcGetRate+0x35d>
-40105182:	0f3537        	bltu	a5, a3, 40105195 <rcGetRate+0x345>
-40105185:	64a062        	movi	a6, 100
-40105188:	c06620        	sub	a6, a6, a2
-4010518b:	120c      	movi.n	a2, 1
-4010518d:	1c36e7        	bltu	a6, a14, 401051ad <rcGetRate+0x35d>
-40105190:	020c      	movi.n	a2, 0
-40105192:	0005c6        	j	401051ad <rcGetRate+0x35d>
-40105195:	060c      	movi.n	a6, 0
-40105197:	6ea072        	movi	a7, 110
-4010519a:	c07720        	sub	a7, a7, a2
-4010519d:	09b7e7        	bgeu	a7, a14, 401051aa <rcGetRate+0x35a>
-401051a0:	c08320        	sub	a8, a3, a2
-401051a3:	882b      	addi.n	a8, a8, 2
-401051a5:	01b8e7        	bgeu	a8, a14, 401051aa <rcGetRate+0x35a>
-401051a8:	160c      	movi.n	a6, 1
-401051aa:	742060        	extui	a2, a6, 0, 8
-401051ad:	1e0c      	movi.n	a14, 1
-401051af:	0d2216        	beqz	a2, 40105285 <rcGetRate+0x435>
-401051b2:	01a8      	l32i.n	a10, a1, 0
-401051b4:	162c92        	l32i	a9, a12, 88
-401051b7:	0239a7        	bltu	a9, a10, 401051bd <rcGetRate+0x36d>
-401051ba:	0031c6        	j	40105285 <rcGetRate+0x435>
-401051bd:	0e0d      	mov.n	a0, a14
-401051bf:	004706        	j	401052df <rcGetRate+0x48f>
-401051c2:	182c02        	l32i	a0, a12, 96
-401051c5:	090002        	l8ui	a0, a0, 9
-401051c8:	900000        	addx2	a0, a0, a0
-401051cb:	01d002        	addmi	a0, a0, 0x100
-401051ce:	80c002        	addi	a0, a0, -128
-401051d1:	740200        	extui	a0, a0, 2, 8
-401051d4:	174c02        	s8i	a0, a12, 23
-401051d7:	07b027        	bgeu	a0, a2, 401051e2 <rcGetRate+0x392>
-401051da:	320a      	add.n	a3, a2, a0
-401051dc:	213130        	srai	a3, a3, 1
-401051df:	174c32        	s8i	a3, a12, 23
-401051e2:	5c0c22        	l8ui	a2, a12, 92
-401051e5:	790c32        	l8ui	a3, a12, 121
-401051e8:	fe5f01        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-401051eb:	0000c0        	callx0	a0
-401051ee:	790c32        	l8ui	a3, a12, 121
-401051f1:	182c42        	l32i	a4, a12, 96
-401051f4:	770c52        	l8ui	a5, a12, 119
-401051f7:	0a0442        	l8ui	a4, a4, 10
-401051fa:	905250        	addx2	a5, a2, a5
-401051fd:	172c22        	l32i	a2, a12, 92
-40105200:	9055f0        	addx2	a5, a5, a15
-40105203:	000552        	l8ui	a5, a5, 0
-40105206:	742020        	extui	a2, a2, 0, 8
-40105209:	353457        	bltu	a4, a5, 40105242 <rcGetRate+0x3f2>
-4010520c:	fe5601        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-4010520f:	0000c0        	callx0	a0
-40105212:	182c02        	l32i	a0, a12, 96
-40105215:	770c62        	l8ui	a6, a12, 119
-40105218:	0a0002        	l8ui	a0, a0, 10
-4010521b:	906260        	addx2	a6, a2, a6
-4010521e:	9066f0        	addx2	a6, a6, a15
-40105221:	010662        	l8ui	a6, a6, 1
-40105224:	2cb607        	bgeu	a6, a0, 40105254 <rcGetRate+0x404>
-40105227:	5c0c22        	l8ui	a2, a12, 92
-4010522a:	790c32        	l8ui	a3, a12, 121
-4010522d:	fe4d01        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-40105230:	0000c0        	callx0	a0
-40105233:	770c02        	l8ui	a0, a12, 119
-40105236:	900200        	addx2	a0, a2, a0
-40105239:	9000f0        	addx2	a0, a0, a15
-4010523c:	010002        	l8ui	a0, a0, 1
-4010523f:	000446        	j	40105254 <rcGetRate+0x404>
-40105242:	fe4801        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-40105245:	0000c0        	callx0	a0
-40105248:	770c02        	l8ui	a0, a12, 119
-4010524b:	900200        	addx2	a0, a2, a0
-4010524e:	9000f0        	addx2	a0, a0, a15
-40105251:	000002        	l8ui	a0, a0, 0
-40105254:	030c      	movi.n	a3, 0
-40105256:	742000        	extui	a2, a0, 0, 8
-40105259:	ac39      	s32i.n	a3, a12, 40
-4010525b:	9c39      	s32i.n	a3, a12, 36
-4010525d:	ec39      	s32i.n	a3, a12, 56
-4010525f:	1a2c32        	l32i	a3, a12, 104
-40105262:	902220        	addx2	a2, a2, a2
-40105265:	a02230        	addx4	a2, a2, a3
-40105268:	186c22        	s32i	a2, a12, 96
-4010526b:	21c8      	l32i.n	a12, a1, 8
-4010526d:	31d8      	l32i.n	a13, a1, 12
-4010526f:	41e8      	l32i.n	a14, a1, 16
-40105271:	51f8      	l32i.n	a15, a1, 20
-40105273:	1108      	l32i.n	a0, a1, 4
-40105275:	20c112        	addi	a1, a1, 32
-40105278:	f00d      	ret.n
-4010527a:	122c22        	l32i	a2, a12, 72
-4010527d:	dc38      	l32i.n	a3, a12, 52
-4010527f:	ff8085        	call0	40104a88 <RC_GetBlockAckTime+0x70>
-40105282:	fff946        	j	4010526b <rcGetRate+0x41b>
-40105285:	0b0042        	l8ui	a4, a0, 11
-40105288:	0ae407        	bbsi	a4, 0, 40105296 <rcGetRate+0x446>
-4010528b:	ff9651        	l32r	a5, 401050e4 <rcGetRate+0x294>
-4010528e:	0558      	l32i.n	a5, a5, 0
-40105290:	145050        	extui	a5, a5, 0, 2
-40105293:	f4b556        	bnez	a5, 401051e2 <rcGetRate+0x392>
-40105296:	010c22        	l8ui	a2, a12, 1
-40105299:	000032        	l8ui	a3, a0, 0
-4010529c:	ffc505        	call0	40104ef0 <rcGetRate+0xa0>
-4010529f:	170c62        	l8ui	a6, a12, 23
-401052a2:	182c02        	l32i	a0, a12, 96
-401052a5:	748120        	extui	a8, a2, 1, 8
-401052a8:	090072        	l8ui	a7, a0, 9
-401052ab:	0b0022        	l8ui	a2, a0, 11
-401052ae:	c07780        	sub	a7, a7, a8
-401052b1:	16a677        	bge	a6, a7, 401052cb <rcGetRate+0x47b>
-401052b4:	0e6207        	bbci	a2, 0, 401052c6 <rcGetRate+0x476>
-401052b7:	162c02        	l32i	a0, a12, 88
-401052ba:	ff8b91        	l32r	a9, 401050e8 <rcGetRate+0x298>
-401052bd:	053907        	bltu	a9, a0, 401052c6 <rcGetRate+0x476>
-401052c0:	11a0f0        	slli	a10, a0, 1
-401052c3:	166ca2        	s32i	a10, a12, 88
-401052c6:	200c      	movi.n	a0, 2
-401052c8:	0004c6        	j	401052df <rcGetRate+0x48f>
-401052cb:	0e6207        	bbci	a2, 0, 401052dd <rcGetRate+0x48d>
-401052ce:	fe1ab1        	l32r	a11, 40104b38 <RC_GetBlockAckTime+0x120>
-401052d1:	fea032        	movi	a3, 254
-401052d4:	103230        	and	a3, a2, a3
-401052d7:	0b4032        	s8i	a3, a0, 11
-401052da:	166cb2        	s32i	a11, a12, 88
-401052dd:	000c      	movi.n	a0, 0
-401052df:	311066        	bnei	a0, 1, 40105314 <rcGetRate+0x4c4>
-401052e2:	0c2d      	mov.n	a2, a12
-401052e4:	ff8545        	call0	40104b3c <RC_GetBlockAckTime+0x124>
-401052e7:	fe1d41        	l32r	a4, 40104b5c <RC_GetBlockAckTime+0x144>
-401052ea:	770c52        	l8ui	a5, a12, 119
-401052ed:	7e0442        	l8ui	a4, a4, 126
-401052f0:	400500        	ssr	a5
-401052f3:	914040        	srl	a4, a4
-401052f6:	3a6407        	bbci	a4, 0, 40105334 <rcGetRate+0x4e4>
-401052f9:	5c0c22        	l8ui	a2, a12, 92
-401052fc:	790c32        	l8ui	a3, a12, 121
-401052ff:	fe1901        	l32r	a0, 40104b64 <RC_GetBlockAckTime+0x14c>
-40105302:	0000c0        	callx0	a0
-40105305:	770c32        	l8ui	a3, a12, 119
-40105308:	902230        	addx2	a2, a2, a3
-4010530b:	9022f0        	addx2	a2, a2, a15
-4010530e:	000222        	l8ui	a2, a2, 0
-40105311:	000886        	j	40105337 <rcGetRate+0x4e7>
-40105314:	fec042        	addi	a4, a0, -2
-40105317:	ec7456        	bnez	a4, 401051e2 <rcGetRate+0x392>
-4010531a:	0d2d      	mov.n	a2, a13
-4010531c:	bc38      	l32i.n	a3, a12, 44
-4010531e:	ff7685        	call0	40104a88 <RC_GetBlockAckTime+0x70>
-40105321:	ec6e51        	l32r	a5, 401004dc <wdt_feed+0xa4>
-40105324:	023527        	bltu	a5, a2, 4010532a <rcGetRate+0x4da>
-40105327:	ffadc6        	j	401051e2 <rcGetRate+0x392>
-4010532a:	0c2d      	mov.n	a2, a12
-4010532c:	130c      	movi.n	a3, 1
-4010532e:	ff8385        	call0	40104b68 <RC_GetBlockAckTime+0x150>
-40105331:	ffab46        	j	401051e2 <rcGetRate+0x392>
-40105334:	040c22        	l8ui	a2, a12, 4
-40105337:	182c02        	l32i	a0, a12, 96
-4010533a:	0a0062        	l8ui	a6, a0, 10
-4010533d:	023267        	bltu	a2, a6, 40105343 <rcGetRate+0x4f3>
-40105340:	ffa786        	j	401051e2 <rcGetRate+0x392>
-40105343:	f4c092        	addi	a9, a0, -12
-40105346:	0b0982        	l8ui	a8, a9, 11
-40105349:	186c92        	s32i	a9, a12, 96
-4010534c:	2088e0        	or	a8, a8, a14
-4010534f:	0b4982        	s8i	a8, a9, 11
-40105352:	0020c0        	memw
-40105355:	f05671        	l32r	a7, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105358:	802772        	l32i	a7, a7, 0x200
-4010535b:	cc79      	s32i.n	a7, a12, 48
-4010535d:	ffa046        	j	401051e2 <rcGetRate+0x392>
-
-40105360 <rcReachRetryLimit>:
-40105360:	040232        	l8ui	a3, a2, 4
-40105363:	feba41        	l32r	a4, 40104e4c <rcGetSched+0xe4>
-40105366:	120c      	movi.n	a2, 1
-40105368:	080442        	l8ui	a4, a4, 8
-4010536b:	413430        	srli	a3, a3, 4
-4010536e:	01a347        	bge	a3, a4, 40105373 <rcReachRetryLimit+0x13>
-40105371:	020c      	movi.n	a2, 0
-40105373:	f00d      	ret.n
-40105375:	000000        	ill
-
-40105378 <trc_NeedRTS>:
-40105378:	9258      	l32i.n	a5, a2, 36
-4010537a:	080552        	l8ui	a5, a5, 8
-4010537d:	e5bc      	beqz.n	a5, 401053bf <trc_NeedRTS+0x47>
-4010537f:	521526        	beqi	a5, 1, 401053d5 <trc_NeedRTS+0x5d>
-40105382:	4f5526        	beqi	a5, 5, 401053d5 <trc_NeedRTS+0x5d>
-40105385:	f6c562        	addi	a6, a5, -10
-40105388:	075616        	beqz	a6, 40105401 <trc_NeedRTS+0x89>
-4010538b:	b70c      	movi.n	a7, 11
-4010538d:	5a1577        	beq	a5, a7, 401053eb <trc_NeedRTS+0x73>
-40105390:	f1c582        	addi	a8, a5, -15
-40105393:	080816        	beqz	a8, 40105417 <trc_NeedRTS+0x9f>
-40105396:	51b526        	beqi	a5, 16, 401053eb <trc_NeedRTS+0x73>
-40105399:	191c      	movi.n	a9, 17
-4010539b:	621597        	beq	a5, a9, 40105401 <trc_NeedRTS+0x89>
-4010539e:	8a1c      	movi.n	a10, 24
-401053a0:	4715a7        	beq	a5, a10, 401053eb <trc_NeedRTS+0x73>
-401053a3:	9b1c      	movi.n	a11, 25
-401053a5:	5815b7        	beq	a5, a11, 40105401 <trc_NeedRTS+0x89>
-401053a8:	0b1252        	l16ui	a5, a2, 22
-401053ab:	0a1242        	l16ui	a4, a2, 20
-401053ae:	fea731        	l32r	a3, 40104e4c <rcGetSched+0xe4>
-401053b1:	120c      	movi.n	a2, 1
-401053b3:	051332        	l16ui	a3, a3, 10
-401053b6:	445a      	add.n	a4, a4, a5
-401053b8:	172347        	blt	a3, a4, 401053d3 <trc_NeedRTS+0x5b>
-401053bb:	020c      	movi.n	a2, 0
-401053bd:	f00d      	ret.n
-401053bf:	150c      	movi.n	a5, 1
-401053c1:	0b1282        	l16ui	a8, a2, 22
-401053c4:	0a1272        	l16ui	a7, a2, 20
-401053c7:	71a262        	movi	a6, 0x271
-401053ca:	778a      	add.n	a7, a7, a8
-401053cc:	012677        	blt	a6, a7, 401053d1 <trc_NeedRTS+0x59>
-401053cf:	050c      	movi.n	a5, 0
-401053d1:	052d      	mov.n	a2, a5
-401053d3:	f00d      	ret.n
-401053d5:	150c      	movi.n	a5, 1
-401053d7:	0b12b2        	l16ui	a11, a2, 22
-401053da:	0a12a2        	l16ui	a10, a2, 20
-401053dd:	e8a392        	movi	a9, 0x3e8
-401053e0:	aaba      	add.n	a10, a10, a11
-401053e2:	0129a7        	blt	a9, a10, 401053e7 <trc_NeedRTS+0x6f>
-401053e5:	050c      	movi.n	a5, 0
-401053e7:	052d      	mov.n	a2, a5
-401053e9:	f00d      	ret.n
-401053eb:	150c      	movi.n	a5, 1
-401053ed:	0b1262        	l16ui	a6, a2, 22
-401053f0:	0a1242        	l16ui	a4, a2, 20
-401053f3:	bca232        	movi	a3, 0x2bc
-401053f6:	446a      	add.n	a4, a4, a6
-401053f8:	012347        	blt	a3, a4, 401053fd <trc_NeedRTS+0x85>
-401053fb:	050c      	movi.n	a5, 0
-401053fd:	052d      	mov.n	a2, a5
-401053ff:	f00d      	ret.n
-40105401:	150c      	movi.n	a5, 1
-40105403:	0b1292        	l16ui	a9, a2, 22
-40105406:	0a1282        	l16ui	a8, a2, 20
-40105409:	60a472        	movi	a7, 0x460
-4010540c:	889a      	add.n	a8, a8, a9
-4010540e:	012787        	blt	a7, a8, 40105413 <trc_NeedRTS+0x9b>
-40105411:	050c      	movi.n	a5, 0
-40105413:	052d      	mov.n	a2, a5
-40105415:	f00d      	ret.n
-40105417:	150c      	movi.n	a5, 1
-40105419:	0b1232        	l16ui	a3, a2, 22
-4010541c:	0a12b2        	l16ui	a11, a2, 20
-4010541f:	1aa4a2        	movi	a10, 0x41a
-40105422:	bb3a      	add.n	a11, a11, a3
-40105424:	012ab7        	blt	a10, a11, 40105429 <trc_NeedRTS+0xb1>
-40105427:	050c      	movi.n	a5, 0
-40105429:	052d      	mov.n	a2, a5
-4010542b:	f00d      	ret.n
-4010542d:	000000        	ill
-40105430:	fe8330        	excw
-40105433:	3f          	.byte 0x3f
-40105434:	ffff51        	l32r	a5, 40105430 <trc_NeedRTS+0xb8>
-40105437:	0558      	l32i.n	a5, a5, 0
-40105439:	001542        	l16ui	a4, a5, 0
-4010543c:	0115a2        	l16ui	a10, a5, 2
-4010543f:	c04420        	sub	a4, a4, a2
-40105442:	005542        	s16i	a4, a5, 0
-40105445:	001562        	l16ui	a6, a5, 0
-40105448:	020c      	movi.n	a2, 0
-4010544a:	0826b6        	bltui	a6, 2, 40105456 <trc_NeedRTS+0xde>
-4010544d:	2368      	l32i.n	a6, a3, 8
-4010544f:	2569      	s32i.n	a6, a5, 8
-40105451:	2329      	s32i.n	a2, a3, 8
-40105453:	000f06        	j	40105493 <trc_NeedRTS+0x11b>
-40105456:	0f1666        	bnei	a6, 1, 40105469 <trc_NeedRTS+0xf1>
-40105459:	3588      	l32i.n	a8, a5, 12
-4010545b:	18c572        	addi	a7, a5, 24
-4010545e:	2398      	l32i.n	a9, a3, 8
-40105460:	2599      	s32i.n	a9, a5, 8
-40105462:	2329      	s32i.n	a2, a3, 8
-40105464:	2879      	s32i.n	a7, a8, 8
-40105466:	000a46        	j	40105493 <trc_NeedRTS+0x11b>
-40105469:	015522        	s16i	a2, a5, 2
-4010546c:	0055a2        	s16i	a10, a5, 0
-4010546f:	5568      	l32i.n	a6, a5, 20
-40105471:	45b8      	l32i.n	a11, a5, 16
-40105473:	25b9      	s32i.n	a11, a5, 8
-40105475:	4529      	s32i.n	a2, a5, 16
-40105477:	3569      	s32i.n	a6, a5, 12
-40105479:	5529      	s32i.n	a2, a5, 20
-4010547b:	f4a0a0        	extui	a10, a10, 0, 16
-4010547e:	041a66        	bnei	a10, 1, 40105486 <trc_NeedRTS+0x10e>
-40105481:	18c542        	addi	a4, a5, 24
-40105484:	2649      	s32i.n	a4, a6, 8
-40105486:	2329      	s32i.n	a2, a3, 8
-40105488:	f4b471        	l32r	a7, 40102758 <unsign_to_sign+0x30>
-4010548b:	2568      	l32i.n	a6, a5, 8
-4010548d:	0020c0        	memw
-40105490:	826762        	s32i	a6, a7, 0x208
-40105493:	011592        	l16ui	a9, a5, 2
-40105496:	001582        	l16ui	a8, a5, 0
-40105499:	f4e821        	l32r	a2, 4010283c <phy_get_bb_evm+0x64>
-4010549c:	889a      	add.n	a8, a8, a9
-4010549e:	2028e6        	bgei	a8, 2, 401054c2 <trc_NeedRTS+0x14a>
-401054a1:	f003b1        	l32r	a11, 401014b0 <system_deep_sleep_local_2+0xb0>
-401054a4:	0020c0        	memw
-401054a7:	aa2b32        	l32i	a3, a11, 0x2a8
-401054aa:	103320        	and	a3, a3, a2
-401054ad:	0020c0        	memw
-401054b0:	aa6b32        	s32i	a3, a11, 0x2a8
-401054b3:	0020c0        	memw
-401054b6:	ab2ba2        	l32i	a10, a11, 0x2ac
-401054b9:	10aa20        	and	a10, a10, a2
-401054bc:	0020c0        	memw
-401054bf:	ab6ba2        	s32i	a10, a11, 0x2ac
-401054c2:	f00d      	ret.n
-401054c4:	209220        	or	a9, a2, a2
-401054c7:	e0c112        	addi	a1, a1, -32
-401054ca:	0461c2        	s32i	a12, a1, 16
-401054cd:	08a022        	movi	a2, 8
-401054d0:	1169      	s32i.n	a6, a1, 4
-401054d2:	0179      	s32i.n	a7, a1, 0
-401054d4:	3109      	s32i.n	a0, a1, 12
-401054d6:	51d9      	s32i.n	a13, a1, 20
-401054d8:	61e9      	s32i.n	a14, a1, 24
-401054da:	05dd      	mov.n	a13, a5
-401054dc:	04ed      	mov.n	a14, a4
-401054de:	2199      	s32i.n	a9, a1, 8
-401054e0:	010ac5        	call0	40106590 <esf_rx_buf_alloc>
-401054e3:	02cd      	mov.n	a12, a2
-401054e5:	82cc      	bnez.n	a2, 401054f1 <trc_NeedRTS+0x179>
-401054e7:	0d3d      	mov.n	a3, a13
-401054e9:	0e2d      	mov.n	a2, a14
-401054eb:	000585        	call0	40105544 <trc_NeedRTS+0x1cc>
-401054ee:	000fc6        	j	40105531 <trc_NeedRTS+0x1b9>
-401054f1:	012152        	l32i	a5, a1, 4
-401054f4:	092262        	l32i	a6, a2, 36
-401054f7:	ffce41        	l32r	a4, 40105430 <trc_NeedRTS+0xb8>
-401054fa:	022172        	l32i	a7, a1, 8
-401054fd:	0448      	l32i.n	a4, a4, 0
-401054ff:	2679      	s32i.n	a7, a6, 8
-40105501:	1659      	s32i.n	a5, a6, 4
-40105503:	0652d2        	s16i	a13, a2, 12
-40105506:	2448      	l32i.n	a4, a4, 8
-40105508:	1249      	s32i.n	a4, a2, 4
-4010550a:	22e9      	s32i.n	a14, a2, 8
-4010550c:	1448      	l32i.n	a4, a4, 4
-4010550e:	4249      	s32i.n	a4, a2, 16
-40105510:	f08c31        	l32r	a3, 40101740 <spi_flash_write_status+0x78>
-40105513:	0020c0        	memw
-40105516:	0e28      	l32i.n	a2, a14, 0
-40105518:	102230        	and	a2, a2, a3
-4010551b:	0e3d      	mov.n	a3, a14
-4010551d:	0020c0        	memw
-40105520:	0e29      	s32i.n	a2, a14, 0
-40105522:	0108      	l32i.n	a0, a1, 0
-40105524:	0d2d      	mov.n	a2, a13
-40105526:	0c5c02        	s16i	a0, a12, 24
-40105529:	fff085        	call0	40105434 <trc_NeedRTS+0xbc>
-4010552c:	0c2d      	mov.n	a2, a12
-4010552e:	feb645        	call0	40104094 <lmacRxDone>
-40105531:	41c8      	l32i.n	a12, a1, 16
-40105533:	51d8      	l32i.n	a13, a1, 20
-40105535:	61e8      	l32i.n	a14, a1, 24
-40105537:	3108      	l32i.n	a0, a1, 12
-40105539:	20c112        	addi	a1, a1, 32
-4010553c:	f00d      	ret.n
-4010553e:	900000        	addx2	a0, a0, a0
-40105541:	fe9c      	beqz.n	a14, 40105564 <trc_NeedRTS+0x1ec>
+40105310 <trc_NeedRTS>:
+40105310:	9258      	l32i.n	a5, a2, 36
+40105312:	080552        	l8ui	a5, a5, 8
+40105315:	e5bc      	beqz.n	a5, 40105357 <trc_NeedRTS+0x47>
+40105317:	521526        	beqi	a5, 1, 4010536d <trc_NeedRTS+0x5d>
+4010531a:	4f5526        	beqi	a5, 5, 4010536d <trc_NeedRTS+0x5d>
+4010531d:	f6c562        	addi	a6, a5, -10
+40105320:	075616        	beqz	a6, 40105399 <trc_NeedRTS+0x89>
+40105323:	b70c      	movi.n	a7, 11
+40105325:	5a1577        	beq	a5, a7, 40105383 <trc_NeedRTS+0x73>
+40105328:	f1c582        	addi	a8, a5, -15
+4010532b:	080816        	beqz	a8, 401053af <trc_NeedRTS+0x9f>
+4010532e:	51b526        	beqi	a5, 16, 40105383 <trc_NeedRTS+0x73>
+40105331:	191c      	movi.n	a9, 17
+40105333:	621597        	beq	a5, a9, 40105399 <trc_NeedRTS+0x89>
+40105336:	8a1c      	movi.n	a10, 24
+40105338:	4715a7        	beq	a5, a10, 40105383 <trc_NeedRTS+0x73>
+4010533b:	9b1c      	movi.n	a11, 25
+4010533d:	5815b7        	beq	a5, a11, 40105399 <trc_NeedRTS+0x89>
+40105340:	0b1252        	l16ui	a5, a2, 22
+40105343:	0a1242        	l16ui	a4, a2, 20
+40105346:	fea731        	l32r	a3, 40104de4 <rcGetSched+0xe4>
+40105349:	120c      	movi.n	a2, 1
+4010534b:	051332        	l16ui	a3, a3, 10
+4010534e:	445a      	add.n	a4, a4, a5
+40105350:	172347        	blt	a3, a4, 4010536b <trc_NeedRTS+0x5b>
+40105353:	020c      	movi.n	a2, 0
+40105355:	f00d      	ret.n
+40105357:	150c      	movi.n	a5, 1
+40105359:	0b1282        	l16ui	a8, a2, 22
+4010535c:	0a1272        	l16ui	a7, a2, 20
+4010535f:	71a262        	movi	a6, 0x271
+40105362:	778a      	add.n	a7, a7, a8
+40105364:	012677        	blt	a6, a7, 40105369 <trc_NeedRTS+0x59>
+40105367:	050c      	movi.n	a5, 0
+40105369:	052d      	mov.n	a2, a5
+4010536b:	f00d      	ret.n
+4010536d:	150c      	movi.n	a5, 1
+4010536f:	0b12b2        	l16ui	a11, a2, 22
+40105372:	0a12a2        	l16ui	a10, a2, 20
+40105375:	e8a392        	movi	a9, 0x3e8
+40105378:	aaba      	add.n	a10, a10, a11
+4010537a:	0129a7        	blt	a9, a10, 4010537f <trc_NeedRTS+0x6f>
+4010537d:	050c      	movi.n	a5, 0
+4010537f:	052d      	mov.n	a2, a5
+40105381:	f00d      	ret.n
+40105383:	150c      	movi.n	a5, 1
+40105385:	0b1262        	l16ui	a6, a2, 22
+40105388:	0a1242        	l16ui	a4, a2, 20
+4010538b:	bca232        	movi	a3, 0x2bc
+4010538e:	446a      	add.n	a4, a4, a6
+40105390:	012347        	blt	a3, a4, 40105395 <trc_NeedRTS+0x85>
+40105393:	050c      	movi.n	a5, 0
+40105395:	052d      	mov.n	a2, a5
+40105397:	f00d      	ret.n
+40105399:	150c      	movi.n	a5, 1
+4010539b:	0b1292        	l16ui	a9, a2, 22
+4010539e:	0a1282        	l16ui	a8, a2, 20
+401053a1:	60a472        	movi	a7, 0x460
+401053a4:	889a      	add.n	a8, a8, a9
+401053a6:	012787        	blt	a7, a8, 401053ab <trc_NeedRTS+0x9b>
+401053a9:	050c      	movi.n	a5, 0
+401053ab:	052d      	mov.n	a2, a5
+401053ad:	f00d      	ret.n
+401053af:	150c      	movi.n	a5, 1
+401053b1:	0b1232        	l16ui	a3, a2, 22
+401053b4:	0a12b2        	l16ui	a11, a2, 20
+401053b7:	1aa4a2        	movi	a10, 0x41a
+401053ba:	bb3a      	add.n	a11, a11, a3
+401053bc:	012ab7        	blt	a10, a11, 401053c1 <trc_NeedRTS+0xb1>
+401053bf:	050c      	movi.n	a5, 0
+401053c1:	052d      	mov.n	a2, a5
+401053c3:	f00d      	ret.n
+401053c5:	000000        	ill
+401053c8:	fe8330        	excw
+401053cb:	3f          	.byte 0x3f
+401053cc:	ffff51        	l32r	a5, 401053c8 <trc_NeedRTS+0xb8>
+401053cf:	0558      	l32i.n	a5, a5, 0
+401053d1:	001542        	l16ui	a4, a5, 0
+401053d4:	0115a2        	l16ui	a10, a5, 2
+401053d7:	c04420        	sub	a4, a4, a2
+401053da:	005542        	s16i	a4, a5, 0
+401053dd:	001562        	l16ui	a6, a5, 0
+401053e0:	020c      	movi.n	a2, 0
+401053e2:	0826b6        	bltui	a6, 2, 401053ee <trc_NeedRTS+0xde>
+401053e5:	2368      	l32i.n	a6, a3, 8
+401053e7:	2569      	s32i.n	a6, a5, 8
+401053e9:	2329      	s32i.n	a2, a3, 8
+401053eb:	000f06        	j	4010542b <trc_NeedRTS+0x11b>
+401053ee:	0f1666        	bnei	a6, 1, 40105401 <trc_NeedRTS+0xf1>
+401053f1:	3588      	l32i.n	a8, a5, 12
+401053f3:	18c572        	addi	a7, a5, 24
+401053f6:	2398      	l32i.n	a9, a3, 8
+401053f8:	2599      	s32i.n	a9, a5, 8
+401053fa:	2329      	s32i.n	a2, a3, 8
+401053fc:	2879      	s32i.n	a7, a8, 8
+401053fe:	000a46        	j	4010542b <trc_NeedRTS+0x11b>
+40105401:	015522        	s16i	a2, a5, 2
+40105404:	0055a2        	s16i	a10, a5, 0
+40105407:	5568      	l32i.n	a6, a5, 20
+40105409:	45b8      	l32i.n	a11, a5, 16
+4010540b:	25b9      	s32i.n	a11, a5, 8
+4010540d:	4529      	s32i.n	a2, a5, 16
+4010540f:	3569      	s32i.n	a6, a5, 12
+40105411:	5529      	s32i.n	a2, a5, 20
+40105413:	f4a0a0        	extui	a10, a10, 0, 16
+40105416:	041a66        	bnei	a10, 1, 4010541e <trc_NeedRTS+0x10e>
+40105419:	18c542        	addi	a4, a5, 24
+4010541c:	2649      	s32i.n	a4, a6, 8
+4010541e:	2329      	s32i.n	a2, a3, 8
+40105420:	f4b471        	l32r	a7, 401026f0 <unsign_to_sign+0x30>
+40105423:	2568      	l32i.n	a6, a5, 8
+40105425:	0020c0        	memw
+40105428:	826762        	s32i	a6, a7, 0x208
+4010542b:	011592        	l16ui	a9, a5, 2
+4010542e:	001582        	l16ui	a8, a5, 0
+40105431:	f4e821        	l32r	a2, 401027d4 <phy_get_bb_evm+0x64>
+40105434:	889a      	add.n	a8, a8, a9
+40105436:	2028e6        	bgei	a8, 2, 4010545a <trc_NeedRTS+0x14a>
+40105439:	f01db1        	l32r	a11, 401014b0 <system_deep_sleep_local_2+0xb0>
+4010543c:	0020c0        	memw
+4010543f:	aa2b32        	l32i	a3, a11, 0x2a8
+40105442:	103320        	and	a3, a3, a2
+40105445:	0020c0        	memw
+40105448:	aa6b32        	s32i	a3, a11, 0x2a8
+4010544b:	0020c0        	memw
+4010544e:	ab2ba2        	l32i	a10, a11, 0x2ac
+40105451:	10aa20        	and	a10, a10, a2
+40105454:	0020c0        	memw
+40105457:	ab6ba2        	s32i	a10, a11, 0x2ac
+4010545a:	f00d      	ret.n
+4010545c:	209220        	or	a9, a2, a2
+4010545f:	e0c112        	addi	a1, a1, -32
+40105462:	0461c2        	s32i	a12, a1, 16
+40105465:	08a022        	movi	a2, 8
+40105468:	1169      	s32i.n	a6, a1, 4
+4010546a:	0179      	s32i.n	a7, a1, 0
+4010546c:	3109      	s32i.n	a0, a1, 12
+4010546e:	51d9      	s32i.n	a13, a1, 20
+40105470:	61e9      	s32i.n	a14, a1, 24
+40105472:	05dd      	mov.n	a13, a5
+40105474:	04ed      	mov.n	a14, a4
+40105476:	2199      	s32i.n	a9, a1, 8
+40105478:	010ac5        	call0	40106528 <esf_rx_buf_alloc>
+4010547b:	02cd      	mov.n	a12, a2
+4010547d:	82cc      	bnez.n	a2, 40105489 <trc_NeedRTS+0x179>
+4010547f:	0d3d      	mov.n	a3, a13
+40105481:	0e2d      	mov.n	a2, a14
+40105483:	000585        	call0	401054dc <trc_NeedRTS+0x1cc>
+40105486:	000fc6        	j	401054c9 <trc_NeedRTS+0x1b9>
+40105489:	012152        	l32i	a5, a1, 4
+4010548c:	092262        	l32i	a6, a2, 36
+4010548f:	ffce41        	l32r	a4, 401053c8 <trc_NeedRTS+0xb8>
+40105492:	022172        	l32i	a7, a1, 8
+40105495:	0448      	l32i.n	a4, a4, 0
+40105497:	2679      	s32i.n	a7, a6, 8
+40105499:	1659      	s32i.n	a5, a6, 4
+4010549b:	0652d2        	s16i	a13, a2, 12
+4010549e:	2448      	l32i.n	a4, a4, 8
+401054a0:	1249      	s32i.n	a4, a2, 4
+401054a2:	22e9      	s32i.n	a14, a2, 8
+401054a4:	1448      	l32i.n	a4, a4, 4
+401054a6:	4249      	s32i.n	a4, a2, 16
+401054a8:	f0a631        	l32r	a3, 40101740 <spi_flash_write_status+0x78>
+401054ab:	0020c0        	memw
+401054ae:	0e28      	l32i.n	a2, a14, 0
+401054b0:	102230        	and	a2, a2, a3
+401054b3:	0e3d      	mov.n	a3, a14
+401054b5:	0020c0        	memw
+401054b8:	0e29      	s32i.n	a2, a14, 0
+401054ba:	0108      	l32i.n	a0, a1, 0
+401054bc:	0d2d      	mov.n	a2, a13
+401054be:	0c5c02        	s16i	a0, a12, 24
+401054c1:	fff085        	call0	401053cc <trc_NeedRTS+0xbc>
+401054c4:	0c2d      	mov.n	a2, a12
+401054c6:	feb645        	call0	4010402c <lmacRxDone>
+401054c9:	41c8      	l32i.n	a12, a1, 16
+401054cb:	51d8      	l32i.n	a13, a1, 20
+401054cd:	61e8      	l32i.n	a14, a1, 24
+401054cf:	3108      	l32i.n	a0, a1, 12
+401054d1:	20c112        	addi	a1, a1, 32
+401054d4:	f00d      	ret.n
+401054d6:	700000        	excw
+401054d9:	fe9c      	beqz.n	a14, 401054fc <trc_NeedRTS+0x1ec>
+401054db:	3f          	.byte 0x3f
+401054dc:	f0c112        	addi	a1, a1, -16
+401054df:	1109      	s32i.n	a0, a1, 4
+401054e1:	21c9      	s32i.n	a12, a1, 8
+401054e3:	31d9      	s32i.n	a13, a1, 12
+401054e5:	03cd      	mov.n	a12, a3
+401054e7:	02dd      	mov.n	a13, a2
+401054e9:	fffb01        	l32r	a0, 401054d8 <trc_NeedRTS+0x1c8>
+401054ec:	032d      	mov.n	a2, a3
+401054ee:	2008      	l32i.n	a0, a0, 8
+401054f0:	0d3d      	mov.n	a3, a13
+401054f2:	0109      	s32i.n	a0, a1, 0
+401054f4:	ffed45        	call0	401053cc <trc_NeedRTS+0xbc>
+401054f7:	0128      	l32i.n	a2, a1, 0
+401054f9:	0c4d      	mov.n	a4, a12
+401054fb:	0d3d      	mov.n	a3, a13
+401054fd:	21c8      	l32i.n	a12, a1, 8
+401054ff:	31d8      	l32i.n	a13, a1, 12
+40105501:	008545        	call0	40105d58 <wDev_AppendRxBlocks>
+40105504:	1108      	l32i.n	a0, a1, 4
+40105506:	10c112        	addi	a1, a1, 16
+40105509:	f00d      	ret.n
+4010550b:	026d00        	excw
+4010550e:	fff271        	l32r	a7, 401054d8 <trc_NeedRTS+0x1c8>
+40105511:	034d      	mov.n	a4, a3
+40105513:	f0c112        	addi	a1, a1, -16
+40105516:	0109      	s32i.n	a0, a1, 0
+40105518:	ffac31        	l32r	a3, 401053c8 <trc_NeedRTS+0xb8>
+4010551b:	2258      	l32i.n	a5, a2, 8
+4010551d:	0338      	l32i.n	a3, a3, 0
+4010551f:	c728      	l32i.n	a2, a7, 48
+40105521:	c759      	s32i.n	a5, a7, 48
+40105523:	040302        	l8ui	a0, a3, 4
+40105526:	050c      	movi.n	a5, 0
+40105528:	2659      	s32i.n	a5, a6, 8
+4010552a:	c00040        	sub	a0, a0, a4
+4010552d:	044302        	s8i	a0, a3, 4
+40105530:	063d      	mov.n	a3, a6
+40105532:	009685        	call0	40105e9c <wDev_AppendRxAmpduLensBlocks>
+40105535:	0108      	l32i.n	a0, a1, 0
+40105537:	10c112        	addi	a1, a1, 16
+4010553a:	f00d      	ret.n
+4010553c:	8738      	l32i.n	a3, a7, 32
+4010553e:	fe          	.byte 0xfe
+4010553f:	3f          	.byte 0x3f
+40105540:	fe8950        	excw
 40105543:	3f          	.byte 0x3f
-40105544:	f0c112        	addi	a1, a1, -16
-40105547:	1109      	s32i.n	a0, a1, 4
-40105549:	21c9      	s32i.n	a12, a1, 8
-4010554b:	31d9      	s32i.n	a13, a1, 12
-4010554d:	03cd      	mov.n	a12, a3
-4010554f:	02dd      	mov.n	a13, a2
-40105551:	fffb01        	l32r	a0, 40105540 <trc_NeedRTS+0x1c8>
-40105554:	032d      	mov.n	a2, a3
-40105556:	2008      	l32i.n	a0, a0, 8
-40105558:	0d3d      	mov.n	a3, a13
-4010555a:	0109      	s32i.n	a0, a1, 0
-4010555c:	ffed45        	call0	40105434 <trc_NeedRTS+0xbc>
-4010555f:	0128      	l32i.n	a2, a1, 0
-40105561:	0c4d      	mov.n	a4, a12
-40105563:	0d3d      	mov.n	a3, a13
-40105565:	21c8      	l32i.n	a12, a1, 8
-40105567:	31d8      	l32i.n	a13, a1, 12
-40105569:	008545        	call0	40105dc0 <wDev_AppendRxBlocks>
-4010556c:	1108      	l32i.n	a0, a1, 4
-4010556e:	10c112        	addi	a1, a1, 16
-40105571:	f00d      	ret.n
-40105573:	026d00        	excw
-40105576:	fff271        	l32r	a7, 40105540 <trc_NeedRTS+0x1c8>
-40105579:	034d      	mov.n	a4, a3
-4010557b:	f0c112        	addi	a1, a1, -16
-4010557e:	0109      	s32i.n	a0, a1, 0
-40105580:	ffac31        	l32r	a3, 40105430 <trc_NeedRTS+0xb8>
-40105583:	2258      	l32i.n	a5, a2, 8
-40105585:	0338      	l32i.n	a3, a3, 0
-40105587:	c728      	l32i.n	a2, a7, 48
-40105589:	c759      	s32i.n	a5, a7, 48
-4010558b:	040302        	l8ui	a0, a3, 4
-4010558e:	050c      	movi.n	a5, 0
-40105590:	2659      	s32i.n	a5, a6, 8
-40105592:	c00040        	sub	a0, a0, a4
-40105595:	044302        	s8i	a0, a3, 4
-40105598:	063d      	mov.n	a3, a6
-4010559a:	009685        	call0	40105f04 <wDev_AppendRxAmpduLensBlocks>
-4010559d:	0108      	l32i.n	a0, a1, 0
-4010559f:	10c112        	addi	a1, a1, 16
-401055a2:	f00d      	ret.n
-401055a4:	8738      	l32i.n	a3, a7, 32
-401055a6:	fe          	.byte 0xfe
-401055a7:	3f          	.byte 0x3f
-401055a8:	8968      	l32i.n	a6, a9, 32
-401055aa:	fe          	.byte 0xfe
-401055ab:	3f          	.byte 0x3f
-401055ac:	fe84c0        	excw
-401055af:	3f          	.byte 0x3f
-401055b0:	de78      	l32i.n	a7, a14, 52
-401055b2:	fe          	.byte 0xfe
-401055b3:	3f          	.byte 0x3f
-401055b4:	fe9d90        	excw
-401055b7:	3f          	.byte 0x3f
-401055b8:	d0c112        	addi	a1, a1, -48
-401055bb:	0661f2        	s32i	a15, a1, 24
-401055be:	086132        	s32i	a3, a1, 32
-401055c1:	0461d2        	s32i	a13, a1, 16
-401055c4:	1149      	s32i.n	a4, a1, 4
-401055c6:	ff9ad1        	l32r	a13, 40105430 <trc_NeedRTS+0xb8>
-401055c9:	7159      	s32i.n	a5, a1, 28
-401055cb:	0dd8      	l32i.n	a13, a13, 0
-401055cd:	2109      	s32i.n	a0, a1, 8
-401055cf:	2dd8      	l32i.n	a13, a13, 8
-401055d1:	51e9      	s32i.n	a14, a1, 20
-401055d3:	1dd8      	l32i.n	a13, a13, 4
-401055d5:	31c9      	s32i.n	a12, a1, 12
-401055d7:	1de8      	l32i.n	a14, a13, 4
-401055d9:	02cd      	mov.n	a12, a2
-401055db:	05ebe0        	extui	a14, a14, 27, 1
-401055de:	00ffc5        	call0	401065dc <chm_get_current_channel>
-401055e1:	02fd      	mov.n	a15, a2
-401055e3:	02dc      	bnez.n	a2, 401055f7 <trc_NeedRTS+0x27f>
-401055e5:	ffef21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-401055e8:	fff031        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-401055eb:	7aa142        	movi	a4, 0x17a
-401055ee:	eae401        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401055f1:	0000c0        	callx0	a0
-401055f4:	ffff06        	j	401055f4 <trc_NeedRTS+0x27c>
-401055f7:	061d72        	l16ui	a7, a13, 12
-401055fa:	a6af02        	movi	a0, -90
-401055fd:	f4c351        	l32r	a5, 4010290c <pm_rtc_clock_cali+0xcc>
-40105600:	022d32        	l32i	a3, a13, 8
-40105603:	060242        	l8ui	a4, a2, 6
-40105606:	000d22        	l8ui	a2, a13, 0
-40105609:	344040        	extui	a4, a4, 0, 4
-4010560c:	114400        	slli	a4, a4, 16
-4010560f:	103350        	and	a3, a3, a5
-40105612:	012280        	slli	a2, a2, 24
-40105615:	312820        	srai	a2, a2, 24
-40105618:	203340        	or	a3, a3, a4
-4010561b:	026d32        	s32i	a3, a13, 8
-4010561e:	33a027        	bge	a0, a2, 40105655 <trc_NeedRTS+0x2dd>
-40105621:	ffe261        	l32r	a6, 401055ac <trc_NeedRTS+0x234>
-40105624:	000662        	l8ui	a6, a6, 0
-40105627:	096172        	s32i	a7, a1, 36
-4010562a:	271666        	bnei	a6, 1, 40105655 <trc_NeedRTS+0x2dd>
-4010562d:	fd1345        	call0	40102764 <phy_get_bb_freqoffset>
-40105630:	9178      	l32i.n	a7, a1, 36
-40105632:	2ba182        	movi	a8, 0x12b
-40105635:	110200        	slli	a0, a2, 16
-40105638:	310000        	srai	a0, a0, 16
-4010563b:	192807        	blt	a8, a0, 40105658 <trc_NeedRTS+0x2e0>
-4010563e:	d4ae22        	movi	a2, 0xfffffed4
-40105641:	13a207        	bge	a2, a0, 40105658 <trc_NeedRTS+0x2e0>
-40105644:	ffdb21        	l32r	a2, 401055b0 <trc_NeedRTS+0x238>
-40105647:	009222        	l16si	a2, a2, 0
-4010564a:	020a      	add.n	a0, a2, a0
-4010564c:	110000        	slli	a0, a0, 16
-4010564f:	310000        	srai	a0, a0, 16
-40105652:	000086        	j	40105658 <trc_NeedRTS+0x2e0>
-40105655:	f44101        	l32r	a0, 4010275c <unsign_to_sign+0x34>
-40105658:	ffd721        	l32r	a2, 401055b4 <trc_NeedRTS+0x23c>
-4010565b:	beec      	bnez.n	a14, 4010568a <trc_NeedRTS+0x312>
-4010565d:	0d98      	l32i.n	a9, a13, 0
-4010565f:	34a070        	extui	a10, a7, 0, 4
-40105662:	05bc90        	extui	a11, a9, 28, 1
-40105665:	05f9c7        	bbsi	a9, 28, 4010566e <trc_NeedRTS+0x2f6>
-40105668:	053d90        	extui	a3, a9, 29, 1
-4010566b:	09e316        	beqz	a3, 4010570d <trc_NeedRTS+0x395>
-4010566e:	f0a032        	movi	a3, 240
-40105671:	0cba16        	beqz	a10, 40105740 <trc_NeedRTS+0x3c8>
-40105674:	fcca42        	addi	a4, a10, -4
-40105677:	0ed416        	beqz	a4, 40105768 <trc_NeedRTS+0x3f0>
-4010567a:	0109      	s32i.n	a0, a1, 0
-4010567c:	f8ca52        	addi	a5, a10, -8
-4010567f:	12b516        	beqz	a5, 401057ae <trc_NeedRTS+0x436>
-40105682:	232262        	l32i	a6, a2, 140
-40105685:	661b      	addi.n	a6, a6, 1
-40105687:	236262        	s32i	a6, a2, 140
-4010568a:	090c      	movi.n	a9, 0
-4010568c:	170c      	movi.n	a7, 1
-4010568e:	0002c6        	j	4010569d <trc_NeedRTS+0x325>
-40105691:	170c      	movi.n	a7, 1
-40105693:	1f2282        	l32i	a8, a2, 124
-40105696:	190c      	movi.n	a9, 1
-40105698:	881b      	addi.n	a8, a8, 1
-4010569a:	1f6282        	s32i	a8, a2, 124
-4010569d:	ff64a1        	l32r	a10, 40105430 <trc_NeedRTS+0xb8>
-401056a0:	130c      	movi.n	a3, 1
-401056a2:	0aa8      	l32i.n	a10, a10, 0
-401056a4:	a00242        	l8ui	a4, a2, 160
-401056a7:	011ab2        	l16ui	a11, a10, 2
-401056aa:	001aa2        	l16ui	a10, a10, 0
-401056ad:	440b      	addi.n	a4, a4, -1
-401056af:	aaba      	add.n	a10, a10, a11
-401056b1:	042ae6        	bgei	a10, 2, 401056b9 <trc_NeedRTS+0x341>
-401056b4:	1b0c      	movi.n	a11, 1
-401056b6:	837b90        	moveqz	a7, a11, a9
-401056b9:	74d070        	extui	a13, a7, 0, 8
-401056bc:	83d340        	moveqz	a13, a3, a4
-401056bf:	8d8c      	beqz.n	a13, 401056cb <trc_NeedRTS+0x353>
-401056c1:	0c2d      	mov.n	a2, a12
-401056c3:	8138      	l32i.n	a3, a1, 32
-401056c5:	ffe7c5        	call0	40105544 <trc_NeedRTS+0x1cc>
-401056c8:	000c86        	j	401056fe <trc_NeedRTS+0x386>
-401056cb:	efdb61        	l32r	a6, 40101638 <Cache_Read_Enable_2+0x30>
-401056ce:	0020c0        	memw
-401056d1:	0c58      	l32i.n	a5, a12, 0
-401056d3:	0109      	s32i.n	a0, a1, 0
-401056d5:	105560        	and	a5, a5, a6
-401056d8:	415c50        	srli	a5, a5, 12
-401056db:	05dc      	bnez.n	a5, 401056ef <trc_NeedRTS+0x377>
-401056dd:	ffb121        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-401056e0:	ffb231        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-401056e3:	42a242        	movi	a4, 0x242
-401056e6:	eaa601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401056e9:	0000c0        	callx0	a0
-401056ec:	ffff06        	j	401056ec <trc_NeedRTS+0x374>
-401056ef:	0c4d      	mov.n	a4, a12
-401056f1:	0e3d      	mov.n	a3, a14
-401056f3:	0f2d      	mov.n	a2, a15
-401056f5:	8158      	l32i.n	a5, a1, 32
-401056f7:	1168      	l32i.n	a6, a1, 4
-401056f9:	0178      	l32i.n	a7, a1, 0
-401056fb:	ffdc85        	call0	401054c4 <trc_NeedRTS+0x14c>
-401056fe:	31c8      	l32i.n	a12, a1, 12
-40105700:	41d8      	l32i.n	a13, a1, 16
-40105702:	51e8      	l32i.n	a14, a1, 20
-40105704:	61f8      	l32i.n	a15, a1, 24
-40105706:	2108      	l32i.n	a0, a1, 8
-40105708:	30c112        	addi	a1, a1, 48
-4010570b:	f00d      	ret.n
-4010570d:	02f9e7        	bbsi	a9, 30, 40105713 <trc_NeedRTS+0x39b>
-40105710:	7579f7        	bbci	a9, 31, 40105789 <trc_NeedRTS+0x411>
-40105713:	34a070        	extui	a10, a7, 0, 4
-40105716:	081a16        	beqz	a10, 4010579b <trc_NeedRTS+0x423>
-40105719:	0d4a26        	beqi	a10, 4, 4010572a <trc_NeedRTS+0x3b2>
-4010571c:	f8ca72        	addi	a7, a10, -8
-4010571f:	0aa716        	beqz	a7, 401057cd <trc_NeedRTS+0x455>
-40105722:	232282        	l32i	a8, a2, 140
-40105725:	881b      	addi.n	a8, a8, 1
-40105727:	236282        	s32i	a8, a2, 140
-4010572a:	090c      	movi.n	a9, 0
-4010572c:	170c      	movi.n	a7, 1
-4010572e:	0000c6        	j	40105735 <trc_NeedRTS+0x3bd>
-40105731:	070c      	movi.n	a7, 0
-40105733:	190c      	movi.n	a9, 1
-40105735:	2122a2        	l32i	a10, a2, 132
-40105738:	aa1b      	addi.n	a10, a10, 1
-4010573a:	2162a2        	s32i	a10, a2, 132
-4010573d:	ffd706        	j	4010569d <trc_NeedRTS+0x325>
-40105740:	10d730        	and	a13, a7, a3
-40105743:	1ced66        	bnei	a13, 128, 40105763 <trc_NeedRTS+0x3eb>
-40105746:	db8c      	beqz.n	a11, 40105757 <trc_NeedRTS+0x3df>
-40105748:	0b79e7        	bbci	a9, 30, 40105757 <trc_NeedRTS+0x3df>
-4010574b:	7148      	l32i.n	a4, a1, 28
-4010574d:	130c      	movi.n	a3, 1
-4010574f:	070c      	movi.n	a7, 0
-40105751:	837340        	moveqz	a7, a3, a4
-40105754:	ffcec6        	j	40105693 <trc_NeedRTS+0x31b>
-40105757:	055d90        	extui	a5, a9, 29, 1
-4010575a:	f33516        	beqz	a5, 40105691 <trc_NeedRTS+0x319>
-4010575d:	056f90        	extui	a6, a9, 31, 1
-40105760:	f2d616        	beqz	a6, 40105691 <trc_NeedRTS+0x319>
-40105763:	070c      	movi.n	a7, 0
-40105765:	ffca86        	j	40105693 <trc_NeedRTS+0x31b>
-40105768:	107730        	and	a7, a7, a3
-4010576b:	65e726        	beqi	a7, 128, 401057d4 <trc_NeedRTS+0x45c>
-4010576e:	90a082        	movi	a8, 144
-40105771:	771787        	beq	a7, a8, 401057ec <trc_NeedRTS+0x474>
-40105774:	a0a092        	movi	a9, 160
-40105777:	641797        	beq	a7, a9, 401057df <trc_NeedRTS+0x467>
-4010577a:	1e22a2        	l32i	a10, a2, 120
-4010577d:	aa1b      	addi.n	a10, a10, 1
-4010577f:	1e62a2        	s32i	a10, a2, 120
-40105782:	170c      	movi.n	a7, 1
-40105784:	090c      	movi.n	a9, 0
-40105786:	ffc4c6        	j	4010569d <trc_NeedRTS+0x325>
-40105789:	fcf471        	l32r	a7, 40104b5c <RC_GetBlockAckTime+0x144>
-4010578c:	090c      	movi.n	a9, 0
-4010578e:	5e0772        	l8ui	a7, a7, 94
-40105791:	1b0c      	movi.n	a11, 1
-40105793:	770b      	addi.n	a7, a7, -1
-40105795:	937b70        	movnez	a7, a11, a7
-40105798:	ffc046        	j	4010569d <trc_NeedRTS+0x325>
-4010579b:	747070        	extui	a7, a7, 0, 8
-4010579e:	8fd726        	beqi	a7, 64, 40105731 <trc_NeedRTS+0x3b9>
-401057a1:	085c      	movi.n	a8, 80
-401057a3:	021787        	beq	a7, a8, 401057a9 <trc_NeedRTS+0x431>
-401057a6:	4de726        	beqi	a7, 128, 401057f7 <trc_NeedRTS+0x47f>
-401057a9:	170c      	movi.n	a7, 1
-401057ab:	ffe106        	j	40105733 <trc_NeedRTS+0x3bb>
-401057ae:	ff81a1        	l32r	a10, 401055b4 <trc_NeedRTS+0x23c>
-401057b1:	202a92        	l32i	a9, a10, 128
-401057b4:	202dd0        	or	a2, a13, a13
-401057b7:	01c992        	addi	a9, a9, 1
-401057ba:	206a92        	s32i	a9, a10, 128
-401057bd:	ff58c5        	call0	40104d4c <rcUpdateDataRxDone>
-401057c0:	002102        	l32i	a0, a1, 0
-401057c3:	ff7c21        	l32r	a2, 401055b4 <trc_NeedRTS+0x23c>
-401057c6:	090c      	movi.n	a9, 0
-401057c8:	070c      	movi.n	a7, 0
-401057ca:	ffb3c6        	j	4010569d <trc_NeedRTS+0x325>
-401057cd:	090c      	movi.n	a9, 0
-401057cf:	070c      	movi.n	a7, 0
-401057d1:	ffd806        	j	40105735 <trc_NeedRTS+0x3bd>
-401057d4:	1b22a2        	l32i	a10, a2, 108
-401057d7:	aa1b      	addi.n	a10, a10, 1
-401057d9:	1b62a2        	s32i	a10, a2, 108
-401057dc:	ffe886        	j	40105782 <trc_NeedRTS+0x40a>
-401057df:	1d22b2        	l32i	a11, a2, 116
-401057e2:	070c      	movi.n	a7, 0
-401057e4:	bb1b      	addi.n	a11, a11, 1
-401057e6:	1d62b2        	s32i	a11, a2, 116
-401057e9:	ffe5c6        	j	40105784 <trc_NeedRTS+0x40c>
-401057ec:	1c22d2        	l32i	a13, a2, 112
-401057ef:	dd1b      	addi.n	a13, a13, 1
-401057f1:	1c62d2        	s32i	a13, a2, 112
-401057f4:	ffe286        	j	40105782 <trc_NeedRTS+0x40a>
-401057f7:	7138      	l32i.n	a3, a1, 28
-401057f9:	140c      	movi.n	a4, 1
-401057fb:	070c      	movi.n	a7, 0
-401057fd:	837430        	moveqz	a7, a4, a3
-40105800:	f2f316        	beqz	a3, 40105733 <trc_NeedRTS+0x3bb>
-40105803:	222252        	l32i	a5, a2, 136
-40105806:	551b      	addi.n	a5, a5, 1
-40105808:	226252        	s32i	a5, a2, 136
-4010580b:	ffc906        	j	40105733 <trc_NeedRTS+0x3bb>
-4010580e:	180000        	excw
-40105811:	feca      	add.n	a15, a14, a12
-40105813:	3f          	.byte 0x3f
+40105544:	fe84c0        	excw
+40105547:	3f          	.byte 0x3f
+40105548:	de58      	l32i.n	a5, a14, 52
+4010554a:	fe          	.byte 0xfe
+4010554b:	3f          	.byte 0x3f
+4010554c:	fe9d70        	excw
+4010554f:	3f          	.byte 0x3f
+40105550:	d0c112        	addi	a1, a1, -48
+40105553:	0661f2        	s32i	a15, a1, 24
+40105556:	086132        	s32i	a3, a1, 32
+40105559:	0461d2        	s32i	a13, a1, 16
+4010555c:	1149      	s32i.n	a4, a1, 4
+4010555e:	ff9ad1        	l32r	a13, 401053c8 <trc_NeedRTS+0xb8>
+40105561:	7159      	s32i.n	a5, a1, 28
+40105563:	0dd8      	l32i.n	a13, a13, 0
+40105565:	2109      	s32i.n	a0, a1, 8
+40105567:	2dd8      	l32i.n	a13, a13, 8
+40105569:	51e9      	s32i.n	a14, a1, 20
+4010556b:	1dd8      	l32i.n	a13, a13, 4
+4010556d:	31c9      	s32i.n	a12, a1, 12
+4010556f:	1de8      	l32i.n	a14, a13, 4
+40105571:	02cd      	mov.n	a12, a2
+40105573:	05ebe0        	extui	a14, a14, 27, 1
+40105576:	00ffc5        	call0	40106574 <chm_get_current_channel>
+40105579:	02fd      	mov.n	a15, a2
+4010557b:	02dc      	bnez.n	a2, 4010558f <trc_NeedRTS+0x27f>
+4010557d:	ffef21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105580:	fff031        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105583:	7aa142        	movi	a4, 0x17a
+40105586:	eafe01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105589:	0000c0        	callx0	a0
+4010558c:	ffff06        	j	4010558c <trc_NeedRTS+0x27c>
+4010558f:	061d72        	l16ui	a7, a13, 12
+40105592:	a6af02        	movi	a0, -90
+40105595:	f4c351        	l32r	a5, 401028a4 <pm_rtc_clock_cali+0xcc>
+40105598:	022d32        	l32i	a3, a13, 8
+4010559b:	060242        	l8ui	a4, a2, 6
+4010559e:	000d22        	l8ui	a2, a13, 0
+401055a1:	344040        	extui	a4, a4, 0, 4
+401055a4:	114400        	slli	a4, a4, 16
+401055a7:	103350        	and	a3, a3, a5
+401055aa:	012280        	slli	a2, a2, 24
+401055ad:	312820        	srai	a2, a2, 24
+401055b0:	203340        	or	a3, a3, a4
+401055b3:	026d32        	s32i	a3, a13, 8
+401055b6:	33a027        	bge	a0, a2, 401055ed <trc_NeedRTS+0x2dd>
+401055b9:	ffe261        	l32r	a6, 40105544 <trc_NeedRTS+0x234>
+401055bc:	000662        	l8ui	a6, a6, 0
+401055bf:	096172        	s32i	a7, a1, 36
+401055c2:	271666        	bnei	a6, 1, 401055ed <trc_NeedRTS+0x2dd>
+401055c5:	fd1345        	call0	401026fc <phy_get_bb_freqoffset>
+401055c8:	9178      	l32i.n	a7, a1, 36
+401055ca:	2ba182        	movi	a8, 0x12b
+401055cd:	110200        	slli	a0, a2, 16
+401055d0:	310000        	srai	a0, a0, 16
+401055d3:	192807        	blt	a8, a0, 401055f0 <trc_NeedRTS+0x2e0>
+401055d6:	d4ae22        	movi	a2, 0xfffffed4
+401055d9:	13a207        	bge	a2, a0, 401055f0 <trc_NeedRTS+0x2e0>
+401055dc:	ffdb21        	l32r	a2, 40105548 <trc_NeedRTS+0x238>
+401055df:	009222        	l16si	a2, a2, 0
+401055e2:	020a      	add.n	a0, a2, a0
+401055e4:	110000        	slli	a0, a0, 16
+401055e7:	310000        	srai	a0, a0, 16
+401055ea:	000086        	j	401055f0 <trc_NeedRTS+0x2e0>
+401055ed:	f44101        	l32r	a0, 401026f4 <unsign_to_sign+0x34>
+401055f0:	ffd721        	l32r	a2, 4010554c <trc_NeedRTS+0x23c>
+401055f3:	beec      	bnez.n	a14, 40105622 <trc_NeedRTS+0x312>
+401055f5:	0d98      	l32i.n	a9, a13, 0
+401055f7:	34a070        	extui	a10, a7, 0, 4
+401055fa:	05bc90        	extui	a11, a9, 28, 1
+401055fd:	05f9c7        	bbsi	a9, 28, 40105606 <trc_NeedRTS+0x2f6>
+40105600:	053d90        	extui	a3, a9, 29, 1
+40105603:	09e316        	beqz	a3, 401056a5 <trc_NeedRTS+0x395>
+40105606:	f0a032        	movi	a3, 240
+40105609:	0cba16        	beqz	a10, 401056d8 <trc_NeedRTS+0x3c8>
+4010560c:	fcca42        	addi	a4, a10, -4
+4010560f:	0ed416        	beqz	a4, 40105700 <trc_NeedRTS+0x3f0>
+40105612:	0109      	s32i.n	a0, a1, 0
+40105614:	f8ca52        	addi	a5, a10, -8
+40105617:	12b516        	beqz	a5, 40105746 <trc_NeedRTS+0x436>
+4010561a:	232262        	l32i	a6, a2, 140
+4010561d:	661b      	addi.n	a6, a6, 1
+4010561f:	236262        	s32i	a6, a2, 140
+40105622:	090c      	movi.n	a9, 0
+40105624:	170c      	movi.n	a7, 1
+40105626:	0002c6        	j	40105635 <trc_NeedRTS+0x325>
+40105629:	170c      	movi.n	a7, 1
+4010562b:	1f2282        	l32i	a8, a2, 124
+4010562e:	190c      	movi.n	a9, 1
+40105630:	881b      	addi.n	a8, a8, 1
+40105632:	1f6282        	s32i	a8, a2, 124
+40105635:	ff64a1        	l32r	a10, 401053c8 <trc_NeedRTS+0xb8>
+40105638:	130c      	movi.n	a3, 1
+4010563a:	0aa8      	l32i.n	a10, a10, 0
+4010563c:	a00242        	l8ui	a4, a2, 160
+4010563f:	011ab2        	l16ui	a11, a10, 2
+40105642:	001aa2        	l16ui	a10, a10, 0
+40105645:	440b      	addi.n	a4, a4, -1
+40105647:	aaba      	add.n	a10, a10, a11
+40105649:	042ae6        	bgei	a10, 2, 40105651 <trc_NeedRTS+0x341>
+4010564c:	1b0c      	movi.n	a11, 1
+4010564e:	837b90        	moveqz	a7, a11, a9
+40105651:	74d070        	extui	a13, a7, 0, 8
+40105654:	83d340        	moveqz	a13, a3, a4
+40105657:	8d8c      	beqz.n	a13, 40105663 <trc_NeedRTS+0x353>
+40105659:	0c2d      	mov.n	a2, a12
+4010565b:	8138      	l32i.n	a3, a1, 32
+4010565d:	ffe7c5        	call0	401054dc <trc_NeedRTS+0x1cc>
+40105660:	000c86        	j	40105696 <trc_NeedRTS+0x386>
+40105663:	eff561        	l32r	a6, 40101638 <Cache_Read_Enable_2+0x30>
+40105666:	0020c0        	memw
+40105669:	0c58      	l32i.n	a5, a12, 0
+4010566b:	0109      	s32i.n	a0, a1, 0
+4010566d:	105560        	and	a5, a5, a6
+40105670:	415c50        	srli	a5, a5, 12
+40105673:	05dc      	bnez.n	a5, 40105687 <trc_NeedRTS+0x377>
+40105675:	ffb121        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105678:	ffb231        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+4010567b:	42a242        	movi	a4, 0x242
+4010567e:	eac001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105681:	0000c0        	callx0	a0
+40105684:	ffff06        	j	40105684 <trc_NeedRTS+0x374>
+40105687:	0c4d      	mov.n	a4, a12
+40105689:	0e3d      	mov.n	a3, a14
+4010568b:	0f2d      	mov.n	a2, a15
+4010568d:	8158      	l32i.n	a5, a1, 32
+4010568f:	1168      	l32i.n	a6, a1, 4
+40105691:	0178      	l32i.n	a7, a1, 0
+40105693:	ffdc85        	call0	4010545c <trc_NeedRTS+0x14c>
+40105696:	31c8      	l32i.n	a12, a1, 12
+40105698:	41d8      	l32i.n	a13, a1, 16
+4010569a:	51e8      	l32i.n	a14, a1, 20
+4010569c:	61f8      	l32i.n	a15, a1, 24
+4010569e:	2108      	l32i.n	a0, a1, 8
+401056a0:	30c112        	addi	a1, a1, 48
+401056a3:	f00d      	ret.n
+401056a5:	02f9e7        	bbsi	a9, 30, 401056ab <trc_NeedRTS+0x39b>
+401056a8:	7579f7        	bbci	a9, 31, 40105721 <trc_NeedRTS+0x411>
+401056ab:	34a070        	extui	a10, a7, 0, 4
+401056ae:	081a16        	beqz	a10, 40105733 <trc_NeedRTS+0x423>
+401056b1:	0d4a26        	beqi	a10, 4, 401056c2 <trc_NeedRTS+0x3b2>
+401056b4:	f8ca72        	addi	a7, a10, -8
+401056b7:	0aa716        	beqz	a7, 40105765 <trc_NeedRTS+0x455>
+401056ba:	232282        	l32i	a8, a2, 140
+401056bd:	881b      	addi.n	a8, a8, 1
+401056bf:	236282        	s32i	a8, a2, 140
+401056c2:	090c      	movi.n	a9, 0
+401056c4:	170c      	movi.n	a7, 1
+401056c6:	0000c6        	j	401056cd <trc_NeedRTS+0x3bd>
+401056c9:	070c      	movi.n	a7, 0
+401056cb:	190c      	movi.n	a9, 1
+401056cd:	2122a2        	l32i	a10, a2, 132
+401056d0:	aa1b      	addi.n	a10, a10, 1
+401056d2:	2162a2        	s32i	a10, a2, 132
+401056d5:	ffd706        	j	40105635 <trc_NeedRTS+0x325>
+401056d8:	10d730        	and	a13, a7, a3
+401056db:	1ced66        	bnei	a13, 128, 401056fb <trc_NeedRTS+0x3eb>
+401056de:	db8c      	beqz.n	a11, 401056ef <trc_NeedRTS+0x3df>
+401056e0:	0b79e7        	bbci	a9, 30, 401056ef <trc_NeedRTS+0x3df>
+401056e3:	7148      	l32i.n	a4, a1, 28
+401056e5:	130c      	movi.n	a3, 1
+401056e7:	070c      	movi.n	a7, 0
+401056e9:	837340        	moveqz	a7, a3, a4
+401056ec:	ffcec6        	j	4010562b <trc_NeedRTS+0x31b>
+401056ef:	055d90        	extui	a5, a9, 29, 1
+401056f2:	f33516        	beqz	a5, 40105629 <trc_NeedRTS+0x319>
+401056f5:	056f90        	extui	a6, a9, 31, 1
+401056f8:	f2d616        	beqz	a6, 40105629 <trc_NeedRTS+0x319>
+401056fb:	070c      	movi.n	a7, 0
+401056fd:	ffca86        	j	4010562b <trc_NeedRTS+0x31b>
+40105700:	107730        	and	a7, a7, a3
+40105703:	65e726        	beqi	a7, 128, 4010576c <trc_NeedRTS+0x45c>
+40105706:	90a082        	movi	a8, 144
+40105709:	771787        	beq	a7, a8, 40105784 <trc_NeedRTS+0x474>
+4010570c:	a0a092        	movi	a9, 160
+4010570f:	641797        	beq	a7, a9, 40105777 <trc_NeedRTS+0x467>
+40105712:	1e22a2        	l32i	a10, a2, 120
+40105715:	aa1b      	addi.n	a10, a10, 1
+40105717:	1e62a2        	s32i	a10, a2, 120
+4010571a:	170c      	movi.n	a7, 1
+4010571c:	090c      	movi.n	a9, 0
+4010571e:	ffc4c6        	j	40105635 <trc_NeedRTS+0x325>
+40105721:	fcf471        	l32r	a7, 40104af4 <RC_GetBlockAckTime+0x144>
+40105724:	090c      	movi.n	a9, 0
+40105726:	5e0772        	l8ui	a7, a7, 94
+40105729:	1b0c      	movi.n	a11, 1
+4010572b:	770b      	addi.n	a7, a7, -1
+4010572d:	937b70        	movnez	a7, a11, a7
+40105730:	ffc046        	j	40105635 <trc_NeedRTS+0x325>
+40105733:	747070        	extui	a7, a7, 0, 8
+40105736:	8fd726        	beqi	a7, 64, 401056c9 <trc_NeedRTS+0x3b9>
+40105739:	085c      	movi.n	a8, 80
+4010573b:	021787        	beq	a7, a8, 40105741 <trc_NeedRTS+0x431>
+4010573e:	4de726        	beqi	a7, 128, 4010578f <trc_NeedRTS+0x47f>
+40105741:	170c      	movi.n	a7, 1
+40105743:	ffe106        	j	401056cb <trc_NeedRTS+0x3bb>
+40105746:	ff81a1        	l32r	a10, 4010554c <trc_NeedRTS+0x23c>
+40105749:	202a92        	l32i	a9, a10, 128
+4010574c:	202dd0        	or	a2, a13, a13
+4010574f:	01c992        	addi	a9, a9, 1
+40105752:	206a92        	s32i	a9, a10, 128
+40105755:	ff58c5        	call0	40104ce4 <rcUpdateDataRxDone>
+40105758:	002102        	l32i	a0, a1, 0
+4010575b:	ff7c21        	l32r	a2, 4010554c <trc_NeedRTS+0x23c>
+4010575e:	090c      	movi.n	a9, 0
+40105760:	070c      	movi.n	a7, 0
+40105762:	ffb3c6        	j	40105635 <trc_NeedRTS+0x325>
+40105765:	090c      	movi.n	a9, 0
+40105767:	070c      	movi.n	a7, 0
+40105769:	ffd806        	j	401056cd <trc_NeedRTS+0x3bd>
+4010576c:	1b22a2        	l32i	a10, a2, 108
+4010576f:	aa1b      	addi.n	a10, a10, 1
+40105771:	1b62a2        	s32i	a10, a2, 108
+40105774:	ffe886        	j	4010571a <trc_NeedRTS+0x40a>
+40105777:	1d22b2        	l32i	a11, a2, 116
+4010577a:	070c      	movi.n	a7, 0
+4010577c:	bb1b      	addi.n	a11, a11, 1
+4010577e:	1d62b2        	s32i	a11, a2, 116
+40105781:	ffe5c6        	j	4010571c <trc_NeedRTS+0x40c>
+40105784:	1c22d2        	l32i	a13, a2, 112
+40105787:	dd1b      	addi.n	a13, a13, 1
+40105789:	1c62d2        	s32i	a13, a2, 112
+4010578c:	ffe286        	j	4010571a <trc_NeedRTS+0x40a>
+4010578f:	7138      	l32i.n	a3, a1, 28
+40105791:	140c      	movi.n	a4, 1
+40105793:	070c      	movi.n	a7, 0
+40105795:	837430        	moveqz	a7, a4, a3
+40105798:	f2f316        	beqz	a3, 401056cb <trc_NeedRTS+0x3bb>
+4010579b:	222252        	l32i	a5, a2, 136
+4010579e:	551b      	addi.n	a5, a5, 1
+401057a0:	226252        	s32i	a5, a2, 136
+401057a3:	ffc906        	j	401056cb <trc_NeedRTS+0x3bb>
+401057a6:	f80000        	excw
+401057a9:	fec9      	s32i.n	a12, a14, 60
+401057ab:	3f          	.byte 0x3f
 
-40105814 <wDev_MacTim1SetFunc>:
-40105814:	ecfd61        	l32r	a6, 40100c08 <prvInsertBlockIntoUsedList+0x28>
-40105817:	f9b751        	l32r	a5, 40103ef4 <lmacProcessTxError+0x8c>
+401057ac <wDev_MacTim1SetFunc>:
+401057ac:	ed1761        	l32r	a6, 40100c08 <prvInsertBlockIntoUsedList+0x28>
+401057af:	f9b751        	l32r	a5, 40103e8c <lmacProcessTxError+0x8c>
+401057b2:	0020c0        	memw
+401057b5:	962542        	l32i	a4, a5, 0x258
+401057b8:	204460        	or	a4, a4, a6
+401057bb:	0020c0        	memw
+401057be:	fffa31        	l32r	a3, 401057a8 <trc_NeedRTS+0x498>
+401057c1:	966542        	s32i	a4, a5, 0x258
+401057c4:	7f6322        	s32i	a2, a3, 0x1fc
+401057c7:	f00d      	ret.n
+401057c9:	000000        	ill
+
+401057cc <wDev_MacTim1Arm>:
+401057cc:	f0c112        	addi	a1, a1, -16
+401057cf:	1129      	s32i.n	a2, a1, 4
+401057d1:	0109      	s32i.n	a0, a1, 0
+401057d3:	eb3301        	l32r	a0, 401004a0 <wdt_feed+0x68>
+401057d6:	0000c0        	callx0	a0
+401057d9:	1108      	l32i.n	a0, a1, 4
+401057db:	f9ac61        	l32r	a6, 40103e8c <lmacProcessTxError+0x8c>
+401057de:	0020c0        	memw
+401057e1:	932622        	l32i	a2, a6, 0x24c
+401057e4:	0020c0        	memw
+401057e7:	922652        	l32i	a5, a6, 0x248
+401057ea:	0020c0        	memw
+401057ed:	932672        	l32i	a7, a6, 0x24c
+401057f0:	071277        	beq	a2, a7, 401057fb <wDev_MacTim1Arm+0x2f>
+401057f3:	072d      	mov.n	a2, a7
+401057f5:	0020c0        	memw
+401057f8:	922652        	l32i	a5, a6, 0x248
+401057fb:	005a      	add.n	a0, a0, a5
+401057fd:	013507        	bltu	a5, a0, 40105802 <wDev_MacTim1Arm+0x36>
+40105800:	221b      	addi.n	a2, a2, 1
+40105802:	0020c0        	memw
+40105805:	b36602        	s32i	a0, a6, 0x2cc
+40105808:	0020c0        	memw
+4010580b:	b46622        	s32i	a2, a6, 0x2d0
+4010580e:	ecfe21        	l32r	a2, 40100c08 <prvInsertBlockIntoUsedList+0x28>
+40105811:	0020c0        	memw
+40105814:	b22602        	l32i	a0, a6, 0x2c8
+40105817:	200020        	or	a0, a0, a2
 4010581a:	0020c0        	memw
-4010581d:	962542        	l32i	a4, a5, 0x258
-40105820:	204460        	or	a4, a4, a6
-40105823:	0020c0        	memw
-40105826:	fffa31        	l32r	a3, 40105810 <trc_NeedRTS+0x498>
-40105829:	966542        	s32i	a4, a5, 0x258
-4010582c:	7f6322        	s32i	a2, a3, 0x1fc
-4010582f:	f00d      	ret.n
-40105831:	000000        	ill
-
-40105834 <wDev_MacTim1Arm>:
+4010581d:	b26602        	s32i	a0, a6, 0x2c8
+40105820:	ec6701        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40105823:	0000c0        	callx0	a0
+40105826:	0108      	l32i.n	a0, a1, 0
+40105828:	10c112        	addi	a1, a1, 16
+4010582b:	f00d      	ret.n
+4010582d:	000000        	ill
+40105830:	fecbf0        	excw
+40105833:	3f          	.byte 0x3f
 40105834:	f0c112        	addi	a1, a1, -16
-40105837:	1129      	s32i.n	a2, a1, 4
-40105839:	0109      	s32i.n	a0, a1, 0
-4010583b:	eb1901        	l32r	a0, 401004a0 <wdt_feed+0x68>
-4010583e:	0000c0        	callx0	a0
-40105841:	1108      	l32i.n	a0, a1, 4
-40105843:	f9ac61        	l32r	a6, 40103ef4 <lmacProcessTxError+0x8c>
-40105846:	0020c0        	memw
-40105849:	932622        	l32i	a2, a6, 0x24c
-4010584c:	0020c0        	memw
-4010584f:	922652        	l32i	a5, a6, 0x248
-40105852:	0020c0        	memw
-40105855:	932672        	l32i	a7, a6, 0x24c
-40105858:	071277        	beq	a2, a7, 40105863 <wDev_MacTim1Arm+0x2f>
-4010585b:	072d      	mov.n	a2, a7
-4010585d:	0020c0        	memw
-40105860:	922652        	l32i	a5, a6, 0x248
-40105863:	005a      	add.n	a0, a0, a5
-40105865:	013507        	bltu	a5, a0, 4010586a <wDev_MacTim1Arm+0x36>
-40105868:	221b      	addi.n	a2, a2, 1
-4010586a:	0020c0        	memw
-4010586d:	b36602        	s32i	a0, a6, 0x2cc
-40105870:	0020c0        	memw
-40105873:	b46622        	s32i	a2, a6, 0x2d0
-40105876:	ece421        	l32r	a2, 40100c08 <prvInsertBlockIntoUsedList+0x28>
-40105879:	0020c0        	memw
-4010587c:	b22602        	l32i	a0, a6, 0x2c8
-4010587f:	200020        	or	a0, a0, a2
-40105882:	0020c0        	memw
-40105885:	b26602        	s32i	a0, a6, 0x2c8
-40105888:	ec4d01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-4010588b:	0000c0        	callx0	a0
-4010588e:	0108      	l32i.n	a0, a1, 0
-40105890:	10c112        	addi	a1, a1, 16
-40105893:	f00d      	ret.n
-40105895:	000000        	ill
-40105898:	fecc10        	excw
-4010589b:	3f          	.byte 0x3f
-4010589c:	f0c112        	addi	a1, a1, -16
-4010589f:	0109      	s32i.n	a0, a1, 0
-401058a1:	fffd01        	l32r	a0, 40105898 <wDev_MacTim1Arm+0x64>
-401058a4:	a00200        	addx4	a0, a2, a0
-401058a7:	0028      	l32i.n	a2, a0, 0
-401058a9:	128c      	beqz.n	a2, 401058ae <wDev_MacTim1Arm+0x7a>
-401058ab:	0002c0        	callx0	a2
-401058ae:	0108      	l32i.n	a0, a1, 0
-401058b0:	10c112        	addi	a1, a1, 16
-401058b3:	f00d      	ret.n
-401058b5:	000000        	ill
-401058b8:	030000        	excw
-401058bb:	912800        	excw
-401058be:	fe          	.byte 0xfe
-401058bf:	3f          	.byte 0x3f
-401058c0:	ff          	.byte 0xff
-401058c1:	ff          	.byte 0xff
-401058c2:	fffb      	addi.n	a15, a15, 15
-401058c4:	fe9cd0        	excw
-401058c7:	3f          	.byte 0x3f
+40105837:	0109      	s32i.n	a0, a1, 0
+40105839:	fffd01        	l32r	a0, 40105830 <wDev_MacTim1Arm+0x64>
+4010583c:	a00200        	addx4	a0, a2, a0
+4010583f:	0028      	l32i.n	a2, a0, 0
+40105841:	128c      	beqz.n	a2, 40105846 <wDev_MacTim1Arm+0x7a>
+40105843:	0002c0        	callx0	a2
+40105846:	0108      	l32i.n	a0, a1, 0
+40105848:	10c112        	addi	a1, a1, 16
+4010584b:	f00d      	ret.n
+4010584d:	000000        	ill
+40105850:	030000        	excw
+40105853:	910800        	excw
+40105856:	fe          	.byte 0xfe
+40105857:	3f          	.byte 0x3f
+40105858:	ff          	.byte 0xff
+40105859:	ff          	.byte 0xff
+4010585a:	fffb      	addi.n	a15, a15, 15
+4010585c:	fe9cb0        	excw
+4010585f:	3f          	.byte 0x3f
 
-401058c8 <wDev_ProcessFiq>:
-401058c8:	d0c112        	addi	a1, a1, -48
-401058cb:	41c9      	s32i.n	a12, a1, 16
-401058cd:	61e9      	s32i.n	a14, a1, 24
-401058cf:	71f9      	s32i.n	a15, a1, 28
-401058d1:	3109      	s32i.n	a0, a1, 12
-401058d3:	8139      	s32i.n	a3, a1, 32
-401058d5:	51d9      	s32i.n	a13, a1, 20
-401058d7:	f3d8d1        	l32r	a13, 40102838 <phy_get_bb_evm+0x60>
-401058da:	0020c0        	memw
-401058dd:	eef421        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
-401058e0:	8822c2        	l32i	a12, a2, 0x220
-401058e3:	2a9c16        	beqz	a12, 40105b90 <wDev_ProcessFiq+0x2c8>
-401058e6:	0020c0        	memw
-401058e9:	a12202        	l32i	a0, a2, 0x284
-401058ec:	0020c0        	memw
-401058ef:	8962c2        	s32i	a12, a2, 0x224
-401058f2:	05ecc0        	extui	a14, a12, 28, 1
-401058f5:	1aae56        	bnez	a14, 40105aa3 <wDev_ProcessFiq+0x1db>
-401058f8:	2109      	s32i.n	a0, a1, 8
-401058fa:	047cb7        	bbci	a12, 27, 40105902 <wDev_ProcessFiq+0x3a>
-401058fd:	020c      	movi.n	a2, 0
-401058ff:	fff9c5        	call0	4010589c <wDev_MacTim1Arm+0x68>
-40105902:	047ca7        	bbci	a12, 26, 4010590a <wDev_ProcessFiq+0x42>
-40105905:	120c      	movi.n	a2, 1
-40105907:	fff945        	call0	4010589c <wDev_MacTim1Arm+0x68>
-4010590a:	400c      	movi.n	a0, 4
-4010590c:	100c00        	and	a0, a12, a0
-4010590f:	106c37        	bbci	a12, 3, 40105923 <wDev_ProcessFiq+0x5b>
-40105912:	420c      	movi.n	a2, 4
-40105914:	0b8c27        	bany	a12, a2, 40105923 <wDev_ProcessFiq+0x5b>
-40105917:	008945        	call0	401061ac <wDevDisableRx+0x128>
-4010591a:	00a1e2        	movi	a14, 0x100
-4010591d:	10ece0        	and	a14, a12, a14
-40105920:	000406        	j	40105934 <wDev_ProcessFiq+0x6c>
-40105923:	00a1e2        	movi	a14, 0x100
-40105926:	10ece0        	and	a14, a12, a14
-40105929:	708c      	beqz.n	a0, 40105934 <wDev_ProcessFiq+0x6c>
-4010592b:	00a1f2        	movi	a15, 0x100
-4010592e:	028cf7        	bany	a12, a15, 40105934 <wDev_ProcessFiq+0x6c>
-40105931:	007905        	call0	401060c4 <wDevDisableRx+0x40>
-40105934:	078e16        	beqz	a14, 401059b0 <wDev_ProcessFiq+0xe8>
-40105937:	0020c0        	memw
-4010593a:	ff0101        	l32r	a0, 40105540 <trc_NeedRTS+0x1c8>
-4010593d:	f38631        	l32r	a3, 40102758 <unsign_to_sign+0x30>
-40105940:	050022        	l8ui	a2, a0, 5
-40105943:	872332        	l32i	a3, a3, 0x21c
-40105946:	17d216        	beqz	a2, 40105ac7 <wDev_ProcessFiq+0x1ff>
-40105949:	0020c0        	memw
-4010594c:	f38341        	l32r	a4, 40102758 <unsign_to_sign+0x30>
-4010594f:	8524f2        	l32i	a15, a4, 0x214
-40105952:	0020c0        	memw
-40105955:	f96751        	l32r	a5, 40103ef4 <lmacProcessTxError+0x8c>
-40105958:	bf2552        	l32i	a5, a5, 0x2fc
-4010595b:	0020c0        	memw
-4010595e:	862442        	l32i	a4, a4, 0x218
-40105961:	207f16        	beqz	a15, 40105b6c <wDev_ProcessFiq+0x2a4>
-40105964:	2f68      	l32i.n	a6, a15, 8
-40105966:	235616        	beqz	a6, 40105b9f <wDev_ProcessFiq+0x2d7>
-40105969:	0020c0        	memw
-4010596c:	0f78      	l32i.n	a7, a15, 0
-4010596e:	1077d0        	and	a7, a7, a13
-40105971:	157e70        	extui	a7, a7, 30, 2
-40105974:	601766        	bnei	a7, 1, 401059d8 <wDev_ProcessFiq+0x110>
-40105977:	2028      	l32i.n	a2, a0, 8
-40105979:	32bc      	beqz.n	a2, 401059b0 <wDev_ProcessFiq+0xe8>
-4010597b:	02ed      	mov.n	a14, a2
-4010597d:	0020c0        	memw
-40105980:	0288      	l32i.n	a8, a2, 0
-40105982:	1088d0        	and	a8, a8, a13
-40105985:	158e80        	extui	a8, a8, 30, 2
-40105988:	e8cc      	bnez.n	a8, 4010599a <wDev_ProcessFiq+0xd2>
-4010598a:	2ee8      	l32i.n	a14, a14, 8
-4010598c:	0020c0        	memw
-4010598f:	0e98      	l32i.n	a9, a14, 0
-40105991:	1099d0        	and	a9, a9, a13
-40105994:	159e90        	extui	a9, a9, 30, 2
-40105997:	fef916        	beqz	a9, 4010598a <wDev_ProcessFiq+0xc2>
-4010599a:	009685        	call0	40106304 <wDevDisableRx+0x280>
-4010599d:	fee801        	l32r	a0, 40105540 <trc_NeedRTS+0x1c8>
-401059a0:	5920a2        	l32i	a10, a0, 0x164
-401059a3:	aa1b      	addi.n	a10, a10, 1
-401059a5:	5960a2        	s32i	a10, a0, 0x164
-401059a8:	041fe7        	beq	a15, a14, 401059b0 <wDev_ProcessFiq+0xe8>
-401059ab:	2e28      	l32i.n	a2, a14, 8
-401059ad:	fca256        	bnez	a2, 4010597b <wDev_ProcessFiq+0xb3>
-401059b0:	ffc2b1        	l32r	a11, 401058b8 <wDev_MacTim1Arm+0x84>
-401059b3:	0a0bc7        	bnone	a11, a12, 401059c1 <wDev_ProcessFiq+0xf9>
-401059b6:	2128      	l32i.n	a2, a1, 8
-401059b8:	342c20        	extui	a2, a2, 12, 4
-401059bb:	201110        	or	a1, a1, a1
-401059be:	fe3fc5        	call0	40103dbc <lmacProcessRtsStart>
-401059c1:	02fc37        	bbsi	a12, 19, 401059c7 <wDev_ProcessFiq+0xff>
-401059c4:	002406        	j	40105a58 <wDev_ProcessFiq+0x190>
-401059c7:	0020c0        	memw
-401059ca:	f94af1        	l32r	a15, 40103ef4 <lmacProcessTxError+0x8c>
-401059cd:	1ff8      	l32i.n	a15, a15, 4
-401059cf:	177f87        	bbci	a15, 24, 401059ea <wDev_ProcessFiq+0x122>
-401059d2:	f5f0f0        	extui	a15, a15, 16, 16
-401059d5:	000506        	j	401059ed <wDev_ProcessFiq+0x125>
-401059d8:	fef321        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-401059db:	fef331        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-401059de:	61a442        	movi	a4, 0x461
-401059e1:	e9e701        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-401059e4:	0000c0        	callx0	a0
-401059e7:	ffff06        	j	401059e7 <wDev_ProcessFiq+0x11f>
-401059ea:	7fa0f2        	movi	a15, 127
-401059ed:	0221e2        	l32i	a14, a1, 8
-401059f0:	34ece0        	extui	a14, a14, 12, 4
-401059f3:	058eb6        	bltui	a14, 8, 401059fc <wDev_ProcessFiq+0x134>
-401059f6:	f6ce02        	addi	a0, a14, -10
-401059f9:	181056        	bnez	a0, 40105b7e <wDev_ProcessFiq+0x2b6>
-401059fc:	eaea31        	l32r	a3, 401005a4 <wdt_feed+0x16c>
-401059ff:	ffaf21        	l32r	a2, 401058bc <wDev_MacTim1Arm+0x88>
-40105a02:	103c30        	and	a3, a12, a3
-40105a05:	002222        	l32i	a2, a2, 0
-40105a08:	0139      	s32i.n	a3, a1, 0
-40105a0a:	72dc      	bnez.n	a2, 40105a25 <wDev_ProcessFiq+0x15d>
-40105a0c:	eae631        	l32r	a3, 401005a4 <wdt_feed+0x16c>
-40105a0f:	120c37        	bnone	a12, a3, 40105a25 <wDev_ProcessFiq+0x15d>
-40105a12:	0e2d      	mov.n	a2, a14
-40105a14:	fd5605        	call0	40102f78 <lmacProcessTXStartData>
-40105a17:	ffaa51        	l32r	a5, 401058c0 <wDev_MacTim1Arm+0x8c>
-40105a1a:	eae241        	l32r	a4, 401005a4 <wdt_feed+0x16c>
-40105a1d:	10cc50        	and	a12, a12, a5
-40105a20:	104c40        	and	a4, a12, a4
-40105a23:	0149      	s32i.n	a4, a1, 0
-40105a25:	2108      	l32i.n	a0, a1, 8
-40105a27:	350c00        	extui	a0, a0, 28, 4
-40105a2a:	195016        	beqz	a0, 40105bc3 <wDev_ProcessFiq+0x2fb>
-40105a2d:	200b      	addi.n	a2, a0, -1
-40105a2f:	19e216        	beqz	a2, 40105bd1 <wDev_ProcessFiq+0x309>
-40105a32:	fec032        	addi	a3, a0, -2
-40105a35:	1a8316        	beqz	a3, 40105be1 <wDev_ProcessFiq+0x319>
-40105a38:	fcc042        	addi	a4, a0, -4
-40105a3b:	1ad416        	beqz	a4, 40105bec <wDev_ProcessFiq+0x324>
-40105a3e:	fbc052        	addi	a5, a0, -5
-40105a41:	0ff556        	bnez	a5, 40105b44 <wDev_ProcessFiq+0x27c>
-40105a44:	fe31c5        	call0	40103d64 <lmacProcessAckTimeout>
-40105a47:	ff9f71        	l32r	a7, 401058c4 <wDev_MacTim1Arm+0x90>
-40105a4a:	a07e70        	addx4	a7, a14, a7
-40105a4d:	c768      	l32i.n	a6, a7, 48
-40105a4f:	0108      	l32i.n	a0, a1, 0
-40105a51:	661b      	addi.n	a6, a6, 1
-40105a53:	c769      	s32i.n	a6, a7, 48
-40105a55:	000146        	j	40105a5e <wDev_ProcessFiq+0x196>
-40105a58:	ead301        	l32r	a0, 401005a4 <wdt_feed+0x16c>
-40105a5b:	100c00        	and	a0, a12, a0
-40105a5e:	010016        	beqz	a0, 40105a72 <wDev_ProcessFiq+0x1aa>
-40105a61:	022102        	l32i	a0, a1, 8
-40105a64:	340c00        	extui	a0, a0, 12, 4
-40105a67:	0280b6        	bltui	a0, 8, 40105a6d <wDev_ProcessFiq+0x1a5>
-40105a6a:	479066        	bnei	a0, 10, 40105ab5 <wDev_ProcessFiq+0x1ed>
-40105a6d:	002d      	mov.n	a2, a0
-40105a6f:	fd5085        	call0	40102f78 <lmacProcessTXStartData>
-40105a72:	027cd7        	bbci	a12, 29, 40105a78 <wDev_ProcessFiq+0x1b0>
-40105a75:	fde405        	call0	401038b8 <lmacProcessAllTxTimeout>
-40105a78:	057c47        	bbci	a12, 20, 40105a81 <wDev_ProcessFiq+0x1b9>
-40105a7b:	201110        	or	a1, a1, a1
-40105a7e:	fde4c5        	call0	401038cc <lmacProcessCollisions>
-40105a81:	0a6c97        	bbci	a12, 9, 40105a8f <wDev_ProcessFiq+0x1c7>
-40105a84:	feaf31        	l32r	a3, 40105540 <trc_NeedRTS+0x1c8>
-40105a87:	652322        	l32i	a2, a3, 0x194
-40105a8a:	221b      	addi.n	a2, a2, 1
-40105a8c:	656322        	s32i	a2, a3, 0x194
-40105a8f:	0537c0        	extui	a3, a12, 23, 1
-40105a92:	e44316        	beqz	a3, 401058da <wDev_ProcessFiq+0x12>
-40105a95:	feaa51        	l32r	a5, 40105540 <trc_NeedRTS+0x1c8>
-40105a98:	662542        	l32i	a4, a5, 0x198
-40105a9b:	441b      	addi.n	a4, a4, 1
-40105a9d:	666542        	s32i	a4, a5, 0x198
-40105aa0:	ff8d86        	j	401058da <wDev_ProcessFiq+0x12>
-40105aa3:	fec021        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105aa6:	fec031        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105aa9:	3ea442        	movi	a4, 0x43e
-40105aac:	e9b501        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105aaf:	0000c0        	callx0	a0
-40105ab2:	ffff06        	j	40105ab2 <wDev_ProcessFiq+0x1ea>
-40105ab5:	febb21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105ab8:	febc31        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105abb:	dfa442        	movi	a4, 0x4df
-40105abe:	e9b001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105ac1:	0000c0        	callx0	a0
-40105ac4:	ffff06        	j	40105ac4 <wDev_ProcessFiq+0x1fc>
-40105ac7:	0020c0        	memw
-40105aca:	f32351        	l32r	a5, 40102758 <unsign_to_sign+0x30>
-40105acd:	8525f2        	l32i	a15, a5, 0x214
-40105ad0:	0020c0        	memw
-40105ad3:	f90801        	l32r	a0, 40103ef4 <lmacProcessTxError+0x8c>
-40105ad6:	bf2002        	l32i	a0, a0, 0x2fc
-40105ad9:	0020c0        	memw
-40105adc:	862552        	l32i	a5, a5, 0x218
-40105adf:	0cef16        	beqz	a15, 40105bb1 <wDev_ProcessFiq+0x2e9>
-40105ae2:	2f28      	l32i.n	a2, a15, 8
-40105ae4:	112216        	beqz	a2, 40105bfa <wDev_ProcessFiq+0x332>
-40105ae7:	fe96e1        	l32r	a14, 40105540 <trc_NeedRTS+0x1c8>
-40105aea:	1109      	s32i.n	a0, a1, 4
-40105aec:	2ee8      	l32i.n	a14, a14, 8
-40105aee:	130c      	movi.n	a3, 1
-40105af0:	be9c      	beqz.n	a14, 40105b0f <wDev_ProcessFiq+0x247>
-40105af2:	0020c0        	memw
-40105af5:	0e08      	l32i.n	a0, a14, 0
-40105af7:	1000d0        	and	a0, a0, a13
-40105afa:	150e00        	extui	a0, a0, 30, 2
-40105afd:	80cc      	bnez.n	a0, 40105b09 <wDev_ProcessFiq+0x241>
-40105aff:	2ee8      	l32i.n	a14, a14, 8
-40105b01:	331b      	addi.n	a3, a3, 1
-40105b03:	743030        	extui	a3, a3, 0, 8
-40105b06:	fff986        	j	40105af0 <wDev_ProcessFiq+0x228>
-40105b09:	2e8c      	beqz.n	a14, 40105b0f <wDev_ProcessFiq+0x247>
-40105b0b:	2e48      	l32i.n	a4, a14, 8
-40105b0d:	8149      	s32i.n	a4, a1, 32
-40105b0f:	0a23b6        	bltui	a3, 2, 40105b1d <wDev_ProcessFiq+0x255>
-40105b12:	040e16        	beqz	a14, 40105b56 <wDev_ProcessFiq+0x28e>
-40105b15:	0e2d      	mov.n	a2, a14
-40105b17:	ffa2c5        	call0	40105544 <trc_NeedRTS+0x1cc>
-40105b1a:	0006c6        	j	40105b39 <wDev_ProcessFiq+0x271>
-40105b1d:	0e2d      	mov.n	a2, a14
-40105b1f:	1148      	l32i.n	a4, a1, 4
-40105b21:	c06fe0        	sub	a6, a15, a14
-40105b24:	130c      	movi.n	a3, 1
-40105b26:	050c      	movi.n	a5, 0
-40105b28:	835360        	moveqz	a5, a3, a6
-40105b2b:	ffa8c5        	call0	401055b8 <trc_NeedRTS+0x240>
-40105b2e:	fe8481        	l32r	a8, 40105540 <trc_NeedRTS+0x1c8>
-40105b31:	592872        	l32i	a7, a8, 0x164
-40105b34:	771b      	addi.n	a7, a7, 1
-40105b36:	596872        	s32i	a7, a8, 0x164
-40105b39:	c08fe0        	sub	a8, a15, a14
-40105b3c:	e70816        	beqz	a8, 401059b0 <wDev_ProcessFiq+0xe8>
-40105b3f:	81e8      	l32i.n	a14, a1, 32
-40105b41:	ffea46        	j	40105aee <wDev_ProcessFiq+0x226>
-40105b44:	fe9821        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105b47:	fe9831        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105b4a:	d8a442        	movi	a4, 0x4d8
-40105b4d:	e98c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105b50:	0000c0        	callx0	a0
-40105b53:	ffff06        	j	40105b53 <wDev_ProcessFiq+0x28b>
-40105b56:	0020c0        	memw
-40105b59:	0f98      	l32i.n	a9, a15, 0
-40105b5b:	1099d0        	and	a9, a9, a13
-40105b5e:	159e90        	extui	a9, a9, 30, 2
-40105b61:	e4b916        	beqz	a9, 401059b0 <wDev_ProcessFiq+0xe8>
-40105b64:	0f2d      	mov.n	a2, a15
-40105b66:	ff9dc5        	call0	40105544 <trc_NeedRTS+0x1cc>
-40105b69:	ff90c6        	j	401059b0 <wDev_ProcessFiq+0xe8>
-40105b6c:	fe8e21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105b6f:	fe8e31        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105b72:	5fa442        	movi	a4, 0x45f
-40105b75:	e98201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105b78:	0000c0        	callx0	a0
-40105b7b:	ffff06        	j	40105b7b <wDev_ProcessFiq+0x2b3>
-40105b7e:	fe8921        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105b81:	fe8931        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105b84:	bda442        	movi	a4, 0x4bd
-40105b87:	e97e01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105b8a:	0000c0        	callx0	a0
-40105b8d:	ffff06        	j	40105b8d <wDev_ProcessFiq+0x2c5>
-40105b90:	41c8      	l32i.n	a12, a1, 16
-40105b92:	51d8      	l32i.n	a13, a1, 20
-40105b94:	61e8      	l32i.n	a14, a1, 24
-40105b96:	71f8      	l32i.n	a15, a1, 28
-40105b98:	3108      	l32i.n	a0, a1, 12
-40105b9a:	30c112        	addi	a1, a1, 48
-40105b9d:	f00d      	ret.n
-40105b9f:	fe8121        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105ba2:	fe8131        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105ba5:	60a442        	movi	a4, 0x460
-40105ba8:	e97601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105bab:	0000c0        	callx0	a0
-40105bae:	ffff06        	j	40105bae <wDev_ProcessFiq+0x2e6>
-40105bb1:	fe7c21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105bb4:	fe7d31        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105bb7:	80a442        	movi	a4, 0x480
-40105bba:	e97101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105bbd:	0000c0        	callx0	a0
-40105bc0:	ffff06        	j	40105bc0 <wDev_ProcessFiq+0x2f8>
-40105bc3:	7430f0        	extui	a3, a15, 0, 8
-40105bc6:	0e2d      	mov.n	a2, a14
-40105bc8:	fd5585        	call0	40103124 <lmacProcessTxSuccess>
-40105bcb:	ff9e06        	j	40105a47 <wDev_ProcessFiq+0x17f>
-40105bce:	000000        	ill
-40105bd1:	2128      	l32i.n	a2, a1, 8
-40105bd3:	0e3d      	mov.n	a3, a14
-40105bd5:	752020        	extui	a2, a2, 16, 8
-40105bd8:	fe1ec5        	call0	40103dc8 <lmacProcessTxRtsError>
-40105bdb:	ff9a06        	j	40105a47 <wDev_ProcessFiq+0x17f>
-40105bde:	000000        	ill
-40105be1:	0e2d      	mov.n	a2, a14
-40105be3:	fe1485        	call0	40103d2c <lmacProcessCtsTimeout>
-40105be6:	ff9746        	j	40105a47 <wDev_ProcessFiq+0x17f>
-40105be9:	000000        	ill
-40105bec:	2128      	l32i.n	a2, a1, 8
-40105bee:	752020        	extui	a2, a2, 16, 8
-40105bf1:	fe2745        	call0	40103e68 <lmacProcessTxError>
-40105bf4:	ff93c6        	j	40105a47 <wDev_ProcessFiq+0x17f>
-40105bf7:	000000        	ill
-40105bfa:	fe6a21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105bfd:	fe6a31        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105c00:	81a442        	movi	a4, 0x481
-40105c03:	e95f01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105c06:	0000c0        	callx0	a0
-40105c09:	ffff06        	j	40105c09 <wDev_ProcessFiq+0x341>
+40105860 <wDev_ProcessFiq>:
+40105860:	d0c112        	addi	a1, a1, -48
+40105863:	41c9      	s32i.n	a12, a1, 16
+40105865:	61e9      	s32i.n	a14, a1, 24
+40105867:	71f9      	s32i.n	a15, a1, 28
+40105869:	3109      	s32i.n	a0, a1, 12
+4010586b:	8139      	s32i.n	a3, a1, 32
+4010586d:	51d9      	s32i.n	a13, a1, 20
+4010586f:	f3d8d1        	l32r	a13, 401027d0 <phy_get_bb_evm+0x60>
+40105872:	0020c0        	memw
+40105875:	ef0e21        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105878:	8822c2        	l32i	a12, a2, 0x220
+4010587b:	2a9c16        	beqz	a12, 40105b28 <wDev_ProcessFiq+0x2c8>
+4010587e:	0020c0        	memw
+40105881:	a12202        	l32i	a0, a2, 0x284
+40105884:	0020c0        	memw
+40105887:	8962c2        	s32i	a12, a2, 0x224
+4010588a:	05ecc0        	extui	a14, a12, 28, 1
+4010588d:	1aae56        	bnez	a14, 40105a3b <wDev_ProcessFiq+0x1db>
+40105890:	2109      	s32i.n	a0, a1, 8
+40105892:	047cb7        	bbci	a12, 27, 4010589a <wDev_ProcessFiq+0x3a>
+40105895:	020c      	movi.n	a2, 0
+40105897:	fff9c5        	call0	40105834 <wDev_MacTim1Arm+0x68>
+4010589a:	047ca7        	bbci	a12, 26, 401058a2 <wDev_ProcessFiq+0x42>
+4010589d:	120c      	movi.n	a2, 1
+4010589f:	fff945        	call0	40105834 <wDev_MacTim1Arm+0x68>
+401058a2:	400c      	movi.n	a0, 4
+401058a4:	100c00        	and	a0, a12, a0
+401058a7:	106c37        	bbci	a12, 3, 401058bb <wDev_ProcessFiq+0x5b>
+401058aa:	420c      	movi.n	a2, 4
+401058ac:	0b8c27        	bany	a12, a2, 401058bb <wDev_ProcessFiq+0x5b>
+401058af:	008945        	call0	40106144 <wDevDisableRx+0x128>
+401058b2:	00a1e2        	movi	a14, 0x100
+401058b5:	10ece0        	and	a14, a12, a14
+401058b8:	000406        	j	401058cc <wDev_ProcessFiq+0x6c>
+401058bb:	00a1e2        	movi	a14, 0x100
+401058be:	10ece0        	and	a14, a12, a14
+401058c1:	708c      	beqz.n	a0, 401058cc <wDev_ProcessFiq+0x6c>
+401058c3:	00a1f2        	movi	a15, 0x100
+401058c6:	028cf7        	bany	a12, a15, 401058cc <wDev_ProcessFiq+0x6c>
+401058c9:	007905        	call0	4010605c <wDevDisableRx+0x40>
+401058cc:	078e16        	beqz	a14, 40105948 <wDev_ProcessFiq+0xe8>
+401058cf:	0020c0        	memw
+401058d2:	ff0101        	l32r	a0, 401054d8 <trc_NeedRTS+0x1c8>
+401058d5:	f38631        	l32r	a3, 401026f0 <unsign_to_sign+0x30>
+401058d8:	050022        	l8ui	a2, a0, 5
+401058db:	872332        	l32i	a3, a3, 0x21c
+401058de:	17d216        	beqz	a2, 40105a5f <wDev_ProcessFiq+0x1ff>
+401058e1:	0020c0        	memw
+401058e4:	f38341        	l32r	a4, 401026f0 <unsign_to_sign+0x30>
+401058e7:	8524f2        	l32i	a15, a4, 0x214
+401058ea:	0020c0        	memw
+401058ed:	f96751        	l32r	a5, 40103e8c <lmacProcessTxError+0x8c>
+401058f0:	bf2552        	l32i	a5, a5, 0x2fc
+401058f3:	0020c0        	memw
+401058f6:	862442        	l32i	a4, a4, 0x218
+401058f9:	207f16        	beqz	a15, 40105b04 <wDev_ProcessFiq+0x2a4>
+401058fc:	2f68      	l32i.n	a6, a15, 8
+401058fe:	235616        	beqz	a6, 40105b37 <wDev_ProcessFiq+0x2d7>
+40105901:	0020c0        	memw
+40105904:	0f78      	l32i.n	a7, a15, 0
+40105906:	1077d0        	and	a7, a7, a13
+40105909:	157e70        	extui	a7, a7, 30, 2
+4010590c:	601766        	bnei	a7, 1, 40105970 <wDev_ProcessFiq+0x110>
+4010590f:	2028      	l32i.n	a2, a0, 8
+40105911:	32bc      	beqz.n	a2, 40105948 <wDev_ProcessFiq+0xe8>
+40105913:	02ed      	mov.n	a14, a2
+40105915:	0020c0        	memw
+40105918:	0288      	l32i.n	a8, a2, 0
+4010591a:	1088d0        	and	a8, a8, a13
+4010591d:	158e80        	extui	a8, a8, 30, 2
+40105920:	e8cc      	bnez.n	a8, 40105932 <wDev_ProcessFiq+0xd2>
+40105922:	2ee8      	l32i.n	a14, a14, 8
+40105924:	0020c0        	memw
+40105927:	0e98      	l32i.n	a9, a14, 0
+40105929:	1099d0        	and	a9, a9, a13
+4010592c:	159e90        	extui	a9, a9, 30, 2
+4010592f:	fef916        	beqz	a9, 40105922 <wDev_ProcessFiq+0xc2>
+40105932:	009685        	call0	4010629c <wDevDisableRx+0x280>
+40105935:	fee801        	l32r	a0, 401054d8 <trc_NeedRTS+0x1c8>
+40105938:	5920a2        	l32i	a10, a0, 0x164
+4010593b:	aa1b      	addi.n	a10, a10, 1
+4010593d:	5960a2        	s32i	a10, a0, 0x164
+40105940:	041fe7        	beq	a15, a14, 40105948 <wDev_ProcessFiq+0xe8>
+40105943:	2e28      	l32i.n	a2, a14, 8
+40105945:	fca256        	bnez	a2, 40105913 <wDev_ProcessFiq+0xb3>
+40105948:	ffc2b1        	l32r	a11, 40105850 <wDev_MacTim1Arm+0x84>
+4010594b:	0a0bc7        	bnone	a11, a12, 40105959 <wDev_ProcessFiq+0xf9>
+4010594e:	2128      	l32i.n	a2, a1, 8
+40105950:	342c20        	extui	a2, a2, 12, 4
+40105953:	201110        	or	a1, a1, a1
+40105956:	fe3fc5        	call0	40103d54 <lmacProcessRtsStart>
+40105959:	02fc37        	bbsi	a12, 19, 4010595f <wDev_ProcessFiq+0xff>
+4010595c:	002406        	j	401059f0 <wDev_ProcessFiq+0x190>
+4010595f:	0020c0        	memw
+40105962:	f94af1        	l32r	a15, 40103e8c <lmacProcessTxError+0x8c>
+40105965:	1ff8      	l32i.n	a15, a15, 4
+40105967:	177f87        	bbci	a15, 24, 40105982 <wDev_ProcessFiq+0x122>
+4010596a:	f5f0f0        	extui	a15, a15, 16, 16
+4010596d:	000506        	j	40105985 <wDev_ProcessFiq+0x125>
+40105970:	fef321        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105973:	fef331        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105976:	61a442        	movi	a4, 0x461
+40105979:	ea0101        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+4010597c:	0000c0        	callx0	a0
+4010597f:	ffff06        	j	4010597f <wDev_ProcessFiq+0x11f>
+40105982:	7fa0f2        	movi	a15, 127
+40105985:	0221e2        	l32i	a14, a1, 8
+40105988:	34ece0        	extui	a14, a14, 12, 4
+4010598b:	058eb6        	bltui	a14, 8, 40105994 <wDev_ProcessFiq+0x134>
+4010598e:	f6ce02        	addi	a0, a14, -10
+40105991:	181056        	bnez	a0, 40105b16 <wDev_ProcessFiq+0x2b6>
+40105994:	eb0431        	l32r	a3, 401005a4 <wdt_feed+0x16c>
+40105997:	ffaf21        	l32r	a2, 40105854 <wDev_MacTim1Arm+0x88>
+4010599a:	103c30        	and	a3, a12, a3
+4010599d:	002222        	l32i	a2, a2, 0
+401059a0:	0139      	s32i.n	a3, a1, 0
+401059a2:	72dc      	bnez.n	a2, 401059bd <wDev_ProcessFiq+0x15d>
+401059a4:	eb0031        	l32r	a3, 401005a4 <wdt_feed+0x16c>
+401059a7:	120c37        	bnone	a12, a3, 401059bd <wDev_ProcessFiq+0x15d>
+401059aa:	0e2d      	mov.n	a2, a14
+401059ac:	fd5605        	call0	40102f10 <lmacProcessTXStartData>
+401059af:	ffaa51        	l32r	a5, 40105858 <wDev_MacTim1Arm+0x8c>
+401059b2:	eafc41        	l32r	a4, 401005a4 <wdt_feed+0x16c>
+401059b5:	10cc50        	and	a12, a12, a5
+401059b8:	104c40        	and	a4, a12, a4
+401059bb:	0149      	s32i.n	a4, a1, 0
+401059bd:	2108      	l32i.n	a0, a1, 8
+401059bf:	350c00        	extui	a0, a0, 28, 4
+401059c2:	195016        	beqz	a0, 40105b5b <wDev_ProcessFiq+0x2fb>
+401059c5:	200b      	addi.n	a2, a0, -1
+401059c7:	19e216        	beqz	a2, 40105b69 <wDev_ProcessFiq+0x309>
+401059ca:	fec032        	addi	a3, a0, -2
+401059cd:	1a8316        	beqz	a3, 40105b79 <wDev_ProcessFiq+0x319>
+401059d0:	fcc042        	addi	a4, a0, -4
+401059d3:	1ad416        	beqz	a4, 40105b84 <wDev_ProcessFiq+0x324>
+401059d6:	fbc052        	addi	a5, a0, -5
+401059d9:	0ff556        	bnez	a5, 40105adc <wDev_ProcessFiq+0x27c>
+401059dc:	fe31c5        	call0	40103cfc <lmacProcessAckTimeout>
+401059df:	ff9f71        	l32r	a7, 4010585c <wDev_MacTim1Arm+0x90>
+401059e2:	a07e70        	addx4	a7, a14, a7
+401059e5:	c768      	l32i.n	a6, a7, 48
+401059e7:	0108      	l32i.n	a0, a1, 0
+401059e9:	661b      	addi.n	a6, a6, 1
+401059eb:	c769      	s32i.n	a6, a7, 48
+401059ed:	000146        	j	401059f6 <wDev_ProcessFiq+0x196>
+401059f0:	eaed01        	l32r	a0, 401005a4 <wdt_feed+0x16c>
+401059f3:	100c00        	and	a0, a12, a0
+401059f6:	010016        	beqz	a0, 40105a0a <wDev_ProcessFiq+0x1aa>
+401059f9:	022102        	l32i	a0, a1, 8
+401059fc:	340c00        	extui	a0, a0, 12, 4
+401059ff:	0280b6        	bltui	a0, 8, 40105a05 <wDev_ProcessFiq+0x1a5>
+40105a02:	479066        	bnei	a0, 10, 40105a4d <wDev_ProcessFiq+0x1ed>
+40105a05:	002d      	mov.n	a2, a0
+40105a07:	fd5085        	call0	40102f10 <lmacProcessTXStartData>
+40105a0a:	027cd7        	bbci	a12, 29, 40105a10 <wDev_ProcessFiq+0x1b0>
+40105a0d:	fde405        	call0	40103850 <lmacProcessAllTxTimeout>
+40105a10:	057c47        	bbci	a12, 20, 40105a19 <wDev_ProcessFiq+0x1b9>
+40105a13:	201110        	or	a1, a1, a1
+40105a16:	fde4c5        	call0	40103864 <lmacProcessCollisions>
+40105a19:	0a6c97        	bbci	a12, 9, 40105a27 <wDev_ProcessFiq+0x1c7>
+40105a1c:	feaf31        	l32r	a3, 401054d8 <trc_NeedRTS+0x1c8>
+40105a1f:	652322        	l32i	a2, a3, 0x194
+40105a22:	221b      	addi.n	a2, a2, 1
+40105a24:	656322        	s32i	a2, a3, 0x194
+40105a27:	0537c0        	extui	a3, a12, 23, 1
+40105a2a:	e44316        	beqz	a3, 40105872 <wDev_ProcessFiq+0x12>
+40105a2d:	feaa51        	l32r	a5, 401054d8 <trc_NeedRTS+0x1c8>
+40105a30:	662542        	l32i	a4, a5, 0x198
+40105a33:	441b      	addi.n	a4, a4, 1
+40105a35:	666542        	s32i	a4, a5, 0x198
+40105a38:	ff8d86        	j	40105872 <wDev_ProcessFiq+0x12>
+40105a3b:	fec021        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105a3e:	fec031        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105a41:	3ea442        	movi	a4, 0x43e
+40105a44:	e9cf01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105a47:	0000c0        	callx0	a0
+40105a4a:	ffff06        	j	40105a4a <wDev_ProcessFiq+0x1ea>
+40105a4d:	febb21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105a50:	febc31        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105a53:	dfa442        	movi	a4, 0x4df
+40105a56:	e9ca01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105a59:	0000c0        	callx0	a0
+40105a5c:	ffff06        	j	40105a5c <wDev_ProcessFiq+0x1fc>
+40105a5f:	0020c0        	memw
+40105a62:	f32351        	l32r	a5, 401026f0 <unsign_to_sign+0x30>
+40105a65:	8525f2        	l32i	a15, a5, 0x214
+40105a68:	0020c0        	memw
+40105a6b:	f90801        	l32r	a0, 40103e8c <lmacProcessTxError+0x8c>
+40105a6e:	bf2002        	l32i	a0, a0, 0x2fc
+40105a71:	0020c0        	memw
+40105a74:	862552        	l32i	a5, a5, 0x218
+40105a77:	0cef16        	beqz	a15, 40105b49 <wDev_ProcessFiq+0x2e9>
+40105a7a:	2f28      	l32i.n	a2, a15, 8
+40105a7c:	112216        	beqz	a2, 40105b92 <wDev_ProcessFiq+0x332>
+40105a7f:	fe96e1        	l32r	a14, 401054d8 <trc_NeedRTS+0x1c8>
+40105a82:	1109      	s32i.n	a0, a1, 4
+40105a84:	2ee8      	l32i.n	a14, a14, 8
+40105a86:	130c      	movi.n	a3, 1
+40105a88:	be9c      	beqz.n	a14, 40105aa7 <wDev_ProcessFiq+0x247>
+40105a8a:	0020c0        	memw
+40105a8d:	0e08      	l32i.n	a0, a14, 0
+40105a8f:	1000d0        	and	a0, a0, a13
+40105a92:	150e00        	extui	a0, a0, 30, 2
+40105a95:	80cc      	bnez.n	a0, 40105aa1 <wDev_ProcessFiq+0x241>
+40105a97:	2ee8      	l32i.n	a14, a14, 8
+40105a99:	331b      	addi.n	a3, a3, 1
+40105a9b:	743030        	extui	a3, a3, 0, 8
+40105a9e:	fff986        	j	40105a88 <wDev_ProcessFiq+0x228>
+40105aa1:	2e8c      	beqz.n	a14, 40105aa7 <wDev_ProcessFiq+0x247>
+40105aa3:	2e48      	l32i.n	a4, a14, 8
+40105aa5:	8149      	s32i.n	a4, a1, 32
+40105aa7:	0a23b6        	bltui	a3, 2, 40105ab5 <wDev_ProcessFiq+0x255>
+40105aaa:	040e16        	beqz	a14, 40105aee <wDev_ProcessFiq+0x28e>
+40105aad:	0e2d      	mov.n	a2, a14
+40105aaf:	ffa2c5        	call0	401054dc <trc_NeedRTS+0x1cc>
+40105ab2:	0006c6        	j	40105ad1 <wDev_ProcessFiq+0x271>
+40105ab5:	0e2d      	mov.n	a2, a14
+40105ab7:	1148      	l32i.n	a4, a1, 4
+40105ab9:	c06fe0        	sub	a6, a15, a14
+40105abc:	130c      	movi.n	a3, 1
+40105abe:	050c      	movi.n	a5, 0
+40105ac0:	835360        	moveqz	a5, a3, a6
+40105ac3:	ffa8c5        	call0	40105550 <trc_NeedRTS+0x240>
+40105ac6:	fe8481        	l32r	a8, 401054d8 <trc_NeedRTS+0x1c8>
+40105ac9:	592872        	l32i	a7, a8, 0x164
+40105acc:	771b      	addi.n	a7, a7, 1
+40105ace:	596872        	s32i	a7, a8, 0x164
+40105ad1:	c08fe0        	sub	a8, a15, a14
+40105ad4:	e70816        	beqz	a8, 40105948 <wDev_ProcessFiq+0xe8>
+40105ad7:	81e8      	l32i.n	a14, a1, 32
+40105ad9:	ffea46        	j	40105a86 <wDev_ProcessFiq+0x226>
+40105adc:	fe9821        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105adf:	fe9831        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105ae2:	d8a442        	movi	a4, 0x4d8
+40105ae5:	e9a601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105ae8:	0000c0        	callx0	a0
+40105aeb:	ffff06        	j	40105aeb <wDev_ProcessFiq+0x28b>
+40105aee:	0020c0        	memw
+40105af1:	0f98      	l32i.n	a9, a15, 0
+40105af3:	1099d0        	and	a9, a9, a13
+40105af6:	159e90        	extui	a9, a9, 30, 2
+40105af9:	e4b916        	beqz	a9, 40105948 <wDev_ProcessFiq+0xe8>
+40105afc:	0f2d      	mov.n	a2, a15
+40105afe:	ff9dc5        	call0	401054dc <trc_NeedRTS+0x1cc>
+40105b01:	ff90c6        	j	40105948 <wDev_ProcessFiq+0xe8>
+40105b04:	fe8e21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105b07:	fe8e31        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105b0a:	5fa442        	movi	a4, 0x45f
+40105b0d:	e99c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105b10:	0000c0        	callx0	a0
+40105b13:	ffff06        	j	40105b13 <wDev_ProcessFiq+0x2b3>
+40105b16:	fe8921        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105b19:	fe8931        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105b1c:	bda442        	movi	a4, 0x4bd
+40105b1f:	e99801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105b22:	0000c0        	callx0	a0
+40105b25:	ffff06        	j	40105b25 <wDev_ProcessFiq+0x2c5>
+40105b28:	41c8      	l32i.n	a12, a1, 16
+40105b2a:	51d8      	l32i.n	a13, a1, 20
+40105b2c:	61e8      	l32i.n	a14, a1, 24
+40105b2e:	71f8      	l32i.n	a15, a1, 28
+40105b30:	3108      	l32i.n	a0, a1, 12
+40105b32:	30c112        	addi	a1, a1, 48
+40105b35:	f00d      	ret.n
+40105b37:	fe8121        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105b3a:	fe8131        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105b3d:	60a442        	movi	a4, 0x460
+40105b40:	e99001        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105b43:	0000c0        	callx0	a0
+40105b46:	ffff06        	j	40105b46 <wDev_ProcessFiq+0x2e6>
+40105b49:	fe7c21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105b4c:	fe7d31        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105b4f:	80a442        	movi	a4, 0x480
+40105b52:	e98b01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105b55:	0000c0        	callx0	a0
+40105b58:	ffff06        	j	40105b58 <wDev_ProcessFiq+0x2f8>
+40105b5b:	7430f0        	extui	a3, a15, 0, 8
+40105b5e:	0e2d      	mov.n	a2, a14
+40105b60:	fd5585        	call0	401030bc <lmacProcessTxSuccess>
+40105b63:	ff9e06        	j	401059df <wDev_ProcessFiq+0x17f>
+40105b66:	000000        	ill
+40105b69:	2128      	l32i.n	a2, a1, 8
+40105b6b:	0e3d      	mov.n	a3, a14
+40105b6d:	752020        	extui	a2, a2, 16, 8
+40105b70:	fe1ec5        	call0	40103d60 <lmacProcessTxRtsError>
+40105b73:	ff9a06        	j	401059df <wDev_ProcessFiq+0x17f>
+40105b76:	000000        	ill
+40105b79:	0e2d      	mov.n	a2, a14
+40105b7b:	fe1485        	call0	40103cc4 <lmacProcessCtsTimeout>
+40105b7e:	ff9746        	j	401059df <wDev_ProcessFiq+0x17f>
+40105b81:	000000        	ill
+40105b84:	2128      	l32i.n	a2, a1, 8
+40105b86:	752020        	extui	a2, a2, 16, 8
+40105b89:	fe2745        	call0	40103e00 <lmacProcessTxError>
+40105b8c:	ff93c6        	j	401059df <wDev_ProcessFiq+0x17f>
+40105b8f:	000000        	ill
+40105b92:	fe6a21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105b95:	fe6a31        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105b98:	81a442        	movi	a4, 0x481
+40105b9b:	e97901        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105b9e:	0000c0        	callx0	a0
+40105ba1:	ffff06        	j	40105ba1 <wDev_ProcessFiq+0x341>
 
-40105c0c <wDev_EnableTransmit>:
-40105c0c:	ee2981        	l32r	a8, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105c0f:	949040        	extui	a9, a4, 0, 10
-40105c12:	876c      	movi.n	a7, -24
-40105c14:	d17720        	mul16s	a7, a7, a2
-40105c17:	119940        	slli	a9, a9, 12
-40105c1a:	778a      	add.n	a7, a7, a8
-40105c1c:	0020c0        	memw
-40105c1f:	f06792        	s32i	a9, a7, 0x3c0
-40105c22:	f6cc81        	l32r	a8, 40103754 <lmacRecycleMPDU+0x4cc>
-40105c25:	0020c0        	memw
-40105c28:	f12762        	l32i	a6, a7, 0x3c4
-40105c2b:	206680        	or	a6, a6, a8
-40105c2e:	0020c0        	memw
-40105c31:	ff2451        	l32r	a5, 401058c4 <wDev_MacTim1Arm+0x90>
-40105c34:	a05250        	addx4	a5, a2, a5
-40105c37:	0538      	l32i.n	a3, a5, 0
-40105c39:	f16762        	s32i	a6, a7, 0x3c4
-40105c3c:	331b      	addi.n	a3, a3, 1
-40105c3e:	0539      	s32i.n	a3, a5, 0
-40105c40:	f00d      	ret.n
+40105ba4 <wDev_EnableTransmit>:
+40105ba4:	ee4381        	l32r	a8, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105ba7:	949040        	extui	a9, a4, 0, 10
+40105baa:	876c      	movi.n	a7, -24
+40105bac:	d17720        	mul16s	a7, a7, a2
+40105baf:	119940        	slli	a9, a9, 12
+40105bb2:	778a      	add.n	a7, a7, a8
+40105bb4:	0020c0        	memw
+40105bb7:	f06792        	s32i	a9, a7, 0x3c0
+40105bba:	f6cc81        	l32r	a8, 401036ec <lmacRecycleMPDU+0x4cc>
+40105bbd:	0020c0        	memw
+40105bc0:	f12762        	l32i	a6, a7, 0x3c4
+40105bc3:	206680        	or	a6, a6, a8
+40105bc6:	0020c0        	memw
+40105bc9:	ff2451        	l32r	a5, 4010585c <wDev_MacTim1Arm+0x90>
+40105bcc:	a05250        	addx4	a5, a2, a5
+40105bcf:	0538      	l32i.n	a3, a5, 0
+40105bd1:	f16762        	s32i	a6, a7, 0x3c4
+40105bd4:	331b      	addi.n	a3, a3, 1
+40105bd6:	0539      	s32i.n	a3, a5, 0
+40105bd8:	f00d      	ret.n
 	...
 
-40105c44 <wDev_DisableTransmit>:
-40105c44:	846c      	movi.n	a4, -24
-40105c46:	ee1a51        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105c49:	d14420        	mul16s	a4, a4, a2
-40105c4c:	445a      	add.n	a4, a4, a5
-40105c4e:	f6c251        	l32r	a5, 40103758 <lmacRecycleMPDU+0x4d0>
-40105c51:	0020c0        	memw
-40105c54:	f12432        	l32i	a3, a4, 0x3c4
-40105c57:	103350        	and	a3, a3, a5
-40105c5a:	0020c0        	memw
-40105c5d:	f16432        	s32i	a3, a4, 0x3c4
-40105c60:	f00d      	ret.n
+40105bdc <wDev_DisableTransmit>:
+40105bdc:	846c      	movi.n	a4, -24
+40105bde:	ee3451        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105be1:	d14420        	mul16s	a4, a4, a2
+40105be4:	445a      	add.n	a4, a4, a5
+40105be6:	f6c251        	l32r	a5, 401036f0 <lmacRecycleMPDU+0x4d0>
+40105be9:	0020c0        	memw
+40105bec:	f12432        	l32i	a3, a4, 0x3c4
+40105bef:	103350        	and	a3, a3, a5
+40105bf2:	0020c0        	memw
+40105bf5:	f16432        	s32i	a3, a4, 0x3c4
+40105bf8:	f00d      	ret.n
 	...
 
-40105c64 <Tx_Copy2Queue>:
-40105c64:	f6bd81        	l32r	a8, 40103758 <lmacRecycleMPDU+0x4d0>
-40105c67:	846c      	movi.n	a4, -24
-40105c69:	ee1131        	l32r	a3, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105c6c:	d14420        	mul16s	a4, a4, a2
-40105c6f:	443a      	add.n	a4, a4, a3
-40105c71:	0020c0        	memw
-40105c74:	b72372        	l32i	a7, a3, 0x2dc
-40105c77:	107780        	and	a7, a7, a8
+40105bfc <Tx_Copy2Queue>:
+40105bfc:	f6bd81        	l32r	a8, 401036f0 <lmacRecycleMPDU+0x4d0>
+40105bff:	846c      	movi.n	a4, -24
+40105c01:	ee2b31        	l32r	a3, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105c04:	d14420        	mul16s	a4, a4, a2
+40105c07:	443a      	add.n	a4, a4, a3
+40105c09:	0020c0        	memw
+40105c0c:	b72372        	l32i	a7, a3, 0x2dc
+40105c0f:	107780        	and	a7, a7, a8
+40105c12:	0020c0        	memw
+40105c15:	f16472        	s32i	a7, a4, 0x3c4
+40105c18:	0020c0        	memw
+40105c1b:	b82362        	l32i	a6, a3, 0x2e0
+40105c1e:	0020c0        	memw
+40105c21:	f26462        	s32i	a6, a4, 0x3c8
+40105c24:	0020c0        	memw
+40105c27:	b92352        	l32i	a5, a3, 0x2e4
+40105c2a:	0020c0        	memw
+40105c2d:	f36452        	s32i	a5, a4, 0x3cc
+40105c30:	0020c0        	memw
+40105c33:	ba2332        	l32i	a3, a3, 0x2e8
+40105c36:	0020c0        	memw
+40105c39:	f46432        	s32i	a3, a4, 0x3d0
+40105c3c:	f00d      	ret.n
+	...
+
+40105c40 <wDev_ProcessCollision>:
+40105c40:	f0c112        	addi	a1, a1, -16
+40105c43:	11c9      	s32i.n	a12, a1, 4
+40105c45:	0109      	s32i.n	a0, a1, 0
+40105c47:	02cd      	mov.n	a12, a2
+40105c49:	fff905        	call0	40105bdc <wDev_DisableTransmit>
+40105c4c:	ff0421        	l32r	a2, 4010585c <wDev_MacTim1Arm+0x90>
+40105c4f:	a02c20        	addx4	a2, a12, a2
+40105c52:	182202        	l32i	a0, a2, 96
+40105c55:	11c8      	l32i.n	a12, a1, 4
+40105c57:	001b      	addi.n	a0, a0, 1
+40105c59:	186202        	s32i	a0, a2, 96
+40105c5c:	0108      	l32i.n	a0, a1, 0
+40105c5e:	10c112        	addi	a1, a1, 16
+40105c61:	f00d      	ret.n
+	...
+
+40105c64 <wDev_GetTxqCollisions>:
+40105c64:	ee1321        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105c67:	0020c0        	memw
+40105c6a:	b02222        	l32i	a2, a2, 0x2c0
+40105c6d:	b42020        	extui	a2, a2, 0, 12
+40105c70:	f00d      	ret.n
+	...
+
+40105c74 <wDev_ClearTxqCollisions>:
+40105c74:	e9c041        	l32r	a4, 40100374 <esp_crc8+0xe4>
+40105c77:	ee0e31        	l32r	a3, 401014b0 <system_deep_sleep_local_2+0xb0>
 40105c7a:	0020c0        	memw
-40105c7d:	f16472        	s32i	a7, a4, 0x3c4
-40105c80:	0020c0        	memw
-40105c83:	b82362        	l32i	a6, a3, 0x2e0
-40105c86:	0020c0        	memw
-40105c89:	f26462        	s32i	a6, a4, 0x3c8
-40105c8c:	0020c0        	memw
-40105c8f:	b92352        	l32i	a5, a3, 0x2e4
-40105c92:	0020c0        	memw
-40105c95:	f36452        	s32i	a5, a4, 0x3cc
-40105c98:	0020c0        	memw
-40105c9b:	ba2332        	l32i	a3, a3, 0x2e8
-40105c9e:	0020c0        	memw
-40105ca1:	f46432        	s32i	a3, a4, 0x3d0
-40105ca4:	f00d      	ret.n
+40105c7d:	b02322        	l32i	a2, a3, 0x2c0
+40105c80:	102240        	and	a2, a2, a4
+40105c83:	0020c0        	memw
+40105c86:	b06322        	s32i	a2, a3, 0x2c0
+40105c89:	f00d      	ret.n
 	...
 
-40105ca8 <wDev_ProcessCollision>:
-40105ca8:	f0c112        	addi	a1, a1, -16
-40105cab:	11c9      	s32i.n	a12, a1, 4
-40105cad:	0109      	s32i.n	a0, a1, 0
-40105caf:	02cd      	mov.n	a12, a2
-40105cb1:	fff905        	call0	40105c44 <wDev_DisableTransmit>
-40105cb4:	ff0421        	l32r	a2, 401058c4 <wDev_MacTim1Arm+0x90>
-40105cb7:	a02c20        	addx4	a2, a12, a2
-40105cba:	182202        	l32i	a0, a2, 96
-40105cbd:	11c8      	l32i.n	a12, a1, 4
-40105cbf:	001b      	addi.n	a0, a0, 1
-40105cc1:	186202        	s32i	a0, a2, 96
-40105cc4:	0108      	l32i.n	a0, a1, 0
-40105cc6:	10c112        	addi	a1, a1, 16
-40105cc9:	f00d      	ret.n
+40105c8c <wDev_SetWaitingQueue>:
+40105c8c:	087c      	movi.n	a8, -16
+40105c8e:	347020        	extui	a7, a2, 0, 4
+40105c91:	ee0751        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105c94:	0020c0        	memw
+40105c97:	ac2562        	l32i	a6, a5, 0x2b0
+40105c9a:	106680        	and	a6, a6, a8
+40105c9d:	206670        	or	a6, a6, a7
+40105ca0:	0020c0        	memw
+40105ca3:	ac6562        	s32i	a6, a5, 0x2b0
+40105ca6:	c46c      	movi.n	a4, -20
+40105ca8:	d14420        	mul16s	a4, a4, a2
+40105cab:	f2c971        	l32r	a7, 401027d0 <phy_get_bb_evm+0x60>
+40105cae:	445a      	add.n	a4, a4, a5
+40105cb0:	0020c0        	memw
+40105cb3:	e92462        	l32i	a6, a4, 0x3a4
+40105cb6:	106670        	and	a6, a6, a7
+40105cb9:	0020c0        	memw
+40105cbc:	e96462        	s32i	a6, a4, 0x3a4
+40105cbf:	ec0351        	l32r	a5, 40100ccc <xPortWantedSizeAlign+0xc>
+40105cc2:	0020c0        	memw
+40105cc5:	e92432        	l32i	a3, a4, 0x3a4
+40105cc8:	203350        	or	a3, a3, a5
+40105ccb:	0020c0        	memw
+40105cce:	e96432        	s32i	a3, a4, 0x3a4
+40105cd1:	f00d      	ret.n
 	...
 
-40105ccc <wDev_GetTxqCollisions>:
-40105ccc:	edf921        	l32r	a2, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105ccf:	0020c0        	memw
-40105cd2:	b02222        	l32i	a2, a2, 0x2c0
-40105cd5:	b42020        	extui	a2, a2, 0, 12
-40105cd8:	f00d      	ret.n
+40105cd4 <wDev_ClearWaitingQueue>:
+40105cd4:	c46c      	movi.n	a4, -20
+40105cd6:	edf651        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105cd9:	d14420        	mul16s	a4, a4, a2
+40105cdc:	445a      	add.n	a4, a4, a5
+40105cde:	ee9851        	l32r	a5, 40101740 <spi_flash_write_status+0x78>
+40105ce1:	0020c0        	memw
+40105ce4:	e92432        	l32i	a3, a4, 0x3a4
+40105ce7:	103350        	and	a3, a3, a5
+40105cea:	0020c0        	memw
+40105ced:	e96432        	s32i	a3, a4, 0x3a4
+40105cf0:	f00d      	ret.n
+40105cf2:	000000        	ill
+40105cf5:	3ff200        	excw
+
+40105cf8 <wDev_SetFrameAckType>:
+40105cf8:	048720        	extui	a8, a2, 7, 1
+40105cfb:	147220        	extui	a7, a2, 2, 2
+40105cfe:	907780        	addx2	a7, a7, a8
+40105d01:	fffc81        	l32r	a8, 40105cf4 <wDev_ClearWaitingQueue+0x20>
+40105d04:	747070        	extui	a7, a7, 0, 8
+40105d07:	1177e0        	slli	a7, a7, 2
+40105d0a:	778a      	add.n	a7, a7, a8
+40105d0c:	0cd742        	addmi	a4, a7, 0xc00
+40105d0f:	f80c      	movi.n	a8, 15
+40105d11:	0020c0        	memw
+40105d14:	0cd772        	addmi	a7, a7, 0xc00
+40105d17:	262442        	l32i	a4, a4, 152
+40105d1a:	f97c      	movi.n	a9, -1
+40105d1c:	246420        	extui	a6, a2, 4, 3
+40105d1f:	c51c      	movi.n	a5, 28
+40105d21:	1166e0        	slli	a6, a6, 2
+40105d24:	c05560        	sub	a5, a5, a6
+40105d27:	745050        	extui	a5, a5, 0, 8
+40105d2a:	401500        	ssl	a5
+40105d2d:	a18800        	sll	a8, a8
+40105d30:	401500        	ssl	a5
+40105d33:	308890        	xor	a8, a8, a9
+40105d36:	108480        	and	a8, a4, a8
+40105d39:	a16300        	sll	a6, a3
+40105d3c:	206680        	or	a6, a6, a8
+40105d3f:	0020c0        	memw
+40105d42:	266762        	s32i	a6, a7, 152
+40105d45:	400500        	ssr	a5
+40105d48:	912040        	srl	a2, a4
+40105d4b:	342020        	extui	a2, a2, 0, 4
+40105d4e:	f00d      	ret.n
+40105d50:	ff          	.byte 0xff
+40105d51:	0f          	.byte 0xf
+40105d52:	00ff00        	excw
+40105d55:	500000        	excw
+
+40105d58 <wDev_AppendRxBlocks>:
+40105d58:	f0c112        	addi	a1, a1, -16
+40105d5b:	0109      	s32i.n	a0, a1, 0
+40105d5d:	21d9      	s32i.n	a13, a1, 8
+40105d5f:	11c9      	s32i.n	a12, a1, 4
+40105d61:	31e9      	s32i.n	a14, a1, 12
+40105d63:	04cd      	mov.n	a12, a4
+40105d65:	03ed      	mov.n	a14, a3
+40105d67:	02dd      	mov.n	a13, a2
+40105d69:	06a216        	beqz	a2, 40105dd7 <wDev_AppendRxBlocks+0x7f>
+40105d6c:	0a0c      	movi.n	a10, 0
+40105d6e:	ee7331        	l32r	a3, 4010173c <spi_flash_write_status+0x74>
+40105d71:	eba541        	l32r	a4, 40100c08 <prvInsertBlockIntoUsedList+0x28>
+40105d74:	f29761        	l32r	a6, 401027d0 <phy_get_bb_evm+0x60>
+40105d77:	ee7271        	l32r	a7, 40101740 <spi_flash_write_status+0x78>
+40105d7a:	fff581        	l32r	a8, 40105d50 <wDev_SetFrameAckType+0x58>
+40105d7d:	000c      	movi.n	a0, 0
+40105d7f:	0020c0        	memw
+40105d82:	0298      	l32i.n	a9, a2, 0
+40105d84:	109960        	and	a9, a9, a6
+40105d87:	209940        	or	a9, a9, a4
+40105d8a:	0020c0        	memw
+40105d8d:	0299      	s32i.n	a9, a2, 0
+40105d8f:	0020c0        	memw
+40105d92:	0258      	l32i.n	a5, a2, 0
+40105d94:	105570        	and	a5, a5, a7
+40105d97:	2055a0        	or	a5, a5, a10
+40105d9a:	0020c0        	memw
+40105d9d:	0259      	s32i.n	a5, a2, 0
+40105d9f:	0020c0        	memw
+40105da2:	02b8      	l32i.n	a11, a2, 0
+40105da4:	10bb30        	and	a11, a11, a3
+40105da7:	20bba0        	or	a11, a11, a10
+40105daa:	0020c0        	memw
+40105dad:	02b9      	s32i.n	a11, a2, 0
+40105daf:	0020c0        	memw
+40105db2:	0298      	l32i.n	a9, a2, 0
+40105db4:	b49090        	extui	a9, a9, 0, 12
+40105db7:	119940        	slli	a9, a9, 12
+40105dba:	0020c0        	memw
+40105dbd:	0258      	l32i.n	a5, a2, 0
+40105dbf:	105580        	and	a5, a5, a8
+40105dc2:	205590        	or	a5, a5, a9
+40105dc5:	0020c0        	memw
+40105dc8:	001b      	addi.n	a0, a0, 1
+40105dca:	0259      	s32i.n	a5, a2, 0
+40105dcc:	2228      	l32i.n	a2, a2, 8
+40105dce:	f40000        	extui	a0, a0, 0, 16
+40105dd1:	faa256        	bnez	a2, 40105d7f <wDev_AppendRxBlocks+0x27>
+40105dd4:	000046        	j	40105dd9 <wDev_AppendRxBlocks+0x81>
+40105dd7:	000c      	movi.n	a0, 0
+40105dd9:	111c07        	beq	a12, a0, 40105dee <wDev_AppendRxBlocks+0x96>
+40105ddc:	fdd821        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105ddf:	fdd831        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105de2:	dca542        	movi	a4, 0x5dc
+40105de5:	e8e601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105de8:	0000c0        	callx0	a0
+40105deb:	ffff06        	j	40105deb <wDev_AppendRxBlocks+0x93>
+40105dee:	e9ac01        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40105df1:	0000c0        	callx0	a0
+40105df4:	fd7501        	l32r	a0, 401053c8 <trc_NeedRTS+0xb8>
+40105df7:	0008      	l32i.n	a0, a0, 0
+40105df9:	001022        	l16ui	a2, a0, 0
+40105dfc:	3098      	l32i.n	a9, a0, 12
+40105dfe:	32ec      	bnez.n	a2, 40105e25 <wDev_AppendRxBlocks+0xcd>
+40105e00:	20d9      	s32i.n	a13, a0, 8
+40105e02:	f23b41        	l32r	a4, 401026f0 <unsign_to_sign+0x30>
+40105e05:	0020c0        	memw
+40105e08:	001032        	l16ui	a3, a0, 0
+40105e0b:	8264d2        	s32i	a13, a4, 0x208
+40105e0e:	33ca      	add.n	a3, a3, a12
+40105e10:	005032        	s16i	a3, a0, 0
+40105e13:	001022        	l16ui	a2, a0, 0
+40105e16:	30e9      	s32i.n	a14, a0, 12
+40105e18:	261266        	bnei	a2, 1, 40105e42 <wDev_AppendRxBlocks+0xea>
+40105e1b:	3068      	l32i.n	a6, a0, 12
+40105e1d:	18c052        	addi	a5, a0, 24
+40105e20:	2659      	s32i.n	a5, a6, 8
+40105e22:	000706        	j	40105e42 <wDev_AppendRxBlocks+0xea>
+40105e25:	101266        	bnei	a2, 1, 40105e39 <wDev_AppendRxBlocks+0xe1>
+40105e28:	4078      	l32i.n	a7, a0, 16
+40105e2a:	5048      	l32i.n	a4, a0, 20
+40105e2c:	060756        	bnez	a7, 40105e90 <wDev_AppendRxBlocks+0x138>
+40105e2f:	40d9      	s32i.n	a13, a0, 16
+40105e31:	50e9      	s32i.n	a14, a0, 20
+40105e33:	0150c2        	s16i	a12, a0, 2
+40105e36:	000206        	j	40105e42 <wDev_AppendRxBlocks+0xea>
+40105e39:	82ca      	add.n	a8, a2, a12
+40105e3b:	29d9      	s32i.n	a13, a9, 8
+40105e3d:	30e9      	s32i.n	a14, a0, 12
+40105e3f:	005082        	s16i	a8, a0, 0
+40105e42:	0110b2        	l16ui	a11, a0, 2
+40105e45:	0010a2        	l16ui	a10, a0, 0
+40105e48:	f26301        	l32r	a0, 401027d4 <phy_get_bb_evm+0x64>
+40105e4b:	aaba      	add.n	a10, a10, a11
+40105e4d:	2c2aa6        	blti	a10, 2, 40105e7d <wDev_AppendRxBlocks+0x125>
+40105e50:	edf931        	l32r	a3, 40101634 <Cache_Read_Enable_2+0x2c>
+40105e53:	ed97d1        	l32r	a13, 401014b0 <system_deep_sleep_local_2+0xb0>
+40105e56:	0020c0        	memw
+40105e59:	aa2d22        	l32i	a2, a13, 0x2a8
+40105e5c:	102200        	and	a2, a2, a0
+40105e5f:	202230        	or	a2, a2, a3
+40105e62:	0020c0        	memw
+40105e65:	aa6d22        	s32i	a2, a13, 0x2a8
+40105e68:	ffbbe1        	l32r	a14, 40105d54 <wDev_SetFrameAckType+0x5c>
+40105e6b:	0020c0        	memw
+40105e6e:	ab2dc2        	l32i	a12, a13, 0x2ac
+40105e71:	10cc00        	and	a12, a12, a0
+40105e74:	20cce0        	or	a12, a12, a14
+40105e77:	0020c0        	memw
+40105e7a:	ab6dc2        	s32i	a12, a13, 0x2ac
+40105e7d:	11c8      	l32i.n	a12, a1, 4
+40105e7f:	21d8      	l32i.n	a13, a1, 8
+40105e81:	31e8      	l32i.n	a14, a1, 12
+40105e83:	eace01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40105e86:	0000c0        	callx0	a0
+40105e89:	0108      	l32i.n	a0, a1, 0
+40105e8b:	10c112        	addi	a1, a1, 16
+40105e8e:	f00d      	ret.n
+40105e90:	011032        	l16ui	a3, a0, 2
+40105e93:	24d9      	s32i.n	a13, a4, 8
+40105e95:	c3ca      	add.n	a12, a3, a12
+40105e97:	ffe586        	j	40105e31 <wDev_AppendRxBlocks+0xd9>
 	...
 
-40105cdc <wDev_ClearTxqCollisions>:
-40105cdc:	e9a641        	l32r	a4, 40100374 <esp_crc8+0xe4>
-40105cdf:	edf431        	l32r	a3, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105ce2:	0020c0        	memw
-40105ce5:	b02322        	l32i	a2, a3, 0x2c0
-40105ce8:	102240        	and	a2, a2, a4
-40105ceb:	0020c0        	memw
-40105cee:	b06322        	s32i	a2, a3, 0x2c0
-40105cf1:	f00d      	ret.n
+40105e9c <wDev_AppendRxAmpduLensBlocks>:
+40105e9c:	f0c112        	addi	a1, a1, -16
+40105e9f:	0139      	s32i.n	a3, a1, 0
+40105ea1:	1109      	s32i.n	a0, a1, 4
+40105ea3:	31d9      	s32i.n	a13, a1, 12
+40105ea5:	21c9      	s32i.n	a12, a1, 8
+40105ea7:	04dd      	mov.n	a13, a4
+40105ea9:	02cd      	mov.n	a12, a2
+40105eab:	06a216        	beqz	a2, 40105f19 <wDev_AppendRxAmpduLensBlocks+0x7d>
+40105eae:	0b0c      	movi.n	a11, 0
+40105eb0:	ee2341        	l32r	a4, 4010173c <spi_flash_write_status+0x74>
+40105eb3:	eb5561        	l32r	a6, 40100c08 <prvInsertBlockIntoUsedList+0x28>
+40105eb6:	f24671        	l32r	a7, 401027d0 <phy_get_bb_evm+0x60>
+40105eb9:	ee2181        	l32r	a8, 40101740 <spi_flash_write_status+0x78>
+40105ebc:	ffa591        	l32r	a9, 40105d50 <wDev_SetFrameAckType+0x58>
+40105ebf:	000c      	movi.n	a0, 0
+40105ec1:	0020c0        	memw
+40105ec4:	0258      	l32i.n	a5, a2, 0
+40105ec6:	105570        	and	a5, a5, a7
+40105ec9:	205560        	or	a5, a5, a6
+40105ecc:	0020c0        	memw
+40105ecf:	0259      	s32i.n	a5, a2, 0
+40105ed1:	0020c0        	memw
+40105ed4:	0238      	l32i.n	a3, a2, 0
+40105ed6:	103380        	and	a3, a3, a8
+40105ed9:	2033b0        	or	a3, a3, a11
+40105edc:	0020c0        	memw
+40105edf:	0239      	s32i.n	a3, a2, 0
+40105ee1:	0020c0        	memw
+40105ee4:	02a8      	l32i.n	a10, a2, 0
+40105ee6:	10aa40        	and	a10, a10, a4
+40105ee9:	20aab0        	or	a10, a10, a11
+40105eec:	0020c0        	memw
+40105eef:	02a9      	s32i.n	a10, a2, 0
+40105ef1:	0020c0        	memw
+40105ef4:	0258      	l32i.n	a5, a2, 0
+40105ef6:	b45050        	extui	a5, a5, 0, 12
+40105ef9:	115540        	slli	a5, a5, 12
+40105efc:	0020c0        	memw
+40105eff:	0238      	l32i.n	a3, a2, 0
+40105f01:	103390        	and	a3, a3, a9
+40105f04:	203350        	or	a3, a3, a5
+40105f07:	0020c0        	memw
+40105f0a:	001b      	addi.n	a0, a0, 1
+40105f0c:	0239      	s32i.n	a3, a2, 0
+40105f0e:	2228      	l32i.n	a2, a2, 8
+40105f10:	f40000        	extui	a0, a0, 0, 16
+40105f13:	faa256        	bnez	a2, 40105ec1 <wDev_AppendRxAmpduLensBlocks+0x25>
+40105f16:	000046        	j	40105f1b <wDev_AppendRxAmpduLensBlocks+0x7f>
+40105f19:	000c      	movi.n	a0, 0
+40105f1b:	111d07        	beq	a13, a0, 40105f30 <wDev_AppendRxAmpduLensBlocks+0x94>
+40105f1e:	fd8721        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+40105f21:	fd8731        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+40105f24:	26a642        	movi	a4, 0x626
+40105f27:	e89601        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40105f2a:	0000c0        	callx0	a0
+40105f2d:	ffff06        	j	40105f2d <wDev_AppendRxAmpduLensBlocks+0x91>
+40105f30:	e95c01        	l32r	a0, 401004a0 <wdt_feed+0x68>
+40105f33:	0000c0        	callx0	a0
+40105f36:	fd2401        	l32r	a0, 401053c8 <trc_NeedRTS+0xb8>
+40105f39:	0008      	l32i.n	a0, a0, 0
+40105f3b:	c068      	l32i.n	a6, a0, 48
+40105f3d:	d038      	l32i.n	a3, a0, 52
+40105f3f:	c6cc      	bnez.n	a6, 40105f4f <wDev_AppendRxAmpduLensBlocks+0xb3>
+40105f41:	c0c9      	s32i.n	a12, a0, 48
+40105f43:	f1eb21        	l32r	a2, 401026f0 <unsign_to_sign+0x30>
+40105f46:	0020c0        	memw
+40105f49:	8362c2        	s32i	a12, a2, 0x20c
+40105f4c:	000046        	j	40105f51 <wDev_AppendRxAmpduLensBlocks+0xb5>
+40105f4f:	23c9      	s32i.n	a12, a3, 8
+40105f51:	21c8      	l32i.n	a12, a1, 8
+40105f53:	040042        	l8ui	a4, a0, 4
+40105f56:	0158      	l32i.n	a5, a1, 0
+40105f58:	d059      	s32i.n	a5, a0, 52
+40105f5a:	44da      	add.n	a4, a4, a13
+40105f5c:	31d8      	l32i.n	a13, a1, 12
+40105f5e:	044042        	s8i	a4, a0, 4
+40105f61:	ea9601        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+40105f64:	0000c0        	callx0	a0
+40105f67:	1108      	l32i.n	a0, a1, 4
+40105f69:	10c112        	addi	a1, a1, 16
+40105f6c:	f00d      	ret.n
+40105f6e:	000000        	ill
+40105f71:	3ff212        	excw
+40105f74:	1408      	l32i.n	a0, a4, 4
+40105f76:	a13ff2        	excw
+
+40105f78 <wDev_Get_KeyEntry>:
+40105f78:	fffea1        	l32r	a10, 40105f70 <wDev_AppendRxAmpduLensBlocks+0xd4>
+40105f7b:	029d      	mov.n	a9, a2
+40105f7d:	f0c112        	addi	a1, a1, -16
+40105f80:	072d      	mov.n	a2, a7
+40105f82:	0109      	s32i.n	a0, a1, 0
+40105f84:	a00660        	addx4	a0, a6, a6
+40105f87:	1100d0        	slli	a0, a0, 3
+40105f8a:	a0aa      	add.n	a10, a0, a10
+40105f8c:	0020c0        	memw
+40105f8f:	802ab2        	l32i	a11, a10, 0x200
+40105f92:	0020c0        	memw
+40105f95:	f570b0        	extui	a7, a11, 16, 16
+40105f98:	7588b0        	extui	a8, a11, 24, 8
+40105f9b:	812a62        	l32i	a6, a10, 0x204
+40105f9e:	044562        	s8i	a6, a5, 4
+40105fa1:	0045b2        	s8i	a11, a5, 0
+40105fa4:	034582        	s8i	a8, a5, 3
+40105fa7:	024572        	s8i	a7, a5, 2
+40105faa:	41a860        	srli	a10, a6, 8
+40105fad:	157e60        	extui	a7, a6, 30, 2
+40105fb0:	0545a2        	s8i	a10, a5, 5
+40105fb3:	058860        	extui	a8, a6, 24, 1
+40105fb6:	41b8b0        	srli	a11, a11, 8
+40105fb9:	0145b2        	s8i	a11, a5, 1
+40105fbc:	004382        	s8i	a8, a3, 0
+40105fbf:	0479      	s32i.n	a7, a4, 0
+40105fc1:	253260        	extui	a3, a6, 18, 3
+40105fc4:	071366        	bnei	a3, 1, 40105fcf <wDev_Get_KeyEntry+0x57>
+40105fc7:	154060        	extui	a4, a6, 16, 2
+40105fca:	011466        	bnei	a4, 1, 40105fcf <wDev_Get_KeyEntry+0x57>
+40105fcd:	530c      	movi.n	a3, 5
+40105fcf:	0939      	s32i.n	a3, a9, 0
+40105fd1:	ffe831        	l32r	a3, 40105f74 <wDev_AppendRxAmpduLensBlocks+0xd8>
+40105fd4:	4148      	l32i.n	a4, a1, 16
+40105fd6:	303a      	add.n	a3, a0, a3
+40105fd8:	e97a01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+40105fdb:	0000c0        	callx0	a0
+40105fde:	020c      	movi.n	a2, 0
+40105fe0:	0108      	l32i.n	a0, a1, 0
+40105fe2:	10c112        	addi	a1, a1, 16
+40105fe5:	f00d      	ret.n
 	...
 
-40105cf4 <wDev_SetWaitingQueue>:
-40105cf4:	087c      	movi.n	a8, -16
-40105cf6:	347020        	extui	a7, a2, 0, 4
-40105cf9:	eded51        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105cfc:	0020c0        	memw
-40105cff:	ac2562        	l32i	a6, a5, 0x2b0
-40105d02:	106680        	and	a6, a6, a8
-40105d05:	206670        	or	a6, a6, a7
-40105d08:	0020c0        	memw
-40105d0b:	ac6562        	s32i	a6, a5, 0x2b0
-40105d0e:	c46c      	movi.n	a4, -20
-40105d10:	d14420        	mul16s	a4, a4, a2
-40105d13:	f2c971        	l32r	a7, 40102838 <phy_get_bb_evm+0x60>
-40105d16:	445a      	add.n	a4, a4, a5
-40105d18:	0020c0        	memw
-40105d1b:	e92462        	l32i	a6, a4, 0x3a4
-40105d1e:	106670        	and	a6, a6, a7
-40105d21:	0020c0        	memw
-40105d24:	e96462        	s32i	a6, a4, 0x3a4
-40105d27:	ebe951        	l32r	a5, 40100ccc <xPortWantedSizeAlign+0xc>
-40105d2a:	0020c0        	memw
-40105d2d:	e92432        	l32i	a3, a4, 0x3a4
-40105d30:	203350        	or	a3, a3, a5
-40105d33:	0020c0        	memw
-40105d36:	e96432        	s32i	a3, a4, 0x3a4
-40105d39:	f00d      	ret.n
-	...
+40105fe8 <wDev_GetBAInfo>:
+40105fe8:	f1c261        	l32r	a6, 401026f0 <unsign_to_sign+0x30>
+40105feb:	0020c0        	memw
+40105fee:	dd2692        	l32i	a9, a6, 0x374
+40105ff1:	349c90        	extui	a9, a9, 12, 4
+40105ff4:	004292        	s8i	a9, a2, 0
+40105ff7:	0020c0        	memw
+40105ffa:	dd2682        	l32i	a8, a6, 0x374
+40105ffd:	b48080        	extui	a8, a8, 0, 12
+40106000:	005382        	s16i	a8, a3, 0
+40106003:	0020c0        	memw
+40106006:	da2672        	l32i	a7, a6, 0x368
+40106009:	0479      	s32i.n	a7, a4, 0
+4010600b:	0020c0        	memw
+4010600e:	d92662        	l32i	a6, a6, 0x364
+40106011:	0569      	s32i.n	a6, a5, 0
+40106013:	f00d      	ret.n
+40106015:	000000        	ill
+40106018:	fe9d90        	excw
+4010601b:	3f          	.byte 0x3f
 
-40105d3c <wDev_ClearWaitingQueue>:
-40105d3c:	c46c      	movi.n	a4, -20
-40105d3e:	eddc51        	l32r	a5, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105d41:	d14420        	mul16s	a4, a4, a2
-40105d44:	445a      	add.n	a4, a4, a5
-40105d46:	ee7e51        	l32r	a5, 40101740 <spi_flash_write_status+0x78>
-40105d49:	0020c0        	memw
-40105d4c:	e92432        	l32i	a3, a4, 0x3a4
-40105d4f:	103350        	and	a3, a3, a5
-40105d52:	0020c0        	memw
-40105d55:	e96432        	s32i	a3, a4, 0x3a4
-40105d58:	f00d      	ret.n
-40105d5a:	000000        	ill
-40105d5d:	3ff200        	excw
-
-40105d60 <wDev_SetFrameAckType>:
-40105d60:	048720        	extui	a8, a2, 7, 1
-40105d63:	147220        	extui	a7, a2, 2, 2
-40105d66:	907780        	addx2	a7, a7, a8
-40105d69:	fffc81        	l32r	a8, 40105d5c <wDev_ClearWaitingQueue+0x20>
-40105d6c:	747070        	extui	a7, a7, 0, 8
-40105d6f:	1177e0        	slli	a7, a7, 2
-40105d72:	778a      	add.n	a7, a7, a8
-40105d74:	0cd742        	addmi	a4, a7, 0xc00
-40105d77:	f80c      	movi.n	a8, 15
-40105d79:	0020c0        	memw
-40105d7c:	0cd772        	addmi	a7, a7, 0xc00
-40105d7f:	262442        	l32i	a4, a4, 152
-40105d82:	f97c      	movi.n	a9, -1
-40105d84:	246420        	extui	a6, a2, 4, 3
-40105d87:	c51c      	movi.n	a5, 28
-40105d89:	1166e0        	slli	a6, a6, 2
-40105d8c:	c05560        	sub	a5, a5, a6
-40105d8f:	745050        	extui	a5, a5, 0, 8
-40105d92:	401500        	ssl	a5
-40105d95:	a18800        	sll	a8, a8
-40105d98:	401500        	ssl	a5
-40105d9b:	308890        	xor	a8, a8, a9
-40105d9e:	108480        	and	a8, a4, a8
-40105da1:	a16300        	sll	a6, a3
-40105da4:	206680        	or	a6, a6, a8
-40105da7:	0020c0        	memw
-40105daa:	266762        	s32i	a6, a7, 152
-40105dad:	400500        	ssr	a5
-40105db0:	912040        	srl	a2, a4
-40105db3:	342020        	extui	a2, a2, 0, 4
-40105db6:	f00d      	ret.n
-40105db8:	ff          	.byte 0xff
-40105db9:	0f          	.byte 0xf
-40105dba:	00ff00        	excw
-40105dbd:	500000        	excw
-
-40105dc0 <wDev_AppendRxBlocks>:
-40105dc0:	f0c112        	addi	a1, a1, -16
-40105dc3:	0109      	s32i.n	a0, a1, 0
-40105dc5:	21d9      	s32i.n	a13, a1, 8
-40105dc7:	11c9      	s32i.n	a12, a1, 4
-40105dc9:	31e9      	s32i.n	a14, a1, 12
-40105dcb:	04cd      	mov.n	a12, a4
-40105dcd:	03ed      	mov.n	a14, a3
-40105dcf:	02dd      	mov.n	a13, a2
-40105dd1:	06a216        	beqz	a2, 40105e3f <wDev_AppendRxBlocks+0x7f>
-40105dd4:	0a0c      	movi.n	a10, 0
-40105dd6:	ee5931        	l32r	a3, 4010173c <spi_flash_write_status+0x74>
-40105dd9:	eb8b41        	l32r	a4, 40100c08 <prvInsertBlockIntoUsedList+0x28>
-40105ddc:	f29761        	l32r	a6, 40102838 <phy_get_bb_evm+0x60>
-40105ddf:	ee5871        	l32r	a7, 40101740 <spi_flash_write_status+0x78>
-40105de2:	fff581        	l32r	a8, 40105db8 <wDev_SetFrameAckType+0x58>
-40105de5:	000c      	movi.n	a0, 0
-40105de7:	0020c0        	memw
-40105dea:	0298      	l32i.n	a9, a2, 0
-40105dec:	109960        	and	a9, a9, a6
-40105def:	209940        	or	a9, a9, a4
-40105df2:	0020c0        	memw
-40105df5:	0299      	s32i.n	a9, a2, 0
-40105df7:	0020c0        	memw
-40105dfa:	0258      	l32i.n	a5, a2, 0
-40105dfc:	105570        	and	a5, a5, a7
-40105dff:	2055a0        	or	a5, a5, a10
-40105e02:	0020c0        	memw
-40105e05:	0259      	s32i.n	a5, a2, 0
-40105e07:	0020c0        	memw
-40105e0a:	02b8      	l32i.n	a11, a2, 0
-40105e0c:	10bb30        	and	a11, a11, a3
-40105e0f:	20bba0        	or	a11, a11, a10
-40105e12:	0020c0        	memw
-40105e15:	02b9      	s32i.n	a11, a2, 0
-40105e17:	0020c0        	memw
-40105e1a:	0298      	l32i.n	a9, a2, 0
-40105e1c:	b49090        	extui	a9, a9, 0, 12
-40105e1f:	119940        	slli	a9, a9, 12
-40105e22:	0020c0        	memw
-40105e25:	0258      	l32i.n	a5, a2, 0
-40105e27:	105580        	and	a5, a5, a8
-40105e2a:	205590        	or	a5, a5, a9
-40105e2d:	0020c0        	memw
-40105e30:	001b      	addi.n	a0, a0, 1
-40105e32:	0259      	s32i.n	a5, a2, 0
-40105e34:	2228      	l32i.n	a2, a2, 8
-40105e36:	f40000        	extui	a0, a0, 0, 16
-40105e39:	faa256        	bnez	a2, 40105de7 <wDev_AppendRxBlocks+0x27>
-40105e3c:	000046        	j	40105e41 <wDev_AppendRxBlocks+0x81>
-40105e3f:	000c      	movi.n	a0, 0
-40105e41:	111c07        	beq	a12, a0, 40105e56 <wDev_AppendRxBlocks+0x96>
-40105e44:	fdd821        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105e47:	fdd831        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105e4a:	dca542        	movi	a4, 0x5dc
-40105e4d:	e8cc01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105e50:	0000c0        	callx0	a0
-40105e53:	ffff06        	j	40105e53 <wDev_AppendRxBlocks+0x93>
-40105e56:	e99201        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40105e59:	0000c0        	callx0	a0
-40105e5c:	fd7501        	l32r	a0, 40105430 <trc_NeedRTS+0xb8>
-40105e5f:	0008      	l32i.n	a0, a0, 0
-40105e61:	001022        	l16ui	a2, a0, 0
-40105e64:	3098      	l32i.n	a9, a0, 12
-40105e66:	32ec      	bnez.n	a2, 40105e8d <wDev_AppendRxBlocks+0xcd>
-40105e68:	20d9      	s32i.n	a13, a0, 8
-40105e6a:	f23b41        	l32r	a4, 40102758 <unsign_to_sign+0x30>
-40105e6d:	0020c0        	memw
-40105e70:	001032        	l16ui	a3, a0, 0
-40105e73:	8264d2        	s32i	a13, a4, 0x208
-40105e76:	33ca      	add.n	a3, a3, a12
-40105e78:	005032        	s16i	a3, a0, 0
-40105e7b:	001022        	l16ui	a2, a0, 0
-40105e7e:	30e9      	s32i.n	a14, a0, 12
-40105e80:	261266        	bnei	a2, 1, 40105eaa <wDev_AppendRxBlocks+0xea>
-40105e83:	3068      	l32i.n	a6, a0, 12
-40105e85:	18c052        	addi	a5, a0, 24
-40105e88:	2659      	s32i.n	a5, a6, 8
-40105e8a:	000706        	j	40105eaa <wDev_AppendRxBlocks+0xea>
-40105e8d:	101266        	bnei	a2, 1, 40105ea1 <wDev_AppendRxBlocks+0xe1>
-40105e90:	4078      	l32i.n	a7, a0, 16
-40105e92:	5048      	l32i.n	a4, a0, 20
-40105e94:	060756        	bnez	a7, 40105ef8 <wDev_AppendRxBlocks+0x138>
-40105e97:	40d9      	s32i.n	a13, a0, 16
-40105e99:	50e9      	s32i.n	a14, a0, 20
-40105e9b:	0150c2        	s16i	a12, a0, 2
-40105e9e:	000206        	j	40105eaa <wDev_AppendRxBlocks+0xea>
-40105ea1:	82ca      	add.n	a8, a2, a12
-40105ea3:	29d9      	s32i.n	a13, a9, 8
-40105ea5:	30e9      	s32i.n	a14, a0, 12
-40105ea7:	005082        	s16i	a8, a0, 0
-40105eaa:	0110b2        	l16ui	a11, a0, 2
-40105ead:	0010a2        	l16ui	a10, a0, 0
-40105eb0:	f26301        	l32r	a0, 4010283c <phy_get_bb_evm+0x64>
-40105eb3:	aaba      	add.n	a10, a10, a11
-40105eb5:	2c2aa6        	blti	a10, 2, 40105ee5 <wDev_AppendRxBlocks+0x125>
-40105eb8:	eddf31        	l32r	a3, 40101634 <Cache_Read_Enable_2+0x2c>
-40105ebb:	ed7dd1        	l32r	a13, 401014b0 <system_deep_sleep_local_2+0xb0>
-40105ebe:	0020c0        	memw
-40105ec1:	aa2d22        	l32i	a2, a13, 0x2a8
-40105ec4:	102200        	and	a2, a2, a0
-40105ec7:	202230        	or	a2, a2, a3
-40105eca:	0020c0        	memw
-40105ecd:	aa6d22        	s32i	a2, a13, 0x2a8
-40105ed0:	ffbbe1        	l32r	a14, 40105dbc <wDev_SetFrameAckType+0x5c>
-40105ed3:	0020c0        	memw
-40105ed6:	ab2dc2        	l32i	a12, a13, 0x2ac
-40105ed9:	10cc00        	and	a12, a12, a0
-40105edc:	20cce0        	or	a12, a12, a14
-40105edf:	0020c0        	memw
-40105ee2:	ab6dc2        	s32i	a12, a13, 0x2ac
-40105ee5:	11c8      	l32i.n	a12, a1, 4
-40105ee7:	21d8      	l32i.n	a13, a1, 8
-40105ee9:	31e8      	l32i.n	a14, a1, 12
-40105eeb:	eab401        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40105eee:	0000c0        	callx0	a0
-40105ef1:	0108      	l32i.n	a0, a1, 0
-40105ef3:	10c112        	addi	a1, a1, 16
-40105ef6:	f00d      	ret.n
-40105ef8:	011032        	l16ui	a3, a0, 2
-40105efb:	24d9      	s32i.n	a13, a4, 8
-40105efd:	c3ca      	add.n	a12, a3, a12
-40105eff:	ffe586        	j	40105e99 <wDev_AppendRxBlocks+0xd9>
-	...
-
-40105f04 <wDev_AppendRxAmpduLensBlocks>:
-40105f04:	f0c112        	addi	a1, a1, -16
-40105f07:	0139      	s32i.n	a3, a1, 0
-40105f09:	1109      	s32i.n	a0, a1, 4
-40105f0b:	31d9      	s32i.n	a13, a1, 12
-40105f0d:	21c9      	s32i.n	a12, a1, 8
-40105f0f:	04dd      	mov.n	a13, a4
-40105f11:	02cd      	mov.n	a12, a2
-40105f13:	06a216        	beqz	a2, 40105f81 <wDev_AppendRxAmpduLensBlocks+0x7d>
-40105f16:	0b0c      	movi.n	a11, 0
-40105f18:	ee0941        	l32r	a4, 4010173c <spi_flash_write_status+0x74>
-40105f1b:	eb3b61        	l32r	a6, 40100c08 <prvInsertBlockIntoUsedList+0x28>
-40105f1e:	f24671        	l32r	a7, 40102838 <phy_get_bb_evm+0x60>
-40105f21:	ee0781        	l32r	a8, 40101740 <spi_flash_write_status+0x78>
-40105f24:	ffa591        	l32r	a9, 40105db8 <wDev_SetFrameAckType+0x58>
-40105f27:	000c      	movi.n	a0, 0
-40105f29:	0020c0        	memw
-40105f2c:	0258      	l32i.n	a5, a2, 0
-40105f2e:	105570        	and	a5, a5, a7
-40105f31:	205560        	or	a5, a5, a6
-40105f34:	0020c0        	memw
-40105f37:	0259      	s32i.n	a5, a2, 0
-40105f39:	0020c0        	memw
-40105f3c:	0238      	l32i.n	a3, a2, 0
-40105f3e:	103380        	and	a3, a3, a8
-40105f41:	2033b0        	or	a3, a3, a11
-40105f44:	0020c0        	memw
-40105f47:	0239      	s32i.n	a3, a2, 0
-40105f49:	0020c0        	memw
-40105f4c:	02a8      	l32i.n	a10, a2, 0
-40105f4e:	10aa40        	and	a10, a10, a4
-40105f51:	20aab0        	or	a10, a10, a11
-40105f54:	0020c0        	memw
-40105f57:	02a9      	s32i.n	a10, a2, 0
-40105f59:	0020c0        	memw
-40105f5c:	0258      	l32i.n	a5, a2, 0
-40105f5e:	b45050        	extui	a5, a5, 0, 12
-40105f61:	115540        	slli	a5, a5, 12
-40105f64:	0020c0        	memw
-40105f67:	0238      	l32i.n	a3, a2, 0
-40105f69:	103390        	and	a3, a3, a9
-40105f6c:	203350        	or	a3, a3, a5
-40105f6f:	0020c0        	memw
-40105f72:	001b      	addi.n	a0, a0, 1
-40105f74:	0239      	s32i.n	a3, a2, 0
-40105f76:	2228      	l32i.n	a2, a2, 8
-40105f78:	f40000        	extui	a0, a0, 0, 16
-40105f7b:	faa256        	bnez	a2, 40105f29 <wDev_AppendRxAmpduLensBlocks+0x25>
-40105f7e:	000046        	j	40105f83 <wDev_AppendRxAmpduLensBlocks+0x7f>
-40105f81:	000c      	movi.n	a0, 0
-40105f83:	111d07        	beq	a13, a0, 40105f98 <wDev_AppendRxAmpduLensBlocks+0x94>
-40105f86:	fd8721        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40105f89:	fd8731        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40105f8c:	26a642        	movi	a4, 0x626
-40105f8f:	e87c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-40105f92:	0000c0        	callx0	a0
-40105f95:	ffff06        	j	40105f95 <wDev_AppendRxAmpduLensBlocks+0x91>
-40105f98:	e94201        	l32r	a0, 401004a0 <wdt_feed+0x68>
-40105f9b:	0000c0        	callx0	a0
-40105f9e:	fd2401        	l32r	a0, 40105430 <trc_NeedRTS+0xb8>
-40105fa1:	0008      	l32i.n	a0, a0, 0
-40105fa3:	c068      	l32i.n	a6, a0, 48
-40105fa5:	d038      	l32i.n	a3, a0, 52
-40105fa7:	c6cc      	bnez.n	a6, 40105fb7 <wDev_AppendRxAmpduLensBlocks+0xb3>
-40105fa9:	c0c9      	s32i.n	a12, a0, 48
-40105fab:	f1eb21        	l32r	a2, 40102758 <unsign_to_sign+0x30>
-40105fae:	0020c0        	memw
-40105fb1:	8362c2        	s32i	a12, a2, 0x20c
-40105fb4:	000046        	j	40105fb9 <wDev_AppendRxAmpduLensBlocks+0xb5>
-40105fb7:	23c9      	s32i.n	a12, a3, 8
-40105fb9:	21c8      	l32i.n	a12, a1, 8
-40105fbb:	040042        	l8ui	a4, a0, 4
-40105fbe:	0158      	l32i.n	a5, a1, 0
-40105fc0:	d059      	s32i.n	a5, a0, 52
-40105fc2:	44da      	add.n	a4, a4, a13
-40105fc4:	31d8      	l32i.n	a13, a1, 12
-40105fc6:	044042        	s8i	a4, a0, 4
-40105fc9:	ea7c01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-40105fcc:	0000c0        	callx0	a0
-40105fcf:	1108      	l32i.n	a0, a1, 4
-40105fd1:	10c112        	addi	a1, a1, 16
-40105fd4:	f00d      	ret.n
-40105fd6:	000000        	ill
-40105fd9:	3ff212        	excw
-40105fdc:	1408      	l32i.n	a0, a4, 4
-40105fde:	a13ff2        	excw
-
-40105fe0 <wDev_Get_KeyEntry>:
-40105fe0:	fffea1        	l32r	a10, 40105fd8 <wDev_AppendRxAmpduLensBlocks+0xd4>
-40105fe3:	029d      	mov.n	a9, a2
-40105fe5:	f0c112        	addi	a1, a1, -16
-40105fe8:	072d      	mov.n	a2, a7
-40105fea:	0109      	s32i.n	a0, a1, 0
-40105fec:	a00660        	addx4	a0, a6, a6
-40105fef:	1100d0        	slli	a0, a0, 3
-40105ff2:	a0aa      	add.n	a10, a0, a10
-40105ff4:	0020c0        	memw
-40105ff7:	802ab2        	l32i	a11, a10, 0x200
-40105ffa:	0020c0        	memw
-40105ffd:	f570b0        	extui	a7, a11, 16, 16
-40106000:	7588b0        	extui	a8, a11, 24, 8
-40106003:	812a62        	l32i	a6, a10, 0x204
-40106006:	044562        	s8i	a6, a5, 4
-40106009:	0045b2        	s8i	a11, a5, 0
-4010600c:	034582        	s8i	a8, a5, 3
-4010600f:	024572        	s8i	a7, a5, 2
-40106012:	41a860        	srli	a10, a6, 8
-40106015:	157e60        	extui	a7, a6, 30, 2
-40106018:	0545a2        	s8i	a10, a5, 5
-4010601b:	058860        	extui	a8, a6, 24, 1
-4010601e:	41b8b0        	srli	a11, a11, 8
-40106021:	0145b2        	s8i	a11, a5, 1
-40106024:	004382        	s8i	a8, a3, 0
-40106027:	0479      	s32i.n	a7, a4, 0
-40106029:	253260        	extui	a3, a6, 18, 3
-4010602c:	071366        	bnei	a3, 1, 40106037 <wDev_Get_KeyEntry+0x57>
-4010602f:	154060        	extui	a4, a6, 16, 2
-40106032:	011466        	bnei	a4, 1, 40106037 <wDev_Get_KeyEntry+0x57>
-40106035:	530c      	movi.n	a3, 5
-40106037:	0939      	s32i.n	a3, a9, 0
-40106039:	ffe831        	l32r	a3, 40105fdc <wDev_AppendRxAmpduLensBlocks+0xd8>
-4010603c:	4148      	l32i.n	a4, a1, 16
-4010603e:	303a      	add.n	a3, a0, a3
-40106040:	e96001        	l32r	a0, 401005c0 <wdt_feed+0x188>
-40106043:	0000c0        	callx0	a0
-40106046:	020c      	movi.n	a2, 0
-40106048:	0108      	l32i.n	a0, a1, 0
-4010604a:	10c112        	addi	a1, a1, 16
-4010604d:	f00d      	ret.n
-	...
-
-40106050 <wDev_GetBAInfo>:
-40106050:	f1c261        	l32r	a6, 40102758 <unsign_to_sign+0x30>
-40106053:	0020c0        	memw
-40106056:	dd2692        	l32i	a9, a6, 0x374
-40106059:	349c90        	extui	a9, a9, 12, 4
-4010605c:	004292        	s8i	a9, a2, 0
-4010605f:	0020c0        	memw
-40106062:	dd2682        	l32i	a8, a6, 0x374
-40106065:	b48080        	extui	a8, a8, 0, 12
-40106068:	005382        	s16i	a8, a3, 0
-4010606b:	0020c0        	memw
-4010606e:	da2672        	l32i	a7, a6, 0x368
-40106071:	0479      	s32i.n	a7, a4, 0
-40106073:	0020c0        	memw
-40106076:	d92662        	l32i	a6, a6, 0x364
-40106079:	0569      	s32i.n	a6, a5, 0
-4010607b:	f00d      	ret.n
-4010607d:	000000        	ill
-40106080:	fe9db0        	excw
-40106083:	3f          	.byte 0x3f
-
-40106084 <wDevDisableRx>:
-40106084:	f1ed61        	l32r	a6, 40102838 <phy_get_bb_evm+0x60>
-40106087:	f1b451        	l32r	a5, 40102758 <unsign_to_sign+0x30>
-4010608a:	0020c0        	memw
-4010608d:	812542        	l32i	a4, a5, 0x204
-40106090:	104460        	and	a4, a4, a6
-40106093:	0020c0        	memw
-40106096:	816542        	s32i	a4, a5, 0x204
-40106099:	fff931        	l32r	a3, 40106080 <wDev_GetBAInfo+0x30>
-4010609c:	120c      	movi.n	a2, 1
-4010609e:	804322        	s8i	a2, a3, 128
+4010601c <wDevDisableRx>:
+4010601c:	f1ed61        	l32r	a6, 401027d0 <phy_get_bb_evm+0x60>
+4010601f:	f1b451        	l32r	a5, 401026f0 <unsign_to_sign+0x30>
+40106022:	0020c0        	memw
+40106025:	812542        	l32i	a4, a5, 0x204
+40106028:	104460        	and	a4, a4, a6
+4010602b:	0020c0        	memw
+4010602e:	816542        	s32i	a4, a5, 0x204
+40106031:	fff931        	l32r	a3, 40106018 <wDev_GetBAInfo+0x30>
+40106034:	120c      	movi.n	a2, 1
+40106036:	804322        	s8i	a2, a3, 128
+40106039:	f00d      	ret.n
+4010603b:	beef00        	excw
+4010603e:	dead      	excw
+40106040:	1268      	l32i.n	a6, a2, 4
+40106042:	fffe31        	l32r	a3, 4010603c <wDevDisableRx+0x20>
+40106045:	0639      	s32i.n	a3, a6, 0
+40106047:	0020c0        	memw
+4010604a:	0258      	l32i.n	a5, a2, 0
+4010604c:	1248      	l32i.n	a4, a2, 4
+4010604e:	b45050        	extui	a5, a5, 0, 12
+40106051:	445a      	add.n	a4, a4, a5
+40106053:	0439      	s32i.n	a3, a4, 0
+40106055:	f00d      	ret.n
+40106057:	0d6800        	excw
+4010605a:	124024        	excw
+4010605d:	c9f0c1        	l32r	a12, 400f8820 <__floatsidf+0xea530>
+40106060:	21d911        	l32r	a1, 400ce7c4 <__floatsidf+0xc04d4>
+40106063:	0109      	s32i.n	a0, a1, 0
+40106065:	f1a201        	l32r	a0, 401026f0 <unsign_to_sign+0x30>
+40106068:	0020c0        	memw
+4010606b:	8e2002        	l32i	a0, a0, 0x238
+4010606e:	124c      	movi.n	a2, 65
+40106070:	740000        	extui	a0, a0, 0, 8
+40106073:	02b207        	bgeu	a2, a0, 40106079 <wDevDisableRx+0x5d>
+40106076:	1e6077        	bbci	a0, 7, 40106098 <wDevDisableRx+0x7c>
+40106079:	fcd3d1        	l32r	a13, 401053c8 <trc_NeedRTS+0xb8>
+4010607c:	0dd8      	l32i.n	a13, a13, 0
+4010607e:	2dd8      	l32i.n	a13, a13, 8
+40106080:	1dd8      	l32i.n	a13, a13, 4
+40106082:	001d22        	l16ui	a2, a13, 0
+40106085:	1d08      	l32i.n	a0, a13, 4
+40106087:	412e20        	srli	a2, a2, 14
+4010608a:	a28c      	beqz.n	a2, 40106098 <wDevDisableRx+0x7c>
+4010608c:	13e077        	bbsi	a0, 7, 401060a3 <wDevDisableRx+0x87>
+4010608f:	642000        	extui	a2, a0, 0, 7
+40106092:	0d82e6        	bgei	a2, 8, 401060a3 <wDevDisableRx+0x87>
+40106095:	0af0e7        	bbsi	a0, 30, 401060a3 <wDevDisableRx+0x87>
+40106098:	11c8      	l32i.n	a12, a1, 4
+4010609a:	21d8      	l32i.n	a13, a1, 8
+4010609c:	0108      	l32i.n	a0, a1, 0
+4010609e:	10c112        	addi	a1, a1, 16
 401060a1:	f00d      	ret.n
-401060a3:	beef00        	excw
-401060a6:	dead      	excw
-401060a8:	1268      	l32i.n	a6, a2, 4
-401060aa:	fffe31        	l32r	a3, 401060a4 <wDevDisableRx+0x20>
-401060ad:	0639      	s32i.n	a3, a6, 0
-401060af:	0020c0        	memw
-401060b2:	0258      	l32i.n	a5, a2, 0
-401060b4:	1248      	l32i.n	a4, a2, 4
-401060b6:	b45050        	extui	a5, a5, 0, 12
-401060b9:	445a      	add.n	a4, a4, a5
-401060bb:	0439      	s32i.n	a3, a4, 0
-401060bd:	f00d      	ret.n
-401060bf:	0d6800        	excw
-401060c2:	124024        	excw
-401060c5:	c9f0c1        	l32r	a12, 400f8888 <__floatsidf+0xea598>
-401060c8:	21d911        	l32r	a1, 400ce82c <__floatsidf+0xc053c>
-401060cb:	0109      	s32i.n	a0, a1, 0
-401060cd:	f1a201        	l32r	a0, 40102758 <unsign_to_sign+0x30>
-401060d0:	0020c0        	memw
-401060d3:	8e2002        	l32i	a0, a0, 0x238
-401060d6:	124c      	movi.n	a2, 65
-401060d8:	740000        	extui	a0, a0, 0, 8
-401060db:	02b207        	bgeu	a2, a0, 401060e1 <wDevDisableRx+0x5d>
-401060de:	1e6077        	bbci	a0, 7, 40106100 <wDevDisableRx+0x7c>
-401060e1:	fcd3d1        	l32r	a13, 40105430 <trc_NeedRTS+0xb8>
-401060e4:	0dd8      	l32i.n	a13, a13, 0
-401060e6:	2dd8      	l32i.n	a13, a13, 8
-401060e8:	1dd8      	l32i.n	a13, a13, 4
-401060ea:	001d22        	l16ui	a2, a13, 0
-401060ed:	1d08      	l32i.n	a0, a13, 4
-401060ef:	412e20        	srli	a2, a2, 14
-401060f2:	a28c      	beqz.n	a2, 40106100 <wDevDisableRx+0x7c>
-401060f4:	13e077        	bbsi	a0, 7, 4010610b <wDevDisableRx+0x87>
-401060f7:	642000        	extui	a2, a0, 0, 7
-401060fa:	0d82e6        	bgei	a2, 8, 4010610b <wDevDisableRx+0x87>
-401060fd:	0af0e7        	bbsi	a0, 30, 4010610b <wDevDisableRx+0x87>
-40106100:	11c8      	l32i.n	a12, a1, 4
-40106102:	21d8      	l32i.n	a13, a1, 8
-40106104:	0108      	l32i.n	a0, a1, 0
-40106106:	10c112        	addi	a1, a1, 16
-40106109:	f00d      	ret.n
-4010610b:	0ca022        	movi	a2, 12
-4010610e:	d6a742        	movi	a4, 0x7d6
-40106111:	ffeb31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106114:	00a052        	movi	a5, 0
-40106117:	fabd05        	call0	40100ce8 <pvPortMalloc>
-4010611a:	02cd      	mov.n	a12, a2
-4010611c:	fe0216        	beqz	a2, 40106100 <wDevDisableRx+0x7c>
-4010611f:	0d3d      	mov.n	a3, a13
-40106121:	c40c      	movi.n	a4, 12
-40106123:	e92701        	l32r	a0, 401005c0 <wdt_feed+0x188>
-40106126:	0000c0        	callx0	a0
-40106129:	004b05        	call0	401065dc <chm_get_current_channel>
-4010612c:	02dc      	bnez.n	a2, 40106140 <wDevDisableRx+0xbc>
-4010612e:	fd1d21        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40106131:	fd1d31        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40106134:	dda742        	movi	a4, 0x7dd
-40106137:	e81201        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010613a:	0000c0        	callx0	a0
-4010613d:	ffff06        	j	4010613d <wDevDisableRx+0xb9>
-40106140:	f1f361        	l32r	a6, 4010290c <pm_rtc_clock_cali+0xcc>
-40106143:	022c42        	l32i	a4, a12, 8
-40106146:	001c32        	l16ui	a3, a12, 0
-40106149:	060252        	l8ui	a5, a2, 6
-4010614c:	413e30        	srli	a3, a3, 14
-4010614f:	345050        	extui	a5, a5, 0, 4
-40106152:	115500        	slli	a5, a5, 16
-40106155:	104460        	and	a4, a4, a6
-40106158:	204450        	or	a4, a4, a5
-4010615b:	026c42        	s32i	a4, a12, 8
-4010615e:	c3ac      	beqz.n	a3, 4010618e <wDevDisableRx+0x10a>
-40106160:	1c28      	l32i.n	a2, a12, 4
-40106162:	640020        	extui	a0, a2, 0, 7
-40106165:	05e277        	bbsi	a2, 7, 4010616e <wDevDisableRx+0xea>
-40106168:	0280e6        	bgei	a0, 8, 4010616e <wDevDisableRx+0xea>
-4010616b:	1f72e7        	bbci	a2, 30, 4010618e <wDevDisableRx+0x10a>
-4010616e:	1cc0e6        	bgei	a0, 32, 4010618e <wDevDisableRx+0x10a>
-40106171:	022c      	movi.n	a2, 32
-40106173:	930c      	movi.n	a3, 9
-40106175:	0c4d      	mov.n	a4, a12
-40106177:	fe7005        	call0	40104878 <pp_post2>
-4010617a:	021226        	beqi	a2, 1, 40106180 <wDevDisableRx+0xfc>
-4010617d:	ffdfc6        	j	40106100 <wDevDisableRx+0x7c>
-40106180:	0c2d      	mov.n	a2, a12
-40106182:	ffcf31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106185:	e7a742        	movi	a4, 0x7e7
-40106188:	facc45        	call0	40100e50 <vPortFree>
-4010618b:	ffdc46        	j	40106100 <wDevDisableRx+0x7c>
-4010618e:	0c2d      	mov.n	a2, a12
-40106190:	ffcc31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106193:	e1a742        	movi	a4, 0x7e1
-40106196:	facb85        	call0	40100e50 <vPortFree>
-40106199:	ffd8c6        	j	40106100 <wDevDisableRx+0x7c>
-4010619c:	000812        	l8ui	a1, a8, 0
-4010619f:	081900        	excw
-401061a2:	240000        	extui	a0, a0, 0, 3
-401061a5:	0008      	l32i.n	a0, a0, 0
-401061a7:	081e00        	excw
-401061aa:	0c0000        	excw
-401061ad:	c11242        	l16ui	a4, a2, 0x182
-401061b0:	31d9f0        	srai	a13, a15, 25
-401061b3:	1109      	s32i.n	a0, a1, 4
-401061b5:	21c9      	s32i.n	a12, a1, 8
-401061b7:	d31c      	movi.n	a3, 29
-401061b9:	ecbdc1        	l32r	a12, 401014b0 <system_deep_sleep_local_2+0xb0>
-401061bc:	f74e01        	l32r	a0, 40103ef4 <lmacProcessTxError+0x8c>
-401061bf:	0020c0        	memw
-401061c2:	bf2002        	l32i	a0, a0, 0x2fc
-401061c5:	0020c0        	memw
-401061c8:	802c42        	l32i	a4, a12, 0x200
-401061cb:	c04400        	sub	a4, a4, a0
-401061ce:	143347        	bltu	a3, a4, 401061e6 <wDevDisableRx+0x162>
-401061d1:	0020c0        	memw
-401061d4:	872c42        	l32i	a4, a12, 0x21c
-401061d7:	6be427        	bbsi	a4, 2, 40106246 <wDevDisableRx+0x1c2>
-401061da:	0020c0        	memw
-401061dd:	802c52        	l32i	a5, a12, 0x200
-401061e0:	c05500        	sub	a5, a5, a0
-401061e3:	eab357        	bgeu	a3, a5, 401061d1 <wDevDisableRx+0x14d>
-401061e6:	00af72        	movi	a7, 0xffffff00
-401061e9:	f15b31        	l32r	a3, 40102758 <unsign_to_sign+0x30>
-401061ec:	0020c0        	memw
-401061ef:	f52362        	l32i	a6, a3, 0x3d4
-401061f2:	da7c      	movi.n	a10, -3
-401061f4:	106670        	and	a6, a6, a7
-401061f7:	746860        	extui	a6, a6, 8, 8
-401061fa:	4886b6        	bltui	a6, 8, 40106246 <wDevDisableRx+0x1c2>
-401061fd:	0020c0        	memw
-40106200:	9c2c92        	l32i	a9, a12, 0x270
-40106203:	1099a0        	and	a9, a9, a10
-40106206:	0020c0        	memw
-40106209:	9c6c92        	s32i	a9, a12, 0x270
-4010620c:	0020c0        	memw
-4010620f:	872c82        	l32i	a8, a12, 0x21c
-40106212:	08e827        	bbsi	a8, 2, 4010621e <wDevDisableRx+0x19a>
-40106215:	0020c0        	memw
-40106218:	872cb2        	l32i	a11, a12, 0x21c
-4010621b:	f60b27        	bnone	a11, a2, 40106215 <wDevDisableRx+0x191>
-4010621e:	0020c0        	memw
-40106221:	896c22        	s32i	a2, a12, 0x224
-40106224:	0020c0        	memw
-40106227:	8e2302        	l32i	a0, a3, 0x238
-4010622a:	1d4c      	movi.n	a13, 65
-4010622c:	740000        	extui	a0, a0, 0, 8
-4010622f:	1ebd07        	bgeu	a13, a0, 40106251 <wDevDisableRx+0x1cd>
-40106232:	1be077        	bbsi	a0, 7, 40106251 <wDevDisableRx+0x1cd>
-40106235:	230c      	movi.n	a3, 2
-40106237:	0020c0        	memw
-4010623a:	9c2c22        	l32i	a2, a12, 0x270
-4010623d:	202230        	or	a2, a2, a3
-40106240:	0020c0        	memw
-40106243:	9c6c22        	s32i	a2, a12, 0x270
-40106246:	21c8      	l32i.n	a12, a1, 8
-40106248:	31d8      	l32i.n	a13, a1, 12
-4010624a:	1108      	l32i.n	a0, a1, 4
-4010624c:	10c112        	addi	a1, a1, 16
-4010624f:	f00d      	ret.n
-40106251:	0ca022        	movi	a2, 12
-40106254:	fc7761        	l32r	a6, 40105430 <trc_NeedRTS+0xb8>
-40106257:	ffd141        	l32r	a4, 4010619c <wDevDisableRx+0x118>
-4010625a:	002662        	l32i	a6, a6, 0
-4010625d:	050c      	movi.n	a5, 0
-4010625f:	2668      	l32i.n	a6, a6, 8
-40106261:	ff9731        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106264:	1668      	l32i.n	a6, a6, 4
-40106266:	0169      	s32i.n	a6, a1, 0
-40106268:	faa7c5        	call0	40100ce8 <pvPortMalloc>
-4010626b:	02dd      	mov.n	a13, a2
-4010626d:	fc4216        	beqz	a2, 40106235 <wDevDisableRx+0x1b1>
-40106270:	0138      	l32i.n	a3, a1, 0
-40106272:	c40c      	movi.n	a4, 12
-40106274:	e8d301        	l32r	a0, 401005c0 <wdt_feed+0x188>
-40106277:	0000c0        	callx0	a0
-4010627a:	003605        	call0	401065dc <chm_get_current_channel>
-4010627d:	02dc      	bnez.n	a2, 40106291 <wDevDisableRx+0x20d>
-4010627f:	fcc921        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40106282:	fcc931        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40106285:	ffc641        	l32r	a4, 401061a0 <wDevDisableRx+0x11c>
-40106288:	e7be01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010628b:	0000c0        	callx0	a0
-4010628e:	ffff06        	j	4010628e <wDevDisableRx+0x20a>
-40106291:	f19ea1        	l32r	a10, 4010290c <pm_rtc_clock_cali+0xcc>
-40106294:	022d82        	l32i	a8, a13, 8
-40106297:	001d72        	l16ui	a7, a13, 0
-4010629a:	060292        	l8ui	a9, a2, 6
-4010629d:	417e70        	srli	a7, a7, 14
-401062a0:	349090        	extui	a9, a9, 0, 4
-401062a3:	119900        	slli	a9, a9, 16
-401062a6:	1088a0        	and	a8, a8, a10
-401062a9:	208890        	or	a8, a8, a9
-401062ac:	026d82        	s32i	a8, a13, 8
-401062af:	87ac      	beqz.n	a7, 401062db <wDevDisableRx+0x257>
-401062b1:	1d88      	l32i.n	a8, a13, 4
-401062b3:	640080        	extui	a0, a8, 0, 7
-401062b6:	02e877        	bbsi	a8, 7, 401062bc <wDevDisableRx+0x238>
-401062b9:	1e80a6        	blti	a0, 8, 401062db <wDevDisableRx+0x257>
-401062bc:	1bc0e6        	bgei	a0, 32, 401062db <wDevDisableRx+0x257>
-401062bf:	022c      	movi.n	a2, 32
-401062c1:	930c      	movi.n	a3, 9
-401062c3:	0d4d      	mov.n	a4, a13
-401062c5:	fe5b05        	call0	40104878 <pp_post2>
-401062c8:	920b      	addi.n	a9, a2, -1
-401062ca:	f67956        	bnez	a9, 40106235 <wDevDisableRx+0x1b1>
-401062cd:	0d2d      	mov.n	a2, a13
-401062cf:	ff7c31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-401062d2:	ffb441        	l32r	a4, 401061a4 <wDevDisableRx+0x120>
-401062d5:	fab785        	call0	40100e50 <vPortFree>
-401062d8:	ffd646        	j	40106235 <wDevDisableRx+0x1b1>
-401062db:	0d2d      	mov.n	a2, a13
-401062dd:	ff7831        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-401062e0:	ffb241        	l32r	a4, 401061a8 <wDevDisableRx+0x124>
-401062e3:	fab6c5        	call0	40100e50 <vPortFree>
-401062e6:	ffd2c6        	j	40106235 <wDevDisableRx+0x1b1>
-401062e9:	000000        	ill
-401062ec:	000893        	excw
-401062ef:	08d200        	excw
-401062f2:	d40000        	extui	a0, a0, 0, 14
-401062f5:	0008      	l32i.n	a0, a0, 0
-401062f7:	08ed00        	excw
-401062fa:	f00000        	subx8	a0, a0, a0
-401062fd:	0008      	l32i.n	a0, a0, 0
-401062ff:	31b400        	srai	a11, a0, 20
-40106302:	124000        	excw
-40106305:	09d0c1        	l32r	a12, 400c8a48 <__floatsidf+0xba758>
-40106308:	61e921        	l32r	a2, 400deaac <__floatsidf+0xd07bc>
-4010630b:	fc4901        	l32r	a0, 40105430 <trc_NeedRTS+0xb8>
-4010630e:	71f9      	s32i.n	a15, a1, 28
-40106310:	00e8      	l32i.n	a14, a0, 0
-40106312:	41d9      	s32i.n	a13, a1, 16
-40106314:	2ee8      	l32i.n	a14, a14, 8
-40106316:	31c9      	s32i.n	a12, a1, 12
-40106318:	1ec8      	l32i.n	a12, a14, 4
-4010631a:	f14721        	l32r	a2, 40102838 <phy_get_bb_evm+0x60>
-4010631d:	7ccb      	addi.n	a7, a12, 12
-4010631f:	0020c0        	memw
-40106322:	0e38      	l32i.n	a3, a14, 0
-40106324:	1d0c      	movi.n	a13, 1
-40106326:	103320        	and	a3, a3, a2
-40106329:	153e30        	extui	a3, a3, 30, 2
-4010632c:	83dc      	bnez.n	a3, 40106348 <wDevDisableRx+0x2c4>
-4010632e:	1d0c      	movi.n	a13, 1
-40106330:	2ee8      	l32i.n	a14, a14, 8
-40106332:	dd1b      	addi.n	a13, a13, 1
-40106334:	f4d0d0        	extui	a13, a13, 0, 16
-40106337:	0020c0        	memw
-4010633a:	0ef8      	l32i.n	a15, a14, 0
-4010633c:	10ff20        	and	a15, a15, a2
-4010633f:	15fef0        	extui	a15, a15, 30, 2
-40106342:	feaf16        	beqz	a15, 40106330 <wDevDisableRx+0x2ac>
-40106345:	ffffc6        	j	40106348 <wDevDisableRx+0x2c4>
-40106348:	01a002        	movi	a0, 1
-4010634b:	012cf2        	l32i	a15, a12, 4
-4010634e:	ff5c31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106351:	387fb7        	bbci	a15, 27, 4010638d <wDevDisableRx+0x309>
-40106354:	ffe641        	l32r	a4, 401062ec <wDevDisableRx+0x268>
-40106357:	00a052        	movi	a5, 0
-4010635a:	1179      	s32i.n	a7, a1, 4
-4010635c:	090c22        	l8ui	a2, a12, 9
-4010635f:	fc7861        	l32r	a6, 40105540 <trc_NeedRTS+0x1c8>
-40106362:	a02220        	addx4	a2, a2, a2
-40106365:	c668      	l32i.n	a6, a6, 48
-40106367:	8169      	s32i.n	a6, a1, 32
-40106369:	1122f0        	slli	a2, a2, 1
-4010636c:	32c222        	addi	a2, a2, 50
-4010636f:	fa9785        	call0	40100ce8 <pvPortMalloc>
-40106372:	02fd      	mov.n	a15, a2
-40106374:	0bf256        	bnez	a2, 40106437 <wDevDisableRx+0x3b3>
-40106377:	0d3d      	mov.n	a3, a13
-40106379:	0e2d      	mov.n	a2, a14
-4010637b:	ff1c85        	call0	40105544 <trc_NeedRTS+0x1cc>
-4010637e:	fc2c21        	l32r	a2, 40105430 <trc_NeedRTS+0xb8>
-40106381:	0228      	l32i.n	a2, a2, 0
-40106383:	130c      	movi.n	a3, 1
-40106385:	c228      	l32i.n	a2, a2, 48
-40106387:	ff1ec5        	call0	40105574 <trc_NeedRTS+0x1fc>
-4010638a:	007386        	j	4010655c <wDevDisableRx+0x4d8>
-4010638d:	0c0c52        	l8ui	a5, a12, 12
-40106390:	00a042        	movi	a4, 0
-40106393:	345050        	extui	a5, a5, 0, 4
-40106396:	834050        	moveqz	a4, a0, a5
-40106399:	096142        	s32i	a4, a1, 36
-4010639c:	00f416        	beqz	a4, 401063af <wDevDisableRx+0x32b>
-4010639f:	80a022        	movi	a2, 128
-401063a2:	ffd341        	l32r	a4, 401062f0 <wDevDisableRx+0x26c>
-401063a5:	050c      	movi.n	a5, 0
-401063a7:	fa9405        	call0	40100ce8 <pvPortMalloc>
-401063aa:	02fd      	mov.n	a15, a2
-401063ac:	000386        	j	401063be <wDevDisableRx+0x33a>
-401063af:	3ca022        	movi	a2, 60
-401063b2:	ffd041        	l32r	a4, 401062f4 <wDevDisableRx+0x270>
-401063b5:	00a052        	movi	a5, 0
-401063b8:	fa92c5        	call0	40100ce8 <pvPortMalloc>
-401063bb:	20f220        	or	a15, a2, a2
-401063be:	8fcc      	bnez.n	a15, 401063ca <wDevDisableRx+0x346>
-401063c0:	0d3d      	mov.n	a3, a13
-401063c2:	0e2d      	mov.n	a2, a14
-401063c4:	ff17c5        	call0	40105544 <trc_NeedRTS+0x1cc>
-401063c7:	006446        	j	4010655c <wDevDisableRx+0x4d8>
-401063ca:	9168      	l32i.n	a6, a1, 36
-401063cc:	19b616        	beqz	a6, 4010656b <wDevDisableRx+0x4e7>
-401063cf:	0f2d      	mov.n	a2, a15
-401063d1:	0c3d      	mov.n	a3, a12
-401063d3:	80a042        	movi	a4, 128
-401063d6:	e87a01        	l32r	a0, 401005c0 <wdt_feed+0x188>
-401063d9:	0000c0        	callx0	a0
-401063dc:	180c      	movi.n	a8, 1
-401063de:	3e5f82        	s16i	a8, a15, 124
-401063e1:	0c08      	l32i.n	a0, a12, 0
-401063e3:	147e00        	extui	a7, a0, 14, 2
-401063e6:	47cc      	bnez.n	a7, 401063ee <wDevDisableRx+0x36a>
-401063e8:	b50000        	extui	a0, a0, 16, 12
-401063eb:	000106        	j	401063f3 <wDevDisableRx+0x36f>
-401063ee:	1c08      	l32i.n	a0, a12, 4
-401063f0:	410800        	srli	a0, a0, 8
-401063f3:	3f5f02        	s16i	a0, a15, 126
-401063f6:	0006c6        	j	40106415 <wDevDisableRx+0x391>
-401063f9:	1c08      	l32i.n	a0, a12, 4
-401063fb:	410800        	srli	a0, a0, 8
-401063fe:	1ccc32        	addi	a3, a12, 28
-40106401:	195f02        	s16i	a0, a15, 50
-40106404:	640c      	movi.n	a4, 6
-40106406:	111c22        	l16ui	a2, a12, 34
-40106409:	1a5f22        	s16i	a2, a15, 52
-4010640c:	36cf22        	addi	a2, a15, 54
-4010640f:	e86c01        	l32r	a0, 401005c0 <wdt_feed+0x188>
-40106412:	0000c0        	callx0	a0
-40106415:	0d3d      	mov.n	a3, a13
-40106417:	0e2d      	mov.n	a2, a14
-40106419:	ff1285        	call0	40105544 <trc_NeedRTS+0x1cc>
-4010641c:	001bc5        	call0	401065dc <chm_get_current_channel>
-4010641f:	10a256        	bnez	a2, 4010652d <wDevDisableRx+0x4a9>
-40106422:	fc6021        	l32r	a2, 401055a4 <trc_NeedRTS+0x22c>
-40106425:	fc6031        	l32r	a3, 401055a8 <trc_NeedRTS+0x230>
-40106428:	ffb441        	l32r	a4, 401062f8 <wDevDisableRx+0x274>
-4010642b:	e75501        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
-4010642e:	0000c0        	callx0	a0
-40106431:	ffff06        	j	40106431 <wDevDisableRx+0x3ad>
-40106434:	000000        	ill
-40106437:	0c3d      	mov.n	a3, a12
-40106439:	c43c      	movi.n	a4, 60
-4010643b:	e86101        	l32r	a0, 401005c0 <wdt_feed+0x188>
-4010643e:	0000c0        	callx0	a0
-40106441:	e0a082        	movi	a8, 224
-40106444:	fca092        	movi	a9, 252
-40106447:	8108      	l32i.n	a0, a1, 32
-40106449:	32cf42        	addi	a4, a15, 50
-4010644c:	030c      	movi.n	a3, 0
-4010644e:	185f32        	s16i	a3, a15, 48
-40106451:	5149      	s32i.n	a4, a1, 20
-40106453:	1008      	l32i.n	a0, a0, 4
-40106455:	ec7841        	l32r	a4, 40101638 <Cache_Read_Enable_2+0x30>
-40106458:	0020c0        	memw
-4010645b:	8128      	l32i.n	a2, a1, 32
-4010645d:	0238      	l32i.n	a3, a2, 0
-4010645f:	1228      	l32i.n	a2, a2, 4
-40106461:	103340        	and	a3, a3, a4
-40106464:	413c30        	srli	a3, a3, 12
-40106467:	223a      	add.n	a2, a2, a3
-40106469:	023027        	bltu	a0, a2, 4010646f <wDevDisableRx+0x3eb>
-4010646c:	0029c6        	j	40106517 <wDevDisableRx+0x493>
-4010646f:	090c32        	l8ui	a3, a12, 9
-40106472:	181f72        	l16ui	a7, a15, 48
-40106475:	023737        	bltu	a7, a3, 4010647b <wDevDisableRx+0x3f7>
-40106478:	0026c6        	j	40106517 <wDevDisableRx+0x493>
-4010647b:	000022        	l8ui	a2, a0, 0
-4010647e:	fbec61        	l32r	a6, 40105430 <trc_NeedRTS+0xb8>
-40106481:	a28c      	beqz.n	a2, 4010648f <wDevDisableRx+0x40b>
-40106483:	023827        	bltu	a8, a2, 40106489 <wDevDisableRx+0x405>
-40106486:	002206        	j	40106512 <wDevDisableRx+0x48e>
-40106489:	02b927        	bgeu	a9, a2, 4010648f <wDevDisableRx+0x40b>
-4010648c:	002086        	j	40106512 <wDevDisableRx+0x48e>
-4010648f:	0668      	l32i.n	a6, a6, 0
-40106491:	26a8      	l32i.n	a10, a6, 8
-40106493:	0020c0        	memw
-40106496:	0109      	s32i.n	a0, a1, 0
-40106498:	0aa8      	l32i.n	a10, a10, 0
-4010649a:	1158      	l32i.n	a5, a1, 4
-4010649c:	2668      	l32i.n	a6, a6, 8
-4010649e:	18c552        	addi	a5, a5, 24
-401064a1:	1668      	l32i.n	a6, a6, 4
-401064a3:	b4a0a0        	extui	a10, a10, 0, 12
-401064a6:	66aa      	add.n	a6, a6, a10
-401064a8:	6bb567        	bgeu	a5, a6, 40106517 <wDevDisableRx+0x493>
-401064ab:	640c      	movi.n	a4, 6
-401064ad:	1198      	l32i.n	a9, a1, 4
-401064af:	01a8      	l32i.n	a10, a1, 0
-401064b1:	5188      	l32i.n	a8, a1, 20
-401064b3:	b71b      	addi.n	a11, a7, 1
-401064b5:	185fb2        	s16i	a11, a15, 48
-401064b8:	284b      	addi.n	a2, a8, 4
-401064ba:	0aa8      	l32i.n	a10, a10, 0
-401064bc:	10c932        	addi	a3, a9, 16
-401064bf:	b4a8a0        	extui	a10, a10, 8, 12
-401064c2:	0058a2        	s16i	a10, a8, 0
-401064c5:	0b1972        	l16ui	a7, a9, 22
-401064c8:	015872        	s16i	a7, a8, 2
-401064cb:	e83d01        	l32r	a0, 401005c0 <wdt_feed+0x188>
-401064ce:	0000c0        	callx0	a0
-401064d1:	c31c      	movi.n	a3, 28
-401064d3:	222c      	movi.n	a2, 34
-401064d5:	1108      	l32i.n	a0, a1, 4
-401064d7:	5158      	l32i.n	a5, a1, 20
-401064d9:	010002        	l8ui	a0, a0, 1
-401064dc:	55ab      	addi.n	a5, a5, 10
-401064de:	5159      	s32i.n	a5, a1, 20
-401064e0:	144000        	extui	a4, a0, 0, 2
-401064e3:	fdc442        	addi	a4, a4, -3
-401064e6:	932340        	movnez	a2, a3, a4
-401064e9:	222b      	addi.n	a2, a2, 2
-401064eb:	f42020        	extui	a2, a2, 0, 16
-401064ee:	046077        	bbci	a0, 7, 401064f6 <wDevDisableRx+0x472>
-401064f1:	224b      	addi.n	a2, a2, 4
-401064f3:	f42020        	extui	a2, a2, 0, 16
-401064f6:	430c      	movi.n	a3, 4
-401064f8:	ff8201        	l32r	a0, 40106300 <wDevDisableRx+0x27c>
-401064fb:	0000c0        	callx0	a0
-401064fe:	0108      	l32i.n	a0, a1, 0
-40106500:	ec4e41        	l32r	a4, 40101638 <Cache_Read_Enable_2+0x30>
-40106503:	e0a082        	movi	a8, 224
-40106506:	fca092        	movi	a9, 252
-40106509:	1138      	l32i.n	a3, a1, 4
-4010650b:	f45020        	extui	a5, a2, 0, 16
-4010650e:	335a      	add.n	a3, a3, a5
-40106510:	1139      	s32i.n	a3, a1, 4
-40106512:	004b      	addi.n	a0, a0, 4
-40106514:	ffd006        	j	40106458 <wDevDisableRx+0x3d4>
-40106517:	0d3d      	mov.n	a3, a13
-40106519:	0e2d      	mov.n	a2, a14
-4010651b:	ff0285        	call0	40105544 <trc_NeedRTS+0x1cc>
-4010651e:	fbc421        	l32r	a2, 40105430 <trc_NeedRTS+0xb8>
-40106521:	0228      	l32i.n	a2, a2, 0
-40106523:	130c      	movi.n	a3, 1
-40106525:	c228      	l32i.n	a2, a2, 48
-40106527:	ff04c5        	call0	40105574 <trc_NeedRTS+0x1fc>
-4010652a:	ffbb86        	j	4010641c <wDevDisableRx+0x398>
-4010652d:	f0f751        	l32r	a5, 4010290c <pm_rtc_clock_cali+0xcc>
-40106530:	022f32        	l32i	a3, a15, 8
-40106533:	060242        	l8ui	a4, a2, 6
-40106536:	20a022        	movi	a2, 32
-40106539:	344040        	extui	a4, a4, 0, 4
-4010653c:	114400        	slli	a4, a4, 16
-4010653f:	103350        	and	a3, a3, a5
-40106542:	203340        	or	a3, a3, a4
-40106545:	2f39      	s32i.n	a3, a15, 8
-40106547:	0f4d      	mov.n	a4, a15
-40106549:	930c      	movi.n	a3, 9
-4010654b:	fe32c5        	call0	40104878 <pp_post2>
-4010654e:	0a1266        	bnei	a2, 1, 4010655c <wDevDisableRx+0x4d8>
-40106551:	0f2d      	mov.n	a2, a15
-40106553:	fedb31        	l32r	a3, 401060c0 <wDevDisableRx+0x3c>
-40106556:	ff6941        	l32r	a4, 401062fc <wDevDisableRx+0x278>
-40106559:	fa8f45        	call0	40100e50 <vPortFree>
-4010655c:	31c8      	l32i.n	a12, a1, 12
-4010655e:	41d8      	l32i.n	a13, a1, 16
-40106560:	61e8      	l32i.n	a14, a1, 24
-40106562:	71f8      	l32i.n	a15, a1, 28
-40106564:	2108      	l32i.n	a0, a1, 8
-40106566:	30c112        	addi	a1, a1, 48
-40106569:	f00d      	ret.n
-4010656b:	0f2d      	mov.n	a2, a15
-4010656d:	0c3d      	mov.n	a3, a12
-4010656f:	c43c      	movi.n	a4, 60
-40106571:	e81301        	l32r	a0, 401005c0 <wdt_feed+0x188>
-40106574:	0000c0        	callx0	a0
-40106577:	160c      	movi.n	a6, 1
-40106579:	185f62        	s16i	a6, a15, 48
-4010657c:	0c08      	l32i.n	a0, a12, 0
-4010657e:	145e00        	extui	a5, a0, 14, 2
-40106581:	e74556        	bnez	a5, 401063f9 <wDevDisableRx+0x375>
-40106584:	b50000        	extui	a0, a0, 16, 12
-40106587:	ff9cc6        	j	401063fe <wDevDisableRx+0x37a>
-4010658a:	200000        	or	a0, a0, a0
-4010658d:	fecc      	bnez.n	a14, 401065a0 <esf_rx_buf_alloc+0x10>
-4010658f:	3f          	.byte 0x3f
+401060a3:	0ca022        	movi	a2, 12
+401060a6:	d6a742        	movi	a4, 0x7d6
+401060a9:	ffeb31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+401060ac:	00a052        	movi	a5, 0
+401060af:	fac385        	call0	40100ce8 <pvPortMalloc>
+401060b2:	02cd      	mov.n	a12, a2
+401060b4:	fe0216        	beqz	a2, 40106098 <wDevDisableRx+0x7c>
+401060b7:	0d3d      	mov.n	a3, a13
+401060b9:	c40c      	movi.n	a4, 12
+401060bb:	e94101        	l32r	a0, 401005c0 <wdt_feed+0x188>
+401060be:	0000c0        	callx0	a0
+401060c1:	004b05        	call0	40106574 <chm_get_current_channel>
+401060c4:	02dc      	bnez.n	a2, 401060d8 <wDevDisableRx+0xbc>
+401060c6:	fd1d21        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+401060c9:	fd1d31        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+401060cc:	dda742        	movi	a4, 0x7dd
+401060cf:	e82c01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401060d2:	0000c0        	callx0	a0
+401060d5:	ffff06        	j	401060d5 <wDevDisableRx+0xb9>
+401060d8:	f1f361        	l32r	a6, 401028a4 <pm_rtc_clock_cali+0xcc>
+401060db:	022c42        	l32i	a4, a12, 8
+401060de:	001c32        	l16ui	a3, a12, 0
+401060e1:	060252        	l8ui	a5, a2, 6
+401060e4:	413e30        	srli	a3, a3, 14
+401060e7:	345050        	extui	a5, a5, 0, 4
+401060ea:	115500        	slli	a5, a5, 16
+401060ed:	104460        	and	a4, a4, a6
+401060f0:	204450        	or	a4, a4, a5
+401060f3:	026c42        	s32i	a4, a12, 8
+401060f6:	c3ac      	beqz.n	a3, 40106126 <wDevDisableRx+0x10a>
+401060f8:	1c28      	l32i.n	a2, a12, 4
+401060fa:	640020        	extui	a0, a2, 0, 7
+401060fd:	05e277        	bbsi	a2, 7, 40106106 <wDevDisableRx+0xea>
+40106100:	0280e6        	bgei	a0, 8, 40106106 <wDevDisableRx+0xea>
+40106103:	1f72e7        	bbci	a2, 30, 40106126 <wDevDisableRx+0x10a>
+40106106:	1cc0e6        	bgei	a0, 32, 40106126 <wDevDisableRx+0x10a>
+40106109:	022c      	movi.n	a2, 32
+4010610b:	930c      	movi.n	a3, 9
+4010610d:	0c4d      	mov.n	a4, a12
+4010610f:	fe7005        	call0	40104810 <pp_post2>
+40106112:	021226        	beqi	a2, 1, 40106118 <wDevDisableRx+0xfc>
+40106115:	ffdfc6        	j	40106098 <wDevDisableRx+0x7c>
+40106118:	0c2d      	mov.n	a2, a12
+4010611a:	ffcf31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+4010611d:	e7a742        	movi	a4, 0x7e7
+40106120:	fad2c5        	call0	40100e50 <vPortFree>
+40106123:	ffdc46        	j	40106098 <wDevDisableRx+0x7c>
+40106126:	0c2d      	mov.n	a2, a12
+40106128:	ffcc31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+4010612b:	e1a742        	movi	a4, 0x7e1
+4010612e:	fad205        	call0	40100e50 <vPortFree>
+40106131:	ffd8c6        	j	40106098 <wDevDisableRx+0x7c>
+40106134:	000812        	l8ui	a1, a8, 0
+40106137:	081900        	excw
+4010613a:	240000        	extui	a0, a0, 0, 3
+4010613d:	0008      	l32i.n	a0, a0, 0
+4010613f:	081e00        	excw
+40106142:	0c0000        	excw
+40106145:	c11242        	l16ui	a4, a2, 0x182
+40106148:	31d9f0        	srai	a13, a15, 25
+4010614b:	1109      	s32i.n	a0, a1, 4
+4010614d:	21c9      	s32i.n	a12, a1, 8
+4010614f:	d31c      	movi.n	a3, 29
+40106151:	ecd7c1        	l32r	a12, 401014b0 <system_deep_sleep_local_2+0xb0>
+40106154:	f74e01        	l32r	a0, 40103e8c <lmacProcessTxError+0x8c>
+40106157:	0020c0        	memw
+4010615a:	bf2002        	l32i	a0, a0, 0x2fc
+4010615d:	0020c0        	memw
+40106160:	802c42        	l32i	a4, a12, 0x200
+40106163:	c04400        	sub	a4, a4, a0
+40106166:	143347        	bltu	a3, a4, 4010617e <wDevDisableRx+0x162>
+40106169:	0020c0        	memw
+4010616c:	872c42        	l32i	a4, a12, 0x21c
+4010616f:	6be427        	bbsi	a4, 2, 401061de <wDevDisableRx+0x1c2>
+40106172:	0020c0        	memw
+40106175:	802c52        	l32i	a5, a12, 0x200
+40106178:	c05500        	sub	a5, a5, a0
+4010617b:	eab357        	bgeu	a3, a5, 40106169 <wDevDisableRx+0x14d>
+4010617e:	00af72        	movi	a7, 0xffffff00
+40106181:	f15b31        	l32r	a3, 401026f0 <unsign_to_sign+0x30>
+40106184:	0020c0        	memw
+40106187:	f52362        	l32i	a6, a3, 0x3d4
+4010618a:	da7c      	movi.n	a10, -3
+4010618c:	106670        	and	a6, a6, a7
+4010618f:	746860        	extui	a6, a6, 8, 8
+40106192:	4886b6        	bltui	a6, 8, 401061de <wDevDisableRx+0x1c2>
+40106195:	0020c0        	memw
+40106198:	9c2c92        	l32i	a9, a12, 0x270
+4010619b:	1099a0        	and	a9, a9, a10
+4010619e:	0020c0        	memw
+401061a1:	9c6c92        	s32i	a9, a12, 0x270
+401061a4:	0020c0        	memw
+401061a7:	872c82        	l32i	a8, a12, 0x21c
+401061aa:	08e827        	bbsi	a8, 2, 401061b6 <wDevDisableRx+0x19a>
+401061ad:	0020c0        	memw
+401061b0:	872cb2        	l32i	a11, a12, 0x21c
+401061b3:	f60b27        	bnone	a11, a2, 401061ad <wDevDisableRx+0x191>
+401061b6:	0020c0        	memw
+401061b9:	896c22        	s32i	a2, a12, 0x224
+401061bc:	0020c0        	memw
+401061bf:	8e2302        	l32i	a0, a3, 0x238
+401061c2:	1d4c      	movi.n	a13, 65
+401061c4:	740000        	extui	a0, a0, 0, 8
+401061c7:	1ebd07        	bgeu	a13, a0, 401061e9 <wDevDisableRx+0x1cd>
+401061ca:	1be077        	bbsi	a0, 7, 401061e9 <wDevDisableRx+0x1cd>
+401061cd:	230c      	movi.n	a3, 2
+401061cf:	0020c0        	memw
+401061d2:	9c2c22        	l32i	a2, a12, 0x270
+401061d5:	202230        	or	a2, a2, a3
+401061d8:	0020c0        	memw
+401061db:	9c6c22        	s32i	a2, a12, 0x270
+401061de:	21c8      	l32i.n	a12, a1, 8
+401061e0:	31d8      	l32i.n	a13, a1, 12
+401061e2:	1108      	l32i.n	a0, a1, 4
+401061e4:	10c112        	addi	a1, a1, 16
+401061e7:	f00d      	ret.n
+401061e9:	0ca022        	movi	a2, 12
+401061ec:	fc7761        	l32r	a6, 401053c8 <trc_NeedRTS+0xb8>
+401061ef:	ffd141        	l32r	a4, 40106134 <wDevDisableRx+0x118>
+401061f2:	002662        	l32i	a6, a6, 0
+401061f5:	050c      	movi.n	a5, 0
+401061f7:	2668      	l32i.n	a6, a6, 8
+401061f9:	ff9731        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+401061fc:	1668      	l32i.n	a6, a6, 4
+401061fe:	0169      	s32i.n	a6, a1, 0
+40106200:	faae45        	call0	40100ce8 <pvPortMalloc>
+40106203:	02dd      	mov.n	a13, a2
+40106205:	fc4216        	beqz	a2, 401061cd <wDevDisableRx+0x1b1>
+40106208:	0138      	l32i.n	a3, a1, 0
+4010620a:	c40c      	movi.n	a4, 12
+4010620c:	e8ed01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+4010620f:	0000c0        	callx0	a0
+40106212:	003605        	call0	40106574 <chm_get_current_channel>
+40106215:	02dc      	bnez.n	a2, 40106229 <wDevDisableRx+0x20d>
+40106217:	fcc921        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+4010621a:	fcc931        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+4010621d:	ffc641        	l32r	a4, 40106138 <wDevDisableRx+0x11c>
+40106220:	e7d801        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+40106223:	0000c0        	callx0	a0
+40106226:	ffff06        	j	40106226 <wDevDisableRx+0x20a>
+40106229:	f19ea1        	l32r	a10, 401028a4 <pm_rtc_clock_cali+0xcc>
+4010622c:	022d82        	l32i	a8, a13, 8
+4010622f:	001d72        	l16ui	a7, a13, 0
+40106232:	060292        	l8ui	a9, a2, 6
+40106235:	417e70        	srli	a7, a7, 14
+40106238:	349090        	extui	a9, a9, 0, 4
+4010623b:	119900        	slli	a9, a9, 16
+4010623e:	1088a0        	and	a8, a8, a10
+40106241:	208890        	or	a8, a8, a9
+40106244:	026d82        	s32i	a8, a13, 8
+40106247:	87ac      	beqz.n	a7, 40106273 <wDevDisableRx+0x257>
+40106249:	1d88      	l32i.n	a8, a13, 4
+4010624b:	640080        	extui	a0, a8, 0, 7
+4010624e:	02e877        	bbsi	a8, 7, 40106254 <wDevDisableRx+0x238>
+40106251:	1e80a6        	blti	a0, 8, 40106273 <wDevDisableRx+0x257>
+40106254:	1bc0e6        	bgei	a0, 32, 40106273 <wDevDisableRx+0x257>
+40106257:	022c      	movi.n	a2, 32
+40106259:	930c      	movi.n	a3, 9
+4010625b:	0d4d      	mov.n	a4, a13
+4010625d:	fe5b05        	call0	40104810 <pp_post2>
+40106260:	920b      	addi.n	a9, a2, -1
+40106262:	f67956        	bnez	a9, 401061cd <wDevDisableRx+0x1b1>
+40106265:	0d2d      	mov.n	a2, a13
+40106267:	ff7c31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+4010626a:	ffb441        	l32r	a4, 4010613c <wDevDisableRx+0x120>
+4010626d:	fabe05        	call0	40100e50 <vPortFree>
+40106270:	ffd646        	j	401061cd <wDevDisableRx+0x1b1>
+40106273:	0d2d      	mov.n	a2, a13
+40106275:	ff7831        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+40106278:	ffb241        	l32r	a4, 40106140 <wDevDisableRx+0x124>
+4010627b:	fabd45        	call0	40100e50 <vPortFree>
+4010627e:	ffd2c6        	j	401061cd <wDevDisableRx+0x1b1>
+40106281:	000000        	ill
+40106284:	000893        	excw
+40106287:	08d200        	excw
+4010628a:	d40000        	extui	a0, a0, 0, 14
+4010628d:	0008      	l32i.n	a0, a0, 0
+4010628f:	08ed00        	excw
+40106292:	f00000        	subx8	a0, a0, a0
+40106295:	0008      	l32i.n	a0, a0, 0
+40106297:	31b400        	srai	a11, a0, 20
+4010629a:	124000        	excw
+4010629d:	09d0c1        	l32r	a12, 400c89e0 <__floatsidf+0xba6f0>
+401062a0:	61e921        	l32r	a2, 400dea44 <__floatsidf+0xd0754>
+401062a3:	fc4901        	l32r	a0, 401053c8 <trc_NeedRTS+0xb8>
+401062a6:	71f9      	s32i.n	a15, a1, 28
+401062a8:	00e8      	l32i.n	a14, a0, 0
+401062aa:	41d9      	s32i.n	a13, a1, 16
+401062ac:	2ee8      	l32i.n	a14, a14, 8
+401062ae:	31c9      	s32i.n	a12, a1, 12
+401062b0:	1ec8      	l32i.n	a12, a14, 4
+401062b2:	f14721        	l32r	a2, 401027d0 <phy_get_bb_evm+0x60>
+401062b5:	7ccb      	addi.n	a7, a12, 12
+401062b7:	0020c0        	memw
+401062ba:	0e38      	l32i.n	a3, a14, 0
+401062bc:	1d0c      	movi.n	a13, 1
+401062be:	103320        	and	a3, a3, a2
+401062c1:	153e30        	extui	a3, a3, 30, 2
+401062c4:	83dc      	bnez.n	a3, 401062e0 <wDevDisableRx+0x2c4>
+401062c6:	1d0c      	movi.n	a13, 1
+401062c8:	2ee8      	l32i.n	a14, a14, 8
+401062ca:	dd1b      	addi.n	a13, a13, 1
+401062cc:	f4d0d0        	extui	a13, a13, 0, 16
+401062cf:	0020c0        	memw
+401062d2:	0ef8      	l32i.n	a15, a14, 0
+401062d4:	10ff20        	and	a15, a15, a2
+401062d7:	15fef0        	extui	a15, a15, 30, 2
+401062da:	feaf16        	beqz	a15, 401062c8 <wDevDisableRx+0x2ac>
+401062dd:	ffffc6        	j	401062e0 <wDevDisableRx+0x2c4>
+401062e0:	01a002        	movi	a0, 1
+401062e3:	012cf2        	l32i	a15, a12, 4
+401062e6:	ff5c31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+401062e9:	387fb7        	bbci	a15, 27, 40106325 <wDevDisableRx+0x309>
+401062ec:	ffe641        	l32r	a4, 40106284 <wDevDisableRx+0x268>
+401062ef:	00a052        	movi	a5, 0
+401062f2:	1179      	s32i.n	a7, a1, 4
+401062f4:	090c22        	l8ui	a2, a12, 9
+401062f7:	fc7861        	l32r	a6, 401054d8 <trc_NeedRTS+0x1c8>
+401062fa:	a02220        	addx4	a2, a2, a2
+401062fd:	c668      	l32i.n	a6, a6, 48
+401062ff:	8169      	s32i.n	a6, a1, 32
+40106301:	1122f0        	slli	a2, a2, 1
+40106304:	32c222        	addi	a2, a2, 50
+40106307:	fa9e05        	call0	40100ce8 <pvPortMalloc>
+4010630a:	02fd      	mov.n	a15, a2
+4010630c:	0bf256        	bnez	a2, 401063cf <wDevDisableRx+0x3b3>
+4010630f:	0d3d      	mov.n	a3, a13
+40106311:	0e2d      	mov.n	a2, a14
+40106313:	ff1c85        	call0	401054dc <trc_NeedRTS+0x1cc>
+40106316:	fc2c21        	l32r	a2, 401053c8 <trc_NeedRTS+0xb8>
+40106319:	0228      	l32i.n	a2, a2, 0
+4010631b:	130c      	movi.n	a3, 1
+4010631d:	c228      	l32i.n	a2, a2, 48
+4010631f:	ff1ec5        	call0	4010550c <trc_NeedRTS+0x1fc>
+40106322:	007386        	j	401064f4 <wDevDisableRx+0x4d8>
+40106325:	0c0c52        	l8ui	a5, a12, 12
+40106328:	00a042        	movi	a4, 0
+4010632b:	345050        	extui	a5, a5, 0, 4
+4010632e:	834050        	moveqz	a4, a0, a5
+40106331:	096142        	s32i	a4, a1, 36
+40106334:	00f416        	beqz	a4, 40106347 <wDevDisableRx+0x32b>
+40106337:	80a022        	movi	a2, 128
+4010633a:	ffd341        	l32r	a4, 40106288 <wDevDisableRx+0x26c>
+4010633d:	050c      	movi.n	a5, 0
+4010633f:	fa9a85        	call0	40100ce8 <pvPortMalloc>
+40106342:	02fd      	mov.n	a15, a2
+40106344:	000386        	j	40106356 <wDevDisableRx+0x33a>
+40106347:	3ca022        	movi	a2, 60
+4010634a:	ffd041        	l32r	a4, 4010628c <wDevDisableRx+0x270>
+4010634d:	00a052        	movi	a5, 0
+40106350:	fa9945        	call0	40100ce8 <pvPortMalloc>
+40106353:	20f220        	or	a15, a2, a2
+40106356:	8fcc      	bnez.n	a15, 40106362 <wDevDisableRx+0x346>
+40106358:	0d3d      	mov.n	a3, a13
+4010635a:	0e2d      	mov.n	a2, a14
+4010635c:	ff17c5        	call0	401054dc <trc_NeedRTS+0x1cc>
+4010635f:	006446        	j	401064f4 <wDevDisableRx+0x4d8>
+40106362:	9168      	l32i.n	a6, a1, 36
+40106364:	19b616        	beqz	a6, 40106503 <wDevDisableRx+0x4e7>
+40106367:	0f2d      	mov.n	a2, a15
+40106369:	0c3d      	mov.n	a3, a12
+4010636b:	80a042        	movi	a4, 128
+4010636e:	e89401        	l32r	a0, 401005c0 <wdt_feed+0x188>
+40106371:	0000c0        	callx0	a0
+40106374:	180c      	movi.n	a8, 1
+40106376:	3e5f82        	s16i	a8, a15, 124
+40106379:	0c08      	l32i.n	a0, a12, 0
+4010637b:	147e00        	extui	a7, a0, 14, 2
+4010637e:	47cc      	bnez.n	a7, 40106386 <wDevDisableRx+0x36a>
+40106380:	b50000        	extui	a0, a0, 16, 12
+40106383:	000106        	j	4010638b <wDevDisableRx+0x36f>
+40106386:	1c08      	l32i.n	a0, a12, 4
+40106388:	410800        	srli	a0, a0, 8
+4010638b:	3f5f02        	s16i	a0, a15, 126
+4010638e:	0006c6        	j	401063ad <wDevDisableRx+0x391>
+40106391:	1c08      	l32i.n	a0, a12, 4
+40106393:	410800        	srli	a0, a0, 8
+40106396:	1ccc32        	addi	a3, a12, 28
+40106399:	195f02        	s16i	a0, a15, 50
+4010639c:	640c      	movi.n	a4, 6
+4010639e:	111c22        	l16ui	a2, a12, 34
+401063a1:	1a5f22        	s16i	a2, a15, 52
+401063a4:	36cf22        	addi	a2, a15, 54
+401063a7:	e88601        	l32r	a0, 401005c0 <wdt_feed+0x188>
+401063aa:	0000c0        	callx0	a0
+401063ad:	0d3d      	mov.n	a3, a13
+401063af:	0e2d      	mov.n	a2, a14
+401063b1:	ff1285        	call0	401054dc <trc_NeedRTS+0x1cc>
+401063b4:	001bc5        	call0	40106574 <chm_get_current_channel>
+401063b7:	10a256        	bnez	a2, 401064c5 <wDevDisableRx+0x4a9>
+401063ba:	fc6021        	l32r	a2, 4010553c <trc_NeedRTS+0x22c>
+401063bd:	fc6031        	l32r	a3, 40105540 <trc_NeedRTS+0x230>
+401063c0:	ffb441        	l32r	a4, 40106290 <wDevDisableRx+0x274>
+401063c3:	e76f01        	l32r	a0, 40100180 <_UserExceptionVector_1+0x24>
+401063c6:	0000c0        	callx0	a0
+401063c9:	ffff06        	j	401063c9 <wDevDisableRx+0x3ad>
+401063cc:	000000        	ill
+401063cf:	0c3d      	mov.n	a3, a12
+401063d1:	c43c      	movi.n	a4, 60
+401063d3:	e87b01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+401063d6:	0000c0        	callx0	a0
+401063d9:	e0a082        	movi	a8, 224
+401063dc:	fca092        	movi	a9, 252
+401063df:	8108      	l32i.n	a0, a1, 32
+401063e1:	32cf42        	addi	a4, a15, 50
+401063e4:	030c      	movi.n	a3, 0
+401063e6:	185f32        	s16i	a3, a15, 48
+401063e9:	5149      	s32i.n	a4, a1, 20
+401063eb:	1008      	l32i.n	a0, a0, 4
+401063ed:	ec9241        	l32r	a4, 40101638 <Cache_Read_Enable_2+0x30>
+401063f0:	0020c0        	memw
+401063f3:	8128      	l32i.n	a2, a1, 32
+401063f5:	0238      	l32i.n	a3, a2, 0
+401063f7:	1228      	l32i.n	a2, a2, 4
+401063f9:	103340        	and	a3, a3, a4
+401063fc:	413c30        	srli	a3, a3, 12
+401063ff:	223a      	add.n	a2, a2, a3
+40106401:	023027        	bltu	a0, a2, 40106407 <wDevDisableRx+0x3eb>
+40106404:	0029c6        	j	401064af <wDevDisableRx+0x493>
+40106407:	090c32        	l8ui	a3, a12, 9
+4010640a:	181f72        	l16ui	a7, a15, 48
+4010640d:	023737        	bltu	a7, a3, 40106413 <wDevDisableRx+0x3f7>
+40106410:	0026c6        	j	401064af <wDevDisableRx+0x493>
+40106413:	000022        	l8ui	a2, a0, 0
+40106416:	fbec61        	l32r	a6, 401053c8 <trc_NeedRTS+0xb8>
+40106419:	a28c      	beqz.n	a2, 40106427 <wDevDisableRx+0x40b>
+4010641b:	023827        	bltu	a8, a2, 40106421 <wDevDisableRx+0x405>
+4010641e:	002206        	j	401064aa <wDevDisableRx+0x48e>
+40106421:	02b927        	bgeu	a9, a2, 40106427 <wDevDisableRx+0x40b>
+40106424:	002086        	j	401064aa <wDevDisableRx+0x48e>
+40106427:	0668      	l32i.n	a6, a6, 0
+40106429:	26a8      	l32i.n	a10, a6, 8
+4010642b:	0020c0        	memw
+4010642e:	0109      	s32i.n	a0, a1, 0
+40106430:	0aa8      	l32i.n	a10, a10, 0
+40106432:	1158      	l32i.n	a5, a1, 4
+40106434:	2668      	l32i.n	a6, a6, 8
+40106436:	18c552        	addi	a5, a5, 24
+40106439:	1668      	l32i.n	a6, a6, 4
+4010643b:	b4a0a0        	extui	a10, a10, 0, 12
+4010643e:	66aa      	add.n	a6, a6, a10
+40106440:	6bb567        	bgeu	a5, a6, 401064af <wDevDisableRx+0x493>
+40106443:	640c      	movi.n	a4, 6
+40106445:	1198      	l32i.n	a9, a1, 4
+40106447:	01a8      	l32i.n	a10, a1, 0
+40106449:	5188      	l32i.n	a8, a1, 20
+4010644b:	b71b      	addi.n	a11, a7, 1
+4010644d:	185fb2        	s16i	a11, a15, 48
+40106450:	284b      	addi.n	a2, a8, 4
+40106452:	0aa8      	l32i.n	a10, a10, 0
+40106454:	10c932        	addi	a3, a9, 16
+40106457:	b4a8a0        	extui	a10, a10, 8, 12
+4010645a:	0058a2        	s16i	a10, a8, 0
+4010645d:	0b1972        	l16ui	a7, a9, 22
+40106460:	015872        	s16i	a7, a8, 2
+40106463:	e85701        	l32r	a0, 401005c0 <wdt_feed+0x188>
+40106466:	0000c0        	callx0	a0
+40106469:	c31c      	movi.n	a3, 28
+4010646b:	222c      	movi.n	a2, 34
+4010646d:	1108      	l32i.n	a0, a1, 4
+4010646f:	5158      	l32i.n	a5, a1, 20
+40106471:	010002        	l8ui	a0, a0, 1
+40106474:	55ab      	addi.n	a5, a5, 10
+40106476:	5159      	s32i.n	a5, a1, 20
+40106478:	144000        	extui	a4, a0, 0, 2
+4010647b:	fdc442        	addi	a4, a4, -3
+4010647e:	932340        	movnez	a2, a3, a4
+40106481:	222b      	addi.n	a2, a2, 2
+40106483:	f42020        	extui	a2, a2, 0, 16
+40106486:	046077        	bbci	a0, 7, 4010648e <wDevDisableRx+0x472>
+40106489:	224b      	addi.n	a2, a2, 4
+4010648b:	f42020        	extui	a2, a2, 0, 16
+4010648e:	430c      	movi.n	a3, 4
+40106490:	ff8201        	l32r	a0, 40106298 <wDevDisableRx+0x27c>
+40106493:	0000c0        	callx0	a0
+40106496:	0108      	l32i.n	a0, a1, 0
+40106498:	ec6841        	l32r	a4, 40101638 <Cache_Read_Enable_2+0x30>
+4010649b:	e0a082        	movi	a8, 224
+4010649e:	fca092        	movi	a9, 252
+401064a1:	1138      	l32i.n	a3, a1, 4
+401064a3:	f45020        	extui	a5, a2, 0, 16
+401064a6:	335a      	add.n	a3, a3, a5
+401064a8:	1139      	s32i.n	a3, a1, 4
+401064aa:	004b      	addi.n	a0, a0, 4
+401064ac:	ffd006        	j	401063f0 <wDevDisableRx+0x3d4>
+401064af:	0d3d      	mov.n	a3, a13
+401064b1:	0e2d      	mov.n	a2, a14
+401064b3:	ff0285        	call0	401054dc <trc_NeedRTS+0x1cc>
+401064b6:	fbc421        	l32r	a2, 401053c8 <trc_NeedRTS+0xb8>
+401064b9:	0228      	l32i.n	a2, a2, 0
+401064bb:	130c      	movi.n	a3, 1
+401064bd:	c228      	l32i.n	a2, a2, 48
+401064bf:	ff04c5        	call0	4010550c <trc_NeedRTS+0x1fc>
+401064c2:	ffbb86        	j	401063b4 <wDevDisableRx+0x398>
+401064c5:	f0f751        	l32r	a5, 401028a4 <pm_rtc_clock_cali+0xcc>
+401064c8:	022f32        	l32i	a3, a15, 8
+401064cb:	060242        	l8ui	a4, a2, 6
+401064ce:	20a022        	movi	a2, 32
+401064d1:	344040        	extui	a4, a4, 0, 4
+401064d4:	114400        	slli	a4, a4, 16
+401064d7:	103350        	and	a3, a3, a5
+401064da:	203340        	or	a3, a3, a4
+401064dd:	2f39      	s32i.n	a3, a15, 8
+401064df:	0f4d      	mov.n	a4, a15
+401064e1:	930c      	movi.n	a3, 9
+401064e3:	fe32c5        	call0	40104810 <pp_post2>
+401064e6:	0a1266        	bnei	a2, 1, 401064f4 <wDevDisableRx+0x4d8>
+401064e9:	0f2d      	mov.n	a2, a15
+401064eb:	fedb31        	l32r	a3, 40106058 <wDevDisableRx+0x3c>
+401064ee:	ff6941        	l32r	a4, 40106294 <wDevDisableRx+0x278>
+401064f1:	fa95c5        	call0	40100e50 <vPortFree>
+401064f4:	31c8      	l32i.n	a12, a1, 12
+401064f6:	41d8      	l32i.n	a13, a1, 16
+401064f8:	61e8      	l32i.n	a14, a1, 24
+401064fa:	71f8      	l32i.n	a15, a1, 28
+401064fc:	2108      	l32i.n	a0, a1, 8
+401064fe:	30c112        	addi	a1, a1, 48
+40106501:	f00d      	ret.n
+40106503:	0f2d      	mov.n	a2, a15
+40106505:	0c3d      	mov.n	a3, a12
+40106507:	c43c      	movi.n	a4, 60
+40106509:	e82d01        	l32r	a0, 401005c0 <wdt_feed+0x188>
+4010650c:	0000c0        	callx0	a0
+4010650f:	160c      	movi.n	a6, 1
+40106511:	185f62        	s16i	a6, a15, 48
+40106514:	0c08      	l32i.n	a0, a12, 0
+40106516:	145e00        	extui	a5, a0, 14, 2
+40106519:	e74556        	bnez	a5, 40106391 <wDevDisableRx+0x375>
+4010651c:	b50000        	extui	a0, a0, 16, 12
+4010651f:	ff9cc6        	j	40106396 <wDevDisableRx+0x37a>
+40106522:	000000        	ill
+40106525:	fecc      	bnez.n	a14, 40106538 <esf_rx_buf_alloc+0x10>
+40106527:	3f          	.byte 0x3f
 
-40106590 <esf_rx_buf_alloc>:
-40106590:	f0c112        	addi	a1, a1, -16
-40106593:	0109      	s32i.n	a0, a1, 0
-40106595:	0b8266        	bnei	a2, 8, 401065a4 <esf_rx_buf_alloc+0x14>
-40106598:	fffd01        	l32r	a0, 4010658c <wDevDisableRx+0x508>
-4010659b:	4008      	l32i.n	a0, a0, 16
-4010659d:	020c      	movi.n	a2, 0
-4010659f:	c0cc      	bnez.n	a0, 401065af <esf_rx_buf_alloc+0x1f>
-401065a1:	0000c6        	j	401065a8 <esf_rx_buf_alloc+0x18>
-401065a4:	000c      	movi.n	a0, 0
-401065a6:	002d      	mov.n	a2, a0
-401065a8:	0108      	l32i.n	a0, a1, 0
-401065aa:	10c112        	addi	a1, a1, 16
-401065ad:	f00d      	ret.n
-401065af:	e7bc01        	l32r	a0, 401004a0 <wdt_feed+0x68>
-401065b2:	0000c0        	callx0	a0
-401065b5:	fff551        	l32r	a5, 4010658c <wDevDisableRx+0x508>
-401065b8:	020c      	movi.n	a2, 0
-401065ba:	4538      	l32i.n	a3, a5, 16
-401065bc:	1139      	s32i.n	a3, a1, 4
-401065be:	8348      	l32i.n	a4, a3, 32
-401065c0:	4549      	s32i.n	a4, a5, 16
-401065c2:	8329      	s32i.n	a2, a3, 32
-401065c4:	e8fe01        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
-401065c7:	0000c0        	callx0	a0
-401065ca:	fff071        	l32r	a7, 4010658c <wDevDisableRx+0x508>
-401065cd:	5768      	l32i.n	a6, a7, 20
-401065cf:	1108      	l32i.n	a0, a1, 4
-401065d1:	660b      	addi.n	a6, a6, -1
-401065d3:	5769      	s32i.n	a6, a7, 20
-401065d5:	fff346        	j	401065a6 <esf_rx_buf_alloc+0x16>
-401065d8:	fedec0        	excw
-401065db:	3f          	.byte 0x3f
+40106528 <esf_rx_buf_alloc>:
+40106528:	f0c112        	addi	a1, a1, -16
+4010652b:	0109      	s32i.n	a0, a1, 0
+4010652d:	0b8266        	bnei	a2, 8, 4010653c <esf_rx_buf_alloc+0x14>
+40106530:	fffd01        	l32r	a0, 40106524 <wDevDisableRx+0x508>
+40106533:	4008      	l32i.n	a0, a0, 16
+40106535:	020c      	movi.n	a2, 0
+40106537:	c0cc      	bnez.n	a0, 40106547 <esf_rx_buf_alloc+0x1f>
+40106539:	0000c6        	j	40106540 <esf_rx_buf_alloc+0x18>
+4010653c:	000c      	movi.n	a0, 0
+4010653e:	002d      	mov.n	a2, a0
+40106540:	0108      	l32i.n	a0, a1, 0
+40106542:	10c112        	addi	a1, a1, 16
+40106545:	f00d      	ret.n
+40106547:	e7d601        	l32r	a0, 401004a0 <wdt_feed+0x68>
+4010654a:	0000c0        	callx0	a0
+4010654d:	fff551        	l32r	a5, 40106524 <wDevDisableRx+0x508>
+40106550:	020c      	movi.n	a2, 0
+40106552:	4538      	l32i.n	a3, a5, 16
+40106554:	1139      	s32i.n	a3, a1, 4
+40106556:	8348      	l32i.n	a4, a3, 32
+40106558:	4549      	s32i.n	a4, a5, 16
+4010655a:	8329      	s32i.n	a2, a3, 32
+4010655c:	e91801        	l32r	a0, 401009bc <ets_timer_setfn+0xd8>
+4010655f:	0000c0        	callx0	a0
+40106562:	fff071        	l32r	a7, 40106524 <wDevDisableRx+0x508>
+40106565:	5768      	l32i.n	a6, a7, 20
+40106567:	1108      	l32i.n	a0, a1, 4
+40106569:	660b      	addi.n	a6, a6, -1
+4010656b:	5769      	s32i.n	a6, a7, 20
+4010656d:	fff346        	j	4010653e <esf_rx_buf_alloc+0x16>
+40106570:	fedea0        	excw
+40106573:	3f          	.byte 0x3f
 
-401065dc <chm_get_current_channel>:
-401065dc:	ffff21        	l32r	a2, 401065d8 <esf_rx_buf_alloc+0x48>
-401065df:	132222        	l32i	a2, a2, 76
-401065e2:	f00d      	ret.n
-401065e4:	fe84e4        	excw
-401065e7:	3f          	.byte 0x3f
-401065e8:	800000        	add	a0, a0, a0
-401065eb:	7f          	.byte 0x7f
+40106574 <chm_get_current_channel>:
+40106574:	ffff21        	l32r	a2, 40106570 <esf_rx_buf_alloc+0x48>
+40106577:	132222        	l32i	a2, a2, 76
+4010657a:	f00d      	ret.n
+4010657c:	fe84e4        	excw
+4010657f:	3f          	.byte 0x3f
+40106580:	800000        	add	a0, a0, a0
+40106583:	7f          	.byte 0x7f
 
-401065ec <isxdigit>:
-401065ec:	fffe31        	l32r	a3, 401065e4 <chm_get_current_channel+0x8>
-401065ef:	0338      	l32i.n	a3, a3, 0
-401065f1:	232a      	add.n	a2, a3, a2
-401065f3:	010222        	l8ui	a2, a2, 1
-401065f6:	434c      	movi.n	a3, 68
-401065f8:	102320        	and	a2, a3, a2
-401065fb:	f00d      	ret.n
-401065fd:	000000        	ill
+40106584 <isxdigit>:
+40106584:	fffe31        	l32r	a3, 4010657c <chm_get_current_channel+0x8>
+40106587:	0338      	l32i.n	a3, a3, 0
+40106589:	232a      	add.n	a2, a3, a2
+4010658b:	010222        	l8ui	a2, a2, 1
+4010658e:	434c      	movi.n	a3, 68
+40106590:	102320        	and	a2, a3, a2
+40106593:	f00d      	ret.n
+40106595:	000000        	ill
 
-40106600 <__divsf3_aux>:
-40106600:	1133f0        	slli	a3, a3, 1
-40106603:	413130        	srli	a3, a3, 1
-40106606:	339c      	beqz.n	a3, 4010661d <__divsf3_aux+0x1d>
-40106608:	40f3a0        	nsau	a10, a3
-4010660b:	f8caa2        	addi	a10, a10, -8
-4010660e:	401a00        	ssl	a10
-40106611:	a13300        	sll	a3, a3
-40106614:	190c      	movi.n	a9, 1
-40106616:	c099a0        	sub	a9, a9, a10
-40106619:	001d06        	j	40106691 <__divsf3+0x15>
-4010661c:	42f000        	excw
-4010661f:	414011        	l32r	a1, 400d6b20 <__floatsidf+0xc8830>
-40106622:	2f7041        	l32r	a4, 400d23e4 <__floatsidf+0xc40f4>
-40106625:	221005        	call0	40128728 <_etext+0x21f2c>
-40106628:	226001        	l32r	a0, 400cefa8 <__floatsidf+0xc0cb8>
-4010662b:	44cc20        	extui	a12, a2, 12, 5
-4010662e:	e7d641        	l32r	a4, 40100588 <wdt_feed+0x150>
-40106631:	202240        	or	a2, a2, a4
-40106634:	f00d      	ret.n
-40106636:	f00000        	subx8	a0, a0, a0
-40106639:	201122        	l16ui	a2, a1, 64
-4010663c:	9c4121        	l32r	a2, 400ed740 <__floatsidf+0xdf450>
-4010663f:	f2a022        	movi	a2, 242
-40106642:	caa240        	excw
-40106645:	00f8      	l32i.n	a15, a0, 0
-40106647:	401a      	add.n	a4, a0, a1
-40106649:	a12200        	sll	a2, a2
-4010664c:	180c      	movi.n	a8, 1
-4010664e:	c088a0        	sub	a8, a8, a10
-40106651:	000fc6        	j	40106694 <__divsf3+0x18>
-40106654:	052f70        	extui	a2, a7, 31, 1
-40106657:	012210        	slli	a2, a2, 31
-4010665a:	f00d      	ret.n
-4010665c:	057f30        	extui	a7, a3, 31, 1
-4010665f:	017710        	slli	a7, a7, 31
-40106662:	302270        	xor	a2, a2, a7
-40106665:	05c367        	bnall	a3, a6, 4010666e <__divsf3_aux+0x6e>
-40106668:	e7c841        	l32r	a4, 40100588 <wdt_feed+0x150>
-4010666b:	202240        	or	a2, a2, a4
-4010666e:	f00d      	ret.n
-40106670:	118370        	slli	a8, a3, 9
-40106673:	fdd816        	beqz	a8, 40106654 <__divsf3_aux+0x54>
-40106676:	032d      	mov.n	a2, a3
-40106678:	f00d      	ret.n
+40106598 <__divsf3_aux>:
+40106598:	1133f0        	slli	a3, a3, 1
+4010659b:	413130        	srli	a3, a3, 1
+4010659e:	339c      	beqz.n	a3, 401065b5 <__divsf3_aux+0x1d>
+401065a0:	40f3a0        	nsau	a10, a3
+401065a3:	f8caa2        	addi	a10, a10, -8
+401065a6:	401a00        	ssl	a10
+401065a9:	a13300        	sll	a3, a3
+401065ac:	190c      	movi.n	a9, 1
+401065ae:	c099a0        	sub	a9, a9, a10
+401065b1:	001d06        	j	40106629 <__divsf3+0x15>
+401065b4:	42f000        	excw
+401065b7:	414011        	l32r	a1, 400d6ab8 <__floatsidf+0xc87c8>
+401065ba:	2f7041        	l32r	a4, 400d237c <__floatsidf+0xc408c>
+401065bd:	221005        	call0	401286c0 <_etext+0x21f2c>
+401065c0:	226001        	l32r	a0, 400cef40 <__floatsidf+0xc0c50>
+401065c3:	44cc20        	extui	a12, a2, 12, 5
+401065c6:	e7f041        	l32r	a4, 40100588 <wdt_feed+0x150>
+401065c9:	202240        	or	a2, a2, a4
+401065cc:	f00d      	ret.n
+401065ce:	f00000        	subx8	a0, a0, a0
+401065d1:	201122        	l16ui	a2, a1, 64
+401065d4:	9c4121        	l32r	a2, 400ed6d8 <__floatsidf+0xdf3e8>
+401065d7:	f2a022        	movi	a2, 242
+401065da:	caa240        	excw
+401065dd:	00f8      	l32i.n	a15, a0, 0
+401065df:	401a      	add.n	a4, a0, a1
+401065e1:	a12200        	sll	a2, a2
+401065e4:	180c      	movi.n	a8, 1
+401065e6:	c088a0        	sub	a8, a8, a10
+401065e9:	000fc6        	j	4010662c <__divsf3+0x18>
+401065ec:	052f70        	extui	a2, a7, 31, 1
+401065ef:	012210        	slli	a2, a2, 31
+401065f2:	f00d      	ret.n
+401065f4:	057f30        	extui	a7, a3, 31, 1
+401065f7:	017710        	slli	a7, a7, 31
+401065fa:	302270        	xor	a2, a2, a7
+401065fd:	05c367        	bnall	a3, a6, 40106606 <__divsf3_aux+0x6e>
+40106600:	e7e241        	l32r	a4, 40100588 <wdt_feed+0x150>
+40106603:	202240        	or	a2, a2, a4
+40106606:	f00d      	ret.n
+40106608:	118370        	slli	a8, a3, 9
+4010660b:	fdd816        	beqz	a8, 401065ec <__divsf3_aux+0x54>
+4010660e:	032d      	mov.n	a2, a3
+40106610:	f00d      	ret.n
 	...
 
-4010667c <__divsf3>:
-4010667c:	ffdb61        	l32r	a6, 401065e8 <chm_get_current_channel+0xc>
-4010667f:	307230        	xor	a7, a2, a3
-40106682:	d64267        	ball	a2, a6, 4010665c <__divsf3_aux+0x5c>
-40106685:	e74367        	ball	a3, a6, 40106670 <__divsf3_aux+0x70>
-40106688:	758720        	extui	a8, a2, 23, 8
-4010668b:	759730        	extui	a9, a3, 23, 8
-4010668e:	f6e916        	beqz	a9, 40106600 <__divsf3_aux>
-40106691:	fa3816        	beqz	a8, 40106638 <__divsf3_aux+0x38>
-40106694:	c08890        	sub	a8, a8, a9
-40106697:	ebe8a1        	l32r	a10, 40101638 <Cache_Read_Enable_2+0x30>
-4010669a:	202260        	or	a2, a2, a6
-4010669d:	1022a0        	and	a2, a2, a10
-401066a0:	203360        	or	a3, a3, a6
-401066a3:	1033a0        	and	a3, a3, a10
-401066a6:	043327        	bltu	a3, a2, 401066ae <__divsf3+0x32>
-401066a9:	1122f0        	slli	a2, a2, 1
-401066ac:	880b      	addi.n	a8, a8, -1
-401066ae:	c02230        	sub	a2, a2, a3
-401066b1:	1122f0        	slli	a2, a2, 1
-401066b4:	1a0c      	movi.n	a10, 1
-401066b6:	17a092        	movi	a9, 23
-401066b9:	11aaf0        	slli	a10, a10, 1
-401066bc:	043237        	bltu	a2, a3, 401066c4 <__divsf3+0x48>
-401066bf:	aa1b      	addi.n	a10, a10, 1
-401066c1:	c02230        	sub	a2, a2, a3
-401066c4:	1122f0        	slli	a2, a2, 1
-401066c7:	990b      	addi.n	a9, a9, -1
-401066c9:	fec956        	bnez	a9, 401066b9 <__divsf3+0x3d>
-401066cc:	7ec882        	addi	a8, a8, 126
-401066cf:	fea042        	movi	a4, 254
-401066d2:	17b847        	bgeu	a8, a4, 401066ed <__divsf3+0x71>
-401066d5:	043237        	bltu	a2, a3, 401066dd <__divsf3+0x61>
-401066d8:	aa1b      	addi.n	a10, a10, 1
-401066da:	1a1237        	beq	a2, a3, 401066f8 <__divsf3+0x7c>
-401066dd:	018890        	slli	a8, a8, 23
-401066e0:	2a8a      	add.n	a2, a10, a8
-401066e2:	057f70        	extui	a7, a7, 31, 1
-401066e5:	017710        	slli	a7, a7, 31
-401066e8:	202270        	or	a2, a2, a7
-401066eb:	f00d      	ret.n
-401066ed:	010896        	bltz	a8, 40106701 <__divsf3+0x85>
-401066f0:	841b      	addi.n	a8, a4, 1
-401066f2:	012890        	slli	a2, a8, 23
-401066f5:	fffa46        	j	401066e2 <__divsf3+0x66>
-401066f8:	41a1a0        	srli	a10, a10, 1
-401066fb:	11aaf0        	slli	a10, a10, 1
-401066fe:	fff6c6        	j	401066dd <__divsf3+0x61>
-40106701:	608080        	neg	a8, a8
-40106704:	400800        	ssr	a8
-40106707:	22c8f6        	bgeui	a8, 32, 4010672d <__divsf3+0xb1>
-4010670a:	a16a00        	sll	a6, a10
-4010670d:	91a0a0        	srl	a10, a10
-40106710:	080c      	movi.n	a8, 0
-40106712:	328c      	beqz.n	a2, 40106719 <__divsf3+0x9d>
-40106714:	190c      	movi.n	a9, 1
-40106716:	206690        	or	a6, a6, a9
-40106719:	fc06d6        	bgez	a6, 401066dd <__divsf3+0x61>
-4010671c:	aa1b      	addi.n	a10, a10, 1
-4010671e:	1166f0        	slli	a6, a6, 1
-40106721:	fb8656        	bnez	a6, 401066dd <__divsf3+0x61>
-40106724:	41a1a0        	srli	a10, a10, 1
-40106727:	11aaf0        	slli	a10, a10, 1
-4010672a:	ffebc6        	j	401066dd <__divsf3+0x61>
-4010672d:	052f70        	extui	a2, a7, 31, 1
-40106730:	012210        	slli	a2, a2, 31
-40106733:	f00d      	ret.n
-40106735:	000000        	ill
+40106614 <__divsf3>:
+40106614:	ffdb61        	l32r	a6, 40106580 <chm_get_current_channel+0xc>
+40106617:	307230        	xor	a7, a2, a3
+4010661a:	d64267        	ball	a2, a6, 401065f4 <__divsf3_aux+0x5c>
+4010661d:	e74367        	ball	a3, a6, 40106608 <__divsf3_aux+0x70>
+40106620:	758720        	extui	a8, a2, 23, 8
+40106623:	759730        	extui	a9, a3, 23, 8
+40106626:	f6e916        	beqz	a9, 40106598 <__divsf3_aux>
+40106629:	fa3816        	beqz	a8, 401065d0 <__divsf3_aux+0x38>
+4010662c:	c08890        	sub	a8, a8, a9
+4010662f:	ec02a1        	l32r	a10, 40101638 <Cache_Read_Enable_2+0x30>
+40106632:	202260        	or	a2, a2, a6
+40106635:	1022a0        	and	a2, a2, a10
+40106638:	203360        	or	a3, a3, a6
+4010663b:	1033a0        	and	a3, a3, a10
+4010663e:	043327        	bltu	a3, a2, 40106646 <__divsf3+0x32>
+40106641:	1122f0        	slli	a2, a2, 1
+40106644:	880b      	addi.n	a8, a8, -1
+40106646:	c02230        	sub	a2, a2, a3
+40106649:	1122f0        	slli	a2, a2, 1
+4010664c:	1a0c      	movi.n	a10, 1
+4010664e:	17a092        	movi	a9, 23
+40106651:	11aaf0        	slli	a10, a10, 1
+40106654:	043237        	bltu	a2, a3, 4010665c <__divsf3+0x48>
+40106657:	aa1b      	addi.n	a10, a10, 1
+40106659:	c02230        	sub	a2, a2, a3
+4010665c:	1122f0        	slli	a2, a2, 1
+4010665f:	990b      	addi.n	a9, a9, -1
+40106661:	fec956        	bnez	a9, 40106651 <__divsf3+0x3d>
+40106664:	7ec882        	addi	a8, a8, 126
+40106667:	fea042        	movi	a4, 254
+4010666a:	17b847        	bgeu	a8, a4, 40106685 <__divsf3+0x71>
+4010666d:	043237        	bltu	a2, a3, 40106675 <__divsf3+0x61>
+40106670:	aa1b      	addi.n	a10, a10, 1
+40106672:	1a1237        	beq	a2, a3, 40106690 <__divsf3+0x7c>
+40106675:	018890        	slli	a8, a8, 23
+40106678:	2a8a      	add.n	a2, a10, a8
+4010667a:	057f70        	extui	a7, a7, 31, 1
+4010667d:	017710        	slli	a7, a7, 31
+40106680:	202270        	or	a2, a2, a7
+40106683:	f00d      	ret.n
+40106685:	010896        	bltz	a8, 40106699 <__divsf3+0x85>
+40106688:	841b      	addi.n	a8, a4, 1
+4010668a:	012890        	slli	a2, a8, 23
+4010668d:	fffa46        	j	4010667a <__divsf3+0x66>
+40106690:	41a1a0        	srli	a10, a10, 1
+40106693:	11aaf0        	slli	a10, a10, 1
+40106696:	fff6c6        	j	40106675 <__divsf3+0x61>
+40106699:	608080        	neg	a8, a8
+4010669c:	400800        	ssr	a8
+4010669f:	22c8f6        	bgeui	a8, 32, 401066c5 <__divsf3+0xb1>
+401066a2:	a16a00        	sll	a6, a10
+401066a5:	91a0a0        	srl	a10, a10
+401066a8:	080c      	movi.n	a8, 0
+401066aa:	328c      	beqz.n	a2, 401066b1 <__divsf3+0x9d>
+401066ac:	190c      	movi.n	a9, 1
+401066ae:	206690        	or	a6, a6, a9
+401066b1:	fc06d6        	bgez	a6, 40106675 <__divsf3+0x61>
+401066b4:	aa1b      	addi.n	a10, a10, 1
+401066b6:	1166f0        	slli	a6, a6, 1
+401066b9:	fb8656        	bnez	a6, 40106675 <__divsf3+0x61>
+401066bc:	41a1a0        	srli	a10, a10, 1
+401066bf:	11aaf0        	slli	a10, a10, 1
+401066c2:	ffebc6        	j	40106675 <__divsf3+0x61>
+401066c5:	052f70        	extui	a2, a7, 31, 1
+401066c8:	012210        	slli	a2, a2, 31
+401066cb:	f00d      	ret.n
+401066cd:	000000        	ill
 
-40106738 <__fixsfsi>:
-40106738:	ffac61        	l32r	a6, 401065e8 <chm_get_current_channel+0xc>
-4010673b:	224267        	ball	a2, a6, 40106761 <__fixsfsi+0x29>
-4010673e:	754720        	extui	a4, a2, 23, 8
-40106741:	82c442        	addi	a4, a4, -126
-40106744:	20c4e6        	bgei	a4, 32, 40106768 <__fixsfsi+0x30>
-40106747:	2914a6        	blti	a4, 1, 40106774 <__fixsfsi+0x3c>
-4010674a:	207260        	or	a7, a2, a6
-4010674d:	115780        	slli	a5, a7, 8
-40106750:	401400        	ssl	a4
-40106753:	915050        	srl	a5, a5
-40106756:	602050        	neg	a2, a5
-40106759:	b32570        	movgez	a2, a5, a7
-4010675c:	f00d      	ret.n
-4010675e:	000000        	ill
-40106761:	114270        	slli	a4, a2, 9
-40106764:	048c      	beqz.n	a4, 40106768 <__fixsfsi+0x30>
-40106766:	020c      	movi.n	a2, 0
-40106768:	114680        	slli	a4, a6, 8
-4010676b:	540b      	addi.n	a5, a4, -1
-4010676d:	b34520        	movgez	a4, a5, a2
-40106770:	042d      	mov.n	a2, a4
-40106772:	f00d      	ret.n
-40106774:	020c      	movi.n	a2, 0
-40106776:	f00d      	ret.n
+401066d0 <__fixsfsi>:
+401066d0:	ffac61        	l32r	a6, 40106580 <chm_get_current_channel+0xc>
+401066d3:	224267        	ball	a2, a6, 401066f9 <__fixsfsi+0x29>
+401066d6:	754720        	extui	a4, a2, 23, 8
+401066d9:	82c442        	addi	a4, a4, -126
+401066dc:	20c4e6        	bgei	a4, 32, 40106700 <__fixsfsi+0x30>
+401066df:	2914a6        	blti	a4, 1, 4010670c <__fixsfsi+0x3c>
+401066e2:	207260        	or	a7, a2, a6
+401066e5:	115780        	slli	a5, a7, 8
+401066e8:	401400        	ssl	a4
+401066eb:	915050        	srl	a5, a5
+401066ee:	602050        	neg	a2, a5
+401066f1:	b32570        	movgez	a2, a5, a7
+401066f4:	f00d      	ret.n
+401066f6:	000000        	ill
+401066f9:	114270        	slli	a4, a2, 9
+401066fc:	048c      	beqz.n	a4, 40106700 <__fixsfsi+0x30>
+401066fe:	020c      	movi.n	a2, 0
+40106700:	114680        	slli	a4, a6, 8
+40106703:	540b      	addi.n	a5, a4, -1
+40106705:	b34520        	movgez	a4, a5, a2
+40106708:	042d      	mov.n	a2, a4
+4010670a:	f00d      	ret.n
+4010670c:	020c      	movi.n	a2, 0
+4010670e:	f00d      	ret.n
 
-40106778 <xthal_set_intclear>:
-40106778:	13e320        	wsr.intclear	a2
-4010677b:	f00d      	ret.n
-4010677d:	000000        	ill
+40106710 <xthal_set_intclear>:
+40106710:	13e320        	wsr.intclear	a2
+40106713:	f00d      	ret.n
+40106715:	000000        	ill
 
-40106780 <memchr>:
-40106780:	743030        	extui	a3, a3, 0, 8
-40106783:	424a      	add.n	a4, a2, a4
-40106785:	0001c6        	j	40106790 <memchr+0x10>
-40106788:	000252        	l8ui	a5, a2, 0
-4010678b:	061537        	beq	a5, a3, 40106795 <memchr+0x15>
-4010678e:	221b      	addi.n	a2, a2, 1
-40106790:	f49247        	bne	a2, a4, 40106788 <memchr+0x8>
-40106793:	020c      	movi.n	a2, 0
-40106795:	f00d      	ret.n
+40106718 <memchr>:
+40106718:	743030        	extui	a3, a3, 0, 8
+4010671b:	424a      	add.n	a4, a2, a4
+4010671d:	0001c6        	j	40106728 <memchr+0x10>
+40106720:	000252        	l8ui	a5, a2, 0
+40106723:	061537        	beq	a5, a3, 4010672d <memchr+0x15>
+40106726:	221b      	addi.n	a2, a2, 1
+40106728:	f49247        	bne	a2, a4, 40106720 <memchr+0x8>
+4010672b:	020c      	movi.n	a2, 0
+4010672d:	f00d      	ret.n
 	...
 
-40106798 <__modsi3>:
-40106798:	027d      	mov.n	a7, a2
-4010679a:	602120        	abs	a2, a2
-4010679d:	603130        	abs	a3, a3
-401067a0:	3023b6        	bltui	a3, 2, 401067d4 <__modsi3+0x3c>
-401067a3:	40f250        	nsau	a5, a2
-401067a6:	40f340        	nsau	a4, a3
-401067a9:	17b547        	bgeu	a5, a4, 401067c4 <__modsi3+0x2c>
-401067ac:	c04450        	sub	a4, a4, a5
-401067af:	401400        	ssl	a4
-401067b2:	a13300        	sll	a3, a3
-401067b5:	023237        	bltu	a2, a3, 401067bb <__modsi3+0x23>
-401067b8:	c02230        	sub	a2, a2, a3
-401067bb:	413130        	srli	a3, a3, 1
-401067be:	ffc442        	addi	a4, a4, -1
-401067c1:	ff0456        	bnez	a4, 401067b5 <__modsi3+0x1d>
-401067c4:	023237        	bltu	a2, a3, 401067ca <__modsi3+0x32>
-401067c7:	c02230        	sub	a2, a2, a3
-401067ca:	0027d6        	bgez	a7, 401067d0 <__modsi3+0x38>
-401067cd:	602020        	neg	a2, a2
-401067d0:	f00d      	ret.n
-401067d2:	cc0000        	excw
-401067d5:	000053        	excw
-401067d8:	494400        	excw
-401067db:	0c3056        	bnez	a0, 401068a2 <_etext+0xa6>
-401067de:	f00d02        	l8ui	a0, a13, 240
-401067e1:	000000        	ill
+40106730 <__modsi3>:
+40106730:	027d      	mov.n	a7, a2
+40106732:	602120        	abs	a2, a2
+40106735:	603130        	abs	a3, a3
+40106738:	3023b6        	bltui	a3, 2, 4010676c <__modsi3+0x3c>
+4010673b:	40f250        	nsau	a5, a2
+4010673e:	40f340        	nsau	a4, a3
+40106741:	17b547        	bgeu	a5, a4, 4010675c <__modsi3+0x2c>
+40106744:	c04450        	sub	a4, a4, a5
+40106747:	401400        	ssl	a4
+4010674a:	a13300        	sll	a3, a3
+4010674d:	023237        	bltu	a2, a3, 40106753 <__modsi3+0x23>
+40106750:	c02230        	sub	a2, a2, a3
+40106753:	413130        	srli	a3, a3, 1
+40106756:	ffc442        	addi	a4, a4, -1
+40106759:	ff0456        	bnez	a4, 4010674d <__modsi3+0x1d>
+4010675c:	023237        	bltu	a2, a3, 40106762 <__modsi3+0x32>
+4010675f:	c02230        	sub	a2, a2, a3
+40106762:	0027d6        	bgez	a7, 40106768 <__modsi3+0x38>
+40106765:	602020        	neg	a2, a2
+40106768:	f00d      	ret.n
+4010676a:	cc0000        	excw
+4010676d:	000053        	excw
+40106770:	494400        	excw
+40106773:	0c3056        	bnez	a0, 4010683a <_etext+0xa6>
+40106776:	f00d02        	l8ui	a0, a13, 240
+40106779:	000000        	ill
 
-401067e4 <__ashrdi3>:
-401067e4:	400400        	ssr	a4
-401067e7:	09c4e6        	bgei	a4, 32, 401067f4 <__ashrdi3+0x10>
-401067ea:	812320        	src	a2, a3, a2
-401067ed:	b13030        	sra	a3, a3
-401067f0:	f00d      	ret.n
-401067f2:	300000        	xor	a0, a0, a0
-401067f5:	30b120        	xor	a11, a1, a2
-401067f8:	3f          	.byte 0x3f
-401067f9:	f00d31        	l32r	a3, 40102830 <phy_get_bb_evm+0x58>
+4010677c <__ashrdi3>:
+4010677c:	400400        	ssr	a4
+4010677f:	09c4e6        	bgei	a4, 32, 4010678c <__ashrdi3+0x10>
+40106782:	812320        	src	a2, a3, a2
+40106785:	b13030        	sra	a3, a3
+40106788:	f00d      	ret.n
+4010678a:	300000        	xor	a0, a0, a0
+4010678d:	30b120        	xor	a11, a1, a2
+40106790:	3f          	.byte 0x3f
+40106791:	f00d31        	l32r	a3, 401027c8 <phy_get_bb_evm+0x58>

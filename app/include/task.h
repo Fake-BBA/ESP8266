@@ -39,7 +39,6 @@ enum MessageCtrFunction{
 };
 
 struct MessagePacketStruct{
-	uint8 systemWord;
 	uint16 sender;
 	uint16 receiver;
 	uint8 function_word;
@@ -47,7 +46,7 @@ struct MessagePacketStruct{
 };
 union MessagePacketUnion{
 	struct MessagePacketStruct messagePacket;
-	uint8 p_buff[21];	//协议规定最长包数据为21
+	uint8 p_buff[20];	//协议规定最长包数据为20
 };
 
 extern uint16 deviceNumber;
