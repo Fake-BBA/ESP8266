@@ -41,34 +41,42 @@ void ICACHE_FLASH_ATTR user_pre_init(void)
 
 ETSTimer connect_timer;	//定时器事件结构体
 
-void ICACHE_FLASH_ATTR gpio_init()
-{
-	//IO2 D4
-	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTDI_U,FUNC_GPIO12);	//选择引脚功能
-	//PIN_PULLUP_DIS(GPIO_ID_PIN(2));	//屏蔽GPIO2 上拉
-	//PIN_PULLUP_EN(GPIO_ID_PIN(2));	//使能GPIO2 上拉
-	//GPIO_DIS_OUTPUT(GPIO_ID_PIN(2)) ;	//设置为输入模式
-	//GPIO_INPUT_GET(GPIO_ID_PIN(2));	//获取GPIO电平
-
-	//GPIO_OUTPUT_SET(GPIO_ID_PIN(2), 1);	//设置为高电平
-	os_printf("GPIO init done\r\n");
-}
-
 struct station_config temp_station_config;
 struct softap_config temp_AP_config;
 
-struct espconn ptrespconn;	//UDP imformation struct
-
+struct espconn station_ptrespconn;	//UDP imformation struct
+struct espconn AP_ptrespconn;	//UDP imformation struct
 
 
 void ICACHE_FLASH_ATTR system_init_done();
+void ICACHE_FLASH_ATTR udp_init(struct espconn* p_ptrespconn,int local_port);
 void ICACHE_FLASH_ATTR scan_done(void *arg, STATUS status);
 void ICACHE_FLASH_ATTR Wifi_conned(void *arg);
 
+
+void ICACHE_FLASH_ATTR
+AP_UDP_Init()
+{
+	wifi_softap_get_config(&temp_AP_config);	//查询AP接口保存在Flash中的配置
+	if(temp_AP_config.ssid[0]!='B')
+	{
+		os_memset(temp_AP_config.ssid, 0, 32);
+		os_memset(temp_AP_config.password, 0, 64);
+		os_memcpy(temp_AP_config.ssid, "BBA's_AP", 8);
+		os_memcpy(temp_AP_config.password, "123123123", 9);
+		temp_AP_config.authmode = AUTH_WPA_WPA2_PSK;
+		temp_AP_config.ssid_len = 8;// or its actual length
+		temp_AP_config.max_connection = 4; // how many stations can connect to ESP8266 softAP at most.
+		wifi_softap_set_config(&temp_AP_config);
+		os_printf("AP Set Sucess!");
+	}
+	udp_init(&AP_ptrespconn,1025);	//初始化UDP
+
+}
 /*
  * UDP接收事件
  */
-LOCAL void ICACHE_FLASH_ATTR
+void ICACHE_FLASH_ATTR
 udp_event_recv(void *arg, char *pusrdata, unsigned short length)
 {
 	DealWithMessagePacketState(arg,pusrdata,length);
@@ -76,15 +84,16 @@ udp_event_recv(void *arg, char *pusrdata, unsigned short length)
     return;
 }
 
-void ICACHE_FLASH_ATTR udp_init()
+void ICACHE_FLASH_ATTR udp_init(struct espconn* p_ptrespconn,int local_port)
 {
 	//初始化UDP
-	ptrespconn.type = ESPCONN_UDP;
-	ptrespconn.proto.udp = (esp_udp *)os_zalloc(sizeof(esp_udp));
-	ptrespconn.proto.udp->local_port = 1025;
-	espconn_regist_recvcb(&ptrespconn, udp_event_recv);
-	espconn_create(&ptrespconn);
+	p_ptrespconn->type = ESPCONN_UDP;
+	p_ptrespconn->proto.udp = (esp_udp *)os_zalloc(sizeof(esp_udp));
+	p_ptrespconn->proto.udp->local_port = local_port;
+	espconn_regist_recvcb(p_ptrespconn, udp_event_recv);
+	espconn_create(p_ptrespconn);
 	os_printf("UDP init done\r\n");
+	//espconn_send(p_ptrespconn,"UDP init Done!",14);	//UDP初始化完成
 }
 
 void user_init(void)
@@ -99,65 +108,24 @@ void ICACHE_FLASH_ATTR system_init_done()
 	os_printf("System init done\r\n");
 	//UART0 IO3 RX,IO1 TX,UART1 IO2 TX,IO8 RX
 	uart_init(BIT_RATE_115200, BIT_RATE_115200);	//串口初始化
-	//gpio_init();	//GPIO初始化
-	//system_set_os_print (1);	//0关闭，1开启系统打印
-	if(wifi_get_opmode_default()!=0x01) //查询保存在Flash中的WiFi工作模式设置
-	{
-		wifi_set_opmode(0x01);		//设置WiFi工作模式为AP+Station并保存到Flash
-		//system_restart();			//0.9版本之后不用重启系统，即时生效
-	}
-	wifi_station_scan(NULL,scan_done);	//扫描所有wifi热点
-}
 
-void ICACHE_FLASH_ATTR scan_done(void *arg, STATUS status)
-{
-	os_printf("WIFI Scan done\r\n");
-	uint8 ssid[33];
+	wifi_set_opmode(0x03);		//设置WiFi工作模式为AP+Station并保存到Flash
+
+	//AP_UDP_Init();	//用于在任何时刻都可对ESP8266进行设置
 	struct station_config stationConf;
-
-	if (status == OK)
+	os_memcpy(&stationConf.ssid, "BBA-SUMDAY", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
+	os_memcpy(&stationConf.password, "123123123", 64);
+	wifi_station_set_config_current(&stationConf);
+	if(wifi_station_connect())	//如果wifi连接成功
 	{
-		struct bss_info *bss_link = (struct bss_info *)arg; //链表指针
-		bss_link = bss_link->next.stqe_next;//ignore first
-
-		while (bss_link != NULL)
-		{
-			os_memset(ssid, 0, 33); //memset 初始化数组
-			if (os_strlen(bss_link->ssid) <= 32)
-			{
-				os_memcpy(ssid, bss_link->ssid, os_strlen(bss_link->ssid));
-			}
-			else
-			{
-				os_memcpy(ssid, bss_link->ssid, 32);
-			}
-			os_printf("+CWLAP:(%d,\"%s\",%d,\""MACSTR"\",%d)\r\n",
-			bss_link->authmode, ssid, bss_link->rssi,
-			MAC2STR(bss_link->bssid),bss_link->channel);
-
-			bss_link = bss_link->next.stqe_next;
-		}
-		//struct station_config stationConf;
-		os_memcpy(&stationConf.ssid, "BBA-SUMDAY", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
-		os_memcpy(&stationConf.password, "123123123", 64);
-		wifi_station_set_config_current(&stationConf);
-		if(wifi_station_connect())	//如果wifi连接成功
-		{
-			udp_init();	//初始化UDP
-		}
-		else
-		{
-			os_printf("Connect Fail!\r\n");
-		}
+		udp_init(&station_ptrespconn,1026);	//初始化UDP
 		os_timer_setfn(&connect_timer,Wifi_conned,NULL);	//设置软件定时器和回调函数，NULL回调函数不带参数
 		os_timer_arm(&connect_timer,2000,0); //每隔2s 去检测是否真的连接上，NULL代表不重复
-		//os_timer_disarm(&connect_timer);	//这里先把定时器关了
 	}
 	else
 	{
-		os_printf("Scan None!\r\n");
+		os_printf("Connect Fail!\r\n");
 	}
-
 }
 
 void ICACHE_FLASH_ATTR Wifi_conned(void *arg)
@@ -179,7 +147,7 @@ void ICACHE_FLASH_ATTR Wifi_conned(void *arg)
 		if(count >= 7)
 		{
 			os_printf("WIFI Connect Fail\r\n");
-			return;//if忘了包含return，然后导致不会打印上面这两个。。
+			return;
 		}
 	}
 	os_timer_arm(&connect_timer,2000,0);//重新打开定时器
