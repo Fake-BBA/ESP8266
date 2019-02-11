@@ -17,6 +17,7 @@
 #include "user_interface.h"
 #include "espconn.h"		//网络接口相关
 #include "pwm.h"
+#include "Dri_DHT11.h"
 
 #define MAX_REPLY_PACKET_SIZE	21
 #define PWM_HZ	50
@@ -35,7 +36,7 @@ enum MessageCtrFunction{
 	FIND_DEVICE,
 	LIGHT,
 	FAN,
-	HUMITURE
+	HUMITURE=4
 };
 
 struct MessagePacketStruct{

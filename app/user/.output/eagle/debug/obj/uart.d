@@ -16,5 +16,6 @@
  ../../include/c_types.h ../../include/gpio.h ../../include/mem.h \
  ../../include/user_interface.h ../../include/ip_addr.h \
  ../../include/queue.h ../../include/spi_flash.h ../../include/gpio.h \
- ../../include/espconn.h ../../include/pwm.h ../include/driver/uart.h \
- ../include/driver/uart_register.h ../../include/os_type.h
+ ../../include/espconn.h ../../include/pwm.h ../include/Dri_DHT11.h \
+ ../include/driver/uart.h ../include/driver/uart_register.h \
+ ../../include/os_type.h

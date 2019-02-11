@@ -7,116 +7,6 @@
 
 #include "task.h"
 
-uint8 delay_ms(uint32 n)
-{
-	os_delay_us(1000);
-	return 1;
-}
-
-#define DHT_PIN	GPIO_ID_PIN(2)
-uint8 Get_DHT11_Data(uint8* p_temperature,uint8* p_humidity)
-{
-	uint32 counter;	//用来计时
-	uint8 i;
-	uint8 j;
-	uint8 data[5];	//存储DHT11返回的5字节数据
-
-	//注意修改此端脚。需要修改对应的GPIO寄存器
-	PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U, FUNC_GPIO2);	//D4
-	PIN_PULLUP_EN(GPIO_ID_PIN(2));	//使能GPIO2 上拉
-	//禁止端口中断操作
-	ets_intr_lock();
-
-	// 设置连接DHT11的引脚输出为高，持续20毫秒
-	GPIO_OUTPUT_SET(DHT_PIN, 1);
-	delay_ms(20);
-
-	// 设置连接DHT11的引脚输出为低，持续20毫秒
-	GPIO_OUTPUT_SET(DHT_PIN, 0);
-	delay_ms(20);
-
-	// 设置连接DHT11的引脚设置为输入，并延时40微秒,准备读写
-	GPIO_DIS_OUTPUT(DHT_PIN);	//有上拉电阻，此时为高电平
-	os_delay_us(40);
-
-	// 限时等待连接DHT11的引脚输入状态变成0，即等待获取DHT响应，如长时间未变为0则转为读取失败状态
-	counter=0;
-	while (GPIO_INPUT_GET(DHT_PIN) == 1) {
-		if (counter >= 3) {
-			os_printf("DHT11 Read Fail!");	//DHT并没有反馈
-			return 0;
-		}
-		counter++;
-		os_delay_us(1);
-	}
-	counter=0;
-	i=0;
-
-	// 限时等待连接DHT11的引脚输入状态变成1，即等待获取DHT响应，如长时间未变为1则转为读取失败状态
-	while (GPIO_INPUT_GET(DHT_PIN) == 0) {
-		if (i >= 3) {
-			os_printf("DHT11 Read Fail!");	//DHT并没有反馈
-			return 0;
-		}
-		counter++;
-		os_delay_us(1);
-	}
-
-	//这时反馈信号已结束
-	// 通过循环读取DHT返回的40位0、1数据
-
-	for (i = 0; i < 5; i++)
-	{
-		for(j=0;j<8;j++)
-		{
-			counter = 0;
-			//等待50us低电平（开始信号结束）
-			while (GPIO_INPUT_GET(DHT_PIN) == 0)
-			{
-				counter++;
-				os_delay_us(1);
-				if (counter >= 100)
-				{
-					os_printf("DHT11 Read Fail!");
-					return 0;
-				}
-			}
-
-			counter = 0;
-			//0：高电平持续26-28us 1：高电平持续70us
-			while (GPIO_INPUT_GET(DHT_PIN) == 1)
-			{
-				counter++;
-				os_delay_us(1);
-				if (counter >= 100)
-				{
-					os_printf("DHT11 Read Fail!");
-					return 0;
-				}
-			}
-
-			if(counter<30&&counter>25)
-			{
-				data[i]&=~(1<<j);
-			}
-			else
-			if(counter<100)
-			{
-				data[i] |=1<<j;
-			}
-		}
-	}
-	if(data[1]==0&&data[3]==0&&(data[0]+data[2]==data[4]))
-	{
-		os_printf("正确读取DHT11数据\r\n");
-		*p_temperature=data[0];
-		*p_humidity=data[2];
-	}
-	else
-	{
-		os_printf("DHT11数据读取错误\r\n");
-	}
-}
 uint16 deviceNumber=15;
 
 bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
@@ -197,7 +87,14 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		break;
 	case HUMITURE:
 
-		Get_DHT11_Data(&temperature,&humidity);
+		//Get_DHT11_Data(&temperature,&humidity);
+		{
+
+		pollDHTCb(NULL );
+		temperature=wendu;
+		humidity=shidu;
+		}
+
 		messagePacketUnion.p_buff[0]=temperature;
 		messagePacketUnion.p_buff[1]=humidity;
 		os_printf("温度:%d\t 湿度:%d\r\n",temperature,humidity);
