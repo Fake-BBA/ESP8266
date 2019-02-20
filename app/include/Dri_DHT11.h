@@ -16,7 +16,6 @@
 #include "mem.h"	//内存操作相关
 #include "user_interface.h"
 #include "espconn.h"		//网络接口相关
-#include "BBA_Typedef.h"
 
 uint8 Get_DHT11_Data(uint8* p_temperature,uint8* p_humidity);
 

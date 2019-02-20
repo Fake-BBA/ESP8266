@@ -6,8 +6,16 @@
  */
 
 #include "task.h"
-
+extern struct BBA_FlashData flashData;
 uint16 deviceNumber=15;
+
+uint32 pwm_duty_init[1]={0};
+uint32 io_info[][3]={PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2,2};
+BOOL bool_pwm_init=0;
+uint8 luminance;	//亮度
+uint32 duty;
+
+uint8 temperature,humidity; //温度，湿度变量
 
 bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 length)
 {
@@ -15,13 +23,15 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 	static union MessagePacketUnion messagePacketUnion;
 	os_memcpy(messagePacketUnion.p_buff, p_buffer, 20);
 
+	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
+	flashData.functionState=messageCtrFunction;
+
 	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
 	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
 
 	messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;	//设置接收者
-	messagePacketUnion.messagePacket.sender=deviceNumber;	//发送者为本设备号
+	messagePacketUnion.messagePacket.sender=flashData.deviceNumber;	//发送者为本设备号
 
-	messageCtrFunction=messagePacketUnion.messagePacket.function_word;
 	extern  struct espconn station_ptrespconn;
 	remot_info *Mpremot=NULL;
 	if (espconn_get_connection_info(&station_ptrespconn, &Mpremot, 0) != 0)
@@ -31,15 +41,6 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		station_ptrespconn.proto.udp->remote_port = Mpremot->remote_port;
 	}
 
-	uint32 pwm_duty_init[1]={0};
-	uint32 io_info[][3]={PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2,2};
-
-	 static BOOL bool_pwm_init=0;
-
-	 uint8 luminance=messagePacketUnion.messagePacket.data[0];	//亮度
-	 uint32 duty;
-
-	 uint8 temperature,humidity; //温度，湿度变量
 	switch(messageCtrFunction)
 	{
 	case HEARTBEAT:
@@ -52,6 +53,8 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		os_printf("发送心跳包\r\n");
 		break;
 	case LIGHT:
+		luminance=messagePacketUnion.messagePacket.data[0];	//亮度
+		flashData.data=luminance;
 		 if(bool_pwm_init==0)
 		 {
 			 bool_pwm_init=1;
@@ -99,6 +102,17 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		messagePacketUnion.p_buff[1]=humidity;
 		os_printf("温度:%d\t 湿度:%d\r\n",temperature,humidity);
 		espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,7);	//发送确认包
+		break;
+
+	case WIFI_CONFIG:
+		flashData.ssidLen=messagePacketUnion.p_buff[0];
+		memcpy(flashData.wifi_ssid,messagePacketUnion.p_buff+1,flashData.ssidLen);
+		
+		flashData.passwordLen=messagePacketUnion.p_buff[messagePacketUnion.p_buff[0]+1];
+		memcpy(flashData.wifi_password,messagePacketUnion.p_buff+messagePacketUnion.p_buff[0]+2,flashData.passwordLen);
+
+		flashData.flag_init=1;
+
 		break;
 	default:
 		break;

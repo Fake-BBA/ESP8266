@@ -8,7 +8,6 @@
 #ifndef APP_INCLUDE_TASK_H_
 #define APP_INCLUDE_TASK_H_
 
-#include "BBA_Typedef.h"
 #include "driver/uart.h"
 #include "osapi.h"
 #include "gpio.h"
@@ -18,6 +17,7 @@
 #include "espconn.h"		//网络接口相关
 #include "pwm.h"
 #include "Dri_DHT11.h"
+#include "MyFlash.h"
 
 #define MAX_REPLY_PACKET_SIZE	21
 #define PWM_HZ	50
@@ -36,7 +36,8 @@ enum MessageCtrFunction{
 	FIND_DEVICE,
 	LIGHT,
 	FAN,
-	HUMITURE=4
+	HUMITURE=4,
+	WIFI_CONFIG=254
 };
 
 struct MessagePacketStruct{
