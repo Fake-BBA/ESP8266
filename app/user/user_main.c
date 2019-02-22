@@ -82,6 +82,26 @@ void ICACHE_FLASH_ATTR system_init_done()
 
 	if(flashData.flag_init==1)
 	{
+		if(flashData.functionState==LIGHT)
+		{
+			extern uint32 pwm_duty_init[];
+			extern uint32 io_info[][3];
+			extern BOOL bool_pwm_init;
+			extern uint8 luminance;	//亮度
+			extern uint32 duty;
+
+			luminance=flashData.data[0];
+			duty=(uint32)luminance*87;
+			os_printf("Light mode\r\n");
+			if(bool_pwm_init==0)
+			{
+				bool_pwm_init=1;
+				pwm_init(1000,pwm_duty_init,1,io_info);
+				pwm_set_duty(duty,0);
+				pwm_start();
+				os_printf("Set PWM:%d\r\n",duty);
+			}
+		}
 		os_memcpy(&stationConf.ssid, flashData.wifi_ssid, flashData.ssidLen); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
 		os_memcpy(&stationConf.password, flashData.wifi_password, flashData.passwordLen);
 		wifi_station_set_config_current(&stationConf);

@@ -7,7 +7,6 @@
 
 #include "task.h"
 extern struct BBA_FlashData flashData;
-uint16 deviceNumber=15;
 
 uint32 pwm_duty_init[1]={0};
 uint32 io_info[][3]={PERIPHS_IO_MUX_GPIO2_U,FUNC_GPIO2,2};
@@ -58,10 +57,12 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 	case LIGHT:
 		luminance=messagePacketUnion.messagePacket.data[0];	//亮度
 		flashData.data[0]=luminance;
+		
 		 if(bool_pwm_init==0)
 		 {
 			 bool_pwm_init=1;
 			 pwm_init(1000,pwm_duty_init,1,io_info);
+			 pwm_set_duty(duty,0);
 		 }
 
 		if(luminance==255)	//全开
@@ -88,6 +89,8 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 			os_printf("PWM:%d\r\n",luminance);
 			espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,6);	//发送确认包
 		}
+
+		WriteMyFlashData(&flashData,sizeof(flashData));
 		break;
 	case FAN:
 		break;
