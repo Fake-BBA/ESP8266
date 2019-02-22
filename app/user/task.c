@@ -47,14 +47,14 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		//服务器存在
 		break;
 	case FIND_DEVICE:
-		//恢复心跳包给查找者
+		//回复心跳包给查找者
 		messagePacketUnion.messagePacket.function_word=0;	//心跳包
 		espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,6);	//发送心跳包
 		os_printf("发送心跳包\r\n");
 		break;
 	case LIGHT:
 		luminance=messagePacketUnion.messagePacket.data[0];	//亮度
-		flashData.data=luminance;
+		flashData.data[0]=luminance;
 		 if(bool_pwm_init==0)
 		 {
 			 bool_pwm_init=1;
@@ -105,6 +105,7 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		break;
 
 	case WIFI_CONFIG:
+		flashData.deviceNumber=messagePacketUnion.messagePacket.receiver;
 		flashData.ssidLen=messagePacketUnion.p_buff[0];
 		memcpy(flashData.wifi_ssid,messagePacketUnion.p_buff+1,flashData.ssidLen);
 		
@@ -112,7 +113,15 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		memcpy(flashData.wifi_password,messagePacketUnion.p_buff+messagePacketUnion.p_buff[0]+2,flashData.passwordLen);
 
 		flashData.flag_init=1;
+		os_printf("device number:%s\r\n",flashData.deviceNumber);
+        os_printf("wifi_ssid:%s\r\n",flashData.wifi_ssid);
+        os_printf("wifi_password:%s\r\n",flashData.wifi_password);
+        os_printf("function World:%s\r\n",flashData.functionState);
+        os_printf("function data:%s\r\n",flashData.data);
+        os_printf("flag:%d\r\n",flashData.flag_init);  
 
+		WriteMyFlashData(&flashData,sizeof(flashData));
+		//system_restart();
 		break;
 	default:
 		break;

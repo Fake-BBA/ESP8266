@@ -84,8 +84,9 @@ void ICACHE_FLASH_ATTR system_init_done()
 		if(wifi_station_connect())	//如果wifi连接成功
 		{
 			udp_init(&station_ptrespconn,1026);	//初始化UDP
-			//os_timer_setfn(&connect_timer,Wifi_conned,NULL);	//设置软件定时器和回调函数，NULL回调函数不带参数
-			//os_timer_arm(&connect_timer,2000,0); //每隔2s 去检测是否真的连接上，NULL代表不重复
+			os_printf("wifi connect success!");
+			os_timer_setfn(&connect_timer,Wifi_conned,NULL);	//设置软件定时器和回调函数，NULL回调函数不带参数
+			os_timer_arm(&connect_timer,2000,0); //每隔2s 去检测是否真的连接上，NULL代表不重复
 		}
 		else
 		{

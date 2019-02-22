@@ -44,11 +44,11 @@ struct MessagePacketStruct{
 	uint16 sender;
 	uint16 receiver;
 	uint8 function_word;
-	uint8 data[15];
+	uint8 data[95];
 };
 union MessagePacketUnion{
 	struct MessagePacketStruct messagePacket;
-	uint8 p_buff[20];	//协议规定最长包数据为20
+	uint8 p_buff[100];	//协议规定最长包数据为100
 };
 
 extern uint16 deviceNumber;
