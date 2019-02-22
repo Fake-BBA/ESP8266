@@ -28,12 +28,6 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 	os_printf("发送者：%d\r\n",messagePacketUnion.messagePacket.sender);
 	os_printf("接收者：%d\r\n",messagePacketUnion.messagePacket.receiver);
 
-	if(messageCtrFunction!=WIFI_CONFIG)
-	{
-		messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;	//设置接收者
-		messagePacketUnion.messagePacket.sender=flashData.deviceNumber;	//发送者为本设备号
-	}
-	
 	extern  struct espconn station_ptrespconn;
 	remot_info *Mpremot=NULL;
 	if (espconn_get_connection_info(&station_ptrespconn, &Mpremot, 0) != 0)
@@ -43,6 +37,24 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		station_ptrespconn.proto.udp->remote_port = Mpremot->remote_port;
 	}
 
+	if(messageCtrFunction!=WIFI_CONFIG)
+	if(messagePacketUnion.messagePacket.receiver!=flashData.deviceNumber)
+	{
+		os_printf("设备号与请求者不匹配,发送者目标设备是:%d,本设备是:%d\r\n",messagePacketUnion.messagePacket.receiver,flashData.deviceNumber);
+		messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;	//设置接收者
+		messagePacketUnion.messagePacket.sender=flashData.deviceNumber;	//发送者为本设备号
+		messagePacketUnion.messagePacket.function_word=DEVICE_ERROS;	//设备号不匹配
+		espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,5);	//发送心跳包
+		
+		return ;
+	}
+
+	if(messageCtrFunction!=WIFI_CONFIG)
+	{
+		messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;	//设置接收者
+		messagePacketUnion.messagePacket.sender=flashData.deviceNumber;	//发送者为本设备号
+	}
+
 	switch(messageCtrFunction)
 	{
 	case HEARTBEAT:
@@ -50,7 +62,7 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
 		break;
 	case FIND_DEVICE:
 		//回复心跳包给查找者
-		messagePacketUnion.messagePacket.function_word=0;	//心跳包
+		messagePacketUnion.messagePacket.function_word=HEARTBEAT;	//心跳包
 		espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,6);	//发送心跳包
 		os_printf("发送心跳包\r\n");
 		break;

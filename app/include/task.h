@@ -39,7 +39,8 @@ enum MessageCtrFunction{
 	LIGHT,
 	FAN,
 	HUMITURE=4,
-	WIFI_CONFIG=254
+	WIFI_CONFIG=254,
+	DEVICE_ERROS=255
 };
 
 struct MessagePacketStruct{
