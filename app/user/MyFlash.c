@@ -9,12 +9,14 @@ uint32 ICACHE_FLASH_ATTR ReadMyFlashData(struct BBA_FlashData *p)
 
     if(p->flag_init==1)
     {
-        os_printf("device number:%s\r\n",p->deviceNumber);
-        os_printf("wifi_ssid:%s\r\n",p->wifi_ssid);
-        os_printf("wifi_password:%s\r\n",p->wifi_password);
-        os_printf("function World:%s\r\n",p->functionState);
-        os_printf("function data:%s\r\n",p->data);
-        os_printf("flag:%d\r\n",p->flag_init);  
+        os_printf("device number:%d\r\n",flashData.deviceNumber);
+		os_printf("ssidLen:%d\r\n",flashData.ssidLen);
+        os_printf("wifi_ssid:%s\r\n",flashData.wifi_ssid);
+		os_printf("passWordLen:%d\r\n",flashData.passwordLen);
+        os_printf("wifi_password:%s\r\n",flashData.wifi_password);
+        os_printf("function World:%d\r\n",flashData.functionState);
+        os_printf("function data:%d\r\n",flashData.data);
+        os_printf("flag:%d\r\n",flashData.flag_init); 
     }
     
     return 1;

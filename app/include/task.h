@@ -24,13 +24,15 @@
 #define PWM_PERIOD	1/PWM_HZ	//单位us
 #define CHANNEL	1
 #define CHANNEL_NUM	1
-enum MessagePacketState{
-	FIRST_BYTE=0,
-	SENDER,
-	RECEIVER,
-	FUNCTION,
-	DATA
-};
+
+#define MESSAGE_PACKET_SIZE	100
+// enum MessagePacketState{
+// 	FIRST_BYTE=0,
+// 	SENDER,
+// 	RECEIVER,
+// 	FUNCTION,
+// 	DATA
+// };
 enum MessageCtrFunction{
 	HEARTBEAT=0,
 	FIND_DEVICE,
@@ -48,7 +50,7 @@ struct MessagePacketStruct{
 };
 union MessagePacketUnion{
 	struct MessagePacketStruct messagePacket;
-	uint8 p_buff[100];	//协议规定最长包数据为100
+	uint8 p_buff[MESSAGE_PACKET_SIZE];	//协议规定最长包数据为100
 };
 
 extern uint16 deviceNumber;

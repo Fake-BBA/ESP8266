@@ -74,7 +74,11 @@ void ICACHE_FLASH_ATTR system_init_done()
 	AP_UDP_Init();	//用于在任何时刻都可对ESP8266进行设置
 
 	ReadMyFlashData(&flashData);
+
 	struct station_config stationConf;
+	//os_memcpy(&stationConf.ssid, "BBA-SUMDAY", 32); //0s_memcpy 内存拷贝函数 32表示拷贝前32个字符
+	//os_memcpy(&stationConf.password, "123123123", 64);
+	//wifi_station_set_config_current(&stationConf);
 
 	if(flashData.flag_init==1)
 	{
@@ -84,9 +88,9 @@ void ICACHE_FLASH_ATTR system_init_done()
 		if(wifi_station_connect())	//如果wifi连接成功
 		{
 			udp_init(&station_ptrespconn,1026);	//初始化UDP
-			os_printf("wifi connect success!");
+			os_printf("wifi connecting!");
 			os_timer_setfn(&connect_timer,Wifi_conned,NULL);	//设置软件定时器和回调函数，NULL回调函数不带参数
-			os_timer_arm(&connect_timer,2000,0); //每隔2s 去检测是否真的连接上，NULL代表不重复
+			os_timer_arm(&connect_timer,1000,0); //每隔2s 去检测是否真的连接上，NULL代表不重复
 		}
 		else
 		{
