@@ -147,6 +147,10 @@ bool DealWithMessagePacketState(struct espconn *espconn,uint8 *p_buffer,uint16 l
         os_printf("function data:%d\r\n",flashData.data);
         os_printf("flag:%d\r\n",flashData.flag_init);  
 
+		messagePacketUnion.messagePacket.receiver=messagePacketUnion.messagePacket.sender;	//设置接收者
+		messagePacketUnion.messagePacket.sender=flashData.deviceNumber;	//发送者为本设备号
+		messagePacketUnion.messagePacket.function_word=WIFI_CONFIG_SET;	//
+		espconn_send(&station_ptrespconn,messagePacketUnion.p_buff,5);	//表示wifi设置完成
 		WriteMyFlashData(&flashData,sizeof(flashData));
 		system_restart();
 		break;
